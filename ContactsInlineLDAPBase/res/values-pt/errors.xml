@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Error show in a dialog if the basedn can't be retreive when the user valid the LDAP Wiard. -->
+	<string name="ldap_err_basedn_unknown">Desculpe, mas a \"base dn\" não pode ser recuperada.</string>
+
+	<!-- Error show in a dialog if an error throw when contact the LDAP server. -->
+	<string name="ldap_err_unknown_exception">Erro com o servidor LDAP.</string>
+
+	<!-- Error show if the LDAP mapping file is not found. -->
+	<string name="err_mapping_file_not_found">Fichier de associação não encontrado.</string>
+</resources>

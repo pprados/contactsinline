@@ -1,0 +1,10 @@
+bin
+gen
+.codepro/*
+.settings/*
+*~
+local.properties
+dump.txt
+
+
+

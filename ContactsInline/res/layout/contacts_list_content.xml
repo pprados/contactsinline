@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/errorsText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:lineSpacingMultiplier="0.92"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:paddingTop="2dip"
+        android:text="@string/noException"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <fr.prados.contacts.ui.FocusRequestingListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/list_background"
+        android:cacheColorHint="@null"
+        android:divider="@drawable/list_item_divider"
+        android:dividerHeight="1dip"
+        android:fastScrollEnabled="true"
+        android:scrollingCache="true" 
+        >
+
+        <!-- Preview: listitem=@layout/contacts_list_item_photo -->
+    </fr.prados.contacts.ui.FocusRequestingListView>
+
+    <ScrollView
+        android:id="@android:id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true" >
+
+        <TextView
+            android:id="@+id/emptyText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lineSpacingMultiplier="0.92"
+            android:linksClickable="true"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textColorHighlight="@color/text_hightlight"
+            android:textColorHint="@color/text_hint"
+            android:textColorLink="@color/text_link"
+            android:textSize="20sp" />
+    </ScrollView>
+
+</LinearLayout>

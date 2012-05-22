@@ -1,0 +1,2301 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.unboundid.asn1.ASN1Boolean:
+    private static final long serialVersionUID
+    152:189:public static com.unboundid.asn1.ASN1Boolean decodeAsBoolean(byte[])
+com.unboundid.asn1.ASN1Buffer:
+    private static final int DEFAULT_MAX_BUFFER_SIZE
+    private static final long serialVersionUID
+    273:274:public void addEnumerated(byte,int)
+    369:370:public void addInteger(long)
+    382:526:public void addInteger(byte,long)
+    535:536:public void addNull()
+    559:560:public void addOctetString()
+    572:574:public void addOctetString(byte)
+    586:587:public void addOctetString(byte[])
+    599:608:public void addOctetString(java.lang.CharSequence)
+    658:666:public void addOctetString(byte,java.lang.CharSequence)
+    754:754:public com.unboundid.asn1.ASN1BufferSet beginSet()
+    881:881:public java.nio.ByteBuffer asByteBuffer()
+com.unboundid.asn1.ASN1BufferSequence:
+    private static final long serialVersionUID
+com.unboundid.asn1.ASN1BufferSet:
+    private static final long serialVersionUID
+com.unboundid.asn1.ASN1Constants:
+    public static final byte UNIVERSAL_BOOLEAN_TYPE
+    public static final byte UNIVERSAL_INTEGER_TYPE
+    public static final byte UNIVERSAL_OCTET_STRING_TYPE
+    public static final byte UNIVERSAL_NULL_TYPE
+    public static final byte UNIVERSAL_ENUMERATED_TYPE
+    public static final byte UNIVERSAL_SEQUENCE_TYPE
+    public static final byte UNIVERSAL_SET_TYPE
+    43:46:private ASN1Constants()
+com.unboundid.asn1.ASN1Element:
+    private static final long serialVersionUID
+    560:560:public final com.unboundid.asn1.ASN1Boolean decodeAsBoolean()
+    576:576:public final com.unboundid.asn1.ASN1Enumerated decodeAsEnumerated()
+    592:592:public final com.unboundid.asn1.ASN1Integer decodeAsInteger()
+    608:608:public final com.unboundid.asn1.ASN1Long decodeAsLong()
+    624:624:public final com.unboundid.asn1.ASN1Null decodeAsNull()
+    636:636:public final com.unboundid.asn1.ASN1OctetString decodeAsOctetString()
+    652:652:public final com.unboundid.asn1.ASN1Sequence decodeAsSequence()
+    668:668:public final com.unboundid.asn1.ASN1Set decodeAsSet()
+    690:690:public static com.unboundid.asn1.ASN1Element readFrom(java.io.InputStream)
+    718:776:public static com.unboundid.asn1.ASN1Element readFrom(java.io.InputStream,int)
+    798:803:public final int writeTo(java.io.OutputStream)
+    879:889:public final boolean equalsIgnoreType(com.unboundid.asn1.ASN1Element)
+com.unboundid.asn1.ASN1Enumerated:
+    private static final long serialVersionUID
+    68:71:public ASN1Enumerated(int)
+    84:87:public ASN1Enumerated(byte,int)
+    137:208:public static com.unboundid.asn1.ASN1Enumerated decodeAsEnumerated(byte[])
+com.unboundid.asn1.ASN1Exception:
+    private static final long serialVersionUID
+com.unboundid.asn1.ASN1Integer:
+    private static final long serialVersionUID
+    80:83:public ASN1Integer(byte,int)
+    219:290:public static com.unboundid.asn1.ASN1Integer decodeAsInteger(byte[])
+com.unboundid.asn1.ASN1Long:
+    private static final long serialVersionUID
+    65:68:public ASN1Long(long)
+    81:84:public ASN1Long(byte,long)
+    115:276:static byte[] encodeLongValue(long)
+    320:432:public static com.unboundid.asn1.ASN1Long decodeAsLong(byte[])
+com.unboundid.asn1.ASN1Null
+com.unboundid.asn1.ASN1OctetString:
+    private static final long serialVersionUID
+    176:186:public ASN1OctetString(byte[],int,int)
+    236:245:public ASN1OctetString(byte,byte[],int,int)
+    455:486:public static com.unboundid.asn1.ASN1OctetString decodeAsOctetString(byte[])
+    513:521:public void appendValueTo(com.unboundid.util.ByteStringBuffer)
+    532:532:public com.unboundid.asn1.ASN1OctetString toASN1OctetString()
+com.unboundid.asn1.ASN1Sequence:
+    private static final long serialVersionUID
+    111:115:public ASN1Sequence(byte)
+    127:139:public varargs ASN1Sequence(com.unboundid.asn1.ASN1Element[])
+com.unboundid.asn1.ASN1Set:
+    private static final long serialVersionUID
+    112:116:public ASN1Set(byte)
+    128:140:public varargs ASN1Set(com.unboundid.asn1.ASN1Element[])
+    152:165:public ASN1Set(java.util.Collection)
+    204:217:public ASN1Set(byte,java.util.Collection)
+    346:430:public static com.unboundid.asn1.ASN1Set decodeAsSet(byte[])
+com.unboundid.asn1.ASN1StreamReader:
+    85:86:public ASN1StreamReader(java.io.InputStream)
+    176:176:public boolean ignoreSocketTimeoutException()
+    193:193:public boolean ignoreInitialSocketTimeoutException()
+    210:210:public boolean ignoreSubsequentSocketTimeoutException()
+    229:231:public void setIgnoreSocketTimeout(boolean)
+    431:457:public com.unboundid.asn1.ASN1Element readElement()
+    633:694:public java.lang.Long readLong()
+    715:728:public void readNull()
+com.unboundid.asn1.ASN1StreamReaderSequence:
+    102:102:public int getLength()
+com.unboundid.asn1.ASN1StreamReaderSet:
+    88:88:public byte getType()
+    102:102:public int getLength()
+com.unboundid.asn1.ASN1Writer
+com.unboundid.asn1.package-info
+com.unboundid.ldap.listener.AccessLogRequestHandler
+com.unboundid.ldap.listener.CannedResponseRequestHandler
+com.unboundid.ldap.listener.InMemoryDirectoryServer
+com.unboundid.ldap.listener.InMemoryDirectoryServerConfig
+com.unboundid.ldap.listener.InMemoryDirectoryServerSnapshot
+com.unboundid.ldap.listener.InMemoryDirectoryServerTool
+com.unboundid.ldap.listener.InMemoryExtendedOperationHandler
+com.unboundid.ldap.listener.InMemoryListenerConfig
+com.unboundid.ldap.listener.InMemoryRequestHandler
+com.unboundid.ldap.listener.InMemorySASLBindHandler
+com.unboundid.ldap.listener.IntermediateResponseTransformer
+com.unboundid.ldap.listener.LDAPDebuggerRequestHandler
+com.unboundid.ldap.listener.LDAPListener
+com.unboundid.ldap.listener.LDAPListenerClientConnection
+com.unboundid.ldap.listener.LDAPListenerConfig
+com.unboundid.ldap.listener.LDAPListenerExceptionHandler
+com.unboundid.ldap.listener.LDAPListenerRequestHandler
+com.unboundid.ldap.listener.ListenerMessages
+com.unboundid.ldap.listener.PLAINBindHandler
+com.unboundid.ldap.listener.PasswordModifyExtendedOperationHandler
+com.unboundid.ldap.listener.ProxyRequestHandler
+com.unboundid.ldap.listener.ProxySearchResultListener
+com.unboundid.ldap.listener.ReadOnlyInMemoryDirectoryServerConfig
+com.unboundid.ldap.listener.RequestControlPreProcessor
+com.unboundid.ldap.listener.SearchEntryTransformer
+com.unboundid.ldap.listener.SearchReferenceTransformer
+com.unboundid.ldap.listener.StartTLSRequestHandler
+com.unboundid.ldap.listener.WhoAmIExtendedOperationHandler
+com.unboundid.ldap.listener.package-info
+com.unboundid.ldap.matchingrules.AcceptAllSimpleMatchingRule:
+    private static final long serialVersionUID
+    76:85:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    100:109:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    public abstract com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.BooleanMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    private static final long serialVersionUID
+    129:129:public java.lang.String getEqualityMatchingRuleName()
+    140:140:public java.lang.String getEqualityMatchingRuleOID()
+    151:151:public java.lang.String getOrderingMatchingRuleName()
+    162:162:public java.lang.String getOrderingMatchingRuleOID()
+    173:173:public java.lang.String getSubstringMatchingRuleName()
+    184:184:public java.lang.String getSubstringMatchingRuleOID()
+    212:212:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    226:226:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    275:275:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.CaseExactStringMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String ORDERING_RULE_NAME
+    public static final java.lang.String ORDERING_RULE_OID
+    public static final java.lang.String SUBSTRING_RULE_NAME
+    public static final java.lang.String SUBSTRING_RULE_OID
+    private static final long serialVersionUID
+    155:155:public java.lang.String getEqualityMatchingRuleName()
+    166:166:public java.lang.String getEqualityMatchingRuleOID()
+    177:177:public java.lang.String getOrderingMatchingRuleName()
+    188:188:public java.lang.String getOrderingMatchingRuleOID()
+    199:199:public java.lang.String getSubstringMatchingRuleName()
+    210:210:public java.lang.String getSubstringMatchingRuleOID()
+    281:281:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.CaseIgnoreListMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String SUBSTRING_RULE_NAME
+    public static final java.lang.String SUBSTRING_RULE_OID
+    private static final long serialVersionUID
+    143:143:public java.lang.String getEqualityMatchingRuleName()
+    154:154:public java.lang.String getEqualityMatchingRuleOID()
+    165:165:public java.lang.String getOrderingMatchingRuleName()
+    176:176:public java.lang.String getOrderingMatchingRuleOID()
+    187:187:public java.lang.String getSubstringMatchingRuleName()
+    198:198:public java.lang.String getSubstringMatchingRuleOID()
+    226:290:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    303:303:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    342:342:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+    363:363:public static java.util.List getItems(com.unboundid.asn1.ASN1OctetString)
+com.unboundid.ldap.matchingrules.CaseIgnoreStringMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String ORDERING_RULE_NAME
+    public static final java.lang.String ORDERING_RULE_OID
+    public static final java.lang.String SUBSTRING_RULE_NAME
+    public static final java.lang.String SUBSTRING_RULE_OID
+    private static final long serialVersionUID
+    155:155:public java.lang.String getEqualityMatchingRuleName()
+    166:166:public java.lang.String getEqualityMatchingRuleOID()
+    177:177:public java.lang.String getOrderingMatchingRuleName()
+    188:188:public java.lang.String getOrderingMatchingRuleOID()
+    199:199:public java.lang.String getSubstringMatchingRuleName()
+    210:210:public java.lang.String getSubstringMatchingRuleOID()
+com.unboundid.ldap.matchingrules.DistinguishedNameMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    private static final long serialVersionUID
+    114:114:public java.lang.String getEqualityMatchingRuleName()
+    125:125:public java.lang.String getEqualityMatchingRuleOID()
+    136:136:public java.lang.String getOrderingMatchingRuleName()
+    147:147:public java.lang.String getOrderingMatchingRuleOID()
+    158:158:public java.lang.String getSubstringMatchingRuleName()
+    169:169:public java.lang.String getSubstringMatchingRuleOID()
+    221:221:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    235:235:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    271:271:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.GeneralizedTimeMatchingRule:
+    private static final java.lang.String GENERALIZED_TIME_DATE_FORMAT
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String ORDERING_RULE_NAME
+    public static final java.lang.String ORDERING_RULE_OID
+    private static final long serialVersionUID
+    164:164:public java.lang.String getEqualityMatchingRuleName()
+    175:175:public java.lang.String getEqualityMatchingRuleOID()
+    186:186:public java.lang.String getOrderingMatchingRuleName()
+    197:197:public java.lang.String getOrderingMatchingRuleOID()
+    208:208:public java.lang.String getSubstringMatchingRuleName()
+    219:219:public java.lang.String getSubstringMatchingRuleOID()
+    271:271:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    288:309:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    354:354:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.IntegerMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String ORDERING_RULE_NAME
+    public static final java.lang.String ORDERING_RULE_OID
+    private static final long serialVersionUID
+    135:135:public java.lang.String getEqualityMatchingRuleName()
+    146:146:public java.lang.String getEqualityMatchingRuleOID()
+    157:157:public java.lang.String getOrderingMatchingRuleName()
+    168:168:public java.lang.String getOrderingMatchingRuleOID()
+    179:179:public java.lang.String getSubstringMatchingRuleName()
+    190:190:public java.lang.String getSubstringMatchingRuleOID()
+    218:218:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    232:297:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    438:438:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.MatchingRule:
+    public static final byte SUBSTRING_TYPE_SUBINITIAL
+    public static final byte SUBSTRING_TYPE_SUBANY
+    public static final byte SUBSTRING_TYPE_SUBFINAL
+    private static final long serialVersionUID
+    public abstract java.lang.String getEqualityMatchingRuleName()
+    public abstract java.lang.String getEqualityMatchingRuleOID()
+    public abstract java.lang.String getOrderingMatchingRuleName()
+    public abstract java.lang.String getOrderingMatchingRuleOID()
+    public abstract java.lang.String getSubstringMatchingRuleName()
+    public abstract java.lang.String getSubstringMatchingRuleOID()
+    public abstract boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    public abstract int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    public abstract com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+    475:475:public static com.unboundid.ldap.matchingrules.MatchingRule selectOrderingMatchingRule(java.lang.String,com.unboundid.ldap.sdk.schema.Schema)
+    505:533:public static com.unboundid.ldap.matchingrules.MatchingRule selectOrderingMatchingRule(java.lang.String,java.lang.String,com.unboundid.ldap.sdk.schema.Schema)
+    550:593:public static com.unboundid.ldap.matchingrules.MatchingRule selectOrderingMatchingRule(java.lang.String)
+    609:609:public static com.unboundid.ldap.matchingrules.MatchingRule getDefaultOrderingMatchingRule()
+    631:631:public static com.unboundid.ldap.matchingrules.MatchingRule selectSubstringMatchingRule(java.lang.String,com.unboundid.ldap.sdk.schema.Schema)
+    661:689:public static com.unboundid.ldap.matchingrules.MatchingRule selectSubstringMatchingRule(java.lang.String,java.lang.String,com.unboundid.ldap.sdk.schema.Schema)
+    706:754:public static com.unboundid.ldap.matchingrules.MatchingRule selectSubstringMatchingRule(java.lang.String)
+    770:770:public static com.unboundid.ldap.matchingrules.MatchingRule getDefaultSubstringMatchingRule()
+com.unboundid.ldap.matchingrules.NumericStringMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String ORDERING_RULE_NAME
+    public static final java.lang.String ORDERING_RULE_OID
+    public static final java.lang.String SUBSTRING_RULE_NAME
+    public static final java.lang.String SUBSTRING_RULE_OID
+    private static final long serialVersionUID
+    159:159:public java.lang.String getEqualityMatchingRuleName()
+    170:170:public java.lang.String getEqualityMatchingRuleOID()
+    181:181:public java.lang.String getOrderingMatchingRuleName()
+    192:192:public java.lang.String getOrderingMatchingRuleOID()
+    203:203:public java.lang.String getSubstringMatchingRuleName()
+    214:214:public java.lang.String getSubstringMatchingRuleOID()
+    271:271:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.OctetStringMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String ORDERING_RULE_NAME
+    public static final java.lang.String ORDERING_RULE_OID
+    public static final java.lang.String SUBSTRING_RULE_NAME
+    public static final java.lang.String SUBSTRING_RULE_OID
+    private static final long serialVersionUID
+    154:154:public java.lang.String getEqualityMatchingRuleName()
+    165:165:public java.lang.String getEqualityMatchingRuleOID()
+    176:176:public java.lang.String getOrderingMatchingRuleName()
+    187:187:public java.lang.String getOrderingMatchingRuleOID()
+    198:198:public java.lang.String getSubstringMatchingRuleName()
+    209:209:public java.lang.String getSubstringMatchingRuleOID()
+    232:232:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.SimpleMatchingRule:
+    private static final long serialVersionUID
+    76:166:public boolean matchesSubstring(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    179:201:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+com.unboundid.ldap.matchingrules.TelephoneNumberMatchingRule:
+    public static final java.lang.String EQUALITY_RULE_NAME
+    public static final java.lang.String EQUALITY_RULE_OID
+    public static final java.lang.String SUBSTRING_RULE_NAME
+    public static final java.lang.String SUBSTRING_RULE_OID
+    private static final long serialVersionUID
+    136:136:public java.lang.String getEqualityMatchingRuleName()
+    147:147:public java.lang.String getEqualityMatchingRuleOID()
+    158:158:public java.lang.String getOrderingMatchingRuleName()
+    169:169:public java.lang.String getOrderingMatchingRuleOID()
+    180:180:public java.lang.String getSubstringMatchingRuleName()
+    191:191:public java.lang.String getSubstringMatchingRuleOID()
+    204:204:public int compareValues(com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString)
+    271:271:public com.unboundid.asn1.ASN1OctetString normalizeSubstring(com.unboundid.asn1.ASN1OctetString,byte)
+com.unboundid.ldap.matchingrules.package-info
+com.unboundid.ldap.protocol.AbandonRequestProtocolOp:
+    private static final long serialVersionUID
+    83:97:AbandonRequestProtocolOp(com.unboundid.asn1.ASN1StreamReader)
+    108:108:public int getIDToAbandon()
+com.unboundid.ldap.protocol.AddRequestProtocolOp
+com.unboundid.ldap.protocol.AddResponseProtocolOp
+com.unboundid.ldap.protocol.BindRequestProtocolOp
+com.unboundid.ldap.protocol.BindResponseProtocolOp
+com.unboundid.ldap.protocol.CompareRequestProtocolOp
+com.unboundid.ldap.protocol.CompareResponseProtocolOp
+com.unboundid.ldap.protocol.DeleteRequestProtocolOp
+com.unboundid.ldap.protocol.DeleteResponseProtocolOp
+com.unboundid.ldap.protocol.ExtendedRequestProtocolOp
+com.unboundid.ldap.protocol.ExtendedResponseProtocolOp
+com.unboundid.ldap.protocol.GenericResponseProtocolOp
+com.unboundid.ldap.protocol.IntermediateResponseProtocolOp
+com.unboundid.ldap.protocol.LDAPMessage:
+    public static final byte PROTOCOL_OP_TYPE_BIND_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_BIND_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_UNBIND_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_SEARCH_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_SEARCH_RESULT_ENTRY
+    public static final byte PROTOCOL_OP_TYPE_SEARCH_RESULT_REFERENCE
+    public static final byte PROTOCOL_OP_TYPE_SEARCH_RESULT_DONE
+    public static final byte PROTOCOL_OP_TYPE_MODIFY_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_MODIFY_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_ADD_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_ADD_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_DELETE_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_DELETE_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_MODIFY_DN_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_MODIFY_DN_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_COMPARE_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_COMPARE_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_ABANDON_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_EXTENDED_REQUEST
+    public static final byte PROTOCOL_OP_TYPE_EXTENDED_RESPONSE
+    public static final byte PROTOCOL_OP_TYPE_INTERMEDIATE_RESPONSE
+    public static final byte MESSAGE_TYPE_CONTROLS
+    private static final long serialVersionUID
+    273:287:public LDAPMessage(int,com.unboundid.ldap.protocol.ProtocolOp,java.util.List)
+    298:298:public int getMessageID()
+    310:310:public com.unboundid.ldap.protocol.ProtocolOp getProtocolOp()
+    340:340:public com.unboundid.ldap.protocol.AbandonRequestProtocolOp getAbandonRequestProtocolOp()
+    358:358:public com.unboundid.ldap.protocol.AddRequestProtocolOp getAddRequestProtocolOp()
+    376:376:public com.unboundid.ldap.protocol.AddResponseProtocolOp getAddResponseProtocolOp()
+    394:394:public com.unboundid.ldap.protocol.BindRequestProtocolOp getBindRequestProtocolOp()
+    412:412:public com.unboundid.ldap.protocol.BindResponseProtocolOp getBindResponseProtocolOp()
+    430:430:public com.unboundid.ldap.protocol.CompareRequestProtocolOp getCompareRequestProtocolOp()
+    448:448:public com.unboundid.ldap.protocol.CompareResponseProtocolOp getCompareResponseProtocolOp()
+    466:466:public com.unboundid.ldap.protocol.DeleteRequestProtocolOp getDeleteRequestProtocolOp()
+    484:484:public com.unboundid.ldap.protocol.DeleteResponseProtocolOp getDeleteResponseProtocolOp()
+    502:502:public com.unboundid.ldap.protocol.ExtendedRequestProtocolOp getExtendedRequestProtocolOp()
+    520:520:public com.unboundid.ldap.protocol.ExtendedResponseProtocolOp getExtendedResponseProtocolOp()
+    538:538:public com.unboundid.ldap.protocol.ModifyRequestProtocolOp getModifyRequestProtocolOp()
+    556:556:public com.unboundid.ldap.protocol.ModifyResponseProtocolOp getModifyResponseProtocolOp()
+    574:574:public com.unboundid.ldap.protocol.ModifyDNRequestProtocolOp getModifyDNRequestProtocolOp()
+    592:592:public com.unboundid.ldap.protocol.ModifyDNResponseProtocolOp getModifyDNResponseProtocolOp()
+    610:610:public com.unboundid.ldap.protocol.SearchRequestProtocolOp getSearchRequestProtocolOp()
+    628:628:public com.unboundid.ldap.protocol.SearchResultEntryProtocolOp getSearchResultEntryProtocolOp()
+    646:646:public com.unboundid.ldap.protocol.SearchResultReferenceProtocolOp getSearchResultReferenceProtocolOp()
+    664:664:public com.unboundid.ldap.protocol.SearchResultDoneProtocolOp getSearchResultDoneProtocolOp()
+    682:682:public com.unboundid.ldap.protocol.UnbindRequestProtocolOp getUnbindRequestProtocolOp()
+    700:700:public com.unboundid.ldap.protocol.IntermediateResponseProtocolOp getIntermediateResponseProtocolOp()
+    712:712:public java.util.List getControls()
+    772:913:public static com.unboundid.ldap.protocol.LDAPMessage readFrom(com.unboundid.asn1.ASN1StreamReader,boolean)
+    944:944:public static com.unboundid.ldap.protocol.LDAPResponse readLDAPResponseFrom(com.unboundid.asn1.ASN1StreamReader,boolean)
+com.unboundid.ldap.protocol.ModifyDNRequestProtocolOp
+com.unboundid.ldap.protocol.ModifyDNResponseProtocolOp
+com.unboundid.ldap.protocol.ModifyRequestProtocolOp
+com.unboundid.ldap.protocol.ModifyResponseProtocolOp
+com.unboundid.ldap.protocol.SearchRequestProtocolOp
+com.unboundid.ldap.protocol.SearchResultDoneProtocolOp
+com.unboundid.ldap.protocol.SearchResultEntryProtocolOp
+com.unboundid.ldap.protocol.SearchResultReferenceProtocolOp
+com.unboundid.ldap.protocol.UnbindRequestProtocolOp:
+    private static final long serialVersionUID
+    76:90:UnbindRequestProtocolOp(com.unboundid.asn1.ASN1StreamReader)
+com.unboundid.ldap.protocol.package-info
+com.unboundid.ldap.sdk.ANONYMOUSBindRequest
+com.unboundid.ldap.sdk.AbstractConnectionPool:
+    50:50:public AbstractConnectionPool()
+    public abstract void close()
+    public abstract boolean isClosed()
+    public abstract int getCurrentAvailableConnections()
+    public abstract int getMaximumAvailableConnections()
+    public abstract com.unboundid.ldap.sdk.LDAPConnectionPoolStatistics getConnectionPoolStatistics()
+    public abstract java.lang.String getConnectionPoolName()
+    public abstract void setConnectionPoolName(java.lang.String)
+    public abstract long getHealthCheckIntervalMillis()
+    public abstract void setHealthCheckIntervalMillis(long)
+    protected abstract void doHealthCheck()
+    253:266:public com.unboundid.ldap.sdk.RootDSE getRootDSE()
+    290:303:public com.unboundid.ldap.sdk.schema.Schema getSchema()
+    332:345:public com.unboundid.ldap.sdk.schema.Schema getSchema(java.lang.String)
+    368:381:public com.unboundid.ldap.sdk.SearchResultEntry getEntry(java.lang.String)
+    444:457:public varargs com.unboundid.ldap.sdk.LDAPResult add(java.lang.String,com.unboundid.ldap.sdk.Attribute[])
+    481:494:public com.unboundid.ldap.sdk.LDAPResult add(java.lang.String,java.util.Collection)
+    515:528:public com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.Entry)
+    553:566:public varargs com.unboundid.ldap.sdk.LDAPResult add(java.lang.String[])
+    588:601:public com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.AddRequest)
+    623:623:public com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.ReadOnlyAddRequest)
+    650:663:public com.unboundid.ldap.sdk.BindResult bind(java.lang.String,java.lang.String)
+    690:703:public com.unboundid.ldap.sdk.BindResult bind(com.unboundid.ldap.sdk.BindRequest)
+    730:744:public com.unboundid.ldap.sdk.CompareResult compare(java.lang.String,java.lang.String,java.lang.String)
+    766:779:public com.unboundid.ldap.sdk.CompareResult compare(com.unboundid.ldap.sdk.CompareRequest)
+    801:801:public com.unboundid.ldap.sdk.CompareResult compare(com.unboundid.ldap.sdk.ReadOnlyCompareRequest)
+    821:834:public com.unboundid.ldap.sdk.LDAPResult delete(java.lang.String)
+    856:869:public com.unboundid.ldap.sdk.LDAPResult delete(com.unboundid.ldap.sdk.DeleteRequest)
+    891:891:public com.unboundid.ldap.sdk.LDAPResult delete(com.unboundid.ldap.sdk.ReadOnlyDeleteRequest)
+    915:934:public com.unboundid.ldap.sdk.ExtendedResult processExtendedOperation(java.lang.String)
+    964:984:public com.unboundid.ldap.sdk.ExtendedResult processExtendedOperation(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    1010:1031:public com.unboundid.ldap.sdk.ExtendedResult processExtendedOperation(com.unboundid.ldap.sdk.ExtendedRequest)
+    1054:1067:public com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,com.unboundid.ldap.sdk.Modification)
+    1089:1102:public varargs com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,com.unboundid.ldap.sdk.Modification[])
+    1125:1138:public com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,java.util.List)
+    1165:1178:public varargs com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String[])
+    1200:1213:public com.unboundid.ldap.sdk.LDAPResult modify(com.unboundid.ldap.sdk.ModifyRequest)
+    1235:1235:public com.unboundid.ldap.sdk.LDAPResult modify(com.unboundid.ldap.sdk.ReadOnlyModifyRequest)
+    1261:1274:public com.unboundid.ldap.sdk.LDAPResult modifyDN(java.lang.String,java.lang.String,boolean)
+    1305:1319:public com.unboundid.ldap.sdk.LDAPResult modifyDN(java.lang.String,java.lang.String,boolean,java.lang.String)
+    1341:1354:public com.unboundid.ldap.sdk.LDAPResult modifyDN(com.unboundid.ldap.sdk.ModifyDNRequest)
+    1376:1376:public com.unboundid.ldap.sdk.LDAPResult modifyDN(com.unboundid.ldap.sdk.ReadOnlyModifyDNRequest)
+    1415:1435:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    1473:1493:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    1537:1557:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    1599:1619:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    1672:1692:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    1743:1763:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    1823:1844:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    1903:1924:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    1951:1970:public com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchRequest)
+    1994:1994:public com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+    2036:2056:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    2099:2119:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    2172:2192:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,boolean,java.lang.String,java.lang.String[])
+    2244:2264:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    2302:2321:public com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(com.unboundid.ldap.sdk.SearchRequest)
+    2352:2352:public com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+    2380:2463:public java.util.List processRequests(java.util.List,boolean)
+    2516:2531:void throwLDAPOrLDIFException(java.lang.Throwable,com.unboundid.ldap.sdk.LDAPConnection)
+    2552:2571:void throwLDAPSearchException(java.lang.Throwable,com.unboundid.ldap.sdk.LDAPConnection)
+com.unboundid.ldap.sdk.AddRequest
+com.unboundid.ldap.sdk.AsyncCompareHelper
+com.unboundid.ldap.sdk.AsyncCompareResultListener
+com.unboundid.ldap.sdk.AsyncHelper
+com.unboundid.ldap.sdk.AsyncRequestID:
+    private static final long serialVersionUID
+com.unboundid.ldap.sdk.AsyncResultListener
+com.unboundid.ldap.sdk.AsyncSearchHelper:
+    private static final long serialVersionUID
+com.unboundid.ldap.sdk.Attribute:
+    private static final long serialVersionUID
+    146:154:public Attribute(java.lang.String)
+    164:172:public Attribute(java.lang.String,java.lang.String)
+    182:189:public Attribute(java.lang.String,byte[])
+    200:212:public varargs Attribute(java.lang.String,java.lang.String[])
+    223:235:public varargs Attribute(java.lang.String,byte[][])
+    246:254:public varargs Attribute(java.lang.String,com.unboundid.asn1.ASN1OctetString[])
+    265:279:public Attribute(java.lang.String,java.util.Collection)
+    291:299:public Attribute(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule)
+    313:322:public Attribute(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule,java.lang.String)
+    336:345:public Attribute(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule,byte[])
+    359:372:public varargs Attribute(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule,java.lang.String[])
+    386:399:public varargs Attribute(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule,byte[][])
+    413:428:public Attribute(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule,java.util.Collection)
+    462:463:public varargs Attribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema,java.lang.String[])
+    480:481:public varargs Attribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema,byte[][])
+    498:499:public Attribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema,java.util.Collection)
+    516:517:public Attribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema,com.unboundid.asn1.ASN1OctetString[])
+    607:630:public static com.unboundid.ldap.sdk.Attribute removeValues(com.unboundid.ldap.sdk.Attribute,com.unboundid.ldap.sdk.Attribute)
+    658:658:public java.lang.String getBaseName()
+    676:683:public static java.lang.String getBaseName(java.lang.String)
+    703:703:public boolean nameIsValid()
+    725:725:public static boolean nameIsValid(java.lang.String)
+    750:801:public static boolean nameIsValid(java.lang.String,boolean)
+    814:814:public boolean hasOptions()
+    829:829:public static boolean hasOptions(java.lang.String)
+    844:844:public boolean hasOption(java.lang.String)
+    861:870:public static boolean hasOption(java.lang.String,java.lang.String)
+    883:883:public java.util.Set getOptions()
+    898:921:public static java.util.Set getOptions(java.lang.String)
+    934:934:public com.unboundid.ldap.matchingrules.MatchingRule getMatchingRule()
+    991:1011:public java.lang.Boolean getValueAsBoolean()
+    1028:1040:public java.util.Date getValueAsDate()
+    1055:1067:public com.unboundid.ldap.sdk.DN getValueAsDN()
+    1083:1095:public java.lang.Integer getValueAsInteger()
+    1111:1123:public java.lang.Long getValueAsLong()
+    1163:1174:public byte[][] getValueByteArrays()
+    1188:1188:public com.unboundid.asn1.ASN1OctetString[] getRawValues()
+    1201:1201:public boolean hasValue()
+    1217:1219:public boolean hasValue(java.lang.String)
+    1237:1239:public boolean hasValue(java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule)
+    1255:1257:public boolean hasValue(byte[])
+    1275:1277:public boolean hasValue(byte[],com.unboundid.ldap.matchingrules.MatchingRule)
+    1339:1339:public int size()
+    1353:1363:public void writeTo(com.unboundid.asn1.ASN1Buffer)
+    1377:1382:public com.unboundid.asn1.ASN1Sequence encode()
+    1400:1400:public static com.unboundid.ldap.sdk.Attribute readFrom(com.unboundid.asn1.ASN1StreamReader)
+    1539:1539:public static boolean needsBase64Encoding(java.lang.String)
+com.unboundid.ldap.sdk.BasicAsyncCompareResultListener
+com.unboundid.ldap.sdk.BasicAsyncResultListener
+com.unboundid.ldap.sdk.BasicAsyncSearchResultListener
+com.unboundid.ldap.sdk.BindRequest:
+    private static final long serialVersionUID
+    111:111:public final com.unboundid.ldap.sdk.OperationType getOperationType()
+    public abstract java.lang.String getBindType()
+    public abstract com.unboundid.ldap.sdk.BindRequest duplicate()
+    public abstract com.unboundid.ldap.sdk.BindRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate()
+    1:1:protected bridge synthetic com.unboundid.ldap.sdk.LDAPResult process(com.unboundid.ldap.sdk.LDAPConnection,int)
+com.unboundid.ldap.sdk.BindResult:
+    private static final byte TYPE_SERVER_SASL_CREDENTIALS
+    private static final long serialVersionUID
+    91:93:public BindResult(int,com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.lang.String[],com.unboundid.ldap.sdk.Control[])
+    135:138:public BindResult(com.unboundid.ldap.sdk.LDAPResult)
+    150:153:protected BindResult(com.unboundid.ldap.sdk.BindResult)
+    265:265:public com.unboundid.asn1.ASN1OctetString getServerSASLCredentials()
+com.unboundid.ldap.sdk.ChangeLogEntry
+com.unboundid.ldap.sdk.ChangeType
+com.unboundid.ldap.sdk.CompactAttribute
+com.unboundid.ldap.sdk.CompactEntry
+com.unboundid.ldap.sdk.CompareRequest
+com.unboundid.ldap.sdk.CompareResult:
+    private static final long serialVersionUID
+    84:86:public CompareResult(int,com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.lang.String[],com.unboundid.ldap.sdk.Control[])
+    125:125:public boolean compareMatched()
+com.unboundid.ldap.sdk.ConnectionClosedResponse:
+    private static final long serialVersionUID
+com.unboundid.ldap.sdk.Control:
+    private static final byte CONTROLS_TYPE
+    private static final long serialVersionUID
+    159:164:protected Control(com.unboundid.ldap.sdk.Control)
+    174:181:public Control(java.lang.String)
+    193:200:public Control(java.lang.String,boolean)
+    232:232:public final java.lang.String getOID()
+    257:257:public final boolean hasValue()
+    270:270:public final com.unboundid.asn1.ASN1OctetString getValue()
+    310:323:public final com.unboundid.asn1.ASN1Sequence encode()
+    395:454:public static com.unboundid.ldap.sdk.Control decode(com.unboundid.asn1.ASN1Sequence)
+    508:514:public static com.unboundid.asn1.ASN1Sequence encodeControls(com.unboundid.ldap.sdk.Control[])
+    533:552:public static com.unboundid.ldap.sdk.Control[] decodeControls(com.unboundid.asn1.ASN1Sequence)
+    582:583:public static void deregisterDecodeableControl(java.lang.String)
+    687:687:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.DN:
+    private static final long serialVersionUID
+    183:209:public DN(java.util.List)
+    220:239:public DN(com.unboundid.ldap.sdk.RDN,com.unboundid.ldap.sdk.DN)
+    643:648:public static boolean isValidDN(java.lang.String)
+    664:670:public com.unboundid.ldap.sdk.RDN getRDN()
+    686:692:public java.lang.String getRDNString()
+    715:715:public static java.lang.String getRDNString(java.lang.String)
+    727:727:public com.unboundid.ldap.sdk.RDN[] getRDNs()
+    747:747:public static com.unboundid.ldap.sdk.RDN[] getRDNs(java.lang.String)
+    761:766:public java.lang.String[] getRDNStrings()
+    786:786:public static java.lang.String[] getRDNStrings(java.lang.String)
+    815:836:public com.unboundid.ldap.sdk.DN getParent()
+    858:858:public static com.unboundid.ldap.sdk.DN getParent(java.lang.String)
+    873:880:public java.lang.String getParentString()
+    903:903:public static java.lang.String getParentString(java.lang.String)
+    926:955:public boolean isAncestorOf(com.unboundid.ldap.sdk.DN,boolean)
+    982:982:public boolean isAncestorOf(java.lang.String,boolean)
+    1014:1014:public static boolean isAncestorOf(java.lang.String,java.lang.String,boolean)
+    1037:1066:public boolean isDescendantOf(com.unboundid.ldap.sdk.DN,boolean)
+    1093:1093:public boolean isDescendantOf(java.lang.String,boolean)
+    1125:1125:public static boolean isDescendantOf(java.lang.String,java.lang.String,boolean)
+    1148:1148:public boolean matchesBaseAndScope(java.lang.String,com.unboundid.ldap.sdk.SearchScope)
+    1170:1187:public boolean matchesBaseAndScope(com.unboundid.ldap.sdk.DN,com.unboundid.ldap.sdk.SearchScope)
+    1256:1261:public boolean equals(java.lang.String)
+    1283:1283:public static boolean equals(java.lang.String,java.lang.String)
+    1312:1314:public java.lang.String toMinimallyEncodedString()
+    1327:1328:public void toString(java.lang.StringBuilder)
+    1348:1357:public void toString(java.lang.StringBuilder,boolean)
+    1417:1417:public static java.lang.String normalize(java.lang.String)
+    1539:1539:public static int compare(java.lang.String,java.lang.String)
+com.unboundid.ldap.sdk.DNEntrySource
+com.unboundid.ldap.sdk.DeleteRequest
+com.unboundid.ldap.sdk.DereferencePolicy:
+    private static final long serialVersionUID
+    132:137:private DereferencePolicy(int)
+    162:162:public java.lang.String getName()
+    191:202:public static com.unboundid.ldap.sdk.DereferencePolicy valueOf(int)
+    226:225:public static com.unboundid.ldap.sdk.DereferencePolicy[] values()
+com.unboundid.ldap.sdk.DisconnectType:
+    private static synthetic int[] $SWITCH_TABLE$com$unboundid$ldap$sdk$DisconnectType
+    233:233:public java.lang.String getDescription()
+    261:335:public static com.unboundid.ldap.sdk.DisconnectType forName(java.lang.String)
+    362:374:public static boolean isExpected(com.unboundid.ldap.sdk.DisconnectType)
+    41:41:static synthetic int[] $SWITCH_TABLE$com$unboundid$ldap$sdk$DisconnectType()
+com.unboundid.ldap.sdk.EXTERNALBindRequest
+com.unboundid.ldap.sdk.Entry:
+    private static final long serialVersionUID
+    116:123:public Entry(java.lang.String)
+    132:140:public Entry(com.unboundid.ldap.sdk.DN)
+    182:203:public varargs Entry(com.unboundid.ldap.sdk.DN,com.unboundid.ldap.sdk.Attribute[])
+    245:266:public Entry(com.unboundid.ldap.sdk.DN,java.util.Collection)
+    279:287:public varargs Entry(java.lang.String[])
+    310:314:public void setDN(java.lang.String)
+    325:329:public void setDN(com.unboundid.ldap.sdk.DN)
+    363:363:public final com.unboundid.ldap.sdk.RDN getRDN()
+    379:384:public final com.unboundid.ldap.sdk.DN getParentDN()
+    400:412:public final java.lang.String getParentDNString()
+    429:431:public final boolean hasAttribute(java.lang.String)
+    451:492:public final boolean hasAttribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema)
+    534:537:public final boolean hasAttributeValue(java.lang.String,java.lang.String)
+    560:563:public final boolean hasAttributeValue(java.lang.String,java.lang.String,com.unboundid.ldap.matchingrules.MatchingRule)
+    583:586:public final boolean hasAttributeValue(java.lang.String,byte[])
+    609:612:public final boolean hasAttributeValue(java.lang.String,byte[],com.unboundid.ldap.matchingrules.MatchingRule)
+    628:628:public final boolean hasObjectClass(java.lang.String)
+    656:658:public final com.unboundid.ldap.sdk.Attribute getAttribute(java.lang.String)
+    678:720:public final com.unboundid.ldap.sdk.Attribute getAttribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema)
+    745:777:public final java.util.List getAttributesWithOptions(java.lang.String,java.util.Set)
+    822:831:public byte[] getAttributeValueBytes(java.lang.String)
+    853:862:public java.lang.Boolean getAttributeValueAsBoolean(java.lang.String)
+    882:891:public java.util.Date getAttributeValueAsDate(java.lang.String)
+    911:920:public com.unboundid.ldap.sdk.DN getAttributeValueAsDN(java.lang.String)
+    940:949:public java.lang.Integer getAttributeValueAsInteger(java.lang.String)
+    969:978:public java.lang.Long getAttributeValueAsLong(java.lang.String)
+    1022:1031:public byte[][] getAttributeValueByteArrays(java.lang.String)
+    1045:1045:public final com.unboundid.ldap.sdk.Attribute getObjectClassAttribute()
+    1075:1088:public boolean addAttribute(com.unboundid.ldap.sdk.Attribute)
+    1109:1110:public boolean addAttribute(java.lang.String,java.lang.String)
+    1130:1131:public boolean addAttribute(java.lang.String,byte[])
+    1151:1152:public varargs boolean addAttribute(java.lang.String,java.lang.String[])
+    1172:1173:public varargs boolean addAttribute(java.lang.String,byte[][])
+    1189:1191:public boolean removeAttribute(java.lang.String)
+    1213:1234:public boolean removeAttributeValue(java.lang.String,java.lang.String)
+    1257:1278:public boolean removeAttributeValue(java.lang.String,byte[])
+    1301:1322:public varargs boolean removeAttributeValues(java.lang.String,java.lang.String[])
+    1345:1366:public varargs boolean removeAttributeValues(java.lang.String,byte[][])
+    1381:1385:public void setAttribute(com.unboundid.ldap.sdk.Attribute)
+    1401:1405:public void setAttribute(java.lang.String,java.lang.String)
+    1421:1425:public void setAttribute(java.lang.String,byte[])
+    1441:1445:public varargs void setAttribute(java.lang.String,java.lang.String[])
+    1461:1465:public varargs void setAttribute(java.lang.String,byte[][])
+    1487:1487:public boolean matchesBaseAndScope(java.lang.String,com.unboundid.ldap.sdk.SearchScope)
+    1509:1509:public boolean matchesBaseAndScope(com.unboundid.ldap.sdk.DN,com.unboundid.ldap.sdk.SearchScope)
+    1542:1542:public static varargs java.util.List diff(com.unboundid.ldap.sdk.Entry,com.unboundid.ldap.sdk.Entry,boolean,java.lang.String[])
+    1584:1801:public static varargs java.util.List diff(com.unboundid.ldap.sdk.Entry,com.unboundid.ldap.sdk.Entry,boolean,boolean,java.lang.String[])
+    1818:1831:public static varargs com.unboundid.ldap.sdk.Entry mergeEntries(com.unboundid.ldap.sdk.Entry[])
+    1849:1870:public static varargs com.unboundid.ldap.sdk.Entry intersectEntries(com.unboundid.ldap.sdk.Entry[])
+    1899:1902:public static varargs com.unboundid.ldap.sdk.Entry applyModifications(com.unboundid.ldap.sdk.Entry,boolean,com.unboundid.ldap.sdk.Modification[])
+    1931:2168:public static com.unboundid.ldap.sdk.Entry applyModifications(com.unboundid.ldap.sdk.Entry,boolean,java.util.List)
+    2277:2277:public com.unboundid.ldap.sdk.Entry duplicate()
+    2290:2290:public final java.lang.String[] toLDIF()
+    2307:2326:public final java.lang.String[] toLDIF(int)
+    2340:2341:public final void toLDIF(com.unboundid.util.ByteStringBuffer)
+    2356:2369:public final void toLDIF(com.unboundid.util.ByteStringBuffer,int)
+    2381:2383:public final java.lang.String toLDIFString()
+    2400:2402:public final java.lang.String toLDIFString(int)
+    2417:2418:public final void toLDIFString(java.lang.StringBuilder)
+    2435:2448:public final void toLDIFString(java.lang.StringBuilder,int)
+com.unboundid.ldap.sdk.EntrySorter
+com.unboundid.ldap.sdk.EntrySource
+com.unboundid.ldap.sdk.EntrySourceException
+com.unboundid.ldap.sdk.ExtendedRequest:
+    protected static final byte TYPE_EXTENDED_REQUEST_OID
+    protected static final byte TYPE_EXTENDED_REQUEST_VALUE
+    private static final long serialVersionUID
+    109:116:public ExtendedRequest(java.lang.String)
+    150:156:public ExtendedRequest(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    172:178:public ExtendedRequest(java.lang.String,com.unboundid.asn1.ASN1OctetString,com.unboundid.ldap.sdk.Control[])
+    191:195:protected ExtendedRequest(com.unboundid.ldap.sdk.ExtendedRequest)
+    206:206:public final java.lang.String getOID()
+    219:219:public final boolean hasValue()
+    232:232:public final com.unboundid.asn1.ASN1OctetString getValue()
+    274:290:com.unboundid.asn1.ASN1Element encodeProtocolOp()
+    510:510:public final int getLastMessageID()
+    521:521:public final com.unboundid.ldap.sdk.OperationType getOperationType()
+    532:532:public com.unboundid.ldap.sdk.ExtendedRequest duplicate()
+    543:545:public com.unboundid.ldap.sdk.ExtendedRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    561:561:public java.lang.String getExtendedRequestName()
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate()
+    1:1:protected bridge synthetic com.unboundid.ldap.sdk.LDAPResult process(com.unboundid.ldap.sdk.LDAPConnection,int)
+com.unboundid.ldap.sdk.ExtendedResult:
+    private static final byte TYPE_EXTENDED_RESPONSE_OID
+    private static final byte TYPE_EXTENDED_RESPONSE_VALUE
+    private static final long serialVersionUID
+    265:265:public final boolean hasValue()
+    298:298:public java.lang.String getExtendedResultName()
+com.unboundid.ldap.sdk.FailoverServerSet
+com.unboundid.ldap.sdk.Filter:
+    public static final byte FILTER_TYPE_AND
+    public static final byte FILTER_TYPE_OR
+    public static final byte FILTER_TYPE_NOT
+    public static final byte FILTER_TYPE_EQUALITY
+    public static final byte FILTER_TYPE_SUBSTRING
+    public static final byte FILTER_TYPE_GREATER_OR_EQUAL
+    public static final byte FILTER_TYPE_LESS_OR_EQUAL
+    public static final byte FILTER_TYPE_PRESENCE
+    public static final byte FILTER_TYPE_APPROXIMATE_MATCH
+    public static final byte FILTER_TYPE_EXTENSIBLE_MATCH
+    private static final byte SUBSTRING_TYPE_SUBINITIAL
+    private static final byte SUBSTRING_TYPE_SUBANY
+    private static final byte SUBSTRING_TYPE_SUBFINAL
+    private static final byte EXTENSIBLE_TYPE_MATCHING_RULE_ID
+    private static final byte EXTENSIBLE_TYPE_ATTRIBUTE_NAME
+    private static final byte EXTENSIBLE_TYPE_MATCH_VALUE
+    private static final byte EXTENSIBLE_TYPE_DN_ATTRIBUTES
+    private static final long serialVersionUID
+    425:427:public static varargs com.unboundid.ldap.sdk.Filter createANDFilter(com.unboundid.ldap.sdk.Filter[])
+    443:445:public static com.unboundid.ldap.sdk.Filter createANDFilter(java.util.List)
+    462:464:public static varargs com.unboundid.ldap.sdk.Filter createORFilter(com.unboundid.ldap.sdk.Filter[])
+    480:482:public static com.unboundid.ldap.sdk.Filter createORFilter(java.util.List)
+    499:501:public static com.unboundid.ldap.sdk.Filter createNOTFilter(com.unboundid.ldap.sdk.Filter)
+    520:522:public static com.unboundid.ldap.sdk.Filter createEqualityFilter(java.lang.String,java.lang.String)
+    542:544:public static com.unboundid.ldap.sdk.Filter createEqualityFilter(java.lang.String,byte[])
+    564:566:static com.unboundid.ldap.sdk.Filter createEqualityFilter(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    592:631:public static com.unboundid.ldap.sdk.Filter createSubstringFilter(java.lang.String,java.lang.String,java.lang.String[],java.lang.String)
+    657:696:public static com.unboundid.ldap.sdk.Filter createSubstringFilter(java.lang.String,byte[],byte[][],byte[])
+    722:735:static com.unboundid.ldap.sdk.Filter createSubstringFilter(java.lang.String,com.unboundid.asn1.ASN1OctetString,com.unboundid.asn1.ASN1OctetString[],com.unboundid.asn1.ASN1OctetString)
+    756:758:public static com.unboundid.ldap.sdk.Filter createGreaterOrEqualFilter(java.lang.String,java.lang.String)
+    778:780:public static com.unboundid.ldap.sdk.Filter createGreaterOrEqualFilter(java.lang.String,byte[])
+    800:802:static com.unboundid.ldap.sdk.Filter createGreaterOrEqualFilter(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    822:824:public static com.unboundid.ldap.sdk.Filter createLessOrEqualFilter(java.lang.String,java.lang.String)
+    844:846:public static com.unboundid.ldap.sdk.Filter createLessOrEqualFilter(java.lang.String,byte[])
+    866:868:static com.unboundid.ldap.sdk.Filter createLessOrEqualFilter(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    907:909:public static com.unboundid.ldap.sdk.Filter createApproximateMatchFilter(java.lang.String,java.lang.String)
+    930:932:public static com.unboundid.ldap.sdk.Filter createApproximateMatchFilter(java.lang.String,byte[])
+    953:955:static com.unboundid.ldap.sdk.Filter createApproximateMatchFilter(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    983:986:public static com.unboundid.ldap.sdk.Filter createExtensibleMatchFilter(java.lang.String,java.lang.String,boolean,java.lang.String)
+    1014:1017:public static com.unboundid.ldap.sdk.Filter createExtensibleMatchFilter(java.lang.String,java.lang.String,boolean,byte[])
+    1044:1047:static com.unboundid.ldap.sdk.Filter createExtensibleMatchFilter(java.lang.String,java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString)
+    2178:2382:public static com.unboundid.ldap.sdk.Filter readFrom(com.unboundid.asn1.ASN1StreamReader)
+    2403:2746:public static com.unboundid.ldap.sdk.Filter decode(com.unboundid.asn1.ASN1Element)
+    2760:2760:public byte getFilterType()
+    2774:2774:public com.unboundid.ldap.sdk.Filter[] getComponents()
+    2787:2787:public com.unboundid.ldap.sdk.Filter getNOTComponent()
+    2800:2800:public java.lang.String getAttributeName()
+    2815:2821:public java.lang.String getAssertionValue()
+    2837:2843:public byte[] getAssertionValueBytes()
+    2859:2859:public com.unboundid.asn1.ASN1OctetString getRawAssertionValue()
+    2874:2880:public java.lang.String getSubInitialString()
+    2896:2902:public byte[] getSubInitialBytes()
+    2918:2918:public com.unboundid.asn1.ASN1OctetString getRawSubInitialValue()
+    2933:2939:public java.lang.String[] getSubAnyStrings()
+    2954:2960:public byte[][] getSubAnyBytes()
+    2974:2974:public com.unboundid.asn1.ASN1OctetString[] getRawSubAnyValues()
+    2989:2995:public java.lang.String getSubFinalString()
+    3011:3017:public byte[] getSubFinalBytes()
+    3033:3033:public com.unboundid.asn1.ASN1OctetString getRawSubFinalValue()
+    3047:3047:public java.lang.String getMatchingRuleID()
+    3059:3059:public boolean getDNAttributes()
+    3093:3093:public boolean matchesEntry(com.unboundid.ldap.sdk.Entry)
+    3121:3232:public boolean matchesEntry(com.unboundid.ldap.sdk.Entry,com.unboundid.ldap.sdk.schema.Schema)
+    3829:3833:public static java.lang.String encodeValue(java.lang.String)
+    3851:3855:public static java.lang.String encodeValue(byte[])
+com.unboundid.ldap.sdk.GSSAPIBindRequestProperties
+com.unboundid.ldap.sdk.GenericSASLBindRequest
+com.unboundid.ldap.sdk.GetEntryLDAPConnectionPoolHealthCheck
+com.unboundid.ldap.sdk.IntermediateResponse:
+    protected static final byte TYPE_INTERMEDIATE_RESPONSE_OID
+    protected static final byte TYPE_INTERMEDIATE_RESPONSE_VALUE
+    private static final long serialVersionUID
+    124:125:public IntermediateResponse(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    142:143:public IntermediateResponse(int,java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    159:160:public IntermediateResponse(java.lang.String,com.unboundid.asn1.ASN1OctetString,com.unboundid.ldap.sdk.Control[])
+    202:209:protected IntermediateResponse(com.unboundid.ldap.sdk.IntermediateResponse)
+    309:309:public final java.lang.String getOID()
+    322:322:public final com.unboundid.asn1.ASN1OctetString getValue()
+    334:334:public final com.unboundid.ldap.sdk.Control[] getControls()
+    350:358:public final com.unboundid.ldap.sdk.Control getControl(java.lang.String)
+    378:378:public java.lang.String getIntermediateResponseName()
+    395:395:public java.lang.String valueToString()
+com.unboundid.ldap.sdk.InternalSDKHelper:
+    51:54:private InternalSDKHelper()
+    126:126:public static com.unboundid.ldap.sdk.AsyncRequestID createAsyncRequestID(int,com.unboundid.ldap.sdk.LDAPConnection)
+    152:155:public static varargs void cancel(com.unboundid.ldap.sdk.LDAPConnection,int,com.unboundid.ldap.sdk.Control[])
+    401:401:public static java.lang.Boolean followReferralsInternal(com.unboundid.ldap.sdk.LDAPRequest)
+com.unboundid.ldap.sdk.LDAPConnection:
+    304:305:public LDAPConnection(com.unboundid.ldap.sdk.LDAPConnectionOptions)
+    319:320:public LDAPConnection(javax.net.SocketFactory)
+    388:389:public LDAPConnection(java.lang.String,int)
+    414:415:public LDAPConnection(com.unboundid.ldap.sdk.LDAPConnectionOptions,java.lang.String,int)
+    439:440:public LDAPConnection(javax.net.SocketFactory,java.lang.String,int)
+    498:499:public LDAPConnection(java.lang.String,int,java.lang.String,java.lang.String)
+    530:531:public LDAPConnection(com.unboundid.ldap.sdk.LDAPConnectionOptions,java.lang.String,int,java.lang.String,java.lang.String)
+    561:562:public LDAPConnection(javax.net.SocketFactory,java.lang.String,int,java.lang.String,java.lang.String)
+    597:610:public LDAPConnection(javax.net.SocketFactory,com.unboundid.ldap.sdk.LDAPConnectionOptions,java.lang.String,int,java.lang.String,java.lang.String)
+    864:884:public void setConnectionOptions(com.unboundid.ldap.sdk.LDAPConnectionOptions)
+    899:899:public javax.net.SocketFactory getLastUsedSocketFactory()
+    914:914:public javax.net.SocketFactory getSocketFactory()
+    928:936:public void setSocketFactory(javax.net.SocketFactory)
+    980:990:public void setConnectionName(java.lang.String)
+    1020:1027:void setConnectionPoolName(java.lang.String)
+    1113:1113:public java.lang.StackTraceElement[] getConnectStackTrace()
+    1178:1189:public void close(com.unboundid.ldap.sdk.Control[])
+    1265:1266:void setConnectionPool(com.unboundid.ldap.sdk.AbstractConnectionPool)
+    1333:1333:public com.unboundid.ldap.sdk.schema.Schema getSchema(java.lang.String)
+    1484:1486:public varargs com.unboundid.ldap.sdk.LDAPResult add(java.lang.String,com.unboundid.ldap.sdk.Attribute[])
+    1508:1510:public com.unboundid.ldap.sdk.LDAPResult add(java.lang.String,java.util.Collection)
+    1529:1531:public com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.Entry)
+    1554:1554:public varargs com.unboundid.ldap.sdk.LDAPResult add(java.lang.String[])
+    1574:1585:public com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.AddRequest)
+    1606:1606:public com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.ReadOnlyAddRequest)
+    1628:1636:public com.unboundid.ldap.sdk.AsyncRequestID asyncAdd(com.unboundid.ldap.sdk.AddRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    1658:1664:public com.unboundid.ldap.sdk.AsyncRequestID asyncAdd(com.unboundid.ldap.sdk.ReadOnlyAddRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    1782:1784:public com.unboundid.ldap.sdk.CompareResult compare(java.lang.String,java.lang.String,java.lang.String)
+    1804:1814:public com.unboundid.ldap.sdk.CompareResult compare(com.unboundid.ldap.sdk.CompareRequest)
+    1835:1835:public com.unboundid.ldap.sdk.CompareResult compare(com.unboundid.ldap.sdk.ReadOnlyCompareRequest)
+    1857:1865:public com.unboundid.ldap.sdk.AsyncRequestID asyncCompare(com.unboundid.ldap.sdk.CompareRequest,com.unboundid.ldap.sdk.AsyncCompareResultListener)
+    1888:1894:public com.unboundid.ldap.sdk.AsyncRequestID asyncCompare(com.unboundid.ldap.sdk.ReadOnlyCompareRequest,com.unboundid.ldap.sdk.AsyncCompareResultListener)
+    1913:1913:public com.unboundid.ldap.sdk.LDAPResult delete(java.lang.String)
+    1933:1944:public com.unboundid.ldap.sdk.LDAPResult delete(com.unboundid.ldap.sdk.DeleteRequest)
+    1965:1965:public com.unboundid.ldap.sdk.LDAPResult delete(com.unboundid.ldap.sdk.ReadOnlyDeleteRequest)
+    1987:1995:public com.unboundid.ldap.sdk.AsyncRequestID asyncDelete(com.unboundid.ldap.sdk.DeleteRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    2017:2023:public com.unboundid.ldap.sdk.AsyncRequestID asyncDelete(com.unboundid.ldap.sdk.ReadOnlyDeleteRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    2063:2065:public com.unboundid.ldap.sdk.ExtendedResult processExtendedOperation(java.lang.String)
+    2109:2111:public com.unboundid.ldap.sdk.ExtendedResult processExtendedOperation(java.lang.String,com.unboundid.asn1.ASN1OctetString)
+    2198:2200:public com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,com.unboundid.ldap.sdk.Modification)
+    2220:2222:public varargs com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,com.unboundid.ldap.sdk.Modification[])
+    2243:2245:public com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,java.util.List)
+    2271:2273:public varargs com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String[])
+    2293:2304:public com.unboundid.ldap.sdk.LDAPResult modify(com.unboundid.ldap.sdk.ModifyRequest)
+    2325:2325:public com.unboundid.ldap.sdk.LDAPResult modify(com.unboundid.ldap.sdk.ReadOnlyModifyRequest)
+    2347:2355:public com.unboundid.ldap.sdk.AsyncRequestID asyncModify(com.unboundid.ldap.sdk.ModifyRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    2377:2383:public com.unboundid.ldap.sdk.AsyncRequestID asyncModify(com.unboundid.ldap.sdk.ReadOnlyModifyRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    2408:2410:public com.unboundid.ldap.sdk.LDAPResult modifyDN(java.lang.String,java.lang.String,boolean)
+    2439:2441:public com.unboundid.ldap.sdk.LDAPResult modifyDN(java.lang.String,java.lang.String,boolean,java.lang.String)
+    2462:2473:public com.unboundid.ldap.sdk.LDAPResult modifyDN(com.unboundid.ldap.sdk.ModifyDNRequest)
+    2494:2494:public com.unboundid.ldap.sdk.LDAPResult modifyDN(com.unboundid.ldap.sdk.ReadOnlyModifyDNRequest)
+    2516:2524:public com.unboundid.ldap.sdk.AsyncRequestID asyncModifyDN(com.unboundid.ldap.sdk.ModifyDNRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    2547:2553:public com.unboundid.ldap.sdk.AsyncRequestID asyncModifyDN(com.unboundid.ldap.sdk.ReadOnlyModifyDNRequest,com.unboundid.ldap.sdk.AsyncResultListener)
+    2588:2602:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    2636:2638:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    2677:2692:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    2730:2745:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    2794:2810:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    2857:2859:public varargs com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    2915:2931:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    2986:2988:public varargs com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    3057:3057:public com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+    3098:3107:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    3145:3145:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    3197:3206:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,boolean,java.lang.String,java.lang.String[])
+    3253:3253:public varargs com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    3288:3332:public com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(com.unboundid.ldap.sdk.SearchRequest)
+    3362:3362:public com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+    3434:3440:public com.unboundid.ldap.sdk.AsyncRequestID asyncSearch(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+    3462:3462:public com.unboundid.ldap.sdk.LDAPResult processOperation(com.unboundid.ldap.sdk.LDAPRequest)
+    3498:3506:public void setReferralConnector(com.unboundid.ldap.sdk.ReferralConnector)
+    3753:3753:com.unboundid.ldap.sdk.BindRequest getLastBindRequest()
+    3858:3865:public long getConnectTime()
+com.unboundid.ldap.sdk.LDAPConnectionInternals:
+    208:208:com.unboundid.ldap.sdk.LDAPConnection getConnection()
+    272:272:java.io.OutputStream getOutputStream()
+    593:599:public long getConnectTime()
+com.unboundid.ldap.sdk.LDAPConnectionOptions:
+    static final boolean DEFAULT_AUTO_RECONNECT
+    static final boolean DEFAULT_BIND_WITH_DN_REQUIRES_PASSWORD
+    static final boolean DEFAULT_CAPTURE_CONNECT_STACK_TRACE
+    static final boolean DEFAULT_FOLLOW_REFERRALS
+    static final boolean DEFAULT_USE_KEEPALIVE
+    static final boolean DEFAULT_USE_LINGER
+    static final boolean DEFAULT_USE_REUSE_ADDRESS
+    static final boolean DEFAULT_USE_SCHEMA
+    static final boolean DEFAULT_USE_SYNCHRONOUS_MODE
+    static final boolean DEFAULT_USE_TCP_NODELAY
+    static final int DEFAULT_CONNECT_TIMEOUT_MILLIS
+    static final int DEFAULT_LINGER_TIMEOUT_SECONDS
+    static final int DEFAULT_MAX_MESSAGE_SIZE
+    static final int DEFAULT_RECEIVE_BUFFER_SIZE
+    static final int DEFAULT_REFERRAL_HOP_LIMIT
+    static final int DEFAULT_SEND_BUFFER_SIZE
+    static final long DEFAULT_RESPONSE_TIMEOUT_MILLIS
+    461:462:public void setBindWithDNRequiresPassword(boolean)
+    493:494:public void setCaptureConnectStackTrace(boolean)
+    557:565:public void setResponseTimeoutMillis(long)
+    594:595:public void setUseKeepAlive(boolean)
+    640:642:public void setUseLinger(boolean,int)
+    671:672:public void setUseReuseAddress(boolean)
+    701:702:public void setUseSchema(boolean)
+    746:747:public void setUseSynchronousMode(boolean)
+    776:777:public void setUseTCPNoDelay(boolean)
+    835:839:public void setReferralHopLimit(int)
+    879:880:public void setReferralConnector(com.unboundid.ldap.sdk.ReferralConnector)
+    975:976:public void setUnsolicitedNotificationHandler(com.unboundid.ldap.sdk.UnsolicitedNotificationHandler)
+    1005:1013:public void setReceiveBufferSize(int)
+    1042:1050:public void setSendBufferSize(int)
+com.unboundid.ldap.sdk.LDAPConnectionPool
+com.unboundid.ldap.sdk.LDAPConnectionPoolHealthCheck:
+    86:89:public LDAPConnectionPoolHealthCheck()
+    109:109:public void ensureNewConnectionValid(com.unboundid.ldap.sdk.LDAPConnection)
+    131:131:public void ensureConnectionValidForCheckout(com.unboundid.ldap.sdk.LDAPConnection)
+    153:153:public void ensureConnectionValidForRelease(com.unboundid.ldap.sdk.LDAPConnection)
+    175:175:public void ensureConnectionValidForContinuedUse(com.unboundid.ldap.sdk.LDAPConnection)
+com.unboundid.ldap.sdk.LDAPConnectionPoolHealthCheckThread
+com.unboundid.ldap.sdk.LDAPConnectionPoolStatistics
+com.unboundid.ldap.sdk.LDAPConnectionReader:
+    private static final int DEFAULT_INPUT_BUFFER_SIZE
+    1096:1096:java.lang.Thread getReaderThread()
+    1107:1112:void updateThreadName()
+com.unboundid.ldap.sdk.LDAPConnectionStatistics:
+    private static final long serialVersionUID
+    208:238:public void reset()
+    251:251:public long getNumConnects()
+    277:277:public long getNumDisconnects()
+    300:300:public long getNumAbandonRequests()
+    323:323:public long getNumAddRequests()
+    333:334:void incrementNumAddRequests()
+    345:345:public long getNumAddResponses()
+    358:364:void incrementNumAddResponses(long)
+    377:377:public long getTotalAddResponseTimeNanos()
+    391:391:public long getTotalAddResponseTimeMillis()
+    406:415:public double getAverageAddResponseTimeNanos()
+    431:440:public double getAverageAddResponseTimeMillis()
+    453:453:public long getNumBindRequests()
+    475:475:public long getNumBindResponses()
+    507:507:public long getTotalBindResponseTimeNanos()
+    521:521:public long getTotalBindResponseTimeMillis()
+    536:545:public double getAverageBindResponseTimeNanos()
+    561:570:public double getAverageBindResponseTimeMillis()
+    583:583:public long getNumCompareRequests()
+    594:595:void incrementNumCompareRequests()
+    607:607:public long getNumCompareResponses()
+    621:627:void incrementNumCompareResponses(long)
+    640:640:public long getTotalCompareResponseTimeNanos()
+    654:654:public long getTotalCompareResponseTimeMillis()
+    670:679:public double getAverageCompareResponseTimeNanos()
+    696:705:public double getAverageCompareResponseTimeMillis()
+    718:718:public long getNumDeleteRequests()
+    728:729:void incrementNumDeleteRequests()
+    740:740:public long getNumDeleteResponses()
+    754:760:void incrementNumDeleteResponses(long)
+    773:773:public long getTotalDeleteResponseTimeNanos()
+    787:787:public long getTotalDeleteResponseTimeMillis()
+    803:812:public double getAverageDeleteResponseTimeNanos()
+    829:838:public double getAverageDeleteResponseTimeMillis()
+    852:852:public long getNumExtendedRequests()
+    877:877:public long getNumExtendedResponses()
+    910:910:public long getTotalExtendedResponseTimeNanos()
+    924:924:public long getTotalExtendedResponseTimeMillis()
+    940:949:public double getAverageExtendedResponseTimeNanos()
+    966:975:public double getAverageExtendedResponseTimeMillis()
+    988:988:public long getNumModifyRequests()
+    998:999:void incrementNumModifyRequests()
+    1010:1010:public long getNumModifyResponses()
+    1024:1030:void incrementNumModifyResponses(long)
+    1043:1043:public long getTotalModifyResponseTimeNanos()
+    1057:1057:public long getTotalModifyResponseTimeMillis()
+    1073:1082:public double getAverageModifyResponseTimeNanos()
+    1099:1108:public double getAverageModifyResponseTimeMillis()
+    1123:1123:public long getNumModifyDNRequests()
+    1134:1135:void incrementNumModifyDNRequests()
+    1148:1148:public long getNumModifyDNResponses()
+    1162:1168:void incrementNumModifyDNResponses(long)
+    1181:1181:public long getTotalModifyDNResponseTimeNanos()
+    1195:1195:public long getTotalModifyDNResponseTimeMillis()
+    1211:1220:public double getAverageModifyDNResponseTimeNanos()
+    1237:1246:public double getAverageModifyDNResponseTimeMillis()
+    1259:1259:public long getNumSearchRequests()
+    1284:1284:public long getNumSearchEntryResponses()
+    1298:1298:public long getNumSearchReferenceResponses()
+    1312:1312:public long getNumSearchDoneResponses()
+    1354:1354:public long getTotalSearchResponseTimeNanos()
+    1368:1368:public long getTotalSearchResponseTimeMillis()
+    1384:1393:public double getAverageSearchResponseTimeNanos()
+    1410:1419:public double getAverageSearchResponseTimeMillis()
+    1432:1432:public long getNumUnbindRequests()
+com.unboundid.ldap.sdk.LDAPEntrySource
+com.unboundid.ldap.sdk.LDAPException:
+    private static final long serialVersionUID
+    179:195:public LDAPException(com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.lang.String[])
+    213:229:public LDAPException(com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.lang.String[],java.lang.Throwable)
+    246:270:public LDAPException(com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.lang.String[],com.unboundid.ldap.sdk.Control[])
+    349:359:public LDAPException(com.unboundid.ldap.sdk.LDAPResult,java.lang.Throwable)
+    371:378:public LDAPException(com.unboundid.ldap.sdk.LDAPException)
+    415:415:public final java.lang.String getDiagnosticMessage()
+    441:441:public final boolean hasResponseControl()
+    458:466:public final boolean hasResponseControl(java.lang.String)
+    494:502:public final com.unboundid.ldap.sdk.Control getResponseControl(java.lang.String)
+    514:514:public com.unboundid.ldap.sdk.LDAPResult toLDAPResult()
+com.unboundid.ldap.sdk.LDAPInterface:
+    public abstract com.unboundid.ldap.sdk.RootDSE getRootDSE()
+    public abstract com.unboundid.ldap.sdk.schema.Schema getSchema()
+    public abstract com.unboundid.ldap.sdk.schema.Schema getSchema(java.lang.String)
+    public abstract com.unboundid.ldap.sdk.SearchResultEntry getEntry(java.lang.String)
+    public varargs abstract com.unboundid.ldap.sdk.LDAPResult add(java.lang.String,com.unboundid.ldap.sdk.Attribute[])
+    public abstract com.unboundid.ldap.sdk.LDAPResult add(java.lang.String,java.util.Collection)
+    public abstract com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.Entry)
+    public varargs abstract com.unboundid.ldap.sdk.LDAPResult add(java.lang.String[])
+    public abstract com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.AddRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult add(com.unboundid.ldap.sdk.ReadOnlyAddRequest)
+    public abstract com.unboundid.ldap.sdk.CompareResult compare(java.lang.String,java.lang.String,java.lang.String)
+    public abstract com.unboundid.ldap.sdk.CompareResult compare(com.unboundid.ldap.sdk.CompareRequest)
+    public abstract com.unboundid.ldap.sdk.CompareResult compare(com.unboundid.ldap.sdk.ReadOnlyCompareRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult delete(java.lang.String)
+    public abstract com.unboundid.ldap.sdk.LDAPResult delete(com.unboundid.ldap.sdk.DeleteRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult delete(com.unboundid.ldap.sdk.ReadOnlyDeleteRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,com.unboundid.ldap.sdk.Modification)
+    public varargs abstract com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,com.unboundid.ldap.sdk.Modification[])
+    public abstract com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String,java.util.List)
+    public varargs abstract com.unboundid.ldap.sdk.LDAPResult modify(java.lang.String[])
+    public abstract com.unboundid.ldap.sdk.LDAPResult modify(com.unboundid.ldap.sdk.ModifyRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult modify(com.unboundid.ldap.sdk.ReadOnlyModifyRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult modifyDN(java.lang.String,java.lang.String,boolean)
+    public abstract com.unboundid.ldap.sdk.LDAPResult modifyDN(java.lang.String,java.lang.String,boolean,java.lang.String)
+    public abstract com.unboundid.ldap.sdk.LDAPResult modifyDN(com.unboundid.ldap.sdk.ModifyDNRequest)
+    public abstract com.unboundid.ldap.sdk.LDAPResult modifyDN(com.unboundid.ldap.sdk.ReadOnlyModifyDNRequest)
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    public abstract com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.SearchRequest)
+    public abstract com.unboundid.ldap.sdk.SearchResult search(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+    public varargs abstract com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,boolean,java.lang.String,java.lang.String[])
+    public varargs abstract com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    public abstract com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(com.unboundid.ldap.sdk.SearchRequest)
+    public abstract com.unboundid.ldap.sdk.SearchResultEntry searchForEntry(com.unboundid.ldap.sdk.ReadOnlySearchRequest)
+com.unboundid.ldap.sdk.LDAPReadWriteConnectionPool
+com.unboundid.ldap.sdk.LDAPRequest:
+    private static final long serialVersionUID
+    134:134:public final java.util.List getControlList()
+    144:144:public final boolean hasControl()
+    154:164:public final boolean hasControl(java.lang.String)
+    174:184:public final com.unboundid.ldap.sdk.Control getControl(java.lang.String)
+    197:198:final void setControlsInternal(com.unboundid.ldap.sdk.Control[])
+    233:241:public final void setResponseTimeoutMillis(long)
+    281:281:final java.lang.Boolean followReferralsInternal()
+    301:302:public final void setFollowReferrals(java.lang.Boolean)
+    328:329:public final void setIntermediateResponseListener(com.unboundid.ldap.sdk.IntermediateResponseListener)
+    protected abstract com.unboundid.ldap.sdk.LDAPResult process(com.unboundid.ldap.sdk.LDAPConnection,int)
+    public abstract int getLastMessageID()
+    public abstract com.unboundid.ldap.sdk.OperationType getOperationType()
+com.unboundid.ldap.sdk.LDAPResult:
+    static final byte TYPE_REFERRAL_URLS
+    private static final long serialVersionUID
+    153:154:public LDAPResult(int,com.unboundid.ldap.sdk.ResultCode)
+    202:204:public LDAPResult(int,com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.util.List,java.util.List)
+    273:304:private LDAPResult(java.lang.Byte,int,com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.util.List,java.util.List)
+    487:487:public final boolean hasResponseControl()
+    504:512:public final boolean hasResponseControl(java.lang.String)
+    529:537:public final com.unboundid.ldap.sdk.Control getResponseControl(java.lang.String)
+com.unboundid.ldap.sdk.LDAPRuntimeException:
+    private static final long serialVersionUID
+    79:79:public com.unboundid.ldap.sdk.LDAPException getLDAPException()
+    104:104:public com.unboundid.ldap.sdk.ResultCode getResultCode()
+    117:117:public java.lang.String getMatchedDN()
+    130:130:public java.lang.String getDiagnosticMessage()
+    143:143:public java.lang.String[] getReferralURLs()
+    156:156:public boolean hasResponseControl()
+    173:173:public boolean hasResponseControl(java.lang.String)
+    186:186:public com.unboundid.ldap.sdk.Control[] getResponseControls()
+    201:201:public com.unboundid.ldap.sdk.Control getResponseControl(java.lang.String)
+    213:213:public com.unboundid.ldap.sdk.LDAPResult toLDAPResult()
+com.unboundid.ldap.sdk.LDAPSearchException:
+    private static final long serialVersionUID
+    66:70:public LDAPSearchException(com.unboundid.ldap.sdk.ResultCode,java.lang.String)
+    85:89:public LDAPSearchException(com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.Throwable)
+    146:146:public com.unboundid.ldap.sdk.SearchResult getSearchResult()
+    160:160:public int getEntryCount()
+    174:174:public int getReferenceCount()
+    190:190:public java.util.List getSearchEntries()
+    206:206:public java.util.List getSearchReferences()
+    219:219:public com.unboundid.ldap.sdk.SearchResult toLDAPResult()
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPResult toLDAPResult()
+com.unboundid.ldap.sdk.LDAPThreadLocalConnectionPool
+com.unboundid.ldap.sdk.LDAPURL:
+    public static final int DEFAULT_LDAP_PORT
+    public static final int DEFAULT_LDAPS_PORT
+    private static final long serialVersionUID
+    490:651:public LDAPURL(java.lang.String,java.lang.String,java.lang.Integer,com.unboundid.ldap.sdk.DN,java.lang.String[],com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter)
+    1185:1185:public java.lang.String getScheme()
+    1212:1212:public boolean hostProvided()
+    1237:1237:public boolean portProvided()
+    1274:1274:public java.lang.String[] getAttributes()
+    1287:1287:public boolean attributesProvided()
+    1351:1351:public com.unboundid.ldap.sdk.SearchRequest toSearchRequest()
+com.unboundid.ldap.sdk.Modification
+com.unboundid.ldap.sdk.ModificationType
+com.unboundid.ldap.sdk.ModifyDNRequest
+com.unboundid.ldap.sdk.ModifyRequest
+com.unboundid.ldap.sdk.OperationType
+com.unboundid.ldap.sdk.PLAINBindRequest
+com.unboundid.ldap.sdk.PasswordProvider:
+    private static final long serialVersionUID
+    42:42:public PasswordProvider()
+com.unboundid.ldap.sdk.PostConnectProcessor
+com.unboundid.ldap.sdk.RDN:
+    private static final long serialVersionUID
+    87:94:public RDN(java.lang.String,java.lang.String)
+    106:113:public RDN(java.lang.String,byte[])
+    127:142:public RDN(java.lang.String[],java.lang.String[])
+    156:171:public RDN(java.lang.String[],byte[][])
+    220:474:public RDN(java.lang.String)
+    1028:1033:public static boolean isValidRDN(java.lang.String)
+    1047:1047:public boolean isMultiValued()
+    1059:1059:public java.lang.String[] getAttributeNames()
+    1071:1077:public java.lang.String[] getAttributeValues()
+    1089:1095:public byte[][] getByteArrayAttributeValues()
+    1111:1119:public boolean hasAttribute(java.lang.String)
+    1138:1153:public boolean hasAttributeValue(java.lang.String,java.lang.String)
+    1172:1187:public boolean hasAttributeValue(java.lang.String,byte[])
+    1223:1225:public java.lang.String toMinimallyEncodedString()
+    1238:1239:public void toString(java.lang.StringBuilder)
+    1411:1411:public static java.lang.String normalize(java.lang.String)
+    1552:1557:public boolean equals(java.lang.String)
+    1579:1579:public static boolean equals(java.lang.String,java.lang.String)
+    1644:1644:public static int compare(java.lang.String,java.lang.String)
+com.unboundid.ldap.sdk.ReadFromFilePasswordProvider
+com.unboundid.ldap.sdk.ReadOnlyAddRequest
+com.unboundid.ldap.sdk.ReadOnlyCompareRequest
+com.unboundid.ldap.sdk.ReadOnlyDeleteRequest
+com.unboundid.ldap.sdk.ReadOnlyEntry:
+    private static final long serialVersionUID
+    77:78:public varargs ReadOnlyEntry(com.unboundid.ldap.sdk.DN,com.unboundid.ldap.sdk.Attribute[])
+    105:106:public ReadOnlyEntry(com.unboundid.ldap.sdk.DN,java.util.Collection)
+    134:135:public varargs ReadOnlyEntry(java.lang.String[])
+    152:152:public void setDN(java.lang.String)
+    170:170:public void setDN(com.unboundid.ldap.sdk.DN)
+    190:190:public boolean addAttribute(com.unboundid.ldap.sdk.Attribute)
+    214:214:public boolean addAttribute(java.lang.String,java.lang.String)
+    238:238:public boolean addAttribute(java.lang.String,byte[])
+    262:262:public varargs boolean addAttribute(java.lang.String,java.lang.String[])
+    286:286:public varargs boolean addAttribute(java.lang.String,byte[][])
+    307:307:public boolean removeAttribute(java.lang.String)
+    331:331:public boolean removeAttributeValue(java.lang.String,java.lang.String)
+    355:355:public boolean removeAttributeValue(java.lang.String,byte[])
+    379:379:public varargs boolean removeAttributeValues(java.lang.String,java.lang.String[])
+    403:403:public varargs boolean removeAttributeValues(java.lang.String,byte[][])
+    422:422:public void setAttribute(com.unboundid.ldap.sdk.Attribute)
+    444:444:public void setAttribute(java.lang.String,java.lang.String)
+    466:466:public void setAttribute(java.lang.String,byte[])
+    488:488:public varargs void setAttribute(java.lang.String,java.lang.String[])
+    510:510:public varargs void setAttribute(java.lang.String,byte[][])
+com.unboundid.ldap.sdk.ReadOnlyLDAPRequest:
+    public abstract java.util.List getControlList()
+    public abstract boolean hasControl()
+    public abstract boolean hasControl(java.lang.String)
+    public abstract com.unboundid.ldap.sdk.Control getControl(java.lang.String)
+    public abstract long getResponseTimeoutMillis(com.unboundid.ldap.sdk.LDAPConnection)
+    public abstract boolean followReferrals(com.unboundid.ldap.sdk.LDAPConnection)
+    public abstract com.unboundid.ldap.sdk.LDAPRequest duplicate()
+    public abstract com.unboundid.ldap.sdk.LDAPRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    public abstract java.lang.String toString()
+    public abstract void toString(java.lang.StringBuilder)
+com.unboundid.ldap.sdk.ReadOnlyModifyDNRequest
+com.unboundid.ldap.sdk.ReadOnlyModifyRequest
+com.unboundid.ldap.sdk.ReadOnlySearchRequest:
+    public abstract java.lang.String getBaseDN()
+    public abstract com.unboundid.ldap.sdk.SearchScope getScope()
+    public abstract com.unboundid.ldap.sdk.DereferencePolicy getDereferencePolicy()
+    public abstract int getSizeLimit()
+    public abstract int getTimeLimitSeconds()
+    public abstract boolean typesOnly()
+    public abstract com.unboundid.ldap.sdk.Filter getFilter()
+    public abstract java.util.List getAttributeList()
+    public abstract com.unboundid.ldap.sdk.SearchRequest duplicate()
+    public abstract com.unboundid.ldap.sdk.SearchRequest duplicate(com.unboundid.ldap.sdk.Control[])
+com.unboundid.ldap.sdk.ResultCode:
+    public static final int SUCCESS_INT_VALUE
+    public static final int OPERATIONS_ERROR_INT_VALUE
+    public static final int PROTOCOL_ERROR_INT_VALUE
+    public static final int TIME_LIMIT_EXCEEDED_INT_VALUE
+    public static final int SIZE_LIMIT_EXCEEDED_INT_VALUE
+    public static final int COMPARE_FALSE_INT_VALUE
+    public static final int COMPARE_TRUE_INT_VALUE
+    public static final int AUTH_METHOD_NOT_SUPPORTED_INT_VALUE
+    public static final int STRONG_AUTH_REQUIRED_INT_VALUE
+    public static final int REFERRAL_INT_VALUE
+    public static final int ADMIN_LIMIT_EXCEEDED_INT_VALUE
+    public static final int UNAVAILABLE_CRITICAL_EXTENSION_INT_VALUE
+    public static final int CONFIDENTIALITY_REQUIRED_INT_VALUE
+    public static final int SASL_BIND_IN_PROGRESS_INT_VALUE
+    public static final int NO_SUCH_ATTRIBUTE_INT_VALUE
+    public static final int UNDEFINED_ATTRIBUTE_TYPE_INT_VALUE
+    public static final int INAPPROPRIATE_MATCHING_INT_VALUE
+    public static final int CONSTRAINT_VIOLATION_INT_VALUE
+    public static final int ATTRIBUTE_OR_VALUE_EXISTS_INT_VALUE
+    public static final int INVALID_ATTRIBUTE_SYNTAX_INT_VALUE
+    public static final int NO_SUCH_OBJECT_INT_VALUE
+    public static final int ALIAS_PROBLEM_INT_VALUE
+    public static final int INVALID_DN_SYNTAX_INT_VALUE
+    public static final int ALIAS_DEREFERENCING_PROBLEM_INT_VALUE
+    public static final int INAPPROPRIATE_AUTHENTICATION_INT_VALUE
+    public static final int INVALID_CREDENTIALS_INT_VALUE
+    public static final int INSUFFICIENT_ACCESS_RIGHTS_INT_VALUE
+    public static final int BUSY_INT_VALUE
+    public static final int UNAVAILABLE_INT_VALUE
+    public static final int UNWILLING_TO_PERFORM_INT_VALUE
+    public static final int LOOP_DETECT_INT_VALUE
+    public static final int SORT_CONTROL_MISSING_INT_VALUE
+    public static final int OFFSET_RANGE_ERROR_INT_VALUE
+    public static final int NAMING_VIOLATION_INT_VALUE
+    public static final int OBJECT_CLASS_VIOLATION_INT_VALUE
+    public static final int NOT_ALLOWED_ON_NONLEAF_INT_VALUE
+    public static final int NOT_ALLOWED_ON_RDN_INT_VALUE
+    public static final int ENTRY_ALREADY_EXISTS_INT_VALUE
+    public static final int OBJECT_CLASS_MODS_PROHIBITED_INT_VALUE
+    public static final int AFFECTS_MULTIPLE_DSAS_INT_VALUE
+    public static final int VIRTUAL_LIST_VIEW_ERROR_INT_VALUE
+    public static final int OTHER_INT_VALUE
+    public static final int SERVER_DOWN_INT_VALUE
+    public static final int LOCAL_ERROR_INT_VALUE
+    public static final int ENCODING_ERROR_INT_VALUE
+    public static final int DECODING_ERROR_INT_VALUE
+    public static final int TIMEOUT_INT_VALUE
+    public static final int AUTH_UNKNOWN_INT_VALUE
+    public static final int FILTER_ERROR_INT_VALUE
+    public static final int USER_CANCELED_INT_VALUE
+    public static final int PARAM_ERROR_INT_VALUE
+    public static final int NO_MEMORY_INT_VALUE
+    public static final int CONNECT_ERROR_INT_VALUE
+    public static final int NOT_SUPPORTED_INT_VALUE
+    public static final int CONTROL_NOT_FOUND_INT_VALUE
+    public static final int NO_RESULTS_RETURNED_INT_VALUE
+    public static final int MORE_RESULTS_TO_RETURN_INT_VALUE
+    public static final int CLIENT_LOOP_INT_VALUE
+    public static final int REFERRAL_LIMIT_EXCEEDED_INT_VALUE
+    public static final int CANCELED_INT_VALUE
+    public static final int NO_SUCH_OPERATION_INT_VALUE
+    public static final int TOO_LATE_INT_VALUE
+    public static final int CANNOT_CANCEL_INT_VALUE
+    public static final int ASSERTION_FAILED_INT_VALUE
+    public static final int AUTHORIZATION_DENIED_INT_VALUE
+    public static final int E_SYNC_REFRESH_REQUIRED_INT_VALUE
+    public static final int NO_OPERATION_INT_VALUE
+    public static final int INTERACTIVE_TRANSACTION_ABORTED_INT_VALUE
+    private static final long serialVersionUID
+    1736:1735:public static com.unboundid.ldap.sdk.ResultCode[] values()
+    1819:1819:public boolean isClientSideResultCode()
+    1836:1857:public static boolean isClientSideResultCode(com.unboundid.ldap.sdk.ResultCode)
+    1876:1876:public boolean isConnectionUsable()
+com.unboundid.ldap.sdk.RootDSE:
+    public static final java.lang.String ATTR_ALT_SERVER
+    public static final java.lang.String ATTR_CHANGELOG_DN
+    public static final java.lang.String ATTR_FIRST_CHANGE_NUMBER
+    public static final java.lang.String ATTR_LAST_CHANGE_NUMBER
+    public static final java.lang.String ATTR_LAST_PURGED_CHANGE_NUMBER
+    public static final java.lang.String ATTR_NAMING_CONTEXT
+    public static final java.lang.String ATTR_SUBSCHEMA_SUBENTRY
+    public static final java.lang.String ATTR_SUPPORTED_AUTH_PASSWORD_STORAGE_SCHEME
+    public static final java.lang.String ATTR_SUPPORTED_CONTROL
+    public static final java.lang.String ATTR_SUPPORTED_EXTENDED_OPERATION
+    public static final java.lang.String ATTR_SUPPORTED_FEATURE
+    public static final java.lang.String ATTR_SUPPORTED_LDAP_VERSION
+    public static final java.lang.String ATTR_SUPPORTED_SASL_MECHANISM
+    public static final java.lang.String ATTR_VENDOR_NAME
+    public static final java.lang.String ATTR_VENDOR_VERSION
+    private static final long serialVersionUID
+    285:285:public java.lang.String[] getAltServerURIs()
+    300:300:public java.lang.String getChangelogDN()
+    314:314:public java.lang.Long getFirstChangeNumber()
+    328:328:public java.lang.Long getLastChangeNumber()
+    342:342:public java.lang.Long getLastPurgedChangeNumber()
+    355:355:public java.lang.String[] getNamingContextDNs()
+    370:370:public java.lang.String getSubschemaSubentryDN()
+    385:385:public java.lang.String[] getSupportedAuthPasswordSchemeNames()
+    404:404:public boolean supportsAuthPasswordScheme(java.lang.String)
+    420:420:public java.lang.String[] getSupportedControlOIDs()
+    437:437:public boolean supportsControl(java.lang.String)
+    452:452:public java.lang.String[] getSupportedExtendedOperationOIDs()
+    470:470:public boolean supportsExtendedOperation(java.lang.String)
+    486:486:public java.lang.String[] getSupportedFeatureOIDs()
+    503:503:public boolean supportsFeature(java.lang.String)
+    519:540:public int[] getSupportedLDAPVersions()
+    557:557:public boolean supportsLDAPVersion(int)
+    573:573:public java.lang.String[] getSupportedSASLMechanismNames()
+    590:590:public boolean supportsSASLMechanism(java.lang.String)
+    603:603:public java.lang.String getVendorName()
+    616:616:public java.lang.String getVendorVersion()
+com.unboundid.ldap.sdk.RoundRobinServerSet
+com.unboundid.ldap.sdk.SASLBindRequest
+com.unboundid.ldap.sdk.SearchRequest:
+    public static final java.lang.String ALL_USER_ATTRIBUTES
+    public static final java.lang.String ALL_OPERATIONAL_ATTRIBUTES
+    public static final java.lang.String NO_ATTRIBUTES
+    private static final long serialVersionUID
+    295:297:public varargs SearchRequest(java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    321:323:public varargs SearchRequest(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    355:357:public varargs SearchRequest(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,java.lang.String,java.lang.String[])
+    385:387:public varargs SearchRequest(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    426:428:public varargs SearchRequest(java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    511:513:public varargs SearchRequest(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    555:557:public varargs SearchRequest(com.unboundid.ldap.sdk.SearchResultListener,java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,com.unboundid.ldap.sdk.Filter,java.lang.String[])
+    608:610:public varargs SearchRequest(com.unboundid.ldap.sdk.SearchResultListener,com.unboundid.ldap.sdk.Control[],java.lang.String,com.unboundid.ldap.sdk.SearchScope,com.unboundid.ldap.sdk.DereferencePolicy,int,int,boolean,java.lang.String,java.lang.String[])
+    703:703:public java.lang.String getBaseDN()
+    716:719:public void setBaseDN(java.lang.String)
+    731:734:public void setBaseDN(com.unboundid.ldap.sdk.DN)
+    743:743:public com.unboundid.ldap.sdk.SearchScope getScope()
+    755:756:public void setScope(com.unboundid.ldap.sdk.SearchScope)
+    765:765:public com.unboundid.ldap.sdk.DereferencePolicy getDereferencePolicy()
+    780:781:public void setDerefPolicy(com.unboundid.ldap.sdk.DereferencePolicy)
+    790:790:public int getSizeLimit()
+    805:813:public void setSizeLimit(int)
+    822:822:public int getTimeLimitSeconds()
+    837:845:public void setTimeLimitSeconds(int)
+    854:854:public boolean typesOnly()
+    869:870:public void setTypesOnly(boolean)
+    879:879:public com.unboundid.ldap.sdk.Filter getFilter()
+    897:900:public void setFilter(java.lang.String)
+    912:915:public void setFilter(com.unboundid.ldap.sdk.Filter)
+    929:929:public java.lang.String[] getAttributes()
+    939:939:public java.util.List getAttributeList()
+    954:962:public varargs void setAttributes(java.lang.String[])
+    976:988:public void setAttributes(java.util.List)
+    1049:1067:com.unboundid.asn1.ASN1Element encodeProtocolOp()
+    1861:1861:public int getLastMessageID()
+    1872:1872:public com.unboundid.ldap.sdk.OperationType getOperationType()
+    1882:1882:public com.unboundid.ldap.sdk.SearchRequest duplicate()
+    1892:1902:public com.unboundid.ldap.sdk.SearchRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate()
+    1:1:protected bridge synthetic com.unboundid.ldap.sdk.LDAPResult process(com.unboundid.ldap.sdk.LDAPConnection,int)
+com.unboundid.ldap.sdk.SearchResult:
+    private static final long serialVersionUID
+    275:289:public com.unboundid.ldap.sdk.SearchResultEntry getSearchEntry(java.lang.String)
+    307:312:public java.util.List getSearchReferences()
+com.unboundid.ldap.sdk.SearchResultEntry:
+    private static final long serialVersionUID
+    83:84:public varargs SearchResultEntry(java.lang.String,com.unboundid.ldap.sdk.Attribute[],com.unboundid.ldap.sdk.Control[])
+    104:110:public varargs SearchResultEntry(int,java.lang.String,com.unboundid.ldap.sdk.Attribute[],com.unboundid.ldap.sdk.Control[])
+    128:129:public varargs SearchResultEntry(java.lang.String,java.util.Collection,com.unboundid.ldap.sdk.Control[])
+    169:170:public varargs SearchResultEntry(com.unboundid.ldap.sdk.Entry,com.unboundid.ldap.sdk.Control[])
+    187:193:public varargs SearchResultEntry(int,com.unboundid.ldap.sdk.Entry,com.unboundid.ldap.sdk.Control[])
+    282:282:public com.unboundid.ldap.sdk.Control[] getControls()
+    298:306:public com.unboundid.ldap.sdk.Control getControl(java.lang.String)
+com.unboundid.ldap.sdk.SearchResultReference:
+    private static final long serialVersionUID
+    85:86:public SearchResultReference(java.lang.String[],com.unboundid.ldap.sdk.Control[])
+    213:213:public com.unboundid.ldap.sdk.Control[] getControls()
+    229:237:public com.unboundid.ldap.sdk.Control getControl(java.lang.String)
+com.unboundid.ldap.sdk.SearchResultReferenceEntrySourceException
+com.unboundid.ldap.sdk.SearchScope:
+    public static final int BASE_INT_VALUE
+    public static final int ONE_INT_VALUE
+    public static final int SUB_INT_VALUE
+    public static final int SUBORDINATE_SUBTREE_INT_VALUE
+    private static final long serialVersionUID
+    151:156:private SearchScope(int)
+    181:181:public java.lang.String getName()
+    210:221:public static com.unboundid.ldap.sdk.SearchScope valueOf(int)
+    248:259:public static com.unboundid.ldap.sdk.SearchScope definedValueOf(int)
+    273:272:public static com.unboundid.ldap.sdk.SearchScope[] values()
+com.unboundid.ldap.sdk.ServerSet
+com.unboundid.ldap.sdk.SimpleBindRequest:
+    private static final byte CRED_TYPE_SIMPLE
+    private static final long serialVersionUID
+    140:141:public SimpleBindRequest(java.lang.String,byte[])
+    153:154:public SimpleBindRequest(com.unboundid.ldap.sdk.DN,java.lang.String)
+    166:167:public SimpleBindRequest(com.unboundid.ldap.sdk.DN,byte[])
+    216:237:public varargs SimpleBindRequest(java.lang.String,byte[],com.unboundid.ldap.sdk.Control[])
+    251:272:public varargs SimpleBindRequest(com.unboundid.ldap.sdk.DN,java.lang.String,com.unboundid.ldap.sdk.Control[])
+    286:307:public varargs SimpleBindRequest(com.unboundid.ldap.sdk.DN,byte[],com.unboundid.ldap.sdk.Control[])
+    326:332:public varargs SimpleBindRequest(java.lang.String,com.unboundid.ldap.sdk.PasswordProvider,com.unboundid.ldap.sdk.Control[])
+    351:357:public varargs SimpleBindRequest(com.unboundid.ldap.sdk.DN,com.unboundid.ldap.sdk.PasswordProvider,com.unboundid.ldap.sdk.Control[])
+    391:391:public java.lang.String getBindDN()
+    405:405:public com.unboundid.asn1.ASN1OctetString getPassword()
+    419:419:public com.unboundid.ldap.sdk.PasswordProvider getPasswordProvider()
+    698:698:public java.lang.String getBindType()
+    709:709:public int getLastMessageID()
+    720:720:public com.unboundid.ldap.sdk.SimpleBindRequest duplicate()
+    732:734:public com.unboundid.ldap.sdk.SimpleBindRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.BindRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate()
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.BindRequest duplicate()
+com.unboundid.ldap.sdk.SingleServerSet
+com.unboundid.ldap.sdk.StartTLSPostConnectProcessor
+com.unboundid.ldap.sdk.UpdatableLDAPRequest:
+    private static final long serialVersionUID
+    73:81:public final varargs void setControls(com.unboundid.ldap.sdk.Control[])
+    92:101:public final void setControls(java.util.List)
+    110:111:public final void clearControls()
+    123:132:public final void addControl(com.unboundid.ldap.sdk.Control)
+    144:159:public final varargs void addControls(com.unboundid.ldap.sdk.Control[])
+    176:214:public final com.unboundid.ldap.sdk.Control removeControl(java.lang.String)
+    232:268:public final boolean removeControl(com.unboundid.ldap.sdk.Control)
+    288:290:public final com.unboundid.ldap.sdk.Control replaceControl(com.unboundid.ldap.sdk.Control)
+    313:336:public final com.unboundid.ldap.sdk.Control replaceControl(java.lang.String,com.unboundid.ldap.sdk.Control)
+com.unboundid.ldap.sdk.Version
+com.unboundid.ldap.sdk.controls.AssertionRequestControl
+com.unboundid.ldap.sdk.controls.AuthorizationIdentityRequestControl
+com.unboundid.ldap.sdk.controls.AuthorizationIdentityResponseControl:
+    public static final java.lang.String AUTHORIZATION_IDENTITY_RESPONSE_OID
+    private static final long serialVersionUID
+    108:114:public AuthorizationIdentityResponseControl(java.lang.String)
+    174:174:public java.lang.String getAuthorizationID()
+    185:185:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.ContentSyncDoneControl:
+    public static final java.lang.String SYNC_DONE_OID
+    private static final long serialVersionUID
+    108:112:public ContentSyncDoneControl(com.unboundid.asn1.ASN1OctetString,boolean)
+    222:234:private static com.unboundid.asn1.ASN1OctetString encodeValue(com.unboundid.asn1.ASN1OctetString,boolean)
+    262:262:public com.unboundid.asn1.ASN1OctetString getCookie()
+    276:276:public boolean refreshDeletes()
+    287:287:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.ContentSyncInfoIntermediateResponse
+com.unboundid.ldap.sdk.controls.ContentSyncInfoType
+com.unboundid.ldap.sdk.controls.ContentSyncRequestControl
+com.unboundid.ldap.sdk.controls.ContentSyncRequestMode
+com.unboundid.ldap.sdk.controls.ContentSyncStateControl:
+    public static final java.lang.String SYNC_STATE_OID
+    private static final long serialVersionUID
+    118:123:public ContentSyncStateControl(com.unboundid.ldap.sdk.controls.ContentSyncState,java.util.UUID,com.unboundid.asn1.ASN1OctetString)
+    216:227:private static com.unboundid.asn1.ASN1OctetString encodeValue(com.unboundid.ldap.sdk.controls.ContentSyncState,java.util.UUID,com.unboundid.asn1.ASN1OctetString)
+    254:254:public com.unboundid.ldap.sdk.controls.ContentSyncState getState()
+    268:268:public java.util.UUID getEntryUUID()
+    283:283:public com.unboundid.asn1.ASN1OctetString getCookie()
+    294:294:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.ControlHelper:
+    45:48:private ControlHelper()
+com.unboundid.ldap.sdk.controls.DontUseCopyRequestControl
+com.unboundid.ldap.sdk.controls.EntryChangeNotificationControl:
+    public static final java.lang.String ENTRY_CHANGE_NOTIFICATION_OID
+    private static final long serialVersionUID
+    140:141:public EntryChangeNotificationControl(com.unboundid.ldap.sdk.controls.PersistentSearchChangeType,java.lang.String,long)
+    162:168:public EntryChangeNotificationControl(com.unboundid.ldap.sdk.controls.PersistentSearchChangeType,java.lang.String,long,boolean)
+    308:323:private static com.unboundid.asn1.ASN1OctetString encodeValue(com.unboundid.ldap.sdk.controls.PersistentSearchChangeType,java.lang.String,long)
+    335:335:public com.unboundid.ldap.sdk.controls.PersistentSearchChangeType getChangeType()
+    347:347:public java.lang.String getPreviousDN()
+    360:360:public long getChangeNumber()
+    371:371:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.ManageDsaITRequestControl
+com.unboundid.ldap.sdk.controls.MatchedValuesFilter
+com.unboundid.ldap.sdk.controls.MatchedValuesRequestControl
+com.unboundid.ldap.sdk.controls.PasswordExpiredControl:
+    public static final java.lang.String PASSWORD_EXPIRED_OID
+    private static final long serialVersionUID
+    180:180:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.PasswordExpiringControl:
+    public static final java.lang.String PASSWORD_EXPIRING_OID
+    private static final long serialVersionUID
+    101:105:public PasswordExpiringControl(int)
+    167:167:public int getSecondsUntilExpiration()
+    178:178:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.PermissiveModifyRequestControl
+com.unboundid.ldap.sdk.controls.PersistentSearchChangeType:
+    113:113:public int intValue()
+    156:156:public static java.util.Set allChangeTypes()
+    173:180:public static varargs int encodeChangeTypes(com.unboundid.ldap.sdk.controls.PersistentSearchChangeType[])
+    197:204:public static int encodeChangeTypes(java.util.Collection)
+    221:243:public static java.util.Set decodeChangeTypes(int)
+com.unboundid.ldap.sdk.controls.PersistentSearchRequestControl
+com.unboundid.ldap.sdk.controls.PostReadRequestControl
+com.unboundid.ldap.sdk.controls.PostReadResponseControl:
+    public static final java.lang.String POST_READ_RESPONSE_OID
+    private static final long serialVersionUID
+    105:108:public PostReadResponseControl(com.unboundid.ldap.sdk.ReadOnlyEntry)
+    221:237:private static com.unboundid.asn1.ASN1OctetString encodeValue(com.unboundid.ldap.sdk.ReadOnlyEntry)
+    251:251:public com.unboundid.ldap.sdk.ReadOnlyEntry getEntry()
+    262:262:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.PreReadRequestControl
+com.unboundid.ldap.sdk.controls.PreReadResponseControl:
+    public static final java.lang.String PRE_READ_RESPONSE_OID
+    private static final long serialVersionUID
+    105:108:public PreReadResponseControl(com.unboundid.ldap.sdk.ReadOnlyEntry)
+    220:236:private static com.unboundid.asn1.ASN1OctetString encodeValue(com.unboundid.ldap.sdk.ReadOnlyEntry)
+    250:250:public com.unboundid.ldap.sdk.ReadOnlyEntry getEntry()
+    261:261:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.ProxiedAuthorizationV1RequestControl
+com.unboundid.ldap.sdk.controls.ProxiedAuthorizationV2RequestControl
+com.unboundid.ldap.sdk.controls.ServerSideSortRequestControl
+com.unboundid.ldap.sdk.controls.ServerSideSortResponseControl:
+    public static final java.lang.String SERVER_SIDE_SORT_RESPONSE_OID
+    private static final byte TYPE_ATTRIBUTE_TYPE
+    private static final long serialVersionUID
+    116:121:public ServerSideSortResponseControl(com.unboundid.ldap.sdk.ResultCode,java.lang.String,boolean)
+    229:245:private static com.unboundid.asn1.ASN1OctetString encodeValue(com.unboundid.ldap.sdk.ResultCode,java.lang.String)
+    257:257:public com.unboundid.ldap.sdk.ResultCode getResultCode()
+    271:271:public java.lang.String getAttributeName()
+    282:282:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.SimplePagedResultsControl:
+    public static final java.lang.String PAGED_RESULTS_OID
+    private static final long serialVersionUID
+    173:177:public SimplePagedResultsControl(int)
+    196:200:public SimplePagedResultsControl(int,boolean)
+    219:231:public SimplePagedResultsControl(int,com.unboundid.asn1.ASN1OctetString)
+    253:265:public SimplePagedResultsControl(int,com.unboundid.asn1.ASN1OctetString,boolean)
+    362:379:private static com.unboundid.asn1.ASN1OctetString encodeValue(int,com.unboundid.asn1.ASN1OctetString)
+    394:394:public int getSize()
+    411:411:public com.unboundid.asn1.ASN1OctetString getCookie()
+    424:424:public boolean moreResultsToReturn()
+    435:435:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.SortKey
+com.unboundid.ldap.sdk.controls.SubentriesRequestControl
+com.unboundid.ldap.sdk.controls.SubtreeDeleteRequestControl
+com.unboundid.ldap.sdk.controls.TransactionSpecificationRequestControl
+com.unboundid.ldap.sdk.controls.VirtualListViewRequestControl
+com.unboundid.ldap.sdk.controls.VirtualListViewResponseControl:
+    public static final java.lang.String VIRTUAL_LIST_VIEW_RESPONSE_OID
+    private static final long serialVersionUID
+    129:136:public VirtualListViewResponseControl(int,int,com.unboundid.ldap.sdk.ResultCode,com.unboundid.asn1.ASN1OctetString)
+    270:290:private static com.unboundid.asn1.ASN1OctetString encodeValue(int,int,com.unboundid.ldap.sdk.ResultCode,com.unboundid.asn1.ASN1OctetString)
+    304:304:public int getTargetPosition()
+    316:316:public int getContentCount()
+    328:328:public com.unboundid.ldap.sdk.ResultCode getResultCode()
+    342:342:public com.unboundid.asn1.ASN1OctetString getContextID()
+    353:353:public java.lang.String getControlName()
+com.unboundid.ldap.sdk.controls.package-info
+com.unboundid.ldap.sdk.extensions.AbortedTransactionExtendedResult
+com.unboundid.ldap.sdk.extensions.CancelExtendedRequest
+com.unboundid.ldap.sdk.extensions.EndTransactionExtendedRequest
+com.unboundid.ldap.sdk.extensions.EndTransactionExtendedResult
+com.unboundid.ldap.sdk.extensions.NoticeOfDisconnectionExtendedResult:
+    public static final java.lang.String NOTICE_OF_DISCONNECTION_RESULT_OID
+    private static final long serialVersionUID
+    100:102:public NoticeOfDisconnectionExtendedResult(int,com.unboundid.ldap.sdk.ResultCode,java.lang.String,java.lang.String,java.lang.String[],com.unboundid.ldap.sdk.Control[])
+    112:112:public java.lang.String getExtendedResultName()
+com.unboundid.ldap.sdk.extensions.PasswordModifyExtendedRequest
+com.unboundid.ldap.sdk.extensions.PasswordModifyExtendedResult
+com.unboundid.ldap.sdk.extensions.StartTLSExtendedRequest:
+    public static final java.lang.String STARTTLS_REQUEST_OID
+    private static final long serialVersionUID
+    136:137:public StartTLSExtendedRequest(com.unboundid.ldap.sdk.Control[])
+    212:219:public StartTLSExtendedRequest(com.unboundid.ldap.sdk.ExtendedRequest)
+    252:252:public com.unboundid.ldap.sdk.extensions.StartTLSExtendedRequest duplicate()
+    266:275:public com.unboundid.ldap.sdk.extensions.StartTLSExtendedRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    287:287:public java.lang.String getExtendedRequestName()
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.ExtendedRequest duplicate(com.unboundid.ldap.sdk.Control[])
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.LDAPRequest duplicate()
+    1:1:public bridge synthetic com.unboundid.ldap.sdk.ExtendedRequest duplicate()
+com.unboundid.ldap.sdk.extensions.StartTransactionExtendedRequest
+com.unboundid.ldap.sdk.extensions.StartTransactionExtendedResult
+com.unboundid.ldap.sdk.extensions.WhoAmIExtendedRequest
+com.unboundid.ldap.sdk.extensions.WhoAmIExtendedResult
+com.unboundid.ldap.sdk.extensions.package-info
+com.unboundid.ldap.sdk.migrate.ldapjdk.IterableEnumeration
+com.unboundid.ldap.sdk.migrate.ldapjdk.JavaToLDAPSocketFactory
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPAttribute
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPAttributeSet
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPBind
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPConnection
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPConstraints
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPControl
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPDN
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPEntry
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPException
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPExtendedOperation
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPExtendedResponse
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPInterruptedException
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPModification
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPModificationSet
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPRebind
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPRebindAuth
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPReferralException
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPResponse
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPSearchConstraints
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPSearchResults
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPSocketFactory
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPToJavaSocketFactory
+com.unboundid.ldap.sdk.migrate.ldapjdk.LDAPUrl
+com.unboundid.ldap.sdk.migrate.ldapjdk.package-info
+com.unboundid.ldap.sdk.package-info
+com.unboundid.ldap.sdk.persist.DefaultOIDAllocator
+com.unboundid.ldap.sdk.persist.DefaultObjectEncoder
+com.unboundid.ldap.sdk.persist.FieldInfo
+com.unboundid.ldap.sdk.persist.FilterUsage
+com.unboundid.ldap.sdk.persist.GenerateSchemaFromSource
+com.unboundid.ldap.sdk.persist.GetterInfo
+com.unboundid.ldap.sdk.persist.LDAPDNField
+com.unboundid.ldap.sdk.persist.LDAPEntryField
+com.unboundid.ldap.sdk.persist.LDAPField
+com.unboundid.ldap.sdk.persist.LDAPGetter
+com.unboundid.ldap.sdk.persist.LDAPObject
+com.unboundid.ldap.sdk.persist.LDAPObjectHandler
+com.unboundid.ldap.sdk.persist.LDAPPersistException
+com.unboundid.ldap.sdk.persist.LDAPPersister
+com.unboundid.ldap.sdk.persist.LDAPSetter
+com.unboundid.ldap.sdk.persist.OIDAllocator
+com.unboundid.ldap.sdk.persist.ObjectEncoder
+com.unboundid.ldap.sdk.persist.ObjectSearchListener
+com.unboundid.ldap.sdk.persist.PersistMessages
+com.unboundid.ldap.sdk.persist.PersistUtils
+com.unboundid.ldap.sdk.persist.PersistedObjects
+com.unboundid.ldap.sdk.persist.SearchListenerBridge
+com.unboundid.ldap.sdk.persist.SetterInfo
+com.unboundid.ldap.sdk.persist.TypeInfo
+com.unboundid.ldap.sdk.persist.package-info
+com.unboundid.ldap.sdk.schema.AttributeSyntaxDefinition:
+    private static final long serialVersionUID
+    207:227:public AttributeSyntaxDefinition(java.lang.String,java.lang.String,java.util.Map)
+    240:278:private void createDefinitionString(java.lang.StringBuilder)
+    302:302:public java.lang.String getDescription()
+    316:316:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.AttributeTypeDefinition:
+    private static final long serialVersionUID
+    501:559:public AttributeTypeDefinition(java.lang.String,java.lang.String[],java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,boolean,boolean,com.unboundid.ldap.sdk.schema.AttributeUsage,java.util.Map)
+    572:681:private void createDefinitionString(java.lang.StringBuilder)
+    720:726:public java.lang.String getNameOrOID()
+    744:752:public boolean hasNameOrOID(java.lang.String)
+    765:765:public java.lang.String getDescription()
+    778:778:public boolean isObsolete()
+    792:792:public java.lang.String getSuperiorType()
+    829:829:public java.lang.String getEqualityMatchingRule()
+    869:869:public java.lang.String getOrderingMatchingRule()
+    885:894:public java.lang.String getOrderingMatchingRule(com.unboundid.ldap.sdk.schema.Schema)
+    909:909:public java.lang.String getSubstringMatchingRule()
+    925:934:public java.lang.String getSubstringMatchingRule(com.unboundid.ldap.sdk.schema.Schema)
+    948:948:public java.lang.String getSyntaxOID()
+    989:989:public java.lang.String getBaseSyntaxOID()
+    1060:1060:public int getSyntaxMinimumUpperBound()
+    1083:1083:public int getSyntaxMinimumUpperBound(com.unboundid.ldap.sdk.schema.Schema)
+    1106:1127:public static int getSyntaxMinimumUpperBound(java.lang.String)
+    1143:1143:public boolean isSingleValued()
+    1157:1157:public boolean isCollective()
+    1172:1172:public boolean isNoUserModification()
+    1184:1184:public com.unboundid.ldap.sdk.schema.AttributeUsage getUsage()
+    1211:1211:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.AttributeUsage:
+    95:95:public java.lang.String getName()
+com.unboundid.ldap.sdk.schema.DITContentRuleDefinition:
+    private static final long serialVersionUID
+    353:425:public DITContentRuleDefinition(java.lang.String,java.lang.String[],java.lang.String,boolean,java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.util.Map)
+    438:591:private void createDefinitionString(java.lang.StringBuilder)
+    632:638:public java.lang.String getNameOrOID()
+    656:664:public boolean hasNameOrOID(java.lang.String)
+    677:677:public java.lang.String getDescription()
+    690:690:public boolean isObsolete()
+    706:706:public java.lang.String[] getAuxiliaryClasses()
+    723:723:public java.lang.String[] getRequiredAttributes()
+    740:740:public java.lang.String[] getOptionalAttributes()
+    757:757:public java.lang.String[] getProhibitedAttributes()
+    771:771:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition:
+    private static final long serialVersionUID
+    351:395:public DITStructureRuleDefinition(int,java.lang.String[],java.lang.String,boolean,java.lang.String,int[],java.util.Map)
+    408:488:private void createDefinitionString(java.lang.StringBuilder)
+    527:533:public java.lang.String getNameOrRuleID()
+    551:559:public boolean hasNameOrRuleID(java.lang.String)
+    572:572:public java.lang.String getDescription()
+    585:585:public boolean isObsolete()
+    612:612:public int[] getSuperiorRuleIDs()
+    626:626:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.EntryValidator
+com.unboundid.ldap.sdk.schema.MatchingRuleDefinition:
+    private static final long serialVersionUID
+    282:316:public MatchingRuleDefinition(java.lang.String,java.lang.String[],java.lang.String,boolean,java.lang.String,java.util.Map)
+    329:393:private void createDefinitionString(java.lang.StringBuilder)
+    431:437:public java.lang.String getNameOrOID()
+    455:463:public boolean hasNameOrOID(java.lang.String)
+    476:476:public java.lang.String getDescription()
+    489:489:public boolean isObsolete()
+    501:501:public java.lang.String getSyntaxOID()
+    515:515:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.MatchingRuleUseDefinition:
+    private static final long serialVersionUID
+    284:319:public MatchingRuleUseDefinition(java.lang.String,java.lang.String[],java.lang.String,boolean,java.lang.String[],java.util.Map)
+    332:414:private void createDefinitionString(java.lang.StringBuilder)
+    453:459:public java.lang.String getNameOrOID()
+    477:485:public boolean hasNameOrOID(java.lang.String)
+    498:498:public java.lang.String getDescription()
+    511:511:public boolean isObsolete()
+    525:525:public java.lang.String[] getApplicableAttributeTypes()
+    539:539:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.NameFormDefinition:
+    private static final long serialVersionUID
+    341:388:public NameFormDefinition(java.lang.String,java.lang.String[],java.lang.String,boolean,java.lang.String,java.lang.String[],java.lang.String[],java.util.Map)
+    401:511:private void createDefinitionString(java.lang.StringBuilder)
+    549:555:public java.lang.String getNameOrOID()
+    573:581:public boolean hasNameOrOID(java.lang.String)
+    594:594:public java.lang.String getDescription()
+    607:607:public boolean isObsolete()
+    636:636:public java.lang.String[] getRequiredAttributes()
+    652:652:public java.lang.String[] getOptionalAttributes()
+    666:666:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.ObjectClassDefinition:
+    private static final long serialVersionUID
+    374:438:public ObjectClassDefinition(java.lang.String,java.lang.String[],java.lang.String,boolean,java.lang.String[],com.unboundid.ldap.sdk.schema.ObjectClassType,java.lang.String[],java.lang.String[],java.util.Map)
+    451:587:private void createDefinitionString(java.lang.StringBuilder)
+    625:631:public java.lang.String getNameOrOID()
+    649:657:public boolean hasNameOrOID(java.lang.String)
+    670:670:public java.lang.String getDescription()
+    683:683:public boolean isObsolete()
+    716:730:public java.util.Set getSuperiorClasses(com.unboundid.ldap.sdk.schema.Schema,boolean)
+    746:755:private static void getSuperiorClasses(com.unboundid.ldap.sdk.schema.Schema,com.unboundid.ldap.sdk.schema.ObjectClassDefinition,java.util.Set)
+    783:797:public com.unboundid.ldap.sdk.schema.ObjectClassType getObjectClassType(com.unboundid.ldap.sdk.schema.Schema)
+    814:814:public java.lang.String[] getRequiredAttributes()
+    837:859:public java.util.Set getRequiredAttributes(com.unboundid.ldap.sdk.schema.Schema,boolean)
+    877:891:private static void getSuperiorRequiredAttributes(com.unboundid.ldap.sdk.schema.Schema,com.unboundid.ldap.sdk.schema.ObjectClassDefinition,java.util.Set)
+    907:907:public java.lang.String[] getOptionalAttributes()
+    930:959:public java.util.Set getOptionalAttributes(com.unboundid.ldap.sdk.schema.Schema,boolean)
+    979:993:private static void getSuperiorOptionalAttributes(com.unboundid.ldap.sdk.schema.Schema,com.unboundid.ldap.sdk.schema.ObjectClassDefinition,java.util.Set,java.util.Set)
+    1006:1006:public java.util.Map getExtensions()
+com.unboundid.ldap.sdk.schema.ObjectClassType:
+    88:88:public java.lang.String getName()
+com.unboundid.ldap.sdk.schema.Schema:
+    public static final java.lang.String ATTR_ATTRIBUTE_SYNTAX
+    public static final java.lang.String ATTR_ATTRIBUTE_TYPE
+    public static final java.lang.String ATTR_DIT_CONTENT_RULE
+    public static final java.lang.String ATTR_DIT_STRUCTURE_RULE
+    public static final java.lang.String ATTR_MATCHING_RULE
+    public static final java.lang.String ATTR_MATCHING_RULE_USE
+    public static final java.lang.String ATTR_NAME_FORM
+    public static final java.lang.String ATTR_OBJECT_CLASS
+    public static final java.lang.String ATTR_SUBSCHEMA_SUBENTRY
+    private static final java.lang.String DEFAULT_SCHEMA_RESOURCE_PATH
+    private static final long serialVersionUID
+    668:668:public static com.unboundid.ldap.sdk.schema.Schema getSchema(com.unboundid.ldap.sdk.LDAPConnection)
+    752:761:public static varargs com.unboundid.ldap.sdk.schema.Schema getSchema(java.lang.String[])
+    790:793:public static varargs com.unboundid.ldap.sdk.schema.Schema getSchema(java.io.File[])
+    822:861:public static com.unboundid.ldap.sdk.schema.Schema getSchema(java.util.List)
+    883:894:public static com.unboundid.ldap.sdk.schema.Schema getDefaultStandardSchema()
+    914:1044:public static varargs com.unboundid.ldap.sdk.schema.Schema mergeSchemas(com.unboundid.ldap.sdk.schema.Schema[])
+    1056:1056:public com.unboundid.ldap.sdk.ReadOnlyEntry getSchemaEntry()
+    1152:1152:public java.util.Set getAttributeSyntaxes()
+    1172:1183:public com.unboundid.ldap.sdk.schema.AttributeSyntaxDefinition getAttributeSyntax(java.lang.String)
+    1198:1198:public java.util.Set getAttributeTypes()
+    1213:1213:public java.util.Set getOperationalAttributeTypes()
+    1228:1228:public java.util.Set getUserAttributeTypes()
+    1267:1276:public java.util.List getSubordinateAttributeTypes(com.unboundid.ldap.sdk.schema.AttributeTypeDefinition)
+    1291:1291:public java.util.Set getDITContentRules()
+    1308:1310:public com.unboundid.ldap.sdk.schema.DITContentRuleDefinition getDITContentRule(java.lang.String)
+    1324:1324:public java.util.Set getDITStructureRules()
+    1340:1340:public com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition getDITStructureRuleByID(int)
+    1358:1360:public com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition getDITStructureRuleByName(java.lang.String)
+    1378:1380:public com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition getDITStructureRuleByNameForm(java.lang.String)
+    1394:1394:public java.util.Set getMatchingRules()
+    1411:1413:public com.unboundid.ldap.sdk.schema.MatchingRuleDefinition getMatchingRule(java.lang.String)
+    1427:1427:public java.util.Set getMatchingRuleUses()
+    1444:1446:public com.unboundid.ldap.sdk.schema.MatchingRuleUseDefinition getMatchingRuleUse(java.lang.String)
+    1458:1458:public java.util.Set getNameForms()
+    1475:1477:public com.unboundid.ldap.sdk.schema.NameFormDefinition getNameFormByName(java.lang.String)
+    1495:1497:public com.unboundid.ldap.sdk.schema.NameFormDefinition getNameFormByObjectClass(java.lang.String)
+    1511:1511:public java.util.Set getObjectClasses()
+    1525:1525:public java.util.Set getAbstractObjectClasses()
+    1539:1539:public java.util.Set getAuxiliaryObjectClasses()
+    1553:1553:public java.util.Set getStructuralObjectClasses()
+    1570:1572:public com.unboundid.ldap.sdk.schema.ObjectClassDefinition getObjectClass(java.lang.String)
+com.unboundid.ldap.sdk.schema.SchemaElement:
+    private static final long serialVersionUID
+    618:631:static void encodeValue(java.lang.String,java.lang.StringBuilder)
+    public abstract java.lang.String toString()
+com.unboundid.ldap.sdk.schema.package-info
+com.unboundid.ldif.LDIFAddChangeRecord
+com.unboundid.ldif.LDIFAttribute
+com.unboundid.ldif.LDIFChangeRecord
+com.unboundid.ldif.LDIFDeleteChangeRecord
+com.unboundid.ldif.LDIFEntrySource
+com.unboundid.ldif.LDIFException
+com.unboundid.ldif.LDIFMessages
+com.unboundid.ldif.LDIFModifyChangeRecord
+com.unboundid.ldif.LDIFModifyDNChangeRecord
+com.unboundid.ldif.LDIFReader
+com.unboundid.ldif.LDIFReader$LineReaderThread
+com.unboundid.ldif.LDIFReader$RecordParser
+com.unboundid.ldif.LDIFReader$UnparsedLDIFRecord
+com.unboundid.ldif.LDIFReaderEntryTranslator
+com.unboundid.ldif.LDIFRecord:
+    public abstract java.lang.String getDN()
+    public abstract com.unboundid.ldap.sdk.DN getParsedDN()
+    public abstract java.lang.String[] toLDIF()
+    public abstract java.lang.String[] toLDIF(int)
+    public abstract void toLDIF(com.unboundid.util.ByteStringBuffer)
+    public abstract void toLDIF(com.unboundid.util.ByteStringBuffer,int)
+    public abstract java.lang.String toLDIFString()
+    public abstract java.lang.String toLDIFString(int)
+    public abstract void toLDIFString(java.lang.StringBuilder)
+    public abstract void toLDIFString(java.lang.StringBuilder,int)
+    public abstract java.lang.String toString()
+    public abstract void toString(java.lang.StringBuilder)
+com.unboundid.ldif.LDIFWriter
+com.unboundid.ldif.LDIFWriter$1
+com.unboundid.ldif.package-info
+com.unboundid.util.BackReferenceValuePatternComponent
+com.unboundid.util.Base64:
+    84:87:private Base64()
+    100:102:public static java.lang.String encode(java.lang.String)
+    135:138:public static void encode(java.lang.String,java.lang.StringBuilder)
+    224:225:public static void encode(byte[],com.unboundid.util.ByteStringBuffer)
+    242:281:public static void encode(byte[],int,int,com.unboundid.util.ByteStringBuffer)
+    299:565:public static byte[] decode(java.lang.String)
+    586:589:public static java.lang.String decodeToString(java.lang.String)
+com.unboundid.util.ByteString:
+    public abstract byte[] getValue()
+    public abstract java.lang.String stringValue()
+    public abstract void appendValueTo(com.unboundid.util.ByteStringBuffer)
+    public abstract com.unboundid.asn1.ASN1OctetString toASN1OctetString()
+com.unboundid.util.ByteStringBuffer:
+    private static final int DEFAULT_INITIAL_CAPACITY
+    private static final long serialVersionUID
+    130:136:public com.unboundid.util.ByteStringBuffer append(boolean)
+    257:266:public com.unboundid.util.ByteStringBuffer append(com.unboundid.util.ByteString)
+    284:292:public com.unboundid.util.ByteStringBuffer append(com.unboundid.util.ByteStringBuffer)
+    306:317:public com.unboundid.util.ByteStringBuffer append(char)
+    334:342:public com.unboundid.util.ByteStringBuffer append(char[])
+    366:417:public com.unboundid.util.ByteStringBuffer append(char[],int,int)
+    474:475:public com.unboundid.util.ByteStringBuffer append(int)
+    489:490:public com.unboundid.util.ByteStringBuffer append(long)
+    509:515:public com.unboundid.util.ByteStringBuffer insert(int,boolean)
+    695:703:public com.unboundid.util.ByteStringBuffer insert(int,com.unboundid.util.ByteString)
+    726:734:public com.unboundid.util.ByteStringBuffer insert(int,com.unboundid.util.ByteStringBuffer)
+    753:788:public com.unboundid.util.ByteStringBuffer insert(int,char)
+    810:818:public com.unboundid.util.ByteStringBuffer insert(int,char[])
+    846:854:public com.unboundid.util.ByteStringBuffer insert(int,char[],int,int)
+    877:908:public com.unboundid.util.ByteStringBuffer insert(int,java.lang.CharSequence)
+    928:929:public com.unboundid.util.ByteStringBuffer insert(int,int)
+    948:949:public com.unboundid.util.ByteStringBuffer insert(int,long)
+    964:970:public com.unboundid.util.ByteStringBuffer set(boolean)
+    985:986:public com.unboundid.util.ByteStringBuffer set(byte)
+    1004:1013:public com.unboundid.util.ByteStringBuffer set(byte[])
+    1037:1069:public com.unboundid.util.ByteStringBuffer set(byte[],int,int)
+    1088:1098:public com.unboundid.util.ByteStringBuffer set(com.unboundid.util.ByteString)
+    1117:1126:public com.unboundid.util.ByteStringBuffer set(com.unboundid.util.ByteStringBuffer)
+    1140:1141:public com.unboundid.util.ByteStringBuffer set(char)
+    1160:1169:public com.unboundid.util.ByteStringBuffer set(char[])
+    1194:1226:public com.unboundid.util.ByteStringBuffer set(char[],int,int)
+    1245:1254:public com.unboundid.util.ByteStringBuffer set(java.lang.CharSequence)
+    1269:1270:public com.unboundid.util.ByteStringBuffer set(int)
+    1284:1285:public com.unboundid.util.ByteStringBuffer set(long)
+    1297:1298:public com.unboundid.util.ByteStringBuffer clear()
+    1347:1347:public boolean isEmpty()
+    1481:1489:public com.unboundid.util.ByteStringBuffer trimToSize()
+    1515:1515:public com.unboundid.util.ByteString toByteString()
+    1528:1528:public java.io.InputStream asInputStream()
+    1563:1746:private static int getBytes(long)
+    1826:1827:public com.unboundid.util.ByteStringBuffer duplicate()
+com.unboundid.util.ByteStringFactory
+com.unboundid.util.ColumnFormatter
+com.unboundid.util.CommandLineTool
+com.unboundid.util.Debug:
+    public static final java.lang.String PROPERTY_DEBUG_ENABLED
+    public static final java.lang.String PROPERTY_INCLUDE_STACK_TRACE
+    public static final java.lang.String PROPERTY_DEBUG_LEVEL
+    public static final java.lang.String PROPERTY_DEBUG_TYPE
+    public static final java.lang.String LOGGER_NAME
+    private static final long serialVersionUID
+    299:299:public static java.util.logging.Logger getLogger()
+    340:342:public static void setEnabled(boolean)
+    358:368:public static void setEnabled(boolean,java.util.Set)
+    381:381:public static boolean includeStackTrace()
+    396:397:public static void setIncludeStackTrace(boolean)
+    408:408:public static java.util.EnumSet getDebugTypes()
+    463:467:public static void debugConnect(java.lang.String,int)
+    482:486:public static void debugConnect(java.util.logging.Level,java.lang.String,int)
+    582:586:public static void debugDisconnect(java.lang.String,int,com.unboundid.ldap.sdk.DisconnectType,java.lang.String,java.lang.Throwable)
+    606:610:public static void debugDisconnect(java.util.logging.Level,java.lang.String,int,com.unboundid.ldap.sdk.DisconnectType,java.lang.String,java.lang.Throwable)
+    744:748:public static void debugLDAPRequest(java.util.logging.Level,com.unboundid.ldap.sdk.LDAPRequest)
+    767:771:public static void debugLDAPRequest(com.unboundid.ldap.sdk.LDAPRequest,int,com.unboundid.ldap.sdk.LDAPConnection)
+    848:852:public static void debugLDAPResult(com.unboundid.ldap.protocol.LDAPResponse)
+    864:868:public static void debugLDAPResult(java.util.logging.Level,com.unboundid.ldap.protocol.LDAPResponse)
+    957:961:public static void debugASN1Write(com.unboundid.asn1.ASN1Element)
+    974:984:public static void debugASN1Write(java.util.logging.Level,com.unboundid.asn1.ASN1Element)
+    1037:1041:public static void debugASN1Read(com.unboundid.asn1.ASN1Element)
+    1054:1064:public static void debugASN1Read(java.util.logging.Level,com.unboundid.asn1.ASN1Element)
+    1077:1081:public static void debugLDIFWrite(com.unboundid.ldif.LDIFRecord)
+    1094:1104:public static void debugLDIFWrite(java.util.logging.Level,com.unboundid.ldif.LDIFRecord)
+    1117:1121:public static void debugLDIFRead(com.unboundid.ldif.LDIFRecord)
+    1134:1144:public static void debugLDIFRead(java.util.logging.Level,com.unboundid.ldif.LDIFRecord)
+    1158:1162:public static void debugMonitor(com.unboundid.ldap.sdk.Entry,java.lang.String)
+    1175:1187:public static void debugMonitor(java.util.logging.Level,com.unboundid.ldap.sdk.Entry,java.lang.String)
+com.unboundid.util.ExampleCommandLineArgument
+com.unboundid.util.Extensible
+com.unboundid.util.FileValuePatternComponent
+com.unboundid.util.FixedArrayOutputStream
+com.unboundid.util.FixedRateBarrier
+com.unboundid.util.FormattableColumn
+com.unboundid.util.HTTPValuePatternComponent
+com.unboundid.util.HorizontalAlignment
+com.unboundid.util.InternalUseOnly
+com.unboundid.util.LDAPSDKThreadFactory
+com.unboundid.util.LDAPSDKUsageException:
+    private static final long serialVersionUID
+    64:65:public LDAPSDKUsageException(java.lang.String,java.lang.Throwable)
+com.unboundid.util.LDAPTestUtils
+com.unboundid.util.MinimalLogFormatter
+com.unboundid.util.Mutable
+com.unboundid.util.NotExtensible
+com.unboundid.util.NotMutable
+com.unboundid.util.NullOutputStream
+com.unboundid.util.ObjectPair
+com.unboundid.util.OutputFormat
+com.unboundid.util.QuotingRequirements
+com.unboundid.util.RandomValuePatternComponent
+com.unboundid.util.ResultCodeCounter
+com.unboundid.util.ReverseComparator
+com.unboundid.util.SequentialValuePatternComponent
+com.unboundid.util.StaticUtils:
+    99:102:private StaticUtils()
+    215:234:public static java.lang.String toInitialLowerCase(java.lang.String)
+    591:593:public static java.lang.String toHexPlusASCII(byte[],int)
+    615:684:public static void toHexPlusASCII(byte[],int,java.lang.StringBuilder)
+    921:929:public static java.lang.String encodeGeneralizedTime(java.util.Date)
+    1067:1089:public static java.lang.String trimLeading(java.lang.String)
+    1108:1130:public static java.lang.String trimTrailing(java.lang.String)
+    1154:1229:public static java.util.List wrapLine(java.lang.String,int)
+    1255:1255:public static java.lang.String cleanExampleCommandLineArgument(java.lang.String)
+    1272:1286:public static java.lang.String concatenateStrings(java.util.List)
+    1303:1303:public static java.lang.String secondsToHumanReadableDuration(long)
+    1320:1406:public static java.lang.String millisToHumanReadableDuration(long)
+    1436:1436:public static long millisToNanos(long)
+    1453:1490:public static boolean isNumericOID(java.lang.String)
+    1505:1526:public static java.lang.String capitalize(java.lang.String)
+    1543:1565:public static byte[] encodeUUID(java.util.UUID)
+    1615:1616:public static boolean isWindows()
+    1636:1705:public static java.util.List toArgumentList(java.lang.String)
+    1725:1732:public static java.util.List toList(java.lang.Object[])
+com.unboundid.util.StringValuePatternComponent
+com.unboundid.util.TeeOutputStream
+com.unboundid.util.ThreadSafety
+com.unboundid.util.ThreadSafetyLevel
+com.unboundid.util.Validator:
+    41:44:private Validator()
+    83:91:public static void ensureNotNullWithMessage(java.lang.Object,java.lang.String)
+    143:165:public static void ensureNotNull(java.lang.Object,java.lang.Object,java.lang.Object)
+    184:210:public static void ensureNotNull(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+    231:262:public static void ensureNotNull(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+    322:330:public static void ensureFalse(boolean)
+    346:354:public static void ensureFalse(boolean,java.lang.String)
+com.unboundid.util.ValuePattern
+com.unboundid.util.ValuePatternComponent
+com.unboundid.util.WakeableSleeper:
+    private static final long serialVersionUID
+com.unboundid.util.args.ArgsMessages
+com.unboundid.util.args.Argument
+com.unboundid.util.args.ArgumentException
+com.unboundid.util.args.ArgumentListArgument
+com.unboundid.util.args.ArgumentParser
+com.unboundid.util.args.BooleanArgument
+com.unboundid.util.args.BooleanValueArgument
+com.unboundid.util.args.DNArgument
+com.unboundid.util.args.DurationArgument
+com.unboundid.util.args.FileArgument
+com.unboundid.util.args.FilterArgument
+com.unboundid.util.args.IntegerArgument
+com.unboundid.util.args.ScopeArgument
+com.unboundid.util.args.StringArgument
+com.unboundid.util.args.package-info
+com.unboundid.util.package-info
+com.unboundid.util.parallel.AsynchronousParallelProcessor
+com.unboundid.util.parallel.AsynchronousParallelProcessor$InvokerThread
+com.unboundid.util.parallel.AsynchronousParallelProcessor$OutputEnqueuer
+com.unboundid.util.parallel.ParallelProcessor
+com.unboundid.util.parallel.ParallelProcessor$ProcessResult
+com.unboundid.util.parallel.ParallelProcessor$Worker
+com.unboundid.util.parallel.Processor
+com.unboundid.util.parallel.Result
+com.unboundid.util.parallel.ResultProcessor
+com.unboundid.util.parallel.package-info
+com.unboundid.util.ssl.KeyStoreKeyManager
+com.unboundid.util.ssl.PKCS11KeyManager
+com.unboundid.util.ssl.PromptTrustManager
+com.unboundid.util.ssl.SSLMessages
+com.unboundid.util.ssl.SSLUtil:
+    135:147:public SSLUtil(javax.net.ssl.TrustManager[])
+    166:185:public SSLUtil(javax.net.ssl.KeyManager,javax.net.ssl.TrustManager)
+    204:224:public SSLUtil(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[])
+    236:236:public javax.net.ssl.KeyManager[] getKeyManagers()
+    250:250:public javax.net.ssl.TrustManager[] getTrustManagers()
+    318:322:public javax.net.ssl.SSLContext createSSLContext(java.lang.String,java.lang.String)
+    361:361:public javax.net.ssl.SSLSocketFactory createSSLSocketFactory(java.lang.String)
+    385:385:public javax.net.ssl.SSLSocketFactory createSSLSocketFactory(java.lang.String,java.lang.String)
+    404:404:public javax.net.ssl.SSLServerSocketFactory createSSLServerSocketFactory()
+    429:429:public javax.net.ssl.SSLServerSocketFactory createSSLServerSocketFactory(java.lang.String)
+    457:457:public javax.net.ssl.SSLServerSocketFactory createSSLServerSocketFactory(java.lang.String,java.lang.String)
+com.unboundid.util.ssl.TrustAllTrustManager:
+    private static final long serialVersionUID
+    82:85:public TrustAllTrustManager(boolean)
+    100:100:public boolean examineValidityDates()
+com.unboundid.util.ssl.TrustStoreTrustManager
+com.unboundid.util.ssl.WrapperKeyManager
+com.unboundid.util.ssl.package-info
+fr.prados.contacts.Constants:
+    public static final java.lang.String TAG
+    public static final boolean E
+    public static final boolean W
+    public static final boolean I
+    public static final boolean D
+    public static final boolean V
+    public static final boolean DUMP
+    public static final boolean PHOTO
+    public static final boolean FACE_DETECTOR
+    public static final boolean FACE_SHOW
+    public static final boolean REQUERY_AFTER_KILL
+    public static final boolean SYNC_SEARCH
+    public static final boolean RECORD_LIMIT
+    public static final boolean DNTOADDR
+    public static final boolean DNTONAME
+    public static final int NB_RETRY_DNTO
+    public static final long CACHE_TIMEOUT
+    public static final int MAX_LRU
+    public static final boolean USE_PRE_CONNECTION
+    20:20:public Constants()
+fr.prados.contacts.VolatileContact:
+    private static final java.lang.String TAG
+    105:115:public static android.net.Uri contactUriFromRawUri(android.content.ContentResolver,android.net.Uri)
+    120:120:public java.lang.String getLookupkey()
+    124:125:public fr.prados.contacts.ContactId getContactId()
+    214:214:public long getId()
+    218:218:public java.util.ArrayList getRawContacts()
+fr.prados.contacts.VolatileContact$Copy
+fr.prados.contacts.VolatileContact$Import
+fr.prados.contacts.VolatileRawContact:
+    public static final java.lang.String LOOKUP
+    public static final java.lang.String MUST_DELETED
+    public int _withPhoto
+    public static final int PHOTO_UNKNWON
+    public static final int PHOTO_YES
+    public static final int PHOTO_NO
+    146:151:public void remove(java.lang.String,fr.prados.contacts.VolatileData)
+    154:155:public void removeAll(java.lang.String)
+    172:178:public void init(android.accounts.Account,java.lang.String)
+    187:189:public void removeAttr(java.lang.String)
+    197:199:public void setAttr(java.lang.String,boolean)
+    202:204:public void setAttr(java.lang.String,byte)
+    207:209:public void setAttr(java.lang.String,byte[])
+    212:214:public void setAttr(java.lang.String,short)
+    222:229:public void setAttr(java.lang.String,long)
+    232:234:public void setAttr(java.lang.String,float)
+    237:239:public void setAttr(java.lang.String,double)
+    243:252:public void setDisplayName(java.lang.String)
+    266:270:public int getPhoneType()
+    298:302:public int getPostalType()
+    367:388:private android.net.Uri getRawUriInAndroid(android.content.ContentResolver)
+    402:410:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean)
+    418:448:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean,java.util.ArrayList)
+    453:465:public void copyDataToAndroid(long,java.util.ArrayList)
+fr.prados.contacts.lib.R:
+    10:10:public R()
+fr.prados.contacts.lib.R$anim
+fr.prados.contacts.lib.R$attr
+fr.prados.contacts.lib.R$dimen:
+    17:17:public R$dimen()
+fr.prados.contacts.lib.R$drawable
+fr.prados.contacts.lib.R$id
+fr.prados.contacts.lib.R$layout
+fr.prados.contacts.lib.R$raw
+fr.prados.contacts.lib.R$string:
+    88:88:public R$string()
+fr.prados.contacts.lib.R$style
+fr.prados.contacts.lib.R$xml
+fr.prados.contacts.providers.AbstractSimpleAuthenticator:
+    private static final java.lang.String TAG
+    private static final java.lang.String PARAM_ACCOUNT_TYPE
+    public static final java.lang.String PARAM_AUTHTOKEN_TYPE
+    public static final java.lang.String AUTHTOKEN_TYPE
+fr.prados.contacts.providers.AuthQueryException:
+    private static final long serialVersionUID
+fr.prados.contacts.providers.IProvider$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_onCreate
+    static final int TRANSACTION_onStart
+    static final int TRANSACTION_onStop
+    static final int TRANSACTION_queryContact
+    static final int TRANSACTION_getAccountPhoto
+    static final int TRANSACTION_getVolatileContact
+    static final int TRANSACTION_signalCanceled
+    static final int TRANSACTION_resetCanceled
+    static final int TRANSACTION_isCanceled
+    23:30:public static fr.prados.contacts.providers.IProvider asInterface(android.os.IBinder)
+fr.prados.contacts.providers.IProvider$Stub$Proxy:
+    156:159:IProvider$Stub$Proxy(android.os.IBinder)
+    166:166:public java.lang.String getInterfaceDescriptor()
+fr.prados.contacts.providers.Provider:
+    public static final java.lang.String JOIN_PHONE_SUFFIX
+    public static final java.lang.String JOIN_POSTAL_SUFFIX
+    public static final java.lang.String QUERY_MODE_ALL
+    public static final java.lang.String QUERY_MODE_ALL_WITH_PHONE
+    public static final java.lang.String QUERY_MODE_ALL_WITH_ADDRESS
+    public static final java.lang.String QUERY_MODE_MAILTO
+    public static final java.lang.String QUERY_MODE_TEL
+    public static final java.lang.String QUERY_MODE_NAME
+fr.prados.contacts.providers.Provider$OnQuery
+fr.prados.contacts.providers.QueryError:
+    private static final long serialVersionUID
+fr.prados.contacts.providers.QueryException:
+    private static final long serialVersionUID
+    103:103:public final java.lang.String getAccountName()
+fr.prados.contacts.providers.QueryWarning:
+    private static final long serialVersionUID
+    31:32:public QueryWarning(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.ResultsAndExceptions:
+    public android.database.MatrixCursor cursor
+fr.prados.contacts.providers.TransportException:
+    26:27:public void setException(fr.prados.contacts.providers.QueryException)
+    30:31:public void getException()
+fr.prados.contacts.providers.ldap.AbstractWizardActivity:
+    protected static final java.lang.String TAG
+    protected static final java.lang.String DEFAULT_PORT_LDAP
+    protected static final java.lang.String DEFAULT_PORT_LDAPS
+fr.prados.contacts.providers.ldap.LdapAuthenticationService:
+    private static final java.lang.String TAG
+    static final java.lang.String PARAM_ACCOUNT
+    static final java.lang.String PARAM_CRYPT
+    static final java.lang.String PARAM_HOST
+    static final java.lang.String PARAM_PORT
+    static final java.lang.String PARAM_USERNAME
+    static final java.lang.String PARAM_BASEDN
+    static final java.lang.String PARAM_MAPPING
+    static final java.lang.String PARAM_MCC
+    public static final java.lang.String KEY_CRYPT
+    public static final java.lang.String KEY_HOST
+    public static final java.lang.String KEY_PORT
+    public static final java.lang.String KEY_BASEDN
+    public static final java.lang.String KEY_MAPPING
+    public static final java.lang.String KEY_USERNAME
+    public static final java.lang.String KEY_MCC
+    private static final int DEFAULT_CONNECTION_TIMEOUT
+    private static final int DEFAULT_MESSAGE_SIZE
+fr.prados.contacts.providers.ldap.LdapBaseApplication:
+    public static final boolean TRACE_LDAP
+fr.prados.contacts.providers.ldap.LdapKnowParameters:
+    private static final java.lang.String TAG
+    public static final java.lang.String USER_TAG
+fr.prados.contacts.providers.ldap.LdapProvider$3:
+    private static final long serialVersionUID
+fr.prados.contacts.providers.ldap.LdapProvider$AsyncSearch:
+    private static final long serialVersionUID
+fr.prados.contacts.providers.ldap.LdapSyncAdapterService:
+    private static final java.lang.String TAG
+fr.prados.contacts.providers.ldap.Mapping:
+    private static final java.lang.String TAG
+    private static final java.lang.String MAP_STANDARD
+    private static final java.lang.String MAP_NO_NORMALIZE
+    private static volatile fr.prados.contacts.providers.ldap.Mapping _defaultMapping
+    486:497:public static fr.prados.contacts.providers.ldap.Mapping getDefaultMapping()
+fr.prados.contacts.providers.ldap.PanelSwitcher:
+    private static final int ANIM_DURATION
+    43:45:void setCurrentIndex(int)
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity:
+    private static final int DIALOG_PROGRESS
+    90:121:protected PredefinedServerWizardActivity(int,int,int,int,int,int,int,int,java.lang.String)
+fr.prados.contacts.providers.ldap.SwamiSfinxBis
+fr.prados.contacts.providers.ldap.XMLUtils:
+    22:22:public XMLUtils()
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity:
+    private static final int DIALOG_PROGRESS
+    private static final int MAPPING_HELP
+fr.prados.contacts.providers.ldap.generic.beta.BuildConfig
+fr.prados.contacts.providers.ldap.generic.beta.R
+fr.prados.contacts.providers.ldap.generic.beta.R$anim
+fr.prados.contacts.providers.ldap.generic.beta.R$attr
+fr.prados.contacts.providers.ldap.generic.beta.R$dimen
+fr.prados.contacts.providers.ldap.generic.beta.R$drawable
+fr.prados.contacts.providers.ldap.generic.beta.R$id
+fr.prados.contacts.providers.ldap.generic.beta.R$layout
+fr.prados.contacts.providers.ldap.generic.beta.R$raw
+fr.prados.contacts.providers.ldap.generic.beta.R$string
+fr.prados.contacts.providers.ldap.generic.beta.R$style
+fr.prados.contacts.providers.ldap.generic.beta.R$xml
+fr.prados.contacts.tools.CheckContext:
+    30:30:public CheckContext()
+fr.prados.contacts.tools.Eula:
+    private static final java.lang.String PREFERENCE_EULA_ACCEPTED
+    private static final java.lang.String PREFERENCES_EULA
+    51:51:public Eula()
+fr.prados.contacts.tools.HelpDebug:
+    23:23:public HelpDebug()
+fr.prados.contacts.tools.LogMarket:
+    23:23:public LogMarket()
+fr.prados.contacts.tools.Photos:
+    34:34:public Photos()
+fr.prados.contacts.tools.QueryMarket:
+    private static final java.lang.String TAG
+    public static final java.lang.String PREFERENCE_STARED
+    public static final java.lang.String PREFERENCES_TIME
+    public static final java.lang.String PREFERENCES_COUNT
+    public static final java.lang.String PREFERENCES_STARS
+    private static final long COUNT_PENDING
+    private static final long DAY_PENDING
+    private static final long EXTRA_DAY_PENDING
+    47:47:public QueryMarket()
+    84:111:public static void checkRate(android.content.Context)
+fr.prados.contacts.tools.RateActivity:
+    private static final java.lang.String TAG
+    private static final int DIALOG_STAR
+fr.prados.contacts.tools.TOAPhoneNumberFormats:
+    private static final java.lang.String TAG
+    public static final java.lang.String AUTHORITY
+    public static final java.lang.String COL_MCC
+    public static final java.lang.String COL_COUNTRY
+    public static final java.lang.String COL_INTPREFIX
+    public static final java.lang.String COL_ISO639
+    public static final java.lang.String COL_EXIT
+    public static final java.lang.String COL_TRUNK
+    public static final java.lang.String COL_FORMAT
+    private static final int POS_ISO639
+    private static final int POS_INTPREFIX
+    private static final int POS_EXIT
+    private static final int POS_THRUNK
+    private static final int POS_FORMAT
+    private static final java.lang.String WHERE_MCC
+    private static final java.lang.String WHERE_ISO639
+    private static final java.lang.String WHERE_INTPREFIX
+    public java.lang.String _country
+    public java.lang.String _mobile
+    private static final java.lang.String _i18nPhoneRoute
+    321:321:public static java.lang.CharSequence toTOA(java.lang.CharSequence)
+fr.prados.contacts.tools.Update:
+    private static final java.lang.String TAG
+    private static final java.lang.String PREFERENCE_UPDATE_VERSION
+    private static final java.lang.String PREFERENCES_UPDATE
+    34:34:public Update()
+fr.prados.provider.contacts.ldap.R:
+    10:10:public R()
+fr.prados.provider.contacts.ldap.R$anim
+fr.prados.provider.contacts.ldap.R$attr
+fr.prados.provider.contacts.ldap.R$dimen
+fr.prados.provider.contacts.ldap.R$drawable
+fr.prados.provider.contacts.ldap.R$id:
+    43:43:public R$id()
+fr.prados.provider.contacts.ldap.R$layout:
+    77:77:public R$layout()
+fr.prados.provider.contacts.ldap.R$raw:
+    84:84:public R$raw()
+fr.prados.provider.contacts.ldap.R$string:
+    88:88:public R$string()
+fr.prados.provider.contacts.ldap.R$style
+fr.prados.provider.contacts.ldap.R$xml
+org.acra.ACRA:
+    public static final boolean DEV_LOGGING
+    static final java.lang.String RES_NOTIF_ICON
+    static final java.lang.String RES_NOTIF_TICKER_TEXT
+    static final java.lang.String RES_NOTIF_TITLE
+    static final java.lang.String RES_NOTIF_TEXT
+    static final java.lang.String RES_DIALOG_ICON
+    static final java.lang.String RES_DIALOG_TITLE
+    static final java.lang.String RES_DIALOG_TEXT
+    static final java.lang.String RES_DIALOG_COMMENT_PROMPT
+    static final java.lang.String RES_DIALOG_OK_TOAST
+    static final java.lang.String RES_TOAST_TEXT
+    static final int NOTIF_CRASH_ID
+    public static final java.lang.String PREF_DISABLE_ACRA
+    public static final java.lang.String PREF_ENABLE_ACRA
+    public static final java.lang.String PREF_ENABLE_SYSTEM_LOGS
+    public static final java.lang.String PREF_ENABLE_DEVICE_ID
+    public static final java.lang.String PREF_USER_EMAIL_ADDRESS
+    public static final java.lang.String PREF_ALWAYS_ACCEPT
+    public static final java.lang.String NULL_VALUE
+org.acra.ACRAConfigurationException:
+    private static final long serialVersionUID
+org.acra.ConfigurationInspector:
+    private static final java.lang.String SUFFIX_MASK
+    private static final java.lang.String FIELD_SCREENLAYOUT
+    private static final java.lang.String FIELD_UIMODE
+    private static final java.lang.String FIELD_MNC
+    private static final java.lang.String FIELD_MCC
+    private static final java.lang.String PREFIX_UI_MODE
+    private static final java.lang.String PREFIX_TOUCHSCREEN
+    private static final java.lang.String PREFIX_SCREENLAYOUT
+    private static final java.lang.String PREFIX_ORIENTATION
+    private static final java.lang.String PREFIX_NAVIGATIONHIDDEN
+    private static final java.lang.String PREFIX_NAVIGATION
+    private static final java.lang.String PREFIX_KEYBOARDHIDDEN
+    private static final java.lang.String PREFIX_KEYBOARD
+    private static final java.lang.String PREFIX_HARDKEYBOARDHIDDEN
+org.acra.CrashReportData:
+    private static final long serialVersionUID
+    private static final java.lang.String PROP_DTD_NAME
+    private static final int NONE
+    private static final int SLASH
+    private static final int UNICODE
+    private static final int CONTINUE
+    private static final int KEY_DONE
+    private static final int IGNORE
+    88:90:public CrashReportData(org.acra.CrashReportData)
+    162:169:public java.lang.String getProperty(org.acra.ReportField,java.lang.String)
+    181:205:public void list(java.io.PrintStream)
+    216:240:public void list(java.io.PrintWriter)
+    475:475:private java.util.Enumeration keys()
+    497:500:public void save(java.io.OutputStream,java.lang.String)
+    513:513:public java.lang.Object setProperty(org.acra.ReportField,java.lang.String)
+    568:585:public synchronized void store(java.io.Writer,java.lang.String)
+    700:701:public void storeToXML(java.io.OutputStream,java.lang.String)
+    727:778:public synchronized void storeToXML(java.io.OutputStream,java.lang.String,java.lang.String)
+    786:786:private java.lang.String substitutePredefinedEntries(java.lang.String)
+org.acra.ErrorReporter:
+    public static final java.lang.String REPORTFILE_EXTENSION
+    private static final int MAX_SEND_REPORTS
+    static final java.lang.String APPROVED_SUFFIX
+    static final java.lang.String EXTRA_REPORT_FILE_NAME
+    266:267:public void addCustomData(java.lang.String,java.lang.String)
+    289:289:public java.lang.String putCustomData(java.lang.String,java.lang.String)
+    302:302:public java.lang.String removeCustomData(java.lang.String)
+    315:315:public java.lang.String getCustomData(java.lang.String)
+    787:793:public java.lang.Thread handleSilentException(java.lang.Throwable)
+    1081:1082:public void deletePendingSilentReports()
+    1234:1235:public void removeReportSender(org.acra.sender.ReportSender)
+    1243:1250:public void removeReportSenders(java.lang.Class)
+    1257:1258:public void removeAllReportSenders()
+    1266:1268:public void setReportSender(org.acra.sender.ReportSender)
+org.acra.LogCatCollector:
+    private static final int DEFAULT_TAIL_COUNT
+org.acra.util.Base64
+org.acra.util.Base64$Coder
+org.acra.util.Base64$Decoder
+org.acra.util.Base64$Encoder
+org.acra.util.HttpRequest:
+    65:66:public void clearCookies()
+    70:77:public void abort()
+    131:140:public java.lang.String sendGet(java.lang.String)
+    144:167:public java.io.InputStream getHttpStream(java.lang.String)
+org.acra.util.HttpUtils:
+    29:29:public HttpUtils()
+org.acra.util.Installation:
+    private static final java.lang.String INSTALLATION
+    26:26:public Installation()

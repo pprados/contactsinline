@@ -1,0 +1,11 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- The application name -->
+	<string name="app_name">Contacts en ligne</string>
+
+	<!-- Error when contact providers -->
+	<string name="err_provider">Erreur interne avec un fournisseur de contacts.</string>
+
+	<!-- Message to find extension when no marker is detected. -->
+	<string name="extension_plugins">Recherchez des extensions pour Contact en ligne dans votre marché.</string>
+</resources>

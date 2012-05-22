@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- Wizard activity label. Use in title when create a new account. -->
+	<string name="wizard_activity_label">建立一个LDAP账户</string>
+
+	<!-- Wizard activity label. Use in title when update an account. -->
+	<string name="wizard_update_label">升级您的LDAP账户</string>
+
+	<!-- Next button in wizard -->
+	<string name="next">继续</string>
+
+	<!-- Back button in wizard -->
+	<string name="back">后退</string>
+
+	<!-- Finish button in wizard -->
+	<string name="finish">完成</string>
+
+	<!-- Advanced button in wizard -->
+	<string name="avanced">高级模式</string>
+
+	<!-- ** Page 1 ** -->    
+	<!-- Help text to propose to enter a ldap server name. -->
+	<string name="accounts_welcome">仅需几步，您就可以为LDAP设置多个账户.</string>
+
+	<!-- Field name for host name -->
+	<string name="account_setup_hostname">LDAP服务器名字</string>
+	<!-- Field hint for host name -->
+	<string name="ldap_server_name_hint">您的服务器名字</string>
+
+	<!-- ** Page 2 ** -->
+	<!-- Help text if we know this hostname and we havent authentication. -->
+	<string name="account_know">此通讯目录已确认.</string>
+	<!-- Help text if we know this hostname and we must have authentication. -->
+	<string name="account_know_password">此通讯目录尚未被确认.\n请输入您的认证资料然后确认.</string>
+
+	<!-- Hint in short user name field -->	    
+	<string name="account_setup_username_hint">用户名(简称)</string>
+
+	<!-- ** Page 3 ** -->
+	<!-- Hint in full user name field -->
+	<string name="account_setup_usernamefull_hint">LDAP完整用户名</string>
+
+	<!-- Field name for username -->
+	<string name="account_setup_incoming_username_label">用户名</string>
+
+	<!-- Hint in password field -->
+	<string name="account_setup_password_hint">密码</string>
+
+	<!-- Field name for password -->
+	<string name="account_setup_incoming_password_label">密码</string>
+    
+	<!-- Radio field name for security. -->
+	<string name="account_setup_crypt">安全</string>
+
+	<!-- Radio no crypt -->
+	<string name="account_normal">无加密</string>
+
+	<!-- Radio SSL -->
+	<string name="account_ssl">SSL</string>
+
+	<!-- Radio TLS -->
+	<string name="account_tls">TLS</string>
+    
+	<!-- Basedn optional field name -->
+	<string name="account_setup_basedn_opt_label">Base DN (选填)</string>
+
+	<!-- If basedn can't be found, basedn field name -->
+	<string name="account_setup_basedn_label">Base DN</string>
+
+	<!-- Hint for basedn -->
+	<string name="account_setup_basedn_hint">LDAP数据库描述</string>
+    
+	<!-- Mapping rule field name -->
+	<string name="account_setup_mapping_label">映射规则(选填)</string>
+
+	<!-- Hint for mapping rule (see if is empty) -->
+	<string name="account_setup_mapping_hint">XML文件</string>
+    
+	<!-- In long userid, this is the part to show how to add short login. Like uid=<login>,dc=... -->
+	<string name="account_setup_userid">&lt;用户名&gt;</string>
+    
+	<!-- Title in dialog if error with host name -->
+	<string name="err_title">设置不正确</string>
+
+	<!-- Err when host name is not found. -->
+	<string name="err_host_not_found">无法找到服务器.</string>
+</resources>

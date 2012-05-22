@@ -1,0 +1,27 @@
+Tolerance perte de serveur.
+--Cette ligne, et les suivantes ci-dessous, seront ignorées--
+
+_M   .
+M    proguard.cfg
+A    proguard
+M    .project
+M    src/fr/prados/contacts/test/Dump.java
+M    src/fr/prados/contacts/test/TestActivity.java
+M    src/fr/prados/contacts/tools/TOAContentProvider.java
+M    src/fr/prados/contacts/ui/ImportWithSyncActivity.java
+M    src/fr/prados/contacts/ui/VolatileContactsListActivity.java
+M    src/fr/prados/contacts/ui/ImportWithoutSyncActivity.java
+M    src/fr/prados/contacts/ui/ProvidersManager.java
+M    src/fr/prados/contacts/ui/PhoneDisambigDialog.java
+AM   libs/acra-4.2.3.jar
+M    libs/FlurryAgent.jar
+M    res/raw/update.txt
+M    res/raw-fr/update.txt
+M    res/values/menus.xml
+M    res/values-fr/menus.xml
+M    res/menu/context.xml
+M    res/menu/list.xml
+M    .classpath
+M    assets/standard.xml
+M    AndroidManifest.xml
+AM   .settings/com.google.appengine.eclipse.core.prefs

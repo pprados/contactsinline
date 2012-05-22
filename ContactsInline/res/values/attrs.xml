@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ContactBrowser">
+        <attr name="contact_browser_list_padding_left" format="dimension"/>
+        <attr name="contact_browser_list_padding_right" format="dimension"/>
+        <attr name="contact_browser_background" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ContactListItemView">
+        <attr name="list_item_header_height" format="dimension" />
+        <attr name="showHeader" format="boolean" />
+    </declare-styleable>
+    
+</resources>

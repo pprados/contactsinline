@@ -1,0 +1,7 @@
+#-keepnames class *
+#-keepclassmembernames class * { *; }
+
+-keep class org.acra.* 
+-keep class fr.prados.contacts.Application
+-keep class * extends fr.prados.contacts.providers.IProvider.Stub
+-keep class * extends fr.prados.contacts.providers.*

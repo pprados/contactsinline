@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** Check presence of application Contact *** -->
+
+	<!-- Title when app. contact not found -->
+	<string name="chkcontact_title">Installation</string>
+	<!-- Text in dialog when app. contact not found -->
+	<string name="chkcontact_msg">Applikationen \"Contacts In Line\" måste vara installerad innan denna kataloghanterare kan användas.</string>
+	<!-- Text button in dialog when app. contact not found -->
+	<string name="chkcontact_accept">Ok</string>
+
+    <!-- The dialog box title displayed when the android version is not supported -->
+    <string name="help_need_android_version_title">Fel version</string>
+    <!-- The text displayed when the android version is not supported -->
+    <string name="help_need_android_version">"Contacts In Line kan inte användas tillsammans med din version av Android."</string>
+
+</resources>

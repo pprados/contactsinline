@@ -1,0 +1,20 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Import dialog title -->
+	<string name="importing_title">Importer</string>
+
+	<!-- Import dialog message -->
+	<string name="importing_wait">Patience&#8230;</string>
+
+	<!-- Detail in ligne added in contact for propose to import the contacts. Portrai version -->
+	<string name="import_detail">Importer le contact</string>
+
+	<!-- Summary in ligne added in contact for propose to import the contacts -->
+	<string name="import_summary">Importer</string>
+
+	<!-- Detail in ligne added in contact for propose to copy the contacts. -->
+	<string name="copy_detail">Sauve le contacts</string>
+	<!-- Summary in ligne added in contact for propose to copy the contacts -->
+	<string name="copy_summary">Sauve</string>
+
+</resources>

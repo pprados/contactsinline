@@ -1,0 +1,43 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+	<!-- *** Body message in contacts list *** -->
+	<!-- The text displayed when the contacts list is empty while displaying all contacts -->
+	<string name="noMatchingContacts">Pas de contact correspondant.</string>
+
+	<!-- The text displayed when the contacts list is not empty while displaying all contacts. Must be empty. -->
+	<string name="currentQuery"/>
+
+	<!-- Displayed at the top of the contacts showing the zero total number of contacts found when "Only contacts with phones" not selected -->
+	<string name="listFoundAllContactsZero">Contact non trouvé.</string>
+	<!-- Displayed at the top of the contacts showing the total number of contacts found when "Only contacts with phones" not selected -->
+	<plurals name="listFoundAllContacts">
+		<item quantity="one">Un contact trouvé</item>
+		<item quantity="other"><xliff:g id="count">%d</xliff:g> contacts trouvés</item>
+	</plurals>
+
+	<!-- Displayed at the top of the contacts showing the zero as total number of contacts visible when "Only contacts with phones" is selected -->
+	<!-- Mode MODE_PICK_PHONE -->
+	<string name="listTotalPhoneContactsZero">Pas de contacts avec téléphone.</string>
+	<!-- Displayed at the top of the contacts showing the total number of contacts visible when "Only contacts with phones" is selected -->
+	<plurals name="listTotalPhoneContacts">
+		<item quantity="one">Affiche 1 contact avec téléphone.</item>
+		<item quantity="other">Affiche <xliff:g id="count">%d</xliff:g> contacts avec téléphone</item>
+	</plurals>
+
+	<!-- Displayed at the top of the contacts showing the zero total number of contacts visible when "Only contacts with phones" not selected -->
+	<!-- Mode !MODE_PICK_PHONE -->
+	<string name="listTotalAllContactsZero">Pas de contact trouvé.</string>
+	<!-- Displayed at the top of the contacts showing the total number of contacts visible when "Only contacts with phones" not selected -->
+	<plurals name="listTotalAllContacts">
+		<item quantity="one">Affiche 1 contact.</item>
+		<item quantity="other">Affiche <xliff:g id="count">%d</xliff:g> contacts.</item>
+	</plurals>
+
+	<!-- *** Contacts list header *** -->
+	<!-- Header for each row, before the name of provider -->
+	<string name="from_provider">Depuis</string>
+	
+	<!-- Local alphabet to sort contact by name -->
+	<string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
+
+</resources>

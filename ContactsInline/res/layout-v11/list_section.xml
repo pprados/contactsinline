@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout used for list section separators. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_section_height"
+    android:focusable="false"    
+    >
+    android:paddingLeft="?attr/contact_browser_list_padding_left"
+    android:paddingRight="?attr/contact_browser_list_padding_right"
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/list_section_divider_holo_custom"
+        android:textAllCaps="true"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:textColor="#33B5E5"
+        android:ellipsize="end"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:gravity="left"
+        android:textSize="14sp"
+    />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Error show in a dialog if the basedn can't be retreive when the user valid the LDAP Wiard. -->
+	<string name="ldap_err_basedn_unknown">对不起, \"base dn\"无法被获取.</string>
+
+	<!-- Error show in a dialog if an error throw when contact the LDAP server. -->
+	<string name="ldap_err_unknown_exception">LDAP服务器错误.</string>
+
+	<!-- Error show if the LDAP mapping file is not found. -->
+	<string name="err_mapping_file_not_found">找不到映射文件.</string>
+</resources>

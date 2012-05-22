@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Application name -->
+	<string name="app_name">LDAP Contactos online</string>
+    
+	<!-- Driver name show if account and add account pages -->
+	<string name="ldap_driver_name">LDAP online</string>
+
+	<!-- Service name -->
+	<string name="ldap_service_label">Serviço LDAP</string>
+	
+	<!-- Synchronize service name show in application/running services -->
+	<string name="ldap_service_sync_label">Sincronização com fornecedor LDAP</string>
+	
+</resources>

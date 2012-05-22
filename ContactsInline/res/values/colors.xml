@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dim_foreground_dark">#ffbebebe</color>
+    <color name="section_header_text_color">#ffbebebe</color>
+    <color name="text_hightlight">#ffffffff</color>
+    <color name="text_hint">#ffeeeeee</color>
+    <color name="text_link">#ffeeeeee</color>
+    <color name="list_background">#ff000000</color>
+    <color name="list_divider">#ffcdcdcd</color>
+
+</resources>

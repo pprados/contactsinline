@@ -1,0 +1,4 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- The description that will show up in the search field. -->
+    <string name="search_hint">Namn, telefon, e-post för kontakten.</string>
+</resources>

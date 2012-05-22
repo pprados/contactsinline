@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Error show in a dialog if the basedn can't be retreive when the user valid the LDAP Wiard. -->
+	<string name="ldap_err_basedn_unknown">Tyvärr kan inte bas-DN hämtas från LDAP-servern.</string>
+
+	<!-- Error show in a dialog if an error throw when contact the LDAP server. -->
+	<string name="ldap_err_unknown_exception">Problem med att kontakta LDAP-servern.</string>
+
+	<!-- Error show if the LDAP mapping file is not found. -->
+	<string name="err_mapping_file_not_found">Filen med mappningsregler kan inte hittas.</string>
+</resources>

@@ -1,0 +1,19 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+	<!-- The title in dialog when search online results -->
+	<string name="search_title">在通讯录中搜索</string>
+	
+	<!-- The body in dialog when search online results -->
+	<string name="search_wait">请耐心等待&#8230;</string>
+
+	<!-- The label for the search results for this app. -->
+	<string name="search_label">在线通讯录</string>
+
+	<!-- The description that will show up in the search field. -->
+	<string name="search_hint">名字, 电话号码, email</string>
+
+	<!-- The description of search settings -->
+	<string name="settings_description">在线联网的通讯录.</string>
+
+
+</resources>

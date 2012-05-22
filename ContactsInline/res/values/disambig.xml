@@ -1,0 +1,7 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** Disambig dialog *** -->
+	<!-- Title for the call disambiguation dialog when many call or text -->
+	<string name="call_disambig_title">Call using</string>
+	<!-- Title for the sms disambiguation dialog -->
+	<string name="sms_disambig_title">Text using</string>
+</resources>

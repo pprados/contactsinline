@@ -1,0 +1,37 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!--     <string name="help_title">Help</string> -->
+<!--     <string name="help_part1">HELP TODO</string> -->
+<!--     <string name="help_sample_name">John FOBAR</string> -->
+<!--     <string name="help_part2">HELP TODO</string> -->
+    
+    <!-- The text displayed at startup page, before the connection to provider are finished -->
+    <string name="noContactsHelpText"/>
+
+    <!-- The text displayed when the contacts list is empty and no provider is detected -->
+    <string name="help_need_provider">Hittade ingen installerad utökning för katalogtjänst.\n
+        För att söka efter en i Google Play klicka <a href="market://search?q=fr.prados.contacts.providers">här</a>.
+    </string>
+
+    <!-- The text displayed when the contacts list is empty and no account is detected -->
+    <string name="help_need_account">Inget konto är konfigurerat.\n\nFör att lägga till ett konto tryck på <b>Meny</b> och klicka:\n\n
+        <li>&#160;<b>Konton</b> för att lägga till eller ändra ett konto för en katalogtjänst från vilken du kan söka och synka kontakter till telefonen med.\n\n</li>
+        <li>&#160;<b>Utökningar</b> för att lägga till en modul för en ny typ av katalogtjänst.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty while displaying results after searching contacts -->
+    <string name="help_first_time">För att söka efter en kontakt tryck på <b>Meny</b> och klicka:\n\n
+        <li>&#160;<b>Sök</b> för att ange ett namn, ett telefonnummer eller en e-postadress.\n\n</li>
+        <!--<li><b>Accounts</b> to add or configure an account with contacts you can sync to the phone.\n\n</li>-->
+        <li>&#160;<b>Importera</b> för att koppla en kontakt i telefonen till till en katalogtjänst.\n\n</li>
+        <li>&#160;<b>Utökningar</b> för att lägga till en modul för en ny typ av katalogtjänst.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty for an intent to select contact -->
+    <string name="help_with_search">Ange ett namn, ett telefonnummer, en e-postadress någon annan kommaseparerad information (ort, land, etc&#8230;)</string>
+
+    <!-- The dialog box title displayed when the standard contact application is not found -->
+    <string name="help_need_account_app_title">Fel</string>
+    <!-- The text displayed when the standard contact application is not found -->
+    <string name="help_need_account_app">"Kan inte hitta kontaktapplikationen."</string>
+
+</resources>

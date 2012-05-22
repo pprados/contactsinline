@@ -1,0 +1,44 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="help_title">Aide</string>
+    <string name="help_part1">Après avoir ajouté une des extensions et créé le compte correspondant, 
+vous pouvez rechercher des contacts par nom, email ou numéro de téléphone.
+        </string>
+    <string name="help_sample_name">Jean DUPONT</string>
+    <string name="help_part2">
+Un appui sur la photo permet une utilisation rapide du 
+contact.\nUn appui sur le nom permet de consulter sa 
+fiche.\n\nPour économiser la mémoire, les contacts ne 
+sont présent que jusqu\'a la prochaine 
+synchronisation. Vous pouvez les sauver dans le téléphone en les 
+important depuis la fiche du
+contact ou via l\'accès rapide. Ils sont alors 
+automatiquement synchronisés.</string>
+    
+    <!-- The text displayed at startup page, before the connection to provider are finished -->
+    <string name="noContactsHelpText"/>
+
+    <!-- The text displayed when the contacts list is empty and no provider is detected -->
+    <string name="help_need_provider">Aucune extension trouvée pour ajouter un compte.\nPour en trouver sur Google Play, cliquez <a href="market://search?q=fr.prados.contacts.providers">ici</a>.
+    </string>
+
+    <!-- The text displayed when the contacts list is empty and no account is detected -->
+    <string name="help_need_account">Aucun compte de configuré.\n\nPour en ajouter, sélectionnez le <b>Menu</b> 
+        et :\n\n
+        <li>&#160;<b>Comptes</b> pour ajouter ou configurer un fournisseur de contact à synchroniser avec le téléphone.\n\n</li>
+        <li>&#160;<b>Extensions</b> pour ajouter des modules pour de nouveaux type d\'annuaires.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty while displaying results after searching contacts -->
+    <string name="help_first_time">Pour rechercher des contacts, saisissez un nom, un numéro de téléphone ou un email. 
+        Ou bien, sélectionnez le menu\n\n
+        <!-- li><b>Importer</b> pour connecter les contacts interne avec les contacts distants.\n\n</li-->
+        <li>&#160;<b>Comptes</b> pour ajouter ou modifier un fournisseur de contacts.\n\n</li>
+        <li>&#160;<b>Extensions</b> pour ajouter des modules pour de nouveaux type d\'annuaires.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty for an intent to select contact -->
+    <string name="help_with_search">Entrez un nom, un email, un numéro de téléphone et d\'autres informations séparées par une virgule (Ville, Pays, etc&#8230;)</string>
+	<string name="help_need_account_app_title">Désolé</string>
+    <!-- The text displayed when the standard contact application is not found -->
+    <string name="help_need_account_app">"Pas d'application de comptes."</string>	
+</resources>

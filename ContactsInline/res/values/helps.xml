@@ -1,0 +1,41 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="help_title">Help</string>
+    <string name="help_part1">After added one of the plugins and created the associated account, you can search contacts by name, email or phone number.</string>
+    <string name="help_sample_name">John FOBAR</string>
+    <string name="help_part2">
+Touching photo enable quick use for selected contact.\nTouching 
+contact name enable to view it\n\nTo 
+avoid memory exhaustivity, contacts are stored in memory only until next synchronization. You can store them inside phone, by importing from contact details view, 
+or from quick use on contact photo. Then, there\'re automatically synchronized.</string>
+    
+    <!-- The text displayed at startup page, before the connection to provider are finished -->
+    <string name="noContactsHelpText"/>
+        
+    <!-- The text displayed when the contacts list is empty and no provider is detected -->
+    <string name="help_need_provider">No extension found to add an account.\n
+        To find one in Google Play, click <a href="market://search?q=fr.prados.contacts.providers">here</a>.
+    </string>
+
+    <!-- The text displayed when the contacts list is empty and no account is detected -->
+    <string name="help_need_account">No account found.\n\nTo add an account, press <b>Menu</b> and touch:\n\n
+        <li>&#160;<b>Accounts</b> to add or configure an account providing contacts you can sync to the phone.\n\n</li>
+        <li>&#160;<b>Extensions</b> to add modules for a new type of directory.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty while displaying results after searching contacts -->
+    <string name="help_first_time">To search for a contact, press <b>Menu</b> and touch:\n\n
+        <li>&#160;<b>Search</b> to enter a name, a phone number or an email.\n\n</li>
+        <!--<li><b>Accounts</b> to add or configure an account with contacts you can sync to the phone.\n\n</li>-->
+        <li>&#160;<b>Imports</b> to connect internal contact with remote accounts.\n\n</li>
+        <li>&#160;<b>Extensions</b> to add modules for a new type of directory.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty for an intent to select contact -->
+    <string name="help_with_search">Enter a name, email, phone number and any other comma-separated information (Town, Country, etc&#8230;)</string>
+
+    <!-- The dialog box title displayed when the standard contact application is not found -->
+    <string name="help_need_account_app_title">Sorry</string>
+    <!-- The text displayed when the standard contact application is not found -->
+    <string name="help_need_account_app">No account application found.</string>
+
+</resources>

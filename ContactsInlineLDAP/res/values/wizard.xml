@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- Minimal With for button -->	
+	<dimen name="button_minWidth">90sp</dimen>
+	
+	<!-- Wizard activity label. Use in title when create a new account. -->
+	<string name="wizard_activity_label">Create a LDAP account</string>
+
+	<!-- Wizard activity label. Use in title when update an account. -->
+	<string name="wizard_update_label">Update LDAP account</string>
+
+	<!-- Next button in wizard -->
+	<string name="next">Next</string>
+
+	<!-- Back button in wizard -->
+	<string name="back">Back</string>
+
+	<!-- Finish button in wizard -->
+	<string name="finish">Finish</string>
+
+	<!-- Advanced button in wizard -->
+	<string name="avanced">Expert</string>
+
+	<string name="help">Help</string>
+	<string name="help_title">Customize</string>
+	<string name="help_body">It\'s possible to custom the mappings rules to adapt the account to the specificity of your database. See here.</string>
+	<string name="help_body_link">here</string>
+	<string name="help_done">OK</string>
+
+	<!-- ** Page 1 ** -->    
+	<!-- Help text to propose to enter a ldap server name. -->
+	<string name="accounts_welcome">You can configure LDAP for most accounts in just a few steps.</string>
+
+	<!-- Field name for host name -->
+	<string name="account_setup_hostname">LDAP Host name</string>
+	<!-- Field hint for host name -->
+	<string name="ldap_server_name_hint">Your host name</string>
+
+	<!-- ** Page 2 ** -->
+	<!-- Help text if we know this hostname and we havent authentication. -->
+	<string name="account_know">We know this directory.\nYou can validate or update the advanced parameters.</string>
+	<!-- Help text if we know this hostname and we must have authentication. -->
+	<string name="account_know_password">We know this directory.\nEnter only your credentials and submit.</string>
+
+	<!-- Hint in short user name field -->	    
+	<string name="account_setup_username_hint">User name (short)</string>
+
+	<!-- ** Page 3 ** -->
+	<!-- Hint in full user name field -->
+	<string name="account_setup_usernamefull_hint">Full LDAP user name</string>
+
+	<!-- Field name for username -->
+	<string name="account_setup_incoming_username_label">Username</string>
+
+	<!-- Hint in password field -->
+	<string name="account_setup_password_hint">Password</string>
+
+	<!-- Field name for password -->
+	<string name="account_setup_incoming_password_label">Password</string>
+    
+	<!-- Radio field name for security. -->
+	<string name="account_setup_crypt">Security</string>
+
+	<!-- Radio no crypt -->
+	<string name="account_normal">Clear</string>
+
+	<!-- Radio SSL -->
+	<string name="account_ssl">SSL</string>
+
+	<!-- Radio TLS -->
+	<string name="account_tls">TLS</string>
+    
+	<!-- Help button -->
+	<string name="help_button">Help</string>
+    
+	
+	<!-- Basedn optional field name -->
+	<string name="account_setup_basedn_opt_label">Base DN (Optional)</string>
+
+	<!-- If basedn can't be found, basedn field name -->
+	<string name="account_setup_basedn_label">Base DN</string>
+
+	<!-- Hint for basedn -->
+	<string name="account_setup_basedn_hint">Base LDAP description name</string>
+    
+	<!-- Mapping rule field name -->
+	<string name="account_setup_mapping_label">Mapping rules (Optional)</string>
+
+	<!-- Hint for mapping rule (see if is empty) -->
+	<string name="account_setup_mapping_hint">XML file name</string>
+    
+	<!-- In long userid, this is the part to show how to add short login. Like uid=<login>,dc=... -->
+	<string name="account_setup_userid">&lt;login&gt;</string>
+    
+	<!-- Title in dialog if error with host name -->
+	<string name="err_title">Invalid parameter</string>
+
+	<!-- Err when host name is not found. -->
+	<string name="err_host_not_found">Host not found</string>
+</resources>

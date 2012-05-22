@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.prados.contacts"
+    android:versionCode="18"
+    android:versionName="2.0.0"
+    android:sharedUserId="fr.prados.contacts"
+    android:installLocation="auto"
+>
+    <uses-sdk 
+    	android:minSdkVersion="7" 
+    	android:targetSdkVersion="11" 
+    	/>
+
+	<supports-screens 
+		android:smallScreens="true" 
+		android:normalScreens="true" 
+		android:largeScreens="true"
+		android:xlargeScreens="true"
+		android:anyDensity="true" 
+		/>
+		android:compatibleWidthLimitDp="320"
+		android:largestWidthLimitDp="600"
+		
+	<compatible-screens>
+	    <!-- all small size screens -->
+	    <screen android:screenSize="small" android:screenDensity="ldpi" />
+	    <screen android:screenSize="small" android:screenDensity="mdpi" />
+	    <screen android:screenSize="small" android:screenDensity="hdpi" />
+	    <screen android:screenSize="small" android:screenDensity="xhdpi" />
+	    <!-- all normal size screens -->
+	    <screen android:screenSize="normal" android:screenDensity="ldpi" />
+	    <screen android:screenSize="normal" android:screenDensity="mdpi" />
+	    <screen android:screenSize="normal" android:screenDensity="hdpi" />
+	    <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+	     <!-- all large size screens -->
+	    <screen android:screenSize="large" android:screenDensity="ldpi" />
+	    <screen android:screenSize="large" android:screenDensity="mdpi" />
+	    <screen android:screenSize="large" android:screenDensity="hdpi" />
+	    <screen android:screenSize="large" android:screenDensity="xhdpi" />
+	    <!-- all extra-large size screens -->
+	    <screen android:screenSize="xlarge" android:screenDensity="ldpi" />
+	    <screen android:screenSize="xlarge" android:screenDensity="mdpi" />
+	    <screen android:screenSize="xlarge" android:screenDensity="hdpi" />
+	    <screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+	</compatible-screens>
+	
+	<uses-feature android:name="android.hardware.wifi" android:required="false"/>
+	
+	<uses-feature android:name="android.hardware.telephony" android:required="false"/>		
+	<uses-feature android:name="android.hardware.telephony.cdma" android:required="false"/>		
+	<uses-feature android:name="android.hardware.telephony.gsm" android:required="false"/>		
+
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false"/>		
+	<uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false"/>		
+	<uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false"/>		
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--<user-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+
+	<application 
+    	android:icon="@drawable/ic_launcher_contacts" 
+    	android:label="@string/app_name"
+    	android:name=".Application"
+    	android:process="fr.prados.contacts"
+    	android:taskAffinity="fr.prados.contacts"
+    	android:theme="@style/Theme"
+    	>
+    
+		<activity android:name=".test.TestActivity"
+					android:label="C. Test"
+					>
+            <intent-filter>
+<!--                 <action android:name="android.intent.action.VIEW" /> -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+		</activity>
+    
+<!-- ******************************** -->
+        <activity 
+        		android:name=".ui.VolatileContactsListActivity"
+                android:label="@string/app_name"
+                android:launchMode="singleTop"
+                android:clearTaskOnLaunch="true"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.android.contacts.action.LIST_DEFAULT" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--                 <category android:name="android.intent.category.TAB" /> -->
+<!--             </intent-filter> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.android.contacts.action.LIST_CONTACTS" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--                 <category android:name="android.intent.category.TAB" /> -->
+<!--             </intent-filter> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.android.contacts.action.LIST_ALL_CONTACTS" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--                 <category android:name="android.intent.category.TAB" /> -->
+<!--             </intent-filter> -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="com.android.contacts.action.LIST_CONTACTS_WITH_PHONES" /> -->
+<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
+<!--                 <category android:name="android.intent.category.TAB" /> -->
+<!--             </intent-filter> -->
+            
+            <intent-filter>
+                <action android:name="android.intent.action.PICK" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.dir/contact" android:host="com.android.contacts" />
+                <!--<data android:mimeType="vnd.android.cursor.dir/person" android:host="contacts" />-->
+                <data android:mimeType="vnd.android.cursor.dir/phone_v2" android:host="com.android.contacts" />
+                <!--<data android:mimeType="vnd.android.cursor.dir/phone" android:host="contacts" />-->
+                <data android:mimeType="vnd.android.cursor.dir/postal-address_v2" android:host="com.android.contacts" />
+                <!--<data android:mimeType="vnd.android.cursor.dir/postal-address" android:host="contacts" />-->
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="vnd.android.cursor.item/contact" android:host="com.android.contacts" />
+                <!--<data android:mimeType="vnd.android.cursor.item/person" android:host="contacts" />-->
+                <data android:mimeType="vnd.android.cursor.item/phone_v2" android:host="com.android.contacts" />
+                <!--<data android:mimeType="vnd.android.cursor.item/phone" android:host="contacts" />-->
+                <data android:mimeType="vnd.android.cursor.item/postal-address_v2" android:host="com.android.contacts" />
+                <!--<data android:mimeType="vnd.android.cursor.item/postal-address" android:host="contacts" />-->
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data 
+            	android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+		<activity android:name=".ui.HelpActivity"
+					android:theme="@style/ThemeHelp"
+					android:excludeFromRecents="true"
+					android:exported="false"
+					/>
+		
+		<!-- Manage the import contact -->        
+		<activity android:name=".ui.ImportWithSyncActivity"
+					android:label="Import"
+					android:theme="@style/Theme.Transparent"
+					android:excludeFromRecents="true"
+					android:exported="true"
+					>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/vnd.fr.prados.contacts.import" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".ui.ImportWithoutSyncActivity"
+					android:label="Import"
+					android:theme="@style/Theme.Transparent"
+					android:excludeFromRecents="true"
+					android:exported="true"
+					>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/vnd.fr.prados.contacts.copy" />
+			</intent-filter>
+		</activity>
+        <activity 
+        		android:name="fr.prados.contacts.tools.RateActivity"
+                android:launchMode="singleTop"
+                android:clearTaskOnLaunch="true"
+				android:theme="@style/Theme.Transparent"
+				android:excludeFromRecents="true"
+				android:exported="false"
+		/>
+		
+
+<!-- ******************************** Providers -->
+        <provider 
+        	android:name=".ui.VolatileContactsRecentSuggestionsProvider"
+            android:authorities="fr.prados.contacts.ui.suggestions"
+			android:exported="false"
+            />
+        <provider 
+        	android:name=".tools.TOAContentProvider"
+            android:authorities="fr.prados.contacts.tools.TOA"
+			android:exported="true"
+            />
+<!--  *************************** -->
+        <!-- Points to searchable activity so the whole app can invoke search. -->
+        <meta-data android:name="android.app.default_searchable"
+                   android:value=".ui.VolatileContactsListActivity" />
+    </application>
+</manifest>

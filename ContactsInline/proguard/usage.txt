@@ -1,0 +1,530 @@
+android.annotation.SuppressLint:
+    public abstract java.lang.String[] value()
+android.annotation.TargetApi:
+    public abstract int value()
+com.flurry.android.AdImage:
+    22:22:public final long getId()
+    27:27:public final int getWidth()
+    32:32:public final int getHeight()
+    37:37:public final java.lang.String getMimeType()
+    42:42:public final byte[] getImageData()
+com.flurry.android.AppCircle:
+    16:17:public void launchCanvasOnBannerClicked(boolean)
+    24:25:public void launchCatalogOnBannerClicked(boolean)
+    30:30:public boolean isLaunchCanvasOnBannerClicked()
+    35:35:public boolean isLaunchCatalogOnBannerClicked()
+    40:40:public android.view.View getHook(android.content.Context,java.lang.String,int)
+    45:46:public void openCatalog(android.content.Context)
+    50:51:public void openCatalog(android.content.Context,java.lang.String)
+    58:58:public boolean hasAds()
+    66:66:public com.flurry.android.Offer getOffer()
+    74:74:public com.flurry.android.Offer getOffer(java.lang.String)
+    82:82:public java.util.List getAllOffers()
+    90:90:public java.util.List getAllOffers(java.lang.String)
+    95:96:public void acceptOffer(android.content.Context,long)
+    100:101:public void removeOffers(java.util.List)
+    105:106:public void setDefaultNoAdsMessage(java.lang.String)
+    110:111:public void setAppCircleCallback(com.flurry.android.AppCircleCallback)
+    118:119:public void addUserCookie(java.lang.String,java.lang.String)
+    123:124:public void clearUserCookies()
+com.flurry.android.CallbackEvent:
+    public static final int ERROR_MARKET_LAUNCH
+    public static final int ADS_LOADED_FROM_CACHE
+    public static final int ADS_UPDATED
+    30:30:public final int getType()
+    38:38:public final java.lang.String getMessage()
+    51:51:public final long getTimestamp()
+    56:57:public final void setTimestamp(long)
+com.flurry.android.Constants:
+    public static final byte UNKNOWN
+    public static final byte FEMALE
+    public static final byte MALE
+    public static final int MODE_PORTRAIT
+    public static final int MODE_LANDSCAPE
+com.flurry.android.FlurryAgent:
+    289:290:public static void setCatalogIntentName(java.lang.String)
+    298:298:public static com.flurry.android.AppCircle getAppCircle()
+    308:317:static android.view.View a(android.content.Context,java.lang.String,int)
+    323:326:static void a(android.content.Context,java.lang.String)
+    335:337:static com.flurry.android.Offer a(java.lang.String)
+    342:344:static java.util.List b(java.lang.String)
+    349:355:static void a(android.content.Context,long)
+    359:362:static void a(java.util.List)
+    366:369:static void a(boolean)
+    373:373:static boolean a()
+    379:380:public static void enableAppCircle()
+    384:387:public static void setDefaultNoAdsMessage(java.lang.String)
+    391:392:static void a(com.flurry.android.AppCircleCallback)
+    396:399:public static void addUserCookie(java.lang.String,java.lang.String)
+    403:406:public static void clearUserCookies()
+    415:416:public static void setUseHttps(boolean)
+    481:487:public static void onPageView()
+    493:499:public static void logEvent(java.lang.String)
+    505:511:public static void logEvent(java.lang.String,java.util.Map)
+    517:523:public static void logEvent(java.lang.String,boolean)
+    529:535:public static void logEvent(java.lang.String,java.util.Map,boolean)
+    541:547:public static void endTimedEvent(java.lang.String)
+    563:564:public static void setReportUrl(java.lang.String)
+    568:569:public static void setCanvasUrl(java.lang.String)
+    573:574:public static void setGetAppUrl(java.lang.String)
+    578:581:public static void setVersionName(java.lang.String)
+    586:589:public static void setReportLocation(boolean)
+    594:597:public static void setLocationCriteria(android.location.Criteria)
+    608:615:public static void setAge(int)
+    624:634:public static void setGender(byte)
+    638:638:public static int getAgentVersion()
+    660:660:public static boolean getForbidPlaintextFallback()
+    665:675:public static void setLogEnabled(boolean)
+    680:683:public static void setLogLevel(int)
+    698:707:public static void setContinueSessionMillis(long)
+    712:715:public static void setLogEvents(boolean)
+    720:723:public static void setUserId(java.lang.String)
+    733:741:public static void setCaptureUncaughtExceptions(boolean)
+    761:767:public static void onEvent(java.lang.String)
+    1113:1114:private synchronized void j()
+    1194:1202:private synchronized void c(java.lang.String)
+    1349:1351:static boolean d()
+    2059:2059:private synchronized java.lang.String n()
+    2064:2064:public static java.lang.String getPhoneId()
+com.flurry.android.Offer:
+    private java.lang.String c
+    15:21:Offer(long,com.flurry.android.AdImage,java.lang.String,java.lang.String,int)
+    25:25:public final long getId()
+    30:30:public final java.lang.String getName()
+    35:35:public final java.lang.String getDescription()
+    40:40:public final int getPrice()
+    45:45:public final java.lang.String getUrl()
+    50:50:public final com.flurry.android.AdImage getImage()
+com.flurry.android.OfferInSdk:
+    com.flurry.android.p b
+    java.lang.String d
+    int e
+    com.flurry.android.AdImage f
+    18:25:OfferInSdk(long,com.flurry.android.p,com.flurry.android.AdImage,java.lang.String,java.lang.String,int)
+com.flurry.android.ag:
+    39:41:final synchronized void a(com.flurry.android.o)
+com.flurry.android.ah:
+    25:26:static void a()
+    32:33:static void b()
+    37:38:static void a(int)
+    103:105:static int d(java.lang.String,java.lang.String,java.lang.Throwable)
+com.flurry.android.i:
+    35:35:public final boolean a(java.lang.String)
+    40:41:public final void a()
+com.flurry.android.o:
+    32:38:o(com.flurry.android.u,android.content.Context,java.lang.String,int)
+com.flurry.android.u:
+    261:288:final synchronized void a(android.content.Context,java.lang.String)
+    292:293:final void a(com.flurry.android.AppCircleCallback)
+    297:298:final void a(boolean)
+    302:302:final boolean i()
+    447:462:final synchronized com.flurry.android.Offer b(java.lang.String)
+    466:484:final synchronized void a(android.content.Context,long)
+    489:511:final synchronized java.util.List c(java.lang.String)
+    516:524:final synchronized void a(java.util.List)
+    528:540:private com.flurry.android.Offer a(java.lang.String,com.flurry.android.v)
+    590:598:final synchronized android.view.View a(android.content.Context,java.lang.String,int)
+    669:670:final synchronized void a(java.lang.String,java.lang.String)
+    674:675:final synchronized void l()
+    826:830:final synchronized boolean n()
+fr.prados.contacts.BuildConfig:
+    public static final boolean DEBUG
+fr.prados.contacts.Constants:
+    public static final java.lang.String TAG
+    public static final boolean E
+    public static final boolean W
+    public static final boolean I
+    public static final boolean D
+    public static final boolean V
+    public static final boolean DUMP
+    public static final boolean PHOTO
+    public static final boolean FACE_DETECTOR
+    public static final boolean FACE_SHOW
+    public static final boolean REQUERY_AFTER_KILL
+    public static final boolean SYNC_SEARCH
+    public static final boolean RECORD_LIMIT
+    public static final boolean DNTOADDR
+    public static final boolean DNTONAME
+    public static final int NB_RETRY_DNTO
+    public static final long CACHE_TIMEOUT
+    public static final int MAX_LRU
+    public static final boolean USE_PRE_CONNECTION
+fr.prados.contacts.VolatileContact:
+    private static final java.lang.String TAG
+    120:120:public java.lang.String getLookupkey()
+    133:135:public fr.prados.contacts.VolatileRawContact addNewRawContact()
+    238:243:public boolean hasPhoneNumber()
+    247:252:public boolean hasAddress()
+fr.prados.contacts.VolatileContact$Copy:
+    public static final java.lang.String MIMETYPE
+    public static final java.lang.String CONTENT_ITEM_TYPE
+    public static final java.lang.String SUMMARY_COLUMN
+    public static final java.lang.String DETAIL_COLUMN
+    public static final java.lang.String LOOKUP_COLUMN
+fr.prados.contacts.VolatileContact$Import:
+    public static final java.lang.String MIMETYPE
+    public static final java.lang.String CONTENT_ITEM_TYPE
+    public static final java.lang.String SUMMARY_COLUMN
+    public static final java.lang.String DETAIL_COLUMN
+    public static final java.lang.String LOOKUP_COLUMN
+fr.prados.contacts.VolatileData:
+    81:82:public void put(java.lang.String,boolean)
+    85:86:public void put(java.lang.String,byte)
+    93:94:public void put(java.lang.String,short)
+    97:98:public void put(java.lang.String,int)
+    110:111:public void put(java.lang.String,float)
+    114:115:public void put(java.lang.String,double)
+fr.prados.contacts.VolatileRawContact:
+    public static final java.lang.String LOOKUP
+    public static final java.lang.String MUST_DELETED
+    public static final int PHOTO_UNKNWON
+    public static final int PHOTO_YES
+    public static final int PHOTO_NO
+    172:178:public void init(android.accounts.Account,java.lang.String)
+    187:189:public void removeAttr(java.lang.String)
+    197:199:public void setAttr(java.lang.String,boolean)
+    202:204:public void setAttr(java.lang.String,byte)
+    207:209:public void setAttr(java.lang.String,byte[])
+    212:214:public void setAttr(java.lang.String,short)
+    222:229:public void setAttr(java.lang.String,long)
+    232:234:public void setAttr(java.lang.String,float)
+    237:239:public void setAttr(java.lang.String,double)
+    243:252:public void setDisplayName(java.lang.String)
+    261:262:public void setLookupKey(java.lang.String)
+    329:356:public android.net.Uri updateInAndroid(android.content.ContentResolver,android.net.Uri,java.util.ArrayList)
+    402:410:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean)
+fr.prados.contacts.providers.AbstractSimpleAuthenticator:
+    private static final java.lang.String TAG
+    private static final java.lang.String PARAM_ACCOUNT_TYPE
+    public static final java.lang.String PARAM_AUTHTOKEN_TYPE
+    public static final java.lang.String AUTHTOKEN_TYPE
+    protected android.content.Context _context
+    protected java.lang.Class _activityClass
+    49:52:public AbstractSimpleAuthenticator(android.content.Context,java.lang.Class)
+    60:66:public android.os.Bundle editProperties(android.accounts.AccountAuthenticatorResponse,java.lang.String)
+    71:76:protected android.os.Bundle editAccount(android.accounts.AccountAuthenticatorResponse,android.accounts.Account)
+    87:87:public android.os.Bundle addAccount(android.accounts.AccountAuthenticatorResponse,java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle)
+    93:129:public android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle)
+    140:185:public android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)
+    194:198:public java.lang.String getAuthTokenLabel(java.lang.String)
+    207:209:public android.os.Bundle hasFeatures(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String[])
+    219:221:public android.os.Bundle updateCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle)
+    226:240:public static void invalideCredential(android.accounts.Account,java.lang.String)
+    244:249:public static android.os.Bundle createResultBundle(android.accounts.Account,java.lang.String)
+    protected abstract void checkOnlineAccount(android.os.Bundle,android.accounts.Account,java.lang.String)
+fr.prados.contacts.providers.AuthQueryException:
+    private static final long serialVersionUID
+    29:30:public AuthQueryException(java.lang.String,java.lang.String)
+    33:34:public AuthQueryException(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.IProvider$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_onCreate
+    static final int TRANSACTION_onStart
+    static final int TRANSACTION_onStop
+    static final int TRANSACTION_queryContact
+    static final int TRANSACTION_getAccountPhoto
+    static final int TRANSACTION_getVolatileContact
+    static final int TRANSACTION_signalCanceled
+    static final int TRANSACTION_resetCanceled
+    static final int TRANSACTION_isCanceled
+    34:34:public android.os.IBinder asBinder()
+fr.prados.contacts.providers.IProvider$Stub$Proxy:
+    166:166:public java.lang.String getInterfaceDescriptor()
+fr.prados.contacts.providers.Provider:
+    public static final java.lang.String JOIN_PHONE_SUFFIX
+    public static final java.lang.String JOIN_POSTAL_SUFFIX
+    public static final java.lang.String QUERY_MODE_ALL
+    public static final java.lang.String QUERY_MODE_ALL_WITH_PHONE
+    public static final java.lang.String QUERY_MODE_ALL_WITH_ADDRESS
+    public static final java.lang.String QUERY_MODE_MAILTO
+    public static final java.lang.String QUERY_MODE_TEL
+    public static final java.lang.String QUERY_MODE_NAME
+    private volatile boolean _isCanceled
+    54:55:public void signalCanceled(java.lang.String)
+    58:59:public final void resetCanceled()
+    62:62:public final boolean isCanceled()
+    67:71:public static void checkPermission()
+    76:82:public void onCreate(int,long)
+    87:89:public void onStart()
+    93:95:public void onStop()
+fr.prados.contacts.providers.QueryError:
+    private static final long serialVersionUID
+    37:38:public QueryError(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.QueryException:
+    private static final long serialVersionUID
+fr.prados.contacts.providers.QueryWarning:
+    private static final long serialVersionUID
+    27:28:public QueryWarning(java.lang.String,java.lang.String)
+    31:32:public QueryWarning(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.TransportException:
+    26:27:public void setException(fr.prados.contacts.providers.QueryException)
+    30:31:public void getException()
+fr.prados.contacts.test.Dump:
+    40:40:public static void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[])
+    54:77:public static void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[])
+    81:89:public static java.lang.CharSequence dumpCursor(android.database.Cursor)
+    119:119:public static varargs void dump(java.lang.String,boolean,android.content.ContentResolver,android.net.Uri[])
+fr.prados.contacts.test.TestActivity:
+    private static final java.lang.String TAG
+    private static final int NOTHING
+    private static final int LEGACY_CONTACT
+    private static final int CONTACT
+    private static final int DATA
+    214:215:void Assert(boolean)
+    220:786:public void cmd_tools_injectMaxContact()
+    790:802:public void cmd_tools_DUMP()
+    805:806:public void cmd_DUMP()
+    809:810:public void cmd_DUMP_lite()
+    819:821:public void cmd_tools_PurgeMax()
+    825:828:public void cmd_tools_PurgeNoCompte()
+    836:838:public void cmdListContact()
+    842:846:public void cmdPickContact()
+    850:853:public void cmdPickPhone()
+    857:860:public void cmdPickPostal()
+    883:886:public void cmdGetContentContact()
+    890:893:public void cmdGetContentContactPhone()
+    897:900:public void cmdGetContentContactPostal()
+    919:922:public void cmdSearch()
+    926:930:public void cmdSearchCall()
+    936:939:public void cmdSearchEMail()
+    942:945:public void cmdSearchPhone()
+fr.prados.contacts.tools.CheckContext:
+    34:55:public static boolean isContactInline(android.app.Activity)
+fr.prados.contacts.tools.CheckContext$1:
+    1:42:CheckContext$1(android.app.Activity)
+fr.prados.contacts.tools.Eula:
+    private static final java.lang.String PREFERENCE_EULA_ACCEPTED
+    private static final java.lang.String PREFERENCES_EULA
+fr.prados.contacts.tools.Photos:
+    48:122:public static final android.graphics.Bitmap extractFace(byte[])
+fr.prados.contacts.tools.QueryMarket:
+    private static final java.lang.String TAG
+    public static final java.lang.String PREFERENCE_STARED
+    public static final java.lang.String PREFERENCES_TIME
+    public static final java.lang.String PREFERENCES_COUNT
+    public static final java.lang.String PREFERENCES_STARS
+    private static final long COUNT_PENDING
+    private static final long DAY_PENDING
+    private static final long EXTRA_DAY_PENDING
+fr.prados.contacts.tools.RateActivity:
+    private static final java.lang.String TAG
+    private static final int DIALOG_STAR
+fr.prados.contacts.tools.TOAContentProvider:
+    private static final int DATABASE_VERSION
+    private static final java.lang.String TAG
+fr.prados.contacts.tools.TOAContentProvider$I18nPhonesHelper:
+    private static final java.lang.String NAME
+    private static final java.lang.String TABLE_NAME
+    private static final java.lang.String SQL_TABLE_CREATE
+    private static final java.lang.String SQL_TABLE_DROP
+    private static final java.lang.String MATCH_QUOTE
+fr.prados.contacts.tools.TOAPhoneNumberFormats:
+    private static final java.lang.String TAG
+    public static final java.lang.String AUTHORITY
+    public static final java.lang.String COL_MCC
+    public static final java.lang.String COL_COUNTRY
+    public static final java.lang.String COL_INTPREFIX
+    public static final java.lang.String COL_ISO639
+    public static final java.lang.String COL_EXIT
+    public static final java.lang.String COL_TRUNK
+    public static final java.lang.String COL_FORMAT
+    private static final int POS_ISO639
+    private static final int POS_INTPREFIX
+    private static final int POS_EXIT
+    private static final int POS_THRUNK
+    private static final int POS_FORMAT
+    private static final java.lang.String WHERE_MCC
+    private static final java.lang.String WHERE_ISO639
+    private static final java.lang.String WHERE_INTPREFIX
+    public java.lang.String _country
+    public java.lang.String _mobile
+    private static final java.lang.String _i18nPhoneRoute
+    146:157:private static java.lang.String[] splitPhoneNumber(java.lang.CharSequence)
+    190:211:public static fr.prados.contacts.tools.TOAPhoneNumberFormats getTOAContextFromIntPrefix(int)
+    216:232:private static int getMCCFromISO639(java.lang.String)
+    249:316:public static java.lang.CharSequence toTOA(java.lang.CharSequence,fr.prados.contacts.tools.TOAPhoneNumberFormats)
+    321:321:public static java.lang.CharSequence toTOA(java.lang.CharSequence)
+    326:360:public static java.lang.CharSequence toTOAFormat(java.lang.CharSequence,fr.prados.contacts.tools.TOAPhoneNumberFormats)
+    372:375:public static final java.lang.CharSequence extractSubscriberNumber(java.lang.CharSequence,fr.prados.contacts.tools.TOAPhoneNumberFormats)
+    379:379:public static final java.lang.CharSequence extractSubscriberNumber(java.lang.CharSequence)
+    384:436:public static final int getServerMCC(java.lang.String)
+fr.prados.contacts.tools.Update:
+    private static final java.lang.String TAG
+    private static final java.lang.String PREFERENCE_UPDATE_VERSION
+    private static final java.lang.String PREFERENCES_UPDATE
+fr.prados.contacts.ui.ImportWithSyncActivity:
+    private static final java.lang.String TAG
+    private static final int DIALOG_IMPORT
+fr.prados.contacts.ui.ImportWithoutSyncActivity:
+    private static final java.lang.String TAG
+    private static final int DIALOG_IMPORT
+fr.prados.contacts.ui.PhoneDisambigDialog:
+    56:57:public PhoneDisambigDialog(android.content.Context,android.database.Cursor)
+fr.prados.contacts.ui.ProvidersManager:
+    static final java.lang.String TAG
+    private static final int VERSION
+    255:258:private ProvidersManager(android.accounts.AccountManager)
+    1229:1237:private static java.lang.StringBuilder volatilAccountToIn()
+    1243:1245:public static void purgeVolatileContact(android.content.ContentResolver)
+fr.prados.contacts.ui.VolatileContactsListActivity:
+    private static final boolean PATCH_BUG_V14
+    private static final java.lang.String FlurryError
+    private static final java.lang.String TAG
+    private static final int DISPLAY_NUMBER_OF_CONTACTS
+    private static final int DISPLAY_PHOTO
+    private static final int DISPLAY_HEADER
+    private static final int DISPLAY_CALLBUTTON
+    private static final int DISPLAY_DATA
+    private static final int USE_QUICK_CONTACT
+    private static final int MODE_UNKNOWN
+    private static final int MODE_NORMAL
+    private static final int MODE_PICK_CONTACT
+    private static final int MODE_PICK_PHONE
+    private static final int MODE_PICK_POSTAL
+    private static final int MODE_SEARCH
+    private static final int SHOW_NORMAL
+    private static final int SHOW_LIST
+    private static final int SHOW_LIST_CONTACTS
+    private static final int SHOW_PICK_CONTACT
+    private static final int SHOW_PICK_PHONE
+    private static final int SHOW_PICK_POSTAL
+    private static final int DIALOG_SEARCH
+    private static final int DIALOG_ADDSTAR
+    private static final int DIALOG_IMPORT
+    private static final int DIALOG_IMPORT_ALL_RESULT
+    private static final java.lang.String STATE_LIST_STATE
+    private static final java.lang.String STATE_FOCUS
+    private static final java.lang.String STATE_LAST_REQUEST
+    private static final java.lang.String STATE_QUERY_MODE
+    165:165:static synthetic void access$23(fr.prados.contacts.ui.VolatileContactsListActivity,int)
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
+    static final int SUMMARY_NAME_COLUMN_INDEX
+    private static final int FETCH_IMAGE_MSG
+    1851:1860:public void onScrollStateChanged(android.widget.AbsListView,int)
+    1864:1868:private void processMissingImageItems(android.widget.AbsListView)
+fr.prados.contacts.ui.VolatileContactsListActivity$Retain:
+    public boolean _onSearchRequest
+fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider:
+    public static final java.lang.String AUTHORITY
+    public static final int MODE
+org.acra.ACRA:
+    public static final boolean DEV_LOGGING
+    static final java.lang.String RES_NOTIF_ICON
+    static final java.lang.String RES_NOTIF_TICKER_TEXT
+    static final java.lang.String RES_NOTIF_TITLE
+    static final java.lang.String RES_NOTIF_TEXT
+    static final java.lang.String RES_DIALOG_ICON
+    static final java.lang.String RES_DIALOG_TITLE
+    static final java.lang.String RES_DIALOG_TEXT
+    static final java.lang.String RES_DIALOG_COMMENT_PROMPT
+    static final java.lang.String RES_DIALOG_OK_TOAST
+    static final java.lang.String RES_TOAST_TEXT
+    static final int NOTIF_CRASH_ID
+    public static final java.lang.String PREF_DISABLE_ACRA
+    public static final java.lang.String PREF_ENABLE_ACRA
+    public static final java.lang.String PREF_ENABLE_SYSTEM_LOGS
+    public static final java.lang.String PREF_ENABLE_DEVICE_ID
+    public static final java.lang.String PREF_USER_EMAIL_ADDRESS
+    public static final java.lang.String PREF_ALWAYS_ACCEPT
+    public static final java.lang.String NULL_VALUE
+org.acra.ACRAConfigurationException:
+    private static final long serialVersionUID
+org.acra.ConfigurationInspector:
+    private static final java.lang.String SUFFIX_MASK
+    private static final java.lang.String FIELD_SCREENLAYOUT
+    private static final java.lang.String FIELD_UIMODE
+    private static final java.lang.String FIELD_MNC
+    private static final java.lang.String FIELD_MCC
+    private static final java.lang.String PREFIX_UI_MODE
+    private static final java.lang.String PREFIX_TOUCHSCREEN
+    private static final java.lang.String PREFIX_SCREENLAYOUT
+    private static final java.lang.String PREFIX_ORIENTATION
+    private static final java.lang.String PREFIX_NAVIGATIONHIDDEN
+    private static final java.lang.String PREFIX_NAVIGATION
+    private static final java.lang.String PREFIX_KEYBOARDHIDDEN
+    private static final java.lang.String PREFIX_KEYBOARD
+    private static final java.lang.String PREFIX_HARDKEYBOARDHIDDEN
+org.acra.CrashReportData:
+    private static final long serialVersionUID
+    private static final java.lang.String PROP_DTD_NAME
+    private static final int NONE
+    private static final int SLASH
+    private static final int UNICODE
+    private static final int CONTINUE
+    private static final int KEY_DONE
+    private static final int IGNORE
+    88:90:public CrashReportData(org.acra.CrashReportData)
+    162:169:public java.lang.String getProperty(org.acra.ReportField,java.lang.String)
+    181:205:public void list(java.io.PrintStream)
+    216:240:public void list(java.io.PrintWriter)
+    475:475:private java.util.Enumeration keys()
+    497:500:public void save(java.io.OutputStream,java.lang.String)
+    513:513:public java.lang.Object setProperty(org.acra.ReportField,java.lang.String)
+    568:585:public synchronized void store(java.io.Writer,java.lang.String)
+    700:701:public void storeToXML(java.io.OutputStream,java.lang.String)
+    727:778:public synchronized void storeToXML(java.io.OutputStream,java.lang.String,java.lang.String)
+    786:786:private java.lang.String substitutePredefinedEntries(java.lang.String)
+org.acra.ErrorReporter:
+    public static final java.lang.String REPORTFILE_EXTENSION
+    private static final int MAX_SEND_REPORTS
+    static final java.lang.String APPROVED_SUFFIX
+    static final java.lang.String EXTRA_REPORT_FILE_NAME
+    266:267:public void addCustomData(java.lang.String,java.lang.String)
+    289:289:public java.lang.String putCustomData(java.lang.String,java.lang.String)
+    302:302:public java.lang.String removeCustomData(java.lang.String)
+    315:315:public java.lang.String getCustomData(java.lang.String)
+    787:793:public java.lang.Thread handleSilentException(java.lang.Throwable)
+    1081:1082:public void deletePendingSilentReports()
+    1234:1235:public void removeReportSender(org.acra.sender.ReportSender)
+    1243:1250:public void removeReportSenders(java.lang.Class)
+    1257:1258:public void removeAllReportSenders()
+    1266:1268:public void setReportSender(org.acra.sender.ReportSender)
+org.acra.LogCatCollector:
+    private static final int DEFAULT_TAIL_COUNT
+org.acra.util.Base64:
+    public static final int DEFAULT
+    public static final int NO_PADDING
+    public static final int NO_WRAP
+    public static final int CRLF
+    public static final int URL_SAFE
+    public static final int NO_CLOSE
+    118:118:public static byte[] decode(java.lang.String,int)
+    136:136:public static byte[] decode(byte[],int)
+    158:173:public static byte[] decode(byte[],int,int,int)
+    456:459:public static java.lang.String encodeToString(byte[],int)
+    477:480:public static java.lang.String encodeToString(byte[],int,int,int)
+    494:494:public static byte[] encode(byte[],int)
+    510:539:public static byte[] encode(byte[],int,int,int)
+org.acra.util.Base64$Coder:
+    public byte[] output
+    public int op
+    public abstract boolean process(byte[],int,int,boolean)
+    public abstract int maxOutputSize(int)
+org.acra.util.Base64$Decoder:
+    private static final int SKIP
+    private static final int EQUALS
+    private int state
+    private int value
+    private final int[] alphabet
+    241:247:public Base64$Decoder(int,byte[])
+    254:254:public int maxOutputSize(int)
+    264:437:public boolean process(byte[],int,int,boolean)
+org.acra.util.Base64$Encoder:
+    public static final int LINE_GROUPS
+    private final byte[] tail
+    int tailLen
+    private int count
+    public final boolean do_padding
+    public final boolean do_newline
+    public final boolean do_cr
+    private final byte[] alphabet
+    581:593:public Base64$Encoder(int,byte[])
+    600:600:public int maxOutputSize(int)
+    605:736:public boolean process(byte[],int,int,boolean)
+org.acra.util.HttpRequest:
+    65:66:public void clearCookies()
+    70:77:public void abort()
+    131:140:public java.lang.String sendGet(java.lang.String)
+    144:167:public java.io.InputStream getHttpStream(java.lang.String)
+org.acra.util.Installation:
+    private static final java.lang.String INSTALLATION

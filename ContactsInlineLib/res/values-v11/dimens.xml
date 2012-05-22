@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit_photo_size">60dip</dimen>
+<!--      <dimen name="photo_resize">480px</dimen> -->
+     <dimen name="photo_resize">340dip</dimen>
+</resources>

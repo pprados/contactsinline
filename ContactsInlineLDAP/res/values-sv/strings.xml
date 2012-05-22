@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Application name -->
+	<string name="app_name">LDAP Contacts In Line</string>
+    
+	<!-- Driver name show if account and add account pages -->
+	<string name="ldap_driver_name">LDAP Contacts In Line</string>
+
+	<!-- Service name -->
+	<string name="ldap_service_label">LDAP-tjänst</string>
+	
+	<!-- Synchronize service name shown in application/running services -->
+	<string name="ldap_service_sync_label">Synk. med LDAP-tjänst</string>
+</resources>

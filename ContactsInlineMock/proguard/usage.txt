@@ -1,0 +1,310 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+fr.prados.contacts.Constants:
+    public static final java.lang.String TAG
+    public static final boolean E
+    public static final boolean W
+    public static final boolean I
+    public static final boolean D
+    public static final boolean V
+    public static final boolean DUMP
+    public static final boolean PHOTO
+    public static final boolean FACE_DETECTOR
+    public static final boolean FACE_SHOW
+    public static final boolean REQUERY_AFTER_KILL
+    public static final boolean SYNC_SEARCH
+    public static final boolean RECORD_LIMIT
+    public static final boolean DNTOADDR
+    public static final boolean DNTONAME
+    public static final int NB_RETRY_DNTO
+    public static final long CACHE_TIMEOUT
+    public static final int MAX_LRU
+    public static final boolean USE_PRE_CONNECTION
+    20:20:public Constants()
+fr.prados.contacts.VolatileContact:
+    private static final java.lang.String TAG
+    105:115:public static android.net.Uri contactUriFromRawUri(android.content.ContentResolver,android.net.Uri)
+    120:120:public java.lang.String getLookupkey()
+    124:125:public fr.prados.contacts.ContactId getContactId()
+    214:214:public long getId()
+    218:218:public java.util.ArrayList getRawContacts()
+    222:222:public fr.prados.contacts.VolatileRawContact getRawContact()
+    238:243:public boolean hasPhoneNumber()
+    247:252:public boolean hasAddress()
+fr.prados.contacts.VolatileContact$Copy
+fr.prados.contacts.VolatileContact$Import
+fr.prados.contacts.VolatileData:
+    81:82:public void put(java.lang.String,boolean)
+    85:86:public void put(java.lang.String,byte)
+    89:90:public void put(java.lang.String,byte[])
+    93:94:public void put(java.lang.String,short)
+    110:111:public void put(java.lang.String,float)
+    114:115:public void put(java.lang.String,double)
+fr.prados.contacts.VolatileRawContact:
+    public static final java.lang.String LOOKUP
+    public static final java.lang.String MUST_DELETED
+    private java.lang.String _cachedPhoneNumber
+    private java.lang.String _cachedPostalFormatted
+    public int _withPhoto
+    public static final int PHOTO_UNKNWON
+    public static final int PHOTO_YES
+    public static final int PHOTO_NO
+    146:151:public void remove(java.lang.String,fr.prados.contacts.VolatileData)
+    154:155:public void removeAll(java.lang.String)
+    168:168:public java.util.ArrayList gets(java.lang.String)
+    172:178:public void init(android.accounts.Account,java.lang.String)
+    187:189:public void removeAttr(java.lang.String)
+    197:199:public void setAttr(java.lang.String,boolean)
+    202:204:public void setAttr(java.lang.String,byte)
+    207:209:public void setAttr(java.lang.String,byte[])
+    212:214:public void setAttr(java.lang.String,short)
+    222:229:public void setAttr(java.lang.String,long)
+    232:234:public void setAttr(java.lang.String,float)
+    237:239:public void setAttr(java.lang.String,double)
+    243:252:public void setDisplayName(java.lang.String)
+    266:270:public int getPhoneType()
+    275:293:public java.lang.String getPhoneNumber()
+    298:302:public int getPostalType()
+    306:310:public java.lang.String getPostalFormatted()
+    329:356:public android.net.Uri updateInAndroid(android.content.ContentResolver,android.net.Uri,java.util.ArrayList)
+    367:388:private android.net.Uri getRawUriInAndroid(android.content.ContentResolver)
+    402:410:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean)
+    418:448:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean,java.util.ArrayList)
+    453:465:public void copyDataToAndroid(long,java.util.ArrayList)
+fr.prados.contacts.lib.R:
+    10:10:public R()
+fr.prados.contacts.lib.R$anim
+fr.prados.contacts.lib.R$attr
+fr.prados.contacts.lib.R$dimen
+fr.prados.contacts.lib.R$drawable
+fr.prados.contacts.lib.R$id
+fr.prados.contacts.lib.R$layout
+fr.prados.contacts.lib.R$raw
+fr.prados.contacts.lib.R$string:
+    48:48:public R$string()
+fr.prados.contacts.lib.R$style
+fr.prados.contacts.lib.R$xml
+fr.prados.contacts.providers.AbstractSimpleAuthenticator:
+    private static final java.lang.String TAG
+    private static final java.lang.String PARAM_ACCOUNT_TYPE
+    public static final java.lang.String PARAM_AUTHTOKEN_TYPE
+    public static final java.lang.String AUTHTOKEN_TYPE
+    49:52:public AbstractSimpleAuthenticator(android.content.Context,java.lang.Class)
+    226:240:public static void invalideCredential(android.accounts.Account,java.lang.String)
+    244:249:public static android.os.Bundle createResultBundle(android.accounts.Account,java.lang.String)
+fr.prados.contacts.providers.AuthQueryException:
+    private static final long serialVersionUID
+    29:30:public AuthQueryException(java.lang.String,java.lang.String)
+    33:34:public AuthQueryException(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.IProvider$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_onCreate
+    static final int TRANSACTION_onStart
+    static final int TRANSACTION_onStop
+    static final int TRANSACTION_queryContact
+    static final int TRANSACTION_getAccountPhoto
+    static final int TRANSACTION_getVolatileContact
+    static final int TRANSACTION_signalCanceled
+    static final int TRANSACTION_resetCanceled
+    static final int TRANSACTION_isCanceled
+    23:30:public static fr.prados.contacts.providers.IProvider asInterface(android.os.IBinder)
+fr.prados.contacts.providers.IProvider$Stub$Proxy:
+    156:159:IProvider$Stub$Proxy(android.os.IBinder)
+    166:166:public java.lang.String getInterfaceDescriptor()
+fr.prados.contacts.providers.Provider:
+    public static final java.lang.String JOIN_PHONE_SUFFIX
+    public static final java.lang.String JOIN_POSTAL_SUFFIX
+    public static final java.lang.String QUERY_MODE_ALL
+    public static final java.lang.String QUERY_MODE_ALL_WITH_PHONE
+    public static final java.lang.String QUERY_MODE_ALL_WITH_ADDRESS
+    public static final java.lang.String QUERY_MODE_MAILTO
+    public static final java.lang.String QUERY_MODE_TEL
+    public static final java.lang.String QUERY_MODE_NAME
+fr.prados.contacts.providers.Provider$OnQuery
+fr.prados.contacts.providers.QueryError:
+    private static final long serialVersionUID
+    29:30:public QueryError(java.lang.String,java.lang.String)
+    33:34:public QueryError(java.lang.String,java.lang.Throwable)
+    37:38:public QueryError(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.QueryException:
+    private static final long serialVersionUID
+    38:41:protected QueryException(java.lang.String,java.lang.String)
+    92:95:protected QueryException(java.lang.String,java.lang.String,java.lang.Throwable)
+    103:103:public final java.lang.String getAccountName()
+fr.prados.contacts.providers.QueryWarning:
+    private static final long serialVersionUID
+    27:28:public QueryWarning(java.lang.String,java.lang.String)
+    31:32:public QueryWarning(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.providers.ResultsAndExceptions:
+    public android.database.MatrixCursor cursor
+fr.prados.contacts.providers.TransportException:
+    26:27:public void setException(fr.prados.contacts.providers.QueryException)
+    30:31:public void getException()
+fr.prados.contacts.providers.mock.Application:
+    public static final java.lang.String ACCOUNT_TYPE
+    public static final java.lang.String DEFAULT_ACCOUNT_NAME
+    public static final boolean ACCOUNT_WITH_PASSWORD
+    public static final boolean ACCOUNT_WITH_SYNC
+fr.prados.contacts.providers.mock.BuildConfig
+fr.prados.contacts.providers.mock.MockAuthenticationService:
+    public static final java.lang.String AUTHTOKEN_TYPE
+fr.prados.contacts.providers.mock.MockAuthenticator:
+    public static final java.lang.String KEY_USERNAME
+    30:31:public MockAuthenticator(android.content.Context)
+fr.prados.contacts.providers.mock.MockSyncAdapterService:
+    private static final java.lang.String TAG
+fr.prados.contacts.providers.mock.MockVerySimpleAuthenticator:
+    private static final java.lang.String TOKEN
+    private static final java.lang.String PASSWORD
+fr.prados.contacts.providers.mock.MockWizardActivity:
+    private static final java.lang.String TAG
+    private static final int DIALOG_PROGRESS
+fr.prados.contacts.providers.mock.R
+fr.prados.contacts.providers.mock.R$anim
+fr.prados.contacts.providers.mock.R$attr
+fr.prados.contacts.providers.mock.R$dimen
+fr.prados.contacts.providers.mock.R$drawable
+fr.prados.contacts.providers.mock.R$id
+fr.prados.contacts.providers.mock.R$layout
+fr.prados.contacts.providers.mock.R$raw
+fr.prados.contacts.providers.mock.R$string
+fr.prados.contacts.providers.mock.R$style
+fr.prados.contacts.providers.mock.R$xml
+fr.prados.contacts.tools.CheckContext:
+    30:30:public CheckContext()
+fr.prados.contacts.tools.Eula:
+    private static final java.lang.String PREFERENCE_EULA_ACCEPTED
+    private static final java.lang.String PREFERENCES_EULA
+    51:51:public Eula()
+fr.prados.contacts.tools.HelpDebug:
+    23:23:public HelpDebug()
+    84:85:public static void strictDefaults()
+fr.prados.contacts.tools.HelpDebug$1:
+    43:44:public void strictDefault()
+fr.prados.contacts.tools.HelpDebug$2:
+    71:71:public void strictDefault()
+fr.prados.contacts.tools.HelpDebug$Debug:
+    public abstract void strictDefault()
+fr.prados.contacts.tools.LogMarket:
+    23:23:public LogMarket()
+    94:95:public static void wtf(java.lang.String,java.lang.Throwable)
+    98:99:public static void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.tools.LogMarket$1:
+    51:53:public void wtf(java.lang.String,java.lang.Throwable)
+    58:60:public void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.tools.LogMarket$2:
+    77:78:public void wtf(java.lang.String,java.lang.Throwable)
+    83:84:public void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.tools.LogMarket$WTF:
+    public abstract void wtf(java.lang.String,java.lang.Throwable)
+    public abstract void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+fr.prados.contacts.tools.Photos
+fr.prados.contacts.tools.QueryMarket:
+    private static final java.lang.String TAG
+    public static final java.lang.String PREFERENCE_STARED
+    public static final java.lang.String PREFERENCES_TIME
+    public static final java.lang.String PREFERENCES_COUNT
+    public static final java.lang.String PREFERENCES_STARS
+    private static final long COUNT_PENDING
+    private static final long DAY_PENDING
+    private static final long EXTRA_DAY_PENDING
+    47:47:public QueryMarket()
+    84:111:public static void checkRate(android.content.Context)
+fr.prados.contacts.tools.RateActivity:
+    private static final java.lang.String TAG
+    private static final int DIALOG_STAR
+fr.prados.contacts.tools.TOAPhoneNumberFormats
+fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler
+fr.prados.contacts.tools.Update:
+    private static final java.lang.String TAG
+    private static final java.lang.String PREFERENCE_UPDATE_VERSION
+    private static final java.lang.String PREFERENCES_UPDATE
+    34:34:public Update()
+org.acra.ACRA:
+    public static final boolean DEV_LOGGING
+    static final java.lang.String RES_NOTIF_ICON
+    static final java.lang.String RES_NOTIF_TICKER_TEXT
+    static final java.lang.String RES_NOTIF_TITLE
+    static final java.lang.String RES_NOTIF_TEXT
+    static final java.lang.String RES_DIALOG_ICON
+    static final java.lang.String RES_DIALOG_TITLE
+    static final java.lang.String RES_DIALOG_TEXT
+    static final java.lang.String RES_DIALOG_COMMENT_PROMPT
+    static final java.lang.String RES_DIALOG_OK_TOAST
+    static final java.lang.String RES_TOAST_TEXT
+    static final int NOTIF_CRASH_ID
+    public static final java.lang.String PREF_DISABLE_ACRA
+    public static final java.lang.String PREF_ENABLE_ACRA
+    public static final java.lang.String PREF_ENABLE_SYSTEM_LOGS
+    public static final java.lang.String PREF_ENABLE_DEVICE_ID
+    public static final java.lang.String PREF_USER_EMAIL_ADDRESS
+    public static final java.lang.String PREF_ALWAYS_ACCEPT
+    public static final java.lang.String NULL_VALUE
+org.acra.ACRAConfigurationException:
+    private static final long serialVersionUID
+org.acra.ConfigurationInspector:
+    private static final java.lang.String SUFFIX_MASK
+    private static final java.lang.String FIELD_SCREENLAYOUT
+    private static final java.lang.String FIELD_UIMODE
+    private static final java.lang.String FIELD_MNC
+    private static final java.lang.String FIELD_MCC
+    private static final java.lang.String PREFIX_UI_MODE
+    private static final java.lang.String PREFIX_TOUCHSCREEN
+    private static final java.lang.String PREFIX_SCREENLAYOUT
+    private static final java.lang.String PREFIX_ORIENTATION
+    private static final java.lang.String PREFIX_NAVIGATIONHIDDEN
+    private static final java.lang.String PREFIX_NAVIGATION
+    private static final java.lang.String PREFIX_KEYBOARDHIDDEN
+    private static final java.lang.String PREFIX_KEYBOARD
+    private static final java.lang.String PREFIX_HARDKEYBOARDHIDDEN
+org.acra.CrashReportData:
+    private static final long serialVersionUID
+    private static final java.lang.String PROP_DTD_NAME
+    private static final int NONE
+    private static final int SLASH
+    private static final int UNICODE
+    private static final int CONTINUE
+    private static final int KEY_DONE
+    private static final int IGNORE
+    88:90:public CrashReportData(org.acra.CrashReportData)
+    162:169:public java.lang.String getProperty(org.acra.ReportField,java.lang.String)
+    181:205:public void list(java.io.PrintStream)
+    216:240:public void list(java.io.PrintWriter)
+    475:475:private java.util.Enumeration keys()
+    497:500:public void save(java.io.OutputStream,java.lang.String)
+    513:513:public java.lang.Object setProperty(org.acra.ReportField,java.lang.String)
+    568:585:public synchronized void store(java.io.Writer,java.lang.String)
+    700:701:public void storeToXML(java.io.OutputStream,java.lang.String)
+    727:778:public synchronized void storeToXML(java.io.OutputStream,java.lang.String,java.lang.String)
+    786:786:private java.lang.String substitutePredefinedEntries(java.lang.String)
+org.acra.ErrorReporter:
+    public static final java.lang.String REPORTFILE_EXTENSION
+    private static final int MAX_SEND_REPORTS
+    static final java.lang.String APPROVED_SUFFIX
+    static final java.lang.String EXTRA_REPORT_FILE_NAME
+    266:267:public void addCustomData(java.lang.String,java.lang.String)
+    289:289:public java.lang.String putCustomData(java.lang.String,java.lang.String)
+    302:302:public java.lang.String removeCustomData(java.lang.String)
+    315:315:public java.lang.String getCustomData(java.lang.String)
+    787:793:public java.lang.Thread handleSilentException(java.lang.Throwable)
+    1081:1082:public void deletePendingSilentReports()
+    1234:1235:public void removeReportSender(org.acra.sender.ReportSender)
+    1243:1250:public void removeReportSenders(java.lang.Class)
+    1257:1258:public void removeAllReportSenders()
+    1266:1268:public void setReportSender(org.acra.sender.ReportSender)
+org.acra.LogCatCollector:
+    private static final int DEFAULT_TAIL_COUNT
+org.acra.util.Base64
+org.acra.util.Base64$Coder
+org.acra.util.Base64$Decoder
+org.acra.util.Base64$Encoder
+org.acra.util.HttpRequest:
+    65:66:public void clearCookies()
+    70:77:public void abort()
+    131:140:public java.lang.String sendGet(java.lang.String)
+    144:167:public java.io.InputStream getHttpStream(java.lang.String)
+org.acra.util.HttpUtils:
+    29:29:public HttpUtils()
+org.acra.util.Installation:
+    private static final java.lang.String INSTALLATION
+    26:26:public Installation()

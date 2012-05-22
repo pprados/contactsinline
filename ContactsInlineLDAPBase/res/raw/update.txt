@@ -1,0 +1,4 @@
+This software use a component from www.unboundid.com with a LGPL license.
+
+1.1: Auto-remove plugin.
+1.0: The first public version.

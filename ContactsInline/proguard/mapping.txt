@@ -1,0 +1,1946 @@
+android.annotation.SuppressLint -> android.annotation.SuppressLint:
+android.annotation.TargetApi -> android.annotation.TargetApi:
+com.flurry.android.AdImage -> com.flurry.android.AdImage:
+    long a -> a
+    int b -> b
+    int c -> c
+    java.lang.String d -> d
+    byte[] e -> e
+    void a(java.io.DataInput) -> a
+com.flurry.android.AppCircle -> com.flurry.android.AppCircle:
+com.flurry.android.AppCircleCallback -> com.flurry.android.AppCircleCallback:
+    void onMarketAppLaunchError(com.flurry.android.CallbackEvent) -> a
+    void onAdsUpdated(com.flurry.android.CallbackEvent) -> b
+com.flurry.android.CallbackEvent -> com.flurry.android.CallbackEvent:
+    int a -> a
+    long b -> b
+    java.lang.String c -> c
+    void setMessage(java.lang.String) -> a
+com.flurry.android.CatalogActivity -> com.flurry.android.CatalogActivity:
+    java.lang.String a -> a
+    android.webkit.WebView b -> b
+    com.flurry.android.w c -> c
+    java.util.List d -> d
+    com.flurry.android.u e -> e
+    com.flurry.android.p f -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void finish() -> finish
+    void onDestroy() -> onDestroy
+    void onClick(android.view.View) -> onClick
+    void a(com.flurry.android.x) -> a
+    com.flurry.android.p a(com.flurry.android.CatalogActivity) -> a
+    long b(com.flurry.android.CatalogActivity) -> b
+    com.flurry.android.u c(com.flurry.android.CatalogActivity) -> c
+com.flurry.android.Constants -> com.flurry.android.Constants:
+com.flurry.android.FlurryAgent -> com.flurry.android.FlurryAgent:
+    java.lang.String[] b -> b
+    java.lang.String c -> c
+    java.lang.String kInsecureReportUrl -> d
+    java.lang.String kSecureReportUrl -> e
+    java.lang.String d -> f
+    java.lang.String e -> g
+    java.lang.String f -> h
+    java.lang.String g -> i
+    com.flurry.android.FlurryAgent h -> j
+    long i -> k
+    boolean j -> l
+    boolean k -> m
+    boolean l -> n
+    boolean m -> o
+    android.location.Criteria n -> p
+    boolean o -> q
+    com.flurry.android.AppCircle p -> r
+    android.os.Handler q -> s
+    java.io.File r -> t
+    java.io.File s -> u
+    boolean t -> v
+    boolean u -> w
+    long v -> x
+    java.util.Map w -> y
+    java.lang.String x -> z
+    java.lang.String y -> A
+    java.lang.String z -> B
+    boolean A -> C
+    java.util.List B -> D
+    android.location.LocationManager C -> E
+    java.lang.String D -> F
+    boolean E -> G
+    long F -> H
+    java.util.List G -> I
+    long H -> J
+    long I -> K
+    long J -> L
+    java.lang.String K -> M
+    java.lang.String L -> N
+    byte M -> O
+    java.lang.String N -> P
+    byte O -> Q
+    java.lang.Long P -> R
+    int Q -> S
+    android.location.Location R -> T
+    java.util.Map S -> U
+    java.util.List T -> V
+    boolean U -> W
+    int V -> X
+    java.util.List W -> Y
+    int X -> Z
+    com.flurry.android.u Y -> aa
+    java.lang.String a -> a
+    void a(java.lang.Throwable) -> a
+    void onStartSession(android.content.Context,java.lang.String) -> a
+    void onEndSession(android.content.Context) -> a
+    void onError(java.lang.String,java.lang.String,java.lang.String) -> a
+    boolean isCaptureUncaughtExceptions() -> a
+    void onEvent(java.lang.String,java.util.Map) -> a
+    com.flurry.android.u b() -> b
+    void b(android.content.Context,java.lang.String) -> b
+    void a(android.content.Context,boolean) -> a
+    void i() -> h
+    double a(double) -> a
+    void a(java.lang.Runnable) -> a
+    void a(java.lang.String,java.util.Map,boolean) -> a
+    void a(java.lang.String,java.lang.String,java.lang.String) -> b
+    byte[] b(boolean) -> a
+    java.lang.String k() -> i
+    java.lang.String c() -> c
+    boolean a(byte[]) -> a
+    boolean a(byte[],java.lang.String) -> a
+    void a(java.io.DataInputStream) -> a
+    void c(boolean) -> b
+    void a(android.content.Context) -> b
+    void b(java.io.DataInputStream) -> b
+    void l() -> j
+    boolean a(java.io.File) -> a
+    void c(android.content.Context,java.lang.String) -> c
+    java.lang.String b(android.content.Context) -> c
+    java.lang.String c(android.content.Context) -> d
+    android.location.Location d(android.content.Context) -> e
+    void m() -> k
+    java.lang.String e() -> d
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    org.apache.http.client.HttpClient a(org.apache.http.params.HttpParams) -> a
+    com.flurry.android.FlurryAgent f() -> e
+    boolean a(com.flurry.android.FlurryAgent) -> a
+    void a(com.flurry.android.FlurryAgent,android.content.Context) -> a
+    void a(com.flurry.android.FlurryAgent,android.content.Context,boolean) -> a
+    void b(com.flurry.android.FlurryAgent) -> b
+    void c(com.flurry.android.FlurryAgent) -> c
+    void b(com.flurry.android.FlurryAgent,android.content.Context) -> b
+    long g() -> f
+    android.os.Handler d(com.flurry.android.FlurryAgent) -> d
+    boolean h() -> g
+    com.flurry.android.u e(com.flurry.android.FlurryAgent) -> e
+com.flurry.android.FlurryAgent$FlurryDefaultExceptionHandler -> com.flurry.android.FlurryAgent$FlurryDefaultExceptionHandler:
+    java.lang.Thread$UncaughtExceptionHandler a -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+com.flurry.android.InstallReceiver -> com.flurry.android.InstallReceiver:
+    android.os.Handler a -> a
+    java.io.File b -> b
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    java.util.Map a(java.lang.String) -> a
+    void a(java.util.Map) -> a
+    java.io.File a(com.flurry.android.InstallReceiver) -> a
+com.flurry.android.Offer -> com.flurry.android.Offer:
+    long a -> a
+    java.lang.String b -> b
+    int d -> c
+    com.flurry.android.AdImage e -> d
+    java.lang.String toString() -> toString
+com.flurry.android.OfferInSdk -> com.flurry.android.OfferInSdk:
+    long a -> a
+    java.lang.String c -> b
+    java.lang.String toString() -> toString
+com.flurry.android.a -> com.flurry.android.a:
+    java.lang.String a -> a
+    long b -> b
+    long c -> c
+    long d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    android.os.Handler g -> g
+com.flurry.android.aa -> com.flurry.android.aa:
+    long a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+com.flurry.android.ab -> com.flurry.android.ab:
+    android.text.SpannedString a -> a
+    android.text.SpannedString b -> b
+    android.text.SpannedString a(com.flurry.android.ab) -> a
+    android.text.SpannedString b(com.flurry.android.ab) -> b
+com.flurry.android.ac -> com.flurry.android.ac:
+    android.widget.TextView a -> a
+    com.flurry.android.ab b -> b
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+com.flurry.android.ad -> com.flurry.android.ad:
+    int a -> a
+    com.flurry.android.u b -> b
+    void run() -> run
+com.flurry.android.ae -> com.flurry.android.ae:
+    java.lang.String a -> a
+    com.flurry.android.u b -> b
+    void run() -> run
+com.flurry.android.af -> com.flurry.android.af:
+    java.util.LinkedHashMap a -> a
+    int b -> b
+    java.lang.Object a(java.lang.Object) -> a
+    void a(java.lang.Object,java.lang.Object) -> a
+    int a() -> a
+    java.util.List b() -> b
+    java.util.Set c() -> c
+    int a(com.flurry.android.af) -> a
+com.flurry.android.ag -> com.flurry.android.ag:
+    java.util.List a -> a
+    android.os.Handler b -> b
+    android.os.Handler c -> c
+    int d -> d
+    java.lang.Runnable e -> e
+    void a() -> a
+    void b() -> b
+    void a(com.flurry.android.ag) -> a
+com.flurry.android.ah -> com.flurry.android.ah:
+    boolean a -> a
+    int b -> b
+    boolean a(java.lang.String) -> a
+    int a(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+    int a(java.lang.String,java.lang.String) -> a
+    int b(java.lang.String,java.lang.String,java.lang.Throwable) -> b
+    int b(java.lang.String,java.lang.String) -> b
+    int c(java.lang.String,java.lang.String,java.lang.Throwable) -> c
+    int c(java.lang.String,java.lang.String) -> c
+    int d(java.lang.String,java.lang.String) -> d
+com.flurry.android.ai -> com.flurry.android.ai:
+    javax.net.ssl.SSLContext a -> a
+    java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean) -> createSocket
+    java.net.Socket createSocket() -> createSocket
+com.flurry.android.aj -> com.flurry.android.aj:
+com.flurry.android.ak -> com.flurry.android.ak:
+    java.lang.String a -> a
+    android.content.Context b -> b
+    com.flurry.android.p c -> c
+    com.flurry.android.u d -> d
+    void run() -> run
+com.flurry.android.al -> com.flurry.android.al:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    int c -> c
+com.flurry.android.b -> com.flurry.android.b:
+    boolean c -> c
+    android.content.Context a -> a
+    com.flurry.android.FlurryAgent b -> b
+    void run() -> run
+com.flurry.android.c -> com.flurry.android.c:
+    byte a -> a
+    java.lang.String b -> b
+    long c -> c
+    long r -> r
+    java.lang.String d -> d
+    int e -> e
+    int f -> f
+    java.lang.String g -> g
+    int h -> h
+    int i -> i
+    java.lang.String j -> j
+    int k -> k
+    int l -> l
+    java.lang.String s -> s
+    int t -> t
+    int u -> u
+    java.lang.String v -> v
+    int w -> w
+    int x -> x
+    java.lang.String y -> y
+    int z -> z
+    int A -> A
+    int B -> B
+    int C -> C
+    int m -> m
+    int n -> n
+    int o -> o
+    int p -> p
+    int D -> D
+    int E -> E
+    int F -> F
+    int G -> G
+    int H -> H
+    int I -> I
+    int J -> J
+    int K -> K
+    int q -> q
+    int L -> L
+    int M -> M
+    int N -> N
+    int O -> O
+    int P -> P
+    int Q -> Q
+    int R -> R
+    int S -> S
+    int T -> T
+    int U -> U
+    int V -> V
+    int W -> W
+    int X -> X
+    int Y -> Y
+    int Z -> Z
+    int aa -> aa
+    int ab -> ab
+    int ac -> ac
+    int ad -> ad
+    int ae -> ae
+    int af -> af
+    boolean ag -> ag
+    void c(java.io.DataInput) -> c
+    void a(java.io.DataInput) -> a
+    void b(java.io.DataInput) -> b
+    void a(java.io.DataOutput) -> a
+com.flurry.android.d -> com.flurry.android.d:
+    android.content.Context a -> a
+    boolean b -> b
+    com.flurry.android.FlurryAgent c -> c
+    void run() -> run
+com.flurry.android.e -> com.flurry.android.e:
+    java.lang.String a -> a
+    byte b -> b
+    byte c -> c
+    com.flurry.android.c d -> d
+    java.lang.String toString() -> toString
+com.flurry.android.f -> com.flurry.android.f:
+    byte a -> a
+    long b -> b
+    java.lang.String toString() -> toString
+com.flurry.android.g -> com.flurry.android.g:
+    int a -> a
+com.flurry.android.h -> com.flurry.android.h:
+    com.flurry.android.af a -> a
+    boolean removeEldestEntry(java.util.Map$Entry) -> removeEldestEntry
+com.flurry.android.i -> com.flurry.android.i:
+    java.lang.String a -> a
+    java.util.Map b -> b
+    long c -> c
+    boolean d -> d
+    long e -> e
+    byte[] f -> f
+    byte[] b() -> a
+com.flurry.android.j -> com.flurry.android.j:
+    java.util.List a -> a
+    void run() -> run
+com.flurry.android.k -> com.flurry.android.k:
+    com.flurry.android.ag a -> a
+    void run() -> run
+com.flurry.android.l -> com.flurry.android.l:
+    com.flurry.android.b a -> a
+    void run() -> run
+com.flurry.android.m -> com.flurry.android.m:
+    java.lang.String a -> a
+    com.flurry.android.ak b -> b
+    void run() -> run
+com.flurry.android.n -> com.flurry.android.n:
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+com.flurry.android.o -> com.flurry.android.o:
+    com.flurry.android.u a -> a
+    android.content.Context b -> b
+    java.lang.String c -> c
+    int d -> d
+    boolean e -> e
+    boolean f -> f
+    void a() -> a
+    android.widget.RelativeLayout$LayoutParams b() -> b
+    com.flurry.android.y c() -> c
+com.flurry.android.p -> com.flurry.android.p:
+    java.lang.String a -> a
+    byte e -> e
+    com.flurry.android.v b -> b
+    long c -> c
+    java.util.List d -> d
+    void a(com.flurry.android.f) -> a
+    long a() -> a
+    void a(java.io.DataOutput) -> a
+    java.lang.String toString() -> toString
+com.flurry.android.q -> com.flurry.android.q:
+    com.flurry.android.CatalogActivity a -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+com.flurry.android.r -> com.flurry.android.r:
+    java.lang.String a(java.lang.String,int) -> a
+    java.lang.String a(java.lang.String) -> a
+    void a(java.io.Closeable) -> a
+    void a(android.content.Context,android.widget.ImageView,int,int) -> a
+    int a(android.content.Context,int) -> a
+com.flurry.android.s -> com.flurry.android.s:
+com.flurry.android.t -> com.flurry.android.t:
+    java.util.Map a -> a
+    com.flurry.android.InstallReceiver b -> b
+    void run() -> run
+com.flurry.android.u -> com.flurry.android.u:
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String a -> a
+    int g -> g
+    java.lang.String b -> b
+    java.lang.String h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    long k -> k
+    long l -> l
+    long m -> m
+    com.flurry.android.z n -> n
+    boolean o -> o
+    boolean p -> p
+    java.lang.String q -> q
+    java.util.Map r -> r
+    android.os.Handler s -> s
+    boolean t -> t
+    java.util.Map u -> u
+    com.flurry.android.ag v -> v
+    java.util.List w -> w
+    java.util.Map x -> x
+    com.flurry.android.AppCircleCallback y -> y
+    long z -> z
+    void a(android.content.Context,com.flurry.android.a) -> a
+    void a() -> a
+    boolean b() -> b
+    void a(java.lang.String) -> a
+    void c() -> c
+    void d() -> d
+    void a(java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map) -> a
+    long e() -> e
+    java.util.Set f() -> f
+    com.flurry.android.AdImage a(long) -> a
+    com.flurry.android.AdImage o() -> l
+    java.util.List g() -> g
+    com.flurry.android.p b(long) -> b
+    void h() -> h
+    java.lang.String j() -> i
+    void a(android.content.Context,com.flurry.android.p,java.lang.String) -> a
+    java.lang.String d(java.lang.String) -> b
+    void e(java.lang.String) -> c
+    java.util.List a(android.content.Context,java.util.List,java.lang.Long,int,boolean) -> a
+    void a(com.flurry.android.p) -> a
+    java.util.List a(java.util.List,java.lang.Long) -> a
+    long k() -> j
+    void onClick(android.view.View) -> onClick
+    void b(android.content.Context,com.flurry.android.p,java.lang.String) -> b
+    java.lang.String p() -> m
+    java.lang.String a(com.flurry.android.p,java.lang.Long) -> a
+    java.lang.String a(byte[]) -> a
+    java.lang.String toString() -> toString
+    com.flurry.android.AdImage m() -> k
+    void a(java.lang.Runnable) -> a
+    void a(int) -> a
+    boolean q() -> n
+    java.lang.String a(com.flurry.android.u,java.lang.String) -> a
+    void a(com.flurry.android.u,android.content.Context,java.lang.String) -> a
+    void b(com.flurry.android.u,java.lang.String) -> b
+    com.flurry.android.AppCircleCallback a(com.flurry.android.u) -> a
+com.flurry.android.v -> com.flurry.android.v:
+    long a -> a
+    long b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    long e -> e
+    java.lang.Long f -> f
+    byte[] g -> g
+    com.flurry.android.AdImage h -> h
+    void a(java.io.DataInput) -> a
+    void b(java.io.DataInput) -> b
+    java.lang.String toString() -> toString
+    java.lang.String a(byte[]) -> a
+com.flurry.android.w -> com.flurry.android.w:
+    android.view.View a -> a
+    java.util.List b -> b
+    boolean c -> c
+    com.flurry.android.CatalogActivity d -> d
+    java.util.List a(android.content.Context) -> a
+    void a() -> a
+    void a(java.util.List) -> a
+    void a(java.util.List,boolean) -> a
+    java.util.List b() -> b
+com.flurry.android.x -> com.flurry.android.x:
+    com.flurry.android.p a -> a
+    java.lang.String b -> b
+    java.util.List c -> c
+com.flurry.android.y -> com.flurry.android.y:
+    com.flurry.android.u a -> a
+    com.flurry.android.p b -> b
+    java.lang.String c -> c
+    int d -> d
+    void a(android.content.Context,com.flurry.android.e,com.flurry.android.v,boolean) -> a
+    void a(java.lang.String) -> a
+    java.lang.String b(java.lang.String) -> b
+    com.flurry.android.p a() -> a
+com.flurry.android.z -> com.flurry.android.z:
+    android.content.Context a -> a
+    com.flurry.android.u b -> b
+    com.flurry.android.a c -> c
+    long d -> d
+    com.flurry.android.af e -> e
+    com.flurry.android.af f -> f
+    java.util.Map g -> g
+    java.util.Map h -> h
+    java.util.Map i -> i
+    java.util.Map j -> j
+    boolean k -> k
+    void a(android.content.Context,com.flurry.android.u,com.flurry.android.a) -> a
+    com.flurry.android.v[] a(java.lang.String) -> a
+    com.flurry.android.al a(long) -> a
+    java.util.Set a() -> a
+    com.flurry.android.AdImage b(long) -> b
+    com.flurry.android.AdImage a(short) -> a
+    com.flurry.android.e b(java.lang.String) -> b
+    boolean b() -> b
+    com.flurry.android.c a(byte) -> a
+    void a(java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map,java.util.Map) -> a
+    long c() -> c
+    void d() -> d
+    void a(java.io.File) -> a
+    void f() -> f
+    void e() -> e
+    void a(java.io.DataInputStream) -> a
+    void a(java.io.DataOutputStream) -> a
+    java.lang.String g() -> g
+    void a(int) -> a
+    java.lang.String toString() -> toString
+fr.prados.contacts.Application -> fr.prados.contacts.Application:
+    android.content.Context context -> a
+    java.util.concurrent.ExecutorService _executor -> b
+    java.lang.String sPackageName -> c
+    int VERSION -> d
+    void onCreate() -> onCreate
+    void onTerminate() -> onTerminate
+fr.prados.contacts.BuildConfig -> fr.prados.contacts.BuildConfig:
+fr.prados.contacts.Constants -> fr.prados.contacts.Constants:
+    boolean DEBUG -> a
+    boolean EMULATOR -> b
+    java.util.Date EXPIRED_BETA -> c
+fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
+    java.lang.CharSequence accountType -> a
+    java.lang.CharSequence accountName -> b
+    java.lang.CharSequence lookupKey -> c
+    java.lang.CharSequence _hashKey -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+    java.lang.String toString() -> toString
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+fr.prados.contacts.ContactId$1 -> fr.prados.contacts.ContactId$1:
+    fr.prados.contacts.ContactId createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.ContactId[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.R -> fr.prados.contacts.R:
+fr.prados.contacts.R$anim -> fr.prados.contacts.R$anim:
+    int push_left_in -> push_left_in
+    int push_left_out -> push_left_out
+fr.prados.contacts.R$attr -> fr.prados.contacts.R$attr:
+    int contact_browser_background -> contact_browser_background
+    int contact_browser_list_padding_left -> contact_browser_list_padding_left
+    int contact_browser_list_padding_right -> contact_browser_list_padding_right
+    int list_item_header_height -> list_item_header_height
+fr.prados.contacts.R$color -> fr.prados.contacts.R$color:
+    int dim_foreground_dark -> dim_foreground_dark
+    int list_background -> list_background
+    int list_divider -> list_divider
+    int section_header_text_color -> section_header_text_color
+    int text_hightlight -> text_hightlight
+    int text_hint -> text_hint
+    int text_link -> text_link
+fr.prados.contacts.R$dimen -> fr.prados.contacts.R$dimen:
+    int edit_photo_size -> edit_photo_size
+    int left_margin -> left_margin
+    int list_section_height -> list_section_height
+    int photo_resize -> photo_resize
+    int right_margin -> right_margin
+    int right_part_right_margin -> right_part_right_margin
+fr.prados.contacts.R$drawable -> fr.prados.contacts.R$drawable:
+    int ab_bottom_opaque_dark_holo -> ab_bottom_opaque_dark_holo
+    int ab_solid_custom_blue_inverse_holo -> ab_solid_custom_blue_inverse_holo
+    int ab_stacked_opaque_dark_holo -> ab_stacked_opaque_dark_holo
+    int ab_stacked_solid_inverse_holo -> ab_stacked_solid_inverse_holo
+    int action_bar_item_background -> action_bar_item_background
+    int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
+    int action_bar_tab -> action_bar_tab
+    int call_background -> call_background
+    int dark_header -> dark_header
+    int divider_vertical_dark -> divider_vertical_dark
+    int ic_contact_list_picture -> ic_contact_list_picture
+    int ic_launcher_contacts -> ic_launcher_contacts
+    int ic_menu_account_list -> ic_menu_account_list
+    int ic_menu_import_export -> ic_menu_import_export
+    int ic_settings_applications -> ic_settings_applications
+    int ic_tab_unselected_contacts -> ic_tab_unselected_contacts
+    int infobar_dark -> infobar_dark
+    int list_item_divider -> list_item_divider
+    int list_section_divider_holo_custom -> list_section_divider_holo_custom
+    int list_selector_background_longpress -> list_selector_background_longpress
+    int list_selector_background_pressed -> list_selector_background_pressed
+    int magnifying_glass -> magnifying_glass
+    int tab_focused -> tab_focused
+    int tab_focused_bottom -> tab_focused_bottom
+    int tab_pressed -> tab_pressed
+    int tab_pressed_bottom -> tab_pressed_bottom
+    int tab_selected -> tab_selected
+    int tab_selected_bottom -> tab_selected_bottom
+    int tab_selected_focused_holo -> tab_selected_focused_holo
+    int tab_selected_holo -> tab_selected_holo
+    int tab_selected_pressed_holo -> tab_selected_pressed_holo
+    int tab_unselected -> tab_unselected
+    int tab_unselected_focused_holo -> tab_unselected_focused_holo
+    int tab_unselected_holo -> tab_unselected_holo
+    int tab_unselected_pressed_holo -> tab_unselected_pressed_holo
+fr.prados.contacts.R$id -> fr.prados.contacts.R$id:
+    int call_button -> call_button
+    int call_view -> call_view
+    int data -> data
+    int divider -> divider
+    int emptyText -> emptyText
+    int errorsText -> errorsText
+    int header -> header
+    int header_text -> header_text
+    int label -> label
+    int menu_accounts -> menu_accounts
+    int menu_add_star -> menu_add_star
+    int menu_call -> menu_call
+    int menu_extensions -> menu_extensions
+    int menu_import -> menu_import
+    int menu_search -> menu_search
+    int menu_send_sms -> menu_send_sms
+    int menu_view_contact -> menu_view_contact
+    int name -> name
+    int noQuickContactPhoto -> noQuickContactPhoto
+    int photo -> photo
+    int presence -> presence
+    int right_side -> right_side
+    int totalContactsText -> totalContactsText
+fr.prados.contacts.R$layout -> fr.prados.contacts.R$layout:
+    int contacts_list_content -> contacts_list_content
+    int contacts_list_item_photo -> contacts_list_item_photo
+    int list_section -> list_section
+    int list_separator -> list_separator
+    int total_contacts -> total_contacts
+fr.prados.contacts.R$menu -> fr.prados.contacts.R$menu:
+    int context -> context
+    int list -> list
+fr.prados.contacts.R$plurals -> fr.prados.contacts.R$plurals:
+    int listFoundAllContacts -> listFoundAllContacts
+    int listTotalAllContacts -> listTotalAllContacts
+    int listTotalPhoneContacts -> listTotalPhoneContacts
+fr.prados.contacts.R$raw -> fr.prados.contacts.R$raw:
+    int eula -> eula
+    int update -> update
+fr.prados.contacts.R$string -> fr.prados.contacts.R$string:
+    int app_name -> app_name
+    int call_disambig_title -> call_disambig_title
+    int chkcontact_accept -> chkcontact_accept
+    int chkcontact_msg -> chkcontact_msg
+    int chkcontact_title -> chkcontact_title
+    int copy_detail -> copy_detail
+    int copy_summary -> copy_summary
+    int ctx_menu_add_star -> ctx_menu_add_star
+    int ctx_menu_call -> ctx_menu_call
+    int ctx_menu_import -> ctx_menu_import
+    int ctx_menu_sendEmail -> ctx_menu_sendEmail
+    int ctx_menu_send_sms -> ctx_menu_send_sms
+    int ctx_menu_viewContact -> ctx_menu_viewContact
+    int currentQuery -> currentQuery
+    int err_access_right -> err_access_right
+    int err_admin_limit_exceeded -> err_admin_limit_exceeded
+    int err_authent -> err_authent
+    int err_beta_expired -> err_beta_expired
+    int err_connection_exception -> err_connection_exception
+    int err_invalide_token_type -> err_invalide_token_type
+    int err_invalide_version -> err_invalide_version
+    int err_io_exception -> err_io_exception
+    int err_maxitem_exceeded -> err_maxitem_exceeded
+    int err_network_done -> err_network_done
+    int err_provider -> err_provider
+    int err_server_down -> err_server_down
+    int err_size_exceeded -> err_size_exceeded
+    int err_time_limit_exceeded -> err_time_limit_exceeded
+    int err_truncated -> err_truncated
+    int err_unknown -> err_unknown
+    int eula_accept -> eula_accept
+    int eula_refuse -> eula_refuse
+    int eula_title -> eula_title
+    int extension_plugins -> extension_plugins
+    int fast_scroll_alphabet -> fast_scroll_alphabet
+    int from_provider -> from_provider
+    int help_first_time -> help_first_time
+    int help_need_account -> help_need_account
+    int help_need_account_app -> help_need_account_app
+    int help_need_account_app_title -> help_need_account_app_title
+    int help_need_android_version -> help_need_android_version
+    int help_need_android_version_title -> help_need_android_version_title
+    int help_need_provider -> help_need_provider
+    int help_with_search -> help_with_search
+    int import_detail -> import_detail
+    int import_summary -> import_summary
+    int importing_title -> importing_title
+    int importing_wait -> importing_wait
+    int listFoundAllContactsZero -> listFoundAllContactsZero
+    int listTotalAllContactsZero -> listTotalAllContactsZero
+    int listTotalPhoneContactsZero -> listTotalPhoneContactsZero
+    int market_body -> market_body
+    int market_ok -> market_ok
+    int market_rate -> market_rate
+    int market_rate_body -> market_rate_body
+    int market_rate_done -> market_rate_done
+    int market_rate_later -> market_rate_later
+    int market_rate_no -> market_rate_no
+    int market_rate_no_market -> market_rate_no_market
+    int market_title -> market_title
+    int menu_accounts -> menu_accounts
+    int menu_extensions -> menu_extensions
+    int menu_import -> menu_import
+    int menu_import_result -> menu_import_result
+    int menu_market_rate -> menu_market_rate
+    int menu_search -> menu_search
+    int menu_settings -> menu_settings
+    int menu_std_contacts -> menu_std_contacts
+    int noContactsHelpText -> noContactsHelpText
+    int noException -> noException
+    int noMatchingContacts -> noMatchingContacts
+    int search_hint -> search_hint
+    int search_label -> search_label
+    int search_title -> search_title
+    int search_wait -> search_wait
+    int settings_description -> settings_description
+    int sms_disambig_title -> sms_disambig_title
+    int update_title -> update_title
+fr.prados.contacts.R$style -> fr.prados.contacts.R$style:
+    int ContactsActionBarStyle -> ContactsActionBarStyle
+    int ContactsActionBarTabView -> ContactsActionBarTabView
+    int ContactsActionBarTheme -> ContactsActionBarTheme
+    int MyTheme -> MyTheme
+    int Theme_Transparent -> Theme_Transparent
+fr.prados.contacts.R$styleable -> fr.prados.contacts.R$styleable:
+    int[] ContactBrowser -> ContactBrowser
+    int ContactBrowser_contact_browser_background -> ContactBrowser_contact_browser_background
+    int ContactBrowser_contact_browser_list_padding_left -> ContactBrowser_contact_browser_list_padding_left
+    int ContactBrowser_contact_browser_list_padding_right -> ContactBrowser_contact_browser_list_padding_right
+    int[] ContactListItemView -> ContactListItemView
+    int ContactListItemView_list_item_header_height -> ContactListItemView_list_item_header_height
+fr.prados.contacts.R$xml -> fr.prados.contacts.R$xml:
+    int import_contacts -> import_contacts
+    int searchable -> searchable
+fr.prados.contacts.VolatileContact -> fr.prados.contacts.VolatileContact:
+    long _id -> e
+    java.util.ArrayList _rawContacts -> f
+    java.lang.String _cachedDisplayName -> a
+    long _idgenerator -> b
+    long _dataidgenerator -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String[] _col_id -> g
+    boolean $assertionsDisabled -> d
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+    int describeContents() -> describeContents
+    android.net.Uri contactUriFromRawUri(android.content.ContentResolver,android.net.Uri) -> a
+    fr.prados.contacts.ContactId getContactId() -> a
+    java.lang.String getDisplayName() -> b
+    long getId() -> c
+    java.util.ArrayList getRawContacts() -> d
+    fr.prados.contacts.VolatileRawContact getRawContact() -> e
+    int compareTo(fr.prados.contacts.VolatileContact) -> a
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+    void access$1(fr.prados.contacts.VolatileContact,android.os.Parcel) -> a
+fr.prados.contacts.VolatileContact$1 -> fr.prados.contacts.VolatileContact$1:
+    fr.prados.contacts.VolatileContact createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.VolatileContact[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.VolatileContact$Copy -> fr.prados.contacts.VolatileContact$Copy:
+fr.prados.contacts.VolatileContact$Import -> fr.prados.contacts.VolatileContact$Import:
+fr.prados.contacts.VolatileData -> fr.prados.contacts.VolatileData:
+    android.content.ContentValues _attrs -> a
+    long _id -> b
+    long _rawid -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+    int describeContents() -> describeContents
+    java.lang.Object getAttr(java.lang.String) -> a
+    void put(java.lang.String,java.lang.String) -> a
+    void put(java.lang.String,byte[]) -> a
+    void put(java.lang.String,long) -> a
+    java.lang.String toString() -> toString
+    void access$0(fr.prados.contacts.VolatileData,android.os.Parcel) -> a
+fr.prados.contacts.VolatileData$1 -> fr.prados.contacts.VolatileData$1:
+    fr.prados.contacts.VolatileData createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.VolatileData[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.VolatileRawContact -> fr.prados.contacts.VolatileRawContact:
+    fr.prados.contacts.VolatileContact _parent -> a
+    long _id -> e
+    int _cachedPhoneType -> f
+    java.lang.String _cachedPhoneNumber -> g
+    int _cachedPostalType -> h
+    java.lang.String _cachedPostalFormatted -> i
+    android.content.ContentValues _attrs -> b
+    int _withPhoto -> c
+    java.util.HashMap _datas -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String[] _col_id -> j
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+    int describeContents() -> describeContents
+    void put(java.lang.String,fr.prados.contacts.VolatileData) -> a
+    void remove(java.lang.String,fr.prados.contacts.VolatileData) -> b
+    void removeAll(java.lang.String) -> a
+    fr.prados.contacts.VolatileData get(java.lang.String) -> b
+    java.util.ArrayList gets(java.lang.String) -> c
+    java.lang.Object getAttr(java.lang.String) -> d
+    void setAttr(java.lang.String,java.lang.String) -> a
+    void setAttr(java.lang.String,int) -> a
+    java.lang.String getLookupKey() -> a
+    int getPhoneType() -> b
+    java.lang.String getPhoneNumber() -> c
+    int getPostalType() -> d
+    java.lang.String getPostalFormatted() -> e
+    void resetCachedValues() -> f
+    java.lang.String toString() -> toString
+    android.net.Uri getRawUriInAndroid(android.content.ContentResolver) -> a
+    android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean,java.util.ArrayList) -> a
+    void copyDataToAndroid(long,java.util.ArrayList) -> a
+    void access$1(fr.prados.contacts.VolatileRawContact,android.os.Parcel) -> a
+fr.prados.contacts.VolatileRawContact$1 -> fr.prados.contacts.VolatileRawContact$1:
+    fr.prados.contacts.VolatileRawContact createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.VolatileRawContact[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.lib.R -> fr.prados.contacts.lib.R:
+fr.prados.contacts.lib.R$anim -> fr.prados.contacts.lib.R$anim:
+    int push_left_in -> push_left_in
+    int push_left_out -> push_left_out
+fr.prados.contacts.lib.R$attr -> fr.prados.contacts.lib.R$attr:
+    int contact_browser_background -> contact_browser_background
+    int contact_browser_list_padding_left -> contact_browser_list_padding_left
+    int contact_browser_list_padding_right -> contact_browser_list_padding_right
+    int list_item_header_height -> list_item_header_height
+fr.prados.contacts.lib.R$color -> fr.prados.contacts.lib.R$color:
+    int dim_foreground_dark -> dim_foreground_dark
+    int list_background -> list_background
+    int list_divider -> list_divider
+    int section_header_text_color -> section_header_text_color
+    int text_hightlight -> text_hightlight
+    int text_hint -> text_hint
+    int text_link -> text_link
+fr.prados.contacts.lib.R$dimen -> fr.prados.contacts.lib.R$dimen:
+    int edit_photo_size -> edit_photo_size
+    int left_margin -> left_margin
+    int list_section_height -> list_section_height
+    int photo_resize -> photo_resize
+    int right_margin -> right_margin
+    int right_part_right_margin -> right_part_right_margin
+fr.prados.contacts.lib.R$drawable -> fr.prados.contacts.lib.R$drawable:
+    int ab_bottom_opaque_dark_holo -> ab_bottom_opaque_dark_holo
+    int ab_solid_custom_blue_inverse_holo -> ab_solid_custom_blue_inverse_holo
+    int ab_stacked_opaque_dark_holo -> ab_stacked_opaque_dark_holo
+    int ab_stacked_solid_inverse_holo -> ab_stacked_solid_inverse_holo
+    int action_bar_item_background -> action_bar_item_background
+    int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
+    int action_bar_tab -> action_bar_tab
+    int call_background -> call_background
+    int dark_header -> dark_header
+    int divider_vertical_dark -> divider_vertical_dark
+    int ic_contact_list_picture -> ic_contact_list_picture
+    int ic_launcher_contacts -> ic_launcher_contacts
+    int ic_menu_account_list -> ic_menu_account_list
+    int ic_menu_import_export -> ic_menu_import_export
+    int ic_settings_applications -> ic_settings_applications
+    int ic_tab_unselected_contacts -> ic_tab_unselected_contacts
+    int infobar_dark -> infobar_dark
+    int list_item_divider -> list_item_divider
+    int list_section_divider_holo_custom -> list_section_divider_holo_custom
+    int list_selector_background_longpress -> list_selector_background_longpress
+    int list_selector_background_pressed -> list_selector_background_pressed
+    int magnifying_glass -> magnifying_glass
+    int tab_focused -> tab_focused
+    int tab_focused_bottom -> tab_focused_bottom
+    int tab_pressed -> tab_pressed
+    int tab_pressed_bottom -> tab_pressed_bottom
+    int tab_selected -> tab_selected
+    int tab_selected_bottom -> tab_selected_bottom
+    int tab_selected_focused_holo -> tab_selected_focused_holo
+    int tab_selected_holo -> tab_selected_holo
+    int tab_selected_pressed_holo -> tab_selected_pressed_holo
+    int tab_unselected -> tab_unselected
+    int tab_unselected_focused_holo -> tab_unselected_focused_holo
+    int tab_unselected_holo -> tab_unselected_holo
+    int tab_unselected_pressed_holo -> tab_unselected_pressed_holo
+fr.prados.contacts.lib.R$id -> fr.prados.contacts.lib.R$id:
+    int call_button -> call_button
+    int call_view -> call_view
+    int data -> data
+    int divider -> divider
+    int emptyText -> emptyText
+    int errorsText -> errorsText
+    int header -> header
+    int header_text -> header_text
+    int label -> label
+    int menu_accounts -> menu_accounts
+    int menu_add_star -> menu_add_star
+    int menu_call -> menu_call
+    int menu_extensions -> menu_extensions
+    int menu_import -> menu_import
+    int menu_search -> menu_search
+    int menu_send_sms -> menu_send_sms
+    int menu_view_contact -> menu_view_contact
+    int name -> name
+    int noQuickContactPhoto -> noQuickContactPhoto
+    int photo -> photo
+    int presence -> presence
+    int right_side -> right_side
+    int totalContactsText -> totalContactsText
+fr.prados.contacts.lib.R$layout -> fr.prados.contacts.lib.R$layout:
+    int contacts_list_content -> contacts_list_content
+    int contacts_list_item_photo -> contacts_list_item_photo
+    int list_section -> list_section
+    int list_separator -> list_separator
+    int total_contacts -> total_contacts
+fr.prados.contacts.lib.R$menu -> fr.prados.contacts.lib.R$menu:
+    int context -> context
+    int list -> list
+fr.prados.contacts.lib.R$plurals -> fr.prados.contacts.lib.R$plurals:
+    int listFoundAllContacts -> listFoundAllContacts
+    int listTotalAllContacts -> listTotalAllContacts
+    int listTotalPhoneContacts -> listTotalPhoneContacts
+fr.prados.contacts.lib.R$raw -> fr.prados.contacts.lib.R$raw:
+    int eula -> eula
+    int update -> update
+fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
+    int app_name -> app_name
+    int call_disambig_title -> call_disambig_title
+    int chkcontact_accept -> chkcontact_accept
+    int chkcontact_msg -> chkcontact_msg
+    int chkcontact_title -> chkcontact_title
+    int copy_detail -> copy_detail
+    int copy_summary -> copy_summary
+    int ctx_menu_add_star -> ctx_menu_add_star
+    int ctx_menu_call -> ctx_menu_call
+    int ctx_menu_import -> ctx_menu_import
+    int ctx_menu_sendEmail -> ctx_menu_sendEmail
+    int ctx_menu_send_sms -> ctx_menu_send_sms
+    int ctx_menu_viewContact -> ctx_menu_viewContact
+    int currentQuery -> currentQuery
+    int err_access_right -> err_access_right
+    int err_admin_limit_exceeded -> err_admin_limit_exceeded
+    int err_authent -> err_authent
+    int err_beta_expired -> err_beta_expired
+    int err_connection_exception -> err_connection_exception
+    int err_invalide_token_type -> err_invalide_token_type
+    int err_invalide_version -> err_invalide_version
+    int err_io_exception -> err_io_exception
+    int err_maxitem_exceeded -> err_maxitem_exceeded
+    int err_network_done -> err_network_done
+    int err_provider -> err_provider
+    int err_server_down -> err_server_down
+    int err_size_exceeded -> err_size_exceeded
+    int err_time_limit_exceeded -> err_time_limit_exceeded
+    int err_truncated -> err_truncated
+    int err_unknown -> err_unknown
+    int eula_accept -> eula_accept
+    int eula_refuse -> eula_refuse
+    int eula_title -> eula_title
+    int extension_plugins -> extension_plugins
+    int fast_scroll_alphabet -> fast_scroll_alphabet
+    int from_provider -> from_provider
+    int help_first_time -> help_first_time
+    int help_need_account -> help_need_account
+    int help_need_account_app -> help_need_account_app
+    int help_need_account_app_title -> help_need_account_app_title
+    int help_need_android_version -> help_need_android_version
+    int help_need_android_version_title -> help_need_android_version_title
+    int help_need_provider -> help_need_provider
+    int help_with_search -> help_with_search
+    int import_detail -> import_detail
+    int import_summary -> import_summary
+    int importing_title -> importing_title
+    int importing_wait -> importing_wait
+    int listFoundAllContactsZero -> listFoundAllContactsZero
+    int listTotalAllContactsZero -> listTotalAllContactsZero
+    int listTotalPhoneContactsZero -> listTotalPhoneContactsZero
+    int market_body -> market_body
+    int market_ok -> market_ok
+    int market_rate -> market_rate
+    int market_rate_body -> market_rate_body
+    int market_rate_done -> market_rate_done
+    int market_rate_later -> market_rate_later
+    int market_rate_no -> market_rate_no
+    int market_rate_no_market -> market_rate_no_market
+    int market_title -> market_title
+    int menu_accounts -> menu_accounts
+    int menu_extensions -> menu_extensions
+    int menu_import -> menu_import
+    int menu_import_result -> menu_import_result
+    int menu_market_rate -> menu_market_rate
+    int menu_search -> menu_search
+    int menu_settings -> menu_settings
+    int menu_std_contacts -> menu_std_contacts
+    int noContactsHelpText -> noContactsHelpText
+    int noException -> noException
+    int noMatchingContacts -> noMatchingContacts
+    int search_hint -> search_hint
+    int search_label -> search_label
+    int search_title -> search_title
+    int search_wait -> search_wait
+    int settings_description -> settings_description
+    int sms_disambig_title -> sms_disambig_title
+    int update_title -> update_title
+fr.prados.contacts.lib.R$style -> fr.prados.contacts.lib.R$style:
+    int ContactsActionBarStyle -> ContactsActionBarStyle
+    int ContactsActionBarTabView -> ContactsActionBarTabView
+    int ContactsActionBarTheme -> ContactsActionBarTheme
+    int MyTheme -> MyTheme
+    int Theme_Transparent -> Theme_Transparent
+fr.prados.contacts.lib.R$styleable -> fr.prados.contacts.lib.R$styleable:
+    int[] ContactBrowser -> ContactBrowser
+    int ContactBrowser_contact_browser_background -> ContactBrowser_contact_browser_background
+    int ContactBrowser_contact_browser_list_padding_left -> ContactBrowser_contact_browser_list_padding_left
+    int ContactBrowser_contact_browser_list_padding_right -> ContactBrowser_contact_browser_list_padding_right
+    int[] ContactListItemView -> ContactListItemView
+    int ContactListItemView_list_item_header_height -> ContactListItemView_list_item_header_height
+fr.prados.contacts.lib.R$xml -> fr.prados.contacts.lib.R$xml:
+    int import_contacts -> import_contacts
+    int searchable -> searchable
+fr.prados.contacts.providers.AbstractSimpleAuthenticator -> fr.prados.contacts.providers.AbstractSimpleAuthenticator:
+    android.accounts.AccountManager _accountManager -> a
+fr.prados.contacts.providers.AuthQueryException -> fr.prados.contacts.providers.AuthQueryException:
+fr.prados.contacts.providers.IProvider -> fr.prados.contacts.providers.IProvider:
+    void onCreate(int,long) -> a
+    void onStart() -> a
+    void onStop() -> b
+    fr.prados.contacts.providers.ResultsAndExceptions queryContact(java.lang.String,java.lang.String,java.lang.String) -> a
+    byte[] getAccountPhoto(fr.prados.contacts.ContactId) -> a
+    fr.prados.contacts.VolatileContact getVolatileContact(fr.prados.contacts.ContactId) -> b
+    void signalCanceled(java.lang.String) -> a
+    void resetCanceled() -> c
+    boolean isCanceled() -> d
+fr.prados.contacts.providers.IProvider$Stub -> fr.prados.contacts.providers.IProvider$Stub:
+    fr.prados.contacts.providers.IProvider asInterface(android.os.IBinder) -> a
+    boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
+fr.prados.contacts.providers.IProvider$Stub$Proxy -> fr.prados.contacts.providers.IProvider$Stub$Proxy:
+    android.os.IBinder mRemote -> a
+    android.os.IBinder asBinder() -> asBinder
+    void onCreate(int,long) -> a
+    void onStart() -> a
+    void onStop() -> b
+    fr.prados.contacts.providers.ResultsAndExceptions queryContact(java.lang.String,java.lang.String,java.lang.String) -> a
+    byte[] getAccountPhoto(fr.prados.contacts.ContactId) -> a
+    fr.prados.contacts.VolatileContact getVolatileContact(fr.prados.contacts.ContactId) -> b
+    void signalCanceled(java.lang.String) -> a
+    void resetCanceled() -> c
+    boolean isCanceled() -> d
+fr.prados.contacts.providers.PackageRemovedReceiver -> fr.prados.contacts.providers.PackageRemovedReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+fr.prados.contacts.providers.Provider -> fr.prados.contacts.providers.Provider:
+    java.lang.String TAG -> a
+fr.prados.contacts.providers.Provider$OnQuery -> fr.prados.contacts.providers.Provider$OnQuery:
+    void onQueryComplete(fr.prados.contacts.providers.ResultsAndExceptions,boolean) -> a
+fr.prados.contacts.providers.QueryError -> fr.prados.contacts.providers.QueryError:
+fr.prados.contacts.providers.QueryException -> fr.prados.contacts.providers.QueryException:
+    java.lang.String _account -> a
+    java.lang.String _msg -> b
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+    java.lang.String getMessage() -> getMessage
+    java.lang.String getAccountName() -> a
+    java.lang.String toString() -> toString
+fr.prados.contacts.providers.QueryException$1 -> fr.prados.contacts.providers.QueryException$1:
+    fr.prados.contacts.providers.QueryException createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.providers.QueryException[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.providers.QueryWarning -> fr.prados.contacts.providers.QueryWarning:
+fr.prados.contacts.providers.ResultsAndExceptions -> fr.prados.contacts.providers.ResultsAndExceptions:
+    android.database.MatrixCursor cursor -> a
+    java.util.ArrayList contacts -> b
+    java.util.List exceptions -> c
+    int pendingJob -> d
+    long timeout -> e
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+    java.lang.String toString() -> toString
+fr.prados.contacts.providers.ResultsAndExceptions$1 -> fr.prados.contacts.providers.ResultsAndExceptions$1:
+    fr.prados.contacts.providers.ResultsAndExceptions createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.providers.ResultsAndExceptions[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.providers.TransportException -> fr.prados.contacts.providers.TransportException:
+    fr.prados.contacts.providers.QueryException _e -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+fr.prados.contacts.providers.TransportException$1 -> fr.prados.contacts.providers.TransportException$1:
+    fr.prados.contacts.providers.TransportException createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.providers.TransportException[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.test.Dump -> fr.prados.contacts.test.Dump:
+    void dump_android(java.lang.String,boolean,android.content.ContentResolver) -> dump_android
+    void dump_android_lite(java.lang.String,boolean,android.content.ContentResolver) -> dump_android_lite
+fr.prados.contacts.test.TestActivity -> fr.prados.contacts.test.TestActivity:
+    java.lang.reflect.Method[] _methods -> _methods
+    boolean $assertionsDisabled -> $assertionsDisabled
+    void onCreate(android.os.Bundle) -> onCreate
+    void onListItemClick(android.widget.ListView,android.view.View,int,long) -> onListItemClick
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+fr.prados.contacts.test.TestActivity$1Wrapper -> fr.prados.contacts.test.TestActivity$1Wrapper:
+    java.lang.reflect.Method method -> method
+    fr.prados.contacts.test.TestActivity this$0 -> this$0
+    java.lang.String toString() -> toString
+fr.prados.contacts.tools.CheckContext -> fr.prados.contacts.tools.CheckContext:
+    boolean isAndroidMinVersion(android.app.Activity,int) -> a
+fr.prados.contacts.tools.CheckContext$1 -> fr.prados.contacts.tools.CheckContext$1:
+    android.app.Activity val$context -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.CheckContext$2 -> fr.prados.contacts.tools.CheckContext$2:
+    android.app.Activity val$context -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Eula -> fr.prados.contacts.tools.Eula:
+    java.lang.String TAG -> a
+    void showEula(android.app.Activity,int) -> a
+    java.lang.CharSequence readFile(android.app.Activity,int) -> b
+fr.prados.contacts.tools.Eula$1 -> fr.prados.contacts.tools.Eula$1:
+    android.content.SharedPreferences val$preferences -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Eula$2 -> fr.prados.contacts.tools.Eula$2:
+    android.app.Activity val$activity -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Eula$3 -> fr.prados.contacts.tools.Eula$3:
+    android.app.Activity val$activity -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+fr.prados.contacts.tools.HelpDebug -> fr.prados.contacts.tools.HelpDebug:
+    fr.prados.contacts.tools.HelpDebug$Debug _debug -> a
+    void strictDefaults() -> a
+    void strictDeath() -> b
+fr.prados.contacts.tools.HelpDebug$1 -> fr.prados.contacts.tools.HelpDebug$1:
+    void strictDefault() -> a
+    void strictDeath() -> b
+fr.prados.contacts.tools.HelpDebug$2 -> fr.prados.contacts.tools.HelpDebug$2:
+    void strictDefault() -> a
+    void strictDeath() -> b
+fr.prados.contacts.tools.HelpDebug$Debug -> fr.prados.contacts.tools.HelpDebug$Debug:
+    void strictDefault() -> a
+    void strictDeath() -> b
+fr.prados.contacts.tools.LogMarket -> fr.prados.contacts.tools.LogMarket:
+    fr.prados.contacts.tools.LogMarket$WTF _wtf -> a
+    void wtf(java.lang.String,java.lang.String) -> a
+    void wtf(java.lang.String,java.lang.Throwable) -> a
+    void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+fr.prados.contacts.tools.LogMarket$1 -> fr.prados.contacts.tools.LogMarket$1:
+    void wtf(java.lang.String,java.lang.String) -> a
+    void wtf(java.lang.String,java.lang.Throwable) -> a
+    void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+fr.prados.contacts.tools.LogMarket$2 -> fr.prados.contacts.tools.LogMarket$2:
+    void wtf(java.lang.String,java.lang.String) -> a
+    void wtf(java.lang.String,java.lang.Throwable) -> a
+    void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+fr.prados.contacts.tools.LogMarket$WTF -> fr.prados.contacts.tools.LogMarket$WTF:
+    void wtf(java.lang.String,java.lang.String) -> a
+    void wtf(java.lang.String,java.lang.Throwable) -> a
+    void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
+fr.prados.contacts.tools.Photos -> fr.prados.contacts.tools.Photos:
+    int _photoSize -> a
+    void startup(android.content.Context) -> a
+fr.prados.contacts.tools.QueryMarket -> fr.prados.contacts.tools.QueryMarket:
+    boolean _askRate -> a
+    void startSearchMarket(android.content.Context,java.lang.String,int,boolean) -> a
+    void extendDayPending(android.content.Context) -> a
+    void checkRate(android.content.Context) -> b
+    android.content.Intent searchMarket(android.content.Context,java.lang.String,boolean) -> a
+fr.prados.contacts.tools.RateActivity -> fr.prados.contacts.tools.RateActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+fr.prados.contacts.tools.RateActivity$1 -> fr.prados.contacts.tools.RateActivity$1:
+    fr.prados.contacts.tools.RateActivity this$0 -> a
+    android.content.SharedPreferences val$preferences -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.RateActivity$2 -> fr.prados.contacts.tools.RateActivity$2:
+    fr.prados.contacts.tools.RateActivity this$0 -> a
+    android.content.SharedPreferences val$preferences -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.RateActivity$3 -> fr.prados.contacts.tools.RateActivity$3:
+    fr.prados.contacts.tools.RateActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.TOAContentProvider -> fr.prados.contacts.tools.TOAContentProvider:
+    fr.prados.contacts.tools.TOAContentProvider$I18nPhonesHelper _helper -> a
+    boolean onCreate() -> onCreate
+    java.lang.String getType(android.net.Uri) -> getType
+    android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String) -> query
+    int delete(android.net.Uri,java.lang.String,java.lang.String[]) -> delete
+    android.net.Uri insert(android.net.Uri,android.content.ContentValues) -> insert
+    int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) -> update
+fr.prados.contacts.tools.TOAContentProvider$I18nPhonesHelper -> fr.prados.contacts.tools.TOAContentProvider$I18nPhonesHelper:
+    android.content.res.AssetManager _assetManager -> a
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+    java.lang.String trimQuote(java.lang.String) -> a
+fr.prados.contacts.tools.TOAPhoneNumberFormats -> fr.prados.contacts.tools.TOAPhoneNumberFormats:
+    android.net.Uri CONTENT_URI -> a
+    java.lang.String[] COLS -> i
+    java.lang.String[] COLS_MCC -> j
+    fr.prados.contacts.tools.TOAPhoneNumberFormats _phoneTOAContext -> b
+    android.util.SparseArray _cacheMCC -> k
+    android.util.SparseArray _cacheIntPrefix -> l
+    android.content.ContentResolver _resolver -> m
+    java.lang.String _iso639 -> c
+    int _intPrefix -> d
+    java.util.regex.Pattern _trunk -> e
+    java.lang.String _exit -> f
+    java.lang.String _local -> g
+    java.lang.String _format -> h
+    java.util.regex.Pattern _toaPhonePattern -> n
+    java.util.regex.Pattern _intPhonePattern -> o
+    void startup(android.content.Context) -> a
+    fr.prados.contacts.tools.TOAPhoneNumberFormats getTOAContextFromMCC(int) -> a
+    int getPhoneMCC() -> a
+fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler -> fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler:
+    java.lang.String iso639 -> a
+    void startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> startElement
+fr.prados.contacts.tools.Update -> fr.prados.contacts.tools.Update:
+    void showUdpate(android.app.Activity,int,int) -> a
+    java.lang.CharSequence readFile(android.app.Activity,int) -> a
+fr.prados.contacts.tools.Update$1 -> fr.prados.contacts.tools.Update$1:
+    android.content.SharedPreferences val$preferences -> a
+    int val$version -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.ui.Collapser -> fr.prados.contacts.ui.Collapser:
+    void collapseList(java.util.ArrayList) -> a
+fr.prados.contacts.ui.Collapser$Collapsible -> fr.prados.contacts.ui.Collapser$Collapsible:
+    boolean collapseWith(java.lang.Object) -> a
+    boolean shouldCollapseWith(java.lang.Object) -> b
+fr.prados.contacts.ui.DontPressWithParentImageView -> fr.prados.contacts.ui.DontPressWithParentImageView:
+    void setPressed(boolean) -> setPressed
+fr.prados.contacts.ui.ExQuickContactBadge -> fr.prados.contacts.ui.ExQuickContactBadge:
+    long _itemId -> a
+    void setItemId(long) -> setItemId
+    void onClick(android.view.View) -> onClick
+    long access$0(fr.prados.contacts.ui.ExQuickContactBadge) -> a
+    java.lang.String[] access$1(fr.prados.contacts.ui.ExQuickContactBadge) -> b
+fr.prados.contacts.ui.ExQuickContactBadge$1 -> fr.prados.contacts.ui.ExQuickContactBadge$1:
+    fr.prados.contacts.ui.ExQuickContactBadge this$0 -> a
+    void onPreExecute() -> onPreExecute
+    android.net.Uri doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(android.net.Uri) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.FocusRequestingListView -> fr.prados.contacts.ui.FocusRequestingListView:
+    boolean mFirstLayoutDone -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+fr.prados.contacts.ui.ImportWithSyncActivity -> fr.prados.contacts.ui.ImportWithSyncActivity:
+    fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask _importTask -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void access$0(fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask) -> a
+fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask -> fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask:
+    android.content.ContentResolver _resolver -> c
+    android.net.Uri _data -> d
+    fr.prados.contacts.ui.ImportWithSyncActivity this$0 -> a
+    boolean $assertionsDisabled -> b
+    android.net.Uri doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(android.net.Uri) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.ImportWithoutSyncActivity -> fr.prados.contacts.ui.ImportWithoutSyncActivity:
+    fr.prados.contacts.ui.ImportWithoutSyncActivity$ImportTask _importTask -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void access$0(fr.prados.contacts.ui.ImportWithoutSyncActivity$ImportTask) -> a
+fr.prados.contacts.ui.ImportWithoutSyncActivity$ImportTask -> fr.prados.contacts.ui.ImportWithoutSyncActivity$ImportTask:
+    android.content.ContentResolver _resolver -> c
+    android.net.Uri _data -> d
+    fr.prados.contacts.ui.ImportWithoutSyncActivity this$0 -> a
+    boolean $assertionsDisabled -> b
+    android.net.Uri doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(android.net.Uri) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.PhoneDisambigDialog -> fr.prados.contacts.ui.PhoneDisambigDialog:
+    android.content.Context _context -> a
+    android.app.AlertDialog _dialog -> b
+    boolean _sendSms -> c
+    android.database.Cursor _phonesCursor -> d
+    android.widget.ListAdapter _phonesAdapter -> e
+    java.util.ArrayList _phoneItemList -> f
+    void show() -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+    java.util.ArrayList makePhoneItemsList(android.database.Cursor) -> a
+    android.content.Context access$0(fr.prados.contacts.ui.PhoneDisambigDialog) -> a
+fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem -> fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem:
+    java.lang.String phoneNumber -> b
+    fr.prados.contacts.ui.PhoneDisambigDialog this$0 -> a
+    boolean collapseWith(fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem) -> a
+    boolean shouldCollapseWith(fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem) -> b
+    java.lang.String toString() -> toString
+    boolean collapseWith(java.lang.Object) -> a
+    boolean shouldCollapseWith(java.lang.Object) -> b
+    java.lang.String access$2(fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem) -> c
+fr.prados.contacts.ui.PhoneDisambigDialog$PhonesAdapter -> fr.prados.contacts.ui.PhoneDisambigDialog$PhonesAdapter:
+fr.prados.contacts.ui.ProvidersManager -> fr.prados.contacts.ui.ProvidersManager:
+    boolean _isInit -> c
+    java.lang.String ACTION -> a
+    android.content.Intent _intentAction -> d
+    android.accounts.AccountManager _manager -> e
+    java.util.Map _drivers -> f
+    java.util.concurrent.atomic.AtomicInteger _waitInit -> g
+    java.util.List _tasks -> h
+    java.lang.String _currentRequest -> i
+    java.lang.String[] DATAS_COLUMN -> j
+    java.lang.String[] RAW_ACCOUNT -> k
+    java.lang.String[] RAW_CONTACT_ID_COLUMN -> l
+    java.lang.String[] RAW_ID_COLUMN -> m
+    boolean $assertionsDisabled -> b
+    int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode -> n
+    boolean isEmpty() -> a
+    boolean waitInit() -> b
+    void initPlugin() -> m
+    void init() -> c
+    android.accounts.Account[] getAccounts() -> d
+    fr.prados.contacts.providers.IProvider getDriver(java.lang.String) -> b
+    void wakeup() -> e
+    void wakedown() -> f
+    void reset() -> g
+    void query(fr.prados.contacts.ui.ProvidersManager$Mode,fr.prados.contacts.providers.Provider$OnQuery,java.lang.String[],java.lang.String,java.lang.String[]) -> a
+    void cancelQuery() -> h
+    android.graphics.Bitmap getPhoto(fr.prados.contacts.ContactId) -> a
+    android.database.MatrixCursor convContactsToCursor(fr.prados.contacts.ui.ProvidersManager$Mode,java.util.List,java.lang.String[]) -> b
+    android.net.Uri importVolatileContactToAndroid(long,boolean,android.content.Context) -> a
+    android.net.Uri fixeSyncContactInAndroid(android.content.res.Resources,android.content.ContentResolver,android.net.Uri) -> a
+    android.net.Uri fixeSyncContactInAndroid(android.content.res.Resources,android.content.ContentResolver,long) -> a
+    android.net.Uri fixeCopyContactInAndroid(android.content.res.Resources,android.content.ContentResolver,android.net.Uri) -> b
+    android.net.Uri fixeCopyContactInAndroid(android.content.res.Resources,android.content.ContentResolver,long) -> b
+    fr.prados.contacts.providers.IProvider access$0(java.lang.String) -> a
+    java.util.Map access$1() -> i
+    java.util.concurrent.atomic.AtomicInteger access$2() -> j
+    android.database.MatrixCursor access$3(fr.prados.contacts.ui.ProvidersManager$Mode,java.util.List,java.lang.String[]) -> a
+    java.util.List access$4() -> k
+    int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode() -> l
+fr.prados.contacts.ui.ProvidersManager$1 -> fr.prados.contacts.ui.ProvidersManager$1:
+    fr.prados.contacts.providers.IProvider _driver -> a
+    int val$theId -> b
+    android.content.Context val$context -> c
+    android.content.Intent val$intent -> d
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+fr.prados.contacts.ui.ProvidersManager$1AsyncJob -> fr.prados.contacts.ui.ProvidersManager$1AsyncJob:
+    java.util.concurrent.atomic.AtomicInteger _jobs -> a
+    android.accounts.Account val$account -> d
+    java.lang.String val$selection -> e
+    java.lang.String[] val$selectionArgs -> f
+    fr.prados.contacts.providers.ResultsAndExceptions val$resultFinal -> g
+    fr.prados.contacts.ui.ProvidersManager$Mode val$match -> h
+    java.lang.String[] val$projection -> i
+    android.content.Context val$context -> j
+    java.lang.String val$mergedSelection -> k
+    fr.prados.contacts.providers.Provider$OnQuery val$callback -> l
+    fr.prados.contacts.providers.ResultsAndExceptions doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(fr.prados.contacts.providers.ResultsAndExceptions) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.ProvidersManager$Cache -> fr.prados.contacts.ui.ProvidersManager$Cache:
+    java.util.Map _cache -> a
+    java.util.Map _cacheByContactId -> b
+    java.util.Map _cacheByLongId -> c
+    java.util.List _lru -> d
+    void add(java.lang.String,fr.prados.contacts.providers.ResultsAndExceptions) -> b
+    void remove(java.lang.String) -> c
+    void mergeResults(fr.prados.contacts.providers.ResultsAndExceptions,fr.prados.contacts.providers.ResultsAndExceptions) -> b
+    fr.prados.contacts.providers.ResultsAndExceptions get(java.lang.String) -> d
+    java.lang.String generateSelectionId(java.lang.String,java.lang.String[]) -> b
+    void clear() -> c
+    fr.prados.contacts.VolatileContact getVolatileContactsById(long) -> b
+    fr.prados.contacts.VolatileContact getVolatileContactByContactId(fr.prados.contacts.ContactId) -> b
+    void onLowMemory() -> a
+    void access$0() -> b
+    java.lang.String access$1(java.lang.String,java.lang.String[]) -> a
+    fr.prados.contacts.providers.ResultsAndExceptions access$2(java.lang.String) -> a
+    void access$3(java.lang.String) -> b
+    void access$4(java.lang.String,fr.prados.contacts.providers.ResultsAndExceptions) -> a
+    void access$5(fr.prados.contacts.providers.ResultsAndExceptions,fr.prados.contacts.providers.ResultsAndExceptions) -> a
+    fr.prados.contacts.VolatileContact access$6(fr.prados.contacts.ContactId) -> a
+    fr.prados.contacts.VolatileContact access$7(long) -> a
+fr.prados.contacts.ui.ProvidersManager$CanceledAsync -> fr.prados.contacts.ui.ProvidersManager$CanceledAsync:
+    fr.prados.contacts.providers.IProvider _driver -> b
+    java.lang.String _accountName -> c
+    void propagateCancel() -> a
+fr.prados.contacts.ui.ProvidersManager$Mode -> fr.prados.contacts.ui.ProvidersManager$Mode:
+    fr.prados.contacts.ui.ProvidersManager$Mode CONTACT -> a
+    fr.prados.contacts.ui.ProvidersManager$Mode CONTACT_JOIN_PHONE -> b
+    fr.prados.contacts.ui.ProvidersManager$Mode CONTACT_JOIN_POSTAL -> c
+    fr.prados.contacts.ui.ProvidersManager$Mode RAWCONTACT -> d
+    fr.prados.contacts.ui.ProvidersManager$Mode RAWCONTACT_ID -> e
+    fr.prados.contacts.ui.ProvidersManager$Mode RAWCONTACT_ID_DATA -> f
+    fr.prados.contacts.ui.ProvidersManager$Mode[] ENUM$VALUES -> g
+    fr.prados.contacts.ui.ProvidersManager$Mode[] values() -> values
+    fr.prados.contacts.ui.ProvidersManager$Mode valueOf(java.lang.String) -> valueOf
+fr.prados.contacts.ui.VolatileContactsListActivity -> fr.prados.contacts.ui.VolatileContactsListActivity:
+    boolean HONEYCOMB -> b
+    boolean withFlurry -> a
+    android.os.Handler _handler -> c
+    boolean _isExtension -> d
+    boolean _asynImport -> e
+    boolean _isDone -> f
+    int _show -> g
+    int _mode -> h
+    int _scrollState -> i
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter _adapter -> j
+    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler _queryHandler -> k
+    fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler _importAllHandler -> l
+    java.lang.String _queryMode -> m
+    android.provider.SearchRecentSuggestions _suggestions -> n
+    java.lang.String _lastQuery -> o
+    android.widget.TextView _errorsText -> p
+    android.widget.TextView _emptyText -> q
+    android.widget.TextView _totalContacts -> r
+    android.view.MenuItem _searchMenu -> s
+    android.widget.SearchView _searchView -> t
+    java.lang.String[] colDataId -> u
+    java.lang.String[] colsNormal -> v
+    java.lang.String[] colsPickContact -> w
+    java.lang.String[] colsPickPhone -> x
+    java.lang.String[] colsPickPostal -> y
+    java.lang.String[] colAuthority -> z
+    java.lang.String[] colForCallOrSms -> A
+    int _cntProgress -> B
+    android.os.Parcelable _restoreListState -> C
+    boolean _restoreListHasFocus -> D
+    java.util.concurrent.ExecutorService _imageFetchThreadPool -> E
+    void incProgressBar() -> a
+    void decProgressBar() -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    void onAccountsUpdated(android.accounts.Account[]) -> onAccountsUpdated
+    void findProviders(boolean) -> a
+    void handleIntent(android.content.Intent) -> a
+    boolean restoreRetainNonConfigurationInstance() -> j
+    void onRestart() -> onRestart
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+    void onResume() -> onResume
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStop() -> onStop
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void hideKeyboard() -> k
+    void hideSearchbar() -> c
+    void onDestroy() -> onDestroy
+    void onBackPressed() -> onBackPressed
+    void onLowMemory() -> onLowMemory
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onPrepareOptionsMenu(android.view.Menu) -> onPrepareOptionsMenu
+    boolean onSearchRequested() -> onSearchRequested
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> onContextItemSelected
+    boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void startQuery() -> l
+    boolean checkContact() -> m
+    void showVolatileContact(long) -> a
+    void starMemoryContact(long) -> b
+    android.net.Uri importMemoryContact(long,boolean) -> a
+    void callOrSmsContact(android.net.Uri,boolean) -> a
+    boolean access$0(fr.prados.contacts.ui.VolatileContactsListActivity) -> a
+    void access$1(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> a
+    android.net.Uri access$2(fr.prados.contacts.ui.VolatileContactsListActivity,long,boolean) -> a
+    void access$3(fr.prados.contacts.ui.VolatileContactsListActivity,fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler) -> a
+    int access$4(fr.prados.contacts.ui.VolatileContactsListActivity) -> b
+    java.lang.String[] access$5() -> d
+    java.lang.String[] access$6() -> e
+    java.lang.String[] access$7() -> f
+    java.lang.String[] access$8() -> g
+    android.widget.TextView access$9(fr.prados.contacts.ui.VolatileContactsListActivity) -> c
+    android.widget.TextView access$10(fr.prados.contacts.ui.VolatileContactsListActivity) -> d
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter access$11(fr.prados.contacts.ui.VolatileContactsListActivity) -> e
+    android.os.Parcelable access$12(fr.prados.contacts.ui.VolatileContactsListActivity) -> f
+    boolean access$13(fr.prados.contacts.ui.VolatileContactsListActivity) -> g
+    void access$14(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> b
+    void access$15(fr.prados.contacts.ui.VolatileContactsListActivity,android.os.Parcelable) -> a
+    java.lang.String access$16(fr.prados.contacts.ui.VolatileContactsListActivity) -> h
+    int access$17(fr.prados.contacts.ui.VolatileContactsListActivity) -> i
+    android.widget.TextView access$18(fr.prados.contacts.ui.VolatileContactsListActivity) -> j
+    java.lang.String[] access$19() -> h
+    void access$20(fr.prados.contacts.ui.VolatileContactsListActivity,long) -> a
+    void access$21(fr.prados.contacts.ui.VolatileContactsListActivity,android.net.Uri,boolean) -> a
+    int access$22(fr.prados.contacts.ui.VolatileContactsListActivity) -> k
+    java.util.concurrent.ExecutorService access$24() -> i
+    void access$25(java.util.concurrent.ExecutorService) -> a
+    void access$26(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> c
+    boolean access$27(fr.prados.contacts.ui.VolatileContactsListActivity) -> l
+    android.view.MenuItem access$28(fr.prados.contacts.ui.VolatileContactsListActivity) -> m
+    void access$29(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> d
+    boolean access$30(fr.prados.contacts.ui.VolatileContactsListActivity) -> n
+    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler access$31(fr.prados.contacts.ui.VolatileContactsListActivity) -> o
+    void access$32(fr.prados.contacts.ui.VolatileContactsListActivity) -> p
+    java.lang.String access$33(fr.prados.contacts.ui.VolatileContactsListActivity) -> q
+fr.prados.contacts.ui.VolatileContactsListActivity$1 -> fr.prados.contacts.ui.VolatileContactsListActivity$1:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    boolean val$newProvider -> b
+    void onPreExecute() -> onPreExecute
+    java.lang.Void doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Void) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.VolatileContactsListActivity$10 -> fr.prados.contacts.ui.VolatileContactsListActivity$10:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$11 -> fr.prados.contacts.ui.VolatileContactsListActivity$11:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$2 -> fr.prados.contacts.ui.VolatileContactsListActivity$2:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    java.lang.Void doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Void) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.VolatileContactsListActivity$3 -> fr.prados.contacts.ui.VolatileContactsListActivity$3:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+fr.prados.contacts.ui.VolatileContactsListActivity$4 -> fr.prados.contacts.ui.VolatileContactsListActivity$4:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$5 -> fr.prados.contacts.ui.VolatileContactsListActivity$5:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$6 -> fr.prados.contacts.ui.VolatileContactsListActivity$6:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    long val$id -> c
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$7 -> fr.prados.contacts.ui.VolatileContactsListActivity$7:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$8 -> fr.prados.contacts.ui.VolatileContactsListActivity$8:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void run() -> run
+fr.prados.contacts.ui.VolatileContactsListActivity$9 -> fr.prados.contacts.ui.VolatileContactsListActivity$9:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.ui.VolatileContactsListActivity$AsyncImport -> fr.prados.contacts.ui.VolatileContactsListActivity$AsyncImport:
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> b
+    void onPreExecute() -> onPreExecute
+    android.net.Uri doInBackground(java.lang.Object[]) -> a
+    void onPostExecute(android.net.Uri) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.ui.VolatileContactsListActivity$Cache -> fr.prados.contacts.ui.VolatileContactsListActivity$Cache:
+    android.view.View _header -> a
+    android.widget.TextView _headerText -> b
+    android.view.View _rightSide -> c
+    android.widget.ImageView _callbutton -> d
+    fr.prados.contacts.ui.ExQuickContactBadge _photoView -> e
+    android.widget.QuickContactBadge _nonQuickContactPhotoView -> f
+    android.widget.TextView _label -> g
+    android.widget.TextView _data -> h
+    android.widget.TextView _name -> i
+    android.widget.TextView access$0(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> a
+    android.widget.TextView access$1(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> b
+    android.widget.TextView access$2(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> c
+    fr.prados.contacts.ui.ExQuickContactBadge access$3(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> d
+    android.widget.ImageView access$4(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> e
+    android.view.View access$5(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> f
+    void access$7(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.view.View) -> a
+    void access$8(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> a
+    void access$9(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.ImageView) -> a
+    void access$10(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,fr.prados.contacts.ui.ExQuickContactBadge) -> a
+    void access$11(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.QuickContactBadge) -> a
+    void access$12(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> b
+    void access$13(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> c
+    void access$14(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> d
+    void access$15(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.view.View) -> b
+    android.view.View access$16(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> g
+    android.widget.TextView access$17(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> h
+    android.widget.QuickContactBadge access$18(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> i
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
+    android.widget.SectionIndexer _indexer -> c
+    int[] _sectionPositions -> d
+    java.lang.String _alphabet -> e
+    boolean _loading -> f
+    android.database.Cursor _cursor -> g
+    java.util.HashMap _bitmapCache -> h
+    java.util.HashSet _itemsMissingImages -> i
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher _imageFetcher -> j
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler _handler -> k
+    fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
+    boolean $assertionsDisabled -> b
+    void setLoading(boolean) -> a
+    boolean isEmpty() -> isEmpty
+    void changeCursor(android.database.Cursor) -> changeCursor
+    void bindView(android.view.View,android.content.Context,android.database.Cursor) -> bindView
+    void bindData(android.database.Cursor,fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> a
+    void bindVisibility(android.database.Cursor,fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> b
+    android.view.View newView(android.content.Context,android.database.Cursor,android.view.ViewGroup) -> newView
+    void bindSectionHeader(android.view.View,int) -> a
+    void updateIndexer(android.database.Cursor) -> a
+    java.lang.Object[] getSections() -> getSections
+    int getPositionForSection(int) -> getPositionForSection
+    int getSectionForPosition(int) -> getSectionForPosition
+    android.widget.SectionIndexer getNewIndexer(android.database.Cursor) -> b
+    void setTotalContactCountView() -> b
+    java.lang.String getQuantityText(int,int,int) -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    void onClick(android.view.View) -> onClick
+    void bindPhoto(android.database.Cursor,fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> c
+    void sendFetchImageMessage(android.widget.ImageView) -> a
+    void clearImageFetching() -> a
+    void access$0(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> a
+    java.util.HashMap access$1(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> b
+    java.util.HashSet access$2(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> c
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler access$3(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> d
+    android.database.Cursor access$4(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> e
+    fr.prados.contacts.ui.VolatileContactsListActivity access$5(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> f
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$1 -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$1:
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
+    android.content.Intent val$intent -> c
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$2 -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$2:
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
+    android.database.Cursor val$cursor -> c
+    android.view.View val$view -> d
+    android.content.Intent val$intent -> e
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$3 -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$3:
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
+    void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher:
+    fr.prados.contacts.ContactId _photoId -> b
+    android.widget.ImageView _imageView -> c
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
+    void run() -> run
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler:
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+    void clearImageFecthing() -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler -> fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler:
+    fr.prados.contacts.ui.VolatileContactsListActivity _activity -> a
+    java.lang.Void doInBackground(android.database.Cursor[]) -> a
+    void onPostExecute(java.lang.Void) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void access$2(fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler,fr.prados.contacts.ui.VolatileContactsListActivity) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$PhotoCache -> fr.prados.contacts.ui.VolatileContactsListActivity$PhotoCache:
+    int _position -> a
+    fr.prados.contacts.ContactId _photoId -> b
+fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler -> fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler:
+    android.app.ProgressDialog _progressDialog -> a
+    java.lang.ref.WeakReference _activity -> b
+    boolean _pending -> c
+    java.lang.StringBuilder _error -> d
+    boolean _warning -> e
+    void startQuery(java.lang.String,java.lang.String[],boolean) -> a
+    void cancel() -> a
+    void stop() -> b
+    void showError(fr.prados.contacts.ui.VolatileContactsListActivity) -> a
+    void showWarning(fr.prados.contacts.ui.VolatileContactsListActivity,java.lang.CharSequence) -> a
+    void clearError(fr.prados.contacts.ui.VolatileContactsListActivity) -> b
+    void onQueryComplete(fr.prados.contacts.providers.ResultsAndExceptions,boolean) -> a
+    android.app.ProgressDialog access$0(fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler) -> a
+    boolean access$2(fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler) -> b
+    void access$3(fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler,java.lang.ref.WeakReference) -> a
+    void access$4(fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler,fr.prados.contacts.ui.VolatileContactsListActivity) -> a
+    void access$5(fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler,android.app.ProgressDialog) -> a
+    void access$6(fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler,boolean) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$Retain -> fr.prados.contacts.ui.VolatileContactsListActivity$Retain:
+    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler _queryhandler -> a
+    android.database.Cursor _cursor -> b
+    fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler _importAllHandler -> c
+fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider -> fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider:
+org.acra.ACRA -> org.acra.ACRA:
+    java.lang.String LOG_TAG -> a
+    android.app.Application mApplication -> d
+    org.acra.annotation.ReportsCrashes mReportsCrashes -> e
+    android.content.SharedPreferences$OnSharedPreferenceChangeListener mPrefListener -> f
+    android.text.format.Time mAppStartDate -> g
+    org.acra.ReportField[] DEFAULT_MAIL_REPORT_FIELDS -> b
+    org.acra.ReportField[] DEFAULT_REPORT_FIELDS -> c
+    void init(android.app.Application) -> a
+    void initAcra() -> e
+    void checkCrashResources() -> a
+    android.content.SharedPreferences getACRASharedPreferences() -> b
+    org.acra.annotation.ReportsCrashes getConfig() -> c
+    void access$000() -> d
+org.acra.ACRA$1 -> org.acra.ACRA$1:
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+org.acra.ACRA$2 -> org.acra.ACRA$2:
+    int[] $SwitchMap$org$acra$ReportingInteractionMode -> a
+org.acra.ACRAConfigurationException -> org.acra.ACRAConfigurationException:
+org.acra.Compatibility -> org.acra.Compatibility:
+    int getAPILevel() -> a
+    java.lang.String getDropBoxServiceName() -> b
+org.acra.ConfigurationInspector -> org.acra.ConfigurationInspector:
+    android.util.SparseArray mHardKeyboardHiddenValues -> a
+    android.util.SparseArray mKeyboardValues -> b
+    android.util.SparseArray mKeyboardHiddenValues -> c
+    android.util.SparseArray mNavigationValues -> d
+    android.util.SparseArray mNavigationHiddenValues -> e
+    android.util.SparseArray mOrientationValues -> f
+    android.util.SparseArray mScreenLayoutValues -> g
+    android.util.SparseArray mTouchScreenValues -> h
+    android.util.SparseArray mUiModeValues -> i
+    java.util.HashMap mValueArrays -> j
+    java.lang.String toString(android.content.res.Configuration) -> a
+    java.lang.String getFieldValueName(android.content.res.Configuration,java.lang.reflect.Field) -> a
+    java.lang.String activeFlags(android.util.SparseArray,int) -> a
+org.acra.CrashReportData -> org.acra.CrashReportData:
+    org.acra.CrashReportData defaults -> a
+    java.lang.String lineSeparator -> b
+    void dumpString(java.lang.StringBuilder,java.lang.String,boolean) -> a
+    java.lang.String getProperty(org.acra.ReportField) -> a
+    void load(java.io.InputStream) -> a
+    boolean isEbcdic(java.io.BufferedInputStream) -> a
+    void load(java.io.Reader) -> a
+    void store(java.io.OutputStream,java.lang.String) -> a
+org.acra.CrashReportDialog -> org.acra.CrashReportDialog:
+    android.content.SharedPreferences prefs -> b
+    android.widget.EditText userComment -> c
+    android.widget.EditText userEmail -> d
+    java.lang.String mReportFileName -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void cancelNotification() -> a
+    android.widget.EditText access$000(org.acra.CrashReportDialog) -> a
+    android.content.SharedPreferences access$100(org.acra.CrashReportDialog) -> b
+    android.widget.EditText access$200(org.acra.CrashReportDialog) -> c
+org.acra.CrashReportDialog$1 -> org.acra.CrashReportDialog$1:
+    org.acra.CrashReportDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.acra.CrashReportDialog$2 -> org.acra.CrashReportDialog$2:
+    org.acra.CrashReportDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.acra.DeviceFeaturesCollector -> org.acra.DeviceFeaturesCollector:
+    java.lang.String getFeatures(android.content.Context) -> a
+org.acra.DropBoxCollector -> org.acra.DropBoxCollector:
+    java.lang.String[] SYSTEM_TAGS -> a
+    java.lang.String read(android.content.Context,java.lang.String[]) -> a
+org.acra.DumpSysCollector -> org.acra.DumpSysCollector:
+    java.lang.String collectMemInfo() -> a
+org.acra.ErrorReporter -> org.acra.ErrorReporter:
+    boolean enabled -> c
+    java.util.ArrayList mReportSenders -> d
+    org.acra.CrashReportData mCrashProperties -> e
+    java.util.Map mCustomParameters -> a
+    java.lang.String SILENT_SUFFIX -> b
+    java.lang.Thread$UncaughtExceptionHandler mDfltExceptionHandler -> f
+    org.acra.ErrorReporter mInstanceSingleton -> g
+    android.content.Context mContext -> h
+    java.lang.String mInitialConfiguration -> i
+    org.acra.ReportingInteractionMode mReportingInteractionMode -> j
+    void approvePendingReports() -> a
+    java.lang.String createCustomInfoString() -> i
+    org.acra.ErrorReporter getInstance() -> b
+    void init(android.content.Context) -> a
+    long getAvailableInternalMemorySize() -> j
+    long getTotalInternalMemorySize() -> k
+    void retrieveCrashData(android.content.Context) -> b
+    java.lang.String toString(android.view.Display) -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    org.acra.ErrorReporter$ReportsSenderWorker handleException(java.lang.Throwable,org.acra.ReportingInteractionMode) -> a
+    org.acra.ErrorReporter$ReportsSenderWorker handleException(java.lang.Throwable) -> a
+    void notifySendReport(java.lang.String) -> a
+    void sendCrashReport(android.content.Context,org.acra.CrashReportData) -> a
+    java.lang.String saveCrashReportFile(java.lang.String,org.acra.CrashReportData) -> a
+    java.lang.String[] getCrashReportFilesList() -> c
+    void checkAndSendReports(android.content.Context,boolean) -> a
+    org.acra.CrashReportData loadCrashReport(android.content.Context,java.lang.String) -> a
+    void deleteFile(android.content.Context,java.lang.String) -> b
+    void setReportingInteractionMode(org.acra.ReportingInteractionMode) -> a
+    void checkReportsOnApplicationStart() -> d
+    java.lang.String getLatestNonSilentReport(java.lang.String[]) -> a
+    void deletePendingReports() -> e
+    void deletePendingNonApprovedReports() -> f
+    void deletePendingReports(boolean,boolean,int) -> a
+    void disable() -> g
+    boolean containsOnlySilentOrApprovedReports(java.lang.String[]) -> b
+    boolean isSilent(java.lang.String) -> b
+    boolean isApproved(java.lang.String) -> c
+    void addUserDataToReport(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> b
+    void addReportSender(org.acra.sender.ReportSender) -> a
+    void setAppStartDate(android.text.format.Time) -> a
+    android.content.Context access$000() -> h
+    void access$100(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+org.acra.ErrorReporter$1 -> org.acra.ErrorReporter$1:
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+org.acra.ErrorReporter$2 -> org.acra.ErrorReporter$2:
+    org.acra.ErrorReporter this$0 -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+org.acra.ErrorReporter$ReportsSenderWorker -> org.acra.ErrorReporter$ReportsSenderWorker:
+    java.lang.String mCommentedReportFileName -> b
+    java.lang.String mUserComment -> c
+    java.lang.String mUserEmail -> d
+    boolean mSendOnlySilentReports -> e
+    boolean mApprovePendingReports -> f
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+    android.os.PowerManager$WakeLock acquireWakeLock() -> b
+    void setUserComment(java.lang.String,java.lang.String) -> a
+    void setUserEmail(java.lang.String,java.lang.String) -> b
+    void setApprovePendingReports() -> a
+org.acra.LogCatCollector -> org.acra.LogCatCollector:
+    java.lang.String collectLogCat(java.lang.String) -> a
+org.acra.ReflectionCollector -> org.acra.ReflectionCollector:
+    java.lang.String collectConstants(java.lang.Class) -> a
+    java.lang.String collectStaticGettersResults(java.lang.Class) -> b
+org.acra.ReportField -> org.acra.ReportField:
+    org.acra.ReportField REPORT_ID -> a
+    org.acra.ReportField APP_VERSION_CODE -> b
+    org.acra.ReportField APP_VERSION_NAME -> c
+    org.acra.ReportField PACKAGE_NAME -> d
+    org.acra.ReportField FILE_PATH -> e
+    org.acra.ReportField PHONE_MODEL -> f
+    org.acra.ReportField ANDROID_VERSION -> g
+    org.acra.ReportField BUILD -> h
+    org.acra.ReportField BRAND -> i
+    org.acra.ReportField PRODUCT -> j
+    org.acra.ReportField TOTAL_MEM_SIZE -> k
+    org.acra.ReportField AVAILABLE_MEM_SIZE -> l
+    org.acra.ReportField CUSTOM_DATA -> m
+    org.acra.ReportField STACK_TRACE -> n
+    org.acra.ReportField INITIAL_CONFIGURATION -> o
+    org.acra.ReportField CRASH_CONFIGURATION -> p
+    org.acra.ReportField DISPLAY -> q
+    org.acra.ReportField USER_COMMENT -> r
+    org.acra.ReportField USER_APP_START_DATE -> s
+    org.acra.ReportField USER_CRASH_DATE -> t
+    org.acra.ReportField DUMPSYS_MEMINFO -> u
+    org.acra.ReportField DROPBOX -> v
+    org.acra.ReportField LOGCAT -> w
+    org.acra.ReportField EVENTSLOG -> x
+    org.acra.ReportField RADIOLOG -> y
+    org.acra.ReportField IS_SILENT -> z
+    org.acra.ReportField DEVICE_ID -> A
+    org.acra.ReportField INSTALLATION_ID -> B
+    org.acra.ReportField USER_EMAIL -> C
+    org.acra.ReportField DEVICE_FEATURES -> D
+    org.acra.ReportField ENVIRONMENT -> E
+    org.acra.ReportField SETTINGS_SYSTEM -> F
+    org.acra.ReportField SETTINGS_SECURE -> G
+    org.acra.ReportField SHARED_PREFERENCES -> H
+    org.acra.ReportField[] $VALUES -> I
+    org.acra.ReportField[] values() -> values
+    org.acra.ReportField valueOf(java.lang.String) -> valueOf
+org.acra.ReportingInteractionMode -> org.acra.ReportingInteractionMode:
+    org.acra.ReportingInteractionMode SILENT -> a
+    org.acra.ReportingInteractionMode NOTIFICATION -> b
+    org.acra.ReportingInteractionMode TOAST -> c
+    org.acra.ReportingInteractionMode[] $VALUES -> d
+    org.acra.ReportingInteractionMode[] values() -> values
+    org.acra.ReportingInteractionMode valueOf(java.lang.String) -> valueOf
+org.acra.SettingsCollector -> org.acra.SettingsCollector:
+    java.lang.String collectSystemSettings(android.content.Context) -> a
+    java.lang.String collectSecureSettings(android.content.Context) -> b
+    boolean isAuthorized(java.lang.reflect.Field) -> a
+org.acra.SharedPreferencesCollector -> org.acra.SharedPreferencesCollector:
+    java.lang.String collect(android.content.Context) -> a
+org.acra.annotation.ReportsCrashes -> org.acra.annotation.ReportsCrashes:
+    java.lang.String formKey() -> a
+    java.lang.String formUri() -> b
+    org.acra.ReportingInteractionMode mode() -> c
+    int resDialogCommentPrompt() -> d
+    int resDialogEmailPrompt() -> e
+    int resDialogIcon() -> f
+    int resDialogOkToast() -> g
+    int resDialogText() -> h
+    int resDialogTitle() -> i
+    int resNotifIcon() -> j
+    int resNotifText() -> k
+    int resNotifTickerText() -> l
+    int resNotifTitle() -> m
+    int resToastText() -> n
+    java.lang.String sharedPreferencesName() -> o
+    int sharedPreferencesMode() -> p
+    boolean includeDropBoxSystemTags() -> q
+    java.lang.String[] additionalDropBoxTags() -> r
+    int dropboxCollectionMinutes() -> s
+    java.lang.String[] logcatArguments() -> t
+    java.lang.String formUriBasicAuthLogin() -> u
+    java.lang.String formUriBasicAuthPassword() -> v
+    org.acra.ReportField[] customReportContent() -> w
+    java.lang.String mailTo() -> x
+    boolean deleteUnapprovedReportsOnApplicationStart() -> y
+    int socketTimeout() -> z
+    boolean forceCloseDialogAfterToast() -> A
+    java.lang.String[] additionalSharedPreferences() -> B
+org.acra.sender.EmailIntentSender -> org.acra.sender.EmailIntentSender:
+    android.content.Context mContext -> a
+    void send(org.acra.CrashReportData) -> a
+    java.lang.String buildBody(org.acra.CrashReportData) -> b
+org.acra.sender.GoogleFormSender -> org.acra.sender.GoogleFormSender:
+    android.net.Uri mFormUri -> a
+    void send(org.acra.CrashReportData) -> a
+    java.util.Map remap(java.util.Map) -> a
+org.acra.sender.GoogleFormSender$1 -> org.acra.sender.GoogleFormSender$1:
+    int[] $SwitchMap$org$acra$ReportField -> a
+org.acra.sender.HttpPostSender -> org.acra.sender.HttpPostSender:
+    android.net.Uri mFormUri -> a
+    java.util.Map mMapping -> b
+    void send(org.acra.CrashReportData) -> a
+    java.util.Map remap(java.util.Map) -> a
+org.acra.sender.ReportSender -> org.acra.sender.ReportSender:
+    void send(org.acra.CrashReportData) -> a
+org.acra.sender.ReportSenderException -> org.acra.sender.ReportSenderException:
+org.acra.util.Base64 -> org.acra.util.Base64:
+    boolean $assertionsDisabled -> a
+org.acra.util.Base64$Coder -> org.acra.util.Base64$Coder:
+org.acra.util.Base64$Decoder -> org.acra.util.Base64$Decoder:
+    int[] DECODE -> a
+    int[] DECODE_WEBSAFE -> b
+org.acra.util.Base64$Encoder -> org.acra.util.Base64$Encoder:
+    byte[] ENCODE -> b
+    byte[] ENCODE_WEBSAFE -> c
+    boolean $assertionsDisabled -> a
+org.acra.util.BoundedLinkedList -> org.acra.util.BoundedLinkedList:
+    int maxSize -> a
+    boolean add(java.lang.Object) -> add
+    void add(int,java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    boolean addAll(int,java.util.Collection) -> addAll
+    void addFirst(java.lang.Object) -> addFirst
+    void addLast(java.lang.Object) -> addLast
+    java.lang.String toString() -> toString
+org.acra.util.FakeSocketFactory -> org.acra.util.FakeSocketFactory:
+    javax.net.ssl.SSLContext sslcontext -> a
+    javax.net.ssl.SSLContext createEasySSLContext() -> a
+    javax.net.ssl.SSLContext getSSLContext() -> b
+    java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams) -> connectSocket
+    java.net.Socket createSocket() -> createSocket
+    boolean isSecure(java.net.Socket) -> isSecure
+    java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean) -> createSocket
+org.acra.util.HttpRequest -> org.acra.util.HttpRequest:
+    org.apache.http.impl.client.DefaultHttpClient httpClient -> a
+    org.apache.http.protocol.HttpContext localContext -> b
+    org.apache.http.client.methods.HttpPost httpPost -> c
+    org.apache.http.client.methods.HttpGet httpGet -> d
+    org.apache.http.auth.UsernamePasswordCredentials creds -> e
+    java.lang.String sendPost(java.lang.String,java.lang.String) -> a
+    java.lang.String sendPost(java.lang.String,java.lang.String,java.lang.String) -> a
+org.acra.util.HttpUtils -> org.acra.util.HttpUtils:
+    void doPost(java.util.Map,java.net.URL,java.lang.String,java.lang.String) -> a
+    boolean isNull(java.lang.String) -> a
+org.acra.util.Installation -> org.acra.util.Installation:
+    java.lang.String sID -> a
+    java.lang.String id(android.content.Context) -> a
+    java.lang.String readInstallationFile(java.io.File) -> a
+    void writeInstallationFile(java.io.File) -> b
+org.acra.util.NaiveTrustManager -> org.acra.util.NaiveTrustManager:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted

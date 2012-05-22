@@ -1,0 +1,51 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- No error -->
+	<string name="noException"/>
+
+	<!-- Truncate the response to limit the memory usage or it's a limitation of the remote serveur-->
+	<string name="err_truncated">Resposta truncada. Erro de transmissão ou limitação do servidor.</string>
+
+	<!-- The network is done. It's not necessary to try a request. -->
+	<string name="err_network_done">Rede ausente. Tente mais tarde</string>
+	
+	<!-- The version of the extension is incompatible with the version of "contact inline" -->
+	<string name="err_invalide_version">Versão incorreta. Atualização da aplicação et dos add-ons.</string>
+
+	<!-- The toke type for authentification is invalid -->
+	<string name="err_invalide_token_type">Tipo de identificação inválido.</string>
+
+	<!-- Connexion error. -->
+	<string name="err_unknown">Erro de contacto de rede.</string>
+
+	<!-- Authentification is rejected. -->
+	<string name="err_authent">Identificação inválida.</string>
+
+	<!-- Error when administrator in LDAP server put a privileges -->
+	<string name="err_access_right">Erro de login devido a um problema de privilégios.</string>
+
+	<!-- Error when administrator in LDAP server put a limit -->
+	<string name="err_admin_limit_exceeded">Limite do administrador atingida.</string>
+
+	<!-- Response size is to big. -->
+	<string name="err_size_exceeded">Resposta truncada. O tamanho é excessivo.</string>
+
+	<!-- The remote server is down. -->
+	<string name="err_server_down">O servidor não responde</string>
+
+	<!-- The time limit to receive a response is exceeded. -->
+	<string name="err_time_limit_exceeded">Tempo limite ultrapassado.</string>
+
+	<!-- The number of record in the response is exceeded. -->
+	<string name="err_maxitem_exceeded">Resposta truncada. Número de registos a mais.</string>
+
+	<!-- Impossible to establish connection. -->
+	<string name="err_connection_exception">Impossível de estabelecer o contacto.</string>
+
+	<!-- Error with the network -->
+	<string name="err_io_exception">Erro de rede.</string>
+
+	<!-- Beta version is expired. -->
+	<string name="err_beta_expired">Expirou a versão Beta.</string>
+
+</resources>

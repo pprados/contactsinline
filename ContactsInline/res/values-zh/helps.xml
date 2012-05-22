@@ -1,0 +1,36 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!--     <string name="help_title">Help</string> -->
+<!--     <string name="help_part1">HELP TODO</string> -->
+<!--     <string name="help_sample_name">John FOBAR</string> -->
+<!--     <string name="help_part2">HELP TODO</string> -->
+    
+    <!-- The text displayed at startup page, before the connection to provider are finished -->
+    <string name="noContactsHelpText"/>
+
+    <!-- The text displayed when the contacts list is empty and no provider is detected -->
+    <string name="help_need_provider">没有找到添加账户的插件.\n如想从软件市场添加, 请点击 <a href="market://search?q=fr.prados.contacts.providers">这里</a>.
+    </string>
+
+    <!-- The text displayed when the contacts list is empty and no account is detected -->
+    <string name="help_need_account">没有找到任何账户.\n\n如想添加账户, 请按 <b>Menu</b> 和请按 :\n\n
+        <li>&#160;<b>账户</b> 添加或配置一个可以与手机同步的通讯录账户.\n\n</li>
+        <li>&#160;<b>插件</b> 添加新的通讯目录类型部件.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty while displaying results after searching contacts -->
+    <string name="help_first_time">寻找联系人, 请点击 <b>Menu</b> 和请按 :\n\n
+        <li>&#160;<b>搜索</b> 输入名字,电话号码或者email.\n\n</li>
+        <li>&#160;<b>导入</b> 连接本地通讯录和远程通讯录.\n\n</li>
+        <li>&#160;<b>账户</b> 添加或修改一个可以与手机同步的通讯录账户.\n\n</li>
+        <li>&#160;<b>插件</b> 添加新的通讯目录类型部件.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty for an intent to select contact -->
+    <string name="help_with_search">请输入名字 email, 电话号码, 其他信息请用逗号分隔开 (城市, 国家, 等等&#8230;)</string>
+
+    <!-- The dialog box title displayed when the standard contact application is not found -->
+    <string name="help_need_account_app_title">对不起</string>
+    <!-- The text displayed when the standard contact application is not found -->
+    <string name="help_need_account_app">"没有找到任何通讯录管理程序."</string>
+
+</resources>

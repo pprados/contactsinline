@@ -1,0 +1,646 @@
+fr.prados.contacts.Application -> fr.prados.contacts.Application:
+    android.content.Context context -> a
+    java.util.concurrent.ExecutorService _executor -> b
+    java.lang.String sPackageName -> c
+    int VERSION -> d
+    void onCreate() -> onCreate
+    void onTerminate() -> onTerminate
+fr.prados.contacts.Constants -> fr.prados.contacts.a:
+    boolean DEBUG -> a
+    boolean EMULATOR -> b
+    java.util.Date EXPIRED_BETA -> c
+fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
+    java.lang.CharSequence accountType -> a
+    java.lang.CharSequence accountName -> b
+    java.lang.CharSequence lookupKey -> c
+    java.lang.CharSequence _hashKey -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+    java.lang.String toString() -> toString
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+fr.prados.contacts.ContactId$1 -> fr.prados.contacts.b:
+    fr.prados.contacts.ContactId createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.ContactId[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.VolatileContact -> fr.prados.contacts.VolatileContact:
+    long _id -> e
+    java.util.ArrayList _rawContacts -> f
+    java.lang.String _cachedDisplayName -> a
+    long _idgenerator -> b
+    long _dataidgenerator -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String[] _col_id -> g
+    boolean $assertionsDisabled -> d
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+    int describeContents() -> describeContents
+    fr.prados.contacts.VolatileRawContact addNewRawContact() -> a
+    java.lang.String getDisplayName() -> b
+    int compareTo(fr.prados.contacts.VolatileContact) -> a
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+    void access$1(fr.prados.contacts.VolatileContact,android.os.Parcel) -> a
+fr.prados.contacts.VolatileContact$1 -> fr.prados.contacts.c:
+    fr.prados.contacts.VolatileContact createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.VolatileContact[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.VolatileData -> fr.prados.contacts.VolatileData:
+    android.content.ContentValues _attrs -> a
+    long _id -> b
+    long _rawid -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+    int describeContents() -> describeContents
+    java.lang.Object getAttr(java.lang.String) -> a
+    void put(java.lang.String,java.lang.String) -> a
+    void put(java.lang.String,int) -> a
+    void put(java.lang.String,long) -> a
+    java.lang.String toString() -> toString
+    void access$0(fr.prados.contacts.VolatileData,android.os.Parcel) -> a
+fr.prados.contacts.VolatileData$1 -> fr.prados.contacts.d:
+    fr.prados.contacts.VolatileData createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.VolatileData[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.VolatileRawContact -> fr.prados.contacts.VolatileRawContact:
+    fr.prados.contacts.VolatileContact _parent -> a
+    long _id -> d
+    int _cachedPhoneType -> e
+    int _cachedPostalType -> f
+    android.content.ContentValues _attrs -> b
+    java.util.HashMap _datas -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    java.lang.String[] _col_id -> g
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+    int describeContents() -> describeContents
+    void put(java.lang.String,fr.prados.contacts.VolatileData) -> a
+    fr.prados.contacts.VolatileData get(java.lang.String) -> a
+    java.lang.Object getAttr(java.lang.String) -> b
+    void setAttr(java.lang.String,java.lang.String) -> a
+    void setAttr(java.lang.String,int) -> a
+    java.lang.String getLookupKey() -> a
+    void setLookupKey(java.lang.String) -> c
+    void resetCachedValues() -> b
+    java.lang.String toString() -> toString
+    void access$1(fr.prados.contacts.VolatileRawContact,android.os.Parcel) -> a
+fr.prados.contacts.VolatileRawContact$1 -> fr.prados.contacts.e:
+    fr.prados.contacts.VolatileRawContact createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.VolatileRawContact[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.lib.R -> fr.prados.contacts.a.a:
+fr.prados.contacts.lib.R$string -> fr.prados.contacts.a.b:
+    int app_name -> app_name
+    int authenticating -> authenticating
+    int chkcontact_accept -> chkcontact_accept
+    int chkcontact_msg -> chkcontact_msg
+    int chkcontact_title -> chkcontact_title
+    int copy_detail -> copy_detail
+    int copy_summary -> copy_summary
+    int err_access_right -> err_access_right
+    int err_admin_limit_exceeded -> err_admin_limit_exceeded
+    int err_authent -> err_authent
+    int err_beta_expired -> err_beta_expired
+    int err_connection_exception -> err_connection_exception
+    int err_invalide_token_type -> err_invalide_token_type
+    int err_invalide_version -> err_invalide_version
+    int err_io_exception -> err_io_exception
+    int err_maxitem_exceeded -> err_maxitem_exceeded
+    int err_network_done -> err_network_done
+    int err_server_down -> err_server_down
+    int err_size_exceeded -> err_size_exceeded
+    int err_time_limit_exceeded -> err_time_limit_exceeded
+    int err_truncated -> err_truncated
+    int err_unknown -> err_unknown
+    int eula_accept -> eula_accept
+    int eula_refuse -> eula_refuse
+    int eula_title -> eula_title
+    int help_need_android_version -> help_need_android_version
+    int help_need_android_version_title -> help_need_android_version_title
+    int hint_password -> hint_password
+    int hint_username -> hint_username
+    int import_detail -> import_detail
+    int import_summary -> import_summary
+    int importing_title -> importing_title
+    int importing_wait -> importing_wait
+    int invite -> invite
+    int label_password -> label_password
+    int label_username -> label_username
+    int market_body -> market_body
+    int market_ok -> market_ok
+    int market_rate -> market_rate
+    int market_rate_body -> market_rate_body
+    int market_rate_done -> market_rate_done
+    int market_rate_later -> market_rate_later
+    int market_rate_no -> market_rate_no
+    int market_rate_no_market -> market_rate_no_market
+    int market_title -> market_title
+    int mock_account_setting_category -> mock_account_setting_category
+    int mock_account_setting_summary -> mock_account_setting_summary
+    int mock_account_setting_title -> mock_account_setting_title
+    int mock_driver_name -> mock_driver_name
+    int mock_service_label -> mock_service_label
+    int mock_service_sync_label -> mock_service_sync_label
+    int noException -> noException
+    int update_title -> update_title
+    int validate -> validate
+fr.prados.contacts.providers.AbstractSimpleAuthenticator -> fr.prados.contacts.providers.a:
+    android.accounts.AccountManager _accountManager -> a
+    android.content.Context _context -> b
+    java.lang.Class _activityClass -> c
+    android.os.Bundle editProperties(android.accounts.AccountAuthenticatorResponse,java.lang.String) -> editProperties
+    android.os.Bundle editAccount(android.accounts.AccountAuthenticatorResponse,android.accounts.Account) -> a
+    android.os.Bundle addAccount(android.accounts.AccountAuthenticatorResponse,java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle) -> addAccount
+    android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle) -> confirmCredentials
+    android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle) -> getAuthToken
+    java.lang.String getAuthTokenLabel(java.lang.String) -> getAuthTokenLabel
+    android.os.Bundle hasFeatures(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String[]) -> hasFeatures
+    android.os.Bundle updateCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle) -> updateCredentials
+    void checkOnlineAccount(android.os.Bundle,android.accounts.Account,java.lang.String) -> a
+fr.prados.contacts.providers.AuthQueryException -> fr.prados.contacts.providers.AuthQueryException:
+fr.prados.contacts.providers.IProvider -> fr.prados.contacts.providers.IProvider:
+    void onCreate(int,long) -> a
+    void onStart() -> a
+    void onStop() -> b
+    fr.prados.contacts.providers.ResultsAndExceptions queryContact(java.lang.String,java.lang.String,java.lang.String) -> a
+    byte[] getAccountPhoto(fr.prados.contacts.ContactId) -> a
+    fr.prados.contacts.VolatileContact getVolatileContact(fr.prados.contacts.ContactId) -> b
+    void signalCanceled(java.lang.String) -> a
+    void resetCanceled() -> c
+    boolean isCanceled() -> d
+fr.prados.contacts.providers.IProvider$Stub -> fr.prados.contacts.providers.IProvider$Stub:
+    android.os.IBinder asBinder() -> asBinder
+    boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
+fr.prados.contacts.providers.IProvider$Stub$Proxy -> fr.prados.contacts.providers.IProvider$Stub$Proxy:
+    android.os.IBinder mRemote -> a
+    android.os.IBinder asBinder() -> asBinder
+    void onCreate(int,long) -> a
+    void onStart() -> a
+    void onStop() -> b
+    fr.prados.contacts.providers.ResultsAndExceptions queryContact(java.lang.String,java.lang.String,java.lang.String) -> a
+    byte[] getAccountPhoto(fr.prados.contacts.ContactId) -> a
+    fr.prados.contacts.VolatileContact getVolatileContact(fr.prados.contacts.ContactId) -> b
+    void signalCanceled(java.lang.String) -> a
+    void resetCanceled() -> c
+    boolean isCanceled() -> d
+fr.prados.contacts.providers.PackageRemovedReceiver -> fr.prados.contacts.providers.PackageRemovedReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+fr.prados.contacts.providers.Provider -> fr.prados.contacts.providers.Provider:
+    java.lang.String TAG -> a
+    boolean _isCanceled -> b
+    void signalCanceled(java.lang.String) -> a
+    void resetCanceled() -> c
+    boolean isCanceled() -> d
+    void checkPermission() -> e
+    void onCreate(int,long) -> a
+    void onStart() -> a
+    void onStop() -> b
+fr.prados.contacts.providers.QueryError -> fr.prados.contacts.providers.QueryError:
+fr.prados.contacts.providers.QueryException -> fr.prados.contacts.providers.QueryException:
+    java.lang.String _account -> a
+    java.lang.String _msg -> b
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+    java.lang.String getMessage() -> getMessage
+    java.lang.String toString() -> toString
+fr.prados.contacts.providers.QueryException$1 -> fr.prados.contacts.providers.b:
+    fr.prados.contacts.providers.QueryException createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.providers.QueryException[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.providers.QueryWarning -> fr.prados.contacts.providers.QueryWarning:
+fr.prados.contacts.providers.ResultsAndExceptions -> fr.prados.contacts.providers.ResultsAndExceptions:
+    java.util.ArrayList contacts -> a
+    java.util.List exceptions -> b
+    int pendingJob -> c
+    long timeout -> d
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    int describeContents() -> describeContents
+    java.lang.String toString() -> toString
+fr.prados.contacts.providers.ResultsAndExceptions$1 -> fr.prados.contacts.providers.c:
+    fr.prados.contacts.providers.ResultsAndExceptions createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.providers.ResultsAndExceptions[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.providers.TransportException -> fr.prados.contacts.providers.TransportException:
+    fr.prados.contacts.providers.QueryException _e -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void readFromParcel(android.os.Parcel) -> a
+fr.prados.contacts.providers.TransportException$1 -> fr.prados.contacts.providers.d:
+    fr.prados.contacts.providers.TransportException createFromParcel(android.os.Parcel) -> a
+    fr.prados.contacts.providers.TransportException[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+fr.prados.contacts.providers.mock.Application -> fr.prados.contacts.providers.mock.Application:
+fr.prados.contacts.providers.mock.MockAuthenticationService -> fr.prados.contacts.providers.mock.MockAuthenticationService:
+    android.accounts.AbstractAccountAuthenticator _authenticator -> a
+    void onCreate() -> onCreate
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onlineConfirmPassword(java.lang.String,java.lang.String) -> a
+fr.prados.contacts.providers.mock.MockAuthenticator -> fr.prados.contacts.providers.mock.MockAuthenticator:
+    void checkOnlineAccount(android.os.Bundle,android.accounts.Account,java.lang.String) -> a
+fr.prados.contacts.providers.mock.MockProvider -> fr.prados.contacts.providers.mock.MockProvider:
+    fr.prados.contacts.VolatileContact createVC(java.lang.String,java.lang.String) -> b
+    fr.prados.contacts.providers.ResultsAndExceptions queryContact(java.lang.String,java.lang.String,java.lang.String) -> a
+    byte[] getAccountPhoto(fr.prados.contacts.ContactId) -> a
+    fr.prados.contacts.VolatileContact getContact(java.lang.String,java.lang.String) -> a
+    fr.prados.contacts.VolatileContact getVolatileContact(fr.prados.contacts.ContactId) -> b
+fr.prados.contacts.providers.mock.MockProviderService -> fr.prados.contacts.providers.mock.MockProviderService:
+    fr.prados.contacts.providers.mock.MockProvider _binder -> a
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+fr.prados.contacts.providers.mock.MockSyncAdapterService -> fr.prados.contacts.providers.mock.MockSyncAdapterService:
+    fr.prados.contacts.providers.mock.MockSyncAdapterService$SyncAdapterImpl _syncAdapter -> a
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+fr.prados.contacts.providers.mock.MockSyncAdapterService$SyncAdapterImpl -> fr.prados.contacts.providers.mock.a:
+    android.content.ContentResolver _resolver -> a
+    java.lang.String[] COLS_RAW -> b
+    void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult) -> onPerformSync
+    void onSyncCanceled() -> onSyncCanceled
+fr.prados.contacts.providers.mock.MockVerySimpleAuthenticator -> fr.prados.contacts.providers.mock.b:
+    android.accounts.AccountManager _accountManager -> a
+    android.os.Bundle addAccount(android.accounts.AccountAuthenticatorResponse,java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle) -> addAccount
+    android.os.Bundle confirmCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,android.os.Bundle) -> confirmCredentials
+    android.os.Bundle editProperties(android.accounts.AccountAuthenticatorResponse,java.lang.String) -> editProperties
+    android.os.Bundle getAuthToken(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle) -> getAuthToken
+    java.lang.String getAuthTokenLabel(java.lang.String) -> getAuthTokenLabel
+    android.os.Bundle hasFeatures(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String[]) -> hasFeatures
+    android.os.Bundle updateCredentials(android.accounts.AccountAuthenticatorResponse,android.accounts.Account,java.lang.String,android.os.Bundle) -> updateCredentials
+fr.prados.contacts.providers.mock.MockWizardActivity -> fr.prados.contacts.providers.mock.MockWizardActivity:
+    boolean _confirmCredentials -> b
+    boolean _requestNewAccount -> a
+    android.accounts.AccountManager _accountManager -> c
+    android.widget.EditText _username -> d
+    android.widget.EditText _password -> e
+    android.widget.Button _done -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void onAuthenticationResult(java.lang.Exception,java.lang.String,java.lang.String,java.lang.String) -> a
+    android.widget.EditText access$0(fr.prados.contacts.providers.mock.MockWizardActivity) -> a
+    android.widget.EditText access$1(fr.prados.contacts.providers.mock.MockWizardActivity) -> b
+    boolean access$2(fr.prados.contacts.providers.mock.MockWizardActivity) -> c
+    android.widget.Button access$3(fr.prados.contacts.providers.mock.MockWizardActivity) -> d
+    void access$4(fr.prados.contacts.providers.mock.MockWizardActivity,java.lang.Exception,java.lang.String,java.lang.String,java.lang.String) -> a
+fr.prados.contacts.providers.mock.MockWizardActivity$1 -> fr.prados.contacts.providers.mock.c:
+    fr.prados.contacts.providers.mock.MockWizardActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+    fr.prados.contacts.providers.mock.MockWizardActivity access$0(fr.prados.contacts.providers.mock.MockWizardActivity$1) -> a
+fr.prados.contacts.providers.mock.MockWizardActivity$1$1 -> fr.prados.contacts.providers.mock.d:
+    fr.prados.contacts.providers.mock.MockWizardActivity$1 this$1 -> a
+    java.lang.String val$username -> b
+    java.lang.String val$password -> c
+    java.lang.String val$accountName -> d
+    java.lang.Exception doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Exception) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+fr.prados.contacts.providers.mock.MockWizardActivity$2 -> fr.prados.contacts.providers.mock.e:
+    fr.prados.contacts.providers.mock.MockWizardActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.CheckContext -> fr.prados.contacts.tools.a:
+    boolean isContactInline(android.app.Activity) -> a
+    boolean isAndroidMinVersion(android.app.Activity,int) -> a
+fr.prados.contacts.tools.CheckContext$1 -> fr.prados.contacts.tools.b:
+    android.app.Activity val$context -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.CheckContext$2 -> fr.prados.contacts.tools.c:
+    android.app.Activity val$context -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Eula -> fr.prados.contacts.tools.d:
+    java.lang.String TAG -> a
+    void showEula(android.app.Activity,int) -> a
+    java.lang.CharSequence readFile(android.app.Activity,int) -> b
+fr.prados.contacts.tools.Eula$1 -> fr.prados.contacts.tools.e:
+    android.content.SharedPreferences val$preferences -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Eula$2 -> fr.prados.contacts.tools.f:
+    android.app.Activity val$activity -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Eula$3 -> fr.prados.contacts.tools.g:
+    android.app.Activity val$activity -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+fr.prados.contacts.tools.HelpDebug -> fr.prados.contacts.tools.h:
+    fr.prados.contacts.tools.HelpDebug$Debug _debug -> a
+    void strictDeath() -> a
+fr.prados.contacts.tools.HelpDebug$1 -> fr.prados.contacts.tools.i:
+    void strictDeath() -> a
+fr.prados.contacts.tools.HelpDebug$2 -> fr.prados.contacts.tools.j:
+    void strictDeath() -> a
+fr.prados.contacts.tools.HelpDebug$Debug -> fr.prados.contacts.tools.k:
+    void strictDeath() -> a
+fr.prados.contacts.tools.LogMarket -> fr.prados.contacts.tools.l:
+    fr.prados.contacts.tools.LogMarket$WTF _wtf -> a
+    void wtf(java.lang.String,java.lang.String) -> a
+fr.prados.contacts.tools.LogMarket$1 -> fr.prados.contacts.tools.m:
+    void wtf(java.lang.String,java.lang.String) -> a
+fr.prados.contacts.tools.LogMarket$2 -> fr.prados.contacts.tools.n:
+    void wtf(java.lang.String,java.lang.String) -> a
+fr.prados.contacts.tools.LogMarket$WTF -> fr.prados.contacts.tools.o:
+    void wtf(java.lang.String,java.lang.String) -> a
+fr.prados.contacts.tools.QueryMarket -> fr.prados.contacts.tools.p:
+    boolean _askRate -> a
+    void startSearchMarket(android.content.Context,java.lang.String,int,boolean) -> a
+    void extendDayPending(android.content.Context) -> a
+    android.content.Intent searchMarket(android.content.Context,java.lang.String,boolean) -> a
+fr.prados.contacts.tools.RateActivity -> fr.prados.contacts.tools.RateActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+fr.prados.contacts.tools.RateActivity$1 -> fr.prados.contacts.tools.q:
+    fr.prados.contacts.tools.RateActivity this$0 -> a
+    android.content.SharedPreferences val$preferences -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.RateActivity$2 -> fr.prados.contacts.tools.r:
+    fr.prados.contacts.tools.RateActivity this$0 -> a
+    android.content.SharedPreferences val$preferences -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.RateActivity$3 -> fr.prados.contacts.tools.s:
+    fr.prados.contacts.tools.RateActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.tools.Update -> fr.prados.contacts.tools.t:
+    void showUdpate(android.app.Activity,int,int) -> a
+    java.lang.CharSequence readFile(android.app.Activity,int) -> a
+fr.prados.contacts.tools.Update$1 -> fr.prados.contacts.tools.u:
+    android.content.SharedPreferences val$preferences -> a
+    int val$version -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+org.acra.ACRA -> org.acra.ACRA:
+    java.lang.String LOG_TAG -> a
+    android.app.Application mApplication -> d
+    org.acra.annotation.ReportsCrashes mReportsCrashes -> e
+    android.content.SharedPreferences$OnSharedPreferenceChangeListener mPrefListener -> f
+    android.text.format.Time mAppStartDate -> g
+    org.acra.ReportField[] DEFAULT_MAIL_REPORT_FIELDS -> b
+    org.acra.ReportField[] DEFAULT_REPORT_FIELDS -> c
+    void init(android.app.Application) -> a
+    void initAcra() -> e
+    void checkCrashResources() -> a
+    android.content.SharedPreferences getACRASharedPreferences() -> b
+    org.acra.annotation.ReportsCrashes getConfig() -> c
+    void access$000() -> d
+org.acra.ACRA$1 -> org.acra.ACRA$1:
+    void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
+org.acra.ACRA$2 -> org.acra.ACRA$2:
+    int[] $SwitchMap$org$acra$ReportingInteractionMode -> a
+org.acra.ACRAConfigurationException -> org.acra.ACRAConfigurationException:
+org.acra.Compatibility -> org.acra.Compatibility:
+    int getAPILevel() -> a
+    java.lang.String getDropBoxServiceName() -> b
+org.acra.ConfigurationInspector -> org.acra.ConfigurationInspector:
+    android.util.SparseArray mHardKeyboardHiddenValues -> a
+    android.util.SparseArray mKeyboardValues -> b
+    android.util.SparseArray mKeyboardHiddenValues -> c
+    android.util.SparseArray mNavigationValues -> d
+    android.util.SparseArray mNavigationHiddenValues -> e
+    android.util.SparseArray mOrientationValues -> f
+    android.util.SparseArray mScreenLayoutValues -> g
+    android.util.SparseArray mTouchScreenValues -> h
+    android.util.SparseArray mUiModeValues -> i
+    java.util.HashMap mValueArrays -> j
+    java.lang.String toString(android.content.res.Configuration) -> a
+    java.lang.String getFieldValueName(android.content.res.Configuration,java.lang.reflect.Field) -> a
+    java.lang.String activeFlags(android.util.SparseArray,int) -> a
+org.acra.CrashReportData -> org.acra.CrashReportData:
+    org.acra.CrashReportData defaults -> a
+    java.lang.String lineSeparator -> b
+    void dumpString(java.lang.StringBuilder,java.lang.String,boolean) -> a
+    java.lang.String getProperty(org.acra.ReportField) -> a
+    void load(java.io.InputStream) -> a
+    boolean isEbcdic(java.io.BufferedInputStream) -> a
+    void load(java.io.Reader) -> a
+    void store(java.io.OutputStream,java.lang.String) -> a
+org.acra.CrashReportDialog -> org.acra.CrashReportDialog:
+    android.content.SharedPreferences prefs -> b
+    android.widget.EditText userComment -> c
+    android.widget.EditText userEmail -> d
+    java.lang.String mReportFileName -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void cancelNotification() -> a
+    android.widget.EditText access$000(org.acra.CrashReportDialog) -> a
+    android.content.SharedPreferences access$100(org.acra.CrashReportDialog) -> b
+    android.widget.EditText access$200(org.acra.CrashReportDialog) -> c
+org.acra.CrashReportDialog$1 -> org.acra.CrashReportDialog$1:
+    org.acra.CrashReportDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.acra.CrashReportDialog$2 -> org.acra.CrashReportDialog$2:
+    org.acra.CrashReportDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.acra.DeviceFeaturesCollector -> org.acra.DeviceFeaturesCollector:
+    java.lang.String getFeatures(android.content.Context) -> a
+org.acra.DropBoxCollector -> org.acra.DropBoxCollector:
+    java.lang.String[] SYSTEM_TAGS -> a
+    java.lang.String read(android.content.Context,java.lang.String[]) -> a
+org.acra.DumpSysCollector -> org.acra.DumpSysCollector:
+    java.lang.String collectMemInfo() -> a
+org.acra.ErrorReporter -> org.acra.ErrorReporter:
+    boolean enabled -> c
+    java.util.ArrayList mReportSenders -> d
+    org.acra.CrashReportData mCrashProperties -> e
+    java.util.Map mCustomParameters -> a
+    java.lang.String SILENT_SUFFIX -> b
+    java.lang.Thread$UncaughtExceptionHandler mDfltExceptionHandler -> f
+    org.acra.ErrorReporter mInstanceSingleton -> g
+    android.content.Context mContext -> h
+    java.lang.String mInitialConfiguration -> i
+    org.acra.ReportingInteractionMode mReportingInteractionMode -> j
+    void approvePendingReports() -> a
+    java.lang.String createCustomInfoString() -> i
+    org.acra.ErrorReporter getInstance() -> b
+    void init(android.content.Context) -> a
+    long getAvailableInternalMemorySize() -> j
+    long getTotalInternalMemorySize() -> k
+    void retrieveCrashData(android.content.Context) -> b
+    java.lang.String toString(android.view.Display) -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    org.acra.ErrorReporter$ReportsSenderWorker handleException(java.lang.Throwable,org.acra.ReportingInteractionMode) -> a
+    org.acra.ErrorReporter$ReportsSenderWorker handleException(java.lang.Throwable) -> a
+    void notifySendReport(java.lang.String) -> a
+    void sendCrashReport(android.content.Context,org.acra.CrashReportData) -> a
+    java.lang.String saveCrashReportFile(java.lang.String,org.acra.CrashReportData) -> a
+    java.lang.String[] getCrashReportFilesList() -> c
+    void checkAndSendReports(android.content.Context,boolean) -> a
+    org.acra.CrashReportData loadCrashReport(android.content.Context,java.lang.String) -> a
+    void deleteFile(android.content.Context,java.lang.String) -> b
+    void setReportingInteractionMode(org.acra.ReportingInteractionMode) -> a
+    void checkReportsOnApplicationStart() -> d
+    java.lang.String getLatestNonSilentReport(java.lang.String[]) -> a
+    void deletePendingReports() -> e
+    void deletePendingNonApprovedReports() -> f
+    void deletePendingReports(boolean,boolean,int) -> a
+    void disable() -> g
+    boolean containsOnlySilentOrApprovedReports(java.lang.String[]) -> b
+    boolean isSilent(java.lang.String) -> b
+    boolean isApproved(java.lang.String) -> c
+    void addUserDataToReport(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> b
+    void addReportSender(org.acra.sender.ReportSender) -> a
+    void setAppStartDate(android.text.format.Time) -> a
+    android.content.Context access$000() -> h
+    void access$100(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+org.acra.ErrorReporter$1 -> org.acra.ErrorReporter$1:
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+org.acra.ErrorReporter$2 -> org.acra.ErrorReporter$2:
+    org.acra.ErrorReporter this$0 -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+org.acra.ErrorReporter$ReportsSenderWorker -> org.acra.ErrorReporter$ReportsSenderWorker:
+    java.lang.String mCommentedReportFileName -> b
+    java.lang.String mUserComment -> c
+    java.lang.String mUserEmail -> d
+    boolean mSendOnlySilentReports -> e
+    boolean mApprovePendingReports -> f
+    org.acra.ErrorReporter this$0 -> a
+    void run() -> run
+    android.os.PowerManager$WakeLock acquireWakeLock() -> b
+    void setUserComment(java.lang.String,java.lang.String) -> a
+    void setUserEmail(java.lang.String,java.lang.String) -> b
+    void setApprovePendingReports() -> a
+org.acra.LogCatCollector -> org.acra.LogCatCollector:
+    java.lang.String collectLogCat(java.lang.String) -> a
+org.acra.ReflectionCollector -> org.acra.ReflectionCollector:
+    java.lang.String collectConstants(java.lang.Class) -> a
+    java.lang.String collectStaticGettersResults(java.lang.Class) -> b
+org.acra.ReportField -> org.acra.ReportField:
+    org.acra.ReportField REPORT_ID -> a
+    org.acra.ReportField APP_VERSION_CODE -> b
+    org.acra.ReportField APP_VERSION_NAME -> c
+    org.acra.ReportField PACKAGE_NAME -> d
+    org.acra.ReportField FILE_PATH -> e
+    org.acra.ReportField PHONE_MODEL -> f
+    org.acra.ReportField ANDROID_VERSION -> g
+    org.acra.ReportField BUILD -> h
+    org.acra.ReportField BRAND -> i
+    org.acra.ReportField PRODUCT -> j
+    org.acra.ReportField TOTAL_MEM_SIZE -> k
+    org.acra.ReportField AVAILABLE_MEM_SIZE -> l
+    org.acra.ReportField CUSTOM_DATA -> m
+    org.acra.ReportField STACK_TRACE -> n
+    org.acra.ReportField INITIAL_CONFIGURATION -> o
+    org.acra.ReportField CRASH_CONFIGURATION -> p
+    org.acra.ReportField DISPLAY -> q
+    org.acra.ReportField USER_COMMENT -> r
+    org.acra.ReportField USER_APP_START_DATE -> s
+    org.acra.ReportField USER_CRASH_DATE -> t
+    org.acra.ReportField DUMPSYS_MEMINFO -> u
+    org.acra.ReportField DROPBOX -> v
+    org.acra.ReportField LOGCAT -> w
+    org.acra.ReportField EVENTSLOG -> x
+    org.acra.ReportField RADIOLOG -> y
+    org.acra.ReportField IS_SILENT -> z
+    org.acra.ReportField DEVICE_ID -> A
+    org.acra.ReportField INSTALLATION_ID -> B
+    org.acra.ReportField USER_EMAIL -> C
+    org.acra.ReportField DEVICE_FEATURES -> D
+    org.acra.ReportField ENVIRONMENT -> E
+    org.acra.ReportField SETTINGS_SYSTEM -> F
+    org.acra.ReportField SETTINGS_SECURE -> G
+    org.acra.ReportField SHARED_PREFERENCES -> H
+    org.acra.ReportField[] $VALUES -> I
+    org.acra.ReportField[] values() -> values
+    org.acra.ReportField valueOf(java.lang.String) -> valueOf
+org.acra.ReportingInteractionMode -> org.acra.ReportingInteractionMode:
+    org.acra.ReportingInteractionMode SILENT -> a
+    org.acra.ReportingInteractionMode NOTIFICATION -> b
+    org.acra.ReportingInteractionMode TOAST -> c
+    org.acra.ReportingInteractionMode[] $VALUES -> d
+    org.acra.ReportingInteractionMode[] values() -> values
+    org.acra.ReportingInteractionMode valueOf(java.lang.String) -> valueOf
+org.acra.SettingsCollector -> org.acra.SettingsCollector:
+    java.lang.String collectSystemSettings(android.content.Context) -> a
+    java.lang.String collectSecureSettings(android.content.Context) -> b
+    boolean isAuthorized(java.lang.reflect.Field) -> a
+org.acra.SharedPreferencesCollector -> org.acra.SharedPreferencesCollector:
+    java.lang.String collect(android.content.Context) -> a
+org.acra.annotation.ReportsCrashes -> org.acra.a.a:
+    java.lang.String formKey() -> a
+    java.lang.String formUri() -> b
+    org.acra.ReportingInteractionMode mode() -> c
+    int resDialogCommentPrompt() -> d
+    int resDialogEmailPrompt() -> e
+    int resDialogIcon() -> f
+    int resDialogOkToast() -> g
+    int resDialogText() -> h
+    int resDialogTitle() -> i
+    int resNotifIcon() -> j
+    int resNotifText() -> k
+    int resNotifTickerText() -> l
+    int resNotifTitle() -> m
+    int resToastText() -> n
+    java.lang.String sharedPreferencesName() -> o
+    int sharedPreferencesMode() -> p
+    boolean includeDropBoxSystemTags() -> q
+    java.lang.String[] additionalDropBoxTags() -> r
+    int dropboxCollectionMinutes() -> s
+    java.lang.String[] logcatArguments() -> t
+    java.lang.String formUriBasicAuthLogin() -> u
+    java.lang.String formUriBasicAuthPassword() -> v
+    org.acra.ReportField[] customReportContent() -> w
+    java.lang.String mailTo() -> x
+    boolean deleteUnapprovedReportsOnApplicationStart() -> y
+    int socketTimeout() -> z
+    boolean forceCloseDialogAfterToast() -> A
+    java.lang.String[] additionalSharedPreferences() -> B
+org.acra.sender.EmailIntentSender -> org.acra.b.a:
+    android.content.Context mContext -> a
+    void send(org.acra.CrashReportData) -> a
+    java.lang.String buildBody(org.acra.CrashReportData) -> b
+org.acra.sender.GoogleFormSender -> org.acra.b.b:
+    android.net.Uri mFormUri -> a
+    void send(org.acra.CrashReportData) -> a
+    java.util.Map remap(java.util.Map) -> a
+org.acra.sender.GoogleFormSender$1 -> org.acra.b.c:
+    int[] $SwitchMap$org$acra$ReportField -> a
+org.acra.sender.HttpPostSender -> org.acra.b.d:
+    android.net.Uri mFormUri -> a
+    java.util.Map mMapping -> b
+    void send(org.acra.CrashReportData) -> a
+    java.util.Map remap(java.util.Map) -> a
+org.acra.sender.ReportSender -> org.acra.b.e:
+    void send(org.acra.CrashReportData) -> a
+org.acra.sender.ReportSenderException -> org.acra.b.f:
+org.acra.util.BoundedLinkedList -> org.acra.c.a:
+    int maxSize -> a
+    boolean add(java.lang.Object) -> add
+    void add(int,java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    boolean addAll(int,java.util.Collection) -> addAll
+    void addFirst(java.lang.Object) -> addFirst
+    void addLast(java.lang.Object) -> addLast
+    java.lang.String toString() -> toString
+org.acra.util.FakeSocketFactory -> org.acra.c.b:
+    javax.net.ssl.SSLContext sslcontext -> a
+    javax.net.ssl.SSLContext createEasySSLContext() -> a
+    javax.net.ssl.SSLContext getSSLContext() -> b
+    java.net.Socket connectSocket(java.net.Socket,java.lang.String,int,java.net.InetAddress,int,org.apache.http.params.HttpParams) -> connectSocket
+    java.net.Socket createSocket() -> createSocket
+    boolean isSecure(java.net.Socket) -> isSecure
+    java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean) -> createSocket
+org.acra.util.HttpRequest -> org.acra.c.c:
+    org.apache.http.impl.client.DefaultHttpClient httpClient -> a
+    org.apache.http.protocol.HttpContext localContext -> b
+    org.apache.http.client.methods.HttpPost httpPost -> c
+    org.apache.http.client.methods.HttpGet httpGet -> d
+    org.apache.http.auth.UsernamePasswordCredentials creds -> e
+    java.lang.String sendPost(java.lang.String,java.lang.String) -> a
+    java.lang.String sendPost(java.lang.String,java.lang.String,java.lang.String) -> a
+org.acra.util.HttpUtils -> org.acra.c.d:
+    void doPost(java.util.Map,java.net.URL,java.lang.String,java.lang.String) -> a
+    boolean isNull(java.lang.String) -> a
+org.acra.util.Installation -> org.acra.c.e:
+    java.lang.String sID -> a
+    java.lang.String id(android.content.Context) -> a
+    java.lang.String readInstallationFile(java.io.File) -> a
+    void writeInstallationFile(java.io.File) -> b
+org.acra.util.NaiveTrustManager -> org.acra.c.f:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted

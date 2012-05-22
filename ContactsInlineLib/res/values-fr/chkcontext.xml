@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** Check presence of application Contact *** -->
+
+	<!-- Title when app. contact not found -->
+	<string name="chkcontact_title">Installation</string>
+	<!-- Text in dialog when app. contact not found -->
+	<string name="chkcontact_msg">L\'application\n\"Contacts en ligne\"\ndoit être installée avant d\'utiliser ce composant.</string>
+	<!-- Text button in dialog when app. contact not found -->
+	<string name="chkcontact_accept">Ok</string>
+
+    <!-- The dialog box title displayed when the android version is not supported -->
+    <string name="help_need_android_version_title">Désolé</string>
+    <!-- The text displayed when the android version is not supported -->
+    <string name="help_need_android_version">"Votre version d'Android n'est pas supportée."</string>
+
+</resources>

@@ -1,0 +1,9 @@
+2.0: Port to ice cream sandwich. Bug fix.
+
+1.2.1: Fix bug when Google server is done.
+1.2: 
+ - Accept multi values records
+ - Fixe bug when import record
+ - Fixe bug for normalize phone number
+1.1: Auto-remove plugin
+1.0: Public version, compatible 1.3+

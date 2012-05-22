@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- *** Market *** -->
+
+	<!-- Title if market is not found. -->
+	<string name="market_title">无法找到软件市场</string>
+
+	<!-- Body if market is not found. -->
+	<string name="market_body">"在软件市场内, 搜索所有\"在线通讯录\"的插件."</string>
+
+	<!-- Button if market is not found. -->
+	<string name="market_ok">Ok</string>
+</resources>

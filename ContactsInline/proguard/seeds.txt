@@ -1,0 +1,648 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.flurry.android.AdImage
+com.flurry.android.AppCircle
+com.flurry.android.AppCircleCallback
+com.flurry.android.CallbackEvent
+com.flurry.android.CatalogActivity
+com.flurry.android.CatalogActivity: void onClick(android.view.View)
+com.flurry.android.Constants
+com.flurry.android.FlurryAgent
+com.flurry.android.FlurryAgent$FlurryDefaultExceptionHandler
+com.flurry.android.InstallReceiver
+com.flurry.android.Offer
+com.flurry.android.OfferInSdk
+com.flurry.android.a
+com.flurry.android.aa
+com.flurry.android.ab
+com.flurry.android.ac
+com.flurry.android.ad
+com.flurry.android.ae
+com.flurry.android.af
+com.flurry.android.ag
+com.flurry.android.ah
+com.flurry.android.ai
+com.flurry.android.aj
+com.flurry.android.ak
+com.flurry.android.al
+com.flurry.android.b
+com.flurry.android.c
+com.flurry.android.d
+com.flurry.android.e
+com.flurry.android.f
+com.flurry.android.g
+com.flurry.android.h
+com.flurry.android.i
+com.flurry.android.j
+com.flurry.android.k
+com.flurry.android.l
+com.flurry.android.m
+com.flurry.android.n
+com.flurry.android.o
+com.flurry.android.p
+com.flurry.android.q
+com.flurry.android.r
+com.flurry.android.s
+com.flurry.android.t
+com.flurry.android.u
+com.flurry.android.v
+com.flurry.android.w
+com.flurry.android.x
+com.flurry.android.y
+com.flurry.android.z
+fr.prados.contacts.Application
+fr.prados.contacts.BuildConfig
+fr.prados.contacts.Constants
+fr.prados.contacts.ContactId
+fr.prados.contacts.ContactId: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.ContactId$1
+fr.prados.contacts.R
+fr.prados.contacts.R$anim
+fr.prados.contacts.R$anim: int push_left_in
+fr.prados.contacts.R$anim: int push_left_out
+fr.prados.contacts.R$attr
+fr.prados.contacts.R$attr: int contact_browser_background
+fr.prados.contacts.R$attr: int contact_browser_list_padding_left
+fr.prados.contacts.R$attr: int contact_browser_list_padding_right
+fr.prados.contacts.R$attr: int list_item_header_height
+fr.prados.contacts.R$color
+fr.prados.contacts.R$color: int dim_foreground_dark
+fr.prados.contacts.R$color: int list_background
+fr.prados.contacts.R$color: int list_divider
+fr.prados.contacts.R$color: int section_header_text_color
+fr.prados.contacts.R$color: int text_hightlight
+fr.prados.contacts.R$color: int text_hint
+fr.prados.contacts.R$color: int text_link
+fr.prados.contacts.R$dimen
+fr.prados.contacts.R$dimen: int edit_photo_size
+fr.prados.contacts.R$dimen: int left_margin
+fr.prados.contacts.R$dimen: int list_section_height
+fr.prados.contacts.R$dimen: int photo_resize
+fr.prados.contacts.R$dimen: int right_margin
+fr.prados.contacts.R$dimen: int right_part_right_margin
+fr.prados.contacts.R$drawable
+fr.prados.contacts.R$drawable: int ab_bottom_opaque_dark_holo
+fr.prados.contacts.R$drawable: int ab_solid_custom_blue_inverse_holo
+fr.prados.contacts.R$drawable: int ab_stacked_opaque_dark_holo
+fr.prados.contacts.R$drawable: int ab_stacked_solid_inverse_holo
+fr.prados.contacts.R$drawable: int action_bar_item_background
+fr.prados.contacts.R$drawable: int action_bar_item_pressed_holo_light
+fr.prados.contacts.R$drawable: int action_bar_tab
+fr.prados.contacts.R$drawable: int call_background
+fr.prados.contacts.R$drawable: int dark_header
+fr.prados.contacts.R$drawable: int divider_vertical_dark
+fr.prados.contacts.R$drawable: int ic_contact_list_picture
+fr.prados.contacts.R$drawable: int ic_launcher_contacts
+fr.prados.contacts.R$drawable: int ic_menu_account_list
+fr.prados.contacts.R$drawable: int ic_menu_import_export
+fr.prados.contacts.R$drawable: int ic_settings_applications
+fr.prados.contacts.R$drawable: int ic_tab_unselected_contacts
+fr.prados.contacts.R$drawable: int infobar_dark
+fr.prados.contacts.R$drawable: int list_item_divider
+fr.prados.contacts.R$drawable: int list_section_divider_holo_custom
+fr.prados.contacts.R$drawable: int list_selector_background_longpress
+fr.prados.contacts.R$drawable: int list_selector_background_pressed
+fr.prados.contacts.R$drawable: int magnifying_glass
+fr.prados.contacts.R$drawable: int tab_focused
+fr.prados.contacts.R$drawable: int tab_focused_bottom
+fr.prados.contacts.R$drawable: int tab_pressed
+fr.prados.contacts.R$drawable: int tab_pressed_bottom
+fr.prados.contacts.R$drawable: int tab_selected
+fr.prados.contacts.R$drawable: int tab_selected_bottom
+fr.prados.contacts.R$drawable: int tab_selected_focused_holo
+fr.prados.contacts.R$drawable: int tab_selected_holo
+fr.prados.contacts.R$drawable: int tab_selected_pressed_holo
+fr.prados.contacts.R$drawable: int tab_unselected
+fr.prados.contacts.R$drawable: int tab_unselected_focused_holo
+fr.prados.contacts.R$drawable: int tab_unselected_holo
+fr.prados.contacts.R$drawable: int tab_unselected_pressed_holo
+fr.prados.contacts.R$id
+fr.prados.contacts.R$id: int call_button
+fr.prados.contacts.R$id: int call_view
+fr.prados.contacts.R$id: int data
+fr.prados.contacts.R$id: int divider
+fr.prados.contacts.R$id: int emptyText
+fr.prados.contacts.R$id: int errorsText
+fr.prados.contacts.R$id: int header
+fr.prados.contacts.R$id: int header_text
+fr.prados.contacts.R$id: int label
+fr.prados.contacts.R$id: int menu_accounts
+fr.prados.contacts.R$id: int menu_add_star
+fr.prados.contacts.R$id: int menu_call
+fr.prados.contacts.R$id: int menu_extensions
+fr.prados.contacts.R$id: int menu_import
+fr.prados.contacts.R$id: int menu_search
+fr.prados.contacts.R$id: int menu_send_sms
+fr.prados.contacts.R$id: int menu_view_contact
+fr.prados.contacts.R$id: int name
+fr.prados.contacts.R$id: int noQuickContactPhoto
+fr.prados.contacts.R$id: int photo
+fr.prados.contacts.R$id: int presence
+fr.prados.contacts.R$id: int right_side
+fr.prados.contacts.R$id: int totalContactsText
+fr.prados.contacts.R$layout
+fr.prados.contacts.R$layout: int contacts_list_content
+fr.prados.contacts.R$layout: int contacts_list_item_photo
+fr.prados.contacts.R$layout: int list_section
+fr.prados.contacts.R$layout: int list_separator
+fr.prados.contacts.R$layout: int total_contacts
+fr.prados.contacts.R$menu
+fr.prados.contacts.R$menu: int context
+fr.prados.contacts.R$menu: int list
+fr.prados.contacts.R$plurals
+fr.prados.contacts.R$plurals: int listFoundAllContacts
+fr.prados.contacts.R$plurals: int listTotalAllContacts
+fr.prados.contacts.R$plurals: int listTotalPhoneContacts
+fr.prados.contacts.R$raw
+fr.prados.contacts.R$raw: int eula
+fr.prados.contacts.R$raw: int update
+fr.prados.contacts.R$string
+fr.prados.contacts.R$string: int app_name
+fr.prados.contacts.R$string: int call_disambig_title
+fr.prados.contacts.R$string: int chkcontact_accept
+fr.prados.contacts.R$string: int chkcontact_msg
+fr.prados.contacts.R$string: int chkcontact_title
+fr.prados.contacts.R$string: int copy_detail
+fr.prados.contacts.R$string: int copy_summary
+fr.prados.contacts.R$string: int ctx_menu_add_star
+fr.prados.contacts.R$string: int ctx_menu_call
+fr.prados.contacts.R$string: int ctx_menu_import
+fr.prados.contacts.R$string: int ctx_menu_sendEmail
+fr.prados.contacts.R$string: int ctx_menu_send_sms
+fr.prados.contacts.R$string: int ctx_menu_viewContact
+fr.prados.contacts.R$string: int currentQuery
+fr.prados.contacts.R$string: int err_access_right
+fr.prados.contacts.R$string: int err_admin_limit_exceeded
+fr.prados.contacts.R$string: int err_authent
+fr.prados.contacts.R$string: int err_beta_expired
+fr.prados.contacts.R$string: int err_connection_exception
+fr.prados.contacts.R$string: int err_invalide_token_type
+fr.prados.contacts.R$string: int err_invalide_version
+fr.prados.contacts.R$string: int err_io_exception
+fr.prados.contacts.R$string: int err_maxitem_exceeded
+fr.prados.contacts.R$string: int err_network_done
+fr.prados.contacts.R$string: int err_provider
+fr.prados.contacts.R$string: int err_server_down
+fr.prados.contacts.R$string: int err_size_exceeded
+fr.prados.contacts.R$string: int err_time_limit_exceeded
+fr.prados.contacts.R$string: int err_truncated
+fr.prados.contacts.R$string: int err_unknown
+fr.prados.contacts.R$string: int eula_accept
+fr.prados.contacts.R$string: int eula_refuse
+fr.prados.contacts.R$string: int eula_title
+fr.prados.contacts.R$string: int extension_plugins
+fr.prados.contacts.R$string: int fast_scroll_alphabet
+fr.prados.contacts.R$string: int from_provider
+fr.prados.contacts.R$string: int help_first_time
+fr.prados.contacts.R$string: int help_need_account
+fr.prados.contacts.R$string: int help_need_account_app
+fr.prados.contacts.R$string: int help_need_account_app_title
+fr.prados.contacts.R$string: int help_need_android_version
+fr.prados.contacts.R$string: int help_need_android_version_title
+fr.prados.contacts.R$string: int help_need_provider
+fr.prados.contacts.R$string: int help_with_search
+fr.prados.contacts.R$string: int import_detail
+fr.prados.contacts.R$string: int import_summary
+fr.prados.contacts.R$string: int importing_title
+fr.prados.contacts.R$string: int importing_wait
+fr.prados.contacts.R$string: int listFoundAllContactsZero
+fr.prados.contacts.R$string: int listTotalAllContactsZero
+fr.prados.contacts.R$string: int listTotalPhoneContactsZero
+fr.prados.contacts.R$string: int market_body
+fr.prados.contacts.R$string: int market_ok
+fr.prados.contacts.R$string: int market_rate
+fr.prados.contacts.R$string: int market_rate_body
+fr.prados.contacts.R$string: int market_rate_done
+fr.prados.contacts.R$string: int market_rate_later
+fr.prados.contacts.R$string: int market_rate_no
+fr.prados.contacts.R$string: int market_rate_no_market
+fr.prados.contacts.R$string: int market_title
+fr.prados.contacts.R$string: int menu_accounts
+fr.prados.contacts.R$string: int menu_extensions
+fr.prados.contacts.R$string: int menu_import
+fr.prados.contacts.R$string: int menu_import_result
+fr.prados.contacts.R$string: int menu_market_rate
+fr.prados.contacts.R$string: int menu_search
+fr.prados.contacts.R$string: int menu_settings
+fr.prados.contacts.R$string: int menu_std_contacts
+fr.prados.contacts.R$string: int noContactsHelpText
+fr.prados.contacts.R$string: int noException
+fr.prados.contacts.R$string: int noMatchingContacts
+fr.prados.contacts.R$string: int search_hint
+fr.prados.contacts.R$string: int search_label
+fr.prados.contacts.R$string: int search_title
+fr.prados.contacts.R$string: int search_wait
+fr.prados.contacts.R$string: int settings_description
+fr.prados.contacts.R$string: int sms_disambig_title
+fr.prados.contacts.R$string: int update_title
+fr.prados.contacts.R$style
+fr.prados.contacts.R$style: int ContactsActionBarStyle
+fr.prados.contacts.R$style: int ContactsActionBarTabView
+fr.prados.contacts.R$style: int ContactsActionBarTheme
+fr.prados.contacts.R$style: int MyTheme
+fr.prados.contacts.R$style: int Theme_Transparent
+fr.prados.contacts.R$styleable
+fr.prados.contacts.R$styleable: int[] ContactBrowser
+fr.prados.contacts.R$styleable: int ContactBrowser_contact_browser_background
+fr.prados.contacts.R$styleable: int ContactBrowser_contact_browser_list_padding_left
+fr.prados.contacts.R$styleable: int ContactBrowser_contact_browser_list_padding_right
+fr.prados.contacts.R$styleable: int[] ContactListItemView
+fr.prados.contacts.R$styleable: int ContactListItemView_list_item_header_height
+fr.prados.contacts.R$xml
+fr.prados.contacts.R$xml: int import_contacts
+fr.prados.contacts.R$xml: int searchable
+fr.prados.contacts.VolatileContact
+fr.prados.contacts.VolatileContact: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.VolatileContact$1
+fr.prados.contacts.VolatileContact$Copy
+fr.prados.contacts.VolatileContact$Import
+fr.prados.contacts.VolatileData
+fr.prados.contacts.VolatileData: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.VolatileData$1
+fr.prados.contacts.VolatileRawContact
+fr.prados.contacts.VolatileRawContact: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.VolatileRawContact$1
+fr.prados.contacts.lib.R
+fr.prados.contacts.lib.R$anim
+fr.prados.contacts.lib.R$anim: int push_left_in
+fr.prados.contacts.lib.R$anim: int push_left_out
+fr.prados.contacts.lib.R$attr
+fr.prados.contacts.lib.R$attr: int contact_browser_background
+fr.prados.contacts.lib.R$attr: int contact_browser_list_padding_left
+fr.prados.contacts.lib.R$attr: int contact_browser_list_padding_right
+fr.prados.contacts.lib.R$attr: int list_item_header_height
+fr.prados.contacts.lib.R$color
+fr.prados.contacts.lib.R$color: int dim_foreground_dark
+fr.prados.contacts.lib.R$color: int list_background
+fr.prados.contacts.lib.R$color: int list_divider
+fr.prados.contacts.lib.R$color: int section_header_text_color
+fr.prados.contacts.lib.R$color: int text_hightlight
+fr.prados.contacts.lib.R$color: int text_hint
+fr.prados.contacts.lib.R$color: int text_link
+fr.prados.contacts.lib.R$dimen
+fr.prados.contacts.lib.R$dimen: int edit_photo_size
+fr.prados.contacts.lib.R$dimen: int left_margin
+fr.prados.contacts.lib.R$dimen: int list_section_height
+fr.prados.contacts.lib.R$dimen: int photo_resize
+fr.prados.contacts.lib.R$dimen: int right_margin
+fr.prados.contacts.lib.R$dimen: int right_part_right_margin
+fr.prados.contacts.lib.R$drawable
+fr.prados.contacts.lib.R$drawable: int ab_bottom_opaque_dark_holo
+fr.prados.contacts.lib.R$drawable: int ab_solid_custom_blue_inverse_holo
+fr.prados.contacts.lib.R$drawable: int ab_stacked_opaque_dark_holo
+fr.prados.contacts.lib.R$drawable: int ab_stacked_solid_inverse_holo
+fr.prados.contacts.lib.R$drawable: int action_bar_item_background
+fr.prados.contacts.lib.R$drawable: int action_bar_item_pressed_holo_light
+fr.prados.contacts.lib.R$drawable: int action_bar_tab
+fr.prados.contacts.lib.R$drawable: int call_background
+fr.prados.contacts.lib.R$drawable: int dark_header
+fr.prados.contacts.lib.R$drawable: int divider_vertical_dark
+fr.prados.contacts.lib.R$drawable: int ic_contact_list_picture
+fr.prados.contacts.lib.R$drawable: int ic_launcher_contacts
+fr.prados.contacts.lib.R$drawable: int ic_menu_account_list
+fr.prados.contacts.lib.R$drawable: int ic_menu_import_export
+fr.prados.contacts.lib.R$drawable: int ic_settings_applications
+fr.prados.contacts.lib.R$drawable: int ic_tab_unselected_contacts
+fr.prados.contacts.lib.R$drawable: int infobar_dark
+fr.prados.contacts.lib.R$drawable: int list_item_divider
+fr.prados.contacts.lib.R$drawable: int list_section_divider_holo_custom
+fr.prados.contacts.lib.R$drawable: int list_selector_background_longpress
+fr.prados.contacts.lib.R$drawable: int list_selector_background_pressed
+fr.prados.contacts.lib.R$drawable: int magnifying_glass
+fr.prados.contacts.lib.R$drawable: int tab_focused
+fr.prados.contacts.lib.R$drawable: int tab_focused_bottom
+fr.prados.contacts.lib.R$drawable: int tab_pressed
+fr.prados.contacts.lib.R$drawable: int tab_pressed_bottom
+fr.prados.contacts.lib.R$drawable: int tab_selected
+fr.prados.contacts.lib.R$drawable: int tab_selected_bottom
+fr.prados.contacts.lib.R$drawable: int tab_selected_focused_holo
+fr.prados.contacts.lib.R$drawable: int tab_selected_holo
+fr.prados.contacts.lib.R$drawable: int tab_selected_pressed_holo
+fr.prados.contacts.lib.R$drawable: int tab_unselected
+fr.prados.contacts.lib.R$drawable: int tab_unselected_focused_holo
+fr.prados.contacts.lib.R$drawable: int tab_unselected_holo
+fr.prados.contacts.lib.R$drawable: int tab_unselected_pressed_holo
+fr.prados.contacts.lib.R$id
+fr.prados.contacts.lib.R$id: int call_button
+fr.prados.contacts.lib.R$id: int call_view
+fr.prados.contacts.lib.R$id: int data
+fr.prados.contacts.lib.R$id: int divider
+fr.prados.contacts.lib.R$id: int emptyText
+fr.prados.contacts.lib.R$id: int errorsText
+fr.prados.contacts.lib.R$id: int header
+fr.prados.contacts.lib.R$id: int header_text
+fr.prados.contacts.lib.R$id: int label
+fr.prados.contacts.lib.R$id: int menu_accounts
+fr.prados.contacts.lib.R$id: int menu_add_star
+fr.prados.contacts.lib.R$id: int menu_call
+fr.prados.contacts.lib.R$id: int menu_extensions
+fr.prados.contacts.lib.R$id: int menu_import
+fr.prados.contacts.lib.R$id: int menu_search
+fr.prados.contacts.lib.R$id: int menu_send_sms
+fr.prados.contacts.lib.R$id: int menu_view_contact
+fr.prados.contacts.lib.R$id: int name
+fr.prados.contacts.lib.R$id: int noQuickContactPhoto
+fr.prados.contacts.lib.R$id: int photo
+fr.prados.contacts.lib.R$id: int presence
+fr.prados.contacts.lib.R$id: int right_side
+fr.prados.contacts.lib.R$id: int totalContactsText
+fr.prados.contacts.lib.R$layout
+fr.prados.contacts.lib.R$layout: int contacts_list_content
+fr.prados.contacts.lib.R$layout: int contacts_list_item_photo
+fr.prados.contacts.lib.R$layout: int list_section
+fr.prados.contacts.lib.R$layout: int list_separator
+fr.prados.contacts.lib.R$layout: int total_contacts
+fr.prados.contacts.lib.R$menu
+fr.prados.contacts.lib.R$menu: int context
+fr.prados.contacts.lib.R$menu: int list
+fr.prados.contacts.lib.R$plurals
+fr.prados.contacts.lib.R$plurals: int listFoundAllContacts
+fr.prados.contacts.lib.R$plurals: int listTotalAllContacts
+fr.prados.contacts.lib.R$plurals: int listTotalPhoneContacts
+fr.prados.contacts.lib.R$raw
+fr.prados.contacts.lib.R$raw: int eula
+fr.prados.contacts.lib.R$raw: int update
+fr.prados.contacts.lib.R$string
+fr.prados.contacts.lib.R$string: int app_name
+fr.prados.contacts.lib.R$string: int call_disambig_title
+fr.prados.contacts.lib.R$string: int chkcontact_accept
+fr.prados.contacts.lib.R$string: int chkcontact_msg
+fr.prados.contacts.lib.R$string: int chkcontact_title
+fr.prados.contacts.lib.R$string: int copy_detail
+fr.prados.contacts.lib.R$string: int copy_summary
+fr.prados.contacts.lib.R$string: int ctx_menu_add_star
+fr.prados.contacts.lib.R$string: int ctx_menu_call
+fr.prados.contacts.lib.R$string: int ctx_menu_import
+fr.prados.contacts.lib.R$string: int ctx_menu_sendEmail
+fr.prados.contacts.lib.R$string: int ctx_menu_send_sms
+fr.prados.contacts.lib.R$string: int ctx_menu_viewContact
+fr.prados.contacts.lib.R$string: int currentQuery
+fr.prados.contacts.lib.R$string: int err_access_right
+fr.prados.contacts.lib.R$string: int err_admin_limit_exceeded
+fr.prados.contacts.lib.R$string: int err_authent
+fr.prados.contacts.lib.R$string: int err_beta_expired
+fr.prados.contacts.lib.R$string: int err_connection_exception
+fr.prados.contacts.lib.R$string: int err_invalide_token_type
+fr.prados.contacts.lib.R$string: int err_invalide_version
+fr.prados.contacts.lib.R$string: int err_io_exception
+fr.prados.contacts.lib.R$string: int err_maxitem_exceeded
+fr.prados.contacts.lib.R$string: int err_network_done
+fr.prados.contacts.lib.R$string: int err_provider
+fr.prados.contacts.lib.R$string: int err_server_down
+fr.prados.contacts.lib.R$string: int err_size_exceeded
+fr.prados.contacts.lib.R$string: int err_time_limit_exceeded
+fr.prados.contacts.lib.R$string: int err_truncated
+fr.prados.contacts.lib.R$string: int err_unknown
+fr.prados.contacts.lib.R$string: int eula_accept
+fr.prados.contacts.lib.R$string: int eula_refuse
+fr.prados.contacts.lib.R$string: int eula_title
+fr.prados.contacts.lib.R$string: int extension_plugins
+fr.prados.contacts.lib.R$string: int fast_scroll_alphabet
+fr.prados.contacts.lib.R$string: int from_provider
+fr.prados.contacts.lib.R$string: int help_first_time
+fr.prados.contacts.lib.R$string: int help_need_account
+fr.prados.contacts.lib.R$string: int help_need_account_app
+fr.prados.contacts.lib.R$string: int help_need_account_app_title
+fr.prados.contacts.lib.R$string: int help_need_android_version
+fr.prados.contacts.lib.R$string: int help_need_android_version_title
+fr.prados.contacts.lib.R$string: int help_need_provider
+fr.prados.contacts.lib.R$string: int help_with_search
+fr.prados.contacts.lib.R$string: int import_detail
+fr.prados.contacts.lib.R$string: int import_summary
+fr.prados.contacts.lib.R$string: int importing_title
+fr.prados.contacts.lib.R$string: int importing_wait
+fr.prados.contacts.lib.R$string: int listFoundAllContactsZero
+fr.prados.contacts.lib.R$string: int listTotalAllContactsZero
+fr.prados.contacts.lib.R$string: int listTotalPhoneContactsZero
+fr.prados.contacts.lib.R$string: int market_body
+fr.prados.contacts.lib.R$string: int market_ok
+fr.prados.contacts.lib.R$string: int market_rate
+fr.prados.contacts.lib.R$string: int market_rate_body
+fr.prados.contacts.lib.R$string: int market_rate_done
+fr.prados.contacts.lib.R$string: int market_rate_later
+fr.prados.contacts.lib.R$string: int market_rate_no
+fr.prados.contacts.lib.R$string: int market_rate_no_market
+fr.prados.contacts.lib.R$string: int market_title
+fr.prados.contacts.lib.R$string: int menu_accounts
+fr.prados.contacts.lib.R$string: int menu_extensions
+fr.prados.contacts.lib.R$string: int menu_import
+fr.prados.contacts.lib.R$string: int menu_import_result
+fr.prados.contacts.lib.R$string: int menu_market_rate
+fr.prados.contacts.lib.R$string: int menu_search
+fr.prados.contacts.lib.R$string: int menu_settings
+fr.prados.contacts.lib.R$string: int menu_std_contacts
+fr.prados.contacts.lib.R$string: int noContactsHelpText
+fr.prados.contacts.lib.R$string: int noException
+fr.prados.contacts.lib.R$string: int noMatchingContacts
+fr.prados.contacts.lib.R$string: int search_hint
+fr.prados.contacts.lib.R$string: int search_label
+fr.prados.contacts.lib.R$string: int search_title
+fr.prados.contacts.lib.R$string: int search_wait
+fr.prados.contacts.lib.R$string: int settings_description
+fr.prados.contacts.lib.R$string: int sms_disambig_title
+fr.prados.contacts.lib.R$string: int update_title
+fr.prados.contacts.lib.R$style
+fr.prados.contacts.lib.R$style: int ContactsActionBarStyle
+fr.prados.contacts.lib.R$style: int ContactsActionBarTabView
+fr.prados.contacts.lib.R$style: int ContactsActionBarTheme
+fr.prados.contacts.lib.R$style: int MyTheme
+fr.prados.contacts.lib.R$style: int Theme_Transparent
+fr.prados.contacts.lib.R$styleable
+fr.prados.contacts.lib.R$styleable: int[] ContactBrowser
+fr.prados.contacts.lib.R$styleable: int ContactBrowser_contact_browser_background
+fr.prados.contacts.lib.R$styleable: int ContactBrowser_contact_browser_list_padding_left
+fr.prados.contacts.lib.R$styleable: int ContactBrowser_contact_browser_list_padding_right
+fr.prados.contacts.lib.R$styleable: int[] ContactListItemView
+fr.prados.contacts.lib.R$styleable: int ContactListItemView_list_item_header_height
+fr.prados.contacts.lib.R$xml
+fr.prados.contacts.lib.R$xml: int import_contacts
+fr.prados.contacts.lib.R$xml: int searchable
+fr.prados.contacts.providers.AbstractSimpleAuthenticator
+fr.prados.contacts.providers.AuthQueryException
+fr.prados.contacts.providers.IProvider
+fr.prados.contacts.providers.IProvider$Stub
+fr.prados.contacts.providers.IProvider$Stub$Proxy
+fr.prados.contacts.providers.PackageRemovedReceiver
+fr.prados.contacts.providers.Provider
+fr.prados.contacts.providers.Provider$OnQuery
+fr.prados.contacts.providers.QueryError
+fr.prados.contacts.providers.QueryException
+fr.prados.contacts.providers.QueryException: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.providers.QueryException$1
+fr.prados.contacts.providers.QueryWarning
+fr.prados.contacts.providers.ResultsAndExceptions
+fr.prados.contacts.providers.ResultsAndExceptions: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.providers.ResultsAndExceptions$1
+fr.prados.contacts.providers.TransportException
+fr.prados.contacts.providers.TransportException: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.providers.TransportException$1
+fr.prados.contacts.test.Dump
+fr.prados.contacts.test.Dump: Dump()
+fr.prados.contacts.test.Dump: void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[])
+fr.prados.contacts.test.Dump: void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[])
+fr.prados.contacts.test.Dump: java.lang.CharSequence dumpCursor(android.database.Cursor)
+fr.prados.contacts.test.Dump: void dump_android(java.lang.String,boolean,android.content.ContentResolver)
+fr.prados.contacts.test.Dump: void dump_android_lite(java.lang.String,boolean,android.content.ContentResolver)
+fr.prados.contacts.test.Dump: void dump(java.lang.String,boolean,android.content.ContentResolver,android.net.Uri[])
+fr.prados.contacts.test.TestActivity
+fr.prados.contacts.test.TestActivity: java.lang.String TAG
+fr.prados.contacts.test.TestActivity: java.lang.reflect.Method[] _methods
+fr.prados.contacts.test.TestActivity: int NOTHING
+fr.prados.contacts.test.TestActivity: int LEGACY_CONTACT
+fr.prados.contacts.test.TestActivity: int CONTACT
+fr.prados.contacts.test.TestActivity: int DATA
+fr.prados.contacts.test.TestActivity: boolean $assertionsDisabled
+fr.prados.contacts.test.TestActivity: void <clinit>()
+fr.prados.contacts.test.TestActivity: TestActivity()
+fr.prados.contacts.test.TestActivity: void onCreate(android.os.Bundle)
+fr.prados.contacts.test.TestActivity: void onListItemClick(android.widget.ListView,android.view.View,int,long)
+fr.prados.contacts.test.TestActivity: void Assert(boolean)
+fr.prados.contacts.test.TestActivity: void cmd_tools_injectMaxContact()
+fr.prados.contacts.test.TestActivity: void cmd_tools_DUMP()
+fr.prados.contacts.test.TestActivity: void cmd_DUMP()
+fr.prados.contacts.test.TestActivity: void cmd_DUMP_lite()
+fr.prados.contacts.test.TestActivity: void cmd_tools_PurgeMax()
+fr.prados.contacts.test.TestActivity: void cmd_tools_PurgeNoCompte()
+fr.prados.contacts.test.TestActivity: void cmdListContact()
+fr.prados.contacts.test.TestActivity: void cmdPickContact()
+fr.prados.contacts.test.TestActivity: void cmdPickPhone()
+fr.prados.contacts.test.TestActivity: void cmdPickPostal()
+fr.prados.contacts.test.TestActivity: void cmdGetContentContact()
+fr.prados.contacts.test.TestActivity: void cmdGetContentContactPhone()
+fr.prados.contacts.test.TestActivity: void cmdGetContentContactPostal()
+fr.prados.contacts.test.TestActivity: void cmdSearch()
+fr.prados.contacts.test.TestActivity: void cmdSearchCall()
+fr.prados.contacts.test.TestActivity: void cmdSearchEMail()
+fr.prados.contacts.test.TestActivity: void cmdSearchPhone()
+fr.prados.contacts.test.TestActivity: void onActivityResult(int,int,android.content.Intent)
+fr.prados.contacts.test.TestActivity$1Wrapper
+fr.prados.contacts.test.TestActivity$1Wrapper: java.lang.reflect.Method method
+fr.prados.contacts.test.TestActivity$1Wrapper: fr.prados.contacts.test.TestActivity this$0
+fr.prados.contacts.test.TestActivity$1Wrapper: TestActivity$1Wrapper(fr.prados.contacts.test.TestActivity,java.lang.reflect.Method)
+fr.prados.contacts.test.TestActivity$1Wrapper: java.lang.String toString()
+fr.prados.contacts.tools.CheckContext
+fr.prados.contacts.tools.CheckContext$1
+fr.prados.contacts.tools.CheckContext$2
+fr.prados.contacts.tools.Eula
+fr.prados.contacts.tools.Eula$1
+fr.prados.contacts.tools.Eula$2
+fr.prados.contacts.tools.Eula$3
+fr.prados.contacts.tools.HelpDebug
+fr.prados.contacts.tools.HelpDebug$1
+fr.prados.contacts.tools.HelpDebug$2
+fr.prados.contacts.tools.HelpDebug$Debug
+fr.prados.contacts.tools.LogMarket
+fr.prados.contacts.tools.LogMarket$1
+fr.prados.contacts.tools.LogMarket$2
+fr.prados.contacts.tools.LogMarket$WTF
+fr.prados.contacts.tools.Photos
+fr.prados.contacts.tools.QueryMarket
+fr.prados.contacts.tools.RateActivity
+fr.prados.contacts.tools.RateActivity$1
+fr.prados.contacts.tools.RateActivity$2
+fr.prados.contacts.tools.RateActivity$3
+fr.prados.contacts.tools.TOAContentProvider
+fr.prados.contacts.tools.TOAContentProvider$I18nPhonesHelper
+fr.prados.contacts.tools.TOAPhoneNumberFormats
+fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler
+fr.prados.contacts.tools.Update
+fr.prados.contacts.tools.Update$1
+fr.prados.contacts.ui.Collapser
+fr.prados.contacts.ui.Collapser$Collapsible
+fr.prados.contacts.ui.DontPressWithParentImageView
+fr.prados.contacts.ui.DontPressWithParentImageView: DontPressWithParentImageView(android.content.Context,android.util.AttributeSet)
+fr.prados.contacts.ui.DontPressWithParentImageView: void setPressed(boolean)
+fr.prados.contacts.ui.ExQuickContactBadge
+fr.prados.contacts.ui.ExQuickContactBadge: ExQuickContactBadge(android.content.Context)
+fr.prados.contacts.ui.ExQuickContactBadge: ExQuickContactBadge(android.content.Context,android.util.AttributeSet)
+fr.prados.contacts.ui.ExQuickContactBadge: ExQuickContactBadge(android.content.Context,android.util.AttributeSet,int)
+fr.prados.contacts.ui.ExQuickContactBadge: void setItemId(long)
+fr.prados.contacts.ui.ExQuickContactBadge$1
+fr.prados.contacts.ui.FocusRequestingListView
+fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context)
+fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context,android.util.AttributeSet)
+fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context,android.util.AttributeSet,int)
+fr.prados.contacts.ui.ImportWithSyncActivity
+fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask
+fr.prados.contacts.ui.ImportWithoutSyncActivity
+fr.prados.contacts.ui.ImportWithoutSyncActivity$ImportTask
+fr.prados.contacts.ui.PhoneDisambigDialog
+fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem
+fr.prados.contacts.ui.PhoneDisambigDialog$PhonesAdapter
+fr.prados.contacts.ui.ProvidersManager
+fr.prados.contacts.ui.ProvidersManager$1
+fr.prados.contacts.ui.ProvidersManager$1AsyncJob
+fr.prados.contacts.ui.ProvidersManager$Cache
+fr.prados.contacts.ui.ProvidersManager$CanceledAsync
+fr.prados.contacts.ui.ProvidersManager$Mode
+fr.prados.contacts.ui.ProvidersManager$Mode: fr.prados.contacts.ui.ProvidersManager$Mode[] values()
+fr.prados.contacts.ui.ProvidersManager$Mode: fr.prados.contacts.ui.ProvidersManager$Mode valueOf(java.lang.String)
+fr.prados.contacts.ui.VolatileContactsListActivity
+fr.prados.contacts.ui.VolatileContactsListActivity$1
+fr.prados.contacts.ui.VolatileContactsListActivity$10
+fr.prados.contacts.ui.VolatileContactsListActivity$11
+fr.prados.contacts.ui.VolatileContactsListActivity$2
+fr.prados.contacts.ui.VolatileContactsListActivity$3
+fr.prados.contacts.ui.VolatileContactsListActivity$4
+fr.prados.contacts.ui.VolatileContactsListActivity$5
+fr.prados.contacts.ui.VolatileContactsListActivity$6
+fr.prados.contacts.ui.VolatileContactsListActivity$7
+fr.prados.contacts.ui.VolatileContactsListActivity$8
+fr.prados.contacts.ui.VolatileContactsListActivity$9
+fr.prados.contacts.ui.VolatileContactsListActivity$AsyncImport
+fr.prados.contacts.ui.VolatileContactsListActivity$Cache
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$1
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$2
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$3
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler
+fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler
+fr.prados.contacts.ui.VolatileContactsListActivity$PhotoCache
+fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler
+fr.prados.contacts.ui.VolatileContactsListActivity$Retain
+fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider
+org.acra.ACRA
+org.acra.ACRA$1
+org.acra.ACRA$2
+org.acra.ACRAConfigurationException
+org.acra.Compatibility
+org.acra.ConfigurationInspector
+org.acra.CrashReportData
+org.acra.CrashReportDialog
+org.acra.CrashReportDialog$1
+org.acra.CrashReportDialog$2
+org.acra.DeviceFeaturesCollector
+org.acra.DropBoxCollector
+org.acra.DumpSysCollector
+org.acra.ErrorReporter
+org.acra.ErrorReporter$1
+org.acra.ErrorReporter$2
+org.acra.ErrorReporter$ReportsSenderWorker
+org.acra.LogCatCollector
+org.acra.ReflectionCollector
+org.acra.ReportField
+org.acra.ReportField: org.acra.ReportField[] values()
+org.acra.ReportField: org.acra.ReportField valueOf(java.lang.String)
+org.acra.ReportingInteractionMode
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode[] values()
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode valueOf(java.lang.String)
+org.acra.SettingsCollector
+org.acra.SharedPreferencesCollector
+org.acra.annotation.ReportsCrashes
+org.acra.sender.EmailIntentSender
+org.acra.sender.GoogleFormSender
+org.acra.sender.GoogleFormSender$1
+org.acra.sender.HttpPostSender
+org.acra.sender.ReportSender
+org.acra.sender.ReportSenderException
+org.acra.util.Base64
+org.acra.util.Base64$Coder
+org.acra.util.Base64$Decoder
+org.acra.util.Base64$Encoder
+org.acra.util.BoundedLinkedList
+org.acra.util.FakeSocketFactory
+org.acra.util.HttpRequest
+org.acra.util.HttpUtils
+org.acra.util.Installation
+org.acra.util.NaiveTrustManager

@@ -1,0 +1,215 @@
+fr.prados.contacts.Application
+fr.prados.contacts.ContactId
+fr.prados.contacts.ContactId: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.VolatileContact
+fr.prados.contacts.VolatileContact: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.VolatileData
+fr.prados.contacts.VolatileData: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.VolatileRawContact
+fr.prados.contacts.VolatileRawContact: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.lib.R$anim: int push_left_in
+fr.prados.contacts.lib.R$anim: int push_left_out
+fr.prados.contacts.lib.R$dimen: int button_minWidth
+fr.prados.contacts.lib.R$dimen: int edit_photo_size
+fr.prados.contacts.lib.R$dimen: int photo_resize
+fr.prados.contacts.lib.R$drawable: int app_icon
+fr.prados.contacts.lib.R$drawable: int ic_btn_done
+fr.prados.contacts.lib.R$drawable: int mini_app_icon
+fr.prados.contacts.lib.R$id: int account_password
+fr.prados.contacts.lib.R$id: int account_username
+fr.prados.contacts.lib.R$id: int btn_done
+fr.prados.contacts.lib.R$id: int invite
+fr.prados.contacts.lib.R$id: int label_password
+fr.prados.contacts.lib.R$id: int label_username
+fr.prados.contacts.lib.R$id: int login
+fr.prados.contacts.lib.R$id: int logo
+fr.prados.contacts.lib.R$layout: int mockwizard
+fr.prados.contacts.lib.R$raw: int eula
+fr.prados.contacts.lib.R$raw: int update
+fr.prados.contacts.lib.R$string: int app_name
+fr.prados.contacts.lib.R$string: int authenticating
+fr.prados.contacts.lib.R$string: int chkcontact_accept
+fr.prados.contacts.lib.R$string: int chkcontact_msg
+fr.prados.contacts.lib.R$string: int chkcontact_title
+fr.prados.contacts.lib.R$string: int copy_detail
+fr.prados.contacts.lib.R$string: int copy_summary
+fr.prados.contacts.lib.R$string: int err_access_right
+fr.prados.contacts.lib.R$string: int err_admin_limit_exceeded
+fr.prados.contacts.lib.R$string: int err_authent
+fr.prados.contacts.lib.R$string: int err_beta_expired
+fr.prados.contacts.lib.R$string: int err_connection_exception
+fr.prados.contacts.lib.R$string: int err_invalide_token_type
+fr.prados.contacts.lib.R$string: int err_invalide_version
+fr.prados.contacts.lib.R$string: int err_io_exception
+fr.prados.contacts.lib.R$string: int err_maxitem_exceeded
+fr.prados.contacts.lib.R$string: int err_network_done
+fr.prados.contacts.lib.R$string: int err_server_down
+fr.prados.contacts.lib.R$string: int err_size_exceeded
+fr.prados.contacts.lib.R$string: int err_time_limit_exceeded
+fr.prados.contacts.lib.R$string: int err_truncated
+fr.prados.contacts.lib.R$string: int err_unknown
+fr.prados.contacts.lib.R$string: int eula_accept
+fr.prados.contacts.lib.R$string: int eula_refuse
+fr.prados.contacts.lib.R$string: int eula_title
+fr.prados.contacts.lib.R$string: int help_need_android_version
+fr.prados.contacts.lib.R$string: int help_need_android_version_title
+fr.prados.contacts.lib.R$string: int hint_password
+fr.prados.contacts.lib.R$string: int hint_username
+fr.prados.contacts.lib.R$string: int import_detail
+fr.prados.contacts.lib.R$string: int import_summary
+fr.prados.contacts.lib.R$string: int importing_title
+fr.prados.contacts.lib.R$string: int importing_wait
+fr.prados.contacts.lib.R$string: int invite
+fr.prados.contacts.lib.R$string: int label_password
+fr.prados.contacts.lib.R$string: int label_username
+fr.prados.contacts.lib.R$string: int market_body
+fr.prados.contacts.lib.R$string: int market_ok
+fr.prados.contacts.lib.R$string: int market_rate
+fr.prados.contacts.lib.R$string: int market_rate_body
+fr.prados.contacts.lib.R$string: int market_rate_done
+fr.prados.contacts.lib.R$string: int market_rate_later
+fr.prados.contacts.lib.R$string: int market_rate_no
+fr.prados.contacts.lib.R$string: int market_rate_no_market
+fr.prados.contacts.lib.R$string: int market_title
+fr.prados.contacts.lib.R$string: int mock_account_setting_category
+fr.prados.contacts.lib.R$string: int mock_account_setting_summary
+fr.prados.contacts.lib.R$string: int mock_account_setting_title
+fr.prados.contacts.lib.R$string: int mock_driver_name
+fr.prados.contacts.lib.R$string: int mock_service_label
+fr.prados.contacts.lib.R$string: int mock_service_sync_label
+fr.prados.contacts.lib.R$string: int noException
+fr.prados.contacts.lib.R$string: int update_title
+fr.prados.contacts.lib.R$string: int validate
+fr.prados.contacts.lib.R$style: int MyTheme
+fr.prados.contacts.lib.R$style: int Theme_Transparent
+fr.prados.contacts.lib.R$xml: int import_contacts
+fr.prados.contacts.lib.R$xml: int mock_account_preferences
+fr.prados.contacts.lib.R$xml: int mock_authenticator
+fr.prados.contacts.lib.R$xml: int mock_sync_adapter
+fr.prados.contacts.providers.AuthQueryException
+fr.prados.contacts.providers.IProvider$Stub
+fr.prados.contacts.providers.IProvider$Stub$Proxy
+fr.prados.contacts.providers.PackageRemovedReceiver
+fr.prados.contacts.providers.Provider
+fr.prados.contacts.providers.QueryError
+fr.prados.contacts.providers.QueryException
+fr.prados.contacts.providers.QueryException: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.providers.QueryWarning
+fr.prados.contacts.providers.ResultsAndExceptions
+fr.prados.contacts.providers.ResultsAndExceptions: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.providers.TransportException
+fr.prados.contacts.providers.TransportException: android.os.Parcelable$Creator CREATOR
+fr.prados.contacts.providers.mock.Application
+fr.prados.contacts.providers.mock.MockAuthenticationService
+fr.prados.contacts.providers.mock.MockAuthenticator
+fr.prados.contacts.providers.mock.MockProvider
+fr.prados.contacts.providers.mock.MockProviderService
+fr.prados.contacts.providers.mock.MockSyncAdapterService
+fr.prados.contacts.providers.mock.MockWizardActivity
+fr.prados.contacts.providers.mock.R$anim: int push_left_in
+fr.prados.contacts.providers.mock.R$anim: int push_left_out
+fr.prados.contacts.providers.mock.R$dimen: int button_minWidth
+fr.prados.contacts.providers.mock.R$dimen: int edit_photo_size
+fr.prados.contacts.providers.mock.R$dimen: int photo_resize
+fr.prados.contacts.providers.mock.R$drawable: int app_icon
+fr.prados.contacts.providers.mock.R$drawable: int ic_btn_done
+fr.prados.contacts.providers.mock.R$drawable: int mini_app_icon
+fr.prados.contacts.providers.mock.R$id: int account_password
+fr.prados.contacts.providers.mock.R$id: int account_username
+fr.prados.contacts.providers.mock.R$id: int btn_done
+fr.prados.contacts.providers.mock.R$id: int invite
+fr.prados.contacts.providers.mock.R$id: int label_password
+fr.prados.contacts.providers.mock.R$id: int label_username
+fr.prados.contacts.providers.mock.R$id: int login
+fr.prados.contacts.providers.mock.R$id: int logo
+fr.prados.contacts.providers.mock.R$layout: int mockwizard
+fr.prados.contacts.providers.mock.R$raw: int eula
+fr.prados.contacts.providers.mock.R$raw: int update
+fr.prados.contacts.providers.mock.R$string: int app_name
+fr.prados.contacts.providers.mock.R$string: int authenticating
+fr.prados.contacts.providers.mock.R$string: int chkcontact_accept
+fr.prados.contacts.providers.mock.R$string: int chkcontact_msg
+fr.prados.contacts.providers.mock.R$string: int chkcontact_title
+fr.prados.contacts.providers.mock.R$string: int copy_detail
+fr.prados.contacts.providers.mock.R$string: int copy_summary
+fr.prados.contacts.providers.mock.R$string: int err_access_right
+fr.prados.contacts.providers.mock.R$string: int err_admin_limit_exceeded
+fr.prados.contacts.providers.mock.R$string: int err_authent
+fr.prados.contacts.providers.mock.R$string: int err_beta_expired
+fr.prados.contacts.providers.mock.R$string: int err_connection_exception
+fr.prados.contacts.providers.mock.R$string: int err_invalide_token_type
+fr.prados.contacts.providers.mock.R$string: int err_invalide_version
+fr.prados.contacts.providers.mock.R$string: int err_io_exception
+fr.prados.contacts.providers.mock.R$string: int err_maxitem_exceeded
+fr.prados.contacts.providers.mock.R$string: int err_network_done
+fr.prados.contacts.providers.mock.R$string: int err_server_down
+fr.prados.contacts.providers.mock.R$string: int err_size_exceeded
+fr.prados.contacts.providers.mock.R$string: int err_time_limit_exceeded
+fr.prados.contacts.providers.mock.R$string: int err_truncated
+fr.prados.contacts.providers.mock.R$string: int err_unknown
+fr.prados.contacts.providers.mock.R$string: int eula_accept
+fr.prados.contacts.providers.mock.R$string: int eula_refuse
+fr.prados.contacts.providers.mock.R$string: int eula_title
+fr.prados.contacts.providers.mock.R$string: int help_need_android_version
+fr.prados.contacts.providers.mock.R$string: int help_need_android_version_title
+fr.prados.contacts.providers.mock.R$string: int hint_password
+fr.prados.contacts.providers.mock.R$string: int hint_username
+fr.prados.contacts.providers.mock.R$string: int import_detail
+fr.prados.contacts.providers.mock.R$string: int import_summary
+fr.prados.contacts.providers.mock.R$string: int importing_title
+fr.prados.contacts.providers.mock.R$string: int importing_wait
+fr.prados.contacts.providers.mock.R$string: int invite
+fr.prados.contacts.providers.mock.R$string: int label_password
+fr.prados.contacts.providers.mock.R$string: int label_username
+fr.prados.contacts.providers.mock.R$string: int market_body
+fr.prados.contacts.providers.mock.R$string: int market_ok
+fr.prados.contacts.providers.mock.R$string: int market_rate
+fr.prados.contacts.providers.mock.R$string: int market_rate_body
+fr.prados.contacts.providers.mock.R$string: int market_rate_done
+fr.prados.contacts.providers.mock.R$string: int market_rate_later
+fr.prados.contacts.providers.mock.R$string: int market_rate_no
+fr.prados.contacts.providers.mock.R$string: int market_rate_no_market
+fr.prados.contacts.providers.mock.R$string: int market_title
+fr.prados.contacts.providers.mock.R$string: int mock_account_setting_category
+fr.prados.contacts.providers.mock.R$string: int mock_account_setting_summary
+fr.prados.contacts.providers.mock.R$string: int mock_account_setting_title
+fr.prados.contacts.providers.mock.R$string: int mock_driver_name
+fr.prados.contacts.providers.mock.R$string: int mock_service_label
+fr.prados.contacts.providers.mock.R$string: int mock_service_sync_label
+fr.prados.contacts.providers.mock.R$string: int noException
+fr.prados.contacts.providers.mock.R$string: int update_title
+fr.prados.contacts.providers.mock.R$string: int validate
+fr.prados.contacts.providers.mock.R$style: int MyTheme
+fr.prados.contacts.providers.mock.R$style: int Theme_Transparent
+fr.prados.contacts.providers.mock.R$xml: int import_contacts
+fr.prados.contacts.providers.mock.R$xml: int mock_account_preferences
+fr.prados.contacts.providers.mock.R$xml: int mock_authenticator
+fr.prados.contacts.providers.mock.R$xml: int mock_sync_adapter
+fr.prados.contacts.tools.RateActivity
+org.acra.ACRA
+org.acra.ACRA$1
+org.acra.ACRA$2
+org.acra.ACRAConfigurationException
+org.acra.Compatibility
+org.acra.ConfigurationInspector
+org.acra.CrashReportData
+org.acra.CrashReportDialog
+org.acra.CrashReportDialog$1
+org.acra.CrashReportDialog$2
+org.acra.DeviceFeaturesCollector
+org.acra.DropBoxCollector
+org.acra.DumpSysCollector
+org.acra.ErrorReporter
+org.acra.ErrorReporter$1
+org.acra.ErrorReporter$2
+org.acra.ErrorReporter$ReportsSenderWorker
+org.acra.LogCatCollector
+org.acra.ReflectionCollector
+org.acra.ReportField
+org.acra.ReportField: org.acra.ReportField[] values()
+org.acra.ReportField: org.acra.ReportField valueOf(java.lang.String)
+org.acra.ReportingInteractionMode
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode[] values()
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode valueOf(java.lang.String)
+org.acra.SettingsCollector
+org.acra.SharedPreferencesCollector

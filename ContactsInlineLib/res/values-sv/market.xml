@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- *** Market *** -->
+
+	<!-- Title if market is not found. -->
+	<string name="market_title">Hittar inte Market</string>
+
+	<!-- Body if market is not found. -->
+	<string name="market_body">"Sök efter alla utökningar av  \"Contacts In Line\" i Android Market."</string>
+
+	<!-- Button if market is not found. -->
+	<string name="market_ok">Ok</string>
+	
+	<string name="market_rate">Recensera?</string>
+	<string name="market_rate_body">Om du tycker att Contacts In Line är en bra applikation recensera den gärna på Android Market. Tack för ditt stöd!</string>
+	<string name="market_rate_done">Recensera nu</string>
+	<string name="market_rate_later">Recensera senare</string>
+	<string name="market_rate_no">Nej tack</string>
+	<string name="market_rate_no_market">"Recensera via Android Market, sök efter \"Contacts In Line\"."</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- Wizard activity label. Use in title when create a new account. -->
+	<string name="wizard_activity_label">Skapa ett LDAP-konto</string>
+
+	<!-- Wizard activity label. Use in title when update an account. -->
+	<string name="wizard_update_label">Uppdatera ett LDAP-konto</string>
+
+	<!-- Next button in wizard -->
+	<string name="next">Nästa</string>
+
+	<!-- Back button in wizard -->
+	<string name="back">Tillbaka</string>
+
+	<!-- Finish button in wizard -->
+	<string name="finish">Klart</string>
+
+	<!-- Advanced button in wizard -->
+	<string name="avanced">Avancerat</string>
+
+	<string name="help">Hjälp</string>
+	<string name="help_title">Anpassa</string>
+	<string name="help_body">Det är möjligt att ändra mappningsreglerna för att anpassa kontot till din katalogtjänst speciella behov, se här.</string>
+	<string name="help_body_link">se här</string>
+	<string name="help_done">Ok</string>
+
+	<!-- ** Page 1 ** -->    
+	<!-- Help text to propose to enter a ldap server name. -->
+	<string name="accounts_welcome">Du kan oftast konfigurera LDAP med några få steg.</string>
+
+	<!-- Field name for host name -->
+	<string name="account_setup_hostname">LDAP-server</string>
+	<!-- Field hint for host name -->
+	<string name="ldap_server_name_hint">Adress till din LDAP-server</string>
+
+	<!-- ** Page 2 ** -->
+	<!-- Help text if we know this hostname and we havent authentication. -->
+	<string name="account_know">Denna katalogtjänst är känd.\nDu kan kontrollera eller uppdatera de avancerade inställningarna.</string>
+	<!-- Help text if we know this hostname and we must have authentication. -->
+	<string name="account_know_password">Denna katalogtjänst är känd.\nAnge bara dina inloggningsuppgifter och tryck klart.</string>
+
+	<!-- Hint in short user name field -->	    
+	<string name="account_setup_username_hint">Ange ditt användarid</string>
+
+	<!-- ** Page 3 ** -->
+	<!-- Hint in full user name field -->
+	<string name="account_setup_usernamefull_hint">Ange fullt LDAP-anvädarid (DN)</string>
+
+	<!-- Field name for username -->
+	<string name="account_setup_incoming_username_label">Användarid</string>
+
+	<!-- Hint in password field -->
+	<string name="account_setup_password_hint">Lösenord</string>
+
+	<!-- Field name for password -->
+	<string name="account_setup_incoming_password_label">Ange ditt lösenord</string>
+    
+	<!-- Radio field name for security. -->
+	<string name="account_setup_crypt">Säkerhet</string>
+
+	<!-- Radio no crypt -->
+	<string name="account_normal">Okrypterat</string>
+
+	<!-- Radio SSL -->
+	<string name="account_ssl">SSL</string>
+
+	<!-- Radio TLS -->
+	<string name="account_tls">TLS</string>
+    
+
+	<!-- Basedn optional field name -->
+	<string name="account_setup_basedn_opt_label">Sökbas (frivillig)</string>
+
+	<!-- If basedn can't be found, basedn field name -->
+	<string name="account_setup_basedn_label">Sökbas</string>
+
+	<!-- Hint for basedn -->
+	<string name="account_setup_basedn_hint">Ange din sökbas (DN)</string>
+    
+	<!-- Mapping rule field name -->
+	<string name="account_setup_mapping_label">Mappningsregler (frivillig)</string>
+
+	<!-- Hint for mapping rule (see if is empty) -->
+	<string name="account_setup_mapping_hint">Ange XML-fil för mappningsregler</string>
+    
+	<!-- In long userid, this is the part to show how to add short login. Like uid=<login>,dc=... -->
+	<string name="account_setup_userid">&lt;användarid&gt;</string>
+    
+	<!-- Title in dialog if error with host name -->
+	<string name="err_title">Felaktig parameter</string>
+
+	<!-- Err when host name is not found. -->
+	<string name="err_host_not_found">DNS-namn inte hittat!</string>
+</resources>

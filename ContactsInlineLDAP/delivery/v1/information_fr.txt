@@ -1,0 +1,11 @@
+Consultez les annuaires LDAP en ligne comme s'ils étaient présents dans le téléphone !
+Recherchez par nom, email ou téléphone et n'importez que les contacts que vous souhaitez conserver.
+Offres au forfait pour les entreprises, et réduction de 50% si vous êtes dans le secteur de l'éducation !
+
+Cette application est un plugin de "Contact en ligne" à installer également.
+
+Contactez moi pour la traduction.
+
+En cas de problème, contactez moi par mail plutôt que ne mettre une mauvaise note. Je ferai mon possible pour le support et tenir compte de votre modèle.
+
+fr.prados.contacts.providers

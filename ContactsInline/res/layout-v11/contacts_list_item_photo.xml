@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="?attr/contact_browser_list_padding_left"
+    android:layout_marginRight="?attr/contact_browser_list_padding_right" 
+>
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/list_section"
+    />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+	    android:layout_marginLeft="?attr/contact_browser_list_padding_left"
+	    android:layout_marginRight="?attr/contact_browser_list_padding_right" 
+        >
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/label"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/label"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <fr.prados.contacts.ui.ExQuickContactBadge
+            android:id="@+id/photo"
+            style="@*android:style/Widget.QuickContactBadge.WindowMedium"
+            android:layout_width="@dimen/edit_photo_size"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            />
+         <fr.prados.contacts.ui.ExQuickContactBadge
+             android:id="@+id/noQuickContactPhoto"
+             style="@*android:style/Widget.QuickContactBadge.WindowMedium"
+             android:layout_width="@dimen/edit_photo_size"
+             android:layout_height="fill_parent"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:background="@null"
+             android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/label"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/photo"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</LinearLayout>

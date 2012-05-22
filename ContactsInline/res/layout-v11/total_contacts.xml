@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" 
+	android:layout_height="@dimen/list_section_height">
+
+	<TextView
+	    android:id="@+id/totalContactsText"
+	    android:layout_width="0dip"
+	    android:layout_height="25dip"
+	    android:textColor="#ffbfbfbf"
+	    android:textSize="14sp"
+	    android:textStyle="normal"
+	    android:paddingLeft="?attr/contact_browser_list_padding_left"
+	    android:paddingRight="?attr/contact_browser_list_padding_right"
+	    android:gravity="right"
+	    android:layout_weight="1"
+	/>
+</LinearLayout>

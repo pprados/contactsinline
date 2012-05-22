@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** Check presence of application Contact *** -->
+
+	<!-- Title when app. contact not found -->
+	<string name="chkcontact_title">安装</string>
+	<!-- Text in dialog when app. contact not found -->
+	<string name="chkcontact_msg">要先安装程序\n\"在线通讯录\"\n才可以使用此部件.</string>
+	<!-- Text button in dialog when app. contact not found -->
+	<string name="chkcontact_accept">Ok</string>
+
+    <!-- The dialog box title displayed when the android version is not supported -->
+    <string name="help_need_android_version_title">对不起</string>
+    <!-- The text displayed when the android version is not supported -->
+    <string name="help_need_android_version">"此程序并不支持您的Android系统版本."</string>
+
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:id="@+id/page3"
+	android:fillViewport="true">
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical">
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="0dip" android:layout_weight="1"
+		android:orientation="vertical">
+		<TextView android:id="@+id/label_hostname"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginBottom="10dip" android:textSize="20sp"
+			android:textColor="?android:attr/textColorPrimary" />
+		<TextView android:text="@string/account_setup_incoming_username_label"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="?android:attr/textColorPrimary" />
+		<EditText android:id="@+id/account_username"
+			android:hint="@string/account_setup_usernamefull_hint"
+			android:inputType="textNoSuggestions" android:imeOptions="actionNext"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" />
+
+		<TextView android:text="@string/account_setup_incoming_password_label"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="?android:attr/textColorPrimary" />
+		<EditText android:id="@+id/account_password" android:hint="@string/account_setup_password_hint"
+			android:inputType="textPassword" android:imeOptions="actionNext"
+			android:layout_height="wrap_content" android:layout_width="fill_parent" />
+
+		<TextView android:text="@string/account_setup_crypt"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="?android:attr/textColorPrimary" />
+		<RadioGroup android:id="@+id/ldap_crypt"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<RadioButton android:id="@+id/account_normal"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:checked="true" android:text="@string/account_normal" />
+			<RadioButton android:id="@+id/account_ssl"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="@string/account_ssl" />
+			<RadioButton android:id="@+id/account_tls"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="@string/account_tls" />
+		</RadioGroup>
+
+		<TextView android:id="@+id/account_label_basedn"
+			android:text="@string/account_setup_basedn_opt_label"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="?android:attr/textColorPrimary" />
+		<EditText android:id="@+id/account_basedn" android:hint="@string/account_setup_basedn_hint"
+			android:inputType="textNoSuggestions" android:imeOptions="actionNext"
+			android:layout_height="wrap_content" android:ellipsize="end"
+			android:layout_width="fill_parent" />
+
+		<TextView android:text="@string/account_setup_mapping_label"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="?android:attr/textColorPrimary" />
+			
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+		>
+			<EditText 
+				android:id="@+id/account_mapping"
+				android:hint="@string/account_setup_mapping_hint" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+			  	android:text="@string/default_xml"
+				android:inputType="textNoSuggestions" 
+				android:imeOptions="actionDone" 
+			  	android:layout_alignParentLeft="true" 
+			  	android:layout_centerVertical="true" android:layout_toLeftOf="@+id/account_help"/>
+			<ImageButton 
+				android:id="@+id/account_help"
+				android:layout_width="wrap_content" 
+				android:layout_alignParentRight="true"
+				android:src="@android:drawable/ic_menu_help" 
+				android:contentDescription="@string/help_button"
+				android:layout_height="wrap_content"/>
+		</RelativeLayout>		
+		
+	</LinearLayout>
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="54dip" android:background="@android:drawable/bottom_bar">
+			<Button android:id="@+id/btn_back_p3" 
+				android:text="@string/back"
+				android:drawablePadding="10dip" 
+				android:drawableLeft="@drawable/ic_btn_back"
+				android:minWidth="@dimen/button_minWidth" 
+				android:layout_margin="5dip"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true" />
+			<Button android:id="@+id/btn_done_p3" 
+				android:text="@string/finish"
+				android:drawablePadding="10dip" 
+				android:drawableRight="@drawable/ic_btn_done"
+				android:minWidth="@dimen/button_minWidth" 
+				android:layout_margin="5dip"
+				android:layout_alignParentRight="true" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_centerVertical="true" />
+		</RelativeLayout>
+	</LinearLayout>
+</ScrollView>

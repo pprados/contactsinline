@@ -1,0 +1,19 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+	<!-- The title in dialog when search online results -->
+	<string name="search_title">Procurar contactos</string>
+	
+	<!-- The body in dialog when search online results -->
+	<string name="search_wait">Espere por favor&#8230;</string>
+
+	<!-- The label for the search results for this app. -->
+	<string name="search_label">Contactos online</string>
+
+	<!-- The description that will show up in the search field. -->
+	<string name="search_hint">Nome, telef, e-mail</string>
+
+	<!-- The description of search settings -->
+	<string name="settings_description">Contacts online.</string>
+
+
+</resources>

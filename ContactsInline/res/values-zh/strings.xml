@@ -1,0 +1,11 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- The application name -->
+	<string name="app_name">在线通讯录</string>
+
+	<!-- Error when contact providers -->
+	<string name="err_provider">通讯录供应发生内部错误.</string>
+
+	<!-- Message to find extension when no marker is detected. -->
+	<string name="extension_plugins">在您的软件市场搜索在线通讯录的插件.</string>
+</resources>

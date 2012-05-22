@@ -1,0 +1,51 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- No error -->
+	<string name="noException"/>
+
+	<!-- Truncate the response to limit the memory usage or it's a limitation of the remote serveur-->
+	<string name="err_truncated">Réponse truncated. Network error or server limitation.</string>
+
+	<!-- The network is done. It's not necessary to try a request. -->
+	<string name="err_network_done">Network is done. Try later.</string>
+	
+	<!-- The version of the extension is incompatible with the version of "contact inline" -->
+	<string name="err_invalide_version">Invalid version. Update applications and plugins.</string>
+
+	<!-- The toke type for authentification is invalid -->
+	<string name="err_invalide_token_type">Invalid authTokenType.</string>
+
+	<!-- Connexion error. -->
+	<string name="err_unknown">Connexion error.</string>
+
+	<!-- Authentification is rejected. -->
+	<string name="err_authent">Invalide authentification.</string>
+
+	<!-- Error when administrator in LDAP server put a privileges -->
+	<string name="err_access_right">Login error due to access rights.</string>
+
+	<!-- Error when administrator in LDAP server put a limit -->
+	<string name="err_admin_limit_exceeded">Administrator limit exceeded.</string>
+
+	<!-- Response size is to big. -->
+	<string name="err_size_exceeded">Response truncated. Response size exceeded.</string>
+
+	<!-- The remote server is down. -->
+	<string name="err_server_down">The server is down.</string>
+
+	<!-- The time limit to receive a response is exceeded. -->
+	<string name="err_time_limit_exceeded">Time limit exceeded.</string>
+
+	<!-- The number of record in the response is exceeded. -->
+	<string name="err_maxitem_exceeded">Response truncated. Number of records exceeded.</string>
+
+	<!-- Impossible to establish connection. -->
+	<string name="err_connection_exception">Unable to establish connection.</string>
+
+	<!-- Error with the network -->
+	<string name="err_io_exception">Network error.</string>
+
+	<!-- Beta version is expired. -->
+	<string name="err_beta_expired">Beta expired.</string>
+
+</resources>

@@ -1,0 +1,7 @@
+Recherchez par nom, email ou numéro de téléphone et n'importez que les contacts que vous souhaitez conserver.
+
+Des extensions sont proposées pour LDAP, (bientôt les pages blanches), etc.
+
+Vous pouvez m'aider à la traduction en m'envoyant vos coordonnées !
+
+En cas de problème, contactez moi par mail plutôt que ne mètre une mauvaise note. Je ferai mon possible pour le support et tenir compte de votre modèle.

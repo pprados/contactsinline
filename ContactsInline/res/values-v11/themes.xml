@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="_BaseTheme" parent="android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
+        <item name="android:actionBarItemBackground">@drawable/action_bar_item_background</item>
+        <item name="android:actionBarWidgetTheme">@style/ContactsActionBarTheme</item>
+        <item name="android:actionBarTabStyle">@style/ContactsActionBarTabView</item>
+    	<item name="contact_browser_list_padding_left">30dip</item>
+    	<item name="contact_browser_list_padding_right">30dip</item>
+    	<item name="showHeader">true</item>
+<!--         <item name="android:windowBackground">@color/list_background</item> -->
+    </style>
+	<style name="Theme" parent="style/_BaseTheme"/>
+	
+    <style name="ThemeHelp" parent="android:Theme.DeviceDefault.Light.Dialog">
+        <item name="contact_browser_list_padding_left">16dip</item>
+        <item name="contact_browser_list_padding_right">16dip</item>
+    </style>
+	
+    <style name="ContactsActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_custom_blue_inverse_holo</item>
+        <item name="android:backgroundStacked">@drawable/ab_solid_custom_blue_inverse_holo</item>
+    </style>
+    <style name="ContactsActionBarTheme" parent="@android:style/Theme.Holo">
+        <item name="android:textColorHint">#CCCCCC</item>
+    </style>
+    <style name="ContactsActionBarTabView" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/action_bar_tab</item>
+    </style>
+    
+
+</resources>

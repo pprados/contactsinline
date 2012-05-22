@@ -1,0 +1,5 @@
+Lookup into online directories as if they were embedded into your telephone.
+Search for names, emails or phone number and keep only the ones you want.
+Several plugins are available for LDAP, (soon for the White pages,...), etc.
+
+In case of problems, please contact me via email instead of giving it low rating. I'll do my best to support your device too.

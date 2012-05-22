@@ -1,0 +1,42 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** Menus *** -->
+	<!-- The menu entry that invokes search. -->
+	<string name="menu_search">Sök</string>
+    
+	<!-- The menu entry that invokes search. -->
+	<string name="menu_help">TODO</string>
+	
+	<!-- The menu entry that invokes standard contacts. -->
+	<string name="menu_std_contacts">Kontakter</string>
+    
+	<!-- Context menu item used to import inline contact to phone -->
+	<string name="menu_import">Importera</string>
+    
+	<!-- The menu entry that invokes account. -->
+	<string name="menu_accounts">Konton</string>
+    
+	<!-- The menu entry that invokes market with extensions. -->
+	<string name="menu_extensions">Utökningar</string>
+    
+	<!-- The menu entry that invokes the options. -->
+	<string name="menu_settings">Inställningar</string>
+    
+	<!-- Context menu item used to view the details for a specific contact -->
+	<string name="ctx_menu_viewContact">Visa kontakt</string>
+    
+	<!-- Context menu item used to call a specific contact when viewing the details of that contact. -->
+	<string name="ctx_menu_call">Ring kontakt</string>
+    
+	<!-- Context menu item used to send an SMS or MMS message to a specific phone number or a contacts default phone number -->
+	<string name="ctx_menu_send_sms">SMSa kontakt</string>
+    
+	<!-- Context menu item used to send an email message to a specific email address -->
+	<string name="ctx_menu_sendEmail">Skicka e-post</string>
+
+	<!-- Context menu item used to add a star to a contact, which makes that contact show up at the top of favorites -->
+	<string name="ctx_menu_add_star">Lägg till favoriter</string>
+    
+	<!-- Context menu item used to import inline contact to phone -->
+	<string name="ctx_menu_import">Importera</string>
+    
+</resources>

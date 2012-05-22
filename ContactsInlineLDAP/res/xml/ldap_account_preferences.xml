@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  
+    <PreferenceCategory
+            android:title="@string/ldap_account_setting_category" />
+ 
+    <PreferenceScreen
+        android:key="account_settings"
+        android:title="@string/ldap_account_setting_title"
+        android:summary="@string/ldap_account_setting_summary">
+        <intent
+            android:targetPackage="fr.prados.contacts.providers.ldap.generic.beta"
+            android:targetClass="fr.prados.contacts.providers.ldap.generic.GenericWizardActivity" 
+             />
+    </PreferenceScreen>
+</PreferenceScreen>

@@ -1,0 +1,48 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** Menus *** -->
+	<!-- The menu entry that invokes search. -->
+	<string name="menu_search">Chercher</string>
+    
+	<!-- The menu entry that invokes search. -->
+	<string name="menu_help">Aide</string>
+	
+	<!-- The menu entry that invokes standard contacts. -->
+	<string name="menu_std_contacts">Contacts</string>
+    
+	<!-- Context menu item used to import inline contact to phone -->
+	<string name="menu_import">Importer</string>
+    
+	<!-- Context menu item used to import result contact to phone -->
+	<string name="menu_import_result">Importer result.</string>
+    
+	<!-- The menu entry that invokes account. -->
+	<string name="menu_accounts">Comptes</string>
+    
+	<!-- The menu entry that invokes market with extensions. -->
+	<string name="menu_extensions">Extensions</string>
+    
+	<!-- The menu entry that invokes the options. -->
+	<string name="menu_settings">Paramètres</string>
+    
+	<!-- Context menu item used to import inline contact to phone -->
+	<string name="menu_market_rate">Note l\'application</string>
+    
+	<!-- Context menu item used to view the details for a specific contact -->
+	<string name="ctx_menu_viewContact">Voir le contact</string>
+    
+	<!-- Context menu item used to call a specific contact when viewing the details of that contact. -->
+	<string name="ctx_menu_call">Appeler le contact</string>
+    
+	<!-- Context menu item used to send an SMS or MMS message to a specific phone number or a contacts default phone number -->
+	<string name="ctx_menu_send_sms">Envoyer un SMS</string>
+    
+	<!-- Context menu item used to send an email message to a specific email address -->
+	<string name="ctx_menu_sendEmail">Envoyer un mail</string>
+
+	<!-- Context menu item used to add a star to a contact, which makes that contact show up at the top of favorites -->
+	<string name="ctx_menu_add_star">Ajouter aux favoris</string>
+    
+	<!-- Context menu item used to import inline contact to phone -->
+	<string name="ctx_menu_import">Importer</string>
+    
+</resources>

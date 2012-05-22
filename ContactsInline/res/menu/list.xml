@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+     <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/magnifying_glass"
+        android:title="@string/menu_search"
+        android:titleCondensed="@string/menu_search"
+        android:visible="true" 
+		android:showAsAction="ifRoom|withText"
+        android:menuCategory="container" 
+        android:enabled="true" 
+        android:orderInCategory="1"
+        android:actionViewClass="android.widget.SearchView"
+        />
+    <item
+        android:id="@+id/menu_accounts"
+        android:icon="@drawable/ic_menu_account_list"
+        android:title="@string/menu_accounts"
+        android:titleCondensed="@string/menu_accounts"
+        android:visible="true" 
+        android:showAsAction="never|collapseActionView"
+        android:menuCategory="secondary" 
+        android:orderInCategory="1"/>
+
+    <item
+        android:id="@+id/menu_extensions"
+        android:icon="@drawable/ic_settings_applications"
+        android:title="@string/menu_extensions"
+        android:titleCondensed="@string/menu_extensions"
+        android:visible="true" 
+        android:showAsAction="never|collapseActionView"
+        android:menuCategory="secondary" 
+        android:orderInCategory="2"/>
+    
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="@string/menu_help"
+        android:titleCondensed="@string/menu_help"
+        android:visible="true" 
+        android:showAsAction="never|collapseActionView"
+        android:menuCategory="secondary" 
+        android:orderInCategory="3"/>
+    
+</menu>

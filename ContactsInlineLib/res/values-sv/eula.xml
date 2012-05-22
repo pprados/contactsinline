@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** EULA *** -->
+	<!-- Title for EULA -->
+	<string name="eula_title">Licensavtal</string>
+
+	<!-- Button for accept EULA -->
+	<string name="eula_accept">Acceptera</string>
+
+	<!-- Button for refuse EULA -->
+	<string name="eula_refuse">Avbryt</string>
+</resources>

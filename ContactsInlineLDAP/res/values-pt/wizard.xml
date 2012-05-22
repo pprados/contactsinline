@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!-- Wizard activity label. Use in title when create a new account. -->
+	<string name="wizard_activity_label">Criar uma conta LDAP</string>
+
+	<!-- Wizard activity label. Use in title when update an account. -->
+	<string name="wizard_update_label">Adaptar uma conta LDAP</string>
+
+	<!-- Next button in wizard -->
+	<string name="next">Seguinte</string>
+
+	<!-- Back button in wizard -->
+	<string name="back">Anterior</string>
+
+	<!-- Finish button in wizard -->
+	<string name="finish">Terminar</string>
+
+	<!-- Advanced button in wizard -->
+	<string name="avanced">Configuração avançada</string>
+
+	<!-- ** Page 1 ** -->    
+	<!-- Help text to propose to enter a ldap server name. -->
+	<string name="accounts_welcome">Pode configurar LDAP para várias contas em poucas etapas.</string>
+
+	<!-- Field name for host name -->
+	<string name="account_setup_hostname">Nome do servidor LDAP</string>
+	<!-- Field hint for host name -->
+	<string name="ldap_server_name_hint">O nome do seu servidor</string>
+
+	<!-- ** Page 2 ** -->
+	<!-- Help text if we know this hostname and we havent authentication. -->
+	<string name="account_know">Essa fonte de contactos é conhecida.\nPode validar ou adaptar as configurações avançadas.</string>
+	<!-- Help text if we know this hostname and we must have authentication. -->
+	<string name="account_know_password">Essa fonte de contactos é conhecida.\nDigite únicamente a sua identificação e valide.</string>
+
+	<!-- Hint in short user name field -->	    
+	<string name="account_setup_username_hint">Username (curto)</string>
+
+	<!-- ** Page 3 ** -->
+	<!-- Hint in full user name field -->
+	<string name="account_setup_usernamefull_hint">Username LDAP completo</string>
+
+	<!-- Field name for username -->
+	<string name="account_setup_incoming_username_label">Username</string>
+
+	<!-- Hint in password field -->
+	<string name="account_setup_password_hint">Password</string>
+
+	<!-- Field name for password -->
+	<string name="account_setup_incoming_password_label">Password</string>
+    
+	<!-- Radio field name for security. -->
+	<string name="account_setup_crypt">Segurança</string>
+
+	<!-- Radio no crypt -->
+	<string name="account_normal">Em claro</string>
+
+	<!-- Radio SSL -->
+	<string name="account_ssl">SSL</string>
+
+	<!-- Radio TLS -->
+	<string name="account_tls">TLS</string>
+    
+	<!-- Basedn optional field name -->
+	<string name="account_setup_basedn_opt_label">Base DN (Opção)</string>
+
+	<!-- If basedn can't be found, basedn field name -->
+	<string name="account_setup_basedn_label">Base DN</string>
+
+	<!-- Hint for basedn -->
+	<string name="account_setup_basedn_hint">Chave da base LDAP</string>
+    
+	<!-- Mapping rule field name -->
+	<string name="account_setup_mapping_label">Regras de associação (Opção)</string>
+
+	<!-- Hint for mapping rule (see if is empty) -->
+	<string name="account_setup_mapping_hint">Ficheiro XML</string>
+    
+	<!-- In long userid, this is the part to show how to add short login. Like uid=<login>,dc=... -->
+	<string name="account_setup_userid">&lt;username&gt;</string>
+    
+	<!-- Title in dialog if error with host name -->
+	<string name="err_title">Parâmetro incorreto</string>
+
+	<!-- Err when host name is not found. -->
+	<string name="err_host_not_found">Servidor não encontrado.</string>
+</resources>

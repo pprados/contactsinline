@@ -1,0 +1,36 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!--     <string name="help_title">Help</string> -->
+<!--     <string name="help_part1">HELP TODO</string> -->
+<!--     <string name="help_sample_name">John FOBAR</string> -->
+<!--     <string name="help_part2">HELP TODO</string> -->
+    
+    <!-- The text displayed at startup page, before the connection to provider are finished -->
+    <string name="noContactsHelpText"/>
+
+    <!-- The text displayed when the contacts list is empty and no provider is detected -->
+    <string name="help_need_provider">Não foi encontrado nenhum add-on para adicionar uma conta.\nPara encontrar Google Play, clique <a href="market://search?q=fr.prados.contacts.providers">aqui</a>.
+    </string>
+
+    <!-- The text displayed when the contacts list is empty and no account is detected -->
+    <string name="help_need_account">Nenhuma conta registada.\n\nPara adicionar alguma, prima <b>Menu</b> e toque :\n\n
+        <li>&#160;<b>Contas</b> para adicionar ou configurar uma fonte de contactos a sincronizar com o telefone.\n\n</li>
+        <li>&#160;<b>Add-ons</b> para acrescentar programas adicionais no caso de novos tipos de fontes de contactos.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty while displaying results after searching contacts -->
+    <string name="help_first_time">Para procurar contactos, prima <b>Menu</b> et toque :\n\n
+        <li>&#160;<b>Procurar</b> para digitar um nome, um número de telefone ou um endereço email.\n\n</li>
+        <!-- li><b>Importer</b> pour connecter les contacts interne avec les contacts distants.\n\n</li-->
+        <li>&#160;<b>Contas</b> para adicionar ou modificar uma fonte de contactos.\n\n</li>
+        <li>&#160;<b>Add-ons</b> para acrescentar programas adicionais no caso de novos tipos de fontes de contactos.</li>
+    </string>
+
+    <!-- The text displayed when the contacts list is empty for an intent to select contact -->
+    <string name="help_with_search">Digite um nome, um endereço mail, um número de telefone e outras informações separadas por uma vírgula (Cidade, País, etc&#8230;)</string>
+
+    <!-- The dialog box title displayed when the standard contact application is not found -->
+    <string name="help_need_account_app_title">Desculpe</string>
+    <!-- The text displayed when the standard contact application is not found -->
+    <string name="help_need_account_app">"Nenhuma aplicação de gestão de contactos encontrada."</string>
+
+</resources>

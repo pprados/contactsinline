@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mock Provider</string>
+    <string name="mock_service_label">Mock service</string>
+    <string name="mock_driver_name">Mock driver</string>
+    <string name="mock_service_sync_label">Mock sync. service</string>
+
+	<string name="authenticating">Authenticating...</string>
+    <string name="validate">Validate</string>
+	<!-- Minimal With for button -->	
+	<dimen name="button_minWidth">90sp</dimen>
+	<string name="invite">Hello in mock driver. The password is \'password\'.</string>
+	<string name="label_username">Username:</string>
+	<string name="hint_username">Username</string>
+	<string name="label_password">Password:</string>
+	<string name="hint_password">Password</string>
+	<string name="err_authent">Error in authent</string>
+	
+	<!-- In account page, the caterory to add a new settings. -->
+	<string name="mock_account_setting_category">General Settings</string>
+	<!-- In account page, the add-on account settings to update the  parameters. -->
+	<string name="mock_account_setting_title">Account Settings</string>
+	<!-- In account page, the help in add-on -->
+	<string name="mock_account_setting_summary">Edit Mock parameters.</string>
+	
+</resources>

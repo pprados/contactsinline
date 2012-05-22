@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Text in waiting dialog when try to authenticate -->
+	<string name="ldap_authenticating">Identificação&#8230;</string>
+
+	<!-- In account page, the help in add-on -->
+	<string name="ldap_account_setting_summary">Modificar a configuração LDAP.</string>
+	<!-- In account page, the caterory to add a new settings. -->
+	<string name="ldap_account_setting_category">Configuração geral</string>
+	<!-- In account page, the add-on account settings to update the LDAP parameters. -->
+	<string name="ldap_account_setting_title">Definições da conta</string>
+	<!-- Finish button in wizard -->
+	<string name="validate">Validar</string>
+</resources>

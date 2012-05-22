@@ -1,0 +1,11 @@
+Lookup into online directories as if they were embedded into your telephone.
+Search for names, emails or phone number and keep only the ones you want.
+Several plugins are available for LDAP, (soon for the White pages,...), etc.
+
+This application is a plugin of "Contact in line". Install it first.
+
+Contact me to translate.
+
+In case of problems, please contact me via email instead of giving it low rating. I'll do my best to support your device too.
+
+fr.prados.contacts.providers

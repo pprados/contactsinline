@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- *** Market *** -->
+
+	<!-- Title if market is not found. -->
+	<string name="market_title">Marché</string>
+
+	<!-- Body if market is not found. -->
+	<string name="market_body">"Avec le marché, recherchez toutes les extensions de \"Contact Inline\"."</string>
+
+	<!-- Button if market is not found. -->
+	<string name="market_ok">Ok</string>
+
+	<string name="market_rate">Qu\’en pensez-vous ?</string>
+	<string name="market_rate_body">Si vous appréciez l\'application, prenez un moment pour la noter. Merci pour votre soutien.</string>
+	<string name="market_rate_done">Noter</string>
+	<string name="market_rate_later">Plus tard</string>
+	<string name="market_rate_no">Non merci</string>
+	<string name="market_rate_no_market">"Avec le market, recherchez \"Contacts en ligne\"."</string>
+</resources>

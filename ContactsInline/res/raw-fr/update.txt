@@ -1,0 +1,8 @@
+2.0: Portage sur ice cream sandwich. Fixe bugs.
+
+1.2: 
+ - Accepte les enregistrements mutli-valuées
+ - Fixe bug lors de l'import
+ - Fixe bug lors de la normalisation des numéros
+1.1: Supression automatique des plugins
+1.0: Version publique, compatible 1.3+

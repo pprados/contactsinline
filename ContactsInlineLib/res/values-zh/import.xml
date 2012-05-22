@@ -1,0 +1,19 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Import dialog title -->
+	<string name="importing_title">导入</string>
+
+	<!-- Import dialog message -->
+	<string name="importing_wait">请耐心等待&#8230;</string>
+
+	<!-- Summary in ligne added in contact for propose to import the contacts -->
+	<string name="import_detail">导入通讯录</string>
+
+	<!-- Detail in ligne added in contact for propose to import the contacts. Portrai version -->
+	<string name="import_summary">与{0}同步</string>
+
+	<!-- Summary in ligne added in contact for propose to copy the contacts -->
+	<string name="copy_detail">保存通讯录</string>
+	<!-- Detail in ligne added in contact for propose to copy the contacts. -->
+	<string name="copy_summary">在通讯录里保存一个副本</string>
+</resources>

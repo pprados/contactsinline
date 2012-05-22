@@ -1,0 +1,18 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Import dialog title -->
+	<string name="importing_title">Importerar</string>
+
+	<!-- Import dialog message -->
+	<string name="importing_wait">Vänta&#8230;</string>
+
+	<!-- Detail in ligne added in contact for propose to import the contacts. -->
+	<string name="import_detail">Importera kontakterna</string>
+	<!-- Summary in ligne added in contact for propose to import the contacts -->
+	<string name="import_summary">Importera</string>
+
+	<!-- Detail in ligne added in contact for propose to copy the contacts. -->
+	<string name="copy_detail">Spara kontakterna</string>
+	<!-- Summary in ligne added in contact for propose to copy the contacts -->
+	<string name="copy_summary">Spara</string>
+</resources>

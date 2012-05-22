@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This file describe the mapping rules to transform an LDAP record to Android record.
+It's possible to declare the classes and hierarchies of LDAP types.
+For each situation, it's possible to declare the android mime type, the column to set, 
+and another column with a constant value.   
+
+<mapping
+	@timeout			: timeout to receive a response with differents LDAP request
+	@requesttimeout		: timeout to receive a response for one LDAP request
+	@connectiontimeout	: timeout to connect to LDAP server
+	@sizelimit			: buffer size limit for response
+	@maxrecord			: maximum number of record received
+	@filter 			: specific ldap class filter (optional)
+	@scope				: Ldap scope (one,base,sub)
+	@mcc				: Mobile Country Code for normalize phone number. -1 for no normalize ; zero for use phone mcc, other value for specifi country.
+	@names				: attributes candidates to search a contact name
+	@phones				: attributes candidates to search a contact by phone number
+	@mails				: attributes candidates to search contacts by e-mails
+	@attrs				: list of attributes to retrieve from LDAP record
+	@photos				: list of attributes to retrieve photos
+	<type/>*
+	<class/>*
+</mapping>
+	
+<type
+	@id					: LDAP type name
+	@display			: alias name
+	@type				: type of value
+	@mime				: mime Android type for data record (see http://developer.android.com/reference/android/provider/ContactsContract.html)
+	@conv				: algorithm to convert value before put in data record.
+	@col				: column in data record for put the value.
+	@extraType			: type for extra constant value in the same record
+	@extraCol			: extra column for constant value
+	@extraValue			: extra constant value
+/>
+<class 
+	@id					: LDAP class name 
+	@sup				: super class id
+>
+	<must/>*
+	<may/>*
+</class>
+
+Attributs in class context
+<must
+	@ref				: type id
+</>
+Attributs in class context
+<may
+	@ref				: type id
+</>
+	
+ -->	
+<mapping
+	timeout="60"
+	requesttimeout="5"
+	connectiontimeout="5"
+	sizelimit="100000"
+	maxrecord="30"
+	scope="sub"
+	filter=""
+	mcc="0"	
+	names="cn displayName o"
+	phones="facsimileTelephoneNumber homePhone internationalISDNNumber mobile pager telephoneNumber"
+	mails="mail"
+ 	attrs="buildingName 
+ 		   c cn co 
+ 		   dc departmentNumber destinationIndicator distinguishedName drink 
+ 		   employeeType 
+ 		   facsimileTelephoneNumber 
+ 		   generationQualifier givenName 
+ 		   homePhone homePostalAddress 
+ 		   info initials internationalISDNNumber 
+ 		   l labeledURI 
+ 		   mail manager member mobile name
+ 		   o objectClass organizationalStatus ou 
+ 		   pager personalTitle physicalDeliveryOfficeName postalAddress postalCode postOfficeBox 
+ 		   registeredAddress roleOccupant roomNumber 
+ 		   secretary sn st street 
+ 		   telephoneNumber telexNumber title"
+	photos="jpegPhoto photo"
+>
+
+<!-- http://www.rfc-editor.org/rfc/rfc4519.txt -->
+<!-- http://www.rfc-archive.org/getrfc.php?rfc=4524 -->
+
+<type id="objectClass"/>
+<!-- <type id="aliasedObjectName" /> -->
+<!-- <type id="audio" /> -->
+<type id="associatedDomain" />	<!-- DNS -->
+<type id="associatedName" />	<!--  names of entries in the organizational DIT associated with a DNS domain -->
+<type id="buildingName" 						type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data6"/>/> <!-- "whitehouse" -->
+<type id="businessCategory"/> 					<!-- banking, transportation, "real estate" -->
+<type id="c" display="countryName" 				type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data10"/> <!-- DE, FR -->
+<!-- <type id="carLicense" /> -->
+<type id="cn" display="CommonName" 				type="java.lang.String" mime="vnd.android.cursor.item/name" col="data1" /> <!-- "Martin K Smith" -->
+<type id="co" 						 			type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data10"/>
+<type id="dc" display="domainComponent" 		type="java.lang.String" mime="vnd.android.cursor.item/website" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="5" /> <!-- exemple.com -->
+<type id="departmentNumber" 					type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data5"/>
+<type id="description" />
+<type id="destinationIndicator" 				type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data6"/> <!-- AASD for Sydney, Australia -->
+<type id="displayName" 							type="java.lang.String" mime="vnd.android.cursor.item/name" col="data1"/>
+<type id="distinguishedName" 					type="java.lang.String" mime="vnd.android.cursor.item/name" col="data1"/>
+<type id="dnQualifier" /> 						<!-- For prevent conflicts between entries -->
+<type id="drink"								type="java.lang.String" mime="vnd.android.cursor.item/note" col="data1"/>
+<!-- <type id="employeeNumber" /> -->
+<type id="employeeType" 						type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data6"/> 
+<type id="enhancedSearchGuide" /> 				<!-- "person#(sn$APPROX)#wholeSubtree" and "organizationalUnit#(ou$SUBSTR)#oneLevel" -->
+<type id="facsimileTelephoneNumber" 			type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="4"/> <!-- FAX_WORK --><!-- "+61 3 9896 7801" and "+81 3 347 7418$fineResolution" -->
+<!-- <type id="gecos"/> -->
+<type id="generationQualifier" 					type="java.lang.String" mime="vnd.android.cursor.item/name" col="data6"/> <!-- SUFFIX --><!-- "III", "3rd", and "Jr.". -->
+<!-- <type id="gidNumber"/> -->
+<type id="givenName"  							type="java.lang.String" mime="vnd.android.cursor.item/name" conv="firstCaps" col="data2"/> <!-- "Andrew", "Charles", and "Joanne" -->
+<!-- <type id="homeDirectory"/> -->
+<type id="homePhone" 							type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="1"/>/>
+<type id="homePostalAddress" 					type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data1" conv="dollars" extraType="java.lang.Integer" extraCol="data2" extraValue="1"/>
+<!-- <type id="host"/> 								localhost -->
+<!-- <type id="houseIdentifier"/> 					"20" to represent the house number 20 -->
+<type id="info"									type="java.lang.String" mime="vnd.android.cursor.item/note" col="data1"/>
+<type id="initials" 							type="java.lang.String" mime="vnd.android.cursor.item/nickname" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="5"/> 							<!-- "K. A." and "K". -->
+<type id="internationalISDNNumber" 				type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="3"/> <!-- WORK --><!-- "0198 333 333" -->
+<type id="jpegPhoto"							type="android.graphics.Bitmap" mime="vnd.android.cursor.item/photo" col="data15"/>
+<type id="l" display="localityName"  			type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data7" extraType="java.lang.Integer" extraCol="data2" extraValue="2"/> <!-- "Geneva", "Paris", and "Edinburgh" -->
+<type id="labeledURI"							type="java.lang.String" mime="vnd.android.cursor.item/website" col="data1" conv="labeledUri"/> <!-- http:// home -->
+<type id="mail"									type="java.lang.String" mime="vnd.android.cursor.item/email_v2" col="data1" />
+<type id="manager"								type="java.lang.String" mime="vnd.android.cursor.item/relation" col="data1" conv="dnToName" extraType="java.lang.Integer" extraCol="data2" extraValue="7"/>
+<type id="member" /> 							<!-- "cn=James Clarke,ou=Finance,o=Widget\, Inc." and "cn=John Xerri,ou=Finance,o=Widget\, Inc." -->
+<type id="mobile" 								type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="2"/>
+<type id="name" 								type="java.lang.String" mime="vnd.android.cursor.item/name" col="data3"/>
+<type id="o" display="organizationName" 		type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="1"/> <!-- WORK --> <!-- "Widget", "Widget, Inc.", and "Widget, Incorporated." -->
+<type id="organizationalStatus"					type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data6"/> <!-- JOB_DESCRIPTION --> <!-- "undergraduate student", "researcher", "professor" -->
+<type id="ou" display="organizationalUnitName" 	type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="1"/> <!-- WORK -->/> <!-- "Finance", "Human Resources", and "Research and Development" -->
+<type id="owner" /> 							<!-- "cn=All Employees, ou=Mailing List,o=Widget\, Inc." -->
+<type id="pager" 								type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="6"/>
+<type id="photo" 								type="android.graphics.Bitmap" mime="vnd.android.cursor.item/photo" col="data15"/>
+<type id="personalTitle" 						type="java.lang.String" mime="vnd.android.cursor.item/name" col="data4"/>/> <!-- PREFIX --><!-- "Frau", "Dr.", "Herr" -->
+<type id="photo"								type="android.graphics.Bitmap" mime="vnd.android.cursor.item/photo" col="data15"/>
+<type id="physicalDeliveryOfficeName" 			type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data6"/> <!-- NEIGHBORHOOD --> <!-- "Bremerhaven, Main" and "Bremerhaven, Bonnstrasse" -->
+<type id="postalAddress" 						type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data1" conv="dollars" extraType="java.lang.Integer" extraCol="data2" extraValue="2"/> <!-- "15 Main St.$Ottawa$Canada" -->
+<type id="postalCode" 							type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data9"/> <!-- "22180" -->
+<type id="postOfficeBox" 						type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data5"/> <!-- "Box 45" -->
+<type id="preferredDeliveryMethod" /> 			<!-- "mhs $ telephone" -->
+<!-- <type id="preferredLanguage" /> -->
+<type id="registeredAddress" 					type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data1" conv="dollars" extraType="java.lang.Integer" extraCol="data2" extraValue="2"/> <!-- "Receptionist$Widget, Inc.$15 Main St.$Ottawa$Canada" -->
+<type id="roleOccupant" 						type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data4"/> <!-- "cn=Human Resources Director,ou=Position,o=Widget\, Inc." -->
+<type id="roomNumber"							type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data6"/>/>
+<!-- <type id="sambaLMPassword"/> -->
+<!-- <type id="sambaNTPassword"/> -->
+<!-- <type id="sambaPwdLastSet"/> -->
+<!-- <type id="sambaLogonTime"/> -->
+<!-- <type id="sambaLogoffTime"/> -->
+<!-- <type id="sambaKickoffTime"/> -->
+<!-- <type id="sambaPwdCanChange"/> -->
+<!-- <type id="sambaPwdMustChange"/> -->
+<!-- <type id="sambaAcctFlags"/> -->
+<!-- <type id="sambaHomePath"/> -->
+<!-- <type id="sambaHomeDrive"/> -->
+<!-- <type id="sambaLogonScript"/> -->
+<!-- <type id="sambaProfilePath"/> -->
+<!-- <type id="sambaUserWorkstations"/> -->
+<!-- <type id="sambaPrimaryGroupSID"/> -->
+<!-- <type id="sambaDomainName"/> -->
+<!-- <type id="sambaMungedDial"/> -->
+<type id="searchGuide" /> 						<!-- "person#sn$EQ" -->
+<type id="secretary"							type="java.lang.String" mime="vnd.android.cursor.item/relation" col="data1" conv="dnToName" extraType="java.lang.Integer" extraCol="data2" extraValue="1"/>
+<type id="seeAlso" />
+<!-- <type id="serialNumber" /> -->
+<type id="sn" display="surname" 				type="java.lang.String" mime="vnd.android.cursor.item/name" col="data3" conv="uppercase" />				 <!-- "Smith" -->
+<type id="st" display="stateOrProvinceName" 	type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data8" extraType="java.lang.Integer" extraCol="data2" extraValue="2"/> <!-- "California" -->
+<type id="street" display="streetAddress" 		type="java.lang.String" mime="vnd.android.cursor.item/postal-address_v2" col="data4" extraType="java.lang.Integer" extraCol="data2" extraValue="2"/> <!-- "15 Main St." -->
+<type id="telephoneNumber"  					type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="3"/> <!-- WORK --> <!-- "+1 234 567 8901" -->
+<type id="telexNumber" 							type="java.lang.String" mime="vnd.android.cursor.item/phone_v2" conv="phone" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="15"/> <!-- TELEX -->
+<type id="teletexTerminalIdentifier" /> 		<!-- "12345$023$ABCDE" -->
+<type id="title" 								type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data4" /> <!-- PREFIX -->/> <!-- "Vice President" -->
+<type id="uid" display="userid" /> 				<!-- "s9709015", "admin", and "Administrator" -->
+<!-- <type id="uidNumber"/> -->
+<!-- <type id="uniqueMember" /> 						"ou=1st Battalion,o=Defense,c=US" -->
+<!-- <type id="uniqueIdentifier"/> -->
+<!-- <type id="userClass"/> -->
+<!-- <type id="userCertificate"/> -->
+<type id="userPassword" /> 						<!-- multiple values -->
+<!-- <type id="userPKCS12" /> -->
+<!-- <type id="userSMIMECertificate" /> -->
+<type id="x121Address" /> 						<!-- "36111222333444555" -->
+<!-- <type id="x500uniqueIdentifier" />  -->
+
+<class id="top" />
+
+<!--<class id="applicationProcess" sup="top">
+	<must ref="cn"/>
+	<may ref="seeAlso"/>
+	<may ref="ou"/>
+	<may ref="l"/>
+	<may ref="description"/>
+</class>-->
+
+<!--<class id="country" sup="top">
+	<must ref="c"/>
+	<may ref="searchGuide"/>
+	<may ref="description"/>
+</class>-->
+
+<!--<class id="dcObject" sup="top">
+	<must ref="dc"/>
+</class>-->
+
+<class id="person" sup="top">
+	<must ref="sn" 				st="fixed"/>
+	<must ref="cn" 				st="fixed"/>
+	<may ref="userPassword" 	st="ignore"/>
+	<may ref="telephoneNumber" 	st="fixed"/>
+	<may ref="seeAlso" 			st="ignore"/>
+	<may ref="description" 		st="fixed"		type="java.lang.String" mime="vnd.android.cursor.item/note" col="data1"/>
+</class>
+
+<!--<class id="device" sup="top">
+	<must ref="cn"/>
+	<may ref="serialNumber"/>
+	<may ref="seeAlso"/>
+	<may ref="owner"/>
+	<may ref="ou"/>
+	<may ref="o"/>
+	<may ref="l"/>
+	<may ref="description"/>
+</class>-->
+
+<!--<class id="groupOfNames" sup="top">
+	<must ref="member"/>
+	<must ref="cn"/>
+	<may ref="businessCategory"/>
+	<may ref="seeAlso"/>
+	<may ref="owner"/>
+	<may ref="ou"/>
+	<may ref="o"/>
+	<may ref="description"/>
+</class>-->
+
+<!--<class id="groupOfUniqueNames" sup="top">
+	<must ref="uniqueMember"/>
+	<must ref="cn"/>
+	<may ref="businessCategory"/>
+	<may ref="seeAlso"/>
+	<may ref="owner"/>
+	<may ref="ou" st="fixed"/>
+	<may ref="o"/>
+	<may ref="description"/>
+</class>-->
+
+<!--<class id="locality" sup="top">
+	<may ref="street" st="fixed"/>
+	<may ref="seeAlso"/>
+	<may ref="searchGuide"/>
+	<may ref="st" st="fixed" />
+	<may ref="l" st="fixed" />
+	<may ref="description"/>
+</class>-->
+
+<class id="organization" sup="top">
+	<must ref="o" 							st="fixed" type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data1" extraType="java.lang.Integer" extraCol="data2" extraValue="1"/> <!-- WORK -->
+	<may ref="userPassword" 				st="ignore"/>
+	<may ref="searchGuide" 					st="ignore"/>
+	<may ref="seeAlso" 						st="ignore"/>
+	<may ref="businessCategory" 			st="ignore"/>
+	<may ref="x121Address" 					st="ignore"/>
+	<may ref="registeredAddress" 			st="fixed"/>
+	<may ref="destinationIndicator" 		st="ignore"/>
+	<may ref="preferredDeliveryMethod" 		st="ignore"/>
+	<may ref="telexNumber" 					st="fixed"/>
+	<may ref="teletexTerminalIdentifier" 	st="ignore"/>
+	<may ref="telephoneNumber" 				st="fixed"/>
+	<may ref="internationalISDNNumber" 		st="fixed"/>
+	<may ref="facsimileTelephoneNumber" 	st="fixed"/>
+	<may ref="street" 						st="fixed"/>
+	<may ref="postOfficeBox" 				st="fixed"/>
+	<may ref="postalCode" 					st="fixed"/>
+	<may ref="postalAddress" 				st="fixed" />
+	<may ref="physicalDeliveryOfficeName" 	st="fixed"/>
+	<may ref="st" 							st="fixed"/>
+	<may ref="l" 							st="fixed" />
+	<may ref="description" 					st="ignore"/>
+</class>
+
+<!--<class id="organizationalPerson" sup="person">
+	<may ref="title" st="fixed"/>
+	<may ref="x121Address" st="ignore"/>
+	<may ref="registeredAddress" st="fixed"/>
+	<may ref="destinationIndicator" st="ignore"/>
+	<may ref="preferredDeliveryMethod" st="ignore"/>
+	<may ref="telexNumber" st="fixed"/>
+	<may ref="teletexTerminalIdentifier" st="fixed"/>
+	<may ref="telephoneNumber" st="fixed"/>
+	<may ref="internationalISDNNumber" st="fixed"/>
+	<may ref="facsimileTelephoneNumber" st="fixed"/>
+	<may ref="street" st="fixed"/>
+	<may ref="postOfficeBox" st="fixed"/>
+	<may ref="postalCode" st="fixed"/>
+	<may ref="postalAddress" st="fixed"/>
+	<may ref="physicalDeliveryOfficeName" st="fixed"/>
+	<may ref="ou" st="fixed"/>
+	<may ref="st" st="fixed"/>
+	<may ref="l" st="fixed"/>
+</class>-->
+
+<class id="organizationalRole" sup="top">
+	<must ref="cn" 						st="fixed" type="java.lang.String" mime="vnd.android.cursor.item/organization" col="data4"/>
+	<may ref="x121Address" 				st="ignore"/>
+	<may ref="registeredAddress" 		st="fixed"/>
+	<may ref="destinationIndicator" 	st="ignore"/>
+	<may ref="preferredDeliveryMethod" 	st="ignore"/>
+	<may ref="telexNumber" 				st="fixed"/>
+	<may ref="teletexTerminalIdentifier" st="ignore"/>
+	<may ref="telephoneNumber" 			st="fixed"/>
+	<may ref="internationalISDNNumber" 	st="fixed"/>
+	<may ref="facsimileTelephoneNumber" st="fixed"/>
+	<may ref="postOfficeBox" 			st="fixed"/>
+	<may ref="postalCode" 				st="fixed"/>
+	<may ref="postalAddress" 			st="fixed"/>
+	<may ref="physicalDeliveryOfficeName" st="fixed"/>
+	<may ref="preferredDeliveryMethod" 	st="ignore"/>
+	<may ref="roleOccupant" 			st="fixed"/>
+	<may ref="seeAlso" 					st="ignore"/>
+	<may ref="ou" 						st="fixed"/>
+	<may ref="st" 						st="fixed"/>
+	<may ref="street" 					st="fixed"/>
+	<may ref="l" 						st="fixed"/>
+	<may ref="description" 				st="ignore"/>
+</class>
+
+<!--<class id="organizationalUnit" sup="top">
+	<must ref="ou" st="fixed"/>
+	<may ref="businessCategory" st="ignore"/>
+	<may ref="description" st="ignore"/>
+	<may ref="destinationIndicator" st="ignore"/>
+	<may ref="facsimileTelephoneNumber" st="fixed"/>
+	<may ref="internationalISDNNumber" st="fixed"/>
+	<may ref="l" st="fixed"/>
+	<may ref="physicalDeliveryOfficeName"/>
+	<may ref="postalAddress" st="fixed"/>
+	<may ref="postalCode" st="fixed"/>
+	<may ref="postOfficeBox" st="fixed"/>
+	<may ref="preferredDeliveryMethod" st="ignore"/>
+	<may ref="registeredAddress" st="fixed"/>
+	<may ref="searchGuide" st="ignore"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="st" st="fixed"/>
+	<may ref="street" st="fixed"/>
+	<may ref="telephoneNumber" st="fixed"/>
+	<may ref="teletexTerminalIdentifier" st="ignore"/>
+	<may ref="telexNumber" st="fixed"/>
+	<may ref="userPassword" st="ignore"/>
+	<may ref="x121Address" st="ignore"/>
+</class>-->
+
+<!--<class id="residentialPerson" sup="person">
+	<must ref="l" st="fixed"/>
+	<may ref="businessCategory" st="ignore"/>
+	<may ref="x121Address" st="ignore"/>
+	<may ref="registeredAddress" st="fixed"/>
+	<may ref="destinationIndicator" st="ignore"/>
+	<may ref="preferredDeliveryMethod" st="ignore"/>
+	<may ref="telexNumber" st="fixed"/>
+	<may ref="teletexTerminalIdentifier" st="ignore"/>
+	<may ref="telephoneNumber" st="fixed"/>
+	<may ref="internationalISDNNumber" st="fixed"/>
+	<may ref="facsimileTelephoneNumber" st="fixed"/>
+	<may ref="preferredDeliveryMethod" st="fixed"/>
+	<may ref="street" st="fixed"/>
+	<may ref="postOfficeBox" st="fixed"/>
+	<may ref="postalCode" st="fixed"/>
+	<may ref="postalAddress" st="fixed"/>
+	<may ref="physicalDeliveryOfficeName" st="fixed"/>
+	<may ref="st" st="fixed"/>
+	<may ref="l" st="fixed"/>
+</class>-->
+
+<!--<class id="inetOrgPerson" sup="organizationalPerson">
+	<may ref="audio"/>
+	<may ref="businessCategory" st="ignore"/>
+	<may ref="carLicense" st="ignore"/>
+	<may ref="departmentNumber"/>
+	<may ref="displayName"/>
+	<may ref="employeeNumber" st="ignore"/>
+	<may ref="employeeType"/>
+	<may ref="givenName"/>
+	<may ref="homePhone"/>
+	<may ref="homePostalAddress"/>
+	<may ref="initials"/>
+	<may ref="jpegPhoto"/>
+	<may ref="labeledURI"/>
+	<may ref="mail"/>
+	<may ref="manager"/>
+	<may ref="mobile"/>
+	<may ref="o"/>
+	<may ref="pager"/>
+	<may ref="photo"/>
+	<may ref="roomNumber"/>
+	<may ref="secretary"/>
+	<may ref="uid" st="ignore"/>
+	<may ref="userCertificate" st="ignore"/>
+	<may ref="x500uniqueIdentifier" st="ignore"/>
+	<may ref="preferredLanguage" st="ignore"/>
+	<may ref="userSMIMECertificate" st="ignore"/>
+	<may ref="userPKCS12" st="ignore"/>
+</class>-->
+
+<!--<class id="account" sup="top">
+	<must ref="uid" st="ignore"/>
+	<map ref="description" st="ignore"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="l"/>
+	<may ref="o"/>
+	<may ref="ou"/>
+	<may ref="host"/>
+</class>-->
+
+<!--<class id="document" sup="top">
+	<must ref="documentIdentifier" st="ignore"/>
+	<map ref="cn" st="ignore"/>
+	<may ref="description" st="ignore"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="l" st="ignore"/>
+	<may ref="o" st="ignore"/>
+	<may ref="ou" st="ignore"/>
+	<may ref="documentTitle" st="ignore"/>
+	<may ref="documentVersion" st="ignore"/>
+	<may ref="documentAuthor" st="ignore"/>
+	<may ref="documentLocation" st="ignore"/>
+	<may ref="documentPublisher" st="ignore"/>
+</class>-->
+
+<!--<class id="documentSeries" sup="top">
+	<must ref="cn" st="ignore"/>
+	<may ref="description" st="ignore"/>
+	<may ref="l" st="ignore"/>
+	<may ref="o" st="ignore"/>
+	<may ref="ou" st="ignore"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="telephoneNumber" st="ignore"/>
+</class>-->
+
+<!--<class id="domain" sup="top">
+	<must ref="dc"/>
+	<may ref="userPassword" st="ignore"/>
+	<may ref="searchGuide" st="ignore"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="businessCategory" st="ignore"/>
+	<may ref="x121Address" st="ignore"/>
+	<may ref="registeredAddress"/>
+	<may ref="destinationIndicator" st="ignore"/>
+	<may ref="preferredDeliveryMethod" st="ignore"/>
+	<may ref="telexNumber"/>
+	<may ref="teletexTerminalIdentifier" st="ignore"/>
+	<may ref="telephoneNumber"/>
+	<may ref="internationalISDNNumber"/>
+	<may ref="facsimileTelephoneNumber"/>
+	<may ref="street"/>
+	<may ref="postOfficeBox"/>
+	<may ref="postalCode"/>
+	<may ref="postalAddress"/>
+	<may ref="physicalDeliveryOfficeName"/>
+	<may ref="st"/>
+	<may ref="l"/>
+	<may ref="description" st="ignore"/>
+	<may ref="o"/>
+	<may ref="associatedName"/>
+</class>-->
+
+<!--<class id="domainRelatedObject" sup="top">
+	<must ref="associatedDomain"/>
+</class>-->
+
+<!--<class id="friendlyCountry" sup="country">
+	<must ref="co"/>
+</class>-->
+
+<!--<class id="rFC822LocalPart" sup="domain">
+	<may ref="cn"/>
+	<may ref="description" st="ignore"/>
+	<may ref="destinationIndicator" st="ignore"/>
+	<may ref="facsimileTelephoneNumber"/>
+	<may ref="internationalISDNNumber"/>
+	<may ref="physicalDeliveryOfficeName"/>
+	<may ref="postalAddress"/>
+	<may ref="postalCode"/>
+	<may ref="postOfficeBox"/>
+	<may ref="preferredDeliveryMethod" st="ignore"/>
+	<may ref="registeredAddress"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="sn"/>
+	<may ref="street"/>
+	<may ref="telephoneNumber"/>
+	<may ref="teletexTerminalIdentifier"/>
+	<may ref="telexNumber"/>
+	<may ref="x121Address"/>
+</class>-->
+
+<!--<class id="room" sup="top">
+	<must ref="cn"/>
+	<may ref="roomNumber"/>
+	<may ref="description" st="ignore"/>
+	<may ref="seeAlso" st="ignore"/>
+	<may ref="telephoneNumber"/>
+</class>-->
+
+<!--<class id="simpleSecurityObject" sup="top">
+	<must ref="userPassword" st="ignore"/>
+</class>-->
+
+<!--<class id="sambaSamAccount" sup="top">
+	<must ref="uid"/>
+	<may ref="sambaLMPassword"/>
+	<may ref="sambaNTPassword"/>
+	<may ref="sambaPwdLastSet"/>
+	<may ref="sambaLogonTime"/>
+	<may ref="sambaLogoffTime"/>
+	<may ref="sambaKickoffTime"/>
+	<may ref="sambaPwdCanChange"/>
+	<may ref="sambaPwdMustChange"/>
+	<may ref="sambaAcctFlags"/>
+	<may ref="displayName"/>
+	<may ref="sambaHomePath"/>
+	<may ref="sambaHomeDrive"/>
+	<may ref="sambaLogonScript"/>
+	<may ref="sambaProfilePath"/>
+	<may ref="description"/>
+	<may ref="sambaUserWorkstations"/>
+	<may ref="sambaPrimaryGroupSID"/>
+	<may ref="sambaDomainName"/>
+	<may ref="sambaMungedDial"/>
+</class>-->
+
+<!--<class id="posixAccount" sup="top">
+	<must ref="cn"/>
+	<must ref="uid"/>
+	<must ref="uidNumber"/>
+	<must ref="gidNumber"/>
+	<must ref="homeDirectory"/>
+	<may ref="userPassword"/>
+	<may ref="loginShell"/>
+	<may ref="gecos"/>
+	<may ref="description"/>
+</class>-->
+
+</mapping>

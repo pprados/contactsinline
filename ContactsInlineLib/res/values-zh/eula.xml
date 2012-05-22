@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- *** EULA *** -->
+	<!-- Title for EULA -->
+	<string name="eula_title">许可协议</string>
+
+	<!-- Button for accept EULA -->
+	<string name="eula_accept">同意</string>
+
+	<!-- Button for refuse EULA -->
+	<string name="eula_refuse">拒绝</string>
+</resources>

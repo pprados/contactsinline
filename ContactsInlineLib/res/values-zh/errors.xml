@@ -1,0 +1,51 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- No error -->
+	<string name="noException"/>
+
+	<!-- Truncate the response to limit the memory usage or it's a limitation of the remote serveur-->
+	<string name="err_truncated">连接已断开. 网络错误或服务器限制.</string>
+
+	<!-- The network is done. It's not necessary to try a request. -->
+	<string name="err_network_done">无法找到网络. 请稍候再尝试.</string>
+	
+	<!-- The version of the extension is incompatible with the version of "contact inline" -->
+	<string name="err_invalide_version">版本错误. 请升级程序与其插件.</string>
+
+	<!-- The toke type for authentification is invalid -->
+	<string name="err_invalide_token_type">验证类型无效.</string>
+
+	<!-- Connexion error. -->
+	<string name="err_unknown">链接错误.</string>
+
+	<!-- Authentification is rejected. -->
+	<string name="err_authent">无法通过验证.</string>
+
+	<!-- Error when administrator in LDAP server put a privileges -->
+	<string name="err_access_right">登入错误,您没有相应权限进行此操作.</string>
+
+	<!-- Error when administrator in LDAP server put a limit -->
+	<string name="err_admin_limit_exceeded">超过管理员的限制.</string>
+
+	<!-- Response size is to big. -->
+	<string name="err_size_exceeded">连接断开. 超过大小限制.</string>
+
+	<!-- The remote server is down. -->
+	<string name="err_server_down">服务器无响应</string>
+
+	<!-- The time limit to receive a response is exceeded. -->
+	<string name="err_time_limit_exceeded">超过时间限制.</string>
+
+	<!-- The number of record in the response is exceeded. -->
+	<string name="err_maxitem_exceeded">连接断开. 超过记录数目限制.</string>
+
+	<!-- Impossible to establish connection. -->
+	<string name="err_connection_exception">无法建立连接.</string>
+
+	<!-- Error with the network -->
+	<string name="err_io_exception">网络错误.</string>
+
+	<!-- Beta version is expired. -->
+	<string name="err_beta_expired">Beta版过期.</string>
+
+</resources>

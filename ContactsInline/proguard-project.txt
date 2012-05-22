@@ -1,0 +1,11 @@
+#-keepnames class *
+#-keepclassmembernames class * { *; }
+
+-keep class org.acra.* 
+-keep class fr.prados.contacts.Application
+
+-keep class * {
+ ** onQueryComplete(fr.prados.contacts.providers.ResultsAndExceptions,boolean);
+}
+
+-keepclassmembernames class fr.prados.contacts.test.* { *; }

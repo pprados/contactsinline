@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Application name -->
+	<string name="app_name">在线通讯录LDAP</string>
+    
+	<!-- Driver name show if account and add account pages -->
+	<string name="ldap_driver_name">在线LDAP</string>
+
+	<!-- Service name -->
+	<string name="ldap_service_label">LDAP服务</string>
+	
+	<!-- Synchronize service name show in application/running services -->
+	<string name="ldap_service_sync_label">与LDAP同步</string>
+	
+</resources>

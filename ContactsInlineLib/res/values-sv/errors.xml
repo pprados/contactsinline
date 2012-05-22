@@ -1,0 +1,51 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- No error -->
+	<string name="noException"/>
+
+	<!-- Truncate the response to limit the memory usage or it's a limitation of the remote serveur-->
+	<string name="err_truncated">Svaret är trunkerat, nätverksfel eller serverbegränsningar.</string>
+
+	<!-- The network is done. It's not necessary to try a request. -->
+	<string name="err_network_done">Nätverksfel, försök senare.</string>
+	
+	<!-- The version of the extension is incompatible with the version of "contact inline" -->
+	<string name="err_invalide_version">Felaktig version, uppdatera applikationen och installerade utökningar.</string>
+
+	<!-- The toke type for authentification is invalid -->
+	<string name="err_invalide_token_type">Felaktig inloggingstyp (authTokenType).</string>
+
+	<!-- Connexion error. -->
+	<string name="err_unknown">Anslutningsfel!</string>
+
+	<!-- Authentification is rejected. -->
+	<string name="err_authent">Felaktigt inloggning!</string>
+
+	<!-- Error when administrator in LDAP server put a privileges -->
+	<string name="err_access_right">Inloggningsfel beroende på rättighetsbegränsningar.</string>
+
+	<!-- Error when administrator in LDAP server put a limit -->
+	<string name="err_admin_limit_exceeded">Serverbegränsningar överskridna!</string>
+
+	<!-- Response size is to big. -->
+	<string name="err_size_exceeded">Svaret är trunkerat, maximal svarsstorlek överskriden.</string>
+
+	<!-- The remote server is down. -->
+	<string name="err_server_down">Servern är inte tillgänglig.</string>
+
+	<!-- The time limit to receive a response is exceeded. -->
+	<string name="err_time_limit_exceeded">Sökningen har tagit för lång tid.</string>
+
+	<!-- The number of record in the response is exceeded. -->
+	<string name="err_maxitem_exceeded">Svaret är trunkerat, maximal antal svar är överskridet.</string>
+
+	<!-- Impossible to establish connection. -->
+	<string name="err_connection_exception">Kan inte upprätta kontakt med servern.</string>
+
+	<!-- Error with the network -->
+	<string name="err_io_exception">Nätverksfel!</string>
+
+	<!-- Beta version is expired. -->
+	<string name="err_beta_expired">Tidsbegränsning för Beta har överskridits.</string>
+
+</resources>
