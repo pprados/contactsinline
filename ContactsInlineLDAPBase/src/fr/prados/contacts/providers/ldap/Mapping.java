@@ -189,7 +189,7 @@ public final class Mapping implements Cloneable
 			{
 				Bitmap bitmap=Photos.extractFace(attr.getValueByteArray());
 				ByteArrayOutputStream os = new ByteArrayOutputStream(bitmap.getWidth()*bitmap.getHeight()*3);
-				bitmap.compress(Bitmap.CompressFormat.PNG, 0, os); // FIXME: bug si isRecycled()
+				bitmap.compress(Bitmap.CompressFormat.PNG, 0, os);
 				data.put(name,os.toByteArray());
 			}
 			else

@@ -160,7 +160,6 @@ public final class VolatileRawContact implements Parcelable
 			if (values==null)
 				return null;
 			if (values.size()==0) return null;
-			//assert values.size()==1; // FIXME: Déclenche assertion et ne devrait pas
 			return values.get(0);
 		}
 		public ArrayList<VolatileData> gets(String key)
@@ -410,7 +409,6 @@ public final class VolatileRawContact implements Parcelable
 			return rawContactUri;
 		}
 		
-		// FIXME: semble ne pas fonctionner si le contact existe, avec d'autres contacts en providers
 		public Uri copyToAndroid(Resources resources,ContentResolver resolver,boolean temp,ArrayList<ContentProviderOperation> operationList) 
 		throws RemoteException, OperationApplicationException
 		{

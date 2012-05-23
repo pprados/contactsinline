@@ -34,7 +34,7 @@ public class CheckContext
 	    Intent intent=new Intent(Intent.ACTION_MAIN);
 	    intent.setClassName("fr.prados.contacts", "fr.prados.contacts.ui.VolatileContactsListActivity");
 	    List<ResolveInfo> resolve=context.getPackageManager().queryIntentActivities(intent, 0);
-	    if (resolve.size()==0) //TODO: a finir
+	    if (resolve.size()==0)
 	    {
 			final AlertDialog.Builder builder = new AlertDialog.Builder(context);
 			builder.setTitle(R.string.chkcontact_title);

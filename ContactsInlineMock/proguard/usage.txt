@@ -13,14 +13,17 @@ fr.prados.contacts.Constants:
     public static final boolean FACE_SHOW
     public static final boolean REQUERY_AFTER_KILL
     public static final boolean SYNC_SEARCH
-    public static final boolean RECORD_LIMIT
+    public static final int IMAGE_POOL_SIZE
+    public static final int IMAGE_POOL_PRIORITY
     public static final boolean DNTOADDR
     public static final boolean DNTONAME
     public static final int NB_RETRY_DNTO
+    public static final boolean USE_PRE_CONNECTION
     public static final long CACHE_TIMEOUT
     public static final int MAX_LRU
-    public static final boolean USE_PRE_CONNECTION
-    20:20:public Constants()
+    public static final int FAKE_ERROR_PROBABILITY
+    public static final boolean RECORD_LIMIT
+    25:25:public Constants()
 fr.prados.contacts.VolatileContact:
     private static final java.lang.String TAG
     105:115:public static android.net.Uri contactUriFromRawUri(android.content.ContentResolver,android.net.Uri)
@@ -190,11 +193,11 @@ fr.prados.contacts.tools.LogMarket:
     94:95:public static void wtf(java.lang.String,java.lang.Throwable)
     98:99:public static void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
 fr.prados.contacts.tools.LogMarket$1:
-    51:53:public void wtf(java.lang.String,java.lang.Throwable)
-    58:60:public void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+    52:53:public void wtf(java.lang.String,java.lang.Throwable)
+    59:60:public void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
 fr.prados.contacts.tools.LogMarket$2:
-    77:78:public void wtf(java.lang.String,java.lang.Throwable)
-    83:84:public void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
+    78:78:public void wtf(java.lang.String,java.lang.Throwable)
+    84:84:public void wtf(java.lang.String,java.lang.String,java.lang.Throwable)
 fr.prados.contacts.tools.LogMarket$WTF:
     public abstract void wtf(java.lang.String,java.lang.Throwable)
     public abstract void wtf(java.lang.String,java.lang.String,java.lang.Throwable)

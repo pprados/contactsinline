@@ -41,7 +41,6 @@ import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -309,7 +308,6 @@ public final class LdapProvider extends Provider
 			rc[1]=strategy;
 			return rc;
 		}
-		// TODO: Recherche qu'une seule réponse ? ou toutes ?
 		private List<CharSequence>[] generateLdapPhoneRequest(String[] attrs,CharSequence phonenumber)
 		{
 			@SuppressWarnings("unchecked")
@@ -679,7 +677,7 @@ public final class LdapProvider extends Provider
 			{
 				if ((ee instanceof AuthQueryException) && (par!=null))
 				{
-					_paramsPool.remove(par); // FIXME: Tous les scénarios d'invalidation de l'authen. ne fonctionnent pas. Il y a le risque de ne pas avoir l'event pour corriger l'authent.
+					_paramsPool.remove(par);
 				}
 				result.exceptions.add(ee);
 			}
@@ -738,7 +736,6 @@ public final class LdapProvider extends Provider
 		try
 		{
 			params=getParams(accountName,true);
-			// TODO: cacher ce traitement ?
 			final String[] fullAttr=new String[params._mapping.attrsList.length+params._mapping.photoAttrsList.length];
 			System.arraycopy(params._mapping.attrsList, 0, fullAttr, 0, params._mapping.attrsList.length);
 			System.arraycopy(params._mapping.photoAttrsList, 0, fullAttr, params._mapping.attrsList.length, params._mapping.photoAttrsList.length);

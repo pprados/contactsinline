@@ -116,7 +116,6 @@ public class LdapAuthenticationService extends Service
 			final String username = params[4];
 			final String password = params[5];
 			String basedn = params[6];
-			// TODO: use a pool and not close connection ?
 			LDAPConnection conn=LdapProvider.getConnection(crypt,host, port, username, password,
 				DEFAULT_CONNECTION_TIMEOUT,DEFAULT_MESSAGE_SIZE);
 			if (basedn==null || basedn.length()==0)
@@ -228,7 +227,6 @@ public class LdapAuthenticationService extends Service
 	 * @param mapping
 	 * @return
 	 */
-	// FIXME: Bug sur zilz.sytes.net
 	public static Bundle confirmCredential(AccountManager accountManager,String accountName,String crypt,String host,String port,String basedn,String username,String password,String mapping)
 	{
 		final Account account = new Account(accountName, ACCOUNT_TYPE);

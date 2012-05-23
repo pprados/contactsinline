@@ -18,6 +18,12 @@
 	<!-- Advanced button in wizard -->
 	<string name="avanced">Configuração avançada</string>
 
+<!-- 	<string name="help">FIXME</string> -->
+<!-- 	<string name="help_title">FIXME</string> -->
+<!-- 	<string name="help_body">FIXME</string> -->
+<!-- 	<string name="help_body_link">FIXME</string> -->
+<!-- 	<string name="help_done">FIXME</string> -->
+		
 	<!-- ** Page 1 ** -->    
 	<!-- Help text to propose to enter a ldap server name. -->
 	<string name="accounts_welcome">Pode configurar LDAP para várias contas em poucas etapas.</string>

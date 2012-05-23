@@ -346,7 +346,6 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	{
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		super.onCreate(savedInstanceState);
-		// FIXME: bug si recherche, puis ajout ou pas de compte, et retour, en cas de recherche pour rafraichir la liste
 		if (withFlurry)
 		{
 			FlurryAgent.onStartSession(this, "YU1VATY1MRJ5XWV9RTJ4");
@@ -361,7 +360,6 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		Update.showUdpate(this,Application.VERSION,R.raw.update);
 		Eula.showEula(this,R.raw.eula);
 		HelpActivity.showIntro(this);
-		// TODO: vérifier la présence de Contact par l'intent
 		
 		AccountManager.get(this).addOnAccountsUpdatedListener(this, null, false);
 
@@ -455,7 +453,6 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			public void onPostExecute(Void r)
 			{
 				decProgressBar();
-				// TODO: qualifier l'absence de market
 				_isExtension=!ProvidersManager.isEmpty();
 				if (!_isExtension)
 				{
@@ -580,7 +577,6 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		}
 		else if (Intent.ACTION_SEARCH.equals(action))
 		{
-			// TODO: en 2.2, ajoute un bandeau "Résultat de recherche pour : X, 1 contact trouvé"
 			_mode = MODE_SEARCH;
 			_show = SHOW_NORMAL;
 			String queryData = null;
@@ -682,6 +678,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			_restoreListState = state.getParcelable(STATE_LIST_STATE);
 			_queryMode = state.getString(STATE_QUERY_MODE);
 			_lastQuery = state.getString(STATE_LAST_REQUEST);
+			if (D) Log.d(TAG, "restore lastQuery="+_lastQuery);
 			if (REQUERY_AFTER_KILL)
 			{
 				if (!_queryHandler._pending && (_lastQuery != null) && (_adapter._cursor == null))
@@ -748,6 +745,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		 state.putBoolean(STATE_FOCUS, getListView().hasFocus());
 		 state.putString(STATE_LAST_REQUEST, _lastQuery);
 		 state.putString(STATE_QUERY_MODE, _queryMode);
+		 if (D) Log.d(TAG,"Save lastquery="+_lastQuery);
 		 AbsListView listView=getListView();
 		 // Hack to manage the getCheckedItemPosition() not present in AbsListView
 		 if (listView instanceof ListView)
@@ -1321,6 +1319,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			rc = inflater.inflate(R.layout.contacts_list_item_photo, parent, false);
 			cache = new Cache();
 			rc.setTag(cache);
+			rc.setOnKeyListener(VolatileContactsListActivity.this);
 			cache._header = rc.findViewById(R.id.header);
 			cache._headerText = (TextView) rc.findViewById(R.id.header_text);
 			if ((_show & DISPLAY_CALLBUTTON)!=0 && cache._callbutton!=null)
@@ -2220,7 +2219,20 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			if (keyCode==KeyEvent.KEYCODE_SEARCH)
 			{
 				if (_searchMenu!=null)
+				{
 					_searchMenu.expandActionView();
+					return true;
+				}
+			}
+		}
+		if (keyCode==KeyEvent.KEYCODE_I)
+		{
+			View v=getListView().getSelectedView();
+			if (v!=null)
+			{
+				Cache cache=(Cache)v.getTag();
+				cache._photoView.onClick(v);
+				return true;
 			}
 		}
 		return super.onKeyUp(keyCode, event);
@@ -2239,7 +2251,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 		_emptyText.setText(R.string.currentQuery);
 
-		if (_lastQuery.length() != 0)
+		if (_lastQuery!=null && _lastQuery.length() != 0)
 		{
 			// Delay for clean windows before
 			_queryHandler._pending=true; // Because onResume() is call just after onRestoreInstance and the message must be empty

@@ -2,8 +2,6 @@ com.unboundid.asn1.ASN1Boolean -> a.a.a.a:
     com.unboundid.asn1.ASN1Boolean UNIVERSAL_BOOLEAN_FALSE_ELEMENT -> a
     com.unboundid.asn1.ASN1Boolean UNIVERSAL_BOOLEAN_TRUE_ELEMENT -> b
     boolean booleanValue -> c
-    boolean booleanValue() -> a
-    com.unboundid.asn1.ASN1Boolean decodeAsBoolean(com.unboundid.asn1.ASN1Element) -> a
     void toString(java.lang.StringBuilder) -> a
 com.unboundid.asn1.ASN1Buffer -> a.a.a.b:
     byte[] MULTIBYTE_LENGTH_HEADER_PLUS_ONE -> a
@@ -24,6 +22,7 @@ com.unboundid.asn1.ASN1Buffer -> a.a.a.b:
     void addInteger(int) -> b
     void addInteger(byte,int) -> a
     void addNull(byte) -> a
+    void addOctetString(byte[]) -> a
     void addOctetString(java.lang.String) -> a
     void addOctetString(byte,byte[]) -> a
     void addOctetString(byte,java.lang.String) -> a
@@ -180,38 +179,25 @@ com.unboundid.asn1.ASN1Element -> a.a.a.f:
     int hashCode -> c
     int valueLength -> d
     int valueOffset -> e
-    byte getType() -> b
-    byte[] getValueArray() -> c
-    int getValueOffset() -> d
-    int getValueLength() -> e
-    byte[] getValue() -> f
-    byte[] encode() -> g
+    byte getType() -> a
+    byte[] getValueArray() -> b
+    int getValueOffset() -> c
+    int getValueLength() -> d
+    byte[] getValue() -> e
+    byte[] encode() -> f
     void encodeLengthTo(int,com.unboundid.util.ByteStringBuffer) -> a
     void encodeTo(com.unboundid.util.ByteStringBuffer) -> a
     byte[] encodeLength(int) -> a
-    com.unboundid.asn1.ASN1Element decode(byte[]) -> a
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1Enumerated -> a.a.a.g:
-    int intValue -> a
-    int intValue() -> a
-    com.unboundid.asn1.ASN1Enumerated decodeAsEnumerated(com.unboundid.asn1.ASN1Element) -> a
-    void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1Exception -> a.a.a.h:
-com.unboundid.asn1.ASN1Integer -> a.a.a.i:
+com.unboundid.asn1.ASN1Exception -> a.a.a.g:
+com.unboundid.asn1.ASN1Integer -> a.a.a.h:
     int intValue -> a
     byte[] encodeIntValue(int) -> b
-    int intValue() -> a
-    com.unboundid.asn1.ASN1Integer decodeAsInteger(com.unboundid.asn1.ASN1Element) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1Long -> a.a.a.j:
-    long longValue -> a
-    long longValue() -> a
-    com.unboundid.asn1.ASN1Long decodeAsLong(com.unboundid.asn1.ASN1Element) -> a
-    void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1Messages -> a.a.a.k:
+com.unboundid.asn1.ASN1Messages -> a.a.a.i:
     com.unboundid.asn1.ASN1Messages ERR_BOOLEAN_INVALID_LENGTH -> a
     com.unboundid.asn1.ASN1Messages ERR_ELEMENT_DECODE_EXCEPTION -> b
     com.unboundid.asn1.ASN1Messages ERR_ELEMENT_LENGTH_MISMATCH -> c
@@ -238,53 +224,47 @@ com.unboundid.asn1.ASN1Messages -> a.a.a.k:
     java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> x
     java.util.concurrent.ConcurrentHashMap MESSAGES -> y
     java.lang.String defaultText -> z
-    com.unboundid.asn1.ASN1Messages[] ENUM$VALUES -> A
+    com.unboundid.asn1.ASN1Messages[] $VALUES -> A
+    com.unboundid.asn1.ASN1Messages[] values() -> values
+    com.unboundid.asn1.ASN1Messages valueOf(java.lang.String) -> valueOf
     java.lang.String get() -> a
     java.lang.String get(java.lang.Object[]) -> a
     java.lang.String toString() -> toString
-    com.unboundid.asn1.ASN1Messages[] values() -> values
-    com.unboundid.asn1.ASN1Messages valueOf(java.lang.String) -> valueOf
-com.unboundid.asn1.ASN1OctetString -> a.a.a.l:
+com.unboundid.asn1.ASN1OctetString -> a.a.a.j:
     byte[] valueBytes -> a
     byte[] valueBytesGuard -> b
     int length -> c
     int offset -> d
     java.lang.String stringValue -> e
-    byte[] getValueArray() -> c
-    int getValueOffset() -> d
-    int getValueLength() -> e
-    byte[] getValue() -> f
+    byte[] getValueArray() -> b
+    int getValueOffset() -> c
+    int getValueLength() -> d
+    byte[] getValue() -> e
     void encodeTo(com.unboundid.util.ByteStringBuffer) -> a
-    java.lang.String stringValue() -> a
-    com.unboundid.asn1.ASN1OctetString decodeAsOctetString(com.unboundid.asn1.ASN1Element) -> a
+    java.lang.String stringValue() -> g
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1Sequence -> a.a.a.m:
+com.unboundid.asn1.ASN1Sequence -> a.a.a.k:
     com.unboundid.asn1.ASN1Element[] elements -> a
     byte[] encodedValue -> b
     byte[] encodedValueGuard -> c
-    byte[] getValueArray() -> c
-    int getValueOffset() -> d
-    int getValueLength() -> e
-    byte[] getValue() -> f
+    byte[] getValueArray() -> b
+    int getValueOffset() -> c
+    int getValueLength() -> d
+    byte[] getValue() -> e
     void encodeTo(com.unboundid.util.ByteStringBuffer) -> a
     byte[] encodeElements(com.unboundid.asn1.ASN1Element[]) -> a
-    com.unboundid.asn1.ASN1Element[] elements() -> a
-    com.unboundid.asn1.ASN1Sequence decodeAsSequence(byte[]) -> b
-    com.unboundid.asn1.ASN1Sequence decodeAsSequence(com.unboundid.asn1.ASN1Element) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1Set -> a.a.a.n:
+com.unboundid.asn1.ASN1Set -> a.a.a.l:
     com.unboundid.asn1.ASN1Element[] elements -> a
     byte[] encodedValue -> b
     byte[] encodedValueGuard -> c
-    byte[] getValueArray() -> c
-    int getValueOffset() -> d
-    int getValueLength() -> e
-    byte[] getValue() -> f
+    byte[] getValueArray() -> b
+    int getValueOffset() -> c
+    int getValueLength() -> d
+    byte[] getValue() -> e
     void encodeTo(com.unboundid.util.ByteStringBuffer) -> a
-    com.unboundid.asn1.ASN1Element[] elements() -> a
-    com.unboundid.asn1.ASN1Set decodeAsSet(com.unboundid.asn1.ASN1Element) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.asn1.ASN1StreamReader -> a.a.a.o:
+com.unboundid.asn1.ASN1StreamReader -> a.a.a.m:
     boolean ignoreInitialSocketTimeout -> a
     boolean ignoreSubsequentSocketTimeout -> b
     java.io.InputStream inputStream -> c
@@ -306,14 +286,14 @@ com.unboundid.asn1.ASN1StreamReader -> a.a.a.o:
     com.unboundid.asn1.ASN1StreamReaderSet beginSet() -> j
     int read(boolean) -> a
     int read(boolean,byte[],int,int) -> a
-com.unboundid.asn1.ASN1StreamReaderSequence -> a.a.a.p:
+com.unboundid.asn1.ASN1StreamReaderSequence -> a.a.a.n:
     com.unboundid.asn1.ASN1StreamReader reader -> a
     byte type -> b
     int length -> c
     long endBytesRead -> d
     byte getType() -> a
     boolean hasMoreElements() -> b
-com.unboundid.asn1.ASN1StreamReaderSet -> a.a.a.q:
+com.unboundid.asn1.ASN1StreamReaderSet -> a.a.a.o:
     com.unboundid.asn1.ASN1StreamReader reader -> a
     byte type -> b
     int length -> c
@@ -418,12 +398,12 @@ com.unboundid.ldap.matchingrules.MatchingRuleMessages -> a.a.b.a.j:
     java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> v
     java.util.concurrent.ConcurrentHashMap MESSAGES -> w
     java.lang.String defaultText -> x
-    com.unboundid.ldap.matchingrules.MatchingRuleMessages[] ENUM$VALUES -> y
+    com.unboundid.ldap.matchingrules.MatchingRuleMessages[] $VALUES -> y
+    com.unboundid.ldap.matchingrules.MatchingRuleMessages[] values() -> values
+    com.unboundid.ldap.matchingrules.MatchingRuleMessages valueOf(java.lang.String) -> valueOf
     java.lang.String get() -> a
     java.lang.String get(java.lang.Object[]) -> a
     java.lang.String toString() -> toString
-    com.unboundid.ldap.matchingrules.MatchingRuleMessages[] values() -> values
-    com.unboundid.ldap.matchingrules.MatchingRuleMessages valueOf(java.lang.String) -> valueOf
 com.unboundid.ldap.matchingrules.NumericStringMatchingRule -> a.a.b.a.k:
     com.unboundid.ldap.matchingrules.NumericStringMatchingRule INSTANCE -> d
     java.lang.String LOWER_EQUALITY_RULE_NAME -> a
@@ -493,12 +473,12 @@ com.unboundid.ldap.protocol.ProtocolMessages -> a.a.b.b.d:
     java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> y
     java.util.concurrent.ConcurrentHashMap MESSAGES -> z
     java.lang.String defaultText -> A
-    com.unboundid.ldap.protocol.ProtocolMessages[] ENUM$VALUES -> B
+    com.unboundid.ldap.protocol.ProtocolMessages[] $VALUES -> B
+    com.unboundid.ldap.protocol.ProtocolMessages[] values() -> values
+    com.unboundid.ldap.protocol.ProtocolMessages valueOf(java.lang.String) -> valueOf
     java.lang.String get() -> a
     java.lang.String get(java.lang.Object[]) -> a
     java.lang.String toString() -> toString
-    com.unboundid.ldap.protocol.ProtocolMessages[] values() -> values
-    com.unboundid.ldap.protocol.ProtocolMessages valueOf(java.lang.String) -> valueOf
 com.unboundid.ldap.protocol.ProtocolOp -> a.a.b.b.e:
     byte getProtocolOpType() -> a
     void writeTo(com.unboundid.asn1.ASN1Buffer) -> a
@@ -513,8 +493,12 @@ com.unboundid.ldap.sdk.AbstractConnectionPool -> a.a.b.c.a:
     void releaseConnection(com.unboundid.ldap.sdk.LDAPConnection) -> a
     void releaseDefunctConnection(com.unboundid.ldap.sdk.LDAPConnection) -> b
     void releaseConnectionAfterException(com.unboundid.ldap.sdk.LDAPConnection,com.unboundid.ldap.sdk.LDAPException) -> a
-    com.unboundid.ldap.sdk.LDAPConnectionPoolHealthCheck getHealthCheck() -> b
+    com.unboundid.ldap.sdk.LDAPConnection replaceDefunctConnection(com.unboundid.ldap.sdk.LDAPConnection) -> c
+    com.unboundid.ldap.sdk.LDAPConnection replaceDefunctConnection(java.lang.Throwable,com.unboundid.ldap.sdk.LDAPConnection) -> b
+    java.util.Set getOperationTypesToRetryDueToInvalidConnections() -> b
+    com.unboundid.ldap.sdk.LDAPConnectionPoolHealthCheck getHealthCheck() -> c
     com.unboundid.ldap.sdk.SearchResultEntry getEntry(java.lang.String,java.lang.String[]) -> a
+    void throwLDAPExceptionIfShouldNotRetry(java.lang.Throwable,com.unboundid.ldap.sdk.OperationType,com.unboundid.ldap.sdk.LDAPConnection) -> a
     void throwLDAPException(java.lang.Throwable,com.unboundid.ldap.sdk.LDAPConnection) -> a
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
@@ -524,12 +508,14 @@ com.unboundid.ldap.sdk.AsyncRequestID -> a.a.b.c.b:
     java.util.concurrent.atomic.AtomicReference result -> c
     int messageID -> d
     com.unboundid.ldap.sdk.LDAPConnection connection -> e
+    com.unboundid.ldap.sdk.AsyncTimeoutTimerTask timerTask -> f
     int getMessageID() -> a
     boolean cancel(boolean) -> cancel
     boolean isCancelled() -> isCancelled
     boolean isDone() -> isDone
     com.unboundid.ldap.sdk.LDAPResult get() -> b
     com.unboundid.ldap.sdk.LDAPResult get(long,java.util.concurrent.TimeUnit) -> a
+    void setTimerTask(com.unboundid.ldap.sdk.AsyncTimeoutTimerTask) -> a
     void setResult(com.unboundid.ldap.sdk.LDAPResult) -> a
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
@@ -539,17 +525,28 @@ com.unboundid.ldap.sdk.AsyncRequestID -> a.a.b.c.b:
 com.unboundid.ldap.sdk.AsyncSearchHelper -> a.a.b.c.c:
     com.unboundid.ldap.sdk.AsyncRequestID asyncRequestID -> a
     com.unboundid.ldap.sdk.AsyncSearchResultListener resultListener -> b
-    int numEntries -> c
-    int numReferences -> d
-    com.unboundid.ldap.sdk.IntermediateResponseListener intermediateResponseListener -> e
-    com.unboundid.ldap.sdk.LDAPConnection connection -> f
-    long createTime -> g
+    java.util.concurrent.atomic.AtomicBoolean responseReturned -> c
+    int numEntries -> d
+    int numReferences -> e
+    com.unboundid.ldap.sdk.IntermediateResponseListener intermediateResponseListener -> f
+    com.unboundid.ldap.sdk.LDAPConnection connection -> g
+    long createTime -> h
     com.unboundid.ldap.sdk.AsyncRequestID getAsyncRequestID() -> a
+    com.unboundid.ldap.sdk.LDAPConnection getConnection() -> b
+    long getCreateTimeNanos() -> c
+    com.unboundid.ldap.sdk.OperationType getOperationType() -> d
+    int getNumEntries() -> e
+    int getNumReferences() -> f
     void responseReceived(com.unboundid.ldap.protocol.LDAPResponse) -> a
     void intermediateResponseReturned(com.unboundid.ldap.sdk.IntermediateResponse) -> a
 com.unboundid.ldap.sdk.AsyncSearchResultListener -> a.a.b.c.d:
     void searchResultReceived(com.unboundid.ldap.sdk.AsyncRequestID,com.unboundid.ldap.sdk.SearchResult) -> a
-com.unboundid.ldap.sdk.Attribute -> a.a.b.c.e:
+com.unboundid.ldap.sdk.AsyncTimeoutTimerTask -> a.a.b.c.e:
+    com.unboundid.ldap.sdk.CommonAsyncHelper helper -> a
+    void run() -> run
+com.unboundid.ldap.sdk.AsyncTimeoutTimerTask$1 -> a.a.b.c.f:
+    int[] $SwitchMap$com$unboundid$ldap$sdk$OperationType -> a
+com.unboundid.ldap.sdk.Attribute -> a.a.b.c.g:
     com.unboundid.asn1.ASN1OctetString[] NO_VALUES -> a
     byte[][] NO_BYTE_VALUES -> b
     com.unboundid.asn1.ASN1OctetString[] values -> c
@@ -564,23 +561,27 @@ com.unboundid.ldap.sdk.Attribute -> a.a.b.c.e:
     boolean hasValue(com.unboundid.asn1.ASN1OctetString) -> a
     boolean hasValue(com.unboundid.asn1.ASN1OctetString,com.unboundid.ldap.matchingrules.MatchingRule) -> a
     com.unboundid.ldap.sdk.Attribute readFrom(com.unboundid.asn1.ASN1StreamReader,com.unboundid.ldap.sdk.schema.Schema) -> a
-    com.unboundid.ldap.sdk.Attribute decode(com.unboundid.asn1.ASN1Sequence) -> a
     boolean needsBase64Encoding() -> e
     boolean needsBase64Encoding(byte[]) -> a
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.BindRequest -> a.a.b.c.f:
+com.unboundid.ldap.sdk.BindRequest -> a.a.b.c.h:
     com.unboundid.asn1.ASN1Integer VERSION_ELEMENT -> a
     com.unboundid.ldap.sdk.BindResult process(com.unboundid.ldap.sdk.LDAPConnection,int) -> a
     com.unboundid.ldap.sdk.BindRequest getRebindRequest(java.lang.String,int) -> a
-com.unboundid.ldap.sdk.BindResult -> a.a.b.c.g:
+com.unboundid.ldap.sdk.BindResult -> a.a.b.c.i:
     com.unboundid.asn1.ASN1OctetString serverSASLCredentials -> b
     com.unboundid.ldap.sdk.BindResult readBindResultFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> a
-com.unboundid.ldap.sdk.CompareResult -> a.a.b.c.h:
+com.unboundid.ldap.sdk.CommonAsyncHelper -> a.a.b.c.j:
+    com.unboundid.ldap.sdk.AsyncRequestID getAsyncRequestID() -> a
+    com.unboundid.ldap.sdk.LDAPConnection getConnection() -> b
+    long getCreateTimeNanos() -> c
+    com.unboundid.ldap.sdk.OperationType getOperationType() -> d
+com.unboundid.ldap.sdk.CompareResult -> a.a.b.c.k:
     com.unboundid.ldap.sdk.CompareResult readCompareResultFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> a
-com.unboundid.ldap.sdk.ConnectThread -> a.a.b.c.i:
+com.unboundid.ldap.sdk.ConnectThread -> a.a.b.c.l:
     java.util.concurrent.atomic.AtomicBoolean connected -> a
     java.util.concurrent.atomic.AtomicBoolean started -> b
     java.util.concurrent.atomic.AtomicReference socket -> c
@@ -591,7 +592,7 @@ com.unboundid.ldap.sdk.ConnectThread -> a.a.b.c.i:
     java.lang.String address -> h
     void run() -> run
     java.net.Socket getConnectedSocket(long) -> a
-com.unboundid.ldap.sdk.ConnectionClosedResponse -> a.a.b.c.j:
+com.unboundid.ldap.sdk.ConnectionClosedResponse -> a.a.b.c.m:
     com.unboundid.ldap.sdk.ResultCode resultCode -> b
     java.lang.String message -> c
     int getMessageID() -> a
@@ -599,26 +600,26 @@ com.unboundid.ldap.sdk.ConnectionClosedResponse -> a.a.b.c.j:
     com.unboundid.ldap.sdk.ResultCode getResultCode() -> c
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.Control -> a.a.b.c.k:
+com.unboundid.ldap.sdk.Control -> a.a.b.c.n:
     java.util.concurrent.ConcurrentHashMap decodeableControlMap -> a
     com.unboundid.asn1.ASN1OctetString value -> b
     boolean isCritical -> c
     java.lang.String oid -> d
-    boolean isCritical() -> a
+    java.lang.String getOID() -> a
     void writeTo(com.unboundid.asn1.ASN1Buffer) -> a
     com.unboundid.ldap.sdk.Control readFrom(com.unboundid.asn1.ASN1StreamReader) -> a
     com.unboundid.ldap.sdk.Control decode(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a
-    void registerDecodeableControl(java.lang.String,com.unboundid.ldap.sdk.DecodeableControl) -> a
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.DN -> a.a.b.c.l:
+com.unboundid.ldap.sdk.DN -> a.a.b.c.o:
     com.unboundid.ldap.sdk.RDN[] NO_RDNS -> b
     com.unboundid.ldap.sdk.DN NULL_DN -> a
     com.unboundid.ldap.sdk.RDN[] rdns -> c
-    java.lang.String dnString -> d
-    java.lang.String normalizedString -> e
+    com.unboundid.ldap.sdk.schema.Schema schema -> d
+    java.lang.String dnString -> e
+    java.lang.String normalizedString -> f
     java.lang.String getTrimmedRDN(java.lang.String,int,int) -> a
     boolean isNullDN() -> a
     int hashCode() -> hashCode
@@ -628,11 +629,11 @@ com.unboundid.ldap.sdk.DN -> a.a.b.c.l:
     void toNormalizedString(java.lang.StringBuilder) -> a
     int compareTo(com.unboundid.ldap.sdk.DN) -> a
     int compare(com.unboundid.ldap.sdk.DN,com.unboundid.ldap.sdk.DN) -> a
-    int compare(java.lang.Object,java.lang.Object) -> compare
     int compareTo(java.lang.Object) -> compareTo
-com.unboundid.ldap.sdk.DecodeableControl -> a.a.b.c.m:
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.DereferencePolicy -> a.a.b.c.n:
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.unboundid.ldap.sdk.DecodeableControl -> a.a.b.c.p:
+    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a
+com.unboundid.ldap.sdk.DereferencePolicy -> a.a.b.c.q:
     com.unboundid.ldap.sdk.DereferencePolicy NEVER -> a
     com.unboundid.ldap.sdk.DereferencePolicy SEARCHING -> b
     com.unboundid.ldap.sdk.DereferencePolicy FINDING -> c
@@ -644,9 +645,9 @@ com.unboundid.ldap.sdk.DereferencePolicy -> a.a.b.c.n:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.DisconnectHandler -> a.a.b.c.o:
+com.unboundid.ldap.sdk.DisconnectHandler -> a.a.b.c.r:
     void handleDisconnect(com.unboundid.ldap.sdk.LDAPConnection,java.lang.String,int,com.unboundid.ldap.sdk.DisconnectType,java.lang.String,java.lang.Throwable) -> a
-com.unboundid.ldap.sdk.DisconnectType -> a.a.b.c.p:
+com.unboundid.ldap.sdk.DisconnectType -> a.a.b.c.s:
     com.unboundid.ldap.sdk.DisconnectType UNBIND -> a
     com.unboundid.ldap.sdk.DisconnectType BIND_FAILED -> b
     com.unboundid.ldap.sdk.DisconnectType RECONNECT -> c
@@ -667,28 +668,32 @@ com.unboundid.ldap.sdk.DisconnectType -> a.a.b.c.p:
     com.unboundid.ldap.sdk.DisconnectType OTHER -> r
     com.unboundid.ldap.sdk.ResultCode resultCode -> s
     java.lang.String description -> t
-    com.unboundid.ldap.sdk.DisconnectType[] ENUM$VALUES -> u
+    com.unboundid.ldap.sdk.DisconnectType[] $VALUES -> u
+    com.unboundid.ldap.sdk.DisconnectType[] values() -> values
+    com.unboundid.ldap.sdk.DisconnectType valueOf(java.lang.String) -> valueOf
     com.unboundid.ldap.sdk.ResultCode getResultCode() -> a
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.DisconnectType[] values() -> values
-    com.unboundid.ldap.sdk.DisconnectType valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.Entry -> a.a.b.c.q:
+com.unboundid.ldap.sdk.Entry -> a.a.b.c.t:
     com.unboundid.ldap.sdk.DN parsedDN -> a
     java.util.LinkedHashMap attributes -> b
-    java.lang.String dn -> c
+    com.unboundid.ldap.sdk.schema.Schema schema -> c
+    java.lang.String dn -> d
     java.lang.String getDN() -> b
     com.unboundid.ldap.sdk.DN getParsedDN() -> c
+    com.unboundid.ldap.sdk.schema.Schema getSchema() -> d
     boolean hasAttribute(com.unboundid.ldap.sdk.Attribute) -> a
-    java.util.Collection getAttributes() -> d
-    java.lang.String getAttributeValue(java.lang.String) -> a
-    java.lang.String[] getAttributeValues(java.lang.String) -> b
-    java.lang.String[] getObjectClassValues() -> e
+    java.util.Collection getAttributes() -> e
+    com.unboundid.ldap.sdk.Attribute getAttribute(java.lang.String) -> a
+    com.unboundid.ldap.sdk.Attribute getAttribute(java.lang.String,com.unboundid.ldap.sdk.schema.Schema) -> a
+    java.lang.String getAttributeValue(java.lang.String) -> b
+    java.lang.String[] getAttributeValues(java.lang.String) -> c
+    java.lang.String[] getObjectClassValues() -> f
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.ExtendedRequest -> a.a.b.c.r:
+com.unboundid.ldap.sdk.ExtendedRequest -> a.a.b.c.u:
     com.unboundid.asn1.ASN1OctetString value -> a
     int messageID -> c
     java.util.concurrent.LinkedBlockingQueue responseQueue -> d
@@ -700,7 +705,7 @@ com.unboundid.ldap.sdk.ExtendedRequest -> a.a.b.c.r:
     com.unboundid.ldap.sdk.ExtendedResult handleResponse(com.unboundid.ldap.sdk.LDAPConnection,com.unboundid.ldap.protocol.LDAPResponse,long) -> a
     void responseReceived(com.unboundid.ldap.protocol.LDAPResponse) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.ExtendedResult -> a.a.b.c.s:
+com.unboundid.ldap.sdk.ExtendedResult -> a.a.b.c.v:
     com.unboundid.asn1.ASN1OctetString value -> b
     java.lang.String oid -> c
     com.unboundid.ldap.sdk.ExtendedResult readExtendedResultFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> a
@@ -708,7 +713,7 @@ com.unboundid.ldap.sdk.ExtendedResult -> a.a.b.c.s:
     com.unboundid.asn1.ASN1OctetString getValue() -> c
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.Filter -> a.a.b.c.t:
+com.unboundid.ldap.sdk.Filter -> a.a.b.c.w:
     com.unboundid.ldap.sdk.Filter[] NO_FILTERS -> a
     com.unboundid.asn1.ASN1OctetString[] NO_SUB_ANY -> b
     com.unboundid.asn1.ASN1OctetString assertionValue -> c
@@ -737,7 +742,7 @@ com.unboundid.ldap.sdk.Filter -> a.a.b.c.t:
     java.lang.String toNormalizedString() -> b
     void toNormalizedString(java.lang.StringBuilder) -> b
     void encodeValue(com.unboundid.asn1.ASN1OctetString,java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.IntermediateResponse -> a.a.b.c.u:
+com.unboundid.ldap.sdk.IntermediateResponse -> a.a.b.c.x:
     com.unboundid.ldap.sdk.Control[] NO_CONTROLS -> b
     com.unboundid.asn1.ASN1OctetString value -> c
     com.unboundid.ldap.sdk.Control[] controls -> d
@@ -747,9 +752,9 @@ com.unboundid.ldap.sdk.IntermediateResponse -> a.a.b.c.u:
     int getMessageID() -> a
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.IntermediateResponseListener -> a.a.b.c.v:
+com.unboundid.ldap.sdk.IntermediateResponseListener -> a.a.b.c.y:
     void intermediateResponseReturned(com.unboundid.ldap.sdk.IntermediateResponse) -> a
-com.unboundid.ldap.sdk.InternalSDKHelper -> a.a.b.c.w:
+com.unboundid.ldap.sdk.InternalSDKHelper -> a.a.b.c.z:
     void setSoTimeout(com.unboundid.ldap.sdk.LDAPConnection,int) -> a
     void convertToTLS(com.unboundid.ldap.sdk.LDAPConnection,javax.net.ssl.SSLContext) -> a
     com.unboundid.ldap.sdk.LDAPResult readLDAPResultFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> a
@@ -760,31 +765,33 @@ com.unboundid.ldap.sdk.InternalSDKHelper -> a.a.b.c.w:
     com.unboundid.ldap.sdk.SearchResultReference readSearchResultReferenceFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> e
     com.unboundid.ldap.sdk.SearchResult readSearchResultFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> f
     com.unboundid.ldap.sdk.IntermediateResponse readIntermediateResponseFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader) -> g
-com.unboundid.ldap.sdk.LDAPConnection -> a.a.b.c.x:
+com.unboundid.ldap.sdk.LDAPConnection -> a.a.b.c.aa:
     java.util.concurrent.atomic.AtomicLong NEXT_CONNECTION_ID -> a
     javax.net.SocketFactory DEFAULT_SOCKET_FACTORY -> b
-    com.unboundid.ldap.sdk.AbstractConnectionPool connectionPool -> c
-    com.unboundid.ldap.sdk.BindRequest lastBindRequest -> d
-    boolean closeRequested -> e
-    boolean unbindRequestSent -> f
-    com.unboundid.ldap.sdk.DisconnectType disconnectType -> g
-    int reconnectPort -> h
-    com.unboundid.ldap.sdk.LDAPConnectionInternals connectionInternals -> i
-    com.unboundid.ldap.sdk.LDAPConnectionOptions connectionOptions -> j
-    com.unboundid.ldap.sdk.LDAPConnectionStatistics connectionStatistics -> k
-    long connectionID -> l
-    long lastReconnectTime -> m
-    com.unboundid.ldap.sdk.ReferralConnector referralConnector -> n
-    com.unboundid.ldap.sdk.schema.Schema cachedSchema -> o
-    javax.net.SocketFactory lastUsedSocketFactory -> p
-    javax.net.SocketFactory socketFactory -> q
-    java.lang.StackTraceElement[] connectStackTrace -> r
-    java.lang.String connectionName -> s
-    java.lang.String connectionPoolName -> t
-    java.lang.String hostPort -> u
-    java.lang.String reconnectAddress -> v
-    java.lang.String disconnectMessage -> w
-    java.lang.Throwable disconnectCause -> x
+    com.unboundid.util.WeakHashSet SCHEMA_SET -> c
+    com.unboundid.ldap.sdk.AbstractConnectionPool connectionPool -> d
+    com.unboundid.ldap.sdk.BindRequest lastBindRequest -> e
+    boolean closeRequested -> f
+    boolean unbindRequestSent -> g
+    com.unboundid.ldap.sdk.DisconnectType disconnectType -> h
+    int reconnectPort -> i
+    com.unboundid.ldap.sdk.LDAPConnectionInternals connectionInternals -> j
+    com.unboundid.ldap.sdk.LDAPConnectionOptions connectionOptions -> k
+    com.unboundid.ldap.sdk.LDAPConnectionStatistics connectionStatistics -> l
+    long connectionID -> m
+    long lastReconnectTime -> n
+    com.unboundid.ldap.sdk.ReferralConnector referralConnector -> o
+    com.unboundid.ldap.sdk.schema.Schema cachedSchema -> p
+    javax.net.SocketFactory lastUsedSocketFactory -> q
+    javax.net.SocketFactory socketFactory -> r
+    java.lang.StackTraceElement[] connectStackTrace -> s
+    java.lang.String connectionName -> t
+    java.lang.String connectionPoolName -> u
+    java.lang.String hostPort -> v
+    java.lang.String reconnectAddress -> w
+    java.lang.String disconnectMessage -> x
+    java.lang.Throwable disconnectCause -> y
+    java.util.Timer timer -> z
     void connect(java.lang.String,int) -> a
     void connect(java.lang.String,int,int) -> a
     void reconnect() -> a
@@ -808,6 +815,7 @@ com.unboundid.ldap.sdk.LDAPConnection -> a.a.b.c.x:
     com.unboundid.ldap.sdk.SearchResultEntry getEntry(java.lang.String,java.lang.String[]) -> a
     void abandon(com.unboundid.ldap.sdk.AsyncRequestID) -> a
     void abandon(com.unboundid.ldap.sdk.AsyncRequestID,com.unboundid.ldap.sdk.Control[]) -> a
+    void abandon(int,com.unboundid.ldap.sdk.Control[]) -> a
     com.unboundid.ldap.sdk.BindResult bind(java.lang.String,java.lang.String) -> a
     com.unboundid.ldap.sdk.BindResult bind(com.unboundid.ldap.sdk.BindRequest) -> a
     com.unboundid.ldap.sdk.ExtendedResult processExtendedOperation(com.unboundid.ldap.sdk.ExtendedRequest) -> a
@@ -823,17 +831,19 @@ com.unboundid.ldap.sdk.LDAPConnection -> a.a.b.c.x:
     void setClosed() -> t
     void registerResponseAcceptor(int,com.unboundid.ldap.sdk.ResponseAcceptor) -> a
     void deregisterResponseAcceptor(int) -> a
+    java.util.Timer getTimer() -> u
     com.unboundid.ldap.sdk.LDAPConnection getReferralConnection(com.unboundid.ldap.sdk.LDAPURL,com.unboundid.ldap.sdk.LDAPConnection) -> a
-    com.unboundid.ldap.sdk.LDAPConnectionInternals getConnectionInternals() -> u
-    com.unboundid.ldap.sdk.schema.Schema getCachedSchema() -> v
-    boolean synchronousMode() -> w
+    com.unboundid.ldap.sdk.LDAPConnectionInternals getConnectionInternals() -> v
+    com.unboundid.ldap.sdk.schema.Schema getCachedSchema() -> w
+    boolean synchronousMode() -> x
     com.unboundid.ldap.protocol.LDAPResponse readResponse(int) -> b
-    com.unboundid.ldap.sdk.LDAPConnectionStatistics getConnectionStatistics() -> x
-    int getActiveOperationCount() -> y
+    com.unboundid.ldap.sdk.LDAPConnectionStatistics getConnectionStatistics() -> y
+    int getActiveOperationCount() -> z
+    com.unboundid.ldap.sdk.schema.Schema getCachedSchema(com.unboundid.ldap.sdk.LDAPConnection) -> a
     void finalize() -> finalize
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPConnectionInternals -> a.a.b.c.y:
+com.unboundid.ldap.sdk.LDAPConnectionInternals -> a.a.b.c.ab:
     java.util.concurrent.atomic.AtomicInteger nextMessageID -> a
     boolean disconnectHandlerNotified -> b
     boolean synchronousMode -> c
@@ -860,27 +870,30 @@ com.unboundid.ldap.sdk.LDAPConnectionInternals -> a.a.b.c.y:
     void close() -> i
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPConnectionOptions -> a.a.b.c.z:
-    boolean autoReconnect -> a
-    boolean bindWithDNRequiresPassword -> b
-    boolean captureConnectStackTrace -> c
-    boolean followReferrals -> d
-    boolean useKeepAlive -> e
-    boolean useLinger -> f
-    boolean useReuseAddress -> g
-    boolean useSchema -> h
-    boolean useSynchronousMode -> i
-    boolean useTCPNoDelay -> j
-    com.unboundid.ldap.sdk.DisconnectHandler disconnectHandler -> k
-    int connectTimeout -> l
-    int lingerTimeout -> m
-    int maxMessageSize -> n
-    int receiveBufferSize -> o
-    int referralHopLimit -> p
-    int sendBufferSize -> q
-    long responseTimeout -> r
-    com.unboundid.ldap.sdk.ReferralConnector referralConnector -> s
-    com.unboundid.ldap.sdk.UnsolicitedNotificationHandler unsolicitedNotificationHandler -> t
+com.unboundid.ldap.sdk.LDAPConnectionOptions -> a.a.b.c.ac:
+    boolean DEFAULT_ALLOW_CONCURRENT_SOCKET_FACTORY_USE -> a
+    boolean abandonOnTimeout -> b
+    boolean autoReconnect -> c
+    boolean bindWithDNRequiresPassword -> d
+    boolean captureConnectStackTrace -> e
+    boolean followReferrals -> f
+    boolean allowConcurrentSocketFactoryUse -> g
+    boolean useKeepAlive -> h
+    boolean useLinger -> i
+    boolean useReuseAddress -> j
+    boolean useSchema -> k
+    boolean useSynchronousMode -> l
+    boolean useTCPNoDelay -> m
+    com.unboundid.ldap.sdk.DisconnectHandler disconnectHandler -> n
+    int connectTimeout -> o
+    int lingerTimeout -> p
+    int maxMessageSize -> q
+    int receiveBufferSize -> r
+    int referralHopLimit -> s
+    int sendBufferSize -> t
+    long responseTimeout -> u
+    com.unboundid.ldap.sdk.ReferralConnector referralConnector -> v
+    com.unboundid.ldap.sdk.UnsolicitedNotificationHandler unsolicitedNotificationHandler -> w
     com.unboundid.ldap.sdk.LDAPConnectionOptions duplicate() -> a
     boolean autoReconnect() -> b
     void setAutoReconnect(boolean) -> a
@@ -889,31 +902,33 @@ com.unboundid.ldap.sdk.LDAPConnectionOptions -> a.a.b.c.z:
     int getConnectTimeoutMillis() -> e
     void setConnectTimeoutMillis(int) -> a
     long getResponseTimeoutMillis() -> f
-    boolean useKeepAlive() -> g
-    boolean useLinger() -> h
-    int getLingerTimeoutSeconds() -> i
-    boolean useReuseAddress() -> j
-    boolean useSchema() -> k
-    boolean useSynchronousMode() -> l
-    boolean useTCPNoDelay() -> m
-    boolean followReferrals() -> n
+    boolean abandonOnTimeout() -> g
+    boolean useKeepAlive() -> h
+    boolean useLinger() -> i
+    int getLingerTimeoutSeconds() -> j
+    boolean useReuseAddress() -> k
+    boolean useSchema() -> l
+    boolean useSynchronousMode() -> m
+    boolean useTCPNoDelay() -> n
+    boolean followReferrals() -> o
     void setFollowReferrals(boolean) -> b
-    int getReferralHopLimit() -> o
-    com.unboundid.ldap.sdk.ReferralConnector getReferralConnector() -> p
-    int getMaxMessageSize() -> q
+    int getReferralHopLimit() -> p
+    com.unboundid.ldap.sdk.ReferralConnector getReferralConnector() -> q
+    int getMaxMessageSize() -> r
     void setMaxMessageSize(int) -> b
-    com.unboundid.ldap.sdk.DisconnectHandler getDisconnectHandler() -> r
+    com.unboundid.ldap.sdk.DisconnectHandler getDisconnectHandler() -> s
     void setDisconnectHandler(com.unboundid.ldap.sdk.DisconnectHandler) -> a
-    com.unboundid.ldap.sdk.UnsolicitedNotificationHandler getUnsolicitedNotificationHandler() -> s
-    int getReceiveBufferSize() -> t
-    int getSendBufferSize() -> u
+    com.unboundid.ldap.sdk.UnsolicitedNotificationHandler getUnsolicitedNotificationHandler() -> t
+    int getReceiveBufferSize() -> u
+    int getSendBufferSize() -> v
+    boolean allowConcurrentSocketFactoryUse() -> w
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPConnectionPoolHealthCheck -> a.a.b.c.aa:
+com.unboundid.ldap.sdk.LDAPConnectionPoolHealthCheck -> a.a.b.c.ad:
     void ensureConnectionValidAfterException(com.unboundid.ldap.sdk.LDAPConnection,com.unboundid.ldap.sdk.LDAPException) -> a
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPConnectionReader -> a.a.b.c.ab:
+com.unboundid.ldap.sdk.LDAPConnectionReader -> a.a.b.c.ae:
     com.unboundid.asn1.ASN1StreamReader asn1StreamReader -> a
     boolean closeRequested -> b
     java.util.concurrent.ConcurrentHashMap acceptorMap -> c
@@ -935,7 +950,7 @@ com.unboundid.ldap.sdk.LDAPConnectionReader -> a.a.b.c.ab:
     void close(boolean) -> a
     void closeInternal(boolean,java.lang.String) -> a
     java.lang.String constructThreadName(com.unboundid.ldap.sdk.LDAPConnectionInternals) -> a
-com.unboundid.ldap.sdk.LDAPConnectionStatistics -> a.a.b.c.ac:
+com.unboundid.ldap.sdk.LDAPConnectionStatistics -> a.a.b.c.af:
     java.util.concurrent.atomic.AtomicLong numAbandonRequests -> a
     java.util.concurrent.atomic.AtomicLong numAddRequests -> b
     java.util.concurrent.atomic.AtomicLong numAddResponses -> c
@@ -978,7 +993,7 @@ com.unboundid.ldap.sdk.LDAPConnectionStatistics -> a.a.b.c.ac:
     void incrementNumUnbindRequests() -> g
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPException -> a.a.b.c.ad:
+com.unboundid.ldap.sdk.LDAPException -> a.a.b.c.ag:
     com.unboundid.ldap.sdk.Control[] NO_CONTROLS -> a
     java.lang.String[] NO_REFERRALS -> b
     com.unboundid.ldap.sdk.Control[] responseControls -> c
@@ -992,9 +1007,9 @@ com.unboundid.ldap.sdk.LDAPException -> a.a.b.c.ad:
     com.unboundid.ldap.sdk.Control[] getResponseControls() -> d
     void toString(java.lang.StringBuilder) -> a
     java.lang.String getExceptionMessage() -> e
-com.unboundid.ldap.sdk.LDAPInterface -> a.a.b.c.ae:
+com.unboundid.ldap.sdk.LDAPInterface -> a.a.b.c.ah:
     com.unboundid.ldap.sdk.SearchResultEntry getEntry(java.lang.String,java.lang.String[]) -> a
-com.unboundid.ldap.sdk.LDAPMessages -> a.a.b.c.af:
+com.unboundid.ldap.sdk.LDAPMessages -> a.a.b.c.ai:
     com.unboundid.ldap.sdk.LDAPMessages ERR_ABANDON_NOT_SUPPORTED_IN_SYNCHRONOUS_MODE -> a
     com.unboundid.ldap.sdk.LDAPMessages ERR_ADD_CLIENT_TIMEOUT -> b
     com.unboundid.ldap.sdk.LDAPMessages ERR_ADD_INTERRUPTED -> c
@@ -1008,313 +1023,286 @@ com.unboundid.ldap.sdk.LDAPMessages -> a.a.b.c.af:
     com.unboundid.ldap.sdk.LDAPMessages ERR_BIND_INTERRUPTED -> k
     com.unboundid.ldap.sdk.LDAPMessages ERR_BIND_RESULT_CANNOT_DECODE -> l
     com.unboundid.ldap.sdk.LDAPMessages ERR_BIND_RESULT_INVALID_ELEMENT -> m
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_CANNOT_PARSE_ATTR_LIST -> n
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_CANNOT_PARSE_DELENTRYATTRS -> o
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_CANNOT_PARSE_MOD_LIST -> p
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_INVALID_CHANGE_NUMBER -> q
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_INVALID_CHANGE_TYPE -> r
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_INVALID_DELENTRYATTRS_MODS -> s
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_INVALID_DELENTRYATTRS_MOD_TYPE -> t
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_MISSING_CHANGES -> u
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_MISSING_DELETE_OLD_RDN -> v
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_MISSING_NEW_RDN -> w
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_NO_CHANGE_NUMBER -> x
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_NO_CHANGE_TYPE -> y
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CHANGELOG_NO_TARGET_DN -> z
-    com.unboundid.ldap.sdk.LDAPMessages ERR_COMPARE_CLIENT_TIMEOUT -> A
-    com.unboundid.ldap.sdk.LDAPMessages ERR_COMPARE_INTERRUPTED -> B
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNECT_THREAD_EXCEPTION -> C
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNECT_THREAD_TIMEOUT -> D
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNREADER_MSGID_IN_USE -> E
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNREADER_STARTTLS_FAILED -> F
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNREADER_STARTTLS_FAILED_NO_EXCEPTION -> G
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CANNOT_AUTHENTICATE_FOR_REFERRAL -> H
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CANNOT_REAUTHENTICATE -> I
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ADD_RESPONSE -> J
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ADD_RESPONSE_WITH_MESSAGE -> K
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ASYNC_RESPONSE -> L
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ASYNC_RESPONSE_WITH_MESSAGE -> M
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_BIND_RESPONSE -> N
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_BIND_RESPONSE_WITH_MESSAGE -> O
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_COMPARE_RESPONSE -> P
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_COMPARE_RESPONSE_WITH_MESSAGE -> Q
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_DELETE_RESPONSE -> R
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_DELETE_RESPONSE_WITH_MESSAGE -> S
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_EXTENDED_RESPONSE -> T
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_EXTENDED_RESPONSE_WITH_MESSAGE -> U
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_DN_RESPONSE -> V
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_DN_RESPONSE_WITH_MESSAGE -> W
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_RESPONSE -> X
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_RESPONSE_WITH_MESSAGE -> Y
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_SEARCH_RESPONSE -> Z
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_SEARCH_RESPONSE_WITH_MESSAGE -> aa
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CONNECT_ERROR -> ab
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_ENCODE_ERROR -> ac
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_MULTIPLE_FAILURES -> ad
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_NOT_ESTABLISHED -> ae
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_READ_RESPONSE_NOT_ESTABLISHED -> af
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_SEND_ERROR -> ag
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROLS_DECODE_ELEMENT_NOT_SEQUENCE -> ah
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_CANNOT_DECODE -> ai
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_DECODE_CRITICALITY -> aj
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_DECODE_INVALID_ELEMENT_COUNT -> ak
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_INVALID_TYPE -> al
-    com.unboundid.ldap.sdk.LDAPMessages ERR_CRAMMD5_CANNOT_CREATE_SASL_CLIENT -> am
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DELETE_CLIENT_TIMEOUT -> an
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DELETE_INTERRUPTED -> ao
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DIGESTMD5_CANNOT_CREATE_SASL_CLIENT -> ap
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_ENDS_WITH_COMMA -> aq
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_ENDS_WITH_PLUS -> ar
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_ENTRY_SOURCE_ERR_RETRIEVING_ENTRY -> as
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_ENTRY_SOURCE_NO_SUCH_ENTRY -> at
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_MATCHES_UNSUPPORTED_SCOPE -> au
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_NO_ATTR_IN_RDN -> av
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_NO_EQUAL_SIGN -> aw
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_NO_VALUE_FOR_ATTR -> ax
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_UNEXPECTED_CHAR -> ay
-    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_UNEXPECTED_COMMA -> az
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_ADD_EXISTING -> aA
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_ADD_NO_VALUES -> aB
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_CANNOT_DETERMINE_RDN -> aC
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_DELETE_NONEXISTENT_ATTR -> aD
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_DELETE_NONEXISTENT_VALUE -> aE
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_FAILURE -> aF
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_ENTRY_VALUE_NOT_INTEGER -> aG
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_MOD_VALUE_NOT_INTEGER -> aH
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_MULTIPLE_MOD_VALUES -> aI
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_NOT_SINGLE_VALUED -> aJ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_NO_MOD_VALUES -> aK
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_NO_SUCH_ATTR -> aL
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_TARGETS_RDN -> aM
-    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_UNKNOWN_TYPE -> aN
-    com.unboundid.ldap.sdk.LDAPMessages ERR_EXCEPTION_HANDLING_RESPONSE -> aO
-    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTENDED_CLIENT_TIMEOUT -> aP
-    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTENDED_RESULT_CANNOT_DECODE -> aQ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTENDED_RESULT_INVALID_ELEMENT -> aR
-    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTOP_INTERRUPTED -> aS
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILE_PW_PROVIDER_EMPTY_PW -> aT
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILE_PW_PROVIDER_ERROR_READING_PW -> aU
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_APPROXIMATE_MATCHING_NOT_SUPPORTED -> aV
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE -> aW
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_AVA -> aX
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_COMPS -> aY
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_EXTMATCH -> aZ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_NOT_COMP -> ba
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_SUBSTRING -> bb
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_PARSE_MRID -> bc
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_ELEMENT_INVALID_TYPE -> bd
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EMPTY_ATTR_NAME -> be
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EMPTY_MRID -> bf
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_END_AFTER_GT -> bg
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_END_AFTER_LT -> bh
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_END_AFTER_TILDE -> bi
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXPECTED_CLOSE_PAREN -> bj
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXPECTED_OPEN_PAREN -> bk
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTENSIBLE_MATCHING_NOT_SUPPORTED -> bl
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_DNATTRS_NOT_BOOLEAN -> bm
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_INVALID_TYPE -> bn
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_ATTRS -> bo
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_DNATTRS -> bp
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_MRIDS -> bq
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_VALUES -> br
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_NO_ATTR_OR_MRID -> bs
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_NO_VALUE -> bt
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_AVA_ELEMENT_COUNT -> bu
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_ESCAPED_END_CHAR -> bv
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_HEX_CHAR -> bw
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_SUBSTR_ASSERTION_COUNT -> bx
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_SUBSTR_TYPE -> by
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_TYPE -> bz
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MISMATCHED_PARENS -> bA
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MISSING_PARENTHESES -> bB
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MULTIPLE_SUBFINAL -> bC
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MULTIPLE_SUBINITIAL -> bD
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_NO_COLON_AFTER_MRID -> bE
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_NO_EQUALS -> bF
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_NO_EQUAL_AFTER_MRID -> bG
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_OPEN_WITHOUT_CLOSE -> bH
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_TOO_DEEP -> bI
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_TOO_SHORT -> bJ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_ASTERISK -> bK
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_GT -> bL
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_LT -> bM
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_MRID -> bN
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_TILDE -> bO
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_IN_AV -> bP
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CLOSE_PAREN -> bQ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_DOUBLE_ASTERISK -> bR
-    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_OPEN_PAREN -> bS
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GET_ENTRY_HEALTH_CHECK_FAILURE -> bT
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GET_ENTRY_HEALTH_CHECK_NO_ENTRY_RETURNED -> bU
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GSSAPI_AUTHENTICATION_FAILED -> bV
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GSSAPI_CANNOT_CREATE_JAAS_CONFIG -> bW
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GSSAPI_CANNOT_CREATE_SASL_CLIENT -> bX
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GSSAPI_CANNOT_INITIALIZE_JAAS_CONTEXT -> bY
-    com.unboundid.ldap.sdk.LDAPMessages ERR_GSSAPI_MULTIPLE_CONCURRENT_REQUESTS -> bZ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_INTERMEDIATE_RESPONSE_CANNOT_DECODE -> ca
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_ATTRLIST_EMPTY_ATTRIBUTE -> cb
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_ATTRLIST_ENDS_WITH_COMMA -> cc
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_HEX_STRING_TOO_SHORT -> cd
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_HEX_CHAR -> ce
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_PORT -> cf
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_SCHEME -> cg
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_SCOPE -> ch
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_SCOPE_VALUE -> ci
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_IPV6_HOST_EMPTY -> cj
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_IPV6_HOST_MISSING_BRACKET -> ck
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_IPV6_HOST_UNEXPECTED_CHAR -> cl
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_NO_COLON_SLASHES -> cm
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_PORT_NOT_INT -> cn
-    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAP_ENTRY_SOURCE_REQUEST_HAS_LISTENER -> co
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MODDN_INTERRUPTED -> cp
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_CLIENT_TIMEOUT -> cq
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_DN_CLIENT_TIMEOUT -> cr
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_INTERRUPTED -> cs
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_INVALID_LDIF -> ct
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_CANNOT_DECODE -> cu
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_CANNOT_PARSE_ATTR -> cv
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_CANNOT_PARSE_ATTR_VALUE_SET -> cw
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_CANNOT_PARSE_MOD_TYPE -> cx
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_INVALID_ATTR_ELEMENT_COUNT -> cy
-    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_INVALID_ELEMENT_COUNT -> cz
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_CLOSED -> cA
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_CONNECT_ERROR -> cB
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_CONN_NOT_ESTABLISHED -> cC
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_HEALTH_CHECK_CONN_INVALID_AFTER_EXCEPTION -> cD
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_NO_CONNECTIONS -> cE
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_OP_EXCEPTION -> cF
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_POST_CONNECT_ERROR -> cG
-    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_STARTTLS_NOT_ALLOWED -> cH
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_CHAR_OUTSIDE_QUOTES -> cI
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_EMPTY_VALUE -> cJ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_ENDS_WITH_BACKSLASH -> cK
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_INVALID_HEX_CHAR -> cL
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_MISSING_HEX_CHAR -> cM
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_NO_ATTR_NAME -> cN
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_NO_ATTR_VALUE -> cO
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_NO_EQUAL_SIGN -> cP
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_PLUS_NOT_FOLLOWED_BY_AVP -> cQ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_UNCLOSED_DOUBLE_QUOTE -> cR
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_UNEXPECTED_DOUBLE_QUOTE -> cS
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_VALUE_NOT_FOLLOWED_BY_PLUS -> cT
-    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_ACCEPTOR_ERROR -> cU
-    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CANNOT_SET_SO_TIMEOUT -> cV
-    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CLOSING_DUE_TO_ASN1_EXCEPTION -> cW
-    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CLOSING_DUE_TO_EXCEPTION -> cX
-    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CLOSING_DUE_TO_IO_EXCEPTION -> cY
-    com.unboundid.ldap.sdk.LDAPMessages ERR_RESULT_CANNOT_DECODE -> cZ
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SASL_CANNOT_CREATE_INITIAL_REQUEST -> da
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SASL_CANNOT_CREATE_SUBSEQUENT_REQUEST -> db
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_CLIENT_TIMEOUT -> dc
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_ENTRY_CANNOT_DECODE -> dd
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_ENTRY_ELEMENT_NOT_SEQUENCE -> de
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_INTERRUPTED -> df
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_REFERENCE_CANNOT_DECODE -> dg
-    com.unboundid.ldap.sdk.LDAPMessages ERR_SIMPLE_BIND_DN_WITHOUT_PASSWORD -> dh
-    com.unboundid.ldap.sdk.LDAPMessages ERR_TOO_MANY_REFERRALS -> di
-    com.unboundid.ldap.sdk.LDAPMessages INFO_ASYNC_REQUEST_USER_CANCELED -> dj
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_BIND_FAILED -> dk
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_CLOSED_BY_FINALIZER -> dl
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_DECODE_ERROR -> dm
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_IO_ERROR -> dn
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_LOCAL_ERROR -> do
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_OTHER -> dp
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOLED_CONNECTION_DEFUNCT -> dq
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOLED_CONNECTION_EXPIRED -> dr
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOLED_CONNECTION_UNNEEDED -> ds
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOL_CLOSED -> dt
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOL_CREATION_FAILURE -> du
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_RECONNECT -> dv
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_REFERRAL -> dw
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_SECURITY_PROBLEM -> dx
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_SERVER_CLOSED_WITHOUT_NOTICE -> dy
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_SERVER_CLOSED_WITH_NOTICE -> dz
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_UNBIND -> dA
-    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_UNKNOWN -> dB
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ADMIN_LIMIT_EXCEEDED -> dC
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AFFECTS_MULTIPLE_DSAS -> dD
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ALIAS_DEREFERENCING_PROBLEM -> dE
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ALIAS_PROBLEM -> dF
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ASSERTION_FAILED -> dG
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ATTRIBUTE_OR_VALUE_EXISTS -> dH
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AUTHORIZATION_DENIED -> dI
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AUTH_METHOD_NOT_SUPPORTED -> dJ
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AUTH_UNKNOWN -> dK
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_BUSY -> dL
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CANCELED -> dM
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CANNOT_CANCEL -> dN
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CLIENT_LOOP -> dO
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_COMPARE_FALSE -> dP
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_COMPARE_TRUE -> dQ
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONFIDENTIALITY_REQUIRED -> dR
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONNECT_ERROR -> dS
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONSTRAINT_VIOLATION -> dT
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONTROL_NOT_FOUND -> dU
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_DECODING_ERROR -> dV
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ENCODING_ERROR -> dW
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ENTRY_ALREADY_EXISTS -> dX
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_E_SYNC_REFRESH_REQUIRED -> dY
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_FILTER_ERROR -> dZ
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INAPPROPRIATE_AUTHENTICATION -> ea
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INAPPROPRIATE_MATCHING -> eb
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INSUFFICIENT_ACCESS_RIGHTS -> ec
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INTERACTIVE_TRANSACTION_ABORTED -> ed
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INVALID_ATTRIBUTE_SYNTAX -> ee
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INVALID_CREDENTIALS -> ef
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INVALID_DN_SYNTAX -> eg
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_LOCAL_ERROR -> eh
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_LOOP_DETECT -> ei
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_MORE_RESULTS_TO_RETURN -> ej
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NAMING_VIOLATION -> ek
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NOT_ALLOWED_ON_NONLEAF -> el
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NOT_ALLOWED_ON_RDN -> em
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NOT_SUPPORTED -> en
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_MEMORY -> eo
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_OPERATION -> ep
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_RESULTS_RETURNED -> eq
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_SUCH_ATTRIBUTE -> er
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_SUCH_OBJECT -> es
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_SUCH_OPERATION -> et
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OBJECT_CLASS_MODS_PROHIBITED -> eu
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OBJECT_CLASS_VIOLATION -> ev
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OFFSET_RANGE_ERROR -> ew
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OPERATIONS_ERROR -> ex
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OTHER -> ey
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_PARAM_ERROR -> ez
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_PROTOCOL_ERROR -> eA
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_REFERRAL -> eB
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_REFERRAL_LIMIT_EXCEEDED -> eC
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SASL_BIND_IN_PROGRESS -> eD
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SERVER_DOWN -> eE
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SIZE_LIMIT_EXCEEDED -> eF
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SORT_CONTROL_MISSING -> eG
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_STRONG_AUTH_REQUIRED -> eH
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SUCCESS -> eI
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_TIMEOUT -> eJ
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_TIME_LIMIT_EXCEEDED -> eK
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_TOO_LATE -> eL
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNAVAILABLE -> eM
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNAVAILABLE_CRITICAL_EXTENSION -> eN
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNDEFINED_ATTRIBUTE_TYPE -> eO
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNWILLING_TO_PERFORM -> eP
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_USER_CANCELED -> eQ
-    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_VIRTUAL_LIST_VIEW_ERR0R -> eR
-    com.unboundid.ldap.sdk.LDAPMessages WARN_ASYNC_REQUEST_GET_TIMEOUT -> eS
-    com.unboundid.ldap.sdk.LDAPMessages WARN_INTERMEDIATE_RESPONSE_WITH_NO_LISTENER -> eT
-    com.unboundid.ldap.sdk.LDAPMessages WARN_READER_DISCARDING_UNEXPECTED_RESPONSE -> eU
-    com.unboundid.ldap.sdk.LDAPMessages WARN_READER_NO_ACCEPTOR -> eV
-    com.unboundid.ldap.sdk.LDAPMessages WARN_READER_UNHANDLED_UNSOLICITED_NOTIFICATION -> eW
-    java.util.ResourceBundle RESOURCE_BUNDLE -> eX
-    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> eY
-    java.util.concurrent.ConcurrentHashMap MESSAGES -> eZ
-    java.lang.String defaultText -> fa
-    com.unboundid.ldap.sdk.LDAPMessages[] ENUM$VALUES -> fb
+    com.unboundid.ldap.sdk.LDAPMessages ERR_COMPARE_CLIENT_TIMEOUT -> n
+    com.unboundid.ldap.sdk.LDAPMessages ERR_COMPARE_INTERRUPTED -> o
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNECT_THREAD_EXCEPTION -> p
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNECT_THREAD_TIMEOUT -> q
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNREADER_MSGID_IN_USE -> r
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNREADER_STARTTLS_FAILED -> s
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONNREADER_STARTTLS_FAILED_NO_EXCEPTION -> t
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CANNOT_AUTHENTICATE_FOR_REFERRAL -> u
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CANNOT_REAUTHENTICATE -> v
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ADD_RESPONSE -> w
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ADD_RESPONSE_WITH_MESSAGE -> x
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ASYNC_RESPONSE -> y
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_ASYNC_RESPONSE_WITH_MESSAGE -> z
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_BIND_RESPONSE -> A
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_BIND_RESPONSE_WITH_MESSAGE -> B
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_COMPARE_RESPONSE -> C
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_COMPARE_RESPONSE_WITH_MESSAGE -> D
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_DELETE_RESPONSE -> E
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_DELETE_RESPONSE_WITH_MESSAGE -> F
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_EXTENDED_RESPONSE -> G
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_EXTENDED_RESPONSE_WITH_MESSAGE -> H
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_DN_RESPONSE -> I
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_DN_RESPONSE_WITH_MESSAGE -> J
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_RESPONSE -> K
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_MODIFY_RESPONSE_WITH_MESSAGE -> L
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_SEARCH_RESPONSE -> M
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CLOSED_WAITING_FOR_SEARCH_RESPONSE_WITH_MESSAGE -> N
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_CONNECT_ERROR -> O
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_ENCODE_ERROR -> P
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_MULTIPLE_FAILURES -> Q
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_NOT_ESTABLISHED -> R
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_READ_RESPONSE_NOT_ESTABLISHED -> S
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONN_SEND_ERROR -> T
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROLS_DECODE_ELEMENT_NOT_SEQUENCE -> U
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_CANNOT_DECODE -> V
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_DECODE_CRITICALITY -> W
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_DECODE_INVALID_ELEMENT_COUNT -> X
+    com.unboundid.ldap.sdk.LDAPMessages ERR_CONTROL_INVALID_TYPE -> Y
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DELETE_CLIENT_TIMEOUT -> Z
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DELETE_INTERRUPTED -> aa
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_ENDS_WITH_COMMA -> ab
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_ENDS_WITH_PLUS -> ac
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_MATCHES_UNSUPPORTED_SCOPE -> ad
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_NO_ATTR_IN_RDN -> ae
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_NO_EQUAL_SIGN -> af
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_NO_VALUE_FOR_ATTR -> ag
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_UNEXPECTED_CHAR -> ah
+    com.unboundid.ldap.sdk.LDAPMessages ERR_DN_UNEXPECTED_COMMA -> ai
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_ADD_EXISTING -> aj
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_ADD_NO_VALUES -> ak
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_DELETE_NONEXISTENT_ATTR -> al
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_DELETE_NONEXISTENT_VALUE -> am
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_FAILURE -> an
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_ENTRY_VALUE_NOT_INTEGER -> ao
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_MOD_VALUE_NOT_INTEGER -> ap
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_MULTIPLE_MOD_VALUES -> aq
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_NOT_SINGLE_VALUED -> ar
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_NO_MOD_VALUES -> as
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_INCREMENT_NO_SUCH_ATTR -> at
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_TARGETS_RDN -> au
+    com.unboundid.ldap.sdk.LDAPMessages ERR_ENTRY_APPLY_MODS_UNKNOWN_TYPE -> av
+    com.unboundid.ldap.sdk.LDAPMessages ERR_EXCEPTION_HANDLING_RESPONSE -> aw
+    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTENDED_CLIENT_TIMEOUT -> ax
+    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTENDED_RESULT_CANNOT_DECODE -> ay
+    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTENDED_RESULT_INVALID_ELEMENT -> az
+    com.unboundid.ldap.sdk.LDAPMessages ERR_EXTOP_INTERRUPTED -> aA
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_APPROXIMATE_MATCHING_NOT_SUPPORTED -> aB
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE -> aC
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_AVA -> aD
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_COMPS -> aE
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_EXTMATCH -> aF
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_NOT_COMP -> aG
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_DECODE_SUBSTRING -> aH
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_CANNOT_PARSE_MRID -> aI
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_ELEMENT_INVALID_TYPE -> aJ
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EMPTY_ATTR_NAME -> aK
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EMPTY_MRID -> aL
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_END_AFTER_GT -> aM
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_END_AFTER_LT -> aN
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_END_AFTER_TILDE -> aO
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXPECTED_CLOSE_PAREN -> aP
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXPECTED_OPEN_PAREN -> aQ
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTENSIBLE_MATCHING_NOT_SUPPORTED -> aR
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_DNATTRS_NOT_BOOLEAN -> aS
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_INVALID_TYPE -> aT
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_ATTRS -> aU
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_DNATTRS -> aV
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_MRIDS -> aW
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_MULTIPLE_VALUES -> aX
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_NO_ATTR_OR_MRID -> aY
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_EXTMATCH_NO_VALUE -> aZ
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_AVA_ELEMENT_COUNT -> ba
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_ESCAPED_END_CHAR -> bb
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_HEX_CHAR -> bc
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_SUBSTR_ASSERTION_COUNT -> bd
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_SUBSTR_TYPE -> be
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_INVALID_TYPE -> bf
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MISMATCHED_PARENS -> bg
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MISSING_PARENTHESES -> bh
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MULTIPLE_SUBFINAL -> bi
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_MULTIPLE_SUBINITIAL -> bj
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_NO_COLON_AFTER_MRID -> bk
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_NO_EQUALS -> bl
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_NO_EQUAL_AFTER_MRID -> bm
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_OPEN_WITHOUT_CLOSE -> bn
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_TOO_DEEP -> bo
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_TOO_SHORT -> bp
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_ASTERISK -> bq
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_GT -> br
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_LT -> bs
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_MRID -> bt
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_AFTER_TILDE -> bu
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CHAR_IN_AV -> bv
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_CLOSE_PAREN -> bw
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_DOUBLE_ASTERISK -> bx
+    com.unboundid.ldap.sdk.LDAPMessages ERR_FILTER_UNEXPECTED_OPEN_PAREN -> by
+    com.unboundid.ldap.sdk.LDAPMessages ERR_INTERMEDIATE_RESPONSE_CANNOT_DECODE -> bz
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_ATTRLIST_EMPTY_ATTRIBUTE -> bA
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_ATTRLIST_ENDS_WITH_COMMA -> bB
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_HEX_STRING_TOO_SHORT -> bC
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_HEX_CHAR -> bD
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_PORT -> bE
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_SCHEME -> bF
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_SCOPE -> bG
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_INVALID_SCOPE_VALUE -> bH
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_IPV6_HOST_EMPTY -> bI
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_IPV6_HOST_MISSING_BRACKET -> bJ
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_IPV6_HOST_UNEXPECTED_CHAR -> bK
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_NO_COLON_SLASHES -> bL
+    com.unboundid.ldap.sdk.LDAPMessages ERR_LDAPURL_PORT_NOT_INT -> bM
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MODDN_INTERRUPTED -> bN
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_CLIENT_TIMEOUT -> bO
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_DN_CLIENT_TIMEOUT -> bP
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_INTERRUPTED -> bQ
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MODIFY_INVALID_LDIF -> bR
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_CANNOT_DECODE -> bS
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_CANNOT_PARSE_ATTR -> bT
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_CANNOT_PARSE_ATTR_VALUE_SET -> bU
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_CANNOT_PARSE_MOD_TYPE -> bV
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_INVALID_ATTR_ELEMENT_COUNT -> bW
+    com.unboundid.ldap.sdk.LDAPMessages ERR_MOD_DECODE_INVALID_ELEMENT_COUNT -> bX
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_CLOSED -> bY
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_CONNECT_ERROR -> bZ
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_CONN_NOT_ESTABLISHED -> ca
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_HEALTH_CHECK_CONN_CLOSED -> cb
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_HEALTH_CHECK_CONN_INVALID_AFTER_EXCEPTION -> cc
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_HEALTH_CHECK_READ_FAILURE -> cd
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_NO_CONNECTIONS -> ce
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_OP_EXCEPTION -> cf
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_POST_CONNECT_ERROR -> cg
+    com.unboundid.ldap.sdk.LDAPMessages ERR_POOL_STARTTLS_NOT_ALLOWED -> ch
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_CHAR_OUTSIDE_QUOTES -> ci
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_EMPTY_VALUE -> cj
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_ENDS_WITH_BACKSLASH -> ck
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_INVALID_HEX_CHAR -> cl
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_MISSING_HEX_CHAR -> cm
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_NO_ATTR_NAME -> cn
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_NO_ATTR_VALUE -> co
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_NO_EQUAL_SIGN -> cp
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_PLUS_NOT_FOLLOWED_BY_AVP -> cq
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_UNCLOSED_DOUBLE_QUOTE -> cr
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_UNEXPECTED_DOUBLE_QUOTE -> cs
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RDN_VALUE_NOT_FOLLOWED_BY_PLUS -> ct
+    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_ACCEPTOR_ERROR -> cu
+    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CANNOT_SET_SO_TIMEOUT -> cv
+    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CLOSING_DUE_TO_ASN1_EXCEPTION -> cw
+    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CLOSING_DUE_TO_EXCEPTION -> cx
+    com.unboundid.ldap.sdk.LDAPMessages ERR_READER_CLOSING_DUE_TO_IO_EXCEPTION -> cy
+    com.unboundid.ldap.sdk.LDAPMessages ERR_RESULT_CANNOT_DECODE -> cz
+    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_CLIENT_TIMEOUT -> cA
+    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_ENTRY_CANNOT_DECODE -> cB
+    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_INTERRUPTED -> cC
+    com.unboundid.ldap.sdk.LDAPMessages ERR_SEARCH_REFERENCE_CANNOT_DECODE -> cD
+    com.unboundid.ldap.sdk.LDAPMessages ERR_SIMPLE_BIND_DN_WITHOUT_PASSWORD -> cE
+    com.unboundid.ldap.sdk.LDAPMessages ERR_TOO_MANY_REFERRALS -> cF
+    com.unboundid.ldap.sdk.LDAPMessages INFO_ASYNC_OPERATION_TIMEOUT_WITHOUT_ABANDON -> cG
+    com.unboundid.ldap.sdk.LDAPMessages INFO_ASYNC_OPERATION_TIMEOUT_WITH_ABANDON -> cH
+    com.unboundid.ldap.sdk.LDAPMessages INFO_ASYNC_REQUEST_USER_CANCELED -> cI
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_BIND_FAILED -> cJ
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_CLOSED_BY_FINALIZER -> cK
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_DECODE_ERROR -> cL
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_IO_ERROR -> cM
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_LOCAL_ERROR -> cN
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_OTHER -> cO
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOLED_CONNECTION_DEFUNCT -> cP
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOLED_CONNECTION_EXPIRED -> cQ
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOLED_CONNECTION_UNNEEDED -> cR
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOL_CLOSED -> cS
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_POOL_CREATION_FAILURE -> cT
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_RECONNECT -> cU
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_REFERRAL -> cV
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_SECURITY_PROBLEM -> cW
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_SERVER_CLOSED_WITHOUT_NOTICE -> cX
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_SERVER_CLOSED_WITH_NOTICE -> cY
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_UNBIND -> cZ
+    com.unboundid.ldap.sdk.LDAPMessages INFO_DISCONNECT_TYPE_UNKNOWN -> da
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ADMIN_LIMIT_EXCEEDED -> db
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AFFECTS_MULTIPLE_DSAS -> dc
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ALIAS_DEREFERENCING_PROBLEM -> dd
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ALIAS_PROBLEM -> de
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ASSERTION_FAILED -> df
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ATTRIBUTE_OR_VALUE_EXISTS -> dg
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AUTHORIZATION_DENIED -> dh
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AUTH_METHOD_NOT_SUPPORTED -> di
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_AUTH_UNKNOWN -> dj
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_BUSY -> dk
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CANCELED -> dl
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CANNOT_CANCEL -> dm
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CLIENT_LOOP -> dn
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_COMPARE_FALSE -> do
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_COMPARE_TRUE -> dp
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONFIDENTIALITY_REQUIRED -> dq
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONNECT_ERROR -> dr
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONSTRAINT_VIOLATION -> ds
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_CONTROL_NOT_FOUND -> dt
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_DECODING_ERROR -> du
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ENCODING_ERROR -> dv
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_ENTRY_ALREADY_EXISTS -> dw
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_E_SYNC_REFRESH_REQUIRED -> dx
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_FILTER_ERROR -> dy
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INAPPROPRIATE_AUTHENTICATION -> dz
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INAPPROPRIATE_MATCHING -> dA
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INSUFFICIENT_ACCESS_RIGHTS -> dB
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INTERACTIVE_TRANSACTION_ABORTED -> dC
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INVALID_ATTRIBUTE_SYNTAX -> dD
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INVALID_CREDENTIALS -> dE
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_INVALID_DN_SYNTAX -> dF
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_LOCAL_ERROR -> dG
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_LOOP_DETECT -> dH
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_MORE_RESULTS_TO_RETURN -> dI
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NAMING_VIOLATION -> dJ
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NOT_ALLOWED_ON_NONLEAF -> dK
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NOT_ALLOWED_ON_RDN -> dL
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NOT_SUPPORTED -> dM
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_MEMORY -> dN
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_OPERATION -> dO
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_RESULTS_RETURNED -> dP
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_SUCH_ATTRIBUTE -> dQ
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_SUCH_OBJECT -> dR
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_NO_SUCH_OPERATION -> dS
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OBJECT_CLASS_MODS_PROHIBITED -> dT
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OBJECT_CLASS_VIOLATION -> dU
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OFFSET_RANGE_ERROR -> dV
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OPERATIONS_ERROR -> dW
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_OTHER -> dX
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_PARAM_ERROR -> dY
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_PROTOCOL_ERROR -> dZ
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_REFERRAL -> ea
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_REFERRAL_LIMIT_EXCEEDED -> eb
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SASL_BIND_IN_PROGRESS -> ec
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SERVER_DOWN -> ed
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SIZE_LIMIT_EXCEEDED -> ee
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SORT_CONTROL_MISSING -> ef
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_STRONG_AUTH_REQUIRED -> eg
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_SUCCESS -> eh
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_TIMEOUT -> ei
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_TIME_LIMIT_EXCEEDED -> ej
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_TOO_LATE -> ek
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNAVAILABLE -> el
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNAVAILABLE_CRITICAL_EXTENSION -> em
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNDEFINED_ATTRIBUTE_TYPE -> en
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_UNWILLING_TO_PERFORM -> eo
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_USER_CANCELED -> ep
+    com.unboundid.ldap.sdk.LDAPMessages INFO_RC_VIRTUAL_LIST_VIEW_ERR0R -> eq
+    com.unboundid.ldap.sdk.LDAPMessages WARN_ASYNC_REQUEST_GET_TIMEOUT -> er
+    com.unboundid.ldap.sdk.LDAPMessages WARN_INTERMEDIATE_RESPONSE_WITH_NO_LISTENER -> es
+    com.unboundid.ldap.sdk.LDAPMessages WARN_READER_DISCARDING_UNEXPECTED_RESPONSE -> et
+    com.unboundid.ldap.sdk.LDAPMessages WARN_READER_NO_ACCEPTOR -> eu
+    com.unboundid.ldap.sdk.LDAPMessages WARN_READER_UNHANDLED_UNSOLICITED_NOTIFICATION -> ev
+    java.util.ResourceBundle RESOURCE_BUNDLE -> ew
+    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> ex
+    java.util.concurrent.ConcurrentHashMap MESSAGES -> ey
+    java.lang.String defaultText -> ez
+    com.unboundid.ldap.sdk.LDAPMessages[] $VALUES -> eA
+    com.unboundid.ldap.sdk.LDAPMessages[] values() -> values
+    com.unboundid.ldap.sdk.LDAPMessages valueOf(java.lang.String) -> valueOf
     java.lang.String get() -> a
     java.lang.String get(java.lang.Object[]) -> a
     java.lang.String toString() -> toString
-    com.unboundid.ldap.sdk.LDAPMessages[] values() -> values
-    com.unboundid.ldap.sdk.LDAPMessages valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.LDAPRequest -> a.a.b.c.ag:
+com.unboundid.ldap.sdk.LDAPRequest -> a.a.b.c.aj:
     com.unboundid.ldap.sdk.Control[] NO_CONTROLS -> b
     java.lang.Boolean followReferrals -> a
     com.unboundid.ldap.sdk.Control[] controls -> c
@@ -1326,7 +1314,7 @@ com.unboundid.ldap.sdk.LDAPRequest -> a.a.b.c.ag:
     com.unboundid.ldap.sdk.IntermediateResponseListener getIntermediateResponseListener() -> c
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPResult -> a.a.b.c.ah:
+com.unboundid.ldap.sdk.LDAPResult -> a.a.b.c.ak:
     java.lang.Byte protocolOpType -> b
     com.unboundid.ldap.sdk.Control[] responseControls -> c
     int messageID -> d
@@ -1343,15 +1331,15 @@ com.unboundid.ldap.sdk.LDAPResult -> a.a.b.c.ah:
     com.unboundid.ldap.sdk.Control[] getResponseControls() -> h
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPRuntimeException -> a.a.b.c.ai:
+com.unboundid.ldap.sdk.LDAPRuntimeException -> a.a.b.c.al:
     com.unboundid.ldap.sdk.LDAPException ldapException -> a
     void throwLDAPException() -> a
     void toString(java.lang.StringBuilder) -> a
     java.lang.String getExceptionMessage() -> b
-com.unboundid.ldap.sdk.LDAPSearchException -> a.a.b.c.aj:
+com.unboundid.ldap.sdk.LDAPSearchException -> a.a.b.c.am:
     com.unboundid.ldap.sdk.SearchResult searchResult -> c
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.LDAPURL -> a.a.b.c.ak:
+com.unboundid.ldap.sdk.LDAPURL -> a.a.b.c.an:
     com.unboundid.ldap.sdk.Filter DEFAULT_FILTER -> a
     com.unboundid.ldap.sdk.SearchScope DEFAULT_SCOPE -> b
     com.unboundid.ldap.sdk.DN DEFAULT_BASE_DN -> c
@@ -1387,35 +1375,52 @@ com.unboundid.ldap.sdk.LDAPURL -> a.a.b.c.ak:
     java.lang.String toString() -> toString
     java.lang.String toNormalizedString() -> i
     void toNormalizedString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.PasswordProvider -> a.a.b.c.al:
+com.unboundid.ldap.sdk.OperationType -> a.a.b.c.ao:
+    com.unboundid.ldap.sdk.OperationType ABANDON -> a
+    com.unboundid.ldap.sdk.OperationType ADD -> b
+    com.unboundid.ldap.sdk.OperationType BIND -> c
+    com.unboundid.ldap.sdk.OperationType COMPARE -> d
+    com.unboundid.ldap.sdk.OperationType DELETE -> e
+    com.unboundid.ldap.sdk.OperationType EXTENDED -> f
+    com.unboundid.ldap.sdk.OperationType MODIFY -> g
+    com.unboundid.ldap.sdk.OperationType MODIFY_DN -> h
+    com.unboundid.ldap.sdk.OperationType SEARCH -> i
+    com.unboundid.ldap.sdk.OperationType UNBIND -> j
+    com.unboundid.ldap.sdk.OperationType[] $VALUES -> k
+    com.unboundid.ldap.sdk.OperationType[] values() -> values
+    com.unboundid.ldap.sdk.OperationType valueOf(java.lang.String) -> valueOf
+com.unboundid.ldap.sdk.PasswordProvider -> a.a.b.c.ap:
     byte[] getPasswordBytes() -> a
-com.unboundid.ldap.sdk.RDN -> a.a.b.c.am:
+com.unboundid.ldap.sdk.RDN -> a.a.b.c.aq:
     com.unboundid.asn1.ASN1OctetString[] attributeValues -> a
-    java.lang.String normalizedString -> b
-    java.lang.String rdnString -> c
-    java.lang.String[] attributeNames -> d
+    com.unboundid.ldap.sdk.schema.Schema schema -> b
+    java.lang.String normalizedString -> c
+    java.lang.String rdnString -> d
+    java.lang.String[] attributeNames -> e
     byte[] readHexString(java.lang.String,int) -> a
     int readValueString(java.lang.String,int,java.lang.StringBuilder) -> a
     int readEscapedHexString(java.lang.String,int,java.lang.StringBuilder) -> b
+    com.unboundid.ldap.sdk.schema.Schema getSchema() -> a
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder,boolean) -> a
-    java.lang.String toNormalizedString() -> a
+    java.lang.String toNormalizedString() -> b
     void toNormalizedString(java.lang.StringBuilder) -> a
-    java.lang.StringBuilder normalizeValue(com.unboundid.asn1.ASN1OctetString) -> a
+    java.lang.String normalizeAttrName(java.lang.String) -> a
+    java.lang.StringBuilder normalizeValue(java.lang.String,com.unboundid.asn1.ASN1OctetString) -> a
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     int compareTo(com.unboundid.ldap.sdk.RDN) -> a
     int compare(com.unboundid.ldap.sdk.RDN,com.unboundid.ldap.sdk.RDN) -> a
-    int compare(java.lang.Object,java.lang.Object) -> compare
     int compareTo(java.lang.Object) -> compareTo
-com.unboundid.ldap.sdk.ReadOnlyEntry -> a.a.b.c.an:
-com.unboundid.ldap.sdk.ReadOnlyLDAPRequest -> a.a.b.c.ao:
-com.unboundid.ldap.sdk.ReadOnlySearchRequest -> a.a.b.c.ap:
-com.unboundid.ldap.sdk.ReferralConnector -> a.a.b.c.aq:
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.unboundid.ldap.sdk.ReadOnlyEntry -> a.a.b.c.ar:
+com.unboundid.ldap.sdk.ReadOnlyLDAPRequest -> a.a.b.c.as:
+com.unboundid.ldap.sdk.ReadOnlySearchRequest -> a.a.b.c.at:
+com.unboundid.ldap.sdk.ReferralConnector -> a.a.b.c.au:
     com.unboundid.ldap.sdk.LDAPConnection getReferralConnection(com.unboundid.ldap.sdk.LDAPURL,com.unboundid.ldap.sdk.LDAPConnection) -> a
-com.unboundid.ldap.sdk.ResponseAcceptor -> a.a.b.c.ar:
+com.unboundid.ldap.sdk.ResponseAcceptor -> a.a.b.c.av:
     void responseReceived(com.unboundid.ldap.protocol.LDAPResponse) -> a
-com.unboundid.ldap.sdk.ResultCode -> a.a.b.c.as:
+com.unboundid.ldap.sdk.ResultCode -> a.a.b.c.aw:
     com.unboundid.ldap.sdk.ResultCode SUCCESS -> a
     com.unboundid.ldap.sdk.ResultCode OPERATIONS_ERROR -> b
     com.unboundid.ldap.sdk.ResultCode PROTOCOL_ERROR -> c
@@ -1491,14 +1496,15 @@ com.unboundid.ldap.sdk.ResultCode -> a.a.b.c.as:
     java.lang.String getName() -> a
     int intValue() -> b
     com.unboundid.ldap.sdk.ResultCode valueOf(int) -> a
+    com.unboundid.ldap.sdk.ResultCode valueOf(int,java.lang.String) -> a
     boolean isConnectionUsable(com.unboundid.ldap.sdk.ResultCode) -> a
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.RootDSE -> a.a.b.c.at:
+com.unboundid.ldap.sdk.RootDSE -> a.a.b.c.ax:
     java.lang.String[] REQUEST_ATTRS -> a
     com.unboundid.ldap.sdk.RootDSE getRootDSE(com.unboundid.ldap.sdk.LDAPInterface) -> a
-com.unboundid.ldap.sdk.SearchRequest -> a.a.b.c.au:
+com.unboundid.ldap.sdk.SearchRequest -> a.a.b.c.ay:
     java.lang.String[] REQUEST_ATTRS_DEFAULT -> a
     java.lang.String[] attributes -> c
     boolean typesOnly -> d
@@ -1522,7 +1528,7 @@ com.unboundid.ldap.sdk.SearchRequest -> a.a.b.c.au:
     com.unboundid.ldap.sdk.SearchResult followReferral(com.unboundid.ldap.sdk.SearchResult,com.unboundid.ldap.sdk.LDAPConnection,int) -> a
     void responseReceived(com.unboundid.ldap.protocol.LDAPResponse) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.SearchResult -> a.a.b.c.av:
+com.unboundid.ldap.sdk.SearchResult -> a.a.b.c.az:
     int numEntries -> b
     int numReferences -> c
     java.util.List searchEntries -> d
@@ -1533,7 +1539,7 @@ com.unboundid.ldap.sdk.SearchResult -> a.a.b.c.av:
     java.util.List getSearchEntries() -> i
     void setCounts(int,java.util.List,int,java.util.List) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.SearchResultEntry -> a.a.b.c.aw:
+com.unboundid.ldap.sdk.SearchResultEntry -> a.a.b.c.ba:
     com.unboundid.ldap.sdk.Control[] controls -> b
     int messageID -> c
     com.unboundid.ldap.sdk.SearchResultEntry readSearchEntryFrom(int,com.unboundid.asn1.ASN1StreamReaderSequence,com.unboundid.asn1.ASN1StreamReader,com.unboundid.ldap.sdk.schema.Schema) -> a
@@ -1541,10 +1547,10 @@ com.unboundid.ldap.sdk.SearchResultEntry -> a.a.b.c.aw:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.SearchResultListener -> a.a.b.c.ax:
+com.unboundid.ldap.sdk.SearchResultListener -> a.a.b.c.bb:
     void searchEntryReturned(com.unboundid.ldap.sdk.SearchResultEntry) -> a
     void searchReferenceReturned(com.unboundid.ldap.sdk.SearchResultReference) -> a
-com.unboundid.ldap.sdk.SearchResultReference -> a.a.b.c.ay:
+com.unboundid.ldap.sdk.SearchResultReference -> a.a.b.c.bc:
     com.unboundid.ldap.sdk.Control[] controls -> b
     int messageID -> c
     java.lang.String[] referralURLs -> d
@@ -1553,7 +1559,7 @@ com.unboundid.ldap.sdk.SearchResultReference -> a.a.b.c.ay:
     java.lang.String[] getReferralURLs() -> b
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.SearchScope -> a.a.b.c.az:
+com.unboundid.ldap.sdk.SearchScope -> a.a.b.c.bd:
     com.unboundid.ldap.sdk.SearchScope BASE -> a
     com.unboundid.ldap.sdk.SearchScope ONE -> b
     com.unboundid.ldap.sdk.SearchScope SUB -> c
@@ -1565,7 +1571,7 @@ com.unboundid.ldap.sdk.SearchScope -> a.a.b.c.az:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.SimpleBindRequest -> a.a.b.c.ba:
+com.unboundid.ldap.sdk.SimpleBindRequest -> a.a.b.c.be:
     com.unboundid.asn1.ASN1OctetString NO_BIND_DN -> c
     com.unboundid.asn1.ASN1OctetString NO_PASSWORD -> d
     int messageID -> e
@@ -1582,309 +1588,44 @@ com.unboundid.ldap.sdk.SimpleBindRequest -> a.a.b.c.ba:
     void responseReceived(com.unboundid.ldap.protocol.LDAPResponse) -> a
     void toString(java.lang.StringBuilder) -> a
     com.unboundid.ldap.sdk.BindRequest getRebindRequest(java.lang.String,int) -> a
-com.unboundid.ldap.sdk.UnsolicitedNotificationHandler -> a.a.b.c.bb:
+com.unboundid.ldap.sdk.UnsolicitedNotificationHandler -> a.a.b.c.bf:
     void handleUnsolicitedNotification(com.unboundid.ldap.sdk.LDAPConnection,com.unboundid.ldap.sdk.ExtendedResult) -> a
-com.unboundid.ldap.sdk.UpdatableLDAPRequest -> a.a.b.c.bc:
-com.unboundid.ldap.sdk.controls.AuthorizationIdentityResponseControl -> a.a.b.c.a.a:
-    java.lang.String authorizationID -> a
-    com.unboundid.ldap.sdk.controls.AuthorizationIdentityResponseControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.ContentSyncDoneControl -> a.a.b.c.a.b:
-    com.unboundid.asn1.ASN1OctetString cookie -> a
-    boolean refreshDeletes -> b
-    com.unboundid.ldap.sdk.controls.ContentSyncDoneControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.ContentSyncState -> a.a.b.c.a.c:
-    com.unboundid.ldap.sdk.controls.ContentSyncState PRESENT -> a
-    com.unboundid.ldap.sdk.controls.ContentSyncState ADD -> b
-    com.unboundid.ldap.sdk.controls.ContentSyncState MODIFY -> c
-    com.unboundid.ldap.sdk.controls.ContentSyncState DELETE -> d
-    int intValue -> e
-    com.unboundid.ldap.sdk.controls.ContentSyncState[] ENUM$VALUES -> f
-    int intValue() -> a
-    com.unboundid.ldap.sdk.controls.ContentSyncState valueOf(int) -> a
-    com.unboundid.ldap.sdk.controls.ContentSyncState[] values() -> values
-    com.unboundid.ldap.sdk.controls.ContentSyncState valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.controls.ContentSyncStateControl -> a.a.b.c.a.d:
-    com.unboundid.asn1.ASN1OctetString cookie -> a
-    com.unboundid.ldap.sdk.controls.ContentSyncState state -> b
-    java.util.UUID entryUUID -> c
-    com.unboundid.ldap.sdk.controls.ContentSyncStateControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.ControlHelper -> a.a.b.c.a.e:
-    void registerDefaultResponseControls() -> a
-com.unboundid.ldap.sdk.controls.ControlMessages -> a.a.b.c.a.f:
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ASSERT_CANNOT_DECODE -> a
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ASSERT_NO_VALUE -> b
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_AUTHZID_REQUEST_HAS_VALUE -> c
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_AUTHZID_RESPONSE_NO_VALUE -> d
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_DONT_USE_COPY_HAS_VALUE -> e
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_CANNOT_DECODE_CHANGE_NUMBER -> f
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_FIRST_NOT_ENUMERATED -> g
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_INVALID_CHANGE_TYPE -> h
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_INVALID_ELEMENT_COUNT -> i
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_INVALID_ELEMENT_TYPE -> j
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_NO_VALUE -> k
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_ECN_VALUE_NOT_SEQUENCE -> l
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MANAGE_DSA_IT_HAS_VALUE -> m
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_AND_NOT_SUPPORTED -> n
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_CANNOT_DECODE_SUBSTRING -> o
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_DNATTRS_NOT_SUPPORTED -> p
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_EXT_INVALID_TYPE -> q
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_EXT_MULTIPLE_AT -> r
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_EXT_MULTIPLE_VALUE -> s
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_EXT_NOT_SEQUENCE -> t
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_EXT_NO_VALUE -> u
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_INVALID_FILTER_TYPE -> v
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_INVALID_SUB_TYPE -> w
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_INVALID_TYPE -> x
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_MULTIPLE_MRID -> y
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_MULTIPLE_SUBFINAL -> z
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_MULTIPLE_SUBINITIAL -> A
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_NOT_AVA -> B
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_NOT_NOT_SUPPORTED -> C
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_NO_ATTR_OR_MRID -> D
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_NO_SUBSTRING_ELEMENTS -> E
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_FILTER_OR_NOT_SUPPORTED -> F
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_REQUEST_CANNOT_DECODE -> G
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_MV_REQUEST_NO_VALUE -> H
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PAGED_RESULTS_FIRST_NOT_INTEGER -> I
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PAGED_RESULTS_INVALID_ELEMENT_COUNT -> J
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PAGED_RESULTS_NO_VALUE -> K
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PAGED_RESULTS_VALUE_NOT_SEQUENCE -> L
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PERMISSIVE_MODIFY_HAS_VALUE -> M
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_REQUEST_CANNOT_DECODE -> N
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_REQUEST_NO_VALUE -> O
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_RESPONSE_ATTRIBUTES_NOT_SEQUENCE -> P
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_RESPONSE_ATTR_NOT_SEQUENCE -> Q
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_RESPONSE_INVALID_ELEMENT_COUNT -> R
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_RESPONSE_NO_VALUE -> S
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_POST_READ_RESPONSE_VALUE_NOT_SEQUENCE -> T
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_REQUEST_CANNOT_DECODE -> U
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_REQUEST_NO_VALUE -> V
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_RESPONSE_ATTRIBUTES_NOT_SEQUENCE -> W
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_RESPONSE_ATTR_NOT_SEQUENCE -> X
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_RESPONSE_INVALID_ELEMENT_COUNT -> Y
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_RESPONSE_NO_VALUE -> Z
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PRE_READ_RESPONSE_VALUE_NOT_SEQUENCE -> aa
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PROXYV1_DECODE_ERROR -> ab
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PROXY_V1_NO_VALUE -> ac
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PROXY_V2_NO_VALUE -> ad
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PSEARCH_CANNOT_DECODE -> ae
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PSEARCH_NO_VALUE -> af
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PW_EXPIRED_NO_VALUE -> ag
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PW_EXPIRED_VALUE_NOT_INTEGER -> ah
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PW_EXPIRING_NO_VALUE -> ai
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_PW_EXPIRING_VALUE_NOT_INTEGER -> aj
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_KEY_ELEMENT_INVALID_TYPE -> ak
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_KEY_INVALID_ELEMENT_COUNT -> al
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_KEY_NOT_SEQUENCE -> am
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_KEY_REVERSE_NOT_BOOLEAN -> an
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_REQUEST_CANNOT_DECODE -> ao
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_REQUEST_NO_VALUE -> ap
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_RESPONSE_FIRST_NOT_ENUM -> aq
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_RESPONSE_INVALID_ELEMENT_COUNT -> ar
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_RESPONSE_NO_VALUE -> as
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SORT_RESPONSE_VALUE_NOT_SEQUENCE -> at
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SUBENTRIES_HAS_VALUE -> au
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SUBTREE_DELETE_HAS_VALUE -> av
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_DONE_NO_VALUE -> aw
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_DONE_VALUE_CANNOT_DECODE -> ax
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_DONE_VALUE_INVALID_ELEMENT_TYPE -> ay
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_DONE_VALUE_MULTIPLE_COOKIES -> az
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_DONE_VALUE_MULTIPLE_REFRESH_DELETE -> aA
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_INVALID_UUID -> aB
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_NO_UUID_SET -> aC
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_NO_VALUE -> aD
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_VALUE_DECODING_ERROR -> aE
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_VALUE_INVALID_SEQUENCE_TYPE -> aF
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_VALUE_NOT_ELEMENT -> aG
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_INFO_IR_VALUE_UNRECOGNIZED_TYPE -> aH
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_NO_VALUE -> aI
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_CANNOT_DECODE -> aJ
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_INVALID_ELEMENT_TYPE -> aK
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_INVALID_MODE -> aL
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_MULTIPLE_COOKIES -> aM
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_MULTIPLE_HINTS -> aN
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_MULTIPLE_MODES -> aO
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_REQUEST_VALUE_NO_MODE -> aP
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_STATE_NO_VALUE -> aQ
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_STATE_VALUE_CANNOT_DECODE -> aR
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_STATE_VALUE_INVALID_ELEMENT_TYPE -> aS
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_STATE_VALUE_INVALID_STATE -> aT
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_SYNC_STATE_VALUE_MALFORMED_UUID -> aU
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_TXN_REQUEST_CONTROL_NO_VALUE -> aV
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_REQUEST_CANNOT_DECODE -> aW
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_REQUEST_INVALID_ELEMENT_TYPE -> aX
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_REQUEST_NO_VALUE -> aY
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_RESPONSE_FIRST_NOT_INTEGER -> aZ
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_RESPONSE_INVALID_ELEMENT_COUNT -> ba
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_RESPONSE_NO_VALUE -> bb
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_RESPONSE_SECOND_NOT_INTEGER -> bc
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_RESPONSE_THIRD_NOT_ENUM -> bd
-    com.unboundid.ldap.sdk.controls.ControlMessages ERR_VLV_RESPONSE_VALUE_NOT_SEQUENCE -> be
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_ASSERTION_REQUEST -> bf
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_AUTHZID_REQUEST -> bg
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_AUTHZID_RESPONSE -> bh
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_CONTENT_SYNC_DONE -> bi
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_CONTENT_SYNC_REQUEST -> bj
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_CONTENT_SYNC_STATE -> bk
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_DONT_USE_COPY -> bl
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_ENTRY_CHANGE_NOTIFICATION -> bm
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_MANAGE_DSAIT_REQUEST -> bn
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_MATCHED_VALUES_REQUEST -> bo
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PAGED_RESULTS -> bp
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PERMISSIVE_MODIFY_REQUEST -> bq
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_POST_READ_REQUEST -> br
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_POST_READ_RESPONSE -> bs
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PRE_READ_REQUEST -> bt
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PRE_READ_RESPONSE -> bu
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PROXIED_AUTHZ_V1_REQUEST -> bv
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PROXIED_AUTHZ_V2_REQUEST -> bw
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PSEARCH_REQUEST -> bx
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PW_EXPIRED -> by
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_PW_EXPIRING -> bz
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_SORT_REQUEST -> bA
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_SORT_RESPONSE -> bB
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_SUBENTRIES_REQUEST -> bC
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_SUBTREE_DELETE_REQUEST -> bD
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_TXN_SPECIFICATION_REQUEST -> bE
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_VLV_REQUEST -> bF
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_CONTROL_NAME_VLV_RESPONSE -> bG
-    com.unboundid.ldap.sdk.controls.ControlMessages INFO_INTERMEDIATE_RESPONSE_NAME_SYNC_INFO -> bH
-    java.util.ResourceBundle RESOURCE_BUNDLE -> bI
-    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> bJ
-    java.util.concurrent.ConcurrentHashMap MESSAGES -> bK
-    java.lang.String defaultText -> bL
-    com.unboundid.ldap.sdk.controls.ControlMessages[] ENUM$VALUES -> bM
-    java.lang.String get() -> a
-    java.lang.String get(java.lang.Object[]) -> a
-    java.lang.String toString() -> toString
-    com.unboundid.ldap.sdk.controls.ControlMessages[] values() -> values
-    com.unboundid.ldap.sdk.controls.ControlMessages valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.controls.EntryChangeNotificationControl -> a.a.b.c.a.g:
-    long changeNumber -> a
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType changeType -> b
-    java.lang.String previousDN -> c
-    com.unboundid.ldap.sdk.controls.EntryChangeNotificationControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.PasswordExpiredControl -> a.a.b.c.a.h:
-    com.unboundid.ldap.sdk.controls.PasswordExpiredControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.PasswordExpiringControl -> a.a.b.c.a.i:
-    int secondsUntilExpiration -> a
-    com.unboundid.ldap.sdk.controls.PasswordExpiringControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.PersistentSearchChangeType -> a.a.b.c.a.j:
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType ADD -> a
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType DELETE -> b
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType MODIFY -> c
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType MODIFY_DN -> d
-    int value -> e
-    java.lang.String name -> f
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType[] ENUM$VALUES -> g
-    java.lang.String getName() -> a
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType valueOf(int) -> a
-    java.lang.String toString() -> toString
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType[] values() -> values
-    com.unboundid.ldap.sdk.controls.PersistentSearchChangeType valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.controls.PostReadResponseControl -> a.a.b.c.a.k:
-    com.unboundid.ldap.sdk.ReadOnlyEntry entry -> a
-    com.unboundid.ldap.sdk.controls.PostReadResponseControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.PreReadResponseControl -> a.a.b.c.a.l:
-    com.unboundid.ldap.sdk.ReadOnlyEntry entry -> a
-    com.unboundid.ldap.sdk.controls.PreReadResponseControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.ServerSideSortResponseControl -> a.a.b.c.a.m:
-    com.unboundid.ldap.sdk.ResultCode resultCode -> a
-    java.lang.String attributeName -> b
-    com.unboundid.ldap.sdk.controls.ServerSideSortResponseControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.SimplePagedResultsControl -> a.a.b.c.a.n:
-    com.unboundid.asn1.ASN1OctetString cookie -> a
-    int size -> b
-    com.unboundid.ldap.sdk.controls.SimplePagedResultsControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.controls.VirtualListViewResponseControl -> a.a.b.c.a.o:
-    com.unboundid.asn1.ASN1OctetString contextID -> a
-    int contentCount -> b
-    com.unboundid.ldap.sdk.ResultCode resultCode -> c
-    int targetPosition -> d
-    com.unboundid.ldap.sdk.controls.VirtualListViewResponseControl decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> b
-    void toString(java.lang.StringBuilder) -> a
-    com.unboundid.ldap.sdk.Control decodeControl(java.lang.String,boolean,com.unboundid.asn1.ASN1OctetString) -> a_
-com.unboundid.ldap.sdk.extensions.ExtOpMessages -> a.a.b.c.b.a:
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_ABORTED_TXN_NO_VALUE -> a
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_CANCEL_NOT_SUPPORTED_IN_SYNCHRONOUS_MODE -> b
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_CANCEL_REQUEST_CANNOT_DECODE -> c
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_CANCEL_REQUEST_NO_VALUE -> d
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_REQUEST_CANNOT_DECODE -> e
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_REQUEST_NO_VALUE -> f
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_CANNOT_DECODE_MSGID -> g
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_CONTROLS_ELEMENT_NOT_SEQUENCE -> h
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_CONTROLS_NOT_SEQUENCE -> i
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_CONTROL_INVALID_ELEMENT_COUNT -> j
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_CONTROL_MSGID_NOT_INT -> k
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_CONTROL_NOT_SEQUENCE -> l
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_INVALID_ELEMENT_COUNT -> m
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_INVALID_TYPE -> n
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_END_TXN_RESPONSE_VALUE_NOT_SEQUENCE -> o
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_PW_MODIFY_REQUEST_CANNOT_DECODE -> p
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_PW_MODIFY_REQUEST_INVALID_TYPE -> q
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_PW_MODIFY_REQUEST_NO_VALUE -> r
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_PW_MODIFY_RESPONSE_MULTIPLE_ELEMENTS -> s
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_PW_MODIFY_RESPONSE_VALUE_NOT_SEQUENCE -> t
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_STARTTLS_REQUEST_CANNOT_CREATE_DEFAULT_CONTEXT -> u
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_STARTTLS_REQUEST_HAS_VALUE -> v
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_START_TXN_REQUEST_HAS_VALUE -> w
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_WHO_AM_I_REQUEST_HAS_VALUE -> x
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_CANCEL -> y
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_END_TXN -> z
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_PASSWORD_MODIFY -> A
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_START_TLS -> B
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_START_TXN -> C
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_WHO_AM_I -> D
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_ABORTED_TXN -> E
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_END_TXN -> F
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_NOTICE_OF_DISCONNECT -> G
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_PASSWORD_MODIFY -> H
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_START_TXN -> I
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_WHO_AM_I -> J
-    java.util.ResourceBundle RESOURCE_BUNDLE -> K
-    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> L
-    java.util.concurrent.ConcurrentHashMap MESSAGES -> M
-    java.lang.String defaultText -> N
-    com.unboundid.ldap.sdk.extensions.ExtOpMessages[] ENUM$VALUES -> O
-    java.lang.String get() -> a
-    java.lang.String get(java.lang.Object[]) -> a
-    java.lang.String toString() -> toString
+com.unboundid.ldap.sdk.UpdatableLDAPRequest -> a.a.b.c.bg:
+com.unboundid.ldap.sdk.extensions.ExtOpMessages -> a.a.b.c.a.a:
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_CANCEL_NOT_SUPPORTED_IN_SYNCHRONOUS_MODE -> a
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_CANCEL_REQUEST_CANNOT_DECODE -> b
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_CANCEL_REQUEST_NO_VALUE -> c
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_STARTTLS_REQUEST_CANNOT_CREATE_DEFAULT_CONTEXT -> d
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages ERR_STARTTLS_REQUEST_HAS_VALUE -> e
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_CANCEL -> f
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_REQUEST_NAME_START_TLS -> g
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages INFO_EXTENDED_RESULT_NAME_NOTICE_OF_DISCONNECT -> h
+    java.util.ResourceBundle RESOURCE_BUNDLE -> i
+    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> j
+    java.util.concurrent.ConcurrentHashMap MESSAGES -> k
+    java.lang.String defaultText -> l
+    com.unboundid.ldap.sdk.extensions.ExtOpMessages[] $VALUES -> m
     com.unboundid.ldap.sdk.extensions.ExtOpMessages[] values() -> values
     com.unboundid.ldap.sdk.extensions.ExtOpMessages valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.extensions.NoticeOfDisconnectionExtendedResult -> a.a.b.c.b.b:
+    java.lang.String get() -> a
+    java.lang.String get(java.lang.Object[]) -> a
+    java.lang.String toString() -> toString
+com.unboundid.ldap.sdk.extensions.NoticeOfDisconnectionExtendedResult -> a.a.b.c.a.b:
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.extensions.StartTLSExtendedRequest -> a.a.b.c.b.c:
+com.unboundid.ldap.sdk.extensions.StartTLSExtendedRequest -> a.a.b.c.a.c:
     javax.net.ssl.SSLContext sslContext -> a
     com.unboundid.ldap.sdk.ExtendedResult process(com.unboundid.ldap.sdk.LDAPConnection,int) -> a
     void toString(java.lang.StringBuilder) -> a
-com.unboundid.ldap.sdk.schema.AttributeSyntaxDefinition -> a.a.b.c.c.a:
+com.unboundid.ldap.sdk.schema.AttributeSyntaxDefinition -> a.a.b.c.b.a:
     java.util.Map extensions -> a
     java.lang.String description -> b
     java.lang.String attributeSyntaxString -> c
     java.lang.String oid -> d
     java.lang.String getOID() -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.AttributeTypeDefinition -> a.a.b.c.c.b:
+com.unboundid.ldap.sdk.schema.AttributeTypeDefinition -> a.a.b.c.b.b:
     com.unboundid.ldap.sdk.schema.AttributeUsage usage -> a
     boolean isCollective -> b
     boolean isNoUserModification -> c
@@ -1902,26 +1643,29 @@ com.unboundid.ldap.sdk.schema.AttributeTypeDefinition -> a.a.b.c.c.b:
     java.lang.String[] names -> o
     java.lang.String getOID() -> a
     java.lang.String[] getNames() -> b
+    java.lang.String getNameOrOID() -> c
     com.unboundid.ldap.sdk.schema.AttributeTypeDefinition getSuperiorType(com.unboundid.ldap.sdk.schema.Schema) -> a
     java.lang.String getEqualityMatchingRule(com.unboundid.ldap.sdk.schema.Schema) -> b
     java.lang.String getSyntaxOID(com.unboundid.ldap.sdk.schema.Schema) -> c
     java.lang.String getBaseSyntaxOID(com.unboundid.ldap.sdk.schema.Schema) -> d
     java.lang.String getBaseSyntaxOID(java.lang.String) -> a
-    boolean isOperational() -> c
+    boolean isOperational() -> d
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.AttributeUsage -> a.a.b.c.c.c:
+com.unboundid.ldap.sdk.schema.AttributeUsage -> a.a.b.c.b.c:
     com.unboundid.ldap.sdk.schema.AttributeUsage USER_APPLICATIONS -> a
     com.unboundid.ldap.sdk.schema.AttributeUsage DIRECTORY_OPERATION -> b
     com.unboundid.ldap.sdk.schema.AttributeUsage DISTRIBUTED_OPERATION -> c
     com.unboundid.ldap.sdk.schema.AttributeUsage DSA_OPERATION -> d
     boolean isOperational -> e
     java.lang.String name -> f
-    com.unboundid.ldap.sdk.schema.AttributeUsage[] ENUM$VALUES -> g
-    boolean isOperational() -> a
-    java.lang.String toString() -> toString
+    com.unboundid.ldap.sdk.schema.AttributeUsage[] $VALUES -> g
     com.unboundid.ldap.sdk.schema.AttributeUsage[] values() -> values
     com.unboundid.ldap.sdk.schema.AttributeUsage valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.schema.DITContentRuleDefinition -> a.a.b.c.c.d:
+    boolean isOperational() -> a
+    java.lang.String toString() -> toString
+com.unboundid.ldap.sdk.schema.DITContentRuleDefinition -> a.a.b.c.b.d:
     boolean isObsolete -> a
     java.util.Map extensions -> b
     java.lang.String description -> c
@@ -1934,8 +1678,10 @@ com.unboundid.ldap.sdk.schema.DITContentRuleDefinition -> a.a.b.c.c.d:
     java.lang.String[] requiredAttributes -> j
     java.lang.String getOID() -> a
     java.lang.String[] getNames() -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition -> a.a.b.c.c.e:
+com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition -> a.a.b.c.b.e:
     int[] NO_INTS -> a
     boolean isObsolete -> b
     int ruleID -> c
@@ -1948,8 +1694,10 @@ com.unboundid.ldap.sdk.schema.DITStructureRuleDefinition -> a.a.b.c.c.e:
     int getRuleID() -> a
     java.lang.String[] getNames() -> b
     java.lang.String getNameFormID() -> c
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.MatchingRuleDefinition -> a.a.b.c.c.f:
+com.unboundid.ldap.sdk.schema.MatchingRuleDefinition -> a.a.b.c.b.f:
     boolean isObsolete -> a
     java.util.Map extensions -> b
     java.lang.String description -> c
@@ -1959,8 +1707,10 @@ com.unboundid.ldap.sdk.schema.MatchingRuleDefinition -> a.a.b.c.c.f:
     java.lang.String[] names -> g
     java.lang.String getOID() -> a
     java.lang.String[] getNames() -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.MatchingRuleUseDefinition -> a.a.b.c.c.g:
+com.unboundid.ldap.sdk.schema.MatchingRuleUseDefinition -> a.a.b.c.b.g:
     boolean isObsolete -> a
     java.util.Map extensions -> b
     java.lang.String description -> c
@@ -1970,8 +1720,10 @@ com.unboundid.ldap.sdk.schema.MatchingRuleUseDefinition -> a.a.b.c.c.g:
     java.lang.String[] names -> g
     java.lang.String getOID() -> a
     java.lang.String[] getNames() -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.NameFormDefinition -> a.a.b.c.c.h:
+com.unboundid.ldap.sdk.schema.NameFormDefinition -> a.a.b.c.b.h:
     boolean isObsolete -> a
     java.util.Map extensions -> b
     java.lang.String description -> c
@@ -1984,8 +1736,10 @@ com.unboundid.ldap.sdk.schema.NameFormDefinition -> a.a.b.c.c.h:
     java.lang.String getOID() -> a
     java.lang.String[] getNames() -> b
     java.lang.String getStructuralClass() -> c
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.ObjectClassDefinition -> a.a.b.c.c.i:
+com.unboundid.ldap.sdk.schema.ObjectClassDefinition -> a.a.b.c.b.i:
     boolean isObsolete -> a
     java.util.Map extensions -> b
     com.unboundid.ldap.sdk.schema.ObjectClassType objectClassType -> c
@@ -2000,59 +1754,66 @@ com.unboundid.ldap.sdk.schema.ObjectClassDefinition -> a.a.b.c.c.i:
     java.lang.String[] getNames() -> b
     java.lang.String[] getSuperiorClasses() -> c
     com.unboundid.ldap.sdk.schema.ObjectClassType getObjectClassType() -> d
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
-com.unboundid.ldap.sdk.schema.ObjectClassType -> a.a.b.c.c.j:
+com.unboundid.ldap.sdk.schema.ObjectClassType -> a.a.b.c.b.j:
     com.unboundid.ldap.sdk.schema.ObjectClassType ABSTRACT -> a
     com.unboundid.ldap.sdk.schema.ObjectClassType STRUCTURAL -> b
     com.unboundid.ldap.sdk.schema.ObjectClassType AUXILIARY -> c
     java.lang.String name -> d
-    com.unboundid.ldap.sdk.schema.ObjectClassType[] ENUM$VALUES -> e
-    java.lang.String toString() -> toString
+    com.unboundid.ldap.sdk.schema.ObjectClassType[] $VALUES -> e
     com.unboundid.ldap.sdk.schema.ObjectClassType[] values() -> values
     com.unboundid.ldap.sdk.schema.ObjectClassType valueOf(java.lang.String) -> valueOf
-com.unboundid.ldap.sdk.schema.Schema -> a.a.b.c.c.k:
-    java.lang.String[] SCHEMA_REQUEST_ATTRS -> a
-    java.lang.String[] SUBSCHEMA_SUBENTRY_REQUEST_ATTRS -> b
-    java.util.Map subordinateAttributeTypes -> c
-    java.util.Map asMap -> d
-    java.util.Map atMap -> e
-    java.util.Map dcrMap -> f
-    java.util.Map dsrMapByID -> g
-    java.util.Map dsrMapByName -> h
-    java.util.Map dsrMapByNameForm -> i
-    java.util.Map mrMap -> j
-    java.util.Map mruMap -> k
-    java.util.Map nfMapByName -> l
-    java.util.Map nfMapByOC -> m
-    java.util.Map ocMap -> n
-    com.unboundid.ldap.sdk.ReadOnlyEntry schemaEntry -> o
-    java.util.Set asSet -> p
-    java.util.Set atSet -> q
-    java.util.Set operationalATSet -> r
-    java.util.Set userATSet -> s
-    java.util.Set dcrSet -> t
-    java.util.Set dsrSet -> u
-    java.util.Set mrSet -> v
-    java.util.Set mruSet -> w
-    java.util.Set nfSet -> x
-    java.util.Set ocSet -> y
-    java.util.Set abstractOCSet -> z
-    java.util.Set auxiliaryOCSet -> A
-    java.util.Set structuralOCSet -> B
-    int[] $SWITCH_TABLE$com$unboundid$ldap$sdk$schema$ObjectClassType -> C
+    java.lang.String toString() -> toString
+com.unboundid.ldap.sdk.schema.Schema -> a.a.b.c.b.k:
+    java.util.concurrent.atomic.AtomicReference DEFAULT_STANDARD_SCHEMA -> a
+    java.lang.String[] SCHEMA_REQUEST_ATTRS -> b
+    java.lang.String[] SUBSCHEMA_SUBENTRY_REQUEST_ATTRS -> c
+    java.util.Map subordinateAttributeTypes -> d
+    java.util.Map asMap -> e
+    java.util.Map atMap -> f
+    java.util.Map dcrMap -> g
+    java.util.Map dsrMapByID -> h
+    java.util.Map dsrMapByName -> i
+    java.util.Map dsrMapByNameForm -> j
+    java.util.Map mrMap -> k
+    java.util.Map mruMap -> l
+    java.util.Map nfMapByName -> m
+    java.util.Map nfMapByOC -> n
+    java.util.Map ocMap -> o
+    com.unboundid.ldap.sdk.ReadOnlyEntry schemaEntry -> p
+    java.util.Set asSet -> q
+    java.util.Set atSet -> r
+    java.util.Set operationalATSet -> s
+    java.util.Set userATSet -> t
+    java.util.Set dcrSet -> u
+    java.util.Set dsrSet -> v
+    java.util.Set mrSet -> w
+    java.util.Set mruSet -> x
+    java.util.Set nfSet -> y
+    java.util.Set ocSet -> z
+    java.util.Set abstractOCSet -> A
+    java.util.Set auxiliaryOCSet -> B
+    java.util.Set structuralOCSet -> C
     com.unboundid.ldap.sdk.schema.Schema getSchema(com.unboundid.ldap.sdk.LDAPConnection,java.lang.String) -> a
     com.unboundid.ldap.sdk.schema.ObjectClassType getOCType(com.unboundid.ldap.sdk.schema.ObjectClassDefinition,java.util.Map) -> a
     java.lang.String getSubschemaSubentryDN(com.unboundid.ldap.sdk.LDAPConnection,java.lang.String) -> b
     com.unboundid.ldap.sdk.schema.AttributeTypeDefinition getAttributeType(java.lang.String) -> a
-    int[] $SWITCH_TABLE$com$unboundid$ldap$sdk$schema$ObjectClassType() -> a
-com.unboundid.ldap.sdk.schema.SchemaElement -> a.a.b.c.c.l:
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+com.unboundid.ldap.sdk.schema.Schema$1 -> a.a.b.c.b.l:
+    int[] $SwitchMap$com$unboundid$ldap$sdk$schema$ObjectClassType -> a
+com.unboundid.ldap.sdk.schema.SchemaElement -> a.a.b.c.b.m:
     int skipSpaces(java.lang.String,int,int) -> a
     int readEscapedHexString(java.lang.String,int,int,java.lang.StringBuilder) -> c
     int readQDString(java.lang.String,int,int,java.lang.StringBuilder) -> a
     int readQDStrings(java.lang.String,int,int,java.util.ArrayList) -> a
     int readOID(java.lang.String,int,int,java.lang.StringBuilder) -> b
     int readOIDs(java.lang.String,int,int,java.util.ArrayList) -> b
-com.unboundid.ldap.sdk.schema.SchemaMessages -> a.a.b.c.c.m:
+    boolean extensionsEqual(java.util.Map,java.util.Map) -> a
+com.unboundid.ldap.sdk.schema.SchemaMessages -> a.a.b.c.b.n:
     com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ATTRSYNTAX_DECODE_CLOSE_NOT_AT_END -> a
     com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ATTRSYNTAX_DECODE_DUP_EXT -> b
     com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ATTRSYNTAX_DECODE_EMPTY -> c
@@ -2080,105 +1841,68 @@ com.unboundid.ldap.sdk.schema.SchemaMessages -> a.a.b.c.c.m:
     com.unboundid.ldap.sdk.schema.SchemaMessages ERR_DSR_DECODE_RULE_ID_NOT_INT -> y
     com.unboundid.ldap.sdk.schema.SchemaMessages ERR_DSR_DECODE_SUP_ID_NOT_INT -> z
     com.unboundid.ldap.sdk.schema.SchemaMessages ERR_DSR_DECODE_UNEXPECTED_TOKEN -> A
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_ATTR_HAS_MULTIPLE_VALUES -> B
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_ATTR_INVALID_SYNTAX -> C
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_ATTR_NOT_ALLOWED -> D
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_AUX_CLASS_NOT_ALLOWED -> E
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_INVALID_ABSTRACT_CLASS -> F
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_MALFORMED_DN -> G
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_MISSING_REQUIRED_ATTR -> H
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_MULTIPLE_STRUCTURAL_CLASSES -> I
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_NO_OCS -> J
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_NO_STRUCTURAL_CLASS -> K
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_RDN_ATTR_NOT_ALLOWED_BY_NF -> L
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_RDN_ATTR_NOT_ALLOWED_IN_ENTRY -> M
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_RDN_ATTR_NOT_DEFINED -> N
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_RDN_MISSING_REQUIRED_ATTR -> O
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_UNDEFINED_ATTR -> P
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_UNDEFINED_OC -> Q
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_ENTRY_UNDEFINED_SUP_OC -> R
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_CLOSE_NOT_AT_END -> S
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_DUP_EXT -> T
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_EMPTY -> U
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_MULTIPLE_ELEMENTS -> V
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_NO_APPLIES -> W
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_NO_OPENING_PAREN -> X
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_UNEXPECTED_TOKEN -> Y
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_CLOSE_NOT_AT_END -> Z
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_DUP_EXT -> aa
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_EMPTY -> ab
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_MULTIPLE_ELEMENTS -> ac
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_NO_OPENING_PAREN -> ad
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_NO_SYNTAX -> ae
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_UNEXPECTED_TOKEN -> af
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_CLOSE_NOT_AT_END -> ag
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_DUP_EXT -> ah
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_EMPTY -> ai
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_MULTIPLE_ELEMENTS -> aj
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_NO_MUST -> ak
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_NO_OC -> al
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_NO_OPENING_PAREN -> am
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_UNEXPECTED_TOKEN -> an
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_CLOSE_NOT_AT_END -> ao
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_DUP_EXT -> ap
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_EMPTY -> aq
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_MULTIPLE_ELEMENTS -> ar
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_MULTIPLE_OC_TYPES -> as
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_NO_OPENING_PAREN -> at
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_UNEXPECTED_TOKEN -> au
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_CANNOT_LOAD_DEFAULT_DEFINITIONS -> av
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_OID -> aw
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_OID_LIST -> ax
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_QUOTES -> ay
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_STRING_LIST -> az
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_ENDS_WITH_BACKSLASH -> aA
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EXPECTED_QUOTE_OR_PAREN -> aB
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EXPECTED_SINGLE_QUOTE -> aC
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_INVALID_HEX_CHAR -> aD
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_MISSING_HEX_CHAR -> aE
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_CLOSING_PAREN -> aF
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_SPACE_AFTER_OID -> aG
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_SPACE_AFTER_OID_LIST -> aH
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_SPACE_AFTER_QUOTE -> aI
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_SKIP_SPACES_NO_CLOSE_PAREN -> aJ
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_UNEXPECTED_CHAR_IN_OID -> aK
-    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_UNEXPECTED_CHAR_IN_OID_LIST -> aL
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_INVALID_ENTRY_COUNT -> aM
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_MALFORMED_DN_COUNT -> aN
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_MISSING_ATTR_COUNT -> aO
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_MISSING_ATTR_NAME_COUNT -> aP
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_MULTIPLE_STRUCTURAL_OCS_COUNT -> aQ
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_NF_VIOLATION_COUNT -> aR
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_NO_OC_COUNT -> aS
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_NO_STRUCTURAL_OC_COUNT -> aT
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_PROHIBITED_ATTR_COUNT -> aU
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_PROHIBITED_ATTR_NAME_COUNT -> aV
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_PROHIBITED_OC_COUNT -> aW
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_PROHIBITED_OC_NAME_COUNT -> aX
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_SINGLE_VALUE_VIOLATION_COUNT -> aY
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_SINGLE_VALUE_VIOLATION_NAME_COUNT -> aZ
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_SYNTAX_VIOLATION_COUNT -> ba
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_SYNTAX_VIOLATION_NAME_COUNT -> bb
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_UNDEFINED_ATTR_COUNT -> bc
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_UNDEFINED_ATTR_NAME_COUNT -> bd
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_UNDEFINED_OC_COUNT -> be
-    com.unboundid.ldap.sdk.schema.SchemaMessages INFO_ENTRY_UNDEFINED_OC_NAME_COUNT -> bf
-    java.util.ResourceBundle RESOURCE_BUNDLE -> bg
-    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> bh
-    java.util.concurrent.ConcurrentHashMap MESSAGES -> bi
-    java.lang.String defaultText -> bj
-    com.unboundid.ldap.sdk.schema.SchemaMessages[] ENUM$VALUES -> bk
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_CLOSE_NOT_AT_END -> B
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_DUP_EXT -> C
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_EMPTY -> D
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_MULTIPLE_ELEMENTS -> E
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_NO_APPLIES -> F
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_NO_OPENING_PAREN -> G
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MRU_DECODE_UNEXPECTED_TOKEN -> H
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_CLOSE_NOT_AT_END -> I
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_DUP_EXT -> J
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_EMPTY -> K
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_MULTIPLE_ELEMENTS -> L
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_NO_OPENING_PAREN -> M
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_NO_SYNTAX -> N
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_MR_DECODE_UNEXPECTED_TOKEN -> O
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_CLOSE_NOT_AT_END -> P
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_DUP_EXT -> Q
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_EMPTY -> R
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_MULTIPLE_ELEMENTS -> S
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_NO_MUST -> T
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_NO_OC -> U
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_NO_OPENING_PAREN -> V
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_NF_DECODE_UNEXPECTED_TOKEN -> W
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_CLOSE_NOT_AT_END -> X
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_DUP_EXT -> Y
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_EMPTY -> Z
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_MULTIPLE_ELEMENTS -> aa
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_MULTIPLE_OC_TYPES -> ab
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_NO_OPENING_PAREN -> ac
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_OC_DECODE_UNEXPECTED_TOKEN -> ad
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_CANNOT_LOAD_DEFAULT_DEFINITIONS -> ae
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_OID -> af
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_OID_LIST -> ag
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_QUOTES -> ah
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EMPTY_STRING_LIST -> ai
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_ENDS_WITH_BACKSLASH -> aj
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EXPECTED_QUOTE_OR_PAREN -> ak
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_EXPECTED_SINGLE_QUOTE -> al
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_INVALID_HEX_CHAR -> am
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_MISSING_HEX_CHAR -> an
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_CLOSING_PAREN -> ao
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_SPACE_AFTER_OID -> ap
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_SPACE_AFTER_OID_LIST -> aq
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_NO_SPACE_AFTER_QUOTE -> ar
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_SKIP_SPACES_NO_CLOSE_PAREN -> as
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_UNEXPECTED_CHAR_IN_OID -> at
+    com.unboundid.ldap.sdk.schema.SchemaMessages ERR_SCHEMA_ELEM_UNEXPECTED_CHAR_IN_OID_LIST -> au
+    java.util.ResourceBundle RESOURCE_BUNDLE -> av
+    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> aw
+    java.util.concurrent.ConcurrentHashMap MESSAGES -> ax
+    java.lang.String defaultText -> ay
+    com.unboundid.ldap.sdk.schema.SchemaMessages[] $VALUES -> az
+    com.unboundid.ldap.sdk.schema.SchemaMessages[] values() -> values
+    com.unboundid.ldap.sdk.schema.SchemaMessages valueOf(java.lang.String) -> valueOf
     java.lang.String get() -> a
     java.lang.String get(java.lang.Object[]) -> a
     java.lang.String toString() -> toString
-    com.unboundid.ldap.sdk.schema.SchemaMessages[] values() -> values
-    com.unboundid.ldap.sdk.schema.SchemaMessages valueOf(java.lang.String) -> valueOf
 com.unboundid.ldif.LDIFRecord -> a.a.c.a:
 com.unboundid.util.Base64 -> a.a.d.a:
     char[] BASE64_ALPHABET -> a
+    char[] BASE64URL_ALPHABET -> b
     java.lang.String encode(byte[]) -> a
-    void encode(byte[],java.lang.StringBuilder) -> a
-    void encode(byte[],int,int,java.lang.StringBuilder) -> a
+    void encode(char[],byte[],int,int,java.lang.Appendable,java.lang.String) -> a
 com.unboundid.util.ByteString -> a.a.d.b:
 com.unboundid.util.ByteStringBuffer -> a.a.d.c:
     byte[] FALSE_VALUE_BYTES -> a
@@ -2190,7 +1914,9 @@ com.unboundid.util.ByteStringBuffer -> a.a.d.c:
     com.unboundid.util.ByteStringBuffer append(byte) -> a
     com.unboundid.util.ByteStringBuffer append(byte[]) -> a
     com.unboundid.util.ByteStringBuffer append(byte[],int,int) -> a
+    com.unboundid.util.ByteStringBuffer append(char) -> a
     com.unboundid.util.ByteStringBuffer append(java.lang.CharSequence) -> a
+    com.unboundid.util.ByteStringBuffer append(java.lang.CharSequence,int,int) -> a
     com.unboundid.util.ByteStringBuffer insert(int,byte) -> a
     com.unboundid.util.ByteStringBuffer insert(int,byte[]) -> a
     com.unboundid.util.ByteStringBuffer insert(int,byte[],int,int) -> a
@@ -2206,6 +1932,9 @@ com.unboundid.util.ByteStringBuffer -> a.a.d.c:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
     java.lang.String toString() -> toString
+    java.lang.Appendable append(char) -> append
+    java.lang.Appendable append(java.lang.CharSequence,int,int) -> append
+    java.lang.Appendable append(java.lang.CharSequence) -> append
 com.unboundid.util.Debug -> a.a.d.d:
     java.util.logging.Logger logger -> a
     boolean debugEnabled -> b
@@ -2241,13 +1970,13 @@ com.unboundid.util.DebugType -> a.a.d.e:
     com.unboundid.util.DebugType CODING_ERROR -> g
     com.unboundid.util.DebugType OTHER -> h
     java.lang.String name -> i
-    com.unboundid.util.DebugType[] ENUM$VALUES -> j
+    com.unboundid.util.DebugType[] $VALUES -> j
+    com.unboundid.util.DebugType[] values() -> values
+    com.unboundid.util.DebugType valueOf(java.lang.String) -> valueOf
     java.lang.String getName() -> a
     com.unboundid.util.DebugType forName(java.lang.String) -> a
     java.lang.String getTypeNameList() -> b
     java.lang.String toString() -> toString
-    com.unboundid.util.DebugType[] values() -> values
-    com.unboundid.util.DebugType valueOf(java.lang.String) -> valueOf
 com.unboundid.util.LDAPSDKException -> a.a.d.f:
     java.lang.String toString() -> toString
     void toString(java.lang.StringBuilder) -> a
@@ -2272,8 +2001,8 @@ com.unboundid.util.StaticUtils -> a.a.d.i:
     boolean isHex(char) -> a
     java.lang.String toHex(byte) -> a
     void toHex(byte,java.lang.StringBuilder) -> a
-    java.lang.String toHex(byte[]) -> b
     void toHex(byte[],java.lang.StringBuilder) -> a
+    void toHex(byte[],java.lang.String,java.lang.StringBuilder) -> a
     void hexEncode(char,java.lang.StringBuilder) -> a
     java.lang.String getStackTrace(java.lang.Throwable) -> a
     void getStackTrace(java.lang.Throwable,java.lang.StringBuilder) -> a
@@ -2283,154 +2012,99 @@ com.unboundid.util.StaticUtils -> a.a.d.i:
     java.lang.String getUnqualifiedClassName(java.lang.Class) -> a
     java.util.Date decodeGeneralizedTime(java.lang.String) -> c
     long nanosToMillis(long) -> a
-    java.util.UUID decodeUUID(byte[]) -> c
-com.unboundid.util.UtilityMessages -> a.a.d.j:
-    com.unboundid.util.UtilityMessages ERR_ARG_STRING_DANGLING_BACKSLASH -> a
-    com.unboundid.util.UtilityMessages ERR_ARG_STRING_UNMATCHED_QUOTE -> b
-    com.unboundid.util.UtilityMessages ERR_BASE64_DECODE_INVALID_LENGTH -> c
-    com.unboundid.util.UtilityMessages ERR_BASE64_DECODE_UNEXPECTED_CHAR -> d
-    com.unboundid.util.UtilityMessages ERR_BASE64_DECODE_UNEXPECTED_EQUAL -> e
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_ARRAY_NULL -> f
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_BUFFER_NULL -> g
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_BYTE_STRING_NULL -> h
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_CAPACITY_NEGATIVE -> i
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_CHAR_SEQUENCE_NULL -> j
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_LENGTH_NEGATIVE -> k
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_OFFSET_NEGATIVE -> l
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_OFFSET_PLUS_LENGTH_TOO_LARGE -> m
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_POS_NEGATIVE -> n
-    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_POS_TOO_LARGE -> o
-    com.unboundid.util.UtilityMessages ERR_DECODE_UUID_INVALID_LENGTH -> p
-    com.unboundid.util.UtilityMessages ERR_FILE_VALUE_PATTERN_NOT_USABLE -> q
-    com.unboundid.util.UtilityMessages ERR_FIXED_ARRAY_OS_WRITE_BEYOND_END -> r
+    boolean bothNullOrEqual(java.lang.Object,java.lang.Object) -> a
+    boolean bothNullOrEqualIgnoreCase(java.lang.String,java.lang.String) -> a
+    boolean stringsEqualIgnoreCaseOrderIndependent(java.lang.String[],java.lang.String[]) -> a
+    boolean arraysEqualOrderIndependent(java.lang.Object[],java.lang.Object[]) -> a
+com.unboundid.util.SynchronizedSSLSocketFactory -> a.a.d.j:
+    javax.net.ssl.SSLSocketFactory factory -> a
+    java.net.Socket createSocket(java.lang.String,int) -> createSocket
+    java.net.Socket createSocket(java.lang.String,int,java.net.InetAddress,int) -> createSocket
+    java.net.Socket createSocket(java.net.InetAddress,int) -> createSocket
+    java.net.Socket createSocket(java.net.InetAddress,int,java.net.InetAddress,int) -> createSocket
+    java.net.Socket createSocket(java.net.Socket,java.lang.String,int,boolean) -> createSocket
+    java.lang.String[] getDefaultCipherSuites() -> getDefaultCipherSuites
+    java.lang.String[] getSupportedCipherSuites() -> getSupportedCipherSuites
+com.unboundid.util.SynchronizedSocketFactory -> a.a.d.k:
+    javax.net.SocketFactory factory -> a
+    java.net.Socket createSocket(java.lang.String,int) -> createSocket
+    java.net.Socket createSocket(java.lang.String,int,java.net.InetAddress,int) -> createSocket
+    java.net.Socket createSocket(java.net.InetAddress,int) -> createSocket
+    java.net.Socket createSocket(java.net.InetAddress,int,java.net.InetAddress,int) -> createSocket
+com.unboundid.util.UtilityMessages -> a.a.d.l:
+    com.unboundid.util.UtilityMessages ERR_AGGREGATE_INPUT_STREAM_MARK_NOT_SUPPORTED -> a
+    com.unboundid.util.UtilityMessages ERR_ARG_STRING_DANGLING_BACKSLASH -> b
+    com.unboundid.util.UtilityMessages ERR_ARG_STRING_UNMATCHED_QUOTE -> c
+    com.unboundid.util.UtilityMessages ERR_BASE64_DECODE_INVALID_LENGTH -> d
+    com.unboundid.util.UtilityMessages ERR_BASE64_DECODE_UNEXPECTED_CHAR -> e
+    com.unboundid.util.UtilityMessages ERR_BASE64_DECODE_UNEXPECTED_EQUAL -> f
+    com.unboundid.util.UtilityMessages ERR_BASE64_URLDECODE_INVALID_LENGTH -> g
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_ARRAY_NULL -> h
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_BUFFER_NULL -> i
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_BYTE_STRING_NULL -> j
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_CAPACITY_NEGATIVE -> k
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_CHAR_SEQUENCE_NULL -> l
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_LENGTH_NEGATIVE -> m
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_OFFSET_NEGATIVE -> n
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_OFFSET_PLUS_LENGTH_TOO_LARGE -> o
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_POS_NEGATIVE -> p
+    com.unboundid.util.UtilityMessages ERR_BS_BUFFER_POS_TOO_LARGE -> q
+    com.unboundid.util.UtilityMessages ERR_DECODE_UUID_INVALID_LENGTH -> r
     com.unboundid.util.UtilityMessages ERR_GENTIME_CANNOT_PARSE_INVALID_LENGTH -> s
     com.unboundid.util.UtilityMessages ERR_GENTIME_DECODE_CANNOT_PARSE_TZ -> t
-    com.unboundid.util.UtilityMessages ERR_HTTP_VALUE_PATTERN_NOT_USABLE -> u
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_CANNOT_CREATE_KEY_MANAGER -> v
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_CANNOT_CREATE_SSL_CONTEXT -> w
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_CANNOT_CREATE_SSL_SOCKET_FACTORY -> x
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_CANNOT_READ_BIND_PASSWORD -> y
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_CANNOT_READ_KEY_STORE_PASSWORD -> z
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_CANNOT_READ_TRUST_STORE_PASSWORD -> A
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_HOST_PORT_COUNT_MISMATCH -> B
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_INVALID_SASL_OPTION -> C
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_MALFORMED_SASL_OPTION -> D
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_MISSING_REQUIRED_SASL_OPTION -> E
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_NO_SASL_MECH -> F
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_START_TLS_FAILED -> G
-    com.unboundid.util.UtilityMessages ERR_LDAP_TOOL_UNSUPPORTED_SASL_MECH -> H
-    com.unboundid.util.UtilityMessages ERR_NO_EXCEPTION -> I
-    com.unboundid.util.UtilityMessages ERR_REF_VALUE_PATTERN_INVALID_INDEX -> J
-    com.unboundid.util.UtilityMessages ERR_REF_VALUE_PATTERN_NOT_VALID -> K
-    com.unboundid.util.UtilityMessages ERR_REF_VALUE_PATTERN_ZERO_INDEX -> L
-    com.unboundid.util.UtilityMessages ERR_TEST_ATTR_EXISTS -> M
-    com.unboundid.util.UtilityMessages ERR_TEST_ATTR_MISSING -> N
-    com.unboundid.util.UtilityMessages ERR_TEST_ENTRY_DOES_NOT_MATCH_FILTER -> O
-    com.unboundid.util.UtilityMessages ERR_TEST_ENTRY_EXISTS -> P
-    com.unboundid.util.UtilityMessages ERR_TEST_ENTRY_HAS_CONTROL -> Q
-    com.unboundid.util.UtilityMessages ERR_TEST_ENTRY_MISSING -> R
-    com.unboundid.util.UtilityMessages ERR_TEST_ENTRY_MISSING_CONTROL -> S
-    com.unboundid.util.UtilityMessages ERR_TEST_MATCHED_DN_MISMATCH -> T
-    com.unboundid.util.UtilityMessages ERR_TEST_MULTI_RESULT_CODE_FOUND -> U
-    com.unboundid.util.UtilityMessages ERR_TEST_MULTI_RESULT_CODE_MISSING -> V
-    com.unboundid.util.UtilityMessages ERR_TEST_PROCESSING_MULTI_RESULT_CODE_FOUND -> W
-    com.unboundid.util.UtilityMessages ERR_TEST_PROCESSING_MULTI_RESULT_CODE_MISSING -> X
-    com.unboundid.util.UtilityMessages ERR_TEST_PROCESSING_SINGLE_RESULT_CODE_FOUND -> Y
-    com.unboundid.util.UtilityMessages ERR_TEST_PROCESSING_SINGLE_RESULT_CODE_MISSING -> Z
-    com.unboundid.util.UtilityMessages ERR_TEST_REF_HAS_CONTROL -> aa
-    com.unboundid.util.UtilityMessages ERR_TEST_REF_MISSING_CONTROL -> ab
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_CONTAINS_MATCHED_DN -> ac
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_HAS_CONTROL -> ad
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_HAS_REFERRAL -> ae
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_MISSING_CONTROL -> af
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_MISSING_EXPECTED_MATCHED_DN -> ag
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_MISSING_MATCHED_DN -> ah
-    com.unboundid.util.UtilityMessages ERR_TEST_RESULT_MISSING_REFERRAL -> ai
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_ENTRIES_RETURNED -> aj
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_ENTRY_COUNT_MISMATCH_MULTI_EXPECTED -> ak
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_ENTRY_COUNT_MISMATCH_ONE_EXPECTED -> al
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_ENTRY_NOT_RETURNED -> am
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_NO_ENTRIES_RETURNED -> an
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_NO_REFS_RETURNED -> ao
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_REFS_RETURNED -> ap
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_REF_COUNT_MISMATCH_MULTI_EXPECTED -> aq
-    com.unboundid.util.UtilityMessages ERR_TEST_SEARCH_REF_COUNT_MISMATCH_ONE_EXPECTED -> ar
-    com.unboundid.util.UtilityMessages ERR_TEST_SINGLE_RESULT_CODE_FOUND -> as
-    com.unboundid.util.UtilityMessages ERR_TEST_SINGLE_RESULT_CODE_MISSING -> at
-    com.unboundid.util.UtilityMessages ERR_TEST_VALUE_EXISTS -> au
-    com.unboundid.util.UtilityMessages ERR_TEST_VALUE_MISSING -> av
-    com.unboundid.util.UtilityMessages ERR_VALIDATOR_FAILURE_CUSTOM_MESSAGE -> aw
-    com.unboundid.util.UtilityMessages ERR_VALIDATOR_FALSE_CHECK_FAILURE -> ax
-    com.unboundid.util.UtilityMessages ERR_VALIDATOR_NULL_CHECK_FAILURE -> ay
-    com.unboundid.util.UtilityMessages ERR_VALIDATOR_TRUE_CHECK_FAILURE -> az
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_COMPONENT_EMPTY_FILE -> aA
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_EMPTY_FORMAT -> aB
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_EMPTY_INCREMENT -> aC
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_EMPTY_LOWER_BOUND -> aD
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_EMPTY_UPPER_BOUND -> aE
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_INVALID_CHARACTER -> aF
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_NO_DELIMITER -> aG
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_UNMATCHED_CLOSE -> aH
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_UNMATCHED_OPEN -> aI
-    com.unboundid.util.UtilityMessages ERR_VALUE_PATTERN_VALUE_NOT_LONG -> aJ
-    com.unboundid.util.UtilityMessages INFO_CL_TOOL_DESCRIPTION_HELP -> aK
-    com.unboundid.util.UtilityMessages INFO_CL_TOOL_LABEL_EXAMPLES -> aL
-    com.unboundid.util.UtilityMessages INFO_COLUMN_LABEL_TIMESTAMP -> aM
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_BIND_DN -> aN
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_BIND_PW -> aO
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_BIND_PW_FILE -> aP
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_CERT_NICKNAME -> aQ
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_HOST -> aR
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_KEY_STORE_FORMAT -> aS
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_KEY_STORE_PASSWORD -> aT
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_KEY_STORE_PASSWORD_FILE -> aU
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_KEY_STORE_PATH -> aV
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_PORT -> aW
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_SASL_OPTION -> aX
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_TRUST_ALL -> aY
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_TRUST_STORE_FORMAT -> aZ
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_TRUST_STORE_PASSWORD -> ba
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_TRUST_STORE_PASSWORD_FILE -> bb
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_TRUST_STORE_PATH -> bc
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_USE_SSL -> bd
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_DESCRIPTION_USE_START_TLS -> be
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_CERT_NICKNAME -> bf
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_DN -> bg
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_FORMAT -> bh
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_HOST -> bi
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_PASSWORD -> bj
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_PATH -> bk
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_PORT -> bl
-    com.unboundid.util.UtilityMessages INFO_LDAP_TOOL_PLACEHOLDER_SASL_OPTION -> bm
-    com.unboundid.util.UtilityMessages INFO_NUM_DAYS_PLURAL -> bn
-    com.unboundid.util.UtilityMessages INFO_NUM_DAYS_SINGULAR -> bo
-    com.unboundid.util.UtilityMessages INFO_NUM_HOURS_PLURAL -> bp
-    com.unboundid.util.UtilityMessages INFO_NUM_HOURS_SINGULAR -> bq
-    com.unboundid.util.UtilityMessages INFO_NUM_MINUTES_PLURAL -> br
-    com.unboundid.util.UtilityMessages INFO_NUM_MINUTES_SINGULAR -> bs
-    com.unboundid.util.UtilityMessages INFO_NUM_SECONDS_PLURAL -> bt
-    com.unboundid.util.UtilityMessages INFO_NUM_SECONDS_SINGULAR -> bu
-    com.unboundid.util.UtilityMessages INFO_NUM_SECONDS_WITH_DECIMAL -> bv
-    java.util.ResourceBundle RESOURCE_BUNDLE -> bw
-    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> bx
-    java.util.concurrent.ConcurrentHashMap MESSAGES -> by
-    java.lang.String defaultText -> bz
-    com.unboundid.util.UtilityMessages[] ENUM$VALUES -> bA
+    com.unboundid.util.UtilityMessages ERR_NO_EXCEPTION -> u
+    com.unboundid.util.UtilityMessages ERR_VALIDATOR_FAILURE_CUSTOM_MESSAGE -> v
+    com.unboundid.util.UtilityMessages ERR_VALIDATOR_FALSE_CHECK_FAILURE -> w
+    com.unboundid.util.UtilityMessages ERR_VALIDATOR_NULL_CHECK_FAILURE -> x
+    com.unboundid.util.UtilityMessages ERR_VALIDATOR_TRUE_CHECK_FAILURE -> y
+    com.unboundid.util.UtilityMessages INFO_NUM_DAYS_PLURAL -> z
+    com.unboundid.util.UtilityMessages INFO_NUM_DAYS_SINGULAR -> A
+    com.unboundid.util.UtilityMessages INFO_NUM_HOURS_PLURAL -> B
+    com.unboundid.util.UtilityMessages INFO_NUM_HOURS_SINGULAR -> C
+    com.unboundid.util.UtilityMessages INFO_NUM_MINUTES_PLURAL -> D
+    com.unboundid.util.UtilityMessages INFO_NUM_MINUTES_SINGULAR -> E
+    com.unboundid.util.UtilityMessages INFO_NUM_SECONDS_PLURAL -> F
+    com.unboundid.util.UtilityMessages INFO_NUM_SECONDS_SINGULAR -> G
+    com.unboundid.util.UtilityMessages INFO_NUM_SECONDS_WITH_DECIMAL -> H
+    java.util.ResourceBundle RESOURCE_BUNDLE -> I
+    java.util.concurrent.ConcurrentHashMap MESSAGE_STRINGS -> J
+    java.util.concurrent.ConcurrentHashMap MESSAGES -> K
+    java.lang.String defaultText -> L
+    com.unboundid.util.UtilityMessages[] $VALUES -> M
+    com.unboundid.util.UtilityMessages[] values() -> values
+    com.unboundid.util.UtilityMessages valueOf(java.lang.String) -> valueOf
     java.lang.String get() -> a
     java.lang.String get(java.lang.Object[]) -> a
     java.lang.String toString() -> toString
-    com.unboundid.util.UtilityMessages[] values() -> values
-    com.unboundid.util.UtilityMessages valueOf(java.lang.String) -> valueOf
-com.unboundid.util.Validator -> a.a.d.k:
+com.unboundid.util.Validator -> a.a.d.m:
     void ensureNotNull(java.lang.Object) -> a
     void ensureNotNull(java.lang.Object,java.lang.Object) -> a
     void ensureTrue(boolean) -> a
     void ensureTrue(boolean,java.lang.String) -> a
-com.unboundid.util.WakeableSleeper -> a.a.d.l:
+com.unboundid.util.WakeableSleeper -> a.a.d.n:
     java.util.concurrent.atomic.AtomicBoolean sleeping -> a
     java.util.concurrent.atomic.AtomicLong wakeupCount -> b
     boolean sleep(long) -> a
     void wakeup() -> a
+com.unboundid.util.WeakHashSet -> a.a.d.o:
+    java.util.WeakHashMap m -> a
+    void clear() -> clear
+    boolean isEmpty() -> isEmpty
+    int size() -> size
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean add(java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    java.lang.Object addAndGet(java.lang.Object) -> a
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    java.util.Iterator iterator() -> iterator
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
 com.unboundid.util.ssl.SSLUtil -> a.a.d.a.a:
     javax.net.ssl.KeyManager[] keyManagers -> a
     javax.net.ssl.TrustManager[] trustManagers -> b
@@ -2453,6 +2127,7 @@ fr.prados.contacts.Constants -> fr.prados.contacts.a:
     boolean DEBUG -> a
     boolean EMULATOR -> b
     java.util.Date EXPIRED_BETA -> c
+    java.util.Random FAKE_ERROR -> d
 fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
     java.lang.CharSequence accountType -> a
     java.lang.CharSequence accountName -> b
@@ -2802,17 +2477,14 @@ fr.prados.contacts.providers.ldap.LdapProvider$1 -> fr.prados.contacts.providers
 fr.prados.contacts.providers.ldap.LdapProvider$2 -> fr.prados.contacts.providers.ldap.c:
     fr.prados.contacts.providers.ldap.LdapProvider this$0 -> a
     java.lang.String val$accountName -> b
-    java.lang.Void doInBackground(java.lang.Void[]) -> a
-    void onPostExecute(java.lang.Void) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void run() -> run
 fr.prados.contacts.providers.ldap.LdapProvider$3 -> fr.prados.contacts.providers.ldap.d:
     boolean mCanceded -> a
     fr.prados.contacts.providers.ldap.LdapProvider this$0 -> b
     com.unboundid.ldap.sdk.LDAPConnection val$conn -> d
-    fr.prados.contacts.providers.ResultsAndExceptions val$result -> e
-    fr.prados.contacts.providers.ldap.LdapProvider$ParamLdapDriver val$params -> f
-    java.lang.String val$accountName -> g
+    java.lang.String val$accountName -> e
+    fr.prados.contacts.providers.ResultsAndExceptions val$result -> f
+    fr.prados.contacts.providers.ldap.LdapProvider$ParamLdapDriver val$params -> g
     android.content.Context val$context -> h
     java.util.HashSet val$ldapRef -> i
     java.util.Stack val$jobs -> j
@@ -3017,8 +2689,7 @@ fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$4 -> fr.prados.
 fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$5 -> fr.prados.contacts.providers.ldap.ab:
     fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
     fr.prados.contacts.providers.ldap.LdapKnowParameters val$knowParams -> b
-    java.lang.Void doInBackground(java.lang.Void[]) -> a
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void run() -> run
 fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$6 -> fr.prados.contacts.providers.ldap.ac:
     fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
@@ -3104,13 +2775,11 @@ fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$12 -> fr.prados.
     java.lang.String val$username -> h
     java.lang.String val$password -> i
     java.lang.String val$mapping -> j
-    java.lang.Void doInBackground(java.lang.Void[]) -> a
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void run() -> run
 fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$13 -> fr.prados.contacts.providers.ldap.generic.e:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     fr.prados.contacts.providers.ldap.LdapKnowParameters val$knowParams -> b
-    java.lang.Void doInBackground(java.lang.Void[]) -> a
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void run() -> run
 fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$14 -> fr.prados.contacts.providers.ldap.generic.f:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
@@ -3246,6 +2915,7 @@ fr.prados.contacts.tools.TOAPhoneNumberFormats -> fr.prados.contacts.tools.u:
     java.lang.String _format -> h
     java.util.regex.Pattern _toaPhonePattern -> n
     java.util.regex.Pattern _intPhonePattern -> o
+    android.telephony.TelephonyManager _tm -> p
     void startup(android.content.Context) -> a
     java.lang.String[] splitPhoneNumber(java.lang.CharSequence) -> b
     fr.prados.contacts.tools.TOAPhoneNumberFormats getTOAContextFromMCC(int) -> a

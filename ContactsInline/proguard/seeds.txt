@@ -65,6 +65,7 @@ fr.prados.contacts.R$attr: int contact_browser_background
 fr.prados.contacts.R$attr: int contact_browser_list_padding_left
 fr.prados.contacts.R$attr: int contact_browser_list_padding_right
 fr.prados.contacts.R$attr: int list_item_header_height
+fr.prados.contacts.R$attr: int showHeader
 fr.prados.contacts.R$color
 fr.prados.contacts.R$color: int dim_foreground_dark
 fr.prados.contacts.R$color: int list_background
@@ -75,11 +76,8 @@ fr.prados.contacts.R$color: int text_hint
 fr.prados.contacts.R$color: int text_link
 fr.prados.contacts.R$dimen
 fr.prados.contacts.R$dimen: int edit_photo_size
-fr.prados.contacts.R$dimen: int left_margin
 fr.prados.contacts.R$dimen: int list_section_height
 fr.prados.contacts.R$dimen: int photo_resize
-fr.prados.contacts.R$dimen: int right_margin
-fr.prados.contacts.R$dimen: int right_part_right_margin
 fr.prados.contacts.R$drawable
 fr.prados.contacts.R$drawable: int ab_bottom_opaque_dark_holo
 fr.prados.contacts.R$drawable: int ab_solid_custom_blue_inverse_holo
@@ -88,20 +86,20 @@ fr.prados.contacts.R$drawable: int ab_stacked_solid_inverse_holo
 fr.prados.contacts.R$drawable: int action_bar_item_background
 fr.prados.contacts.R$drawable: int action_bar_item_pressed_holo_light
 fr.prados.contacts.R$drawable: int action_bar_tab
+fr.prados.contacts.R$drawable: int border
 fr.prados.contacts.R$drawable: int call_background
 fr.prados.contacts.R$drawable: int dark_header
 fr.prados.contacts.R$drawable: int divider_vertical_dark
 fr.prados.contacts.R$drawable: int ic_contact_list_picture
 fr.prados.contacts.R$drawable: int ic_launcher_contacts
 fr.prados.contacts.R$drawable: int ic_menu_account_list
+fr.prados.contacts.R$drawable: int ic_menu_accounts
 fr.prados.contacts.R$drawable: int ic_menu_import_export
+fr.prados.contacts.R$drawable: int ic_menu_settings
 fr.prados.contacts.R$drawable: int ic_settings_applications
-fr.prados.contacts.R$drawable: int ic_tab_unselected_contacts
 fr.prados.contacts.R$drawable: int infobar_dark
 fr.prados.contacts.R$drawable: int list_item_divider
 fr.prados.contacts.R$drawable: int list_section_divider_holo_custom
-fr.prados.contacts.R$drawable: int list_selector_background_longpress
-fr.prados.contacts.R$drawable: int list_selector_background_pressed
 fr.prados.contacts.R$drawable: int magnifying_glass
 fr.prados.contacts.R$drawable: int tab_focused
 fr.prados.contacts.R$drawable: int tab_focused_bottom
@@ -119,30 +117,38 @@ fr.prados.contacts.R$drawable: int tab_unselected_pressed_holo
 fr.prados.contacts.R$id
 fr.prados.contacts.R$id: int call_button
 fr.prados.contacts.R$id: int call_view
+fr.prados.contacts.R$id: int contacts
 fr.prados.contacts.R$id: int data
 fr.prados.contacts.R$id: int divider
 fr.prados.contacts.R$id: int emptyText
 fr.prados.contacts.R$id: int errorsText
 fr.prados.contacts.R$id: int header
 fr.prados.contacts.R$id: int header_text
+fr.prados.contacts.R$id: int help_part1
+fr.prados.contacts.R$id: int help_part2
 fr.prados.contacts.R$id: int label
 fr.prados.contacts.R$id: int menu_accounts
 fr.prados.contacts.R$id: int menu_add_star
 fr.prados.contacts.R$id: int menu_call
 fr.prados.contacts.R$id: int menu_extensions
+fr.prados.contacts.R$id: int menu_help
 fr.prados.contacts.R$id: int menu_import
 fr.prados.contacts.R$id: int menu_search
 fr.prados.contacts.R$id: int menu_send_sms
 fr.prados.contacts.R$id: int menu_view_contact
 fr.prados.contacts.R$id: int name
 fr.prados.contacts.R$id: int noQuickContactPhoto
+fr.prados.contacts.R$id: int ok
 fr.prados.contacts.R$id: int photo
 fr.prados.contacts.R$id: int presence
 fr.prados.contacts.R$id: int right_side
+fr.prados.contacts.R$id: int scrollView1
+fr.prados.contacts.R$id: int textView1
 fr.prados.contacts.R$id: int totalContactsText
 fr.prados.contacts.R$layout
 fr.prados.contacts.R$layout: int contacts_list_content
 fr.prados.contacts.R$layout: int contacts_list_item_photo
+fr.prados.contacts.R$layout: int help
 fr.prados.contacts.R$layout: int list_section
 fr.prados.contacts.R$layout: int list_separator
 fr.prados.contacts.R$layout: int total_contacts
@@ -200,6 +206,10 @@ fr.prados.contacts.R$string: int help_need_account_app_title
 fr.prados.contacts.R$string: int help_need_android_version
 fr.prados.contacts.R$string: int help_need_android_version_title
 fr.prados.contacts.R$string: int help_need_provider
+fr.prados.contacts.R$string: int help_part1
+fr.prados.contacts.R$string: int help_part2
+fr.prados.contacts.R$string: int help_sample_name
+fr.prados.contacts.R$string: int help_title
 fr.prados.contacts.R$string: int help_with_search
 fr.prados.contacts.R$string: int import_detail
 fr.prados.contacts.R$string: int import_summary
@@ -219,6 +229,7 @@ fr.prados.contacts.R$string: int market_rate_no_market
 fr.prados.contacts.R$string: int market_title
 fr.prados.contacts.R$string: int menu_accounts
 fr.prados.contacts.R$string: int menu_extensions
+fr.prados.contacts.R$string: int menu_help
 fr.prados.contacts.R$string: int menu_import
 fr.prados.contacts.R$string: int menu_import_result
 fr.prados.contacts.R$string: int menu_market_rate
@@ -239,8 +250,10 @@ fr.prados.contacts.R$style
 fr.prados.contacts.R$style: int ContactsActionBarStyle
 fr.prados.contacts.R$style: int ContactsActionBarTabView
 fr.prados.contacts.R$style: int ContactsActionBarTheme
-fr.prados.contacts.R$style: int MyTheme
+fr.prados.contacts.R$style: int Theme
 fr.prados.contacts.R$style: int Theme_Transparent
+fr.prados.contacts.R$style: int ThemeHelp
+fr.prados.contacts.R$style: int _BaseTheme
 fr.prados.contacts.R$styleable
 fr.prados.contacts.R$styleable: int[] ContactBrowser
 fr.prados.contacts.R$styleable: int ContactBrowser_contact_browser_background
@@ -248,6 +261,7 @@ fr.prados.contacts.R$styleable: int ContactBrowser_contact_browser_list_padding_
 fr.prados.contacts.R$styleable: int ContactBrowser_contact_browser_list_padding_right
 fr.prados.contacts.R$styleable: int[] ContactListItemView
 fr.prados.contacts.R$styleable: int ContactListItemView_list_item_header_height
+fr.prados.contacts.R$styleable: int ContactListItemView_showHeader
 fr.prados.contacts.R$xml
 fr.prados.contacts.R$xml: int import_contacts
 fr.prados.contacts.R$xml: int searchable
@@ -271,6 +285,7 @@ fr.prados.contacts.lib.R$attr: int contact_browser_background
 fr.prados.contacts.lib.R$attr: int contact_browser_list_padding_left
 fr.prados.contacts.lib.R$attr: int contact_browser_list_padding_right
 fr.prados.contacts.lib.R$attr: int list_item_header_height
+fr.prados.contacts.lib.R$attr: int showHeader
 fr.prados.contacts.lib.R$color
 fr.prados.contacts.lib.R$color: int dim_foreground_dark
 fr.prados.contacts.lib.R$color: int list_background
@@ -281,11 +296,8 @@ fr.prados.contacts.lib.R$color: int text_hint
 fr.prados.contacts.lib.R$color: int text_link
 fr.prados.contacts.lib.R$dimen
 fr.prados.contacts.lib.R$dimen: int edit_photo_size
-fr.prados.contacts.lib.R$dimen: int left_margin
 fr.prados.contacts.lib.R$dimen: int list_section_height
 fr.prados.contacts.lib.R$dimen: int photo_resize
-fr.prados.contacts.lib.R$dimen: int right_margin
-fr.prados.contacts.lib.R$dimen: int right_part_right_margin
 fr.prados.contacts.lib.R$drawable
 fr.prados.contacts.lib.R$drawable: int ab_bottom_opaque_dark_holo
 fr.prados.contacts.lib.R$drawable: int ab_solid_custom_blue_inverse_holo
@@ -294,20 +306,20 @@ fr.prados.contacts.lib.R$drawable: int ab_stacked_solid_inverse_holo
 fr.prados.contacts.lib.R$drawable: int action_bar_item_background
 fr.prados.contacts.lib.R$drawable: int action_bar_item_pressed_holo_light
 fr.prados.contacts.lib.R$drawable: int action_bar_tab
+fr.prados.contacts.lib.R$drawable: int border
 fr.prados.contacts.lib.R$drawable: int call_background
 fr.prados.contacts.lib.R$drawable: int dark_header
 fr.prados.contacts.lib.R$drawable: int divider_vertical_dark
 fr.prados.contacts.lib.R$drawable: int ic_contact_list_picture
 fr.prados.contacts.lib.R$drawable: int ic_launcher_contacts
 fr.prados.contacts.lib.R$drawable: int ic_menu_account_list
+fr.prados.contacts.lib.R$drawable: int ic_menu_accounts
 fr.prados.contacts.lib.R$drawable: int ic_menu_import_export
+fr.prados.contacts.lib.R$drawable: int ic_menu_settings
 fr.prados.contacts.lib.R$drawable: int ic_settings_applications
-fr.prados.contacts.lib.R$drawable: int ic_tab_unselected_contacts
 fr.prados.contacts.lib.R$drawable: int infobar_dark
 fr.prados.contacts.lib.R$drawable: int list_item_divider
 fr.prados.contacts.lib.R$drawable: int list_section_divider_holo_custom
-fr.prados.contacts.lib.R$drawable: int list_selector_background_longpress
-fr.prados.contacts.lib.R$drawable: int list_selector_background_pressed
 fr.prados.contacts.lib.R$drawable: int magnifying_glass
 fr.prados.contacts.lib.R$drawable: int tab_focused
 fr.prados.contacts.lib.R$drawable: int tab_focused_bottom
@@ -325,30 +337,38 @@ fr.prados.contacts.lib.R$drawable: int tab_unselected_pressed_holo
 fr.prados.contacts.lib.R$id
 fr.prados.contacts.lib.R$id: int call_button
 fr.prados.contacts.lib.R$id: int call_view
+fr.prados.contacts.lib.R$id: int contacts
 fr.prados.contacts.lib.R$id: int data
 fr.prados.contacts.lib.R$id: int divider
 fr.prados.contacts.lib.R$id: int emptyText
 fr.prados.contacts.lib.R$id: int errorsText
 fr.prados.contacts.lib.R$id: int header
 fr.prados.contacts.lib.R$id: int header_text
+fr.prados.contacts.lib.R$id: int help_part1
+fr.prados.contacts.lib.R$id: int help_part2
 fr.prados.contacts.lib.R$id: int label
 fr.prados.contacts.lib.R$id: int menu_accounts
 fr.prados.contacts.lib.R$id: int menu_add_star
 fr.prados.contacts.lib.R$id: int menu_call
 fr.prados.contacts.lib.R$id: int menu_extensions
+fr.prados.contacts.lib.R$id: int menu_help
 fr.prados.contacts.lib.R$id: int menu_import
 fr.prados.contacts.lib.R$id: int menu_search
 fr.prados.contacts.lib.R$id: int menu_send_sms
 fr.prados.contacts.lib.R$id: int menu_view_contact
 fr.prados.contacts.lib.R$id: int name
 fr.prados.contacts.lib.R$id: int noQuickContactPhoto
+fr.prados.contacts.lib.R$id: int ok
 fr.prados.contacts.lib.R$id: int photo
 fr.prados.contacts.lib.R$id: int presence
 fr.prados.contacts.lib.R$id: int right_side
+fr.prados.contacts.lib.R$id: int scrollView1
+fr.prados.contacts.lib.R$id: int textView1
 fr.prados.contacts.lib.R$id: int totalContactsText
 fr.prados.contacts.lib.R$layout
 fr.prados.contacts.lib.R$layout: int contacts_list_content
 fr.prados.contacts.lib.R$layout: int contacts_list_item_photo
+fr.prados.contacts.lib.R$layout: int help
 fr.prados.contacts.lib.R$layout: int list_section
 fr.prados.contacts.lib.R$layout: int list_separator
 fr.prados.contacts.lib.R$layout: int total_contacts
@@ -406,6 +426,10 @@ fr.prados.contacts.lib.R$string: int help_need_account_app_title
 fr.prados.contacts.lib.R$string: int help_need_android_version
 fr.prados.contacts.lib.R$string: int help_need_android_version_title
 fr.prados.contacts.lib.R$string: int help_need_provider
+fr.prados.contacts.lib.R$string: int help_part1
+fr.prados.contacts.lib.R$string: int help_part2
+fr.prados.contacts.lib.R$string: int help_sample_name
+fr.prados.contacts.lib.R$string: int help_title
 fr.prados.contacts.lib.R$string: int help_with_search
 fr.prados.contacts.lib.R$string: int import_detail
 fr.prados.contacts.lib.R$string: int import_summary
@@ -425,6 +449,7 @@ fr.prados.contacts.lib.R$string: int market_rate_no_market
 fr.prados.contacts.lib.R$string: int market_title
 fr.prados.contacts.lib.R$string: int menu_accounts
 fr.prados.contacts.lib.R$string: int menu_extensions
+fr.prados.contacts.lib.R$string: int menu_help
 fr.prados.contacts.lib.R$string: int menu_import
 fr.prados.contacts.lib.R$string: int menu_import_result
 fr.prados.contacts.lib.R$string: int menu_market_rate
@@ -445,8 +470,10 @@ fr.prados.contacts.lib.R$style
 fr.prados.contacts.lib.R$style: int ContactsActionBarStyle
 fr.prados.contacts.lib.R$style: int ContactsActionBarTabView
 fr.prados.contacts.lib.R$style: int ContactsActionBarTheme
-fr.prados.contacts.lib.R$style: int MyTheme
+fr.prados.contacts.lib.R$style: int Theme
 fr.prados.contacts.lib.R$style: int Theme_Transparent
+fr.prados.contacts.lib.R$style: int ThemeHelp
+fr.prados.contacts.lib.R$style: int _BaseTheme
 fr.prados.contacts.lib.R$styleable
 fr.prados.contacts.lib.R$styleable: int[] ContactBrowser
 fr.prados.contacts.lib.R$styleable: int ContactBrowser_contact_browser_background
@@ -454,6 +481,7 @@ fr.prados.contacts.lib.R$styleable: int ContactBrowser_contact_browser_list_padd
 fr.prados.contacts.lib.R$styleable: int ContactBrowser_contact_browser_list_padding_right
 fr.prados.contacts.lib.R$styleable: int[] ContactListItemView
 fr.prados.contacts.lib.R$styleable: int ContactListItemView_list_item_header_height
+fr.prados.contacts.lib.R$styleable: int ContactListItemView_showHeader
 fr.prados.contacts.lib.R$xml
 fr.prados.contacts.lib.R$xml: int import_contacts
 fr.prados.contacts.lib.R$xml: int searchable
@@ -547,6 +575,9 @@ fr.prados.contacts.tools.TOAPhoneNumberFormats
 fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler
 fr.prados.contacts.tools.Update
 fr.prados.contacts.tools.Update$1
+fr.prados.contacts.ui.AbsListActivity
+fr.prados.contacts.ui.AbsListActivity$1
+fr.prados.contacts.ui.AbsListActivity$2
 fr.prados.contacts.ui.Collapser
 fr.prados.contacts.ui.Collapser$Collapsible
 fr.prados.contacts.ui.DontPressWithParentImageView
@@ -562,6 +593,8 @@ fr.prados.contacts.ui.FocusRequestingListView
 fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context)
 fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context,android.util.AttributeSet)
 fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context,android.util.AttributeSet,int)
+fr.prados.contacts.ui.HelpActivity
+fr.prados.contacts.ui.HelpActivity: void onOk(android.view.View)
 fr.prados.contacts.ui.ImportWithSyncActivity
 fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask
 fr.prados.contacts.ui.ImportWithoutSyncActivity
@@ -595,6 +628,7 @@ fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$1
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$2
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$3
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$4
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler
 fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler

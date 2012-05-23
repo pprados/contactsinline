@@ -80,8 +80,9 @@ fr.prados.contacts.lib.R$string: int mock_service_sync_label
 fr.prados.contacts.lib.R$string: int noException
 fr.prados.contacts.lib.R$string: int update_title
 fr.prados.contacts.lib.R$string: int validate
-fr.prados.contacts.lib.R$style: int MyTheme
+fr.prados.contacts.lib.R$style: int Theme
 fr.prados.contacts.lib.R$style: int Theme_Transparent
+fr.prados.contacts.lib.R$style: int Theme_Wizard
 fr.prados.contacts.lib.R$xml: int import_contacts
 fr.prados.contacts.lib.R$xml: int mock_account_preferences
 fr.prados.contacts.lib.R$xml: int mock_authenticator
@@ -179,8 +180,9 @@ fr.prados.contacts.providers.mock.R$string: int mock_service_sync_label
 fr.prados.contacts.providers.mock.R$string: int noException
 fr.prados.contacts.providers.mock.R$string: int update_title
 fr.prados.contacts.providers.mock.R$string: int validate
-fr.prados.contacts.providers.mock.R$style: int MyTheme
+fr.prados.contacts.providers.mock.R$style: int Theme
 fr.prados.contacts.providers.mock.R$style: int Theme_Transparent
+fr.prados.contacts.providers.mock.R$style: int Theme_Wizard
 fr.prados.contacts.providers.mock.R$xml: int import_contacts
 fr.prados.contacts.providers.mock.R$xml: int mock_account_preferences
 fr.prados.contacts.providers.mock.R$xml: int mock_authenticator

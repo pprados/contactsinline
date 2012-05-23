@@ -115,7 +115,7 @@ public abstract class AbstractSimpleAuthenticator extends AbstractAccountAuthent
 				_accountManager.clearPassword(account);
 				result=editAccount(response,account);
 				result.putBoolean(AccountManager.KEY_BOOLEAN_RESULT, false);
-				result.putString(AccountManager.KEY_AUTH_FAILED_MESSAGE, "Invalide login"); // FIXME: NLS
+				result.putString(AccountManager.KEY_AUTH_FAILED_MESSAGE, _context.getString(R.string.err_authent));
 				response.onResult(result);
 			}
 			catch (Exception e)
@@ -193,7 +193,7 @@ public abstract class AbstractSimpleAuthenticator extends AbstractAccountAuthent
 	{
 		if (authTokenType.equals(AUTHTOKEN_TYPE))
 		{
-			return "password"; // FIXME: NLS
+			return _context.getString(R.string.password_label);
 		}
 		return null;
 	}

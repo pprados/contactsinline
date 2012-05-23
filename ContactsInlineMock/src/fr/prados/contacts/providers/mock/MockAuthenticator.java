@@ -36,7 +36,7 @@ public class MockAuthenticator extends AbstractSimpleAuthenticator
 	{
 		// Mock accept all account ?
 		if (!"password".equals(password))
-			throw new GeneralSecurityException("Bad password"); // FIXME: NLS
+			throw new GeneralSecurityException(_context.getString(R.string.err_authent));
 	}
 
 }

@@ -36,7 +36,7 @@ public class AbstractWizardActivity extends AccountAuthenticatorActivity
 
 	protected AccountManager _accountManager;
 	
-	protected LdapKnowParameters _knowParams; // FIXME: sert a quoi ?
+	protected LdapKnowParameters _knowParams;
 	protected volatile AsyncTask<?,?,?> _asyncTryAuthent;
 	
 	protected String injectUsername(LdapKnowParameters params,String username)

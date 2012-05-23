@@ -20,7 +20,6 @@ import java.util.Properties;
 import fr.prados.contacts.Application;
 import com.unboundid.util.Debug;
 import static fr.prados.contacts.Constants.*;
-//TODO: Faire un rafraichissement du mapping s'il vient de la base, lors d'une mise à jour.
 public class LdapBaseApplication extends Application
 {
 	public static final boolean TRACE_LDAP=false;/*Application.DEBUG*/;

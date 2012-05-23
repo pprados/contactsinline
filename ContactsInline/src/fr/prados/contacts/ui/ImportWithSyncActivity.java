@@ -16,7 +16,7 @@
 package fr.prados.contacts.ui;
 
 import static fr.prados.contacts.Constants.EMULATOR;
-import static fr.prados.contacts.Constants.V;
+import static fr.prados.contacts.Constants.*;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -60,8 +60,16 @@ public final class ImportWithSyncActivity extends Activity
 		protected Uri doInBackground(Void... params)
 		{
 			assert(_data!=null);
-			ProvidersManager.init();
-			return ProvidersManager.fixeSyncContactInAndroid(getResources(),_resolver, _data);
+			try
+			{
+				ProvidersManager.init();
+				return ProvidersManager.fixeSyncContactInAndroid(getResources(),_resolver, _data);
+			}
+			catch (IllegalArgumentException e)
+			{
+				if (E) Log.e(TAG,"Error with contacts",e);
+				return null;
+			}
 		}
 		@Override
 		protected void onPostExecute(Uri result)

@@ -440,7 +440,6 @@ public class GenericWizardActivity extends AbstractWizardActivity
 			{
 				try
 				{
-					// TODO: check if account already exist
 					String name=params[0];
 					String host;
 					int idx=name.indexOf(':');

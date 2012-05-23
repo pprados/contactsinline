@@ -520,6 +520,7 @@ fr.prados.contacts.Constants -> fr.prados.contacts.Constants:
     boolean DEBUG -> a
     boolean EMULATOR -> b
     java.util.Date EXPIRED_BETA -> c
+    java.util.Random FAKE_ERROR -> d
 fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
     java.lang.CharSequence accountType -> a
     java.lang.CharSequence accountName -> b
@@ -545,6 +546,7 @@ fr.prados.contacts.R$attr -> fr.prados.contacts.R$attr:
     int contact_browser_list_padding_left -> contact_browser_list_padding_left
     int contact_browser_list_padding_right -> contact_browser_list_padding_right
     int list_item_header_height -> list_item_header_height
+    int showHeader -> showHeader
 fr.prados.contacts.R$color -> fr.prados.contacts.R$color:
     int dim_foreground_dark -> dim_foreground_dark
     int list_background -> list_background
@@ -555,11 +557,8 @@ fr.prados.contacts.R$color -> fr.prados.contacts.R$color:
     int text_link -> text_link
 fr.prados.contacts.R$dimen -> fr.prados.contacts.R$dimen:
     int edit_photo_size -> edit_photo_size
-    int left_margin -> left_margin
     int list_section_height -> list_section_height
     int photo_resize -> photo_resize
-    int right_margin -> right_margin
-    int right_part_right_margin -> right_part_right_margin
 fr.prados.contacts.R$drawable -> fr.prados.contacts.R$drawable:
     int ab_bottom_opaque_dark_holo -> ab_bottom_opaque_dark_holo
     int ab_solid_custom_blue_inverse_holo -> ab_solid_custom_blue_inverse_holo
@@ -568,20 +567,20 @@ fr.prados.contacts.R$drawable -> fr.prados.contacts.R$drawable:
     int action_bar_item_background -> action_bar_item_background
     int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
     int action_bar_tab -> action_bar_tab
+    int border -> border
     int call_background -> call_background
     int dark_header -> dark_header
     int divider_vertical_dark -> divider_vertical_dark
     int ic_contact_list_picture -> ic_contact_list_picture
     int ic_launcher_contacts -> ic_launcher_contacts
     int ic_menu_account_list -> ic_menu_account_list
+    int ic_menu_accounts -> ic_menu_accounts
     int ic_menu_import_export -> ic_menu_import_export
+    int ic_menu_settings -> ic_menu_settings
     int ic_settings_applications -> ic_settings_applications
-    int ic_tab_unselected_contacts -> ic_tab_unselected_contacts
     int infobar_dark -> infobar_dark
     int list_item_divider -> list_item_divider
     int list_section_divider_holo_custom -> list_section_divider_holo_custom
-    int list_selector_background_longpress -> list_selector_background_longpress
-    int list_selector_background_pressed -> list_selector_background_pressed
     int magnifying_glass -> magnifying_glass
     int tab_focused -> tab_focused
     int tab_focused_bottom -> tab_focused_bottom
@@ -599,30 +598,38 @@ fr.prados.contacts.R$drawable -> fr.prados.contacts.R$drawable:
 fr.prados.contacts.R$id -> fr.prados.contacts.R$id:
     int call_button -> call_button
     int call_view -> call_view
+    int contacts -> contacts
     int data -> data
     int divider -> divider
     int emptyText -> emptyText
     int errorsText -> errorsText
     int header -> header
     int header_text -> header_text
+    int help_part1 -> help_part1
+    int help_part2 -> help_part2
     int label -> label
     int menu_accounts -> menu_accounts
     int menu_add_star -> menu_add_star
     int menu_call -> menu_call
     int menu_extensions -> menu_extensions
+    int menu_help -> menu_help
     int menu_import -> menu_import
     int menu_search -> menu_search
     int menu_send_sms -> menu_send_sms
     int menu_view_contact -> menu_view_contact
     int name -> name
     int noQuickContactPhoto -> noQuickContactPhoto
+    int ok -> ok
     int photo -> photo
     int presence -> presence
     int right_side -> right_side
+    int scrollView1 -> scrollView1
+    int textView1 -> textView1
     int totalContactsText -> totalContactsText
 fr.prados.contacts.R$layout -> fr.prados.contacts.R$layout:
     int contacts_list_content -> contacts_list_content
     int contacts_list_item_photo -> contacts_list_item_photo
+    int help -> help
     int list_section -> list_section
     int list_separator -> list_separator
     int total_contacts -> total_contacts
@@ -680,6 +687,10 @@ fr.prados.contacts.R$string -> fr.prados.contacts.R$string:
     int help_need_android_version -> help_need_android_version
     int help_need_android_version_title -> help_need_android_version_title
     int help_need_provider -> help_need_provider
+    int help_part1 -> help_part1
+    int help_part2 -> help_part2
+    int help_sample_name -> help_sample_name
+    int help_title -> help_title
     int help_with_search -> help_with_search
     int import_detail -> import_detail
     int import_summary -> import_summary
@@ -699,6 +710,7 @@ fr.prados.contacts.R$string -> fr.prados.contacts.R$string:
     int market_title -> market_title
     int menu_accounts -> menu_accounts
     int menu_extensions -> menu_extensions
+    int menu_help -> menu_help
     int menu_import -> menu_import
     int menu_import_result -> menu_import_result
     int menu_market_rate -> menu_market_rate
@@ -719,8 +731,10 @@ fr.prados.contacts.R$style -> fr.prados.contacts.R$style:
     int ContactsActionBarStyle -> ContactsActionBarStyle
     int ContactsActionBarTabView -> ContactsActionBarTabView
     int ContactsActionBarTheme -> ContactsActionBarTheme
-    int MyTheme -> MyTheme
+    int Theme -> Theme
     int Theme_Transparent -> Theme_Transparent
+    int ThemeHelp -> ThemeHelp
+    int _BaseTheme -> _BaseTheme
 fr.prados.contacts.R$styleable -> fr.prados.contacts.R$styleable:
     int[] ContactBrowser -> ContactBrowser
     int ContactBrowser_contact_browser_background -> ContactBrowser_contact_browser_background
@@ -728,6 +742,7 @@ fr.prados.contacts.R$styleable -> fr.prados.contacts.R$styleable:
     int ContactBrowser_contact_browser_list_padding_right -> ContactBrowser_contact_browser_list_padding_right
     int[] ContactListItemView -> ContactListItemView
     int ContactListItemView_list_item_header_height -> ContactListItemView_list_item_header_height
+    int ContactListItemView_showHeader -> ContactListItemView_showHeader
 fr.prados.contacts.R$xml -> fr.prados.contacts.R$xml:
     int import_contacts -> import_contacts
     int searchable -> searchable
@@ -827,6 +842,7 @@ fr.prados.contacts.lib.R$attr -> fr.prados.contacts.lib.R$attr:
     int contact_browser_list_padding_left -> contact_browser_list_padding_left
     int contact_browser_list_padding_right -> contact_browser_list_padding_right
     int list_item_header_height -> list_item_header_height
+    int showHeader -> showHeader
 fr.prados.contacts.lib.R$color -> fr.prados.contacts.lib.R$color:
     int dim_foreground_dark -> dim_foreground_dark
     int list_background -> list_background
@@ -837,11 +853,8 @@ fr.prados.contacts.lib.R$color -> fr.prados.contacts.lib.R$color:
     int text_link -> text_link
 fr.prados.contacts.lib.R$dimen -> fr.prados.contacts.lib.R$dimen:
     int edit_photo_size -> edit_photo_size
-    int left_margin -> left_margin
     int list_section_height -> list_section_height
     int photo_resize -> photo_resize
-    int right_margin -> right_margin
-    int right_part_right_margin -> right_part_right_margin
 fr.prados.contacts.lib.R$drawable -> fr.prados.contacts.lib.R$drawable:
     int ab_bottom_opaque_dark_holo -> ab_bottom_opaque_dark_holo
     int ab_solid_custom_blue_inverse_holo -> ab_solid_custom_blue_inverse_holo
@@ -850,20 +863,20 @@ fr.prados.contacts.lib.R$drawable -> fr.prados.contacts.lib.R$drawable:
     int action_bar_item_background -> action_bar_item_background
     int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
     int action_bar_tab -> action_bar_tab
+    int border -> border
     int call_background -> call_background
     int dark_header -> dark_header
     int divider_vertical_dark -> divider_vertical_dark
     int ic_contact_list_picture -> ic_contact_list_picture
     int ic_launcher_contacts -> ic_launcher_contacts
     int ic_menu_account_list -> ic_menu_account_list
+    int ic_menu_accounts -> ic_menu_accounts
     int ic_menu_import_export -> ic_menu_import_export
+    int ic_menu_settings -> ic_menu_settings
     int ic_settings_applications -> ic_settings_applications
-    int ic_tab_unselected_contacts -> ic_tab_unselected_contacts
     int infobar_dark -> infobar_dark
     int list_item_divider -> list_item_divider
     int list_section_divider_holo_custom -> list_section_divider_holo_custom
-    int list_selector_background_longpress -> list_selector_background_longpress
-    int list_selector_background_pressed -> list_selector_background_pressed
     int magnifying_glass -> magnifying_glass
     int tab_focused -> tab_focused
     int tab_focused_bottom -> tab_focused_bottom
@@ -881,30 +894,38 @@ fr.prados.contacts.lib.R$drawable -> fr.prados.contacts.lib.R$drawable:
 fr.prados.contacts.lib.R$id -> fr.prados.contacts.lib.R$id:
     int call_button -> call_button
     int call_view -> call_view
+    int contacts -> contacts
     int data -> data
     int divider -> divider
     int emptyText -> emptyText
     int errorsText -> errorsText
     int header -> header
     int header_text -> header_text
+    int help_part1 -> help_part1
+    int help_part2 -> help_part2
     int label -> label
     int menu_accounts -> menu_accounts
     int menu_add_star -> menu_add_star
     int menu_call -> menu_call
     int menu_extensions -> menu_extensions
+    int menu_help -> menu_help
     int menu_import -> menu_import
     int menu_search -> menu_search
     int menu_send_sms -> menu_send_sms
     int menu_view_contact -> menu_view_contact
     int name -> name
     int noQuickContactPhoto -> noQuickContactPhoto
+    int ok -> ok
     int photo -> photo
     int presence -> presence
     int right_side -> right_side
+    int scrollView1 -> scrollView1
+    int textView1 -> textView1
     int totalContactsText -> totalContactsText
 fr.prados.contacts.lib.R$layout -> fr.prados.contacts.lib.R$layout:
     int contacts_list_content -> contacts_list_content
     int contacts_list_item_photo -> contacts_list_item_photo
+    int help -> help
     int list_section -> list_section
     int list_separator -> list_separator
     int total_contacts -> total_contacts
@@ -962,6 +983,10 @@ fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
     int help_need_android_version -> help_need_android_version
     int help_need_android_version_title -> help_need_android_version_title
     int help_need_provider -> help_need_provider
+    int help_part1 -> help_part1
+    int help_part2 -> help_part2
+    int help_sample_name -> help_sample_name
+    int help_title -> help_title
     int help_with_search -> help_with_search
     int import_detail -> import_detail
     int import_summary -> import_summary
@@ -981,6 +1006,7 @@ fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
     int market_title -> market_title
     int menu_accounts -> menu_accounts
     int menu_extensions -> menu_extensions
+    int menu_help -> menu_help
     int menu_import -> menu_import
     int menu_import_result -> menu_import_result
     int menu_market_rate -> menu_market_rate
@@ -1001,8 +1027,10 @@ fr.prados.contacts.lib.R$style -> fr.prados.contacts.lib.R$style:
     int ContactsActionBarStyle -> ContactsActionBarStyle
     int ContactsActionBarTabView -> ContactsActionBarTabView
     int ContactsActionBarTheme -> ContactsActionBarTheme
-    int MyTheme -> MyTheme
+    int Theme -> Theme
     int Theme_Transparent -> Theme_Transparent
+    int ThemeHelp -> ThemeHelp
+    int _BaseTheme -> _BaseTheme
 fr.prados.contacts.lib.R$styleable -> fr.prados.contacts.lib.R$styleable:
     int[] ContactBrowser -> ContactBrowser
     int ContactBrowser_contact_browser_background -> ContactBrowser_contact_browser_background
@@ -1010,6 +1038,7 @@ fr.prados.contacts.lib.R$styleable -> fr.prados.contacts.lib.R$styleable:
     int ContactBrowser_contact_browser_list_padding_right -> ContactBrowser_contact_browser_list_padding_right
     int[] ContactListItemView -> ContactListItemView
     int ContactListItemView_list_item_header_height -> ContactListItemView_list_item_header_height
+    int ContactListItemView_showHeader -> ContactListItemView_showHeader
 fr.prados.contacts.lib.R$xml -> fr.prados.contacts.lib.R$xml:
     int import_contacts -> import_contacts
     int searchable -> searchable
@@ -1207,6 +1236,7 @@ fr.prados.contacts.tools.TOAPhoneNumberFormats -> fr.prados.contacts.tools.TOAPh
     java.lang.String _format -> h
     java.util.regex.Pattern _toaPhonePattern -> n
     java.util.regex.Pattern _intPhonePattern -> o
+    android.telephony.TelephonyManager _tm -> p
     void startup(android.content.Context) -> a
     fr.prados.contacts.tools.TOAPhoneNumberFormats getTOAContextFromMCC(int) -> a
     int getPhoneMCC() -> a
@@ -1220,6 +1250,26 @@ fr.prados.contacts.tools.Update$1 -> fr.prados.contacts.tools.Update$1:
     android.content.SharedPreferences val$preferences -> a
     int val$version -> b
     void onClick(android.content.DialogInterface,int) -> onClick
+fr.prados.contacts.ui.AbsListActivity -> fr.prados.contacts.ui.AbsListActivity:
+    android.widget.ListAdapter mAdapter -> a
+    android.widget.AbsListView mList -> b
+    android.os.Handler mHandler -> c
+    boolean mFinishedStart -> d
+    java.lang.Runnable mRequestFocus -> e
+    android.widget.AdapterView$OnItemClickListener mOnClickListener -> f
+    void onListItemClick(android.widget.ListView,android.view.View,int,long) -> a
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+    void onDestroy() -> onDestroy
+    void onContentChanged() -> onContentChanged
+    void setListAdapter(android.widget.ListAdapter) -> a
+    android.widget.AbsListView getListView() -> a
+    void ensureList() -> b
+fr.prados.contacts.ui.AbsListActivity$1 -> fr.prados.contacts.ui.AbsListActivity$1:
+    fr.prados.contacts.ui.AbsListActivity this$0 -> a
+    void run() -> run
+fr.prados.contacts.ui.AbsListActivity$2 -> fr.prados.contacts.ui.AbsListActivity$2:
+    fr.prados.contacts.ui.AbsListActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
 fr.prados.contacts.ui.Collapser -> fr.prados.contacts.ui.Collapser:
     void collapseList(java.util.ArrayList) -> a
 fr.prados.contacts.ui.Collapser$Collapsible -> fr.prados.contacts.ui.Collapser$Collapsible:
@@ -1243,6 +1293,12 @@ fr.prados.contacts.ui.ExQuickContactBadge$1 -> fr.prados.contacts.ui.ExQuickCont
 fr.prados.contacts.ui.FocusRequestingListView -> fr.prados.contacts.ui.FocusRequestingListView:
     boolean mFirstLayoutDone -> a
     void onLayout(boolean,int,int,int,int) -> onLayout
+fr.prados.contacts.ui.HelpActivity -> fr.prados.contacts.ui.HelpActivity:
+    void showIntro(android.app.Activity) -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onOk(android.view.View) -> onOk
+    void onResume() -> onResume
+    void hideKeyboard() -> a
 fr.prados.contacts.ui.ImportWithSyncActivity -> fr.prados.contacts.ui.ImportWithSyncActivity:
     fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask _importTask -> a
     void onCreate(android.os.Bundle) -> onCreate
@@ -1314,15 +1370,16 @@ fr.prados.contacts.ui.ProvidersManager -> fr.prados.contacts.ui.ProvidersManager
     int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode -> n
     boolean isEmpty() -> a
     boolean waitInit() -> b
-    void initPlugin() -> m
+    void initPlugin() -> n
     void init() -> c
     android.accounts.Account[] getAccounts() -> d
+    boolean isAccountEmpty() -> e
     fr.prados.contacts.providers.IProvider getDriver(java.lang.String) -> b
-    void wakeup() -> e
-    void wakedown() -> f
-    void reset() -> g
+    void wakeup() -> f
+    void wakedown() -> g
+    void reset() -> h
     void query(fr.prados.contacts.ui.ProvidersManager$Mode,fr.prados.contacts.providers.Provider$OnQuery,java.lang.String[],java.lang.String,java.lang.String[]) -> a
-    void cancelQuery() -> h
+    void cancelQuery() -> i
     android.graphics.Bitmap getPhoto(fr.prados.contacts.ContactId) -> a
     android.database.MatrixCursor convContactsToCursor(fr.prados.contacts.ui.ProvidersManager$Mode,java.util.List,java.lang.String[]) -> b
     android.net.Uri importVolatileContactToAndroid(long,boolean,android.content.Context) -> a
@@ -1331,11 +1388,11 @@ fr.prados.contacts.ui.ProvidersManager -> fr.prados.contacts.ui.ProvidersManager
     android.net.Uri fixeCopyContactInAndroid(android.content.res.Resources,android.content.ContentResolver,android.net.Uri) -> b
     android.net.Uri fixeCopyContactInAndroid(android.content.res.Resources,android.content.ContentResolver,long) -> b
     fr.prados.contacts.providers.IProvider access$0(java.lang.String) -> a
-    java.util.Map access$1() -> i
-    java.util.concurrent.atomic.AtomicInteger access$2() -> j
+    java.util.Map access$1() -> j
+    java.util.concurrent.atomic.AtomicInteger access$2() -> k
     android.database.MatrixCursor access$3(fr.prados.contacts.ui.ProvidersManager$Mode,java.util.List,java.lang.String[]) -> a
-    java.util.List access$4() -> k
-    int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode() -> l
+    java.util.List access$4() -> l
+    int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode() -> m
 fr.prados.contacts.ui.ProvidersManager$1 -> fr.prados.contacts.ui.ProvidersManager$1:
     fr.prados.contacts.providers.IProvider _driver -> a
     int val$theId -> b
@@ -1395,53 +1452,55 @@ fr.prados.contacts.ui.ProvidersManager$Mode -> fr.prados.contacts.ui.ProvidersMa
     fr.prados.contacts.ui.ProvidersManager$Mode[] values() -> values
     fr.prados.contacts.ui.ProvidersManager$Mode valueOf(java.lang.String) -> valueOf
 fr.prados.contacts.ui.VolatileContactsListActivity -> fr.prados.contacts.ui.VolatileContactsListActivity:
-    boolean HONEYCOMB -> b
-    boolean withFlurry -> a
-    android.os.Handler _handler -> c
-    boolean _isExtension -> d
-    boolean _asynImport -> e
-    boolean _isDone -> f
-    int _show -> g
-    int _mode -> h
-    int _scrollState -> i
-    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter _adapter -> j
-    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler _queryHandler -> k
-    fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler _importAllHandler -> l
-    java.lang.String _queryMode -> m
-    android.provider.SearchRecentSuggestions _suggestions -> n
-    java.lang.String _lastQuery -> o
-    android.widget.TextView _errorsText -> p
-    android.widget.TextView _emptyText -> q
-    android.widget.TextView _totalContacts -> r
-    android.view.MenuItem _searchMenu -> s
-    android.widget.SearchView _searchView -> t
-    java.lang.String[] colDataId -> u
-    java.lang.String[] colsNormal -> v
-    java.lang.String[] colsPickContact -> w
-    java.lang.String[] colsPickPhone -> x
-    java.lang.String[] colsPickPostal -> y
-    java.lang.String[] colAuthority -> z
-    java.lang.String[] colForCallOrSms -> A
-    int _cntProgress -> B
-    android.os.Parcelable _restoreListState -> C
-    boolean _restoreListHasFocus -> D
-    java.util.concurrent.ExecutorService _imageFetchThreadPool -> E
-    void incProgressBar() -> a
-    void decProgressBar() -> b
+    boolean HONEYCOMB -> d
+    boolean withFlurry -> c
+    android.os.Handler _handler -> e
+    boolean _isExtension -> f
+    boolean _asynImport -> g
+    boolean _isDone -> h
+    int _show -> i
+    int _mode -> j
+    boolean _showHeader -> k
+    int _scrollState -> l
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter _adapter -> m
+    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler _queryHandler -> n
+    fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler _importAllHandler -> o
+    java.lang.String _queryMode -> p
+    android.provider.SearchRecentSuggestions _suggestions -> q
+    java.lang.String _lastQuery -> r
+    android.widget.TextView _errorsText -> s
+    android.widget.TextView _emptyText -> t
+    android.widget.TextView _totalContacts -> u
+    android.view.MenuItem _searchMenu -> v
+    android.widget.SearchView _searchView -> w
+    java.lang.String[] colDataId -> x
+    java.lang.String[] colsNormal -> y
+    java.lang.String[] colsPickContact -> z
+    java.lang.String[] colsPickPhone -> A
+    java.lang.String[] colsPickPostal -> B
+    java.lang.String[] colAuthority -> C
+    java.lang.String[] colForCallOrSms -> D
+    int _cntProgress -> E
+    android.os.Parcelable _restoreListState -> F
+    boolean _restoreListHasFocus -> G
+    java.util.concurrent.ExecutorService _imageFetchThreadPool -> H
+    void incProgressBar() -> b
+    void decProgressBar() -> c
     void onCreate(android.os.Bundle) -> onCreate
     void onAccountsUpdated(android.accounts.Account[]) -> onAccountsUpdated
     void findProviders(boolean) -> a
     void handleIntent(android.content.Intent) -> a
-    boolean restoreRetainNonConfigurationInstance() -> j
+    boolean restoreRetainNonConfigurationInstance() -> l
     void onRestart() -> onRestart
     void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
     void onResume() -> onResume
+    void setSearchVisible(boolean) -> c
     void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
     void onStop() -> onStop
     java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
     void onNewIntent(android.content.Intent) -> onNewIntent
-    void hideKeyboard() -> k
-    void hideSearchbar() -> c
+    void hideKeyboard() -> m
+    void hideSearchbar() -> d
     void onDestroy() -> onDestroy
     void onBackPressed() -> onBackPressed
     void onLowMemory() -> onLowMemory
@@ -1454,8 +1513,8 @@ fr.prados.contacts.ui.VolatileContactsListActivity -> fr.prados.contacts.ui.Vola
     boolean onContextItemSelected(android.view.MenuItem) -> onContextItemSelected
     boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
     boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
-    void startQuery() -> l
-    boolean checkContact() -> m
+    void startQuery() -> n
+    boolean checkContact() -> o
     void showVolatileContact(long) -> a
     void starMemoryContact(long) -> b
     android.net.Uri importMemoryContact(long,boolean) -> a
@@ -1465,34 +1524,36 @@ fr.prados.contacts.ui.VolatileContactsListActivity -> fr.prados.contacts.ui.Vola
     android.net.Uri access$2(fr.prados.contacts.ui.VolatileContactsListActivity,long,boolean) -> a
     void access$3(fr.prados.contacts.ui.VolatileContactsListActivity,fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler) -> a
     int access$4(fr.prados.contacts.ui.VolatileContactsListActivity) -> b
-    java.lang.String[] access$5() -> d
-    java.lang.String[] access$6() -> e
-    java.lang.String[] access$7() -> f
-    java.lang.String[] access$8() -> g
-    android.widget.TextView access$9(fr.prados.contacts.ui.VolatileContactsListActivity) -> c
-    android.widget.TextView access$10(fr.prados.contacts.ui.VolatileContactsListActivity) -> d
-    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter access$11(fr.prados.contacts.ui.VolatileContactsListActivity) -> e
-    android.os.Parcelable access$12(fr.prados.contacts.ui.VolatileContactsListActivity) -> f
-    boolean access$13(fr.prados.contacts.ui.VolatileContactsListActivity) -> g
-    void access$14(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> b
-    void access$15(fr.prados.contacts.ui.VolatileContactsListActivity,android.os.Parcelable) -> a
-    java.lang.String access$16(fr.prados.contacts.ui.VolatileContactsListActivity) -> h
-    int access$17(fr.prados.contacts.ui.VolatileContactsListActivity) -> i
-    android.widget.TextView access$18(fr.prados.contacts.ui.VolatileContactsListActivity) -> j
-    java.lang.String[] access$19() -> h
-    void access$20(fr.prados.contacts.ui.VolatileContactsListActivity,long) -> a
-    void access$21(fr.prados.contacts.ui.VolatileContactsListActivity,android.net.Uri,boolean) -> a
-    int access$22(fr.prados.contacts.ui.VolatileContactsListActivity) -> k
-    java.util.concurrent.ExecutorService access$24() -> i
-    void access$25(java.util.concurrent.ExecutorService) -> a
-    void access$26(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> c
-    boolean access$27(fr.prados.contacts.ui.VolatileContactsListActivity) -> l
-    android.view.MenuItem access$28(fr.prados.contacts.ui.VolatileContactsListActivity) -> m
-    void access$29(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> d
-    boolean access$30(fr.prados.contacts.ui.VolatileContactsListActivity) -> n
-    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler access$31(fr.prados.contacts.ui.VolatileContactsListActivity) -> o
-    void access$32(fr.prados.contacts.ui.VolatileContactsListActivity) -> p
-    java.lang.String access$33(fr.prados.contacts.ui.VolatileContactsListActivity) -> q
+    java.lang.String[] access$5() -> e
+    java.lang.String[] access$6() -> f
+    java.lang.String[] access$7() -> g
+    java.lang.String[] access$8() -> h
+    void access$9(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> b
+    android.widget.TextView access$10(fr.prados.contacts.ui.VolatileContactsListActivity) -> c
+    android.widget.TextView access$11(fr.prados.contacts.ui.VolatileContactsListActivity) -> d
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter access$12(fr.prados.contacts.ui.VolatileContactsListActivity) -> e
+    android.os.Parcelable access$13(fr.prados.contacts.ui.VolatileContactsListActivity) -> f
+    boolean access$14(fr.prados.contacts.ui.VolatileContactsListActivity) -> g
+    void access$15(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> c
+    void access$16(fr.prados.contacts.ui.VolatileContactsListActivity,android.os.Parcelable) -> a
+    java.lang.String access$17(fr.prados.contacts.ui.VolatileContactsListActivity) -> h
+    int access$18(fr.prados.contacts.ui.VolatileContactsListActivity) -> i
+    boolean access$19(fr.prados.contacts.ui.VolatileContactsListActivity) -> j
+    android.widget.TextView access$20(fr.prados.contacts.ui.VolatileContactsListActivity) -> k
+    java.lang.String[] access$21() -> i
+    void access$22(fr.prados.contacts.ui.VolatileContactsListActivity,long) -> a
+    void access$23(fr.prados.contacts.ui.VolatileContactsListActivity,android.net.Uri,boolean) -> a
+    int access$24(fr.prados.contacts.ui.VolatileContactsListActivity) -> l
+    java.util.concurrent.ExecutorService access$26() -> j
+    void access$27(java.util.concurrent.ExecutorService) -> a
+    void access$28(fr.prados.contacts.ui.VolatileContactsListActivity,boolean) -> d
+    boolean access$29(fr.prados.contacts.ui.VolatileContactsListActivity) -> m
+    void access$30(boolean) -> b
+    android.view.MenuItem access$31(fr.prados.contacts.ui.VolatileContactsListActivity) -> n
+    boolean access$32() -> k
+    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler access$33(fr.prados.contacts.ui.VolatileContactsListActivity) -> o
+    void access$34(fr.prados.contacts.ui.VolatileContactsListActivity) -> p
+    java.lang.String access$35(fr.prados.contacts.ui.VolatileContactsListActivity) -> q
 fr.prados.contacts.ui.VolatileContactsListActivity$1 -> fr.prados.contacts.ui.VolatileContactsListActivity$1:
     fr.prados.contacts.ui.VolatileContactsListActivity this$0 -> a
     boolean val$newProvider -> b
@@ -1607,7 +1668,8 @@ fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter -> fr.prados.
     java.util.HashSet access$2(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> c
     fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageFetchHandler access$3(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> d
     android.database.Cursor access$4(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> e
-    fr.prados.contacts.ui.VolatileContactsListActivity access$5(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> f
+    void access$5(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter,android.database.Cursor) -> a
+    fr.prados.contacts.ui.VolatileContactsListActivity access$6(fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter) -> f
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$1 -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$1:
     fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
     android.content.Intent val$intent -> c
@@ -1621,6 +1683,9 @@ fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$2 -> fr.prado
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$3 -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$3:
     fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
     void onPostExecute(android.net.Uri) -> a
+fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$4 -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$4:
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter this$1 -> a
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter$ImageDbFetcher:
     fr.prados.contacts.ContactId _photoId -> b
     android.widget.ImageView _imageView -> c

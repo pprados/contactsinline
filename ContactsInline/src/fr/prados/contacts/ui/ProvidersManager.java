@@ -86,7 +86,7 @@ import fr.prados.contacts.providers.QueryWarning;
 import fr.prados.contacts.providers.ResultsAndExceptions;
 import fr.prados.contacts.test.Dump;
 import fr.prados.contacts.tools.LogMarket;
-// TODO: voir comment maintenir en vie l'application et les liens.
+
 public final class ProvidersManager
 {
 	final static String TAG="ProvidersManager";
@@ -98,6 +98,8 @@ public final class ProvidersManager
 	private static AccountManager _manager;
 	private static final Map<String,IProvider> _drivers=Collections.synchronizedMap(new HashMap<String,IProvider>());
 
+	private static final String[] MAPPING_IDS=new String[]{RawContacts._ID,RawContacts.CONTACT_ID};
+	private static final String[] MAPPING_ID=new String[]{RawContacts._ID};
 	private static AtomicInteger _waitInit=new AtomicInteger(9999);
 	
 	public static boolean isEmpty()
@@ -145,7 +147,7 @@ public final class ProvidersManager
 	 * Initiale connection to all drivers.
 	 * @param context
 	 */
-	private static void initPlugin()
+	private static synchronized void initPlugin()
 	{
 		if (D) Log.d(TAG,"startup...");
 		final Context context=Application.context;
@@ -257,7 +259,7 @@ public final class ProvidersManager
 		_manager=manager;
 	}
 
-	public static Account[] getAccounts()
+	public static synchronized Account[] getAccounts()
 	{
 		assert(_waitInit.get()<=0);
 		final ArrayList<Account> a=new ArrayList<Account>(5);
@@ -370,11 +372,9 @@ public final class ProvidersManager
 		{
 			final ResultsAndExceptions resultFinal=new ResultsAndExceptions();
 			resultFinal.timeout=System.currentTimeMillis()+CACHE_TIMEOUT;
-			//TelephonyManager tm=(TelephonyManager)context.getSystemService(Context.TELEPHONY_SERVICE);
 			final ConnectivityManager cm=(ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
 			if (
-					/*(tm!=null && tm.getDataState()==TelephonyManager.DATA_DISCONNECTED) // TODO: gestion fine du réseau
-					||*/ (cm!=null && (cm.getActiveNetworkInfo()==null || !cm.getActiveNetworkInfo().isConnected()))
+					(cm!=null && (cm.getActiveNetworkInfo()==null || !cm.getActiveNetworkInfo().isConnected()))
 				)
 			{
 				// No network, return error
@@ -976,7 +976,6 @@ public final class ProvidersManager
 		}
 	}
 	
-// FIXME: découper la méthode d'avant en 2
 	public static Uri fixeSyncContactInAndroid(Resources resources,ContentResolver resolver,long rawContactId)
 	{
 		if (I) Log.i(TAG,"Save contact in android");
@@ -1184,7 +1183,7 @@ public final class ProvidersManager
 			Uri newRawUri=results[1].uri; // The raw record uri
 			
 			// Search the Contact id for this raw contact
-			cursor=resolver.query(newRawUri,new String[]{RawContacts._ID,RawContacts.CONTACT_ID},null,null,null); // FIXME: opt
+			cursor=resolver.query(newRawUri,MAPPING_IDS,null,null,null);
 			cursor.moveToFirst();
 			long rawid=cursor.getLong(0/*_ID*/);
 			long contactid=cursor.getLong(1/*CONTACT_ID*/);
@@ -1194,7 +1193,7 @@ public final class ProvidersManager
 			// It's because a raw contact without account name is already present.
 			// Then merge this two record.
 			// So, I delete the new record and populate the old one.
-			cursor=resolver.query(RawContacts.CONTENT_URI,new String[]{RawContacts._ID},RawContacts.CONTACT_ID+"="+contactid,null,null);  // FIXME: opt
+			cursor=resolver.query(RawContacts.CONTENT_URI,MAPPING_ID,RawContacts.CONTACT_ID+"="+contactid,null,null);
 			if (cursor.getCount()!=1)
 			{
 				long mergedid; // The record to populate

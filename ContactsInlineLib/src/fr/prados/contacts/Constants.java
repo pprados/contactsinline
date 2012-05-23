@@ -19,7 +19,6 @@ import java.util.Date;
 import java.util.Random;
 
 import android.os.Debug;
-
 import fr.prados.contacts.lib.BuildConfig;
 
 public class Constants
@@ -65,7 +64,7 @@ public class Constants
 	public static final boolean USE_PRE_CONNECTION=true;
 	public static final Date EXPIRED_BETA=null; //new Date(111,5,1,0,0,0);
 	/** Maximum life time for a cached request. */
-	public static final long CACHE_TIMEOUT=0; // 3*60*1000L; // 3mn
+	public static final long CACHE_TIMEOUT=3*60*1000L; // 3mn
 	/** Maximum number of last request in cache. */
 	public static final int MAX_LRU=10;
 	/** Generate fake exception or null. */

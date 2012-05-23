@@ -19,8 +19,6 @@
 		android:xlargeScreens="true"
 		android:anyDensity="true" 
 		/>
-		android:compatibleWidthLimitDp="320"
-		android:largestWidthLimitDp="600"
 		
 	<compatible-screens>
 	    <!-- all small size screens -->
@@ -73,15 +71,15 @@
     	android:theme="@style/Theme"
     	>
     
-		<activity android:name=".test.TestActivity"
-					android:label="C. Test"
-					>
-            <intent-filter>
+<!-- 		<activity android:name=".test.TestActivity" -->
+<!-- 					android:label="C. Test" -->
+<!-- 					> -->
+<!--             <intent-filter> -->
 <!--                 <action android:name="android.intent.action.VIEW" /> -->
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-		</activity>
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+<!-- 		</activity> -->
     
 <!-- ******************************** -->
         <activity 
@@ -99,27 +97,6 @@
                 <action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.android.contacts.action.LIST_DEFAULT" /> -->
-<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
-<!--                 <category android:name="android.intent.category.TAB" /> -->
-<!--             </intent-filter> -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.android.contacts.action.LIST_CONTACTS" /> -->
-<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
-<!--                 <category android:name="android.intent.category.TAB" /> -->
-<!--             </intent-filter> -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.android.contacts.action.LIST_ALL_CONTACTS" /> -->
-<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
-<!--                 <category android:name="android.intent.category.TAB" /> -->
-<!--             </intent-filter> -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.android.contacts.action.LIST_CONTACTS_WITH_PHONES" /> -->
-<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
-<!--                 <category android:name="android.intent.category.TAB" /> -->
-<!--             </intent-filter> -->
             
             <intent-filter>
                 <action android:name="android.intent.action.PICK" />

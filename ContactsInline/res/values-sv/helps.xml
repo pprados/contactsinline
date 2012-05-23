@@ -1,8 +1,17 @@
 <resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!--     <string name="help_title">Help</string> -->
-<!--     <string name="help_part1">HELP TODO</string> -->
-<!--     <string name="help_sample_name">John FOBAR</string> -->
-<!--     <string name="help_part2">HELP TODO</string> -->
+	<string name="help_title">Hjälp</string>
+	 <string name="help_part1">Efter att ha lagt in en plugin och lagt till denna
+	  kopplat konto kan du söka efter kontakter via namn, e-post eller telefon.</string>
+	 <string name="help_sample_name">Karl Svensson</string>
+	 <string name="help_part2">
+	  Knacka på bilden för att använda vald kontakt.\nKnacka på kontaktens
+	  namn för att visa kontakten.\n\n
+	  För att unvika minnesproblem lagras kontakter endast i minnet endast
+	  till nästa synkronisering. Du kan spara dem i telefonen genom att
+	  importera dem från vyn med kontaktens detaljuppgifter eller genom
+	  att snabbvälja kontakten via bilden. Efter detta synkroniseras
+	  kontakten automatiskt.
+	 </string>
     
     <!-- The text displayed at startup page, before the connection to provider are finished -->
     <string name="noContactsHelpText"/>

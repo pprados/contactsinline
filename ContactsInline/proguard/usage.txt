@@ -142,13 +142,16 @@ fr.prados.contacts.Constants:
     public static final boolean FACE_SHOW
     public static final boolean REQUERY_AFTER_KILL
     public static final boolean SYNC_SEARCH
-    public static final boolean RECORD_LIMIT
+    public static final int IMAGE_POOL_SIZE
+    public static final int IMAGE_POOL_PRIORITY
     public static final boolean DNTOADDR
     public static final boolean DNTONAME
     public static final int NB_RETRY_DNTO
+    public static final boolean USE_PRE_CONNECTION
     public static final long CACHE_TIMEOUT
     public static final int MAX_LRU
-    public static final boolean USE_PRE_CONNECTION
+    public static final int FAKE_ERROR_PROBABILITY
+    public static final boolean RECORD_LIMIT
 fr.prados.contacts.VolatileContact:
     private static final java.lang.String TAG
     120:120:public java.lang.String getLookupkey()
@@ -352,6 +355,14 @@ fr.prados.contacts.tools.Update:
     private static final java.lang.String TAG
     private static final java.lang.String PREFERENCE_UPDATE_VERSION
     private static final java.lang.String PREFERENCES_UPDATE
+fr.prados.contacts.ui.AbsListActivity:
+    283:284:public void setSelection(int)
+    290:290:public int getSelectedItemPosition()
+    297:297:public long getSelectedItemId()
+    312:312:public android.widget.ListAdapter getListAdapter()
+fr.prados.contacts.ui.HelpActivity:
+    private static final java.lang.String PREFERENCES_INTRO
+    private static final java.lang.String PREFERENCES_SHOWED
 fr.prados.contacts.ui.ImportWithSyncActivity:
     private static final java.lang.String TAG
     private static final int DIALOG_IMPORT
@@ -364,8 +375,8 @@ fr.prados.contacts.ui.ProvidersManager:
     static final java.lang.String TAG
     private static final int VERSION
     255:258:private ProvidersManager(android.accounts.AccountManager)
-    1229:1237:private static java.lang.StringBuilder volatilAccountToIn()
-    1243:1245:public static void purgeVolatileContact(android.content.ContentResolver)
+    1239:1247:private static java.lang.StringBuilder volatilAccountToIn()
+    1253:1255:public static void purgeVolatileContact(android.content.ContentResolver)
 fr.prados.contacts.ui.VolatileContactsListActivity:
     private static final boolean PATCH_BUG_V14
     private static final java.lang.String FlurryError
@@ -396,12 +407,12 @@ fr.prados.contacts.ui.VolatileContactsListActivity:
     private static final java.lang.String STATE_FOCUS
     private static final java.lang.String STATE_LAST_REQUEST
     private static final java.lang.String STATE_QUERY_MODE
-    165:165:static synthetic void access$23(fr.prados.contacts.ui.VolatileContactsListActivity,int)
+    170:170:static synthetic void access$25(fr.prados.contacts.ui.VolatileContactsListActivity,int)
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
     static final int SUMMARY_NAME_COLUMN_INDEX
     private static final int FETCH_IMAGE_MSG
-    1851:1860:public void onScrollStateChanged(android.widget.AbsListView,int)
-    1864:1868:private void processMissingImageItems(android.widget.AbsListView)
+    1883:1892:public void onScrollStateChanged(android.widget.AbsListView,int)
+    1896:1900:private void processMissingImageItems(android.widget.AbsListView)
 fr.prados.contacts.ui.VolatileContactsListActivity$Retain:
     public boolean _onSearchRequest
 fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider:

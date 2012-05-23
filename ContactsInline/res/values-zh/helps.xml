@@ -1,8 +1,8 @@
 <resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!--     <string name="help_title">Help</string> -->
-<!--     <string name="help_part1">HELP TODO</string> -->
-<!--     <string name="help_sample_name">John FOBAR</string> -->
-<!--     <string name="help_part2">HELP TODO</string> -->
+<!--     <string name="help_title">FIXME</string> -->
+<!--     <string name="help_part1">FIXME</string> -->
+<!--     <string name="help_sample_name">FIXME</string> -->
+<!--     <string name="help_part2">FIXME</string> -->
     
     <!-- The text displayed at startup page, before the connection to provider are finished -->
     <string name="noContactsHelpText"/>

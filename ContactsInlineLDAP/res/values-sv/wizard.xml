@@ -20,9 +20,10 @@
 
 	<string name="help">Hjälp</string>
 	<string name="help_title">Anpassa</string>
-	<string name="help_body">Det är möjligt att ändra mappningsreglerna för att anpassa kontot till din katalogtjänst speciella behov, se här.</string>
-	<string name="help_body_link">se här</string>
-	<string name="help_done">Ok</string>
+	<string name="help_body">Det är möjligt att anpassa mappningsregler för att koppla ihop din databas med Contacts in line, se här.</string>
+	<!-- the word in previous sentence to be hilighted -->
+ 	<string name="help_body_link">här</string>
+ 	<string name="help_done">Ok</string>
 
 	<!-- ** Page 1 ** -->    
 	<!-- Help text to propose to enter a ldap server name. -->

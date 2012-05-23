@@ -543,9 +543,6 @@ public class TestActivity extends ListActivity
 				.withValue(Phone.LABEL,"label")
 				.build());
 			
-			// Photo
-			// TODO: Record with more photos
-			
 			// Relation
 			operationList.add(ContentProviderOperation.newInsert(Data.CONTENT_URI)
 				.withValueBackReference(Data.RAW_CONTACT_ID, rawpos)

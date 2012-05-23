@@ -9,6 +9,9 @@
 	<!-- Context menu item used to import inline contact to phone -->
 	<string name="menu_import">导入</string>
     
+	<!-- Context menu item used to import result contact to phone -->
+<!-- 	<string name="menu_import_result">FIXME</string> -->
+	
 	<!-- The menu entry that invokes account. -->
 	<string name="menu_accounts">账户</string>
     
@@ -18,6 +21,9 @@
 	<!-- The menu entry that invokes the options. -->
 	<string name="menu_settings">设置</string>
     
+	<!-- Context menu item used to import inline contact to phone -->
+<!-- 	<string name="menu_market_rate">FIXME</string> -->
+
 	<!-- Context menu item used to view the details for a specific contact -->
 	<string name="ctx_menu_viewContact">查看该联系人</string>
     

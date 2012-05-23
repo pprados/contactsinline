@@ -4,7 +4,7 @@
 	<string name="menu_search">Procurar</string>
     
 	<!-- The menu entry that invokes search. -->
-	<string name="menu_help">TODO</string>
+<!-- 	<string name="menu_help">FIXME</string> -->
 	
 	<!-- The menu entry that invokes standard contacts. -->
 	<string name="menu_std_contacts">Contactos</string>
@@ -12,6 +12,9 @@
 	<!-- Context menu item used to import inline contact to phone -->
 	<string name="menu_import">Importar</string>
     
+	<!-- Context menu item used to import result contact to phone -->
+<!-- 	<string name="menu_import_result">FIXME</string> -->
+	
 	<!-- The menu entry that invokes account. -->
 	<string name="menu_accounts">Contas</string>
     
@@ -21,6 +24,9 @@
 	<!-- The menu entry that invokes the options. -->
 	<string name="menu_settings">Configurações</string>
     
+	<!-- Context menu item used to import inline contact to phone -->
+<!-- 	<string name="menu_market_rate">FIXME</string> -->
+	
 	<!-- Context menu item used to view the details for a specific contact -->
 	<string name="ctx_menu_viewContact">Ver o contacto</string>
     

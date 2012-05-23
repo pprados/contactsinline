@@ -17,8 +17,10 @@ automatiquement synchronisés.</string>
     <!-- The text displayed at startup page, before the connection to provider are finished -->
     <string name="noContactsHelpText"/>
 
-    <!-- The text displayed when the contacts list is empty and no provider is detected -->
-    <string name="help_need_provider">Aucune extension trouvée pour ajouter un compte.\nPour en trouver sur Google Play, cliquez <a href="market://search?q=fr.prados.contacts.providers">ici</a>.
+    <!-- The text displayed when the contacts list is empty and no account is detected -->
+    <string name="help_need_plugin">Aucune extensions de configuré.\n\nPour en ajouter, sélectionnez le <b>Menu</b> 
+        et :\n\n
+        <li>&#160;<b>Extensions</b> pour ajouter des modules pour de nouveaux type d\'annuaires.</li>
     </string>
 
     <!-- The text displayed when the contacts list is empty and no account is detected -->

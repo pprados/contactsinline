@@ -56,7 +56,6 @@ public class Update
 		}
 		if (knowver<version)
 		{
-			// FIXME: Reset rate
 			if (knowver==10)
 			{
 				activity.getSharedPreferences(QueryMarket.PREFERENCES_STARS,Activity.MODE_PRIVATE)
