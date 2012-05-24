@@ -84,6 +84,7 @@ fr.prados.contacts.R$drawable: int ab_solid_custom_blue_inverse_holo
 fr.prados.contacts.R$drawable: int ab_stacked_opaque_dark_holo
 fr.prados.contacts.R$drawable: int ab_stacked_solid_inverse_holo
 fr.prados.contacts.R$drawable: int action_bar_item_background
+fr.prados.contacts.R$drawable: int action_bar_item_focused_holo_light
 fr.prados.contacts.R$drawable: int action_bar_item_pressed_holo_light
 fr.prados.contacts.R$drawable: int action_bar_tab
 fr.prados.contacts.R$drawable: int border
@@ -205,6 +206,7 @@ fr.prados.contacts.R$string: int help_need_account_app
 fr.prados.contacts.R$string: int help_need_account_app_title
 fr.prados.contacts.R$string: int help_need_android_version
 fr.prados.contacts.R$string: int help_need_android_version_title
+fr.prados.contacts.R$string: int help_need_plugin
 fr.prados.contacts.R$string: int help_need_provider
 fr.prados.contacts.R$string: int help_part1
 fr.prados.contacts.R$string: int help_part2
@@ -239,6 +241,7 @@ fr.prados.contacts.R$string: int menu_std_contacts
 fr.prados.contacts.R$string: int noContactsHelpText
 fr.prados.contacts.R$string: int noException
 fr.prados.contacts.R$string: int noMatchingContacts
+fr.prados.contacts.R$string: int password_label
 fr.prados.contacts.R$string: int search_hint
 fr.prados.contacts.R$string: int search_label
 fr.prados.contacts.R$string: int search_title
@@ -304,6 +307,7 @@ fr.prados.contacts.lib.R$drawable: int ab_solid_custom_blue_inverse_holo
 fr.prados.contacts.lib.R$drawable: int ab_stacked_opaque_dark_holo
 fr.prados.contacts.lib.R$drawable: int ab_stacked_solid_inverse_holo
 fr.prados.contacts.lib.R$drawable: int action_bar_item_background
+fr.prados.contacts.lib.R$drawable: int action_bar_item_focused_holo_light
 fr.prados.contacts.lib.R$drawable: int action_bar_item_pressed_holo_light
 fr.prados.contacts.lib.R$drawable: int action_bar_tab
 fr.prados.contacts.lib.R$drawable: int border
@@ -425,6 +429,7 @@ fr.prados.contacts.lib.R$string: int help_need_account_app
 fr.prados.contacts.lib.R$string: int help_need_account_app_title
 fr.prados.contacts.lib.R$string: int help_need_android_version
 fr.prados.contacts.lib.R$string: int help_need_android_version_title
+fr.prados.contacts.lib.R$string: int help_need_plugin
 fr.prados.contacts.lib.R$string: int help_need_provider
 fr.prados.contacts.lib.R$string: int help_part1
 fr.prados.contacts.lib.R$string: int help_part2
@@ -459,6 +464,7 @@ fr.prados.contacts.lib.R$string: int menu_std_contacts
 fr.prados.contacts.lib.R$string: int noContactsHelpText
 fr.prados.contacts.lib.R$string: int noException
 fr.prados.contacts.lib.R$string: int noMatchingContacts
+fr.prados.contacts.lib.R$string: int password_label
 fr.prados.contacts.lib.R$string: int search_hint
 fr.prados.contacts.lib.R$string: int search_label
 fr.prados.contacts.lib.R$string: int search_title

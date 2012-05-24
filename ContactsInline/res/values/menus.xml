@@ -1,4 +1,4 @@
-<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources  >
 	<!-- *** Menus *** -->
 	<!-- The menu entry that invokes search. -->
 	<string name="menu_search">Search</string>

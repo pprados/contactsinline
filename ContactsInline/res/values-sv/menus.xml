@@ -4,7 +4,7 @@
 	<string name="menu_search">Sök</string>
     
 	<!-- The menu entry that invokes search. -->
-<!-- 	<string name="menu_help">FIXME</string> -->
+	<string name="menu_help">Hjälp</string>
 	
 	<!-- The menu entry that invokes standard contacts. -->
 	<string name="menu_std_contacts">Kontakter</string>

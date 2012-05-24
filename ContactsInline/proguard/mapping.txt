@@ -519,8 +519,9 @@ fr.prados.contacts.BuildConfig -> fr.prados.contacts.BuildConfig:
 fr.prados.contacts.Constants -> fr.prados.contacts.Constants:
     boolean DEBUG -> a
     boolean EMULATOR -> b
-    java.util.Date EXPIRED_BETA -> c
-    java.util.Random FAKE_ERROR -> d
+    boolean D -> c
+    java.util.Date EXPIRED_BETA -> d
+    java.util.Random FAKE_ERROR -> e
 fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
     java.lang.CharSequence accountType -> a
     java.lang.CharSequence accountName -> b
@@ -565,6 +566,7 @@ fr.prados.contacts.R$drawable -> fr.prados.contacts.R$drawable:
     int ab_stacked_opaque_dark_holo -> ab_stacked_opaque_dark_holo
     int ab_stacked_solid_inverse_holo -> ab_stacked_solid_inverse_holo
     int action_bar_item_background -> action_bar_item_background
+    int action_bar_item_focused_holo_light -> action_bar_item_focused_holo_light
     int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
     int action_bar_tab -> action_bar_tab
     int border -> border
@@ -686,6 +688,7 @@ fr.prados.contacts.R$string -> fr.prados.contacts.R$string:
     int help_need_account_app_title -> help_need_account_app_title
     int help_need_android_version -> help_need_android_version
     int help_need_android_version_title -> help_need_android_version_title
+    int help_need_plugin -> help_need_plugin
     int help_need_provider -> help_need_provider
     int help_part1 -> help_part1
     int help_part2 -> help_part2
@@ -720,6 +723,7 @@ fr.prados.contacts.R$string -> fr.prados.contacts.R$string:
     int noContactsHelpText -> noContactsHelpText
     int noException -> noException
     int noMatchingContacts -> noMatchingContacts
+    int password_label -> password_label
     int search_hint -> search_hint
     int search_label -> search_label
     int search_title -> search_title
@@ -861,6 +865,7 @@ fr.prados.contacts.lib.R$drawable -> fr.prados.contacts.lib.R$drawable:
     int ab_stacked_opaque_dark_holo -> ab_stacked_opaque_dark_holo
     int ab_stacked_solid_inverse_holo -> ab_stacked_solid_inverse_holo
     int action_bar_item_background -> action_bar_item_background
+    int action_bar_item_focused_holo_light -> action_bar_item_focused_holo_light
     int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
     int action_bar_tab -> action_bar_tab
     int border -> border
@@ -982,6 +987,7 @@ fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
     int help_need_account_app_title -> help_need_account_app_title
     int help_need_android_version -> help_need_android_version
     int help_need_android_version_title -> help_need_android_version_title
+    int help_need_plugin -> help_need_plugin
     int help_need_provider -> help_need_provider
     int help_part1 -> help_part1
     int help_part2 -> help_part2
@@ -1016,6 +1022,7 @@ fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
     int noContactsHelpText -> noContactsHelpText
     int noException -> noException
     int noMatchingContacts -> noMatchingContacts
+    int password_label -> password_label
     int search_hint -> search_hint
     int search_label -> search_label
     int search_title -> search_title
@@ -1359,15 +1366,17 @@ fr.prados.contacts.ui.ProvidersManager -> fr.prados.contacts.ui.ProvidersManager
     android.content.Intent _intentAction -> d
     android.accounts.AccountManager _manager -> e
     java.util.Map _drivers -> f
-    java.util.concurrent.atomic.AtomicInteger _waitInit -> g
-    java.util.List _tasks -> h
-    java.lang.String _currentRequest -> i
-    java.lang.String[] DATAS_COLUMN -> j
-    java.lang.String[] RAW_ACCOUNT -> k
-    java.lang.String[] RAW_CONTACT_ID_COLUMN -> l
-    java.lang.String[] RAW_ID_COLUMN -> m
+    java.lang.String[] MAPPING_IDS -> g
+    java.lang.String[] MAPPING_ID -> h
+    java.util.concurrent.atomic.AtomicInteger _waitInit -> i
+    java.util.List _tasks -> j
+    java.lang.String _currentRequest -> k
+    java.lang.String[] DATAS_COLUMN -> l
+    java.lang.String[] RAW_ACCOUNT -> m
+    java.lang.String[] RAW_CONTACT_ID_COLUMN -> n
+    java.lang.String[] RAW_ID_COLUMN -> o
     boolean $assertionsDisabled -> b
-    int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode -> n
+    int[] $SWITCH_TABLE$fr$prados$contacts$ui$ProvidersManager$Mode -> p
     boolean isEmpty() -> a
     boolean waitInit() -> b
     void initPlugin() -> n

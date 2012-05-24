@@ -175,6 +175,7 @@ fr.prados.contacts.lib.R$string: int market_rate_no_market
 fr.prados.contacts.lib.R$string: int market_title
 fr.prados.contacts.lib.R$string: int next
 fr.prados.contacts.lib.R$string: int noException
+fr.prados.contacts.lib.R$string: int password_label
 fr.prados.contacts.lib.R$string: int update_title
 fr.prados.contacts.lib.R$string: int validate
 fr.prados.contacts.lib.R$string: int wizard_activity_label
@@ -351,6 +352,7 @@ fr.prados.contacts.providers.ldap.generic.beta.R$string: int market_rate_no_mark
 fr.prados.contacts.providers.ldap.generic.beta.R$string: int market_title
 fr.prados.contacts.providers.ldap.generic.beta.R$string: int next
 fr.prados.contacts.providers.ldap.generic.beta.R$string: int noException
+fr.prados.contacts.providers.ldap.generic.beta.R$string: int password_label
 fr.prados.contacts.providers.ldap.generic.beta.R$string: int update_title
 fr.prados.contacts.providers.ldap.generic.beta.R$string: int validate
 fr.prados.contacts.providers.ldap.generic.beta.R$string: int wizard_activity_label
@@ -497,6 +499,7 @@ fr.prados.provider.contacts.ldap.R$string: int market_rate_no_market
 fr.prados.provider.contacts.ldap.R$string: int market_title
 fr.prados.provider.contacts.ldap.R$string: int next
 fr.prados.provider.contacts.ldap.R$string: int noException
+fr.prados.provider.contacts.ldap.R$string: int password_label
 fr.prados.provider.contacts.ldap.R$string: int update_title
 fr.prados.provider.contacts.ldap.R$string: int validate
 fr.prados.provider.contacts.ldap.R$string: int wizard_activity_label

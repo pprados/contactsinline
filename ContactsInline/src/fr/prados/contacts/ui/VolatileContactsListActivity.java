@@ -876,7 +876,6 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 							{
 								_queryHandler.cancel();
 								_emptyText.setText(R.string.help_first_time);
-								decProgressBar();
 								removeDialog(DIALOG_SEARCH);
 							}
 						});
@@ -975,14 +974,13 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		public void cancel()
 		{
 			final VolatileContactsListActivity activity = _activity.get();
-//			if (_pending)
-//			{				
-//				activity.decProgressBar();
-//			}
 			clearError(activity);
 			_pending=false;
 			_warning=false;
-			ProvidersManager.cancelQuery();
+			for (int i=ProvidersManager.cancelQuery()-1;i>=0;--i)
+			{
+				activity.decProgressBar();
+			}
 		}
 		public void stop()
 		{

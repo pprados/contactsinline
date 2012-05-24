@@ -2126,8 +2126,9 @@ fr.prados.contacts.Application -> fr.prados.contacts.Application:
 fr.prados.contacts.Constants -> fr.prados.contacts.a:
     boolean DEBUG -> a
     boolean EMULATOR -> b
-    java.util.Date EXPIRED_BETA -> c
-    java.util.Random FAKE_ERROR -> d
+    boolean D -> c
+    java.util.Date EXPIRED_BETA -> d
+    java.util.Random FAKE_ERROR -> e
 fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
     java.lang.CharSequence accountType -> a
     java.lang.CharSequence accountName -> b
@@ -2318,6 +2319,7 @@ fr.prados.contacts.lib.R$string -> fr.prados.contacts.a.c:
     int market_title -> market_title
     int next -> next
     int noException -> noException
+    int password_label -> password_label
     int update_title -> update_title
     int validate -> validate
     int wizard_activity_label -> wizard_activity_label
@@ -3065,6 +3067,7 @@ fr.prados.provider.contacts.ldap.R$string -> fr.prados.a.a.a.e:
     int market_title -> market_title
     int next -> next
     int noException -> noException
+    int password_label -> password_label
     int update_title -> update_title
     int validate -> validate
     int wizard_activity_label -> wizard_activity_label

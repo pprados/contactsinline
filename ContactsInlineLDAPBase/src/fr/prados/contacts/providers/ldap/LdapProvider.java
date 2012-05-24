@@ -4,7 +4,6 @@ import static fr.prados.contacts.Constants.D;
 import static fr.prados.contacts.Constants.DNTOADDR;
 import static fr.prados.contacts.Constants.DNTONAME;
 import static fr.prados.contacts.Constants.E;
-import static fr.prados.contacts.Constants.EXPIRED_BETA;
 import static fr.prados.contacts.Constants.FAKE_ERROR;
 import static fr.prados.contacts.Constants.FAKE_ERROR_PROBABILITY;
 import static fr.prados.contacts.Constants.I;
@@ -20,7 +19,6 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -467,15 +465,6 @@ public final class LdapProvider extends Provider
 		{
 			result.exceptions.add(new QueryError(null, "Fake error"));
 			return result;
-		}
-		// -- check beta
-		if (EXPIRED_BETA!=null)
-		{
-			if (new Date().after(EXPIRED_BETA))
-			{
-				result.exceptions.add(new QueryError(null, context.getString(R.string.err_beta_expired)));
-				return result;
-			}
 		}
 		// ---
 		

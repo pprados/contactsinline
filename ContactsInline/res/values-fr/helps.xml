@@ -18,7 +18,7 @@ automatiquement synchronisés.</string>
     <string name="noContactsHelpText"/>
 
     <!-- The text displayed when the contacts list is empty and no account is detected -->
-    <string name="help_need_plugin">Aucune extensions de configuré.\n\nPour en ajouter, sélectionnez le <b>Menu</b> 
+    <string name="help_need_provider">Aucune extensions de configuré.\n\nPour en ajouter, sélectionnez le <b>Menu</b> 
         et :\n\n
         <li>&#160;<b>Extensions</b> pour ajouter des modules pour de nouveaux type d\'annuaires.</li>
     </string>

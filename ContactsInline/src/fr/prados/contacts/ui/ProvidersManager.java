@@ -480,7 +480,7 @@ public final class ProvidersManager
 		}
 	}
 	
-	public static final void cancelQuery()
+	public static final int cancelQuery()
 	{
 		Cache.remove(_currentRequest);
 		
@@ -495,6 +495,7 @@ public final class ProvidersManager
 			task.cancel(false);
 			_tasks.remove(task);
 		}
+		return copy.size();
 	}
 
 	public static Bitmap getPhoto(ContactId id)

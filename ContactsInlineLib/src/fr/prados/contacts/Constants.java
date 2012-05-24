@@ -62,11 +62,11 @@ public class Constants
 	
 	/** If false, try first, and only if error, try others forms. */
 	public static final boolean USE_PRE_CONNECTION=true;
-	public static final Date EXPIRED_BETA=null; //new Date(111,5,1,0,0,0);
+
 	/** Maximum life time for a cached request. */
 	public static final long CACHE_TIMEOUT=3*60*1000L; // 3mn
 	/** Maximum number of last request in cache. */
-	public static final int MAX_LRU=10;
+	public static final int MAX_LRU=5;
 	/** Generate fake exception or null. */
 	public static final Random FAKE_ERROR=null; //new Random(); // Ok null
 	/** How % to generate fake error. */

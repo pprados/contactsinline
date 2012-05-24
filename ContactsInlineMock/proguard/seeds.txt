@@ -78,6 +78,7 @@ fr.prados.contacts.lib.R$string: int mock_driver_name
 fr.prados.contacts.lib.R$string: int mock_service_label
 fr.prados.contacts.lib.R$string: int mock_service_sync_label
 fr.prados.contacts.lib.R$string: int noException
+fr.prados.contacts.lib.R$string: int password_label
 fr.prados.contacts.lib.R$string: int update_title
 fr.prados.contacts.lib.R$string: int validate
 fr.prados.contacts.lib.R$style: int Theme
@@ -178,6 +179,7 @@ fr.prados.contacts.providers.mock.R$string: int mock_driver_name
 fr.prados.contacts.providers.mock.R$string: int mock_service_label
 fr.prados.contacts.providers.mock.R$string: int mock_service_sync_label
 fr.prados.contacts.providers.mock.R$string: int noException
+fr.prados.contacts.providers.mock.R$string: int password_label
 fr.prados.contacts.providers.mock.R$string: int update_title
 fr.prados.contacts.providers.mock.R$string: int validate
 fr.prados.contacts.providers.mock.R$style: int Theme

@@ -3,6 +3,9 @@
 	<!-- The menu entry that invokes search. -->
 	<string name="menu_search">搜索</string>
     
+	<!-- The menu entry that invokes search. -->
+	<string name="menu_help">帮助</string>
+		
 	<!-- The menu entry that invokes standard contacts. -->
 	<string name="menu_std_contacts">通讯录</string>
     
@@ -10,7 +13,7 @@
 	<string name="menu_import">导入</string>
     
 	<!-- Context menu item used to import result contact to phone -->
-<!-- 	<string name="menu_import_result">FIXME</string> -->
+	<string name="menu_import_result">导入结果</string>
 	
 	<!-- The menu entry that invokes account. -->
 	<string name="menu_accounts">账户</string>
@@ -22,7 +25,7 @@
 	<string name="menu_settings">设置</string>
     
 	<!-- Context menu item used to import inline contact to phone -->
-<!-- 	<string name="menu_market_rate">FIXME</string> -->
+	<string name="menu_market_rate">率的应用</string>
 
 	<!-- Context menu item used to view the details for a specific contact -->
 	<string name="ctx_menu_viewContact">查看该联系人</string>

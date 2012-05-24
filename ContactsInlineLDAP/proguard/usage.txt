@@ -1757,7 +1757,6 @@ fr.prados.contacts.Constants:
     public static final boolean E
     public static final boolean W
     public static final boolean I
-    public static final boolean D
     public static final boolean V
     public static final boolean DUMP
     public static final boolean PHOTO
@@ -1775,7 +1774,7 @@ fr.prados.contacts.Constants:
     public static final int MAX_LRU
     public static final int FAKE_ERROR_PROBABILITY
     public static final boolean RECORD_LIMIT
-    25:25:public Constants()
+    24:24:public Constants()
 fr.prados.contacts.VolatileContact:
     private static final java.lang.String TAG
     105:115:public static android.net.Uri contactUriFromRawUri(android.content.ContentResolver,android.net.Uri)
@@ -1794,22 +1793,22 @@ fr.prados.contacts.VolatileRawContact:
     public static final int PHOTO_NO
     146:151:public void remove(java.lang.String,fr.prados.contacts.VolatileData)
     154:155:public void removeAll(java.lang.String)
-    172:178:public void init(android.accounts.Account,java.lang.String)
-    187:189:public void removeAttr(java.lang.String)
-    197:199:public void setAttr(java.lang.String,boolean)
-    202:204:public void setAttr(java.lang.String,byte)
-    207:209:public void setAttr(java.lang.String,byte[])
-    212:214:public void setAttr(java.lang.String,short)
-    222:229:public void setAttr(java.lang.String,long)
-    232:234:public void setAttr(java.lang.String,float)
-    237:239:public void setAttr(java.lang.String,double)
-    243:252:public void setDisplayName(java.lang.String)
-    266:270:public int getPhoneType()
-    298:302:public int getPostalType()
-    367:388:private android.net.Uri getRawUriInAndroid(android.content.ContentResolver)
-    402:410:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean)
-    418:448:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean,java.util.ArrayList)
-    453:465:public void copyDataToAndroid(long,java.util.ArrayList)
+    171:177:public void init(android.accounts.Account,java.lang.String)
+    186:188:public void removeAttr(java.lang.String)
+    196:198:public void setAttr(java.lang.String,boolean)
+    201:203:public void setAttr(java.lang.String,byte)
+    206:208:public void setAttr(java.lang.String,byte[])
+    211:213:public void setAttr(java.lang.String,short)
+    221:228:public void setAttr(java.lang.String,long)
+    231:233:public void setAttr(java.lang.String,float)
+    236:238:public void setAttr(java.lang.String,double)
+    242:251:public void setDisplayName(java.lang.String)
+    265:269:public int getPhoneType()
+    297:301:public int getPostalType()
+    366:387:private android.net.Uri getRawUriInAndroid(android.content.ContentResolver)
+    401:409:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean)
+    416:446:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean,java.util.ArrayList)
+    451:463:public void copyDataToAndroid(long,java.util.ArrayList)
 fr.prados.contacts.lib.R:
     10:10:public R()
 fr.prados.contacts.lib.R$anim
