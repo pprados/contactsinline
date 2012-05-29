@@ -12,8 +12,7 @@ or from quick use on contact photo. Then, there\'re automatically synchronized.<
     <string name="noContactsHelpText"/>
         
     <!-- The text displayed when the contacts list is empty and no provider is detected -->
-    <string name="help_need_provider">No extension found to add an account.\n
-        To find one in Google Play, click <a href="market://search?q=fr.prados.contacts.providers">here</a>.
+    <string name="help_need_provider">No extension found to add an account.\nTo find one in Google Play, click <a href="market://search?q=fr.prados.contacts.providers">here</a>.
     </string>
 
     <!-- The text displayed when the contacts list is empty and no account is detected -->

@@ -1,8 +1,15 @@
 <resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<!--     <string name="help_title">FIXME</string> -->
-<!--     <string name="help_part1">FIXME</string> -->
-<!--     <string name="help_sample_name">FIXME</string> -->
-<!--     <string name="help_part2">FIXME</string> -->
+	<string name="help_title">帮助</string>
+	<string name="help_part1">添加插件并建立关联账户后，
+		您可以按名字，电子邮件，或电话号码搜索通讯录。</string>
+	<string name="help_sample_name">John FOBAR</string>
+	<string name="help_part2">
+		点击照片启用"快速使用"已选的通讯录。\n
+		点击名字查看\n\n
+		为了保证贮存空间，下次同步时才会保存通讯录到内存卡。您可以在通讯录查看详细信息时，
+		或者在快速使用通讯录照片时导入保存到电话。这样就可以自动同步。
+	</string>
+
     
     <!-- The text displayed at startup page, before the connection to provider are finished -->
     <string name="noContactsHelpText"/>

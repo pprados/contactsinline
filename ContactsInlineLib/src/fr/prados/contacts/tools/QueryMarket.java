@@ -115,7 +115,6 @@ public class QueryMarket
 		Uri uri=Uri.parse(q);
 		if (V) Log.v(TAG,uri.toString());
 		Intent intent=new Intent(Intent.ACTION_VIEW,uri);
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		// Try google market
 		List<ResolveInfo> resolve=context.getPackageManager().queryIntentActivities(intent, 0);
 		if (resolve.size()!=0)

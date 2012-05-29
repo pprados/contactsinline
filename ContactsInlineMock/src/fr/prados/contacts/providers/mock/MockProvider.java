@@ -15,6 +15,10 @@
  ******************************************************************************/
 package fr.prados.contacts.providers.mock;
 
+import static fr.prados.contacts.Constants.D;
+import static fr.prados.contacts.Constants.I;
+import static fr.prados.contacts.Constants.W;
+
 import java.text.MessageFormat;
 import java.util.ArrayList;
 
@@ -35,7 +39,6 @@ import fr.prados.contacts.VolatileRawContact;
 import fr.prados.contacts.providers.Provider;
 import fr.prados.contacts.providers.QueryException;
 import fr.prados.contacts.providers.ResultsAndExceptions;
-import static fr.prados.contacts.Constants.*;
 
 public class MockProvider extends Provider
 {
@@ -95,12 +98,12 @@ public class MockProvider extends Provider
 			String selection, String selectionArg) throws RemoteException 
 	{
 		if (D) Log.d("MEM",""+Debug.getGlobalAllocSize());
-		Log.i(TAG,"queryContact("+accountName+","+selection+","+selectionArg+")...");
+		if (I) Log.i(TAG,"queryContact("+accountName+","+selection+","+selectionArg+")...");
 		final ResultsAndExceptions result=new ResultsAndExceptions();
 		final ArrayList<VolatileContact> list=result.contacts=new ArrayList<VolatileContact>();
 		for (int i=0;i<20;++i)
 			list.add(createVC(accountName,selectionArg+i));
-		Log.i(TAG,"queryContact("+accountName+","+selection+","+selectionArg+")="+result);
+		if (I) Log.i(TAG,"queryContact("+accountName+","+selection+","+selectionArg+")="+result);
 		if (D) Log.d("MEM",""+Debug.getGlobalAllocSize());
 		return result;
 	}
@@ -126,7 +129,7 @@ public class MockProvider extends Provider
 		}
 		catch (QueryException e)
 		{
-			Log.w(TAG,"getVolatileContact",e);
+			if (W) Log.w(TAG,"getVolatileContact",e);
 			return null;
 		}
 	}

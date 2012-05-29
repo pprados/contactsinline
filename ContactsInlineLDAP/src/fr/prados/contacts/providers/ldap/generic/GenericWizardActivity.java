@@ -51,6 +51,8 @@ import android.widget.TextView;
 import com.unboundid.ldap.sdk.LDAPException;
 import com.unboundid.ldap.sdk.ResultCode;
 
+import static fr.prados.contacts.Constants.*;
+
 import fr.prados.contacts.Application;
 import fr.prados.contacts.lib.R;
 import fr.prados.contacts.providers.AbstractSimpleAuthenticator;
@@ -459,13 +461,13 @@ public class GenericWizardActivity extends AbstractWizardActivity
 					catch (Exception e)
 					{
 						// Ignore
-						Log.i(TAG,"IO",e);
+						if (I) Log.i(TAG,"IO",e);
 					}
 					return true;
 				}
 				catch (UnknownHostException e)
 				{
-					Log.i(TAG,"host",e);
+					if (I) Log.i(TAG,"host",e);
 					return false;
 				}
 			}
@@ -495,7 +497,7 @@ public class GenericWizardActivity extends AbstractWizardActivity
 				}
 				else
 				{
-					Log.w(TAG,_accountName.getText()+" not found");
+					if (W) Log.w(TAG,_accountName.getText()+" not found");
 					_alertBuilder.setTitle(R.string.err_title);
 					_alertBuilder.setMessage(R.string.err_host_not_found);
 					_alertBuilder.create().show();

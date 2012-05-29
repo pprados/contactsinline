@@ -1,8 +1,9 @@
+Cette application est un plugin de "Contact en ligne" à installer également.
+
 Consultez les annuaires LDAP en ligne comme s'ils étaient présents dans le téléphone !
 Recherchez par nom, email ou téléphone et n'importez que les contacts que vous souhaitez conserver.
 Offres au forfait pour les entreprises, et réduction de 50% si vous êtes dans le secteur de l'éducation !
 
-Cette application est un plugin de "Contact en ligne" à installer également.
 
 Contactez moi pour la traduction.
 

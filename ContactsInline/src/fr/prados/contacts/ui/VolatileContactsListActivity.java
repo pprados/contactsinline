@@ -137,7 +137,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	private static final String FlurryError="error";
 	
 	private static final String TAG = "VolatileContacts";
-
+	
 	private Handler _handler=new Handler();
 
 	private static final int DISPLAY_NUMBER_OF_CONTACTS = 1 << 1;
@@ -758,7 +758,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 //	protected void onPause()
 //	{
 //		super.onPause();
-//		Log.d("LIFE", "onPause");
+//		if (V) Log.v("LIFE", "onPause");
 //	}
 
 	@Override

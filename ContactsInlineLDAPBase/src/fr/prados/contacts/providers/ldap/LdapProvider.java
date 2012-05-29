@@ -874,7 +874,7 @@ public final class LdapProvider extends Provider
 					}
 					catch (ClassNotFoundException e)
 					{
-						if (D) Log.e(TAG,"Error when get params",e);
+						if (D) Log.d(TAG,"Error when get params",e);
 						throw new LDAPException(ResultCode.PARAM_ERROR,e);
 					}
 					catch (AuthenticatorException e)
@@ -887,7 +887,7 @@ public final class LdapProvider extends Provider
 		  }
 		catch (OperationCanceledException e)
 		{
-			if (D) Log.e(TAG,"Error when get params",e);
+			if (D) Log.d(TAG,"Error when get params",e);
 			return null;
 		}
 	}

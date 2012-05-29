@@ -1,8 +1,8 @@
+This application is a plugin of "Contact in line". Install it first.
+
 Lookup into online directories as if they were embedded into your telephone.
 Search for names, emails or phone number and keep only the ones you want.
 Several plugins are available for LDAP, (soon for the White pages,...), etc.
-
-This application is a plugin of "Contact in line". Install it first.
 
 Contact me to translate.
 

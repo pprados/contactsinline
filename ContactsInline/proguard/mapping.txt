@@ -520,8 +520,7 @@ fr.prados.contacts.Constants -> fr.prados.contacts.Constants:
     boolean DEBUG -> a
     boolean EMULATOR -> b
     boolean D -> c
-    java.util.Date EXPIRED_BETA -> d
-    java.util.Random FAKE_ERROR -> e
+    java.util.Random FAKE_ERROR -> d
 fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
     java.lang.CharSequence accountType -> a
     java.lang.CharSequence accountName -> b
@@ -688,7 +687,6 @@ fr.prados.contacts.R$string -> fr.prados.contacts.R$string:
     int help_need_account_app_title -> help_need_account_app_title
     int help_need_android_version -> help_need_android_version
     int help_need_android_version_title -> help_need_android_version_title
-    int help_need_plugin -> help_need_plugin
     int help_need_provider -> help_need_provider
     int help_part1 -> help_part1
     int help_part2 -> help_part2
@@ -987,7 +985,6 @@ fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
     int help_need_account_app_title -> help_need_account_app_title
     int help_need_android_version -> help_need_android_version
     int help_need_android_version_title -> help_need_android_version_title
-    int help_need_plugin -> help_need_plugin
     int help_need_provider -> help_need_provider
     int help_part1 -> help_part1
     int help_part2 -> help_part2
@@ -1388,7 +1385,7 @@ fr.prados.contacts.ui.ProvidersManager -> fr.prados.contacts.ui.ProvidersManager
     void wakedown() -> g
     void reset() -> h
     void query(fr.prados.contacts.ui.ProvidersManager$Mode,fr.prados.contacts.providers.Provider$OnQuery,java.lang.String[],java.lang.String,java.lang.String[]) -> a
-    void cancelQuery() -> i
+    int cancelQuery() -> i
     android.graphics.Bitmap getPhoto(fr.prados.contacts.ContactId) -> a
     android.database.MatrixCursor convContactsToCursor(fr.prados.contacts.ui.ProvidersManager$Mode,java.util.List,java.lang.String[]) -> b
     android.net.Uri importVolatileContactToAndroid(long,boolean,android.content.Context) -> a

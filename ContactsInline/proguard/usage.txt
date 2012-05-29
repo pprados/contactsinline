@@ -374,8 +374,8 @@ fr.prados.contacts.ui.ProvidersManager:
     static final java.lang.String TAG
     private static final int VERSION
     257:260:private ProvidersManager(android.accounts.AccountManager)
-    1238:1246:private static java.lang.StringBuilder volatilAccountToIn()
-    1252:1254:public static void purgeVolatileContact(android.content.ContentResolver)
+    1239:1247:private static java.lang.StringBuilder volatilAccountToIn()
+    1253:1255:public static void purgeVolatileContact(android.content.ContentResolver)
 fr.prados.contacts.ui.VolatileContactsListActivity:
     private static final boolean PATCH_BUG_V14
     private static final java.lang.String FlurryError
@@ -410,8 +410,8 @@ fr.prados.contacts.ui.VolatileContactsListActivity:
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
     static final int SUMMARY_NAME_COLUMN_INDEX
     private static final int FETCH_IMAGE_MSG
-    1880:1889:public void onScrollStateChanged(android.widget.AbsListView,int)
-    1893:1897:private void processMissingImageItems(android.widget.AbsListView)
+    1878:1887:public void onScrollStateChanged(android.widget.AbsListView,int)
+    1891:1895:private void processMissingImageItems(android.widget.AbsListView)
 fr.prados.contacts.ui.VolatileContactsListActivity$Retain:
     public boolean _onSearchRequest
 fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider:

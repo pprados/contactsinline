@@ -25,7 +25,7 @@
 	<string name="menu_settings">设置</string>
     
 	<!-- Context menu item used to import inline contact to phone -->
-	<string name="menu_market_rate">率的应用</string>
+	<string name="menu_market_rate">给本程序打分</string>
 
 	<!-- Context menu item used to view the details for a specific contact -->
 	<string name="ctx_menu_viewContact">查看该联系人</string>

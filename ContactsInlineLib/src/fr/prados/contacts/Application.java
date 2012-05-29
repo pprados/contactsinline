@@ -56,7 +56,7 @@ public class Application extends android.app.Application
 			PackageManager pm=context.getPackageManager();
 			PackageInfo info=pm.getPackageInfo(context.getPackageName(), 0);
 			VERSION=info.versionCode;
-			if (EMULATOR) Log.d("MEM",""+Debug.getGlobalAllocSize());
+			if (EMULATOR && D) Log.d("MEM",""+Debug.getGlobalAllocSize());
 			if (!DEBUG) ACRA.init(this);
 			AbstractSimpleAuthenticator._accountManager = AccountManager.get(this);
 		}
@@ -70,7 +70,7 @@ public class Application extends android.app.Application
 	@Override
 	public void onTerminate()
 	{
-		Log.d("LIFE","Application onTerminate");
+		if (D) Log.d("LIFE","Application onTerminate");
 		context=null;
 	}
 }

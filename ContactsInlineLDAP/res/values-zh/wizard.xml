@@ -19,10 +19,11 @@
 	<string name="avanced">高级模式</string>
 
 	<string name="help">帮助</string>
-<!-- 	<string name="help_title">FIXME</string> -->
-<!-- 	<string name="help_body">FIXME</string> -->
-<!-- 	<string name="help_body_link">FIXME</string> -->
-<!-- 	<string name="help_done">FIXME</string> -->
+	<string name="help_title">定制</string>
+	<string name="help_body">可以定制映射规则来适应您的数据库特性。查看这里。</string>
+	<!-- the word in previous sentence to be hilighted -->
+	<string name="help_body_link">这里</string>
+	<string name="help_done">OK</string>
 		
 	<!-- ** Page 1 ** -->    
 	<!-- Help text to propose to enter a ldap server name. -->

@@ -1,8 +1,14 @@
 <resources>
-<!--     <string name="help_title">FIXME</string> -->
-<!--     <string name="help_part1">FIXME</string> -->
-<!--     <string name="help_sample_name">FIXME</string> -->
-<!--     <string name="help_part2">FIXME</string> -->
+	<string name="help_title">Ajuda</string>
+	<string name="help_part1">Depois de adicionar um dos addons et de ter criado a conta associada, pode pesquisar por nome, email ou telefone.</string>
+	<string name="help_sample_name">Manuel SANTOS</string>
+	<string name="help_part2">
+		Pressionar na fotografia ativa o uso do contacto selecionado.\nPressionar o nome do contacto
+		permite ver o nome.\n\nPara evitar
+		de saturar a memoria, os contactos sont carregados em momoria so até a proxima sincronisaçao.
+		Pode guarda-los no telefone importando desda a vista detalhada do contacto,
+		ou a traves do uso rapido desde a fotografia. Assim estao diretamente sincronisados.
+	</string>
     
     <!-- The text displayed at startup page, before the connection to provider are finished -->
     <string name="noContactsHelpText"/>

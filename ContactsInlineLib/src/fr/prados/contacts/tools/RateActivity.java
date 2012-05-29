@@ -46,7 +46,7 @@ public final class RateActivity extends Activity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		if (E) Log.d(TAG,"LIFE onCreate");
+		if (V) Log.v(TAG,"LIFE onCreate");
 		if (EMULATOR) HelpDebug.strictDeath();
 	}
 	

@@ -206,7 +206,6 @@ fr.prados.contacts.R$string: int help_need_account_app
 fr.prados.contacts.R$string: int help_need_account_app_title
 fr.prados.contacts.R$string: int help_need_android_version
 fr.prados.contacts.R$string: int help_need_android_version_title
-fr.prados.contacts.R$string: int help_need_plugin
 fr.prados.contacts.R$string: int help_need_provider
 fr.prados.contacts.R$string: int help_part1
 fr.prados.contacts.R$string: int help_part2
@@ -429,7 +428,6 @@ fr.prados.contacts.lib.R$string: int help_need_account_app
 fr.prados.contacts.lib.R$string: int help_need_account_app_title
 fr.prados.contacts.lib.R$string: int help_need_android_version
 fr.prados.contacts.lib.R$string: int help_need_android_version_title
-fr.prados.contacts.lib.R$string: int help_need_plugin
 fr.prados.contacts.lib.R$string: int help_need_provider
 fr.prados.contacts.lib.R$string: int help_part1
 fr.prados.contacts.lib.R$string: int help_part2

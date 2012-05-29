@@ -16,6 +16,10 @@
 
 package fr.prados.contacts.providers.mock;
 
+import static fr.prados.contacts.Constants.D;
+import static fr.prados.contacts.Constants.I;
+import static fr.prados.contacts.Constants.W;
+
 import java.util.ArrayList;
 
 import android.accounts.Account;
@@ -64,7 +68,7 @@ public class MockSyncAdapterService extends Service
 				SyncResult syncResult)
 			throws SecurityException
 		{
-			Log.d(TAG,"onPerformSync(...");
+			if (D) Log.d(TAG,"onPerformSync(...");
 			if (!Application.ACCOUNT_WITH_SYNC) return;
 			final ArrayList<ContentProviderOperation> operationList=new ArrayList<ContentProviderOperation>(10);
 
@@ -93,7 +97,7 @@ public class MockSyncAdapterService extends Service
 					try
 					{
 						final String lookup=cursor.getString(1/*LOOKUP*/);
-						Log.i(TAG,"Sync."+lookup);
+						if (I) Log.i(TAG,"Sync."+lookup);
 						++numEntries;
 						VolatileRawContact volatileContact=driver.getContact(account.name, lookup).getRawContact();
 						volatileContact.updateInAndroid(_resolver, 
@@ -102,7 +106,7 @@ public class MockSyncAdapterService extends Service
 					}
 					catch (Exception e) // $codepro.audit.disable caughtExceptions
 					{
-						Log.w(TAG,"onPerformSync",e);
+						if (W) Log.w(TAG,"onPerformSync",e);
 						operationList.add(
 							ContentProviderOperation.newUpdate(
 								ContentUris.withAppendedId(RawContacts.CONTENT_URI,id))
@@ -119,11 +123,11 @@ public class MockSyncAdapterService extends Service
 			catch (RemoteException e)
 			{
 				syncResult.databaseError=true;
-				Log.w(TAG,"onPerformSync",e);
+				if (W) Log.w(TAG,"onPerformSync",e);
 			}
 			catch (OperationApplicationException e)
 			{
-				Log.w(TAG,"onPerformSync",e);
+				if (W) Log.w(TAG,"onPerformSync",e);
 				syncResult.databaseError=true;
 			}
 			finally

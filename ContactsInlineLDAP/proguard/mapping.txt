@@ -2127,8 +2127,7 @@ fr.prados.contacts.Constants -> fr.prados.contacts.a:
     boolean DEBUG -> a
     boolean EMULATOR -> b
     boolean D -> c
-    java.util.Date EXPIRED_BETA -> d
-    java.util.Random FAKE_ERROR -> e
+    java.util.Random FAKE_ERROR -> d
 fr.prados.contacts.ContactId -> fr.prados.contacts.ContactId:
     java.lang.CharSequence accountType -> a
     java.lang.CharSequence accountName -> b

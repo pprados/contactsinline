@@ -13,7 +13,7 @@
 	<string name="menu_import">Importar</string>
     
 	<!-- Context menu item used to import result contact to phone -->
-	<string name="menu_import_result">Import resultat</string>
+	<string name="menu_import_result">Importar resultado</string>
 	
 	<!-- The menu entry that invokes account. -->
 	<string name="menu_accounts">Contas</string>
@@ -25,7 +25,7 @@
 	<string name="menu_settings">Configurações</string>
     
 	<!-- Context menu item used to import inline contact to phone -->
-	<string name="menu_market_rate">Hastighet ansökan</string>
+	<string name="menu_market_rate">Notar a aplicacao</string>
 	
 	<!-- Context menu item used to view the details for a specific contact -->
 	<string name="ctx_menu_viewContact">Ver o contacto</string>
