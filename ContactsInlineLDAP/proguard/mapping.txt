@@ -2659,8 +2659,8 @@ fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity -> fr.prados.co
     void onAuthenticationResult(java.lang.Exception,java.lang.String[]) -> a
     void access$0(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> a
     void access$1(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> b
-    android.view.View access$2(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> c
-    void access$3(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity,java.lang.Exception,java.lang.String[]) -> a
+    void access$2(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity,java.lang.Exception,java.lang.String[]) -> a
+    android.view.View access$3(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> c
     android.widget.EditText access$4(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> d
 fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$1 -> fr.prados.contacts.providers.ldap.x:
     fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a

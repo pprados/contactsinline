@@ -297,6 +297,7 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 				{
 					ex=e;
 				}
+				onAuthenticationResult(ex,_params);
 				return ex;
 			}
 			@Override
@@ -311,7 +312,6 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 				}
 				if (e!=null)
 					_login.setVisibility(View.VISIBLE);
-				onAuthenticationResult(e,_params);
 				_params=null;
 				
 			}

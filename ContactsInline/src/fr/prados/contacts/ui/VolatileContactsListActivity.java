@@ -729,7 +729,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	private void setSearchVisible(boolean visible)
 	{
 		if (_searchMenu==null) return;
-		if (!visible && HONEYCOMB)
+		if (!visible && Build.VERSION.SDK_INT>=Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 		{
 			_searchMenu.collapseActionView();
 		}
