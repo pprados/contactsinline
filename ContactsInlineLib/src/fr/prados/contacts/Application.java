@@ -35,7 +35,7 @@ import android.util.Log;
 import fr.prados.contacts.providers.AbstractSimpleAuthenticator;
 import fr.prados.contacts.tools.LogMarket;
 
-@ReportsCrashes(formKey="dHJxV0tJdE9jQ2h0d29KX0ZPbGR5WXc6MQ")
+@ReportsCrashes(formKey="0AsyqGUCxkmD0dEkwTXk5SXNkdEVyblR1N01wOTZpeUE")
 public class Application extends android.app.Application
 {
 	public static Context context;

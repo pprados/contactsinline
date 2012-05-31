@@ -3245,10 +3245,10 @@ org.acra.ReportField -> org.acra.ReportField:
     org.acra.ReportField[] values() -> values
     org.acra.ReportField valueOf(java.lang.String) -> valueOf
 org.acra.ReportingInteractionMode -> org.acra.ReportingInteractionMode:
-    org.acra.ReportingInteractionMode SILENT -> a
-    org.acra.ReportingInteractionMode NOTIFICATION -> b
-    org.acra.ReportingInteractionMode TOAST -> c
-    org.acra.ReportingInteractionMode[] $VALUES -> d
+    org.acra.ReportingInteractionMode SILENT -> SILENT
+    org.acra.ReportingInteractionMode NOTIFICATION -> NOTIFICATION
+    org.acra.ReportingInteractionMode TOAST -> TOAST
+    org.acra.ReportingInteractionMode[] $VALUES -> $VALUES
     org.acra.ReportingInteractionMode[] values() -> values
     org.acra.ReportingInteractionMode valueOf(java.lang.String) -> valueOf
 org.acra.SettingsCollector -> org.acra.SettingsCollector:

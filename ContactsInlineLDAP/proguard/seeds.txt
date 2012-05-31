@@ -534,7 +534,13 @@ org.acra.ReportField
 org.acra.ReportField: org.acra.ReportField[] values()
 org.acra.ReportField: org.acra.ReportField valueOf(java.lang.String)
 org.acra.ReportingInteractionMode
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode SILENT
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode NOTIFICATION
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode TOAST
+org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode[] $VALUES
 org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode[] values()
 org.acra.ReportingInteractionMode: org.acra.ReportingInteractionMode valueOf(java.lang.String)
+org.acra.ReportingInteractionMode: ReportingInteractionMode(java.lang.String,int)
+org.acra.ReportingInteractionMode: void <clinit>()
 org.acra.SettingsCollector
 org.acra.SharedPreferencesCollector

@@ -2,6 +2,9 @@
 #-keepclassmembernames class * { *; }
 
 -keep class org.acra.* 
+-keep class org.acra.ReportingInteractionMode {
+    *;
+}
 -keep class fr.prados.contacts.Application
 
 -keep class * {

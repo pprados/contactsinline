@@ -2,8 +2,8 @@
 <manifest 
 	xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.prados.contacts.providers.ldap.generic.beta"
-    android:versionCode="19"
-    android:versionName="2.0.1"
+    android:versionCode="20"
+    android:versionName="2.0.2"
     android:installLocation="internalOnly"
     android:sharedUserId="fr.prados.contacts"
 >
