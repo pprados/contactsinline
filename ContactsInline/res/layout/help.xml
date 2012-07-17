@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:layout_margin="5dip"
         android:orientation="vertical" >
@@ -16,7 +16,6 @@
             android:id="@+id/help_part1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_gravity="fill_horizontal"
             android:text="@string/help_part1"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -34,8 +33,6 @@
                 android:id="@+id/contacts"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textView1"
                 layout="@layout/contacts_list_item_photo" />
         </LinearLayout>
 
@@ -43,8 +40,6 @@
             android:id="@+id/help_part2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/contacts"
             android:text="@string/help_part2"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 

@@ -297,12 +297,12 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 				{
 					ex=e;
 				}
-				onAuthenticationResult(ex,_params);
 				return ex;
 			}
 			@Override
 			public void onPostExecute(Exception e)
 			{
+				onAuthenticationResult(e,_params);
 				_asyncTryAuthent=null;
 				removeDialog(DIALOG_PROGRESS);
 				if (isCancelled()) 

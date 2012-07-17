@@ -133,12 +133,13 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	private static final boolean PATCH_BUG_V14=true;
 	
 	private static final boolean HONEYCOMB=Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB;
+	private static final boolean ICS=Build.VERSION.SDK_INT>=Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 	public static final boolean withFlurry=(!EMULATOR && !DEBUG);
 	private static final String FlurryError="error";
 	
 	private static final String TAG = "VolatileContacts";
 	
-	private Handler _handler=new Handler();
+	private final Handler _handler=new Handler();
 
 	private static final int DISPLAY_NUMBER_OF_CONTACTS = 1 << 1;
 
@@ -341,6 +342,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		else
 			setProgressBarIndeterminateVisibility(true);
 	}
+	@TargetApi(11)
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
 	{
@@ -437,6 +439,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		
 		new AsyncTask<Void, Void, Void>()
 		{
+			@Override
 			protected void onPreExecute() 
 			{
 				incProgressBar();
@@ -692,6 +695,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 							ProvidersManager.waitInit();
 							return null;
 						}
+						@Override
 						protected void onPostExecute(Void result) 
 						{
 							startQuery();
@@ -726,6 +730,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		_showHeader=a.getBoolean(0, true);
 	}
 
+	@TargetApi(14)
 	private void setSearchVisible(boolean visible)
 	{
 		if (_searchMenu==null) return;
@@ -735,6 +740,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		}
 		_searchMenu.setVisible(visible);
 	}
+	 @TargetApi(11)
 	 @Override
 	 protected void onSaveInstanceState(final Bundle state)
 	 {
@@ -823,6 +829,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				getListView().getWindowToken(), 0);
 	}
 
+	@TargetApi(11)
 	public void hideSearchbar()
 	{
 		((SearchManager)getSystemService(Context.SEARCH_SERVICE)).stopSearch();
@@ -1567,6 +1574,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				case MODE_PICK_CONTACT:
 					new AsyncImport()
 					{
+						@Override
 						protected void onPostExecute(Uri result) 
 						{
 							super.onPostExecute(result);
@@ -1593,6 +1601,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					cursor.close();
 					new AsyncImport()
 					{
+						@Override
 						protected void onPostExecute(Uri uri) 
 						{
 							super.onPostExecute(uri);
@@ -1660,6 +1669,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			final long position = ((Long) v.getTag()).longValue();
 			new AsyncImport()
 			{
+				@Override
 				protected void onPostExecute(Uri result) 
 				{
 					super.onPostExecute(result);
@@ -1750,6 +1760,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				_imageView = imageView;
 			}
 
+			@Override
 			public void run()
 			{
 				if (VolatileContactsListActivity.this.isFinishing())
@@ -1981,7 +1992,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 		getMenuInflater().inflate(R.menu.list, menu);
 		_searchMenu=menu.findItem(R.id.menu_search);
-		if (HONEYCOMB)
+		if (ICS)
 		{
 //			_searchMenu.expandActionView();
 			// Get the SearchView and set the searchable configuration
@@ -2008,13 +2019,14 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		return super.onPrepareOptionsMenu(menu);
 	}
 
+	@TargetApi(14)
 	@Override
 	public boolean onSearchRequested()
 	{
 		if (V) Log.v("LIFE", "onSearchRequested");
 		if (!_isDone)
 			return false;
-		if (HONEYCOMB)
+		if (ICS)
 		{
 			if (_searchMenu!=null)
 			{
@@ -2135,6 +2147,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			case R.id.menu_call:
 				new AsyncImport()
 				{
+					@Override
 					protected void onPostExecute(Uri result) 
 					{
 						super.onPostExecute(result);
@@ -2146,6 +2159,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			case R.id.menu_send_sms:
 				new AsyncImport()
 				{
+					@Override
 					protected void onPostExecute(Uri result) 
 					{
 						super.onPostExecute(result);
@@ -2158,6 +2172,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				showDialog(DIALOG_IMPORT);
 				new AsyncImport()
 				{
+					@Override
 					protected void onPostExecute(Uri contactUri) 
 					{
 						super.onPostExecute(contactUri);
@@ -2195,6 +2210,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				{
 					new AsyncImport()
 					{
+						@Override
 						protected void onPostExecute(Uri result) 
 						{
 							super.onPostExecute(result);
@@ -2212,7 +2228,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent event)
 	{
-		if (HONEYCOMB)
+		if (ICS)
 		{
 			if (keyCode==KeyEvent.KEYCODE_SEARCH)
 			{
@@ -2281,6 +2297,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			builder.setCancelable(true);
 			builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener()
 			{
+				@Override
 				public void onClick(DialogInterface dialog, int which)
 				{
 					finish();

@@ -16,6 +16,8 @@
 
 package fr.prados.contacts.providers.ldap;
 
+import static fr.prados.contacts.Constants.W;
+
 import java.security.GeneralSecurityException;
 
 import android.accounts.Account;
@@ -24,11 +26,11 @@ import android.app.Service;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.ContactsContract;
 import android.util.Log;
-import static fr.prados.contacts.Constants.*;
 
 import com.unboundid.ldap.sdk.LDAPConnection;
 import com.unboundid.ldap.sdk.LDAPException;
@@ -197,21 +199,45 @@ public class LdapAuthenticationService extends Service
 	 * @param password
 	 * @param mapping
 	 */
-	public static void addAccount(AccountManager accountManager,String accountName,String crypt,String host,String port,String basedn,String username,String password,String mapping)
+	public static void addAccount(
+			final AccountManager accountManager,
+			final String accountName,
+			final String crypt,
+			final String host,
+			final String port,
+			final String basedn,
+			final String username,
+			final String password,
+			final String mapping)
 	{
-		final Account account = new Account(accountName, ACCOUNT_TYPE);
-		Bundle extra=new Bundle();        	
-		extra.putString(KEY_CRYPT, crypt);
-		extra.putString(KEY_HOST, host);
-		extra.putString(KEY_PORT, port);
-		extra.putString(KEY_BASEDN, basedn);
-		extra.putString(KEY_USERNAME,username);
-		extra.putString(KEY_MAPPING,mapping);
-		extra.putString(KEY_MCC,String.valueOf(TOAPhoneNumberFormats.getServerMCC(host)));
-		accountManager.addAccountExplicitly(account, password, extra);
-		accountManager.setPassword(account, password);
-		// Set contacts sync for this account.
-		ContentResolver.setSyncAutomatically(account, ContactsContract.AUTHORITY, true);
+		new AsyncTask<Void,Void,Integer>()
+		{
+			@Override
+			protected Integer doInBackground(Void... params)
+			{
+				// TODO Auto-generated method stub
+				return TOAPhoneNumberFormats.getServerMCC(host);
+			}
+			@Override
+			protected void onPostExecute(Integer result)
+			{
+				// TODO Auto-generated method stub
+				super.onPostExecute(result);
+				final Account account = new Account(accountName, ACCOUNT_TYPE);
+				Bundle extra=new Bundle();        	
+				extra.putString(KEY_CRYPT, crypt);
+				extra.putString(KEY_HOST, host);
+				extra.putString(KEY_PORT, port);
+				extra.putString(KEY_BASEDN, basedn);
+				extra.putString(KEY_USERNAME,username);
+				extra.putString(KEY_MAPPING,mapping);
+				extra.putString(KEY_MCC,String.valueOf(result));
+				accountManager.addAccountExplicitly(account, password, extra);
+				accountManager.setPassword(account, password);
+				// Set contacts sync for this account.
+				ContentResolver.setSyncAutomatically(account, ContactsContract.AUTHORITY, true);
+			}
+		}.execute();
 	}
 	
 	/**

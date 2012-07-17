@@ -51,6 +51,7 @@ com.flurry.android.x
 com.flurry.android.y
 com.flurry.android.z
 fr.prados.contacts.Application
+fr.prados.contacts.Application: Application()
 fr.prados.contacts.BuildConfig
 fr.prados.contacts.Constants
 fr.prados.contacts.ContactId
@@ -144,7 +145,6 @@ fr.prados.contacts.R$id: int photo
 fr.prados.contacts.R$id: int presence
 fr.prados.contacts.R$id: int right_side
 fr.prados.contacts.R$id: int scrollView1
-fr.prados.contacts.R$id: int textView1
 fr.prados.contacts.R$id: int totalContactsText
 fr.prados.contacts.R$layout
 fr.prados.contacts.R$layout: int contacts_list_content
@@ -366,7 +366,6 @@ fr.prados.contacts.lib.R$id: int photo
 fr.prados.contacts.lib.R$id: int presence
 fr.prados.contacts.lib.R$id: int right_side
 fr.prados.contacts.lib.R$id: int scrollView1
-fr.prados.contacts.lib.R$id: int textView1
 fr.prados.contacts.lib.R$id: int totalContactsText
 fr.prados.contacts.lib.R$layout
 fr.prados.contacts.lib.R$layout: int contacts_list_content
@@ -570,16 +569,19 @@ fr.prados.contacts.tools.LogMarket$WTF
 fr.prados.contacts.tools.Photos
 fr.prados.contacts.tools.QueryMarket
 fr.prados.contacts.tools.RateActivity
+fr.prados.contacts.tools.RateActivity: RateActivity()
 fr.prados.contacts.tools.RateActivity$1
 fr.prados.contacts.tools.RateActivity$2
 fr.prados.contacts.tools.RateActivity$3
 fr.prados.contacts.tools.TOAContentProvider
+fr.prados.contacts.tools.TOAContentProvider: TOAContentProvider()
 fr.prados.contacts.tools.TOAContentProvider$I18nPhonesHelper
 fr.prados.contacts.tools.TOAPhoneNumberFormats
 fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler
 fr.prados.contacts.tools.Update
 fr.prados.contacts.tools.Update$1
 fr.prados.contacts.ui.AbsListActivity
+fr.prados.contacts.ui.AbsListActivity: AbsListActivity()
 fr.prados.contacts.ui.AbsListActivity$1
 fr.prados.contacts.ui.AbsListActivity$2
 fr.prados.contacts.ui.Collapser
@@ -598,10 +600,13 @@ fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.c
 fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context,android.util.AttributeSet)
 fr.prados.contacts.ui.FocusRequestingListView: FocusRequestingListView(android.content.Context,android.util.AttributeSet,int)
 fr.prados.contacts.ui.HelpActivity
+fr.prados.contacts.ui.HelpActivity: HelpActivity()
 fr.prados.contacts.ui.HelpActivity: void onOk(android.view.View)
 fr.prados.contacts.ui.ImportWithSyncActivity
+fr.prados.contacts.ui.ImportWithSyncActivity: ImportWithSyncActivity()
 fr.prados.contacts.ui.ImportWithSyncActivity$ImportTask
 fr.prados.contacts.ui.ImportWithoutSyncActivity
+fr.prados.contacts.ui.ImportWithoutSyncActivity: ImportWithoutSyncActivity()
 fr.prados.contacts.ui.ImportWithoutSyncActivity$ImportTask
 fr.prados.contacts.ui.PhoneDisambigDialog
 fr.prados.contacts.ui.PhoneDisambigDialog$PhoneItem
@@ -615,6 +620,7 @@ fr.prados.contacts.ui.ProvidersManager$Mode
 fr.prados.contacts.ui.ProvidersManager$Mode: fr.prados.contacts.ui.ProvidersManager$Mode[] values()
 fr.prados.contacts.ui.ProvidersManager$Mode: fr.prados.contacts.ui.ProvidersManager$Mode valueOf(java.lang.String)
 fr.prados.contacts.ui.VolatileContactsListActivity
+fr.prados.contacts.ui.VolatileContactsListActivity: VolatileContactsListActivity()
 fr.prados.contacts.ui.VolatileContactsListActivity$1
 fr.prados.contacts.ui.VolatileContactsListActivity$10
 fr.prados.contacts.ui.VolatileContactsListActivity$11
@@ -640,6 +646,7 @@ fr.prados.contacts.ui.VolatileContactsListActivity$PhotoCache
 fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler
 fr.prados.contacts.ui.VolatileContactsListActivity$Retain
 fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider
+fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider: VolatileContactsRecentSuggestionsProvider()
 org.acra.ACRA
 org.acra.ACRA$1
 org.acra.ACRA$2

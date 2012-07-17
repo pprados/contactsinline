@@ -6,7 +6,7 @@
         android:icon="@drawable/magnifying_glass"
         android:title="@string/menu_search"
         android:visible="true" 
-		android:showAsAction="always|withText|collapseActionView"
+		android:showAsAction="ifRoom|withText|collapseActionView"
         android:menuCategory="container" 
         android:enabled="true" 
         android:orderInCategory="1"
