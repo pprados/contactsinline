@@ -406,12 +406,12 @@ fr.prados.contacts.ui.VolatileContactsListActivity:
     private static final java.lang.String STATE_FOCUS
     private static final java.lang.String STATE_LAST_REQUEST
     private static final java.lang.String STATE_QUERY_MODE
-    170:170:static synthetic void access$25(fr.prados.contacts.ui.VolatileContactsListActivity,int)
+    171:171:static synthetic void access$25(fr.prados.contacts.ui.VolatileContactsListActivity,int)
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
     static final int SUMMARY_NAME_COLUMN_INDEX
     private static final int FETCH_IMAGE_MSG
-    1878:1887:public void onScrollStateChanged(android.widget.AbsListView,int)
-    1891:1895:private void processMissingImageItems(android.widget.AbsListView)
+    1879:1888:public void onScrollStateChanged(android.widget.AbsListView,int)
+    1892:1896:private void processMissingImageItems(android.widget.AbsListView)
 fr.prados.contacts.ui.VolatileContactsListActivity$Retain:
     public boolean _onSearchRequest
 fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider:

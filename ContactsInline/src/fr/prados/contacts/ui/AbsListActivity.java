@@ -16,6 +16,7 @@ package fr.prados.contacts.ui;
  * limitations under the License.
  */
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,12 +32,13 @@ public class AbsListActivity extends Activity
 
 	protected AbsListView	mList;
 
-	private Handler			mHandler		= new Handler();
+	private final Handler			mHandler		= new Handler();
 
 	private boolean			mFinishedStart	= false;
 
-	private Runnable		mRequestFocus	= new Runnable()
+	private final Runnable		mRequestFocus	= new Runnable()
 											{
+												@Override
 												public void run()
 												{
 													mList.focusableViewAvailable(mList);
@@ -85,6 +87,7 @@ public class AbsListActivity extends Activity
 		mFinishedStart = true;
 	}
 
+	@TargetApi(11)
 	public void setListAdapter(ListAdapter adapter)
 	{
 		synchronized (this)
@@ -136,8 +139,9 @@ public class AbsListActivity extends Activity
 
 	}
 
-	private AdapterView.OnItemClickListener	mOnClickListener	= new AdapterView.OnItemClickListener()
+	private final AdapterView.OnItemClickListener	mOnClickListener	= new AdapterView.OnItemClickListener()
 																{
+																	@Override
 																	public void onItemClick(
 																			AdapterView<?> parent,
 																			View v, int position,

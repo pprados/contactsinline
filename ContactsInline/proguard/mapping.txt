@@ -1459,37 +1459,38 @@ fr.prados.contacts.ui.ProvidersManager$Mode -> fr.prados.contacts.ui.ProvidersMa
     fr.prados.contacts.ui.ProvidersManager$Mode valueOf(java.lang.String) -> valueOf
 fr.prados.contacts.ui.VolatileContactsListActivity -> fr.prados.contacts.ui.VolatileContactsListActivity:
     boolean HONEYCOMB -> d
+    boolean ICS -> e
     boolean withFlurry -> c
-    android.os.Handler _handler -> e
-    boolean _isExtension -> f
-    boolean _asynImport -> g
-    boolean _isDone -> h
-    int _show -> i
-    int _mode -> j
-    boolean _showHeader -> k
-    int _scrollState -> l
-    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter _adapter -> m
-    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler _queryHandler -> n
-    fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler _importAllHandler -> o
-    java.lang.String _queryMode -> p
-    android.provider.SearchRecentSuggestions _suggestions -> q
-    java.lang.String _lastQuery -> r
-    android.widget.TextView _errorsText -> s
-    android.widget.TextView _emptyText -> t
-    android.widget.TextView _totalContacts -> u
-    android.view.MenuItem _searchMenu -> v
-    android.widget.SearchView _searchView -> w
-    java.lang.String[] colDataId -> x
-    java.lang.String[] colsNormal -> y
-    java.lang.String[] colsPickContact -> z
-    java.lang.String[] colsPickPhone -> A
-    java.lang.String[] colsPickPostal -> B
-    java.lang.String[] colAuthority -> C
-    java.lang.String[] colForCallOrSms -> D
-    int _cntProgress -> E
-    android.os.Parcelable _restoreListState -> F
-    boolean _restoreListHasFocus -> G
-    java.util.concurrent.ExecutorService _imageFetchThreadPool -> H
+    android.os.Handler _handler -> f
+    boolean _isExtension -> g
+    boolean _asynImport -> h
+    boolean _isDone -> i
+    int _show -> j
+    int _mode -> k
+    boolean _showHeader -> l
+    int _scrollState -> m
+    fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter _adapter -> n
+    fr.prados.contacts.ui.VolatileContactsListActivity$QueryHandler _queryHandler -> o
+    fr.prados.contacts.ui.VolatileContactsListActivity$ImportAllHandler _importAllHandler -> p
+    java.lang.String _queryMode -> q
+    android.provider.SearchRecentSuggestions _suggestions -> r
+    java.lang.String _lastQuery -> s
+    android.widget.TextView _errorsText -> t
+    android.widget.TextView _emptyText -> u
+    android.widget.TextView _totalContacts -> v
+    android.view.MenuItem _searchMenu -> w
+    android.widget.SearchView _searchView -> x
+    java.lang.String[] colDataId -> y
+    java.lang.String[] colsNormal -> z
+    java.lang.String[] colsPickContact -> A
+    java.lang.String[] colsPickPhone -> B
+    java.lang.String[] colsPickPostal -> C
+    java.lang.String[] colAuthority -> D
+    java.lang.String[] colForCallOrSms -> E
+    int _cntProgress -> F
+    android.os.Parcelable _restoreListState -> G
+    boolean _restoreListHasFocus -> H
+    java.util.concurrent.ExecutorService _imageFetchThreadPool -> I
     void incProgressBar() -> b
     void decProgressBar() -> c
     void onCreate(android.os.Bundle) -> onCreate
