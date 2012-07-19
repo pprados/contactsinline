@@ -33,6 +33,7 @@ com.unboundid.util.UtilityMessages: com.unboundid.util.UtilityMessages valueOf(j
 com.unboundid.util.ssl.SSLMessages: com.unboundid.util.ssl.SSLMessages[] values()
 com.unboundid.util.ssl.SSLMessages: com.unboundid.util.ssl.SSLMessages valueOf(java.lang.String)
 fr.prados.contacts.Application
+fr.prados.contacts.Application: Application()
 fr.prados.contacts.ContactId
 fr.prados.contacts.ContactId: android.os.Parcelable$Creator CREATOR
 fr.prados.contacts.VolatileContact
@@ -191,6 +192,7 @@ fr.prados.contacts.providers.AuthQueryException
 fr.prados.contacts.providers.IProvider$Stub
 fr.prados.contacts.providers.IProvider$Stub$Proxy
 fr.prados.contacts.providers.PackageRemovedReceiver
+fr.prados.contacts.providers.PackageRemovedReceiver: PackageRemovedReceiver()
 fr.prados.contacts.providers.Provider
 fr.prados.contacts.providers.QueryError
 fr.prados.contacts.providers.QueryException
@@ -200,24 +202,30 @@ fr.prados.contacts.providers.ResultsAndExceptions
 fr.prados.contacts.providers.ResultsAndExceptions: android.os.Parcelable$Creator CREATOR
 fr.prados.contacts.providers.TransportException
 fr.prados.contacts.providers.TransportException: android.os.Parcelable$Creator CREATOR
-fr.prados.contacts.providers.ldap.AbstractWizardActivity
-fr.prados.contacts.providers.ldap.LdapAuthenticationService
+fr.prados.contacts.providers.ldap.AbstractWizardActivity: AbstractWizardActivity()
+fr.prados.contacts.providers.ldap.LdapAuthenticationService: LdapAuthenticationService()
 fr.prados.contacts.providers.ldap.LdapAuthenticationService$LDAPAuthenticator
-fr.prados.contacts.providers.ldap.LdapBaseApplication
+fr.prados.contacts.providers.ldap.LdapBaseApplication: LdapBaseApplication()
 fr.prados.contacts.providers.ldap.LdapKnowParameters
 fr.prados.contacts.providers.ldap.LdapKnowParameters: android.os.Parcelable$Creator CREATOR
 fr.prados.contacts.providers.ldap.LdapProvider
 fr.prados.contacts.providers.ldap.LdapProviderService
+fr.prados.contacts.providers.ldap.LdapProviderService: LdapProviderService()
 fr.prados.contacts.providers.ldap.LdapSyncAdapterService
+fr.prados.contacts.providers.ldap.LdapSyncAdapterService: LdapSyncAdapterService()
 fr.prados.contacts.providers.ldap.PanelSwitcher
 fr.prados.contacts.providers.ldap.PanelSwitcher: PanelSwitcher(android.content.Context,android.util.AttributeSet)
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity
-fr.prados.contacts.providers.ldap.generic.GenericApplication
-fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService
+fr.prados.contacts.providers.ldap.PanelSwitcher: void setCurrentIndex(int)
+fr.prados.contacts.providers.ldap.PanelSwitcher: int getCurrentIndex()
+fr.prados.contacts.providers.ldap.generic.GenericApplication: GenericApplication()
+fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService: GenericLdapAuthenticationService()
 fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService$GenericLDAPAuthenticator
 fr.prados.contacts.providers.ldap.generic.GenericWizardActivity
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity: GenericWizardActivity()
 fr.prados.contacts.providers.ldap.generic.beta.BetaGenericApplication
+fr.prados.contacts.providers.ldap.generic.beta.BetaGenericApplication: BetaGenericApplication()
 fr.prados.contacts.providers.ldap.generic.beta.BetaGenericLdapAuthenticationService
+fr.prados.contacts.providers.ldap.generic.beta.BetaGenericLdapAuthenticationService: BetaGenericLdapAuthenticationService()
 fr.prados.contacts.providers.ldap.generic.beta.R$anim: int push_left_in
 fr.prados.contacts.providers.ldap.generic.beta.R$anim: int push_left_out
 fr.prados.contacts.providers.ldap.generic.beta.R$dimen: int button_minWidth
@@ -364,7 +372,6 @@ fr.prados.contacts.providers.ldap.generic.beta.R$xml: int import_contacts
 fr.prados.contacts.providers.ldap.generic.beta.R$xml: int ldap_account_preferences
 fr.prados.contacts.providers.ldap.generic.beta.R$xml: int ldap_authenticator
 fr.prados.contacts.providers.ldap.generic.beta.R$xml: int ldap_sync_adapter
-fr.prados.contacts.tools.RateActivity
 fr.prados.provider.contacts.ldap.R$anim: int push_left_in
 fr.prados.provider.contacts.ldap.R$anim: int push_left_out
 fr.prados.provider.contacts.ldap.R$dimen: int button_minWidth

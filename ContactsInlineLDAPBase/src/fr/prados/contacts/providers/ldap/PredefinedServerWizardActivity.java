@@ -29,6 +29,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -266,12 +267,12 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 		params[4]=_username.getText().toString().trim();
 		params[5]=_password.getText().toString();
 		
-		_asyncTryAuthent=new AsyncTask<String, Void, Exception>()
+		_asyncTryAuthent=new AsyncTask<String, Void, Pair<Exception,Bundle>>()
 		{
 			private String[] _params;
 			
 			@Override
-			protected Exception doInBackground(String... params)
+			protected Pair<Exception,Bundle> doInBackground(String... params)
 			{
 				Exception ex=null;
 				try
@@ -297,12 +298,15 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 				{
 					ex=e;
 				}
-				return ex;
+				Bundle bundle=null;
+				if (_confirmCredentials)
+					bundle=confirmCredential(_params);
+				return new Pair<Exception,Bundle>(ex,bundle);
 			}
 			@Override
-			public void onPostExecute(Exception e)
+			public void onPostExecute(Pair<Exception,Bundle> pair)
 			{
-				onAuthenticationResult(e,_params);
+				onAuthenticationResult(pair.first,pair.second,_params);
 				_asyncTryAuthent=null;
 				removeDialog(DIALOG_PROGRESS);
 				if (isCancelled()) 
@@ -310,18 +314,31 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 					_login.setVisibility(View.VISIBLE);
 					return;
 				}
-				if (e!=null)
+				if (pair.first!=null)
 					_login.setVisibility(View.VISIBLE);
 				_params=null;
 				
 			}
 		}.execute(params);
 	}
-	
+	private Bundle confirmCredential(String... params)
+	{
+		final String accountName = params[0];
+		final String crypt = params[1];
+		final String host = params[2];
+		final String port = params[3];
+		final String username = params[4];
+		final String password = params[5];
+		final String basedn = params[6];
+		final String mapping = params[7];
+		final AccountManager accountManager=AccountManager.get(this);
+		return LdapAuthenticationService.confirmCredential(accountManager,
+				accountName, crypt, host, port, basedn, username, password, mapping);		
+	}
 	/**
 	 * Called when the authentication process completes.
 	 */
-	private void onAuthenticationResult(Exception exception,String... params)
+	private void onAuthenticationResult(Exception exception,Bundle bundle,String... params)
 	{
 		final LdapKnowParameters knowParams=new LdapKnowParameters();
 
@@ -385,9 +402,7 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
             else 
             {
             	// Confirm credential
-        		setAccountAuthenticatorResult(
-        			LdapAuthenticationService.confirmCredential(accountManager,
-        					accountName, crypt, host, port, basedn, username, password, mapping));
+        		setAccountAuthenticatorResult(bundle);
         		finish();
             }
     		// Publish params for help others users

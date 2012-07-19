@@ -1872,6 +1872,8 @@ fr.prados.contacts.providers.ldap.AbstractWizardActivity:
     protected static final java.lang.String TAG
     protected static final java.lang.String DEFAULT_PORT_LDAP
     protected static final java.lang.String DEFAULT_PORT_LDAPS
+    44:44:protected java.lang.String injectUsername(fr.prados.contacts.providers.ldap.LdapKnowParameters,java.lang.String)
+    48:50:protected java.lang.String extractUsername(java.lang.String)
 fr.prados.contacts.providers.ldap.LdapAuthenticationService:
     private static final java.lang.String TAG
     static final java.lang.String PARAM_ACCOUNT
@@ -1910,10 +1912,13 @@ fr.prados.contacts.providers.ldap.Mapping:
     486:497:public static fr.prados.contacts.providers.ldap.Mapping getDefaultMapping()
 fr.prados.contacts.providers.ldap.PanelSwitcher:
     private static final int ANIM_DURATION
-    43:45:void setCurrentIndex(int)
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity:
-    private static final int DIALOG_PROGRESS
-    90:121:protected PredefinedServerWizardActivity(int,int,int,int,int,int,int,int,java.lang.String)
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$1
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$2
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$3
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$4
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$5
+fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$6
 fr.prados.contacts.providers.ldap.SwamiSfinxBis
 fr.prados.contacts.providers.ldap.XMLUtils:
     22:22:public XMLUtils()
@@ -1938,8 +1943,10 @@ fr.prados.contacts.tools.Eula:
     private static final java.lang.String PREFERENCE_EULA_ACCEPTED
     private static final java.lang.String PREFERENCES_EULA
     51:51:public Eula()
-fr.prados.contacts.tools.HelpDebug:
-    23:23:public HelpDebug()
+fr.prados.contacts.tools.HelpDebug
+fr.prados.contacts.tools.HelpDebug$1
+fr.prados.contacts.tools.HelpDebug$2
+fr.prados.contacts.tools.HelpDebug$Debug
 fr.prados.contacts.tools.LogMarket:
     23:23:public LogMarket()
 fr.prados.contacts.tools.Photos:
@@ -1954,10 +1961,12 @@ fr.prados.contacts.tools.QueryMarket:
     private static final long DAY_PENDING
     private static final long EXTRA_DAY_PENDING
     47:47:public QueryMarket()
+    78:80:public static void extendDayPending(android.content.Context)
     84:111:public static void checkRate(android.content.Context)
-fr.prados.contacts.tools.RateActivity:
-    private static final java.lang.String TAG
-    private static final int DIALOG_STAR
+fr.prados.contacts.tools.RateActivity
+fr.prados.contacts.tools.RateActivity$1
+fr.prados.contacts.tools.RateActivity$2
+fr.prados.contacts.tools.RateActivity$3
 fr.prados.contacts.tools.TOAPhoneNumberFormats:
     private static final java.lang.String TAG
     public static final java.lang.String AUTHORITY
@@ -1991,12 +2000,9 @@ fr.prados.provider.contacts.ldap.R$anim
 fr.prados.provider.contacts.ldap.R$attr
 fr.prados.provider.contacts.ldap.R$dimen
 fr.prados.provider.contacts.ldap.R$drawable
-fr.prados.provider.contacts.ldap.R$id:
-    35:35:public R$id()
-fr.prados.provider.contacts.ldap.R$layout:
-    69:69:public R$layout()
-fr.prados.provider.contacts.ldap.R$raw:
-    76:76:public R$raw()
+fr.prados.provider.contacts.ldap.R$id
+fr.prados.provider.contacts.ldap.R$layout
+fr.prados.provider.contacts.ldap.R$raw
 fr.prados.provider.contacts.ldap.R$string:
     80:80:public R$string()
 fr.prados.provider.contacts.ldap.R$style

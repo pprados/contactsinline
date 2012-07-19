@@ -2416,14 +2416,12 @@ fr.prados.contacts.providers.TransportException$1 -> fr.prados.contacts.provider
     fr.prados.contacts.providers.TransportException[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-fr.prados.contacts.providers.ldap.AbstractWizardActivity -> fr.prados.contacts.providers.ldap.AbstractWizardActivity:
+fr.prados.contacts.providers.ldap.AbstractWizardActivity -> fr.prados.contacts.providers.ldap.a:
     boolean _confirmCredentials -> a
     boolean _requestNewAccount -> b
     android.accounts.AccountManager _accountManager -> c
     fr.prados.contacts.providers.ldap.LdapKnowParameters _knowParams -> d
     android.os.AsyncTask _asyncTryAuthent -> e
-    java.lang.String injectUsername(fr.prados.contacts.providers.ldap.LdapKnowParameters,java.lang.String) -> a
-    java.lang.String extractUsername(java.lang.String) -> a
 fr.prados.contacts.providers.ldap.LdapAuthenticationService -> fr.prados.contacts.providers.ldap.LdapAuthenticationService:
     java.lang.String ACCOUNT_TYPE -> a
     fr.prados.contacts.providers.ldap.LdapAuthenticationService$LDAPAuthenticator _authenticator -> b
@@ -2431,9 +2429,23 @@ fr.prados.contacts.providers.ldap.LdapAuthenticationService -> fr.prados.contact
     java.lang.String onlineConfirmPassword(android.content.Context,java.lang.String[]) -> a
     void addAccount(android.accounts.AccountManager,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
     android.os.Bundle confirmCredential(android.accounts.AccountManager,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> b
+fr.prados.contacts.providers.ldap.LdapAuthenticationService$1 -> fr.prados.contacts.providers.ldap.b:
+    java.lang.String val$host -> a
+    java.lang.String val$accountName -> b
+    java.lang.String val$crypt -> c
+    java.lang.String val$port -> d
+    java.lang.String val$basedn -> e
+    java.lang.String val$username -> f
+    java.lang.String val$mapping -> g
+    android.accounts.AccountManager val$accountManager -> h
+    java.lang.String val$password -> i
+    java.lang.Integer doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Integer) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
 fr.prados.contacts.providers.ldap.LdapAuthenticationService$LDAPAuthenticator -> fr.prados.contacts.providers.ldap.LdapAuthenticationService$LDAPAuthenticator:
     void checkOnlineAccount(android.os.Bundle,android.accounts.Account,java.lang.String) -> a
-fr.prados.contacts.providers.ldap.LdapBaseApplication -> fr.prados.contacts.providers.ldap.LdapBaseApplication:
+fr.prados.contacts.providers.ldap.LdapBaseApplication -> fr.prados.contacts.providers.ldap.c:
     void onCreate() -> onCreate
 fr.prados.contacts.providers.ldap.LdapKnowParameters -> fr.prados.contacts.providers.ldap.LdapKnowParameters:
     java.lang.String GOOGLEAPPS -> f
@@ -2450,7 +2462,7 @@ fr.prados.contacts.providers.ldap.LdapKnowParameters -> fr.prados.contacts.provi
     fr.prados.contacts.providers.ldap.LdapKnowParameters getParameters(java.lang.String) -> a
     fr.prados.contacts.providers.ldap.LdapKnowParameters parseKnowParameters(java.lang.String,java.io.Reader) -> a
     void postParameters(fr.prados.contacts.providers.ldap.LdapKnowParameters) -> a
-fr.prados.contacts.providers.ldap.LdapKnowParameters$1 -> fr.prados.contacts.providers.ldap.a:
+fr.prados.contacts.providers.ldap.LdapKnowParameters$1 -> fr.prados.contacts.providers.ldap.d:
     fr.prados.contacts.providers.ldap.LdapKnowParameters createFromParcel(android.os.Parcel) -> a
     fr.prados.contacts.providers.ldap.LdapKnowParameters[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
@@ -2471,15 +2483,15 @@ fr.prados.contacts.providers.ldap.LdapProvider -> fr.prados.contacts.providers.l
     java.lang.String access$0() -> f
     fr.prados.contacts.providers.ldap.LdapProvider$ParamLdapDriver access$1(fr.prados.contacts.providers.ldap.LdapProvider,java.lang.CharSequence,boolean) -> a
     java.util.HashMap access$2() -> g
-fr.prados.contacts.providers.ldap.LdapProvider$1 -> fr.prados.contacts.providers.ldap.b:
+fr.prados.contacts.providers.ldap.LdapProvider$1 -> fr.prados.contacts.providers.ldap.e:
     fr.prados.contacts.providers.ldap.LdapProvider this$0 -> a
     android.accounts.Account val$account -> b
     void run() -> run
-fr.prados.contacts.providers.ldap.LdapProvider$2 -> fr.prados.contacts.providers.ldap.c:
+fr.prados.contacts.providers.ldap.LdapProvider$2 -> fr.prados.contacts.providers.ldap.f:
     fr.prados.contacts.providers.ldap.LdapProvider this$0 -> a
     java.lang.String val$accountName -> b
     void run() -> run
-fr.prados.contacts.providers.ldap.LdapProvider$3 -> fr.prados.contacts.providers.ldap.d:
+fr.prados.contacts.providers.ldap.LdapProvider$3 -> fr.prados.contacts.providers.ldap.g:
     boolean mCanceded -> a
     fr.prados.contacts.providers.ldap.LdapProvider this$0 -> b
     com.unboundid.ldap.sdk.LDAPConnection val$conn -> d
@@ -2495,7 +2507,7 @@ fr.prados.contacts.providers.ldap.LdapProvider$3 -> fr.prados.contacts.providers
     void searchReferenceReturned(com.unboundid.ldap.sdk.SearchResultReference) -> a
     void searchEntryReturned(com.unboundid.ldap.sdk.SearchResultEntry) -> a
     void searchResultReceived(com.unboundid.ldap.sdk.AsyncRequestID,com.unboundid.ldap.sdk.SearchResult) -> a
-fr.prados.contacts.providers.ldap.LdapProvider$4 -> fr.prados.contacts.providers.ldap.e:
+fr.prados.contacts.providers.ldap.LdapProvider$4 -> fr.prados.contacts.providers.ldap.h:
     fr.prados.contacts.providers.ldap.LdapProvider this$0 -> a
     java.lang.String val$host -> b
     java.lang.String val$crypt -> c
@@ -2506,12 +2518,12 @@ fr.prados.contacts.providers.ldap.LdapProvider$4 -> fr.prados.contacts.providers
     android.accounts.Account val$account -> h
     java.lang.CharSequence val$accountName -> i
     java.lang.Object call() -> call
-fr.prados.contacts.providers.ldap.LdapProvider$AsyncSearch -> fr.prados.contacts.providers.ldap.f:
+fr.prados.contacts.providers.ldap.LdapProvider$AsyncSearch -> fr.prados.contacts.providers.ldap.i:
     com.unboundid.ldap.sdk.AsyncRequestID _id -> c
-fr.prados.contacts.providers.ldap.LdapProvider$Filters -> fr.prados.contacts.providers.ldap.g:
+fr.prados.contacts.providers.ldap.LdapProvider$Filters -> fr.prados.contacts.providers.ldap.j:
     java.util.List filtersNormal -> a
     java.util.List filtersSingleEqual -> b
-fr.prados.contacts.providers.ldap.LdapProvider$ParamLdapDriver -> fr.prados.contacts.providers.ldap.h:
+fr.prados.contacts.providers.ldap.LdapProvider$ParamLdapDriver -> fr.prados.contacts.providers.ldap.k:
     java.util.concurrent.FutureTask _future -> d
     java.lang.String _basedn -> a
     fr.prados.contacts.providers.ldap.Mapping _mapping -> b
@@ -2533,12 +2545,12 @@ fr.prados.contacts.providers.ldap.LdapSyncAdapterService -> fr.prados.contacts.p
     fr.prados.contacts.providers.ldap.LdapSyncAdapterService$SyncAdapterImpl _syncAdapter -> a
     void onCreate() -> onCreate
     android.os.IBinder onBind(android.content.Intent) -> onBind
-fr.prados.contacts.providers.ldap.LdapSyncAdapterService$SyncAdapterImpl -> fr.prados.contacts.providers.ldap.i:
+fr.prados.contacts.providers.ldap.LdapSyncAdapterService$SyncAdapterImpl -> fr.prados.contacts.providers.ldap.l:
     android.content.ContentResolver _resolver -> a
     java.lang.String[] COLS_RAW -> b
     void onPerformSync(android.accounts.Account,android.os.Bundle,java.lang.String,android.content.ContentProviderClient,android.content.SyncResult) -> onPerformSync
     void onSyncCanceled() -> onSyncCanceled
-fr.prados.contacts.providers.ldap.Mapping -> fr.prados.contacts.providers.ldap.j:
+fr.prados.contacts.providers.ldap.Mapping -> fr.prados.contacts.providers.ldap.m:
     int timeout -> a
     int connectionTimeout -> b
     int requesttimeout -> c
@@ -2568,34 +2580,34 @@ fr.prados.contacts.providers.ldap.Mapping -> fr.prados.contacts.providers.ldap.j
     fr.prados.contacts.VolatileContact convertLdapRecordToVolatileContact(java.util.Stack,java.lang.String,int,com.unboundid.ldap.sdk.SearchResultEntry) -> a
     void putExtra(fr.prados.contacts.VolatileData,java.lang.Class,java.lang.String,java.lang.Object) -> a
     java.io.Reader getMappingFile(java.lang.String) -> b
-fr.prados.contacts.providers.ldap.Mapping$1 -> fr.prados.contacts.providers.ldap.k:
+fr.prados.contacts.providers.ldap.Mapping$1 -> fr.prados.contacts.providers.ldap.n:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
     java.lang.String toString() -> toString
-fr.prados.contacts.providers.ldap.Mapping$2 -> fr.prados.contacts.providers.ldap.l:
+fr.prados.contacts.providers.ldap.Mapping$2 -> fr.prados.contacts.providers.ldap.o:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
     java.lang.String toString() -> toString
-fr.prados.contacts.providers.ldap.Mapping$3 -> fr.prados.contacts.providers.ldap.m:
+fr.prados.contacts.providers.ldap.Mapping$3 -> fr.prados.contacts.providers.ldap.p:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
-fr.prados.contacts.providers.ldap.Mapping$4 -> fr.prados.contacts.providers.ldap.n:
+fr.prados.contacts.providers.ldap.Mapping$4 -> fr.prados.contacts.providers.ldap.q:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
-fr.prados.contacts.providers.ldap.Mapping$5 -> fr.prados.contacts.providers.ldap.o:
-    void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
-    java.lang.String toString() -> toString
-fr.prados.contacts.providers.ldap.Mapping$6 -> fr.prados.contacts.providers.ldap.p:
+fr.prados.contacts.providers.ldap.Mapping$5 -> fr.prados.contacts.providers.ldap.r:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
     java.lang.String toString() -> toString
-fr.prados.contacts.providers.ldap.Mapping$7 -> fr.prados.contacts.providers.ldap.q:
+fr.prados.contacts.providers.ldap.Mapping$6 -> fr.prados.contacts.providers.ldap.s:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
     java.lang.String toString() -> toString
-fr.prados.contacts.providers.ldap.Mapping$8 -> fr.prados.contacts.providers.ldap.r:
+fr.prados.contacts.providers.ldap.Mapping$7 -> fr.prados.contacts.providers.ldap.t:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
     java.lang.String toString() -> toString
-fr.prados.contacts.providers.ldap.Mapping$Clazz -> fr.prados.contacts.providers.ldap.s:
+fr.prados.contacts.providers.ldap.Mapping$8 -> fr.prados.contacts.providers.ldap.u:
+    void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
+    java.lang.String toString() -> toString
+fr.prados.contacts.providers.ldap.Mapping$Clazz -> fr.prados.contacts.providers.ldap.v:
     java.util.HashMap _may -> a
     java.lang.Object clone() -> clone
-fr.prados.contacts.providers.ldap.Mapping$Conv -> fr.prados.contacts.providers.ldap.t:
+fr.prados.contacts.providers.ldap.Mapping$Conv -> fr.prados.contacts.providers.ldap.w:
     void putForType(java.util.Stack,fr.prados.contacts.VolatileData,java.lang.Class,int,java.lang.String,com.unboundid.ldap.sdk.Attribute,int) -> a
-fr.prados.contacts.providers.ldap.Mapping$Map -> fr.prados.contacts.providers.ldap.u:
+fr.prados.contacts.providers.ldap.Mapping$Map -> fr.prados.contacts.providers.ldap.x:
     java.lang.Class _type -> a
     java.lang.String _mimeType -> b
     java.lang.String _col -> c
@@ -2603,9 +2615,9 @@ fr.prados.contacts.providers.ldap.Mapping$Map -> fr.prados.contacts.providers.ld
     java.lang.String _extraCol -> e
     java.lang.Object _extraValue -> f
     fr.prados.contacts.providers.ldap.Mapping$Conv _conv -> g
-fr.prados.contacts.providers.ldap.Mapping$Phonetic -> fr.prados.contacts.providers.ldap.v:
+fr.prados.contacts.providers.ldap.Mapping$Phonetic -> fr.prados.contacts.providers.ldap.y:
     java.lang.String phonetic(java.lang.String) -> a
-fr.prados.contacts.providers.ldap.Mapping$PostJob -> fr.prados.contacts.providers.ldap.w:
+fr.prados.contacts.providers.ldap.Mapping$PostJob -> fr.prados.contacts.providers.ldap.z:
     void run(com.unboundid.ldap.sdk.LDAPConnection) -> a
 fr.prados.contacts.providers.ldap.PanelSwitcher -> fr.prados.contacts.providers.ldap.PanelSwitcher:
     int _currentView -> a
@@ -2615,7 +2627,8 @@ fr.prados.contacts.providers.ldap.PanelSwitcher -> fr.prados.contacts.providers.
     android.view.animation.TranslateAnimation _outLeft -> e
     android.view.animation.TranslateAnimation _inRight -> f
     android.view.animation.TranslateAnimation _outRight -> g
-    void updateCurrentView() -> d
+    void setCurrentIndex(int) -> setCurrentIndex
+    void updateCurrentView() -> c
     void onSizeChanged(int,int,int,int) -> onSizeChanged
     void onFinishInflate() -> onFinishInflate
     void show(int) -> a
@@ -2623,82 +2636,12 @@ fr.prados.contacts.providers.ldap.PanelSwitcher -> fr.prados.contacts.providers.
     void showNext(int) -> b
     void showPrevious() -> b
     void showPrevious(int) -> c
-    int getCurrentIndex() -> c
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity -> fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity:
-    boolean _confirmCredentials -> t
-    boolean _requestNewAccount -> f
-    android.view.View _login -> u
-    android.widget.TextView _invite -> v
-    android.widget.TextView _labelUsername -> w
-    android.widget.EditText _username -> x
-    android.widget.TextView _labelPassword -> y
-    android.widget.EditText _password -> z
-    android.widget.Button _donep2 -> A
-    android.app.AlertDialog$Builder _alertBuilder -> g
-    int _logoId -> h
-    int _activityLabelId -> i
-    int _updateLabelId -> j
-    int _inviteId -> k
-    int _account_setup_incoming_username_labelId -> l
-    int _account_setup_username_hintId -> m
-    int _account_setup_incoming_password_labelId -> n
-    int _account_setup_password_hintId -> o
-    java.lang.String _accountName -> p
-    java.lang.String _hostName -> q
-    java.lang.String _hostPort -> r
-    boolean $assertionsDisabled -> s
-    void init() -> b
-    void onCreate(android.os.Bundle) -> onCreate
-    void hideKeyboard() -> c
-    java.lang.String injectUsername(fr.prados.contacts.providers.ldap.LdapKnowParameters,java.lang.String) -> a
-    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
-    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
-    android.app.Dialog onCreateDialog(int) -> onCreateDialog
-    fr.prados.contacts.providers.ldap.LdapKnowParameters getKnowParams() -> a
-    void doLogin() -> d
-    void onAuthenticationResult(java.lang.Exception,java.lang.String[]) -> a
-    void access$0(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> a
-    void access$1(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> b
-    void access$2(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity,java.lang.Exception,java.lang.String[]) -> a
-    android.view.View access$3(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> c
-    android.widget.EditText access$4(fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity) -> d
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$1 -> fr.prados.contacts.providers.ldap.x:
-    fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
-    boolean onEditorAction(android.widget.TextView,int,android.view.KeyEvent) -> onEditorAction
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$2 -> fr.prados.contacts.providers.ldap.y:
-    fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
-    void onClick(android.view.View) -> onClick
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$3 -> fr.prados.contacts.providers.ldap.z:
-    java.lang.String[] _params -> b
-    fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
-    java.lang.Exception doInBackground(java.lang.String[]) -> a
-    void onPostExecute(java.lang.Exception) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$4 -> fr.prados.contacts.providers.ldap.aa:
-    fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
-    android.accounts.AccountManager val$accountManager -> b
-    java.lang.String val$accountName -> c
-    java.lang.String val$crypt -> d
-    java.lang.String val$host -> e
-    java.lang.String val$port -> f
-    java.lang.String val$basedn -> g
-    java.lang.String val$username -> h
-    java.lang.String val$password -> i
-    java.lang.String val$mapping -> j
-    void run() -> run
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$5 -> fr.prados.contacts.providers.ldap.ab:
-    fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
-    fr.prados.contacts.providers.ldap.LdapKnowParameters val$knowParams -> b
-    void run() -> run
-fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity$6 -> fr.prados.contacts.providers.ldap.ac:
-    fr.prados.contacts.providers.ldap.PredefinedServerWizardActivity this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.providers.ldap.XMLUtils -> fr.prados.contacts.providers.ldap.ad:
+    int getCurrentIndex() -> getCurrentIndex
+fr.prados.contacts.providers.ldap.XMLUtils -> fr.prados.contacts.providers.ldap.aa:
     java.lang.String elementToString(org.w3c.dom.Node) -> a
     java.lang.String encodeXML(java.lang.String) -> a
     java.lang.String getTextContent(org.w3c.dom.Node) -> b
-fr.prados.contacts.providers.ldap.generic.GenericApplication -> fr.prados.contacts.providers.ldap.generic.GenericApplication:
+fr.prados.contacts.providers.ldap.generic.GenericApplication -> fr.prados.contacts.providers.ldap.generic.a:
 fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService -> fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService:
     void onCreate() -> onCreate
 fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService$GenericLDAPAuthenticator -> fr.prados.contacts.providers.ldap.generic.GenericLdapAuthenticationService$GenericLDAPAuthenticator:
@@ -2756,16 +2699,16 @@ fr.prados.contacts.providers.ldap.generic.GenericWizardActivity -> fr.prados.con
     void access$19(fr.prados.contacts.providers.ldap.generic.GenericWizardActivity) -> q
     android.os.AsyncTask access$20(fr.prados.contacts.providers.ldap.generic.GenericWizardActivity) -> r
     android.widget.TextView access$21(fr.prados.contacts.providers.ldap.generic.GenericWizardActivity) -> s
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$1 -> fr.prados.contacts.providers.ldap.generic.a:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$1 -> fr.prados.contacts.providers.ldap.generic.b:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$10 -> fr.prados.contacts.providers.ldap.generic.b:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$10 -> fr.prados.contacts.providers.ldap.generic.c:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$11 -> fr.prados.contacts.providers.ldap.generic.c:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$11 -> fr.prados.contacts.providers.ldap.generic.d:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     java.lang.String transformUrl(java.util.regex.Matcher,java.lang.String) -> transformUrl
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$12 -> fr.prados.contacts.providers.ldap.generic.d:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$12 -> fr.prados.contacts.providers.ldap.generic.e:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     android.accounts.AccountManager val$accountManager -> b
     java.lang.String val$accountName -> c
@@ -2777,24 +2720,24 @@ fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$12 -> fr.prados.
     java.lang.String val$password -> i
     java.lang.String val$mapping -> j
     void run() -> run
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$13 -> fr.prados.contacts.providers.ldap.generic.e:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$13 -> fr.prados.contacts.providers.ldap.generic.f:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     fr.prados.contacts.providers.ldap.LdapKnowParameters val$knowParams -> b
     void run() -> run
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$14 -> fr.prados.contacts.providers.ldap.generic.f:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$14 -> fr.prados.contacts.providers.ldap.generic.g:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$2 -> fr.prados.contacts.providers.ldap.generic.g:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$2 -> fr.prados.contacts.providers.ldap.generic.h:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$3 -> fr.prados.contacts.providers.ldap.generic.h:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$3 -> fr.prados.contacts.providers.ldap.generic.i:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4 -> fr.prados.contacts.providers.ldap.generic.i:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4 -> fr.prados.contacts.providers.ldap.generic.j:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.view.View) -> onClick
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity access$0(fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4) -> a
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4$1 -> fr.prados.contacts.providers.ldap.generic.j:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4$1 -> fr.prados.contacts.providers.ldap.generic.k:
     java.lang.String[] _params -> b
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4 this$1 -> a
     java.lang.String val$password -> c
@@ -2803,104 +2746,74 @@ fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$4$1 -> fr.prados
     void onPostExecute(java.lang.Exception) -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$5 -> fr.prados.contacts.providers.ldap.generic.k:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$5 -> fr.prados.contacts.providers.ldap.generic.l:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onFocusChange(android.view.View,boolean) -> onFocusChange
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$6 -> fr.prados.contacts.providers.ldap.generic.l:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$6 -> fr.prados.contacts.providers.ldap.generic.m:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$7 -> fr.prados.contacts.providers.ldap.generic.m:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$7 -> fr.prados.contacts.providers.ldap.generic.n:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$8 -> fr.prados.contacts.providers.ldap.generic.n:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$8 -> fr.prados.contacts.providers.ldap.generic.o:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     java.lang.Boolean doInBackground(java.lang.String[]) -> a
     void onPostExecute(java.lang.Boolean) -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$9 -> fr.prados.contacts.providers.ldap.generic.o:
+fr.prados.contacts.providers.ldap.generic.GenericWizardActivity$9 -> fr.prados.contacts.providers.ldap.generic.p:
     fr.prados.contacts.providers.ldap.generic.GenericWizardActivity this$0 -> a
     void onCancel(android.content.DialogInterface) -> onCancel
 fr.prados.contacts.providers.ldap.generic.beta.BetaGenericApplication -> fr.prados.contacts.providers.ldap.generic.beta.BetaGenericApplication:
 fr.prados.contacts.providers.ldap.generic.beta.BetaGenericLdapAuthenticationService -> fr.prados.contacts.providers.ldap.generic.beta.BetaGenericLdapAuthenticationService:
-fr.prados.contacts.tools.CheckContext -> fr.prados.contacts.tools.a:
+fr.prados.contacts.tools.CheckContext -> fr.prados.contacts.b.a:
     boolean isContactInline(android.app.Activity) -> a
     boolean isAndroidMinVersion(android.app.Activity,int) -> a
-fr.prados.contacts.tools.CheckContext$1 -> fr.prados.contacts.tools.b:
+fr.prados.contacts.tools.CheckContext$1 -> fr.prados.contacts.b.b:
     android.app.Activity val$context -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.CheckContext$2 -> fr.prados.contacts.tools.c:
+fr.prados.contacts.tools.CheckContext$2 -> fr.prados.contacts.b.c:
     android.app.Activity val$context -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.Eula -> fr.prados.contacts.tools.d:
+fr.prados.contacts.tools.Eula -> fr.prados.contacts.b.d:
     java.lang.String TAG -> a
     void showEula(android.app.Activity,int) -> a
     java.lang.CharSequence readFile(android.app.Activity,int) -> b
-fr.prados.contacts.tools.Eula$1 -> fr.prados.contacts.tools.e:
+fr.prados.contacts.tools.Eula$1 -> fr.prados.contacts.b.e:
     android.content.SharedPreferences val$preferences -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.Eula$2 -> fr.prados.contacts.tools.f:
+fr.prados.contacts.tools.Eula$2 -> fr.prados.contacts.b.f:
     android.app.Activity val$activity -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.Eula$3 -> fr.prados.contacts.tools.g:
+fr.prados.contacts.tools.Eula$3 -> fr.prados.contacts.b.g:
     android.app.Activity val$activity -> a
     void onCancel(android.content.DialogInterface) -> onCancel
-fr.prados.contacts.tools.HelpDebug -> fr.prados.contacts.tools.h:
-    fr.prados.contacts.tools.HelpDebug$Debug _debug -> a
-    void strictDefaults() -> a
-    void strictDeath() -> b
-fr.prados.contacts.tools.HelpDebug$1 -> fr.prados.contacts.tools.i:
-    void strictDefault() -> a
-    void strictDeath() -> b
-fr.prados.contacts.tools.HelpDebug$2 -> fr.prados.contacts.tools.j:
-    void strictDefault() -> a
-    void strictDeath() -> b
-fr.prados.contacts.tools.HelpDebug$Debug -> fr.prados.contacts.tools.k:
-    void strictDefault() -> a
-    void strictDeath() -> b
-fr.prados.contacts.tools.LogMarket -> fr.prados.contacts.tools.l:
+fr.prados.contacts.tools.LogMarket -> fr.prados.contacts.b.h:
     fr.prados.contacts.tools.LogMarket$WTF _wtf -> a
     void wtf(java.lang.String,java.lang.String) -> a
     void wtf(java.lang.String,java.lang.Throwable) -> a
     void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
-fr.prados.contacts.tools.LogMarket$1 -> fr.prados.contacts.tools.m:
+fr.prados.contacts.tools.LogMarket$1 -> fr.prados.contacts.b.i:
     void wtf(java.lang.String,java.lang.String) -> a
     void wtf(java.lang.String,java.lang.Throwable) -> a
     void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
-fr.prados.contacts.tools.LogMarket$2 -> fr.prados.contacts.tools.n:
+fr.prados.contacts.tools.LogMarket$2 -> fr.prados.contacts.b.j:
     void wtf(java.lang.String,java.lang.String) -> a
     void wtf(java.lang.String,java.lang.Throwable) -> a
     void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
-fr.prados.contacts.tools.LogMarket$WTF -> fr.prados.contacts.tools.o:
+fr.prados.contacts.tools.LogMarket$WTF -> fr.prados.contacts.b.k:
     void wtf(java.lang.String,java.lang.String) -> a
     void wtf(java.lang.String,java.lang.Throwable) -> a
     void wtf(java.lang.String,java.lang.String,java.lang.Throwable) -> a
-fr.prados.contacts.tools.Photos -> fr.prados.contacts.tools.p:
+fr.prados.contacts.tools.Photos -> fr.prados.contacts.b.l:
     int _photoSize -> a
     void startup(android.content.Context) -> a
     android.graphics.Bitmap extractFace(byte[]) -> a
-fr.prados.contacts.tools.QueryMarket -> fr.prados.contacts.tools.q:
+fr.prados.contacts.tools.QueryMarket -> fr.prados.contacts.b.m:
     boolean _askRate -> a
     void startSearchMarket(android.content.Context,java.lang.String,int,boolean) -> a
-    void extendDayPending(android.content.Context) -> a
     android.content.Intent searchMarket(android.content.Context,java.lang.String,boolean) -> a
-fr.prados.contacts.tools.RateActivity -> fr.prados.contacts.tools.RateActivity:
-    void onCreate(android.os.Bundle) -> onCreate
-    void onResume() -> onResume
-    void onPause() -> onPause
-    android.app.Dialog onCreateDialog(int) -> onCreateDialog
-fr.prados.contacts.tools.RateActivity$1 -> fr.prados.contacts.tools.r:
-    fr.prados.contacts.tools.RateActivity this$0 -> a
-    android.content.SharedPreferences val$preferences -> b
-    void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.RateActivity$2 -> fr.prados.contacts.tools.s:
-    fr.prados.contacts.tools.RateActivity this$0 -> a
-    android.content.SharedPreferences val$preferences -> b
-    void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.RateActivity$3 -> fr.prados.contacts.tools.t:
-    fr.prados.contacts.tools.RateActivity this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-fr.prados.contacts.tools.TOAPhoneNumberFormats -> fr.prados.contacts.tools.u:
+fr.prados.contacts.tools.TOAPhoneNumberFormats -> fr.prados.contacts.b.n:
     android.net.Uri CONTENT_URI -> a
     java.lang.String[] COLS -> i
     java.lang.String[] COLS_MCC -> j
@@ -2928,60 +2841,18 @@ fr.prados.contacts.tools.TOAPhoneNumberFormats -> fr.prados.contacts.tools.u:
     java.lang.CharSequence extractSubscriberNumber(java.lang.CharSequence) -> a
     int getServerMCC(java.lang.String) -> a
     int getPhoneMCC() -> a
-fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler -> fr.prados.contacts.tools.v:
+fr.prados.contacts.tools.TOAPhoneNumberFormats$1MyHandler -> fr.prados.contacts.b.o:
     java.lang.String iso639 -> a
     void startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> startElement
-fr.prados.contacts.tools.Update -> fr.prados.contacts.tools.w:
+fr.prados.contacts.tools.Update -> fr.prados.contacts.b.p:
     void showUdpate(android.app.Activity,int,int) -> a
     java.lang.CharSequence readFile(android.app.Activity,int) -> a
-fr.prados.contacts.tools.Update$1 -> fr.prados.contacts.tools.x:
+fr.prados.contacts.tools.Update$1 -> fr.prados.contacts.b.q:
     android.content.SharedPreferences val$preferences -> a
     int val$version -> b
     void onClick(android.content.DialogInterface,int) -> onClick
 fr.prados.provider.contacts.ldap.R -> fr.prados.a.a.a.a:
-fr.prados.provider.contacts.ldap.R$id -> fr.prados.a.a.a.b:
-    int account_basedn -> account_basedn
-    int account_help -> account_help
-    int account_label_basedn -> account_label_basedn
-    int account_mapping -> account_mapping
-    int account_normal -> account_normal
-    int account_password -> account_password
-    int account_quick_password -> account_quick_password
-    int account_quick_username -> account_quick_username
-    int account_ssl -> account_ssl
-    int account_tls -> account_tls
-    int account_username -> account_username
-    int btn_back_p2 -> btn_back_p2
-    int btn_back_p3 -> btn_back_p3
-    int btn_done -> btn_done
-    int btn_done_p2 -> btn_done_p2
-    int btn_done_p3 -> btn_done_p3
-    int btn_next_p1 -> btn_next_p1
-    int btn_next_p2 -> btn_next_p2
-    int instructions -> instructions
-    int invite -> invite
-    int know -> know
-    int label_account_quick_password -> label_account_quick_password
-    int label_account_quick_username -> label_account_quick_username
-    int label_hostname -> label_hostname
-    int ldap_crypt -> ldap_crypt
-    int ldap_server_name -> ldap_server_name
-    int login -> login
-    int logo -> logo
-    int page1 -> page1
-    int page2 -> page2
-    int page3 -> page3
-    int wizard -> wizard
-fr.prados.provider.contacts.ldap.R$layout -> fr.prados.a.a.a.c:
-    int page1 -> page1
-    int page2 -> page2
-    int page3 -> page3
-    int predefinedwizard -> predefinedwizard
-    int wizard -> wizard
-fr.prados.provider.contacts.ldap.R$raw -> fr.prados.a.a.a.d:
-    int eula -> eula
-    int update -> update
-fr.prados.provider.contacts.ldap.R$string -> fr.prados.a.a.a.e:
+fr.prados.provider.contacts.ldap.R$string -> fr.prados.a.a.a.b:
     int account_know -> account_know
     int account_know_password -> account_know_password
     int account_normal -> account_normal
