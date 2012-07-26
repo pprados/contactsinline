@@ -127,222 +127,255 @@ import fr.prados.contacts.tools.QueryMarket;
 import fr.prados.contacts.tools.Update;
 
 @SuppressWarnings("deprecation")
-public final class VolatileContactsListActivity extends AbsListActivity 
-implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
+public final class VolatileContactsListActivity extends AbsListActivity implements
+		OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 {
-	private static final boolean PATCH_BUG_V14=true;
-	
-	private static final boolean HONEYCOMB=Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB;
-	private static final boolean ICS=Build.VERSION.SDK_INT>=Build.VERSION_CODES.ICE_CREAM_SANDWICH;
-	public static final boolean withFlurry=(!EMULATOR && !DEBUG);
-	private static final String FlurryError="error";
-	
-	private static final String TAG = "VolatileContacts";
-	
-	private final Handler _handler=new Handler();
+	private static final boolean	PATCH_BUG_V14				= true;
 
-	private static final int DISPLAY_NUMBER_OF_CONTACTS = 1 << 1;
+	private static final boolean	HONEYCOMB					= Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB;
 
-	private static final int DISPLAY_PHOTO = 1 << 2;
+	private static final boolean	ICS							= Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 
-	private static final int DISPLAY_HEADER = 1 << 3;
+	public static final boolean		withFlurry					= (!EMULATOR && !DEBUG);
 
-	private static final int DISPLAY_CALLBUTTON = 1 << 4;
+	private static final String		FlurryError					= "error";
 
-	private static final int DISPLAY_DATA = 1 << 5;
+	private static final String		TAG							= "VolatileContacts";
 
-	private static final int USE_QUICK_CONTACT = 1 << 6;
+	private final Handler			_handler					= new Handler();
+
+	private static final int		DISPLAY_NUMBER_OF_CONTACTS	= 1 << 1;
+
+	private static final int		DISPLAY_PHOTO				= 1 << 2;
+
+	private static final int		DISPLAY_HEADER				= 1 << 3;
+
+	private static final int		DISPLAY_CALLBUTTON			= 1 << 4;
+
+	private static final int		DISPLAY_DATA				= 1 << 5;
+
+	private static final int		USE_QUICK_CONTACT			= 1 << 6;
 
 	/** Extension is present ? */
-	private boolean _isExtension;
-	
+	private boolean					_isExtension;
+
 	/** Check double import at the same time */
-	private boolean _asynImport;
-	
+	private boolean					_asynImport;
+
 	/** Account is present ? */
-	private static boolean _isDone;
+	private static boolean			_isDone;
 
-	private int _show;
+	private int						_show;
 
-	private int _mode;
-	
-	private boolean _showHeader;
+	private int						_mode;
 
-	private int _scrollState;
+	private boolean					_showHeader;
 
-	private ContactsAdapter _adapter;
+	private int						_scrollState;
 
-	private QueryHandler _queryHandler;
-	
-	private ImportAllHandler _importAllHandler;
+	private ContactsAdapter			_adapter;
 
-	private String _queryMode = Provider.QUERY_MODE_ALL;
+	private QueryHandler			_queryHandler;
 
-	private SearchRecentSuggestions _suggestions;
+	private ImportAllHandler		_importAllHandler;
+
+	private String					_queryMode					= Provider.QUERY_MODE_ALL;
+
+	private SearchRecentSuggestions	_suggestions;
 
 	/** Query for current list */
-	private String _lastQuery;
+	private String					_lastQuery;
 
-	private TextView _errorsText;
-	
-	private TextView _emptyText;
+	private TextView				_errorsText;
 
-	private TextView _totalContacts;
-	
-	private MenuItem _searchMenu;
-	private SearchView _searchView;
+	private TextView				_emptyText;
 
-	private static final int MODE_UNKNOWN = -1;
+	private TextView				_totalContacts;
 
-	private static final int MODE_NORMAL = 0;
-	private static final int MODE_PICK_CONTACT = 1 << 1;
-	private static final int MODE_PICK_PHONE = 1 << 2;
-	private static final int MODE_PICK_POSTAL = 1 << 3;
-	private static final int MODE_SEARCH = 1 << 4;
-	//private static final int MODE_MASK_PICKER = MODE_PICK_CONTACT | MODE_PICK_PHONE | MODE_PICK_POSTAL;
+	private MenuItem				_searchMenu;
 
-	private static final int SHOW_NORMAL        = DISPLAY_NUMBER_OF_CONTACTS | DISPLAY_PHOTO | DISPLAY_HEADER | DISPLAY_CALLBUTTON | DISPLAY_DATA | USE_QUICK_CONTACT  ;
-	private static final int SHOW_LIST          = DISPLAY_NUMBER_OF_CONTACTS | USE_QUICK_CONTACT | DISPLAY_HEADER | DISPLAY_DATA;
-	private static final int SHOW_LIST_CONTACTS = SHOW_NORMAL;
+	private SearchView				_searchView;
 
-	private static final int SHOW_PICK_CONTACT = DISPLAY_PHOTO | DISPLAY_HEADER | DISPLAY_DATA;
+	private static final int		MODE_UNKNOWN				= -1;
 
-	private static final int SHOW_PICK_PHONE = DISPLAY_HEADER | DISPLAY_DATA;
+	private static final int		MODE_NORMAL					= 0;
 
-	private static final int SHOW_PICK_POSTAL = DISPLAY_HEADER | DISPLAY_DATA;
+	private static final int		MODE_PICK_CONTACT			= 1 << 1;
 
+	private static final int		MODE_PICK_PHONE				= 1 << 2;
+
+	private static final int		MODE_PICK_POSTAL			= 1 << 3;
+
+	private static final int		MODE_SEARCH					= 1 << 4;
+
+	// private static final int MODE_MASK_PICKER = MODE_PICK_CONTACT | MODE_PICK_PHONE |
+	// MODE_PICK_POSTAL;
+
+	private static final int		SHOW_NORMAL					= DISPLAY_NUMBER_OF_CONTACTS
+																		| DISPLAY_PHOTO
+																		| DISPLAY_HEADER
+																		| DISPLAY_CALLBUTTON
+																		| DISPLAY_DATA
+																		| USE_QUICK_CONTACT;
+
+	private static final int		SHOW_LIST					= DISPLAY_NUMBER_OF_CONTACTS
+																		| USE_QUICK_CONTACT
+																		| DISPLAY_HEADER
+																		| DISPLAY_DATA;
+
+	private static final int		SHOW_LIST_CONTACTS			= SHOW_NORMAL;
+
+	private static final int		SHOW_PICK_CONTACT			= DISPLAY_PHOTO | DISPLAY_HEADER
+																		| DISPLAY_DATA;
+
+	private static final int		SHOW_PICK_PHONE				= DISPLAY_HEADER | DISPLAY_DATA;
+
+	private static final int		SHOW_PICK_POSTAL			= DISPLAY_HEADER | DISPLAY_DATA;
 
 	// static arrays for optimize the code
-	private static final String[] colDataId = new String[]
-	{ BaseColumns._ID };
+	private static final String[]	colDataId					= new String[]
+																{ BaseColumns._ID };
 
-	private static final String[] colsNormal = new String[]
-	{ 
-		BaseColumns._ID, Contacts.DISPLAY_NAME, 
-		RawContacts.ACCOUNT_TYPE,RawContacts.ACCOUNT_NAME,VolatileRawContact.LOOKUP, 
-		Phone.TYPE, Phone.NUMBER 
-	};
+	private static final String[]	colsNormal					= new String[]
+																{ BaseColumns._ID,
+			Contacts.DISPLAY_NAME, RawContacts.ACCOUNT_TYPE, RawContacts.ACCOUNT_NAME,
+			VolatileRawContact.LOOKUP, Phone.TYPE, Phone.NUMBER };
 
-	private static final String[] colsPickContact = new String[]
-	{ 
-		BaseColumns._ID, Contacts.DISPLAY_NAME,
-		RawContacts.ACCOUNT_TYPE,RawContacts.ACCOUNT_NAME,VolatileRawContact.LOOKUP, 
-	};
+	private static final String[]	colsPickContact				= new String[]
+																{ BaseColumns._ID,
+			Contacts.DISPLAY_NAME, RawContacts.ACCOUNT_TYPE, RawContacts.ACCOUNT_NAME,
+			VolatileRawContact.LOOKUP,							};
 
-	private static final String[] colsPickPhone = new String[]
-	{ 
-		BaseColumns._ID, Contacts.DISPLAY_NAME, 
-		RawContacts.ACCOUNT_TYPE,RawContacts.ACCOUNT_NAME,VolatileRawContact.LOOKUP, 
-		Phone.RAW_CONTACT_ID, Phone.TYPE, Phone.LABEL, Phone.NUMBER };
+	private static final String[]	colsPickPhone				= new String[]
+																{ BaseColumns._ID,
+			Contacts.DISPLAY_NAME, RawContacts.ACCOUNT_TYPE, RawContacts.ACCOUNT_NAME,
+			VolatileRawContact.LOOKUP, Phone.RAW_CONTACT_ID, Phone.TYPE, Phone.LABEL, Phone.NUMBER };
 
-	private static final String[] colsPickPostal = new String[]
-	{ 
-		BaseColumns._ID, Contacts.DISPLAY_NAME, 
-		RawContacts.ACCOUNT_TYPE,RawContacts.ACCOUNT_NAME,VolatileRawContact.LOOKUP, StructuredPostal.RAW_CONTACT_ID, 
-		StructuredPostal.LABEL, StructuredPostal.TYPE, StructuredPostal.FORMATTED_ADDRESS
-	};
+	private static final String[]	colsPickPostal				= new String[]
+																{ BaseColumns._ID,
+			Contacts.DISPLAY_NAME, RawContacts.ACCOUNT_TYPE, RawContacts.ACCOUNT_NAME,
+			VolatileRawContact.LOOKUP, StructuredPostal.RAW_CONTACT_ID, StructuredPostal.LABEL,
+			StructuredPostal.TYPE, StructuredPostal.FORMATTED_ADDRESS };
 
-	private static final String[] colAuthority = new String[]
-	{ ContactsContract.AUTHORITY };
+	private static final String[]	colAuthority				= new String[]
+																{ ContactsContract.AUTHORITY };
 
-	private static final String[] colForCallOrSms = new String[]
-	{ BaseColumns._ID, Phone.NUMBER, Phone.IS_SUPER_PRIMARY, Phone.TYPE };
+	private static final String[]	colForCallOrSms				= new String[]
+																{ BaseColumns._ID, Phone.NUMBER,
+			Phone.IS_SUPER_PRIMARY, Phone.TYPE					};
 
 	public VolatileContactsListActivity()
 	{
-		if (V) Log.v("LIFE", "Constructor me=" + hashCode());
+		if (V)
+			Log.v("LIFE", "Constructor me=" + hashCode());
 	}
-	class AsyncImport extends AsyncTask<Object,Void,Uri>
+
+	class AsyncImport extends AsyncTask<Object, Void, Uri>
 	{
 		@Override
 		protected void onPreExecute()
 		{
 			incProgressBar();
 		}
+
 		@Override
 		protected Uri doInBackground(Object... params)
 		{
 			if (_asynImport)
 				return null;
-			_asynImport=true;
-			return importMemoryContact((Long)params[0], (Boolean)params[1]);
+			_asynImport = true;
+			return importMemoryContact((Long) params[0], (Boolean) params[1]);
 		}
+
 		@Override
 		protected void onPostExecute(Uri result)
 		{
 			super.onPostExecute(result);
-			_asynImport=false;
-			decProgressBar();				
+			_asynImport = false;
+			decProgressBar();
 		}
 	};
 
 	static class ImportAllHandler extends AsyncTask<Cursor, Void, Void>
 	{
-		private VolatileContactsListActivity _activity;
+		private VolatileContactsListActivity	_activity;
+
 		@Override
 		protected Void doInBackground(Cursor... paramArrayOfParams)
 		{
-			final Cursor cursor=paramArrayOfParams[0];
+			final Cursor cursor = paramArrayOfParams[0];
 			long id;
 			if (cursor.moveToFirst())
 			{
 				do
 				{
-					id=cursor.getLong(0 /* BaseColumns._ID */);
+					id = cursor.getLong(0 /* BaseColumns._ID */);
 					ProvidersManager.init();
-					Uri uri=ProvidersManager.importVolatileContactToAndroid(id, false, Application.context); // $codepro.audit.disable variableDeclaredInLoop
-					long rawId=Long.parseLong(uri.getLastPathSegment()); // $codepro.audit.disable variableDeclaredInLoop
+					Uri uri = ProvidersManager.importVolatileContactToAndroid(id, false,
+							Application.context); // $codepro.audit.disable variableDeclaredInLoop
+					long rawId = Long.parseLong(uri.getLastPathSegment()); // $codepro.audit.disable
+																			// variableDeclaredInLoop
 					ProvidersManager.fixeSyncContactInAndroid(Application.context.getResources(),
-							_activity.getContentResolver(), 
-							rawId);
+							_activity.getContentResolver(), rawId);
 				} while (cursor.moveToNext());
 			}
 			return null;
 		}
+
 		@Override
 		protected void onPostExecute(Void result)
 		{
 			super.onPostExecute(result);
 			_activity.removeDialog(DIALOG_IMPORT_ALL_RESULT);
-			_activity._importAllHandler=null;
+			_activity._importAllHandler = null;
 		}
 	}
+
 	/**
 	 * Use with RetainNonConfigurationInstance
+	 * 
 	 * @version 1.0
 	 * @since 1.0
 	 * @author Philippe PRADOS
 	 */
 	static final class Retain
 	{
-		public QueryHandler _queryhandler;
-		public Cursor _cursor;
-		public boolean _onSearchRequest;
-		public ImportAllHandler _importAllHandler;
+		public QueryHandler		_queryhandler;
+
+		public Cursor			_cursor;
+
+		public boolean			_onSearchRequest;
+
+		public ImportAllHandler	_importAllHandler;
 	}
-	
-	private int _cntProgress;
+
+	private int	_cntProgress;
+
 	void incProgressBar()
 	{
-		if (++_cntProgress>0)
+		if (++_cntProgress > 0)
 		{
-			if (_queryHandler._progressDialog==null)
+			if (_queryHandler._progressDialog == null)
 				setProgressBarIndeterminateVisibility(true);
 		}
 	}
+
 	void decProgressBar()
 	{
-		if (E && _cntProgress<=0)
-			Log.e(TAG,"dec progress bar with "+_cntProgress);
-		if (--_cntProgress<=0)
+		if (E && _cntProgress <= 0)
+			Log.e(TAG, "dec progress bar with " + _cntProgress);
+		if (--_cntProgress <= 0)
 		{
 			setProgressBarIndeterminateVisibility(false);
-			if (!D) _cntProgress=0;
+			if (!D)
+				_cntProgress = 0;
 		}
 		else
 			setProgressBarIndeterminateVisibility(true);
 	}
+
 	@TargetApi(11)
+	// FIXME
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
 	{
@@ -351,39 +384,40 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		if (withFlurry)
 		{
 			FlurryAgent.onStartSession(this, "YU1VATY1MRJ5XWV9RTJ4");
-			//FlurryAgent.setLogEnabled(false);
+			// FlurryAgent.setLogEnabled(false);
 		}
 
-		if (V) Log.v("LIFE", "onCreate");
+		if (V)
+			Log.v("LIFE", "onCreate");
 		if (!checkContact())
 			return;
-		if (!CheckContext.isAndroidMinVersion(this,7))
+		if (!CheckContext.isAndroidMinVersion(this, 7))
 			return;
-		Update.showUdpate(this,Application.VERSION,R.raw.update);
-		Eula.showEula(this,R.raw.eula);
+		Update.showUdpate(this, Application.VERSION, R.raw.update);
+		Eula.showEula(this, R.raw.eula);
 		HelpActivity.showIntro(this);
-		
+
 		AccountManager.get(this).addOnAccountsUpdatedListener(this, null, false);
 
 		setContentView(R.layout.contacts_list_content);
 		setProgressBarIndeterminateVisibility(true);
 		setProgressBarIndeterminate(false);
 
-		_errorsText=(TextView) findViewById(R.id.errorsText);
+		_errorsText = (TextView) findViewById(R.id.errorsText);
 		_emptyText = (TextView) findViewById(R.id.emptyText);
 		_emptyText.setMovementMethod(LinkMovementMethod.getInstance());
-		
+
 		final AbsListView list = getListView();
 		list.setFocusable(true);
 		list.setOnCreateContextMenuListener(this);
-		if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB)
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
 			list.setFastScrollAlwaysVisible(true);
 
 		// We manually save/restore the listview state
 		list.setSaveEnabled(false);
 
-		_suggestions = new SearchRecentSuggestions(this, 
-				VolatileContactsRecentSuggestionsProvider.AUTHORITY, 
+		_suggestions = new SearchRecentSuggestions(this,
+				VolatileContactsRecentSuggestionsProvider.AUTHORITY,
 				VolatileContactsRecentSuggestionsProvider.MODE);
 		_queryHandler = new QueryHandler(this);
 		handleIntent(getIntent());
@@ -394,17 +428,20 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		{
 			if (!HONEYCOMB)
 			{
-				final ArrayList<ListView.FixedViewInfo> headers = new ArrayList<ListView.FixedViewInfo>(3);
-				final ListView.FixedViewInfo header = ((ListView)getListView()).new FixedViewInfo();
+				final ArrayList<ListView.FixedViewInfo> headers = new ArrayList<ListView.FixedViewInfo>(
+						3);
+				final ListView.FixedViewInfo header = ((ListView) getListView()).new FixedViewInfo();
 				header.isSelectable = true;
 				final LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(
-					R.layout.total_contacts, null, false);
+						R.layout.total_contacts, null, false);
 				_totalContacts = (TextView) layout.findViewById(R.id.totalContactsText);
-				if (Build.VERSION.SDK_INT < 8) _totalContacts.setGravity(Gravity.CENTER);
+				if (Build.VERSION.SDK_INT < 8)
+					_totalContacts.setGravity(Gravity.CENTER);
 				header.view = layout;
 				header.isSelectable = false;
 				headers.add(header);
-				setListAdapter(new HeaderViewListAdapter(headers, new ArrayList<ListView.FixedViewInfo>(3), _adapter));
+				setListAdapter(new HeaderViewListAdapter(headers,
+						new ArrayList<ListView.FixedViewInfo>(3), _adapter));
 			}
 			else
 				setListAdapter(_adapter);
@@ -420,7 +457,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			setTitle(title);
 
 		// Auto open search, but not for main action.
-//		final String action = intent.getAction();
+		// final String action = intent.getAction();
 		// Wait provider initialization before get accounts.
 		findProviders(false);
 	}
@@ -428,35 +465,40 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	@Override
 	public void onAccountsUpdated(Account[] accounts)
 	{
-		if (D) Log.d(TAG,"Detect accounts updated");
+		if (D)
+			Log.d(TAG, "Detect accounts updated");
 		findProviders(true);
 	}
+
 	void findProviders(final boolean newProvider)
 	{
-		_isDone=_isExtension=false;
-		if (_adapter._cursor==null || _adapter._cursor.getCount()==0)
+		_isDone = _isExtension = false;
+		if (_adapter._cursor == null || _adapter._cursor.getCount() == 0)
 			_emptyText.setText("");
-		
+
 		new AsyncTask<Void, Void, Void>()
 		{
 			@Override
-			protected void onPreExecute() 
+			protected void onPreExecute()
 			{
 				incProgressBar();
 			}
+
 			@Override
 			protected Void doInBackground(Void... params)
 			{
-				if (newProvider) ProvidersManager.reset();
+				if (newProvider)
+					ProvidersManager.reset();
 				ProvidersManager.init();
 				ProvidersManager.waitInit();
 				return null;
 			}
+
 			@Override
 			public void onPostExecute(Void r)
 			{
 				decProgressBar();
-				_isExtension=!ProvidersManager.isEmpty();
+				_isExtension = !ProvidersManager.isEmpty();
 				if (!_isExtension)
 				{
 					_emptyText.setText(R.string.help_need_provider);
@@ -465,7 +507,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				}
 				final Account[] accounts = ProvidersManager.getAccounts();
 				_isDone = (accounts != null) && (accounts.length > 0);
-				if (_searchMenu!=null)
+				if (_searchMenu != null)
 				{
 					setSearchVisible(_isDone);
 				}
@@ -475,11 +517,12 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				}
 				else
 				{
-					if ((_adapter._cursor!=null) && (_adapter._cursor.getCount()==0))
+					if ((_adapter._cursor != null) && (_adapter._cursor.getCount() == 0))
 					{
-						_emptyText.setText(R.string.noMatchingContacts);				
+						_emptyText.setText(R.string.noMatchingContacts);
 						// Bug with version 14
-						if (!PATCH_BUG_V14 || Build.VERSION.SDK_INT!=Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+						if (!PATCH_BUG_V14
+								|| Build.VERSION.SDK_INT != Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 							onSearchRequested();
 					}
 					else if (!_queryHandler._pending)
@@ -487,10 +530,11 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 						if ((_mode == MODE_SEARCH) || (_mode == MODE_NORMAL))
 						{
 							_emptyText.setText(R.string.help_first_time);
-							if ((_adapter._cursor==null) || (_adapter._cursor.getCount()==0))
+							if ((_adapter._cursor == null) || (_adapter._cursor.getCount() == 0))
 							{
 								// Bug with version 14
-								if (!PATCH_BUG_V14 || Build.VERSION.SDK_INT!=Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+								if (!PATCH_BUG_V14
+										|| Build.VERSION.SDK_INT != Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 									onSearchRequested();
 							}
 						}
@@ -500,33 +544,34 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 						}
 						if (!Intent.ACTION_SEARCH.equals(getIntent().getAction()))
 						{
-							if (_searchMenu!=null)
+							if (_searchMenu != null)
 							{
 								setSearchVisible(_isDone);
 							}
-							else
-								if (E) Log.e(TAG,"Menu not created");
+							else if (E)
+								Log.e(TAG, "Menu not created");
 						}
 					}
 					else
 					{
 						_emptyText.setText(R.string.currentQuery);
 					}
-					if (_mode==MODE_SEARCH)
+					if (_mode == MODE_SEARCH)
 					{
 						if ((_lastQuery != null) && (_adapter._cursor == null))
 						{
-							if (D) Log.d(TAG,"Start query for onPostExec, MODE_SEARCH");
+							if (D)
+								Log.d(TAG, "Start query for onPostExec, MODE_SEARCH");
 							startQuery();
 						}
 					}
 				}
 			}
-			
+
 		}.execute();
-		
+
 	}
-	
+
 	private void handleIntent(final Intent intent)
 	{
 		final String action = intent.getAction();
@@ -545,7 +590,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				_show = SHOW_PICK_PHONE;
 				_queryMode = Provider.QUERY_MODE_ALL_WITH_PHONE;
 			}
-			else if (StructuredPostal.CONTENT_ITEM_TYPE.equals(type) || StructuredPostal.CONTENT_TYPE.equals(type))
+			else if (StructuredPostal.CONTENT_ITEM_TYPE.equals(type)
+					|| StructuredPostal.CONTENT_TYPE.equals(type))
 			{
 				_mode = MODE_PICK_POSTAL;
 				_show = SHOW_PICK_POSTAL;
@@ -611,28 +657,30 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			_lastQuery = queryData;
 		}
 		if (_mode == MODE_UNKNOWN)
-			LogMarket.wtf(TAG, "Unknown mode "+_mode);
-		if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY) && !EMULATOR )
+			LogMarket.wtf(TAG, "Unknown mode " + _mode);
+		if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY) && !EMULATOR)
 			_show &= ~DISPLAY_CALLBUTTON;
 	}
 
 	private boolean restoreRetainNonConfigurationInstance()
 	{
-		if (D) Log.d("LIFE", "...getLastNonConfigurationInstance");
-		final Retain retain=(Retain)getLastNonConfigurationInstance();
-		if (D) Log.d("LIFE", "...getLastNonConfigurationInstance return "+retain);
-		if (retain!=null)
+		if (D)
+			Log.d("LIFE", "...getLastNonConfigurationInstance");
+		final Retain retain = (Retain) getLastNonConfigurationInstance();
+		if (D)
+			Log.d("LIFE", "...getLastNonConfigurationInstance return " + retain);
+		if (retain != null)
 		{
-			_queryHandler=retain._queryhandler;
-			_queryHandler._activity=new WeakReference<VolatileContactsListActivity>(this);
-			if (retain._cursor!=null)
+			_queryHandler = retain._queryhandler;
+			_queryHandler._activity = new WeakReference<VolatileContactsListActivity>(this);
+			if (retain._cursor != null)
 			{
 				_adapter.changeCursor(retain._cursor);
 			}
-			_importAllHandler=retain._importAllHandler;
-			if (_importAllHandler!=null)
+			_importAllHandler = retain._importAllHandler;
+			if (_importAllHandler != null)
 			{
-				_importAllHandler._activity=this;
+				_importAllHandler._activity = this;
 				showDialog(DIALOG_IMPORT_ALL_RESULT);
 			}
 			else
@@ -649,7 +697,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	protected void onRestart()
 	{
 		super.onRestart();
-		if (V) Log.v("LIFE", "onRestart");
+		if (V)
+			Log.v("LIFE", "onRestart");
 
 		// The cursor was killed off in onStop(), so we need to get a new one here
 		// We do not perform the query if a filter is set on the list because the
@@ -659,14 +708,15 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		{
 			if ((_lastQuery != null) && (_adapter._cursor == null))
 			{
-				if (D) Log.d(TAG,"Restart previous request "+_lastQuery);
+				if (D)
+					Log.d(TAG, "Restart previous request " + _lastQuery);
 				startQuery();
 			}
 		}
 		else
 		{
-			_lastQuery=null;
-			_adapter._cursor=null;
+			_lastQuery = null;
+			_adapter._cursor = null;
 		}
 
 	}
@@ -675,19 +725,22 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	protected void onRestoreInstanceState(final Bundle state)
 	{
 		super.onRestoreInstanceState(state);
-		if (V) Log.v("LIFE", "onRestoreInstanceState");
+		if (V)
+			Log.v("LIFE", "onRestoreInstanceState");
 		if (!restoreRetainNonConfigurationInstance())
 		{
 			_restoreListState = state.getParcelable(STATE_LIST_STATE);
 			_queryMode = state.getString(STATE_QUERY_MODE);
 			_lastQuery = state.getString(STATE_LAST_REQUEST);
-			if (D) Log.d(TAG, "restore lastQuery="+_lastQuery);
+			if (D)
+				Log.d(TAG, "restore lastQuery=" + _lastQuery);
 			if (REQUERY_AFTER_KILL)
 			{
 				if (!_queryHandler._pending && (_lastQuery != null) && (_adapter._cursor == null))
 				{
-					if (D) Log.d(TAG,"start query for on restore");
-					new AsyncTask<Void,Void,Void>()
+					if (D)
+						Log.d(TAG, "start query for on restore");
+					new AsyncTask<Void, Void, Void>()
 					{
 						@Override
 						protected Void doInBackground(Void... params)
@@ -695,8 +748,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 							ProvidersManager.waitInit();
 							return null;
 						}
+
 						@Override
-						protected void onPostExecute(Void result) 
+						protected void onPostExecute(Void result)
 						{
 							startQuery();
 						}
@@ -711,77 +765,84 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		_adapter.setTotalContactCountView();
 		_queryHandler.showError(this);
 	}
+
 	@Override
 	protected void onResume()
 	{
 		super.onResume();
-		if (V) Log.v("LIFE", "onResume");
+		if (V)
+			Log.v("LIFE", "onResume");
 		_scrollState = OnScrollListener.SCROLL_STATE_IDLE;
-		if (_searchMenu!=null)
+		if (_searchMenu != null)
 		{
 			setSearchVisible(_isDone);
 			if (ProvidersManager.isAccountEmpty())
 			{
-				_lastQuery=null;
-				_adapter._cursor=null;
+				_lastQuery = null;
+				_adapter._cursor = null;
 			}
 		}
-		TypedArray a=obtainStyledAttributes(R.style.Theme,new int[]{R.attr.showHeader});
-		_showHeader=a.getBoolean(0, true);
+		TypedArray a = obtainStyledAttributes(R.style.Theme, new int[]
+		{ R.attr.showHeader });
+		_showHeader = a.getBoolean(0, true);
 	}
 
 	@TargetApi(14)
 	private void setSearchVisible(boolean visible)
 	{
-		if (_searchMenu==null) return;
-		if (!visible && Build.VERSION.SDK_INT>=Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+		if (_searchMenu == null)
+			return;
+		if (!visible && Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 		{
 			_searchMenu.collapseActionView();
 		}
 		_searchMenu.setVisible(visible);
 	}
-	 @TargetApi(11)
-	 @Override
-	 protected void onSaveInstanceState(final Bundle state)
-	 {
-		 super.onSaveInstanceState(state);
-		 if (V) Log.v("LIFE", "onSaveInstanceState");
-		 state.putParcelable(STATE_LIST_STATE,
-		 getListView().onSaveInstanceState());
-		 state.putBoolean(STATE_FOCUS, getListView().hasFocus());
-		 state.putString(STATE_LAST_REQUEST, _lastQuery);
-		 state.putString(STATE_QUERY_MODE, _queryMode);
-		 if (D) Log.d(TAG,"Save lastquery="+_lastQuery);
-		 AbsListView listView=getListView();
-		 // Hack to manage the getCheckedItemPosition() not present in AbsListView
-		 if (listView instanceof ListView)
-			 ((ListView)listView).getCheckedItemPosition();
-		 else
-			 listView.getCheckedItemPosition();
-	 }
 
-//	@Override
-//	protected void onPause()
-//	{
-//		super.onPause();
-//		if (V) Log.v("LIFE", "onPause");
-//	}
+	@TargetApi(11)
+	@Override
+	protected void onSaveInstanceState(final Bundle state)
+	{
+		super.onSaveInstanceState(state);
+		if (V)
+			Log.v("LIFE", "onSaveInstanceState");
+		state.putParcelable(STATE_LIST_STATE, getListView().onSaveInstanceState());
+		state.putBoolean(STATE_FOCUS, getListView().hasFocus());
+		state.putString(STATE_LAST_REQUEST, _lastQuery);
+		state.putString(STATE_QUERY_MODE, _queryMode);
+		if (D)
+			Log.d(TAG, "Save lastquery=" + _lastQuery);
+		AbsListView listView = getListView();
+		// Hack to manage the getCheckedItemPosition() not present in AbsListView
+		if (listView instanceof ListView)
+			((ListView) listView).getCheckedItemPosition();
+		else
+			listView.getCheckedItemPosition();
+	}
+
+	// @Override
+	// protected void onPause()
+	// {
+	// super.onPause();
+	// if (V) Log.v("LIFE", "onPause");
+	// }
 
 	@Override
 	protected void onStop()
 	{
 		super.onStop();
-		if (V) Log.v("LIFE", "onStop");
-		
+		if (V)
+			Log.v("LIFE", "onStop");
+
 		if (withFlurry)
 			FlurryAgent.onEndSession(this);
-		
+
 		// We don't want the list to display the empty state, since when we
 		// resume it will still
 		// be there and show up while the new query is happening. After the
 		// async query finished
 		// in response to onRestart() setLoading(false) will be called.
-		if (_adapter!=null)
+		if (_adapter != null)
 		{
 			_adapter.setLoading(true);
 			_adapter.clearImageFetching();
@@ -795,26 +856,29 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	@Override
 	public Object onRetainNonConfigurationInstance()
 	{
-		if (V) Log.v("LIFE", "onRetainNonConfigurationInstance " + _adapter._cursor);
-		final Retain retain=new Retain();
-		retain._queryhandler=_queryHandler;
+		if (V)
+			Log.v("LIFE", "onRetainNonConfigurationInstance " + _adapter._cursor);
+		final Retain retain = new Retain();
+		retain._queryhandler = _queryHandler;
 		// Keep cursor when configuration change
-		retain._cursor=_adapter._cursor;
-		retain._importAllHandler=_importAllHandler;
+		retain._cursor = _adapter._cursor;
+		retain._importAllHandler = _importAllHandler;
 		return retain;
 	}
 
 	@Override
 	protected void onNewIntent(final Intent intent)
 	{
-		if (V) Log.v("LIFE", "onNewIntent()");
+		if (V)
+			Log.v("LIFE", "onNewIntent()");
 		setIntent(intent);
 		if (Intent.ACTION_SEARCH.equals(intent.getAction()))
 		{
 			final String query = intent.getStringExtra(SearchManager.QUERY);
 			_suggestions.saveRecentQuery(query, null);
 			_lastQuery = query;
-			if (D) Log.d(TAG,"Start query for new intent");
+			if (D)
+				Log.d(TAG, "Start query for new intent");
 			hideKeyboard();
 			getListView().requestFocus();
 			startQuery();
@@ -825,25 +889,27 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 	private void hideKeyboard()
 	{
-		((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(
-				getListView().getWindowToken(), 0);
+		((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE))
+				.hideSoftInputFromWindow(getListView().getWindowToken(), 0);
 	}
 
 	@TargetApi(11)
 	public void hideSearchbar()
 	{
-		((SearchManager)getSystemService(Context.SEARCH_SERVICE)).stopSearch();
-		if (_searchView!=null)
+		((SearchManager) getSystemService(Context.SEARCH_SERVICE)).stopSearch();
+		if (_searchView != null)
 		{
 			_searchView.setIconified(true);
 		}
 	}
+
 	@Override
 	protected void onDestroy()
 	{
 		super.onDestroy();
-		if (V) Log.v("LIFE", "onDestroy");
-		if (_queryHandler!=null)
+		if (V)
+			Log.v("LIFE", "onDestroy");
+		if (_queryHandler != null)
 		{
 			_queryHandler.stop();
 			AccountManager.get(this).removeOnAccountsUpdatedListener(this);
@@ -856,17 +922,21 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		super.onBackPressed();
 		ProvidersManager.wakedown();
 	}
-	
+
 	@Override
 	public void onLowMemory()
 	{
 		ProvidersManager.Cache.onLowMemory();
 	}
 
-	private static final int DIALOG_SEARCH=1;
-	private static final int DIALOG_ADDSTAR=2;
-	private static final int DIALOG_IMPORT=3;
-	private static final int DIALOG_IMPORT_ALL_RESULT=4;
+	private static final int	DIALOG_SEARCH				= 1;
+
+	private static final int	DIALOG_ADDSTAR				= 2;
+
+	private static final int	DIALOG_IMPORT				= 3;
+
+	private static final int	DIALOG_IMPORT_ALL_RESULT	= 4;
+
 	@Override
 	public Dialog onCreateDialog(int id)
 	{
@@ -874,8 +944,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		switch (id)
 		{
 			case DIALOG_SEARCH:
-				progressDialog = ProgressDialog.show(
-						this, getString(R.string.search_title), getString(R.string.search_wait), true,true,
+				progressDialog = ProgressDialog.show(this, getString(R.string.search_title),
+						getString(R.string.search_wait), true, true,
 						new DialogInterface.OnCancelListener()
 						{
 							@Override
@@ -887,80 +957,93 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 							}
 						});
 				progressDialog.setCanceledOnTouchOutside(false);
-				_queryHandler._progressDialog=progressDialog;
-				
-//				_queryHandler._progressDialog=ProgressDialog.show(
-//					this, getString(R.string.search_title), getString(R.string.search_wait), true,true,
-//					new DialogInterface.OnCancelListener()
-//					{
-//						@Override
-//						public void onCancel(DialogInterface dialog)
-//						{
-//							_queryHandler.cancel();
-//							_emptyText.setText(R.string.help_first_time);
-//							setProgressBarIndeterminateVisibility(false);
-//							removeDialog(DIALOG_SEARCH);
-//						}
-//					});
+				_queryHandler._progressDialog = progressDialog;
+
+				// _queryHandler._progressDialog=ProgressDialog.show(
+				// this, getString(R.string.search_title), getString(R.string.search_wait),
+				// true,true,
+				// new DialogInterface.OnCancelListener()
+				// {
+				// @Override
+				// public void onCancel(DialogInterface dialog)
+				// {
+				// _queryHandler.cancel();
+				// _emptyText.setText(R.string.help_first_time);
+				// setProgressBarIndeterminateVisibility(false);
+				// removeDialog(DIALOG_SEARCH);
+				// }
+				// });
 				return _queryHandler._progressDialog;
 			case DIALOG_ADDSTAR:
-				progressDialog = ProgressDialog.show(this, getString(R.string.importing_title), getString(R.string.importing_wait), true);
+				progressDialog = ProgressDialog.show(this, getString(R.string.importing_title),
+						getString(R.string.importing_wait), true);
 				progressDialog.setCanceledOnTouchOutside(true);
-//				return ProgressDialog.show(this, getString(R.string.importing_title), getString(R.string.importing_wait), true);
+				// return ProgressDialog.show(this, getString(R.string.importing_title),
+				// getString(R.string.importing_wait), true);
 				return progressDialog;
 			case DIALOG_IMPORT:
-				progressDialog = ProgressDialog.show(this, getString(R.string.importing_title), getString(R.string.importing_wait), true);
+				progressDialog = ProgressDialog.show(this, getString(R.string.importing_title),
+						getString(R.string.importing_wait), true);
 				progressDialog.setCanceledOnTouchOutside(true);
-//				return ProgressDialog.show(this, getString(R.string.importing_title), getString(R.string.importing_wait), true);
+				// return ProgressDialog.show(this, getString(R.string.importing_title),
+				// getString(R.string.importing_wait), true);
 				return progressDialog;
 			case DIALOG_IMPORT_ALL_RESULT:
-				progressDialog = ProgressDialog.show(this, getString(R.string.importing_title), getString(R.string.importing_wait), true);
+				progressDialog = ProgressDialog.show(this, getString(R.string.importing_title),
+						getString(R.string.importing_wait), true);
 				progressDialog.setCanceledOnTouchOutside(true);
-//				return ProgressDialog.show(this, getString(R.string.importing_title), getString(R.string.importing_wait), true);
+				// return ProgressDialog.show(this, getString(R.string.importing_title),
+				// getString(R.string.importing_wait), true);
 				return progressDialog;
 			default:
-				LogMarket.wtf(TAG, "Invalide dialog id "+id);
+				LogMarket.wtf(TAG, "Invalide dialog id " + id);
 				return null;
 		}
 	}
+
 	// ------------- Manage query
 	public final static class QueryHandler implements Provider.OnQuery
 	{
-		private ProgressDialog _progressDialog;
-		private WeakReference<VolatileContactsListActivity> _activity;
-		private volatile boolean _pending;
-		private StringBuilder _error=new StringBuilder(30);
-		private boolean _warning;
-		
+		private ProgressDialog								_progressDialog;
+
+		private WeakReference<VolatileContactsListActivity>	_activity;
+
+		private volatile boolean							_pending;
+
+		private StringBuilder								_error	= new StringBuilder(30);
+
+		private boolean										_warning;
+
 		private QueryHandler(final VolatileContactsListActivity context)
 		{
 			_activity = new WeakReference<VolatileContactsListActivity>(context);
 		}
+
 		public void startQuery(final String selection, final String[] selectionArgs, boolean cont)
 		{
 			cancel();
-			_pending=true;
+			_pending = true;
 			final VolatileContactsListActivity activity = _activity.get();
-			ProvidersManager.Mode mode=null;
-			String[] projection=null;
+			ProvidersManager.Mode mode = null;
+			String[] projection = null;
 			switch (activity._mode)
 			{
 				case MODE_NORMAL:
 				case MODE_SEARCH:
-					mode=ProvidersManager.Mode.CONTACT;
-					projection=colsNormal;
+					mode = ProvidersManager.Mode.CONTACT;
+					projection = colsNormal;
 					break;
 				case MODE_PICK_CONTACT:
-					mode=ProvidersManager.Mode.CONTACT;
-					projection=colsPickContact;
+					mode = ProvidersManager.Mode.CONTACT;
+					projection = colsPickContact;
 					break;
 				case MODE_PICK_PHONE:
-					mode=ProvidersManager.Mode.CONTACT_JOIN_PHONE;
-					projection=colsPickPhone;
+					mode = ProvidersManager.Mode.CONTACT_JOIN_PHONE;
+					projection = colsPickPhone;
 					break;
 				case MODE_PICK_POSTAL:
-					mode=ProvidersManager.Mode.CONTACT_JOIN_POSTAL;
-					projection=colsPickPostal;
+					mode = ProvidersManager.Mode.CONTACT_JOIN_POSTAL;
+					projection = colsPickPostal;
 					break;
 				default:
 					LogMarket.wtf(TAG, "Unknown defaut mode");
@@ -968,9 +1051,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			if (!ProvidersManager.isAccountEmpty())
 			{
 				activity.showDialog(DIALOG_SEARCH);
-				for (int i=ProvidersManager.getAccounts().length-1; i>=0;--i)
+				for (int i = ProvidersManager.getAccounts().length - 1; i >= 0; --i)
 					activity.incProgressBar();
-				
+
 				ProvidersManager.query(mode, this, projection, selection, selectionArgs);
 			}
 			else
@@ -978,17 +1061,19 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				activity.setSearchVisible(false);
 			}
 		}
+
 		public void cancel()
 		{
 			final VolatileContactsListActivity activity = _activity.get();
 			clearError(activity);
-			_pending=false;
-			_warning=false;
-			for (int i=ProvidersManager.cancelQuery()-1;i>=0;--i)
+			_pending = false;
+			_warning = false;
+			for (int i = ProvidersManager.cancelQuery() - 1; i >= 0; --i)
 			{
 				activity.decProgressBar();
 			}
 		}
+
 		public void stop()
 		{
 			cancel();
@@ -996,7 +1081,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 		private void showError(VolatileContactsListActivity activity)
 		{
-			if (_error.length()!=0)
+			if (_error.length() != 0)
 			{
 				if (withFlurry)
 					FlurryAgent.onError(FlurryError, _error.toString(), "");
@@ -1005,12 +1090,14 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			}
 			else
 				activity._errorsText.setVisibility(View.GONE);
-				
+
 		}
-		private void showWarning(VolatileContactsListActivity activity,CharSequence msg)
+
+		private void showWarning(VolatileContactsListActivity activity, CharSequence msg)
 		{
 			Toast.makeText(activity, msg, Toast.LENGTH_LONG).show();
 		}
+
 		private void clearError(VolatileContactsListActivity activity)
 		{
 			_error.setLength(0);
@@ -1019,62 +1106,63 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		}
 
 		@Override
-		public synchronized void onQueryComplete(ResultsAndExceptions result,boolean finish)
+		public synchronized void onQueryComplete(ResultsAndExceptions result, boolean finish)
 		{
 			final VolatileContactsListActivity activity = _activity.get();
-			if (activity==null || activity.isFinishing()) 
+			if (activity == null || activity.isFinishing())
 				return;
-			final Cursor cursor=result.cursor;
+			final Cursor cursor = result.cursor;
 			// Manage all errors
-			//for (Exception exception:result.exceptions)
+			// for (Exception exception:result.exceptions)
 			activity.hideSearchbar();
-			final StringBuilder error=new StringBuilder(30);
+			final StringBuilder error = new StringBuilder(30);
 			synchronized (result)
 			{
-				for (QueryException exception:result.exceptions)
+				for (QueryException exception : result.exceptions)
 				{
 					if (exception instanceof QueryWarning)
 					{
-						_warning=true;
+						_warning = true;
 					}
 					else if (exception instanceof QueryError)
 					{
-						QueryError w=(QueryError)exception;
-						String accountName=w.getAccountName();
-						if (accountName!=null)
+						QueryError w = (QueryError) exception;
+						String accountName = w.getAccountName();
+						if (accountName != null)
 							error.append(accountName).append(':');
-						error.append(w.getMessage())
-							.append('\n');
+						error.append(w.getMessage()).append('\n');
 					}
 					else
 					{
-						String msg=exception.getLocalizedMessage();
-						if (msg==null) msg=exception.getMessage();
-						if (msg==null) msg=exception.toString();
+						String msg = exception.getLocalizedMessage();
+						if (msg == null)
+							msg = exception.getMessage();
+						if (msg == null)
+							msg = exception.toString();
 						error.append(msg).append('\n');
 					}
 				}
 			}
 			if (finish)
 			{
-				_pending=false;
-				if (cursor==null || cursor.getCount()==0)
+				_pending = false;
+				if (cursor == null || cursor.getCount() == 0)
 				{
 					activity._emptyText.setText(R.string.noMatchingContacts);
 				}
 				if (_warning)
 				{
-					showWarning(activity,activity.getString(R.string.err_truncated));
+					showWarning(activity, activity.getString(R.string.err_truncated));
 				}
-				if (error.length()!=0) 
+				if (error.length() != 0)
 				{
 					error.trimToSize();
-					_error=error;
+					_error = error;
 					showError(activity);
 				}
 			}
-			
-			if (cursor!=null && activity != null && !activity.isFinishing())
+
+			if (cursor != null && activity != null && !activity.isFinishing())
 			{
 				activity._adapter.setLoading(false);
 				activity.getListView().clearTextFilter(); // TODO : No keyboard filter at this time
@@ -1091,7 +1179,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					activity._restoreListHasFocus = false;
 					activity._restoreListState = null;
 				}
-				if ((cursor.getCount()!=0) || finish)
+				if ((cursor.getCount() != 0) || finish)
 				{
 					if (_progressDialog != null)
 					{
@@ -1109,80 +1197,81 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					_progressDialog = null;
 				}
 			}
-			
-			if ((activity._mode==MODE_SEARCH) 
-					&&  ("call".equals(activity.getIntent().getStringExtra(SearchManager.ACTION_MSG)))
-					&& (cursor.getCount()!=0)
-				)
-			{	
-				final Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts(
-						"tel", activity._lastQuery, null));
+
+			if ((activity._mode == MODE_SEARCH)
+					&& ("call"
+							.equals(activity.getIntent().getStringExtra(SearchManager.ACTION_MSG)))
+					&& (cursor.getCount() != 0))
+			{
+				final Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",
+						activity._lastQuery, null));
 				activity.startActivity(intent);
 				activity.finish();
 			}
-			if (error.length()==0)
+			if (error.length() == 0)
 				QueryMarket.checkRate(activity);
 			activity.decProgressBar();
 		}
 	}
 
 	// ------------------ Save / Restore state
-	private static final String STATE_LIST_STATE = "liststate";
+	private static final String	STATE_LIST_STATE	= "liststate";
 
-	private static final String STATE_FOCUS = "focused";
+	private static final String	STATE_FOCUS			= "focused";
 
-	private static final String STATE_LAST_REQUEST = "request";
+	private static final String	STATE_LAST_REQUEST	= "request";
 
-	private static final String STATE_QUERY_MODE = "queryMode";
+	private static final String	STATE_QUERY_MODE	= "queryMode";
 
-	private Parcelable _restoreListState = null;
+	private Parcelable			_restoreListState	= null;
 
-	private boolean _restoreListHasFocus;
+	private boolean				_restoreListHasFocus;
 
 	// ------------------- Manage list view
 	/** View index cached in tag. */
 	static private final class Cache
 	{
-		private View _header;
+		private View				_header;
 
-		private TextView _headerText;
+		private TextView			_headerText;
 
-		private View _rightSide;
+		private View				_rightSide;
 
 		// private ImageView _presence;
 
 		// private View _callview;
 
-		private ImageView _callbutton;
+		private ImageView			_callbutton;
 
-		private ExQuickContactBadge _photoView;
+		private ExQuickContactBadge	_photoView;
 
-		private QuickContactBadge _nonQuickContactPhotoView;
+		private QuickContactBadge	_nonQuickContactPhotoView;
 
-		private TextView _label;
+		private TextView			_label;
 
-		private TextView _data;
+		private TextView			_data;
 
-		private TextView _name;
+		private TextView			_name;
 
 		// private View _divider;
 	}
 
-	final class ContactsAdapter extends CursorAdapter implements SectionIndexer, ListAdapter, OnItemClickListener, OnClickListener
+	final class ContactsAdapter extends CursorAdapter implements SectionIndexer, ListAdapter,
+			OnItemClickListener, OnClickListener
 	{
-		private SectionIndexer _indexer;
+		private SectionIndexer		_indexer;
 
-		private int[] _sectionPositions;
+		private int[]				_sectionPositions;
 
-		static final int SUMMARY_NAME_COLUMN_INDEX = 1;
+		static final int			SUMMARY_NAME_COLUMN_INDEX	= 1;
 
-		private final String _alphabet;
+		private final String		_alphabet;
 
-		private boolean _loading;
+		private boolean				_loading;
 
-		private Cursor _cursor;
+		private Cursor				_cursor;
 
-		private static final int FETCH_IMAGE_MSG = 1;
+		private static final int	FETCH_IMAGE_MSG				= 1;
 
 		public ContactsAdapter()
 		{
@@ -1252,9 +1341,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 								LogMarket.wtf(TAG, "column index error");
 						}
 						cache._label.setText(R.string.from_provider);
-						cache._data.setText(cursor.getString(3/*RawContacts.ACCOUNT_NAME*/));
+						cache._data.setText(cursor.getString(3/* RawContacts.ACCOUNT_NAME */));
 						break;
-						
+
 					case MODE_PICK_PHONE:
 						if (DEBUG)
 						{
@@ -1283,17 +1372,20 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 						}
 						label = cursor.getString(6 /* StructuredPostal.LABEL */);
 						type = cursor.getInt(7 /* StructuredPostal.TYPE */);
-						cache._label.setText(StructuredPostal.getTypeLabel(getResources(), type, label));
-						cache._data.setText(cursor.getString(8 /* StructuredPostal.FORMATTED_ADDRESS */));
+						cache._label.setText(StructuredPostal.getTypeLabel(getResources(), type,
+								label));
+						cache._data.setText(cursor.getString(8 /*
+																 * StructuredPostal.FORMATTED_ADDRESS
+																 */));
 						break;
 					default:
-						LogMarket.wtf(TAG, "Unknow mode "+_mode+" in bindData.");
+						LogMarket.wtf(TAG, "Unknow mode " + _mode + " in bindData.");
 
 				}
 			}
-			if ((_show & DISPLAY_PHOTO) != 0 && cache._photoView!=null)
+			if ((_show & DISPLAY_PHOTO) != 0 && cache._photoView != null)
 				cache._photoView.setItemId(cursor.getLong(0 /* BaseColumns._ID */));
-			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton!=null)
+			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
 				cache._callbutton.setTag(cursor.getLong(0 /* BaseColumns._ID */));
 
 			bindVisibility(cursor, cache);
@@ -1309,8 +1401,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			final int col = cursor.getColumnIndex(Phone.NUMBER);
 			if (col != -1)
 				withPhone = !cursor.isNull(col);
-			visibility = (((_show & DISPLAY_CALLBUTTON) != 0) && withPhone) ? View.VISIBLE : View.GONE;
-			if (cache._rightSide!=null)
+			visibility = (((_show & DISPLAY_CALLBUTTON) != 0) && withPhone) ? View.VISIBLE
+					: View.GONE;
+			if (cache._rightSide != null)
 				cache._rightSide.setVisibility(visibility);
 		}
 
@@ -1327,7 +1420,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			rc.setOnKeyListener(VolatileContactsListActivity.this);
 			cache._header = rc.findViewById(R.id.header);
 			cache._headerText = (TextView) rc.findViewById(R.id.header_text);
-			if ((_show & DISPLAY_CALLBUTTON)!=0 && cache._callbutton!=null)
+			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
 			{
 				cache._callbutton = (ImageView) rc.findViewById(R.id.call_button);
 			}
@@ -1339,11 +1432,12 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			else
 			{
 				cache._photoView = (ExQuickContactBadge) rc.findViewById(R.id.photo);
-				if (cache._photoView!=null)
+				if (cache._photoView != null)
 					cache._photoView.setId(R.id.photo);
 			}
 
-			cache._nonQuickContactPhotoView = (QuickContactBadge) rc.findViewById(R.id.noQuickContactPhoto);
+			cache._nonQuickContactPhotoView = (QuickContactBadge) rc
+					.findViewById(R.id.noQuickContactPhoto);
 			cache._label = (TextView) rc.findViewById(R.id.label);
 			cache._data = (TextView) rc.findViewById(R.id.data);
 			cache._name = (TextView) rc.findViewById(R.id.name);
@@ -1351,7 +1445,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			cache._rightSide = rc.findViewById(R.id.right_side);
 			if (0 != (_show & DISPLAY_CALLBUTTON))
 			{
-				if (cache._callbutton!=null)
+				if (cache._callbutton != null)
 					cache._callbutton.setOnClickListener(this);
 			}
 			return rc;
@@ -1396,8 +1490,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			}
 			else
 			{
-				if (Locale.getDefault().equals(
-					Locale.JAPAN))
+				if (Locale.getDefault().equals(Locale.JAPAN))
 				{
 					// if (mIndexer instanceof JapaneseContactListIndexer)
 					// ((JapaneseContactListIndexer)
@@ -1458,7 +1551,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			int position = _sectionPositions[sectionIndex];
 			if (position == AdapterView.INVALID_POSITION)
 			{
-				position = _sectionPositions[sectionIndex] = _indexer.getPositionForSection(sectionIndex);
+				position = _sectionPositions[sectionIndex] = _indexer
+						.getPositionForSection(sectionIndex);
 			}
 
 			return position;
@@ -1486,9 +1580,11 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				// because the
 				// user is more likely to be scrolling the list from the top
 				// down.
-				final int pivot = start + (end - start) / 4; // $codepro.audit.disable variableDeclaredInLoop
+				final int pivot = start + (end - start) / 4; // $codepro.audit.disable
+																// variableDeclaredInLoop
 
-				final int value = getPositionForSection(pivot); // $codepro.audit.disable variableDeclaredInLoop
+				final int value = getPositionForSection(pivot); // $codepro.audit.disable
+																// variableDeclaredInLoop
 				if (value <= position)
 				{
 					start = pivot + 1;
@@ -1508,10 +1604,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		private SectionIndexer getNewIndexer(final Cursor cursor)
 		{
 			/*
-			 * if
-			 * (Locale.getDefault().getLanguage().equals(Locale.JAPAN.getLanguage
-			 * ())) { return new JapaneseContactListIndexer(cursor,
-			 * SORT_STRING_INDEX); } else {
+			 * if (Locale.getDefault().getLanguage().equals(Locale.JAPAN.getLanguage ())) { return
+			 * new JapaneseContactListIndexer(cursor, SORT_STRING_INDEX); } else {
 			 */
 			return new AlphabetIndexer(cursor, SUMMARY_NAME_COLUMN_INDEX, _alphabet);
 			/* } */
@@ -1531,25 +1625,26 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				case MODE_NORMAL:
 				case MODE_SEARCH:
 				case MODE_PICK_CONTACT:
-					text = getQuantityText(
-						count, R.string.listFoundAllContactsZero, R.plurals.listFoundAllContacts);
+					text = getQuantityText(count, R.string.listFoundAllContactsZero,
+							R.plurals.listFoundAllContacts);
 					break;
 				case MODE_PICK_PHONE:
-					text = getQuantityText(
-						count, R.string.listTotalPhoneContactsZero, R.plurals.listTotalPhoneContacts);
+					text = getQuantityText(count, R.string.listTotalPhoneContactsZero,
+							R.plurals.listTotalPhoneContacts);
 					break;
 				case MODE_PICK_POSTAL:
-					text = getQuantityText(
-						count, R.string.listTotalAllContactsZero, R.plurals.listTotalAllContacts);
+					text = getQuantityText(count, R.string.listTotalAllContactsZero,
+							R.plurals.listTotalAllContacts);
 					break;
 				default:
-					LogMarket.wtf(TAG, "Unknown mode "+_mode);
+					LogMarket.wtf(TAG, "Unknown mode " + _mode);
 			}
 			assert (text != null);
 			_totalContacts.setText(text);
 		}
 
-		private String getQuantityText(final int count, final int zeroResourceId, final int pluralResourceId)
+		private String getQuantityText(final int count, final int zeroResourceId,
+				final int pluralResourceId)
 		{
 			if (count == 0)
 			{
@@ -1557,8 +1652,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			}
 			else
 			{
-				final String format = getResources().getQuantityText(
-					pluralResourceId, count).toString();
+				final String format = getResources().getQuantityText(pluralResourceId, count)
+						.toString();
 				return String.format(format, count);
 			}
 		}
@@ -1566,7 +1661,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		// ---------------------------- Manage user interactions
 		/** {@inheritDoc} */
 		@Override
-		public void onItemClick(final AdapterView<?> adapter, final View view, final int position, final long id)
+		public void onItemClick(final AdapterView<?> adapter, final View view, final int position,
+				final long id)
 		{
 			final Intent intent = new Intent();
 			switch (_mode)
@@ -1575,13 +1671,13 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					new AsyncImport()
 					{
 						@Override
-						protected void onPostExecute(Uri result) 
+						protected void onPostExecute(Uri result)
 						{
 							super.onPostExecute(result);
 							setResult(RESULT_OK, intent.setData(result));
 							finish();
 						}
-					}.execute(id,true);
+					}.execute(id, true);
 					break;
 				// case MODE_LEGACY_PICK_PERSON:
 				// uri=importMemoryContact(id, true);
@@ -1590,9 +1686,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				// intent.setData(Uri.withAppendedPath(People.CONTENT_URI,uri.getLastPathSegment())));
 				// break;
 				case MODE_PICK_PHONE:
-				// case MODE_LEGACY_PICK_PHONE:
+					// case MODE_LEGACY_PICK_PHONE:
 				case MODE_PICK_POSTAL:
-				// case MODE_LEGACY_PICK_POSTAL:
+					// case MODE_LEGACY_PICK_POSTAL:
 					final Cursor cursor = getCursor();
 					cursor.moveToPosition(position);
 					if (DEBUG && cursor.getColumnIndex(Data.RAW_CONTACT_ID) != 5)
@@ -1602,21 +1698,22 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					new AsyncImport()
 					{
 						@Override
-						protected void onPostExecute(Uri uri) 
+						protected void onPostExecute(Uri uri)
 						{
 							super.onPostExecute(uri);
-							assert(uri!=null);
-							final String filter = 
-								(_mode == MODE_PICK_PHONE	// || _mode==MODE_LEGACY_PICK_PHONE	
-								) ? Phone.CONTENT_ITEM_TYPE : StructuredPostal.CONTENT_ITEM_TYPE;
+							assert (uri != null);
+							final String filter = (_mode == MODE_PICK_PHONE // ||
+																			// _mode==MODE_LEGACY_PICK_PHONE
+							) ? Phone.CONTENT_ITEM_TYPE : StructuredPostal.CONTENT_ITEM_TYPE;
 							try
 							{
-								final String value = ((Cache) view.getTag())._data.getText().toString();
+								final String value = ((Cache) view.getTag())._data.getText()
+										.toString();
 								final Cursor cursor = getContentResolver().query(
-									Uri.withAppendedPath(
-										uri, Contacts.Data.CONTENT_DIRECTORY), colDataId, 
-										Data.MIMETYPE + "=? and " + Data.DATA1 + "=?", 
-										new String[] { filter, value }, null);
+										Uri.withAppendedPath(uri, Contacts.Data.CONTENT_DIRECTORY),
+										colDataId, Data.MIMETYPE + "=? and " + Data.DATA1 + "=?",
+										new String[]
+										{ filter, value }, null);
 								if (cursor.moveToFirst())
 								{
 									final long iddata = cursor.getLong(0 /* Data._ID */);
@@ -1625,7 +1722,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 									{
 										case MODE_PICK_PHONE:
 										case MODE_PICK_POSTAL:
-											result = ContentUris.withAppendedId(Data.CONTENT_URI, iddata);
+											result = ContentUris.withAppendedId(Data.CONTENT_URI,
+													iddata);
 											break;
 										// case MODE_LEGACY_PICK_PHONE:
 										// result=ContentUris.withAppendedId(Phones.CONTENT_URI,iddata);
@@ -1634,7 +1732,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 										// result=ContentUris.withAppendedId(ContactMethods.CONTENT_URI,iddata);
 										// break;
 										default:
-											LogMarket.wtf(TAG, "Invalide mode "+_mode+" in onItemClick.");
+											LogMarket.wtf(TAG, "Invalide mode " + _mode
+													+ " in onItemClick.");
 									}
 									setResult(RESULT_OK, intent.setData(result));
 								}
@@ -1652,14 +1751,14 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 								}
 							}
 						}
-					}.execute(rawid,true);
+					}.execute(rawid, true);
 					break;
 				case MODE_SEARCH:
 				case MODE_NORMAL:
 					showVolatileContact(id);
 					break;
 				default:
-					LogMarket.wtf(TAG, "Unknown mode "+_mode);
+					LogMarket.wtf(TAG, "Unknown mode " + _mode);
 			}
 		}
 
@@ -1670,21 +1769,29 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			new AsyncImport()
 			{
 				@Override
-				protected void onPostExecute(Uri result) 
+				protected void onPostExecute(Uri result)
 				{
 					super.onPostExecute(result);
 					callOrSmsContact(result, false);
 				}
-			}.execute(position,true);
+			}.execute(position, true);
 		}
 
 		// ----------------- Manage photos ---------------------------------
 
-		private HashMap<ContactId, SoftReference<Bitmap>> _bitmapCache; // Cache des photos, via account:lookup
-		private HashSet<QuickContactBadge> _itemsMissingImages; // List de items sans photo (pour le moment)
-		private ImageDbFetcher _imageFetcher;
+		private HashMap<ContactId, SoftReference<Bitmap>>	_bitmapCache;			// Cache des
+																					// photos, via
+																					// account:lookup
 
-		private ImageFetchHandler _handler;
+		private HashSet<QuickContactBadge>					_itemsMissingImages;	// List de items
+																					// sans photo
+																					// (pour le
+																					// moment)
+
+		private ImageDbFetcher								_imageFetcher;
+
+		private ImageFetchHandler							_handler;
+
 		private class ImageFetchHandler extends Handler
 		{
 			@Override
@@ -1750,9 +1857,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 		private class ImageDbFetcher implements Runnable
 		{
-			private final ContactId _photoId;
+			private final ContactId	_photoId;
 
-			private final ImageView _imageView;
+			private final ImageView	_imageView;
 
 			public ImageDbFetcher(final ContactId photoId, final ImageView imageView)
 			{
@@ -1780,7 +1887,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				catch (final OutOfMemoryError e)
 				{
 					// Not enough memory for the photo, do nothing.
-					if (W) Log.w(TAG,"ImageFetcher",e);
+					if (W)
+						Log.w(TAG, "ImageFetcher", e);
 				}
 				if (photo == null)
 				{
@@ -1801,22 +1909,26 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				_handler.sendMessage(msg);
 			}
 		}
-		
+
 		@TargetApi(11)
 		private void bindPhoto(final Cursor cursor, final Cache cache)
 		{
-			if (cache._photoView==null)
+			if (cache._photoView == null)
 				return;
 			final int SUMMARY_LOOKUP_KEY = 0;
 			// Set the photo, if requested
 			if ((_show & DISPLAY_PHOTO) != 0)
 			{
-				final ContactId photoId=new ContactId(
-					cursor.getString(2/*RawContacts.ACCOUNT_TYPE*/), 
-					cursor.getString(3/*RawContacts.ACCOUNT_NAME*/), 
-					cursor.getString(4/*VolatileRawContact.LOOKUP*/));
+				final ContactId photoId = new ContactId(
+						cursor.getString(2/* RawContacts.ACCOUNT_TYPE */), cursor.getString(3/*
+																							 * RawContacts
+																							 * .
+																							 * ACCOUNT_NAME
+																							 */),
+						cursor.getString(4/* VolatileRawContact.LOOKUP */));
 
-				final boolean useQuickContact = ((_show & USE_QUICK_CONTACT) != 0) && cache._photoView!=null;
+				final boolean useQuickContact = ((_show & USE_QUICK_CONTACT) != 0)
+						&& cache._photoView != null;
 				QuickContactBadge viewToUse;
 				if (useQuickContact)
 				{
@@ -1826,16 +1938,16 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					final String lookupKey = cursor.getString(SUMMARY_LOOKUP_KEY);
 					cache._photoView.assignContactUri(Contacts.getLookupUri(contactId, lookupKey));
 					cache._photoView.setVisibility(View.VISIBLE);
-					if (cache._nonQuickContactPhotoView!=null)
+					if (cache._nonQuickContactPhotoView != null)
 						cache._nonQuickContactPhotoView.setVisibility(View.INVISIBLE);
 				}
 				else
 				{
 					viewToUse = cache._nonQuickContactPhotoView;
-					if (cache._photoView!=null)
+					if (cache._photoView != null)
 					{
 						cache._photoView.setVisibility(View.INVISIBLE);
-						if (cache._nonQuickContactPhotoView!=null)
+						if (cache._nonQuickContactPhotoView != null)
 							cache._nonQuickContactPhotoView.setVisibility(View.VISIBLE);
 					}
 				}
@@ -1862,7 +1974,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				else
 				{
 					// Cache miss
-					if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB)
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
 					{
 						viewToUse.setImageToDefault();
 					}
@@ -1904,6 +2016,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				sendFetchImageMessage(iv);
 			}
 		}
+
 		// Start background load image
 		private void sendFetchImageMessage(final ImageView view)
 		{
@@ -1915,7 +2028,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			final ContactId photoId = info._photoId;
 			if (photoId == null)
 				return;
-			
+
 			_imageFetcher = new ImageDbFetcher(photoId, view);
 			synchronized (VolatileContactsListActivity.this)
 			{
@@ -1924,26 +2037,26 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				{
 					// Don't use more than 3 threads at a time to update. The thread pool will be
 					// shared by all contact items.
-					_imageFetchThreadPool = Executors.newFixedThreadPool(IMAGE_POOL_SIZE,new ThreadFactory()
-					{
-						
-						@Override
-						public Thread newThread(Runnable r)
-						{
-							Thread thread=new Thread(r,"Image pool");
-							thread.setPriority(IMAGE_POOL_PRIORITY);
-							return thread;
-						}
-					});
+					_imageFetchThreadPool = Executors.newFixedThreadPool(IMAGE_POOL_SIZE,
+							new ThreadFactory()
+							{
+
+								@Override
+								public Thread newThread(Runnable r)
+								{
+									Thread thread = new Thread(r, "Image pool");
+									thread.setPriority(IMAGE_POOL_PRIORITY);
+									return thread;
+								}
+							});
 				}
 				_imageFetchThreadPool.execute(_imageFetcher);
 			}
 		}
 
 		/**
-		 * Stop the image fetching for ALL contacts, if one is in progress we'll
-		 * not query the database.
-		 * 
+		 * Stop the image fetching for ALL contacts, if one is in progress we'll not query the
+		 * database.
 		 */
 		public void clearImageFetching()
 		{
@@ -1963,19 +2076,21 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		}
 
 	}
+
 	/** Executor for photos. */
-	private static ExecutorService _imageFetchThreadPool;
+	private static ExecutorService	_imageFetchThreadPool;
 
 	// In photo tag
 	final static class PhotoCache
 	{
-		public int _position;
-		public ContactId _photoId;
+		public int			_position;
+
+		public ContactId	_photoId;
 
 		public PhotoCache(final int position, ContactId id)
 		{
 			_position = position;
-			_photoId=id;
+			_photoId = id;
 		}
 	}
 
@@ -1984,17 +2099,18 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	@Override
 	public boolean onCreateOptionsMenu(final Menu menu)
 	{
-		if (V) Log.v("LIFE", "onCreateOptionsMenu");
-//		if ((_mode & MODE_MASK_PICKER) != 0)
-//		{
-//			return false;
-//		}
+		if (V)
+			Log.v("LIFE", "onCreateOptionsMenu");
+		// if ((_mode & MODE_MASK_PICKER) != 0)
+		// {
+		// return false;
+		// }
 
 		getMenuInflater().inflate(R.menu.list, menu);
-		_searchMenu=menu.findItem(R.id.menu_search);
+		_searchMenu = menu.findItem(R.id.menu_search);
 		if (ICS)
 		{
-//			_searchMenu.expandActionView();
+			// _searchMenu.expandActionView();
 			// Get the SearchView and set the searchable configuration
 
 			final SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
@@ -2003,7 +2119,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			_searchView.setIconifiedByDefault(true);
 		}
 		setSearchVisible(_isDone);
-	    return true;
+		return true;
 	}
 
 	@Override
@@ -2013,8 +2129,9 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		{
 			menu.findItem(R.id.menu_accounts).setVisible(_isExtension);
 			menu.findItem(R.id.menu_search).setVisible(_isDone);
-			//menu.findItem(R.id.menu_import).setVisible(_isDone);
-			//menu.findItem(R.id.menu_import_result).setVisible(_adapter._cursor!=null && _adapter._cursor.getCount()!=0);
+			// menu.findItem(R.id.menu_import).setVisible(_isDone);
+			// menu.findItem(R.id.menu_import_result).setVisible(_adapter._cursor!=null &&
+			// _adapter._cursor.getCount()!=0);
 		}
 		return super.onPrepareOptionsMenu(menu);
 	}
@@ -2023,12 +2140,13 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	@Override
 	public boolean onSearchRequested()
 	{
-		if (V) Log.v("LIFE", "onSearchRequested");
+		if (V)
+			Log.v("LIFE", "onSearchRequested");
 		if (!_isDone)
 			return false;
 		if (ICS)
 		{
-			if (_searchMenu!=null)
+			if (_searchMenu != null)
 			{
 				_searchMenu.expandActionView();
 			}
@@ -2049,43 +2167,48 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					onSearchRequested();
 				return true;
 
-//			case R.id.menu_std_contacts:
-//				intent = _intentViewContacts;
-//				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//				startActivity(intent);
-//				return true;
+				// case R.id.menu_std_contacts:
+				// intent = _intentViewContacts;
+				// intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				// startActivity(intent);
+				// return true;
 
 			case R.id.menu_accounts:
-				intent = new Intent(Settings.ACTION_SYNC_SETTINGS);
+				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
+					intent = new Intent(Settings.ACTION_SETTINGS);
+				else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
+					intent = new Intent(Settings.ACTION_ADD_ACCOUNT);
+				else
+					intent = new Intent(Settings.ACTION_SYNC_SETTINGS);
 				intent.putExtra("authorities", colAuthority);
 				startActivity(intent);
 				return true;
 
 			case R.id.menu_extensions:
-				final SpannedString seq=(SpannedString)getText(R.string.help_need_provider);
-				String url=seq.getSpans(0, seq.length(), URLSpan.class)[0].getURL();
-				url=url.substring("market://search?q=".length());
-				QueryMarket.startSearchMarket(this,url,R.string.extension_plugins,false);
+				final SpannedString seq = (SpannedString) getText(R.string.help_need_provider);
+				String url = seq.getSpans(0, seq.length(), URLSpan.class)[0].getURL();
+				url = url.substring("market://search?q=".length());
+				QueryMarket.startSearchMarket(this, url, R.string.extension_plugins, false);
 				return true;
-				
+
 			case R.id.menu_help:
-				startActivity(new Intent(this,HelpActivity.class));
+				startActivity(new Intent(this, HelpActivity.class));
 				return true;
 
 			case R.id.menu_import:
 				// TODO: Import dans les contacts présent
 				break;
-				
-//			case R.id.menu_import_result:
-//				showDialog(DIALOG_IMPORT_ALL_RESULT);
-//				_importAllHandler=new ImportAllHandler();
-//				_importAllHandler._activity=this;
-//				_importAllHandler.execute(_adapter._cursor);
-//				break;
-				
-//			case R.id.menu_market_star:
-//				QueryMarket.startSearchMarket(this, "fr.prados.contacts",R.string.market_rate_body);
-//				break;
+
+			// case R.id.menu_import_result:
+			// showDialog(DIALOG_IMPORT_ALL_RESULT);
+			// _importAllHandler=new ImportAllHandler();
+			// _importAllHandler._activity=this;
+			// _importAllHandler.execute(_adapter._cursor);
+			// break;
+
+			// case R.id.menu_market_star:
+			// QueryMarket.startSearchMarket(this, "fr.prados.contacts",R.string.market_rate_body);
+			// break;
 
 			default:
 				LogMarket.wtf(TAG, "Unknown option item selected " + item.getItemId());
@@ -2095,17 +2218,20 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 	// --------------- Manage context menu
 	@Override
-	public void onCreateContextMenu(final ContextMenu menu, final View view, final ContextMenuInfo menuInfo)
+	public void onCreateContextMenu(final ContextMenu menu, final View view,
+			final ContextMenuInfo menuInfo)
 	{
 		// The user guide line remove old the context menu.
-		if (HONEYCOMB) return;
+		if (HONEYCOMB)
+			return;
 		final Cursor cursor = _adapter._cursor;
 		if ((cursor == null) || cursor.getCount() == 0)
 		{
 			return;
 		}
 		final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
-		if (!cursor.moveToPosition(info.position-1)) return;
+		if (!cursor.moveToPosition(info.position - 1))
+			return;
 
 		getMenuInflater().inflate(R.menu.context, menu);
 
@@ -2135,7 +2261,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	@Override
 	public boolean onContextItemSelected(final MenuItem item)
 	{
-		final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+		final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item
+				.getMenuInfo();
 		final long id = info.id;
 
 		switch (item.getItemId())
@@ -2148,24 +2275,24 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				new AsyncImport()
 				{
 					@Override
-					protected void onPostExecute(Uri result) 
+					protected void onPostExecute(Uri result)
 					{
 						super.onPostExecute(result);
 						callOrSmsContact(result, false);
 					}
-				}.execute(id,true);
+				}.execute(id, true);
 				break;
 
 			case R.id.menu_send_sms:
 				new AsyncImport()
 				{
 					@Override
-					protected void onPostExecute(Uri result) 
+					protected void onPostExecute(Uri result)
 					{
 						super.onPostExecute(result);
 						callOrSmsContact(result, true);
 					}
-				}.execute(id,true);
+				}.execute(id, true);
 				break;
 
 			case R.id.menu_import:
@@ -2173,7 +2300,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 				new AsyncImport()
 				{
 					@Override
-					protected void onPostExecute(Uri contactUri) 
+					protected void onPostExecute(Uri contactUri)
 					{
 						super.onPostExecute(contactUri);
 						contactUri = importMemoryContact(id, false);
@@ -2181,7 +2308,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 							startActivity(new Intent(Intent.ACTION_VIEW, contactUri));
 						removeDialog(DIALOG_IMPORT);
 					}
-				}.execute(id,false);
+				}.execute(id, false);
 				break;
 
 			case R.id.menu_add_star:
@@ -2196,12 +2323,14 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 		return true;
 	}
 
+	@TargetApi(11)
+	// FIXME
 	@Override
 	public boolean onKey(final View v, final int keyCode, final KeyEvent event)
 	{
 		if (event.getMetaState() == 0)
 		{
-			if (keyCode==KeyEvent.KEYCODE_CALL)
+			if (keyCode == KeyEvent.KEYCODE_CALL)
 			{
 				final AbsListView list = getListView();
 				final int position = list.getCheckedItemPosition();
@@ -2211,12 +2340,12 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					new AsyncImport()
 					{
 						@Override
-						protected void onPostExecute(Uri result) 
+						protected void onPostExecute(Uri result)
 						{
 							super.onPostExecute(result);
 							callOrSmsContact(result, false);
 						}
-					}.execute(position,true);
+					}.execute(position, true);
 					return true;
 				}
 			}
@@ -2230,33 +2359,35 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 	{
 		if (ICS)
 		{
-			if (keyCode==KeyEvent.KEYCODE_SEARCH)
+			if (keyCode == KeyEvent.KEYCODE_SEARCH)
 			{
-				if (_searchMenu!=null)
+				if (_searchMenu != null)
 				{
 					_searchMenu.expandActionView();
 					return true;
 				}
 			}
 		}
-		if (keyCode==KeyEvent.KEYCODE_I)
+		if (keyCode == KeyEvent.KEYCODE_I)
 		{
-			View v=getListView().getSelectedView();
-			if (v!=null)
+			View v = getListView().getSelectedView();
+			if (v != null)
 			{
-				Cache cache=(Cache)v.getTag();
+				Cache cache = (Cache) v.getTag();
 				cache._photoView.onClick(v);
 				return true;
 			}
 		}
 		return super.onKeyUp(keyCode, event);
 	}
+
 	// -------------------- Commands
 	private void startQuery()
 	{
 		hideSearchbar();
 		ProvidersManager.waitInit();
-		if (D) Log.d(TAG, "startQuery(\""+_lastQuery+"\")");
+		if (D)
+			Log.d(TAG, "startQuery(\"" + _lastQuery + "\")");
 		getListView().requestFocus();
 		getListView().setSelection(0);
 		hideKeyboard();
@@ -2265,34 +2396,37 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 
 		_emptyText.setText(R.string.currentQuery);
 
-		if (_lastQuery!=null && _lastQuery.length() != 0)
+		if (_lastQuery != null && _lastQuery.length() != 0)
 		{
 			// Delay for clean windows before
-			_queryHandler._pending=true; // Because onResume() is call just after onRestoreInstance and the message must be empty
+			_queryHandler._pending = true; // Because onResume() is call just after
+											// onRestoreInstance and the message must be empty
 			_handler.post(new Runnable()
 			{
 				@Override
 				public void run()
 				{
-					_queryHandler.startQuery( _queryMode, new String[] { _lastQuery }, false);
+					_queryHandler.startQuery(_queryMode, new String[]
+					{ _lastQuery }, false);
 				}
 			});
 		}
 	}
-	
+
 	// TODO : Invoke clear suggestions history in options menu ?
-//	private void clearHistory()
-//	{
-//		_suggestions.clearHistory();
-//	}
-	
+	// private void clearHistory()
+	// {
+	// _suggestions.clearHistory();
+	// }
+
 	private boolean checkContact()
 	{
-		final Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse("content://contacts/people/1"));
-		final List<ResolveInfo> resolve=getPackageManager().queryIntentActivities(intent, 0);
-	    if (resolve.size()==0)
-	    {
-	    	final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		final Intent intent = new Intent(Intent.ACTION_VIEW,
+				Uri.parse("content://contacts/people/1"));
+		final List<ResolveInfo> resolve = getPackageManager().queryIntentActivities(intent, 0);
+		if (resolve.size() == 0)
+		{
+			final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setTitle(R.string.help_need_account_app_title);
 			builder.setCancelable(true);
 			builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener()
@@ -2308,9 +2442,10 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			dialog.setCanceledOnTouchOutside(false);
 			dialog.show();
 			return false;
-	    }
-	    return true;
+		}
+		return true;
 	}
+
 	private void showVolatileContact(final long id)
 	{
 		new AsyncImport()
@@ -2318,13 +2453,13 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			@Override
 			protected void onPostExecute(Uri contactUri)
 			{
-				super.onPostExecute(contactUri);				
+				super.onPostExecute(contactUri);
 				if (contactUri != null)
 				{
 					startActivity(new Intent(Intent.ACTION_VIEW, contactUri));
 				}
 			}
-		}.execute(id,true);
+		}.execute(id, true);
 	}
 
 	private void starMemoryContact(final long id)
@@ -2334,7 +2469,7 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			@Override
 			protected void onPostExecute(Uri contactUri)
 			{
-				super.onPostExecute(contactUri);				
+				super.onPostExecute(contactUri);
 				if (contactUri != null)
 				{
 					final ContentValues values = new ContentValues(1);
@@ -2343,20 +2478,21 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 					startActivity(new Intent(Intent.ACTION_VIEW, contactUri));
 				}
 			}
-		}.execute(id,false);
+		}.execute(id, false);
 	}
 
 	private Uri importMemoryContact(final long id, final boolean deleted)
 	{
 		ProvidersManager.init();
-		final Uri uri=ProvidersManager.importVolatileContactToAndroid(id, deleted, Application.context);
-//		if (!deleted)
-//		{
-//			long rawId=Long.parseLong(uri.getLastPathSegment());
-//			return ProvidersManager.fixeSyncContactInAndroid(getResources(),
-//					getContentResolver(), 
-//					rawId);
-//		}
+		final Uri uri = ProvidersManager.importVolatileContactToAndroid(id, deleted,
+				Application.context);
+		// if (!deleted)
+		// {
+		// long rawId=Long.parseLong(uri.getLastPathSegment());
+		// return ProvidersManager.fixeSyncContactInAndroid(getResources(),
+		// getContentResolver(),
+		// rawId);
+		// }
 		return uri;
 	}
 
@@ -2371,9 +2507,8 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			return;
 		String phoneNumber = null;
 		final Cursor phonesCursor = Application.context.getContentResolver().query(
-			Uri.withAppendedPath(
-				contactUri, Contacts.Data.CONTENT_DIRECTORY), colForCallOrSms, 
-				Data.MIMETYPE + "='" + Phone.CONTENT_ITEM_TYPE+"'", null, null);
+				Uri.withAppendedPath(contactUri, Contacts.Data.CONTENT_DIRECTORY), colForCallOrSms,
+				Data.MIMETYPE + "='" + Phone.CONTENT_ITEM_TYPE + "'", null, null);
 		if (phonesCursor != null && phonesCursor.moveToFirst())
 		{
 			if (phonesCursor.getCount() == 1)
@@ -2408,21 +2543,22 @@ implements OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 			if (phoneNumber == null)
 			{
 				// Display dialog to choose a number to call.
-				final PhoneDisambigDialog phoneDialog = new PhoneDisambigDialog(this, phonesCursor, sendSms);
+				final PhoneDisambigDialog phoneDialog = new PhoneDisambigDialog(this, phonesCursor,
+						sendSms);
 				phoneDialog.show();
 			}
 			else
 			{
 				if (sendSms)
 				{
-					final Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-						"sms", phoneNumber.toString(), null));
+					final Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("sms",
+							phoneNumber.toString(), null));
 					startActivity(intent);
 				}
 				else
 				{
-					final Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts(
-						"tel", phoneNumber.toString(), null));
+					final Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",
+							phoneNumber.toString(), null));
 					startActivity(intent);
 				}
 			}

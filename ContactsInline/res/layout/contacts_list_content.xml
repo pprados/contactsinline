@@ -28,6 +28,7 @@
         android:dividerHeight="1dip"
         android:fastScrollEnabled="true"
         android:scrollingCache="true" 
+        android:focusable="true"
         >
 
         <!-- Preview: listitem=@layout/contacts_list_item_photo -->

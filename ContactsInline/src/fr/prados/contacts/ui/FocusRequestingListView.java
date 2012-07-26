@@ -47,7 +47,6 @@ public class FocusRequestingListView extends ListView
 		super.onLayout(	changed, left, top, right, bottom);
 		if (!mFirstLayoutDone)
 		{
-			setFocusable(true);
 			requestFocus();
 		}
 		mFirstLayoutDone = true;
