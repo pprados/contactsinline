@@ -7,9 +7,11 @@
     android:installLocation="internalOnly"
 >
 
-    <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="15" />
+    <uses-sdk 
+    	android:minSdkVersion="7" 
+    	android:targetSdkVersion="11" 
+    	android:maxSdkVersion="17"
+    	/>
 
     <supports-screens
         android:anyDensity="true"

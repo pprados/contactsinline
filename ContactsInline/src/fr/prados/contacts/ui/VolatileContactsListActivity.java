@@ -131,7 +131,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		OnCreateContextMenuListener, OnKeyListener, OnAccountsUpdateListener
 {
 	private static final boolean	PATCH_BUG_V14				= true;
-
+	
 	private static final boolean	HONEYCOMB					= Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB;
 
 	private static final boolean	ICS							= Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH;
@@ -375,7 +375,6 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 	}
 
 	@TargetApi(11)
-	// FIXME
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
 	{
@@ -799,33 +798,38 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		_searchMenu.setVisible(visible);
 	}
 
-	@TargetApi(11)
-	@Override
-	protected void onSaveInstanceState(final Bundle state)
-	{
-		super.onSaveInstanceState(state);
-		if (V)
-			Log.v("LIFE", "onSaveInstanceState");
-		state.putParcelable(STATE_LIST_STATE, getListView().onSaveInstanceState());
-		state.putBoolean(STATE_FOCUS, getListView().hasFocus());
-		state.putString(STATE_LAST_REQUEST, _lastQuery);
-		state.putString(STATE_QUERY_MODE, _queryMode);
-		if (D)
-			Log.d(TAG, "Save lastquery=" + _lastQuery);
-		AbsListView listView = getListView();
-		// Hack to manage the getCheckedItemPosition() not present in AbsListView
-		if (listView instanceof ListView)
-			((ListView) listView).getCheckedItemPosition();
-		else
-			listView.getCheckedItemPosition();
-	}
-
 	// @Override
 	// protected void onPause()
 	// {
 	// super.onPause();
 	// if (V) Log.v("LIFE", "onPause");
 	// }
+	 @TargetApi(11)
+	 @Override
+	 protected void onSaveInstanceState(final Bundle state)
+	 {
+		 super.onSaveInstanceState(state);
+		 if (V) Log.v("LIFE", "onSaveInstanceState");
+		 state.putParcelable(STATE_LIST_STATE,
+		 getListView().onSaveInstanceState());
+		 state.putBoolean(STATE_FOCUS, getListView().hasFocus());
+		 state.putString(STATE_LAST_REQUEST, _lastQuery);
+		 state.putString(STATE_QUERY_MODE, _queryMode);
+		 if (D) Log.d(TAG,"Save lastquery="+_lastQuery);
+		 AbsListView listView=getListView();
+		 // Hack to manage the getCheckedItemPosition() not present in AbsListView
+		 if (listView instanceof ListView)
+			 ((ListView)listView).getCheckedItemPosition();
+		 else
+			 listView.getCheckedItemPosition();
+	 }
+
+//	@Override
+//	protected void onPause()
+//	{
+//		super.onPause();
+//		if (V) Log.v("LIFE", "onPause");
+//	}
 
 	@Override
 	protected void onStop()
