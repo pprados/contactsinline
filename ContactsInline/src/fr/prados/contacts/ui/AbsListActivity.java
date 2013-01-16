@@ -16,6 +16,7 @@ package fr.prados.contacts.ui;
  * limitations under the License.
  */
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Bundle;
@@ -26,17 +27,18 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public class AbsListActivity extends Activity
+@SuppressLint("Registered")
+public abstract class AbsListActivity extends Activity
 {
 	protected ListAdapter	mAdapter;
 
 	protected AbsListView	mList;
 
-	private final Handler			mHandler		= new Handler();
+	private final Handler	mHandler		= new Handler();
 
 	private boolean			mFinishedStart	= false;
 
-	private final Runnable		mRequestFocus	= new Runnable()
+	private final Runnable	mRequestFocus	= new Runnable()
 											{
 												@Override
 												public void run()
@@ -140,16 +142,19 @@ public class AbsListActivity extends Activity
 	}
 
 	private final AdapterView.OnItemClickListener	mOnClickListener	= new AdapterView.OnItemClickListener()
-																{
-																	@Override
-																	public void onItemClick(
-																			AdapterView<?> parent,
-																			View v, int position,
-																			long id)
-																	{
-																		onListItemClick(
-																				(ListView) parent,
-																				v, position, id);
-																	}
-																};
+																		{
+																			@Override
+																			public void onItemClick(
+																					AdapterView<?> parent,
+																					View v,
+																					int position,
+																					long id)
+																			{
+																				onListItemClick(
+																						(ListView) parent,
+																						v,
+																						position,
+																						id);
+																			}
+																		};
 }

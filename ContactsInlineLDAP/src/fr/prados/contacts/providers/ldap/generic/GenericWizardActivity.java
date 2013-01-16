@@ -15,6 +15,9 @@
  ******************************************************************************/
 package fr.prados.contacts.providers.ldap.generic;
 
+import static fr.prados.contacts.Constants.I;
+import static fr.prados.contacts.Constants.W;
+
 import java.io.File;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -51,10 +54,7 @@ import android.widget.TextView;
 import com.unboundid.ldap.sdk.LDAPException;
 import com.unboundid.ldap.sdk.ResultCode;
 
-import static fr.prados.contacts.Constants.*;
-
 import fr.prados.contacts.Application;
-import fr.prados.contacts.lib.R;
 import fr.prados.contacts.providers.AbstractSimpleAuthenticator;
 import fr.prados.contacts.providers.QueryError;
 import fr.prados.contacts.providers.QueryException;
@@ -63,6 +63,7 @@ import fr.prados.contacts.providers.ldap.LdapAuthenticationService;
 import fr.prados.contacts.providers.ldap.LdapKnowParameters;
 import fr.prados.contacts.providers.ldap.LdapProvider;
 import fr.prados.contacts.providers.ldap.PanelSwitcher;
+import fr.prados.contacts.providers.ldap.generic.beta.R;
 import fr.prados.contacts.tools.CheckContext;
 import fr.prados.contacts.tools.Eula;
 import fr.prados.contacts.tools.LogMarket;
@@ -558,6 +559,7 @@ public class GenericWizardActivity extends AbstractWizardActivity
 				builder.setPositiveButton(R.string.help_done, 
 						new DialogInterface.OnClickListener()
 						{
+							@Override
 							public void onClick(DialogInterface dialog, int which)
 							{
 							}
@@ -654,7 +656,8 @@ public class GenericWizardActivity extends AbstractWizardActivity
         		{
             		new Thread()
             		{
-            			public void run() 
+            			@Override
+						public void run() 
             			{
                 			LdapAuthenticationService.addAccount(accountManager,accountName, crypt, host, port, basedn, username, password, mapping);
             			}
@@ -679,7 +682,8 @@ public class GenericWizardActivity extends AbstractWizardActivity
     		// Publish params for help others users
             new Thread()
             {
-            	public void run() 
+            	@Override
+				public void run() 
             	{
 					LdapKnowParameters.postParameters(knowParams);
             	}
@@ -718,7 +722,8 @@ public class GenericWizardActivity extends AbstractWizardActivity
 				.setMessage(msg)
 				.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() 
 					{
-			           public void onClick(DialogInterface dialog, int id)
+			           @Override
+					public void onClick(DialogInterface dialog, int id)
 			           {
 			               dialog.dismiss();
 			               _panels.setVisibility(View.VISIBLE);

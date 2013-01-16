@@ -1,6 +1,7 @@
 <resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-	<!-- No error -->
+    <string name="password_label">Mot de passe</string>
+    <!-- No error -->
 	<string name="noException"/>
 
 	<!-- Truncate the response to limit the memory usage or it's a limitation of the remote serveur-->

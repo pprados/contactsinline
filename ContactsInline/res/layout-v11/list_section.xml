@@ -6,8 +6,10 @@
     android:layout_height="@dimen/list_section_height"
     android:focusable="false"    
     >
+    <!-- 
     android:paddingLeft="?attr/contact_browser_list_padding_left"
     android:paddingRight="?attr/contact_browser_list_padding_right"
+    -->
     <TextView
         android:id="@+id/header_text"
         android:layout_width="match_parent"

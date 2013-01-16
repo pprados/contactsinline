@@ -28,7 +28,7 @@ import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.telephony.PhoneNumberUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
-import fr.prados.contacts.lib.R;
+import fr.prados.contacts.R;
 import fr.prados.contacts.ui.Collapser.Collapsible;
 
 /**
@@ -39,17 +39,17 @@ public final class PhoneDisambigDialog implements DialogInterface.OnClickListene
 		DialogInterface.OnDismissListener
 {
 
-	private Context _context;
+	private final Context _context;
 
-	private AlertDialog _dialog;
+	private final AlertDialog _dialog;
 
-	private boolean _sendSms;
+	private final boolean _sendSms;
 
-	private Cursor _phonesCursor;
+	private final Cursor _phonesCursor;
 
-	private ListAdapter _phonesAdapter;
+	private final ListAdapter _phonesAdapter;
 
-	private ArrayList<PhoneItem> _phoneItemList;
+	private final ArrayList<PhoneItem> _phoneItemList;
 
 	public PhoneDisambigDialog(Context context, Cursor phonesCursor)
 	{
@@ -92,6 +92,7 @@ public final class PhoneDisambigDialog implements DialogInterface.OnClickListene
 		_dialog.show();
 	}
 
+	@Override
 	public void onClick(DialogInterface dialog, int which)
 	{
 		if (_phoneItemList.size() > which && which >= 0)
@@ -116,6 +117,7 @@ public final class PhoneDisambigDialog implements DialogInterface.OnClickListene
 		}
 	}
 
+	@Override
 	public void onDismiss(DialogInterface dialog)
 	{
 		_phonesCursor.close();
@@ -134,13 +136,14 @@ public final class PhoneDisambigDialog implements DialogInterface.OnClickListene
 	private final class PhoneItem implements Collapsible<PhoneItem>
 	{
 
-		private String phoneNumber;
+		private final String phoneNumber;
 
 		public PhoneItem(String newPhoneNumber)
 		{
 			phoneNumber = newPhoneNumber;
 		}
 
+		@Override
 		public boolean collapseWith(PhoneItem phoneItem)
 		{
 			if (!shouldCollapseWith(phoneItem))
@@ -151,6 +154,7 @@ public final class PhoneDisambigDialog implements DialogInterface.OnClickListene
 			return true;
 		}
 
+		@Override
 		public boolean shouldCollapseWith(PhoneItem phoneItem)
 		{
 			if (PhoneNumberUtils.compare(
@@ -162,6 +166,7 @@ public final class PhoneDisambigDialog implements DialogInterface.OnClickListene
 			return false;
 		}
 
+		@Override
 		public String toString()
 		{
 			return phoneNumber;

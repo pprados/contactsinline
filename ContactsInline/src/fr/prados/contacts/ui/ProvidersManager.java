@@ -16,9 +16,10 @@
 package fr.prados.contacts.ui;
 
 import static fr.prados.contacts.Constants.CACHE_TIMEOUT;
-import static fr.prados.contacts.Constants.*;
 import static fr.prados.contacts.Constants.D;
+import static fr.prados.contacts.Constants.DEBUG;
 import static fr.prados.contacts.Constants.E;
+import static fr.prados.contacts.Constants.EMULATOR;
 import static fr.prados.contacts.Constants.I;
 import static fr.prados.contacts.Constants.MAX_LRU;
 import static fr.prados.contacts.Constants.V;
@@ -73,12 +74,12 @@ import com.flurry.android.FlurryAgent;
 
 import fr.prados.contacts.Application;
 import fr.prados.contacts.ContactId;
+import fr.prados.contacts.R;
 import fr.prados.contacts.VolatileContact;
 import fr.prados.contacts.VolatileContact.Copy;
 import fr.prados.contacts.VolatileContact.Import;
 import fr.prados.contacts.VolatileData;
 import fr.prados.contacts.VolatileRawContact;
-import fr.prados.contacts.lib.R;
 import fr.prados.contacts.providers.IProvider;
 import fr.prados.contacts.providers.Provider.OnQuery;
 import fr.prados.contacts.providers.QueryError;

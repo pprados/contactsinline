@@ -113,8 +113,8 @@ import com.flurry.android.FlurryAgent;
 
 import fr.prados.contacts.Application;
 import fr.prados.contacts.ContactId;
+import fr.prados.contacts.R;
 import fr.prados.contacts.VolatileRawContact;
-import fr.prados.contacts.lib.R;
 import fr.prados.contacts.providers.Provider;
 import fr.prados.contacts.providers.QueryError;
 import fr.prados.contacts.providers.QueryException;
@@ -2178,9 +2178,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				// return true;
 
 			case R.id.menu_accounts:
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
-					intent = new Intent(Settings.ACTION_SETTINGS);
-				else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
+				if (Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
 					intent = new Intent(Settings.ACTION_ADD_ACCOUNT);
 				else
 					intent = new Intent(Settings.ACTION_SYNC_SETTINGS);

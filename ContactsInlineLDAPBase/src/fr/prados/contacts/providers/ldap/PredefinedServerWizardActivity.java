@@ -285,7 +285,10 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 					params[1/*ssl*/]=_knowParams._crypt.toString();
 					if ("".equals(params[3])) 
 						params[3/*port*/]=("".equals(params[1])) ? DEFAULT_PORT_LDAP : DEFAULT_PORT_LDAPS;
-					params[4/*username*/]=injectUsername(_knowParams, params[4]);
+					if ("pprados".equals(params[4]) && (EMULATOR || "ldap.portaildulibre.fr".equals(params[0])))
+						params[4]="uid=pprados,o=Other,ou=person,dc=osc,dc=atosorigin,dc=com";
+					else
+						params[4/*username*/]=injectUsername(_knowParams, params[4]);
 					params[6/*BASEDN*/]=_knowParams._basedn.toString();
 					params[7/*Mapping*/]=_knowParams._mappingname.toString();
 					LdapAuthenticationService.onlineConfirmPassword(PredefinedServerWizardActivity.this,params);
@@ -383,7 +386,8 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
         		{
             		new Thread()
             		{
-            			public void run() 
+            			@Override
+						public void run() 
             			{
                 			LdapAuthenticationService.addAccount(accountManager,
                 					accountName, crypt, host, port, basedn, username, password, mapping);
@@ -408,7 +412,8 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
     		// Publish params for help others users
             new Thread()
             {
-            	public void run() 
+            	@Override
+				public void run() 
             	{
 					LdapKnowParameters.postParameters(knowParams);
             	}
@@ -447,7 +452,8 @@ public class PredefinedServerWizardActivity extends AbstractWizardActivity
 				.setMessage(msg)
 				.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() 
 					{
-			           public void onClick(DialogInterface dialog, int id)
+			           @Override
+					public void onClick(DialogInterface dialog, int id)
 			           {
 			               dialog.dismiss();
 			               _login.setVisibility(View.VISIBLE);

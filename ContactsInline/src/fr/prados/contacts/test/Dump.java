@@ -29,7 +29,6 @@ import android.util.Log;
 
 public class Dump
 {
-	@SuppressWarnings("unused")
 	public static void dumpTable(
 			String tag,
 			ContentResolver contentResolver,
@@ -40,7 +39,6 @@ public class Dump
 			return;
 		dumpTable(tag,contentResolver,uri,projection,null,null);
 	}
-	@SuppressWarnings("unused")
 	public static void dumpTable(
 			String tag,
 			ContentResolver contentResolver,
@@ -89,7 +87,6 @@ public class Dump
 		return builder;
 	}
 
-	@SuppressWarnings("unused")
 	public static void dump_android(String tag,boolean deleted,ContentResolver contentResolver)
 	{
 		if (!DUMP)
@@ -99,7 +96,6 @@ public class Dump
 			ContactsContract.RawContacts.CONTENT_URI,
 			ContactsContract.Data.CONTENT_URI);
 	}
-	@SuppressWarnings("unused")
 	public static void dump_android_lite(String tag,boolean deleted,ContentResolver contentResolver)
 	{
 		if (!DUMP)
@@ -108,7 +104,6 @@ public class Dump
 			ContactsContract.Contacts.CONTENT_URI,
 			ContactsContract.RawContacts.CONTENT_URI);
 	}
-	@SuppressWarnings("unused")
 	public static void dump(
 			String tag,
 			boolean deleted,

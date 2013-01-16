@@ -1121,8 +1121,11 @@ fr.prados.contacts.providers.TransportException$1 -> fr.prados.contacts.provider
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
 fr.prados.contacts.test.Dump -> fr.prados.contacts.test.Dump:
+    void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[]) -> dumpTable
+    void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[]) -> dumpTable
     void dump_android(java.lang.String,boolean,android.content.ContentResolver) -> dump_android
     void dump_android_lite(java.lang.String,boolean,android.content.ContentResolver) -> dump_android_lite
+    void dump(java.lang.String,boolean,android.content.ContentResolver,android.net.Uri[]) -> dump
 fr.prados.contacts.test.TestActivity -> fr.prados.contacts.test.TestActivity:
     java.lang.reflect.Method[] _methods -> _methods
     boolean $assertionsDisabled -> $assertionsDisabled
