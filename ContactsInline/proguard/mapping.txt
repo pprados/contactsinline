@@ -838,212 +838,55 @@ fr.prados.contacts.lib.R -> fr.prados.contacts.lib.R:
 fr.prados.contacts.lib.R$anim -> fr.prados.contacts.lib.R$anim:
     int push_left_in -> push_left_in
     int push_left_out -> push_left_out
-fr.prados.contacts.lib.R$attr -> fr.prados.contacts.lib.R$attr:
-    int contact_browser_background -> contact_browser_background
-    int contact_browser_list_padding_left -> contact_browser_list_padding_left
-    int contact_browser_list_padding_right -> contact_browser_list_padding_right
-    int list_item_header_height -> list_item_header_height
-    int showHeader -> showHeader
-fr.prados.contacts.lib.R$color -> fr.prados.contacts.lib.R$color:
-    int dim_foreground_dark -> dim_foreground_dark
-    int list_background -> list_background
-    int list_divider -> list_divider
-    int section_header_text_color -> section_header_text_color
-    int text_hightlight -> text_hightlight
-    int text_hint -> text_hint
-    int text_link -> text_link
 fr.prados.contacts.lib.R$dimen -> fr.prados.contacts.lib.R$dimen:
     int edit_photo_size -> edit_photo_size
-    int list_section_height -> list_section_height
     int photo_resize -> photo_resize
-fr.prados.contacts.lib.R$drawable -> fr.prados.contacts.lib.R$drawable:
-    int ab_bottom_opaque_dark_holo -> ab_bottom_opaque_dark_holo
-    int ab_solid_custom_blue_inverse_holo -> ab_solid_custom_blue_inverse_holo
-    int ab_stacked_opaque_dark_holo -> ab_stacked_opaque_dark_holo
-    int ab_stacked_solid_inverse_holo -> ab_stacked_solid_inverse_holo
-    int action_bar_item_background -> action_bar_item_background
-    int action_bar_item_focused_holo_light -> action_bar_item_focused_holo_light
-    int action_bar_item_pressed_holo_light -> action_bar_item_pressed_holo_light
-    int action_bar_tab -> action_bar_tab
-    int border -> border
-    int call_background -> call_background
-    int dark_header -> dark_header
-    int divider_vertical_dark -> divider_vertical_dark
-    int ic_contact_list_picture -> ic_contact_list_picture
-    int ic_launcher_contacts -> ic_launcher_contacts
-    int ic_menu_account_list -> ic_menu_account_list
-    int ic_menu_accounts -> ic_menu_accounts
-    int ic_menu_import_export -> ic_menu_import_export
-    int ic_menu_settings -> ic_menu_settings
-    int ic_settings_applications -> ic_settings_applications
-    int infobar_dark -> infobar_dark
-    int list_item_divider -> list_item_divider
-    int list_section_divider_holo_custom -> list_section_divider_holo_custom
-    int magnifying_glass -> magnifying_glass
-    int tab_focused -> tab_focused
-    int tab_focused_bottom -> tab_focused_bottom
-    int tab_pressed -> tab_pressed
-    int tab_pressed_bottom -> tab_pressed_bottom
-    int tab_selected -> tab_selected
-    int tab_selected_bottom -> tab_selected_bottom
-    int tab_selected_focused_holo -> tab_selected_focused_holo
-    int tab_selected_holo -> tab_selected_holo
-    int tab_selected_pressed_holo -> tab_selected_pressed_holo
-    int tab_unselected -> tab_unselected
-    int tab_unselected_focused_holo -> tab_unselected_focused_holo
-    int tab_unselected_holo -> tab_unselected_holo
-    int tab_unselected_pressed_holo -> tab_unselected_pressed_holo
-fr.prados.contacts.lib.R$id -> fr.prados.contacts.lib.R$id:
-    int call_button -> call_button
-    int call_view -> call_view
-    int contacts -> contacts
-    int data -> data
-    int divider -> divider
-    int emptyText -> emptyText
-    int errorsText -> errorsText
-    int header -> header
-    int header_text -> header_text
-    int help_part1 -> help_part1
-    int help_part2 -> help_part2
-    int label -> label
-    int menu_accounts -> menu_accounts
-    int menu_add_star -> menu_add_star
-    int menu_call -> menu_call
-    int menu_extensions -> menu_extensions
-    int menu_help -> menu_help
-    int menu_import -> menu_import
-    int menu_search -> menu_search
-    int menu_send_sms -> menu_send_sms
-    int menu_view_contact -> menu_view_contact
-    int name -> name
-    int noQuickContactPhoto -> noQuickContactPhoto
-    int ok -> ok
-    int photo -> photo
-    int presence -> presence
-    int right_side -> right_side
-    int scrollView1 -> scrollView1
-    int totalContactsText -> totalContactsText
-fr.prados.contacts.lib.R$layout -> fr.prados.contacts.lib.R$layout:
-    int contacts_list_content -> contacts_list_content
-    int contacts_list_item_photo -> contacts_list_item_photo
-    int help -> help
-    int list_section -> list_section
-    int list_separator -> list_separator
-    int total_contacts -> total_contacts
-fr.prados.contacts.lib.R$menu -> fr.prados.contacts.lib.R$menu:
-    int context -> context
-    int list -> list
-fr.prados.contacts.lib.R$plurals -> fr.prados.contacts.lib.R$plurals:
-    int listFoundAllContacts -> listFoundAllContacts
-    int listTotalAllContacts -> listTotalAllContacts
-    int listTotalPhoneContacts -> listTotalPhoneContacts
-fr.prados.contacts.lib.R$raw -> fr.prados.contacts.lib.R$raw:
-    int eula -> eula
-    int update -> update
 fr.prados.contacts.lib.R$string -> fr.prados.contacts.lib.R$string:
-    int app_name -> app_name
-    int call_disambig_title -> call_disambig_title
-    int chkcontact_accept -> chkcontact_accept
-    int chkcontact_msg -> chkcontact_msg
-    int chkcontact_title -> chkcontact_title
-    int copy_detail -> copy_detail
-    int copy_summary -> copy_summary
-    int ctx_menu_add_star -> ctx_menu_add_star
-    int ctx_menu_call -> ctx_menu_call
-    int ctx_menu_import -> ctx_menu_import
-    int ctx_menu_sendEmail -> ctx_menu_sendEmail
-    int ctx_menu_send_sms -> ctx_menu_send_sms
-    int ctx_menu_viewContact -> ctx_menu_viewContact
-    int currentQuery -> currentQuery
-    int err_access_right -> err_access_right
-    int err_admin_limit_exceeded -> err_admin_limit_exceeded
-    int err_authent -> err_authent
-    int err_beta_expired -> err_beta_expired
-    int err_connection_exception -> err_connection_exception
-    int err_invalide_token_type -> err_invalide_token_type
-    int err_invalide_version -> err_invalide_version
-    int err_io_exception -> err_io_exception
-    int err_maxitem_exceeded -> err_maxitem_exceeded
-    int err_network_done -> err_network_done
-    int err_provider -> err_provider
-    int err_server_down -> err_server_down
-    int err_size_exceeded -> err_size_exceeded
-    int err_time_limit_exceeded -> err_time_limit_exceeded
-    int err_truncated -> err_truncated
-    int err_unknown -> err_unknown
-    int eula_accept -> eula_accept
-    int eula_refuse -> eula_refuse
-    int eula_title -> eula_title
-    int extension_plugins -> extension_plugins
-    int fast_scroll_alphabet -> fast_scroll_alphabet
-    int from_provider -> from_provider
-    int help_first_time -> help_first_time
-    int help_need_account -> help_need_account
-    int help_need_account_app -> help_need_account_app
-    int help_need_account_app_title -> help_need_account_app_title
-    int help_need_android_version -> help_need_android_version
-    int help_need_android_version_title -> help_need_android_version_title
-    int help_need_provider -> help_need_provider
-    int help_part1 -> help_part1
-    int help_part2 -> help_part2
-    int help_sample_name -> help_sample_name
-    int help_title -> help_title
-    int help_with_search -> help_with_search
-    int import_detail -> import_detail
-    int import_summary -> import_summary
-    int importing_title -> importing_title
-    int importing_wait -> importing_wait
-    int listFoundAllContactsZero -> listFoundAllContactsZero
-    int listTotalAllContactsZero -> listTotalAllContactsZero
-    int listTotalPhoneContactsZero -> listTotalPhoneContactsZero
-    int market_body -> market_body
-    int market_ok -> market_ok
-    int market_rate -> market_rate
-    int market_rate_body -> market_rate_body
-    int market_rate_done -> market_rate_done
-    int market_rate_later -> market_rate_later
-    int market_rate_no -> market_rate_no
-    int market_rate_no_market -> market_rate_no_market
-    int market_title -> market_title
-    int menu_accounts -> menu_accounts
-    int menu_extensions -> menu_extensions
-    int menu_help -> menu_help
-    int menu_import -> menu_import
-    int menu_import_result -> menu_import_result
-    int menu_market_rate -> menu_market_rate
-    int menu_search -> menu_search
-    int menu_settings -> menu_settings
-    int menu_std_contacts -> menu_std_contacts
-    int noContactsHelpText -> noContactsHelpText
-    int noException -> noException
-    int noMatchingContacts -> noMatchingContacts
-    int password_label -> password_label
-    int search_hint -> search_hint
-    int search_label -> search_label
-    int search_title -> search_title
-    int search_wait -> search_wait
-    int settings_description -> settings_description
-    int sms_disambig_title -> sms_disambig_title
     int update_title -> update_title
+    int err_authent -> err_authent
+    int err_truncated -> err_truncated
+    int eula_title -> eula_title
+    int market_rate_body -> market_rate_body
+    int import_summary -> import_summary
+    int password_label -> password_label
+    int err_admin_limit_exceeded -> err_admin_limit_exceeded
+    int err_invalide_version -> err_invalide_version
+    int market_ok -> market_ok
+    int market_rate_no_market -> market_rate_no_market
+    int err_beta_expired -> err_beta_expired
+    int copy_detail -> copy_detail
+    int noException -> noException
+    int market_rate -> market_rate
+    int copy_summary -> copy_summary
+    int err_connection_exception -> err_connection_exception
+    int market_rate_no -> market_rate_no
+    int import_detail -> import_detail
+    int err_invalide_token_type -> err_invalide_token_type
+    int chkcontact_msg -> chkcontact_msg
+    int market_rate_done -> market_rate_done
+    int eula_refuse -> eula_refuse
+    int market_rate_later -> market_rate_later
+    int err_access_right -> err_access_right
+    int chkcontact_accept -> chkcontact_accept
+    int help_need_android_version_title -> help_need_android_version_title
+    int eula_accept -> eula_accept
+    int err_io_exception -> err_io_exception
+    int help_need_android_version -> help_need_android_version
+    int chkcontact_title -> chkcontact_title
+    int err_network_done -> err_network_done
+    int err_server_down -> err_server_down
+    int importing_wait -> importing_wait
+    int err_time_limit_exceeded -> err_time_limit_exceeded
+    int err_maxitem_exceeded -> err_maxitem_exceeded
+    int err_unknown -> err_unknown
+    int market_body -> market_body
+    int market_title -> market_title
+    int importing_title -> importing_title
+    int err_size_exceeded -> err_size_exceeded
 fr.prados.contacts.lib.R$style -> fr.prados.contacts.lib.R$style:
-    int ContactsActionBarStyle -> ContactsActionBarStyle
-    int ContactsActionBarTabView -> ContactsActionBarTabView
-    int ContactsActionBarTheme -> ContactsActionBarTheme
-    int Theme -> Theme
     int Theme_Transparent -> Theme_Transparent
-    int ThemeHelp -> ThemeHelp
-    int _BaseTheme -> _BaseTheme
-fr.prados.contacts.lib.R$styleable -> fr.prados.contacts.lib.R$styleable:
-    int[] ContactBrowser -> ContactBrowser
-    int ContactBrowser_contact_browser_background -> ContactBrowser_contact_browser_background
-    int ContactBrowser_contact_browser_list_padding_left -> ContactBrowser_contact_browser_list_padding_left
-    int ContactBrowser_contact_browser_list_padding_right -> ContactBrowser_contact_browser_list_padding_right
-    int[] ContactListItemView -> ContactListItemView
-    int ContactListItemView_list_item_header_height -> ContactListItemView_list_item_header_height
-    int ContactListItemView_showHeader -> ContactListItemView_showHeader
 fr.prados.contacts.lib.R$xml -> fr.prados.contacts.lib.R$xml:
     int import_contacts -> import_contacts
-    int searchable -> searchable
 fr.prados.contacts.providers.AbstractSimpleAuthenticator -> fr.prados.contacts.providers.AbstractSimpleAuthenticator:
     android.accounts.AccountManager _accountManager -> a
 fr.prados.contacts.providers.AuthQueryException -> fr.prados.contacts.providers.AuthQueryException:
@@ -1629,16 +1472,15 @@ fr.prados.contacts.ui.VolatileContactsListActivity$Cache -> fr.prados.contacts.u
     android.view.View access$5(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> f
     void access$7(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.view.View) -> a
     void access$8(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> a
-    void access$9(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.ImageView) -> a
-    void access$10(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,fr.prados.contacts.ui.ExQuickContactBadge) -> a
-    void access$11(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.QuickContactBadge) -> a
-    void access$12(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> b
-    void access$13(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> c
-    void access$14(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> d
-    void access$15(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.view.View) -> b
-    android.view.View access$16(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> g
-    android.widget.TextView access$17(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> h
-    android.widget.QuickContactBadge access$18(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> i
+    void access$9(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,fr.prados.contacts.ui.ExQuickContactBadge) -> a
+    void access$10(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.QuickContactBadge) -> a
+    void access$11(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> b
+    void access$12(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> c
+    void access$13(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.widget.TextView) -> d
+    void access$14(fr.prados.contacts.ui.VolatileContactsListActivity$Cache,android.view.View) -> b
+    android.view.View access$15(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> g
+    android.widget.TextView access$16(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> h
+    android.widget.QuickContactBadge access$17(fr.prados.contacts.ui.VolatileContactsListActivity$Cache) -> i
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter -> fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
     android.widget.SectionIndexer _indexer -> c
     int[] _sectionPositions -> d

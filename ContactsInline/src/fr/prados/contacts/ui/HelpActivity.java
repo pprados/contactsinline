@@ -44,12 +44,13 @@ public final class HelpActivity extends Activity
 		setContentView(R.layout.help);
 		setTitle(R.string.help_title);
 		findViewById(R.id.header).setVisibility(View.GONE);
-		View v=findViewById(R.id.call_view);
-		if (v!=null)
-		{
-			v.setVisibility(View.GONE);
-			v.setEnabled(false);
-		}
+		// FIXME
+//		View v=findViewById(R.id.call_view);
+//		if (v!=null)
+//		{
+//			v.setVisibility(View.GONE);
+//			v.setEnabled(false);
+//		}
 		((TextView)findViewById(R.id.name)).setText(R.string.help_sample_name);
 		findViewById(R.id.contacts).setEnabled(false);
 		QuickContactBadge photo=(QuickContactBadge)findViewById(R.id.photo);

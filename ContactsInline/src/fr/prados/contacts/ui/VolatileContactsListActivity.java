@@ -409,6 +409,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		final AbsListView list = getListView();
 		list.setFocusable(true);
 		list.setOnCreateContextMenuListener(this);
+//		list.setOnKeyListener(this);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
 			list.setFastScrollAlwaysVisible(true);
 
@@ -1424,10 +1425,11 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 			rc.setOnKeyListener(VolatileContactsListActivity.this);
 			cache._header = rc.findViewById(R.id.header);
 			cache._headerText = (TextView) rc.findViewById(R.id.header_text);
-			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
-			{
-				cache._callbutton = (ImageView) rc.findViewById(R.id.call_button);
-			}
+			// FIXME
+//			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
+//			{
+//				cache._callbutton = (ImageView) rc.findViewById(R.id.call_button);
+//			}
 			if ((_show & DISPLAY_PHOTO) == 0)
 			{
 				rc.findViewById(R.id.photo).setVisibility(View.GONE);
@@ -1683,16 +1685,8 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						}
 					}.execute(id, true);
 					break;
-				// case MODE_LEGACY_PICK_PERSON:
-				// uri=importMemoryContact(id, true);
-				// BUG car impossible de convertir uri to legacy uri
-				// setResult(RESULT_OK,
-				// intent.setData(Uri.withAppendedPath(People.CONTENT_URI,uri.getLastPathSegment())));
-				// break;
 				case MODE_PICK_PHONE:
-					// case MODE_LEGACY_PICK_PHONE:
 				case MODE_PICK_POSTAL:
-					// case MODE_LEGACY_PICK_POSTAL:
 					final Cursor cursor = getCursor();
 					cursor.moveToPosition(position);
 					if (DEBUG && cursor.getColumnIndex(Data.RAW_CONTACT_ID) != 5)
@@ -1706,8 +1700,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						{
 							super.onPostExecute(uri);
 							assert (uri != null);
-							final String filter = (_mode == MODE_PICK_PHONE // ||
-																			// _mode==MODE_LEGACY_PICK_PHONE
+							final String filter = (_mode == MODE_PICK_PHONE 
 							) ? Phone.CONTENT_ITEM_TYPE : StructuredPostal.CONTENT_ITEM_TYPE;
 							try
 							{
@@ -1729,12 +1722,6 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 											result = ContentUris.withAppendedId(Data.CONTENT_URI,
 													iddata);
 											break;
-										// case MODE_LEGACY_PICK_PHONE:
-										// result=ContentUris.withAppendedId(Phones.CONTENT_URI,iddata);
-										// break;
-										// case MODE_LEGACY_PICK_POSTAL:
-										// result=ContentUris.withAppendedId(ContactMethods.CONTENT_URI,iddata);
-										// break;
 										default:
 											LogMarket.wtf(TAG, "Invalide mode " + _mode
 													+ " in onItemClick.");
@@ -2458,7 +2445,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				super.onPostExecute(contactUri);
 				if (contactUri != null)
 				{
-					startActivity(new Intent(Intent.ACTION_VIEW, contactUri));
+					startActivity(new Intent(Intent.ACTION_VIEW, contactUri).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
 				}
 			}
 		}.execute(id, true);

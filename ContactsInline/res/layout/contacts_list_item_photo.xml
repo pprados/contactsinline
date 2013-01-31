@@ -4,6 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:focusable="false"
+    
 >
     <include
         android:id="@+id/header"
@@ -13,14 +15,15 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="?android:attr/listPreferredItemHeight"
+        android:focusable="false"
     >
 
         <LinearLayout android:id="@+id/right_side"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
-
             android:orientation="horizontal"
+            android:focusable="false"
             >
 
             <ImageView android:id="@+id/presence"
@@ -32,19 +35,22 @@
                 android:contentDescription=""
                 android:padding="7dip"
                 android:scaleType="centerInside"
+	            android:focusable="false"
             />
 
             <LinearLayout android:id="@+id/call_view"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+	            android:focusable="false"
+                >
 
                 <View android:id="@+id/divider"
                     android:layout_width="1dip"
                     android:layout_height="fill_parent"
                     android:layout_marginTop="5dip"
                     android:layout_marginBottom="5dip"
-                    
+            		android:focusable="false"
                     android:background="@drawable/divider_vertical_dark"
                 />
 
@@ -58,6 +64,7 @@
                     android:gravity="center"
                     android:src="@android:drawable/sym_action_call"
                     android:background="@drawable/call_background"
+		            android:focusable="false"
                 />
 
             </LinearLayout>
@@ -71,6 +78,7 @@
             android:layout_width="@dimen/edit_photo_size"
             android:layout_height="fill_parent"
             style="@*android:style/Widget.QuickContactBadge.WindowMedium"
+            android:focusable="false"
         />
 
         <fr.prados.contacts.ui.ExQuickContactBadge android:id="@+id/noQuickContactPhoto"
@@ -81,6 +89,7 @@
             android:layout_height="fill_parent"
             style="@*android:style/Widget.QuickContactBadge.WindowMedium"
             android:background="@null"
+            android:focusable="false"
         />
 
         <TextView android:id="@+id/label"
@@ -95,6 +104,7 @@
             android:ellipsize="marquee"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold"
+            android:focusable="false"
         />
 
         <TextView
@@ -108,7 +118,9 @@
             android:layout_toRightOf="@id/label"
             android:ellipsize="marquee"
             android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+            android:focusable="false"
+            />
 
         <TextView
             android:id="@+id/name"
@@ -122,7 +134,9 @@
             android:ellipsize="marquee"
             android:gravity="center_vertical|left"
             android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:focusable="false"
+            />
 
     </RelativeLayout>
 </LinearLayout>

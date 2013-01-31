@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_marginLeft="?attr/contact_browser_list_padding_left"
     android:layout_marginRight="?attr/contact_browser_list_padding_right" 
+    android:focusable="false"
 >
 
     <include
@@ -17,6 +18,7 @@
         android:layout_height="?android:attr/listPreferredItemHeight"
 	    android:layout_marginLeft="?attr/contact_browser_list_padding_left"
 	    android:layout_marginRight="?attr/contact_browser_list_padding_right" 
+	    android:focusable="false"
         >
 
         <TextView
@@ -27,7 +29,9 @@
             android:ellipsize="marquee"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textStyle="bold" />
+            android:textStyle="bold" 
+		    android:focusable="false"
+            />
 
         <TextView
             android:id="@+id/data"
@@ -39,7 +43,9 @@
             android:layout_toRightOf="@id/label"
             android:ellipsize="marquee"
             android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall" 
+		    android:focusable="false"
+            />
 
         <fr.prados.contacts.ui.ExQuickContactBadge
             android:id="@+id/photo"
@@ -48,6 +54,8 @@
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+		    android:focusable="false"
+		    android:focusableInTouchMode="false"
             />
          <fr.prados.contacts.ui.ExQuickContactBadge
              android:id="@+id/noQuickContactPhoto"
@@ -57,7 +65,9 @@
              android:layout_alignParentRight="true"
              android:layout_alignParentTop="true"
              android:background="@null"
-             android:visibility="gone" />
+             android:visibility="gone" 
+		     android:focusable="false"
+             />
         
         <TextView
             android:id="@+id/name"
@@ -69,7 +79,9 @@
             android:ellipsize="marquee"
             android:gravity="center_vertical|left"
             android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+		    android:focusable="false"
+            />
 
     </RelativeLayout>
 
