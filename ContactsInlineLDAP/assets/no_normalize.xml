@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Signal to refuse to normalize the phone number present in the LDAP record -->
+<mapping
+	extend="standard.xml"
+	mcc="-1"
+/>

@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
-import fr.prados.contacts.lib.R;
+import fr.prados.contacts.R;
 
 public final class HelpActivity extends Activity
 {

@@ -1810,17 +1810,12 @@ fr.prados.contacts.VolatileRawContact:
     416:446:public android.net.Uri copyToAndroid(android.content.res.Resources,android.content.ContentResolver,boolean,java.util.ArrayList)
     451:463:public void copyDataToAndroid(long,java.util.ArrayList)
 fr.prados.contacts.lib.R:
-    10:10:public R()
+    9:9:public R()
 fr.prados.contacts.lib.R$anim
-fr.prados.contacts.lib.R$attr
 fr.prados.contacts.lib.R$dimen:
-    17:17:public R$dimen()
-fr.prados.contacts.lib.R$drawable
-fr.prados.contacts.lib.R$id
-fr.prados.contacts.lib.R$layout
-fr.prados.contacts.lib.R$raw
+    63:63:public R$dimen()
 fr.prados.contacts.lib.R$string:
-    80:80:public R$string()
+    17:17:public R$string()
 fr.prados.contacts.lib.R$style
 fr.prados.contacts.lib.R$xml
 fr.prados.contacts.providers.AbstractSimpleAuthenticator:
@@ -1995,16 +1990,15 @@ fr.prados.contacts.tools.Update:
     private static final java.lang.String PREFERENCES_UPDATE
     34:34:public Update()
 fr.prados.provider.contacts.ldap.R:
-    10:10:public R()
+    9:9:public R()
 fr.prados.provider.contacts.ldap.R$anim
-fr.prados.provider.contacts.ldap.R$attr
 fr.prados.provider.contacts.ldap.R$dimen
 fr.prados.provider.contacts.ldap.R$drawable
 fr.prados.provider.contacts.ldap.R$id
 fr.prados.provider.contacts.ldap.R$layout
 fr.prados.provider.contacts.ldap.R$raw
 fr.prados.provider.contacts.ldap.R$string:
-    80:80:public R$string()
+    31:31:public R$string()
 fr.prados.provider.contacts.ldap.R$style
 fr.prados.provider.contacts.ldap.R$xml
 org.acra.ACRA:

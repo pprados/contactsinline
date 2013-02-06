@@ -9,7 +9,7 @@
 
     <uses-sdk
         android:minSdkVersion="7"
-        android:targetSdkVersion="15" />
+        android:targetSdkVersion="17" />
 
     <supports-screens
         android:anyDensity="true"
@@ -129,7 +129,8 @@
                 android:resource="@xml/import_contacts" />
         </service>
 
-        <receiver android:name="fr.prados.contacts.providers.PackageRemovedReceiver" >
+        <receiver android:name="fr.prados.contacts.providers.PackageRemovedReceiver" 
+            android:process=":remove">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
 

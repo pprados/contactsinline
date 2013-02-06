@@ -113,8 +113,8 @@ import com.flurry.android.FlurryAgent;
 
 import fr.prados.contacts.Application;
 import fr.prados.contacts.ContactId;
+import fr.prados.contacts.R;
 import fr.prados.contacts.VolatileRawContact;
-import fr.prados.contacts.lib.R;
 import fr.prados.contacts.providers.Provider;
 import fr.prados.contacts.providers.QueryError;
 import fr.prados.contacts.providers.QueryException;
@@ -270,29 +270,41 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 			Log.v("LIFE", "Constructor me=" + hashCode());
 	}
 
-	class AsyncImport extends AsyncTask<Object, Void, Uri>
+	static class AsyncImport extends AsyncTask<Object, Void, Uri>
 	{
+		WeakReference<VolatileContactsListActivity> _activity;
+		
+		public 	AsyncImport(VolatileContactsListActivity activity)
+		{
+			_activity=new WeakReference<VolatileContactsListActivity>(activity);
+		}
 		@Override
 		protected void onPreExecute()
 		{
-			incProgressBar();
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
+			activity.incProgressBar();
 		}
 
 		@Override
 		protected Uri doInBackground(Object... params)
 		{
-			if (_asynImport)
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return null;
+			if (activity._asynImport)
 				return null;
-			_asynImport = true;
-			return importMemoryContact((Long) params[0], (Boolean) params[1]);
+			activity._asynImport = true;
+			return activity.importMemoryContact((Long) params[0], (Boolean) params[1]);
 		}
 
 		@Override
 		protected void onPostExecute(Uri result)
 		{
 			super.onPostExecute(result);
-			_asynImport = false;
-			decProgressBar();
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
+			activity._asynImport = false;
+			activity.decProgressBar();
 		}
 	};
 
@@ -421,7 +433,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				VolatileContactsRecentSuggestionsProvider.MODE);
 		_queryHandler = new QueryHandler(this);
 		handleIntent(getIntent());
-		_adapter = new ContactsAdapter();
+		_adapter = new ContactsAdapter(this);
 		list.setOnItemClickListener(_adapter);
 
 		if ((_show & DISPLAY_NUMBER_OF_CONTACTS) != 0)
@@ -1256,7 +1268,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		// private View _divider;
 	}
 
-	final class ContactsAdapter extends CursorAdapter implements SectionIndexer, ListAdapter,
+	final static class ContactsAdapter extends CursorAdapter implements SectionIndexer, ListAdapter,
 			OnItemClickListener, OnClickListener
 	{
 		private SectionIndexer		_indexer;
@@ -1272,15 +1284,18 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		private Cursor				_cursor;
 
 		private static final int	FETCH_IMAGE_MSG				= 1;
+		
+		WeakReference<VolatileContactsListActivity> _activity;
 
-		public ContactsAdapter()
+		public ContactsAdapter(VolatileContactsListActivity activity)
 		{
-			super(VolatileContactsListActivity.this, null, false); // no autoRequery
-
-			_alphabet = getString(R.string.fast_scroll_alphabet);
-			if ((_show & DISPLAY_PHOTO) != 0)
+			super(activity, null, false); // no autoRequery
+			_activity=new WeakReference<VolatileContactsListActivity>(activity);
+			
+			_alphabet = activity.getString(R.string.fast_scroll_alphabet);
+			if ((activity._show & DISPLAY_PHOTO) != 0)
 			{
-				_handler = new ImageFetchHandler();
+				_handler = new ImageFetchHandler(this,activity);
 				_bitmapCache = new HashMap<ContactId, SoftReference<Bitmap>>();
 				_itemsMissingImages = new HashSet<QuickContactBadge>();
 			}
@@ -1324,13 +1339,15 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 		private void bindData(final Cursor cursor, final Cache cache)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			cache._name.setText(cursor.getString(1 /* Contacts.DISPLAY_NAME */));
 			// index
-			if ((_show & DISPLAY_DATA) != 0)
+			if ((activity._show & DISPLAY_DATA) != 0)
 			{
 				int type;
 				String label;
-				switch (_mode)
+				switch (activity._mode)
 				{
 					case MODE_NORMAL:
 					case MODE_SEARCH:
@@ -1356,7 +1373,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						}
 						type = cursor.getInt(6 /* Phone.TYPE */);
 						label = cursor.getString(7 /* Phone.LABEL */);
-						cache._label.setText(Phone.getTypeLabel(getResources(), type, label));
+						cache._label.setText(Phone.getTypeLabel(activity.getResources(), type, label));
 						cache._data.setText(cursor.getString(8 /* Phone.NUMBER */));
 						break;
 
@@ -1372,20 +1389,20 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						}
 						label = cursor.getString(6 /* StructuredPostal.LABEL */);
 						type = cursor.getInt(7 /* StructuredPostal.TYPE */);
-						cache._label.setText(StructuredPostal.getTypeLabel(getResources(), type,
+						cache._label.setText(StructuredPostal.getTypeLabel(activity.getResources(), type,
 								label));
 						cache._data.setText(cursor.getString(8 /*
 																 * StructuredPostal.FORMATTED_ADDRESS
 																 */));
 						break;
 					default:
-						LogMarket.wtf(TAG, "Unknow mode " + _mode + " in bindData.");
+						LogMarket.wtf(TAG, "Unknow mode " + activity._mode + " in bindData.");
 
 				}
 			}
-			if ((_show & DISPLAY_PHOTO) != 0 && cache._photoView != null)
+			if ((activity._show & DISPLAY_PHOTO) != 0 && cache._photoView != null)
 				cache._photoView.setItemId(cursor.getLong(0 /* BaseColumns._ID */));
-			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
+			if ((activity._show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
 				cache._callbutton.setTag(cursor.getLong(0 /* BaseColumns._ID */));
 
 			bindVisibility(cursor, cache);
@@ -1393,15 +1410,17 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 		private void bindVisibility(final Cursor cursor, final Cache cache)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			int visibility;
-			visibility = ((_show & DISPLAY_DATA) != 0) ? View.VISIBLE : View.GONE;
+			visibility = ((activity._show & DISPLAY_DATA) != 0) ? View.VISIBLE : View.GONE;
 			cache._label.setVisibility(visibility);
 			cache._data.setVisibility(visibility);
 			boolean withPhone = false;
 			final int col = cursor.getColumnIndex(Phone.NUMBER);
 			if (col != -1)
 				withPhone = !cursor.isNull(col);
-			visibility = (((_show & DISPLAY_CALLBUTTON) != 0) && withPhone) ? View.VISIBLE
+			visibility = (((activity._show & DISPLAY_CALLBUTTON) != 0) && withPhone) ? View.VISIBLE
 					: View.GONE;
 			if (cache._rightSide != null)
 				cache._rightSide.setVisibility(visibility);
@@ -1411,20 +1430,22 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		@Override
 		public View newView(final Context context, final Cursor cursor, final ViewGroup parent)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return null;
 			final View rc;
 			final Cache cache;
-			final LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			final LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			rc = inflater.inflate(R.layout.contacts_list_item_photo, parent, false);
 			cache = new Cache();
 			rc.setTag(cache);
-			rc.setOnKeyListener(VolatileContactsListActivity.this);
+			rc.setOnKeyListener(activity);
 			cache._header = rc.findViewById(R.id.header);
 			cache._headerText = (TextView) rc.findViewById(R.id.header_text);
-			if ((_show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
+			if ((activity._show & DISPLAY_CALLBUTTON) != 0 && cache._callbutton != null)
 			{
 				cache._callbutton = (ImageView) rc.findViewById(R.id.call_button);
 			}
-			if ((_show & DISPLAY_PHOTO) == 0)
+			if ((activity._show & DISPLAY_PHOTO) == 0)
 			{
 				rc.findViewById(R.id.photo).setVisibility(View.GONE);
 				rc.findViewById(R.id.noQuickContactPhoto).setVisibility(View.GONE);
@@ -1443,7 +1464,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 			cache._name = (TextView) rc.findViewById(R.id.name);
 
 			cache._rightSide = rc.findViewById(R.id.right_side);
-			if (0 != (_show & DISPLAY_CALLBUTTON))
+			if (0 != (activity._show & DISPLAY_CALLBUTTON))
 			{
 				if (cache._callbutton != null)
 					cache._callbutton.setOnClickListener(this);
@@ -1454,8 +1475,10 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		// ----------------- Manage index
 		private void bindSectionHeader(final View view, final int position)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			final Cache cache = (Cache) view.getTag();
-			if (((_show & DISPLAY_HEADER) == 0) || !_showHeader)
+			if (((activity._show & DISPLAY_HEADER) == 0) || !activity._showHeader)
 			{
 				cache._header.setVisibility(View.GONE);
 			}
@@ -1614,13 +1637,15 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		// ----------------- Manage header line ----------------------------
 		private void setTotalContactCountView()
 		{
-			if (_totalContacts == null)
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
+			if (activity._totalContacts == null)
 				return;
 
 			String text = null;
 			final int count = getCount();
 
-			switch (_mode)
+			switch (activity._mode)
 			{
 				case MODE_NORMAL:
 				case MODE_SEARCH:
@@ -1637,22 +1662,24 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 							R.plurals.listTotalAllContacts);
 					break;
 				default:
-					LogMarket.wtf(TAG, "Unknown mode " + _mode);
+					LogMarket.wtf(TAG, "Unknown mode " + activity._mode);
 			}
 			assert (text != null);
-			_totalContacts.setText(text);
+			activity._totalContacts.setText(text);
 		}
 
 		private String getQuantityText(final int count, final int zeroResourceId,
 				final int pluralResourceId)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return "";
 			if (count == 0)
 			{
-				return getString(zeroResourceId);
+				return activity.getString(zeroResourceId);
 			}
 			else
 			{
-				final String format = getResources().getQuantityText(pluralResourceId, count)
+				final String format = activity.getResources().getQuantityText(pluralResourceId, count)
 						.toString();
 				return String.format(format, count);
 			}
@@ -1664,18 +1691,22 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		public void onItemClick(final AdapterView<?> adapter, final View view, final int position,
 				final long id)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			final Intent intent = new Intent();
-			switch (_mode)
+			switch (activity._mode)
 			{
 				case MODE_PICK_CONTACT:
-					new AsyncImport()
+					new AsyncImport(activity)
 					{
 						@Override
 						protected void onPostExecute(Uri result)
 						{
 							super.onPostExecute(result);
-							setResult(RESULT_OK, intent.setData(result));
-							finish();
+							final VolatileContactsListActivity activity=_activity.get();
+							if (activity==null) return;
+							activity.setResult(RESULT_OK, intent.setData(result));
+							activity.finish();
 						}
 					}.execute(id, true);
 					break;
@@ -1695,21 +1726,21 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						LogMarket.wtf(TAG, "col position error");
 					final long rawid = cursor.getLong(5 /* Data.RAW_CONTACT_ID */);
 					cursor.close();
-					new AsyncImport()
+					new AsyncImport(activity)
 					{
 						@Override
 						protected void onPostExecute(Uri uri)
 						{
 							super.onPostExecute(uri);
 							assert (uri != null);
-							final String filter = (_mode == MODE_PICK_PHONE // ||
+							final String filter = (activity._mode == MODE_PICK_PHONE // ||
 																			// _mode==MODE_LEGACY_PICK_PHONE
 							) ? Phone.CONTENT_ITEM_TYPE : StructuredPostal.CONTENT_ITEM_TYPE;
 							try
 							{
 								final String value = ((Cache) view.getTag())._data.getText()
 										.toString();
-								final Cursor cursor = getContentResolver().query(
+								final Cursor cursor = activity.getContentResolver().query(
 										Uri.withAppendedPath(uri, Contacts.Data.CONTENT_DIRECTORY),
 										colDataId, Data.MIMETYPE + "=? and " + Data.DATA1 + "=?",
 										new String[]
@@ -1718,7 +1749,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 								{
 									final long iddata = cursor.getLong(0 /* Data._ID */);
 									Uri result = null;
-									switch (_mode)
+									switch (activity._mode)
 									{
 										case MODE_PICK_PHONE:
 										case MODE_PICK_POSTAL:
@@ -1732,16 +1763,16 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 										// result=ContentUris.withAppendedId(ContactMethods.CONTENT_URI,iddata);
 										// break;
 										default:
-											LogMarket.wtf(TAG, "Invalide mode " + _mode
+											LogMarket.wtf(TAG, "Invalide mode " + activity._mode
 													+ " in onItemClick.");
 									}
-									setResult(RESULT_OK, intent.setData(result));
+									activity.setResult(RESULT_OK, intent.setData(result));
 								}
 								else
 								{
-									setResult(RESULT_CANCELED);
+									activity.setResult(RESULT_CANCELED);
 								}
-								finish();
+								activity.finish();
 							}
 							finally
 							{
@@ -1755,24 +1786,28 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 					break;
 				case MODE_SEARCH:
 				case MODE_NORMAL:
-					showVolatileContact(id);
+					activity.showVolatileContact(id);
 					break;
 				default:
-					LogMarket.wtf(TAG, "Unknown mode " + _mode);
+					LogMarket.wtf(TAG, "Unknown mode " + activity._mode);
 			}
 		}
 
 		@Override
 		public void onClick(final View v)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			final long position = ((Long) v.getTag()).longValue();
-			new AsyncImport()
+			new AsyncImport(activity)
 			{
 				@Override
 				protected void onPostExecute(Uri result)
 				{
 					super.onPostExecute(result);
-					callOrSmsContact(result, false);
+					final VolatileContactsListActivity activity=_activity.get();
+					if (activity==null) return;
+					activity.callOrSmsContact(result, false);
 				}
 			}.execute(position, true);
 		}
@@ -1792,12 +1827,24 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 		private ImageFetchHandler							_handler;
 
-		private class ImageFetchHandler extends Handler
+		private static class ImageFetchHandler extends Handler
 		{
+			WeakReference<ContactsAdapter> _adapter;
+			WeakReference<VolatileContactsListActivity> _activity;
+			
+			ImageFetchHandler(ContactsAdapter adapter,VolatileContactsListActivity activity)
+			{
+				_adapter=new WeakReference<ContactsAdapter>(adapter);
+				_activity=new WeakReference<VolatileContactsListActivity>(activity);
+			}
 			@Override
 			public void handleMessage(final Message message)
 			{
-				if (VolatileContactsListActivity.this.isFinishing())
+				final ContactsAdapter adapter=_adapter.get();
+				if (adapter==null) return;
+				final VolatileContactsListActivity activity=_activity.get();
+				if (activity==null) return;
+				if (activity.isFinishing())
 				{
 					return;
 				}
@@ -1817,7 +1864,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						if (photoId == null)
 							break;
 
-						final SoftReference<Bitmap> photoRef = _bitmapCache.get(photoId);
+						final SoftReference<Bitmap> photoRef = adapter._bitmapCache.get(photoId);
 						if (photoRef == null)
 						{
 							break;
@@ -1825,7 +1872,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 						final Bitmap photo = photoRef.get();
 						if (photo == null)
 						{
-							_bitmapCache.remove(photoId);
+							adapter._bitmapCache.remove(photoId);
 							break;
 						}
 
@@ -1839,7 +1886,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 							if (currentPhotoId.equals(photoId))
 							{
 								imageView.setImageBitmap(photo);
-								_itemsMissingImages.remove(imageView);
+								adapter._itemsMissingImages.remove(imageView);
 							}
 						}
 						break;
@@ -1870,7 +1917,9 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 			@Override
 			public void run()
 			{
-				if (VolatileContactsListActivity.this.isFinishing())
+				final VolatileContactsListActivity activity=_activity.get();
+				if (activity==null) return;
+				if (activity.isFinishing())
 				{
 					return;
 				}
@@ -1915,9 +1964,11 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		{
 			if (cache._photoView == null)
 				return;
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			final int SUMMARY_LOOKUP_KEY = 0;
 			// Set the photo, if requested
-			if ((_show & DISPLAY_PHOTO) != 0)
+			if ((activity._show & DISPLAY_PHOTO) != 0)
 			{
 				final ContactId photoId = new ContactId(
 						cursor.getString(2/* RawContacts.ACCOUNT_TYPE */), cursor.getString(3/*
@@ -1927,7 +1978,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 																							 */),
 						cursor.getString(4/* VolatileRawContact.LOOKUP */));
 
-				final boolean useQuickContact = ((_show & USE_QUICK_CONTACT) != 0)
+				final boolean useQuickContact = ((activity._show & USE_QUICK_CONTACT) != 0)
 						&& cache._photoView != null;
 				QuickContactBadge viewToUse;
 				if (useQuickContact)
@@ -1986,7 +2037,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 					// Add it to a set of images that are populated asynchronously.
 					_itemsMissingImages.add(viewToUse);
 
-					if (_scrollState != OnScrollListener.SCROLL_STATE_FLING)
+					if (activity._scrollState != OnScrollListener.SCROLL_STATE_FLING)
 					{
 						// Scrolling is idle or slow, go get the image right now.
 						sendFetchImageMessage(viewToUse);
@@ -1998,12 +2049,14 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 		public void onScrollStateChanged(final AbsListView view, final int scrollState)
 		{
-			_scrollState = scrollState;
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
+			activity._scrollState = scrollState;
 			if (scrollState == OnScrollListener.SCROLL_STATE_FLING)
 			{
 				clearImageFetching(); // If we are in a fling, stop loading images.
 			}
-			else if ((_mode & DISPLAY_PHOTO) != 0)
+			else if ((activity._mode & DISPLAY_PHOTO) != 0)
 			{
 				processMissingImageItems(view);
 			}
@@ -2020,17 +2073,17 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		// Start background load image
 		private void sendFetchImageMessage(final ImageView view)
 		{
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
 			final PhotoCache info = (PhotoCache) view.getTag();
 			if (info == null)
-			{
 				return;
-			}
 			final ContactId photoId = info._photoId;
 			if (photoId == null)
 				return;
 
 			_imageFetcher = new ImageDbFetcher(photoId, view);
-			synchronized (VolatileContactsListActivity.this)
+			synchronized (activity)
 			{
 				// can't sync on sImageFetchThreadPool.
 				if (_imageFetchThreadPool == null)
@@ -2060,7 +2113,9 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 		 */
 		public void clearImageFetching()
 		{
-			synchronized (VolatileContactsListActivity.this)
+			final VolatileContactsListActivity activity=_activity.get();
+			if (activity==null) return;
+			synchronized (activity)
 			{
 				if (_imageFetchThreadPool != null)
 				{
@@ -2174,13 +2229,11 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				// return true;
 
 			case R.id.menu_accounts:
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
-					intent = new Intent(Settings.ACTION_SETTINGS);
-				else if (Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
+				if (Build.VERSION.SDK_INT > Build.VERSION_CODES.FROYO)
 					intent = new Intent(Settings.ACTION_ADD_ACCOUNT);
 				else
 					intent = new Intent(Settings.ACTION_SYNC_SETTINGS);
-				intent.putExtra("authorities", colAuthority);
+				// FIXME: intent.putExtra(Settings.EXTRA_AUTHORITIES, new String[]{"com.google"}/*ProvidersManager.getDrivers()*/);
 				startActivity(intent);
 				return true;
 
@@ -2272,7 +2325,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				break;
 
 			case R.id.menu_call:
-				new AsyncImport()
+				new AsyncImport(this)
 				{
 					@Override
 					protected void onPostExecute(Uri result)
@@ -2284,7 +2337,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				break;
 
 			case R.id.menu_send_sms:
-				new AsyncImport()
+				new AsyncImport(this)
 				{
 					@Override
 					protected void onPostExecute(Uri result)
@@ -2297,7 +2350,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 			case R.id.menu_import:
 				showDialog(DIALOG_IMPORT);
-				new AsyncImport()
+				new AsyncImport(this)
 				{
 					@Override
 					protected void onPostExecute(Uri contactUri)
@@ -2337,7 +2390,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 				list.getItemIdAtPosition(position);
 				if (position != AdapterView.INVALID_POSITION)
 				{
-					new AsyncImport()
+					new AsyncImport(this)
 					{
 						@Override
 						protected void onPostExecute(Uri result)
@@ -2448,7 +2501,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 	private void showVolatileContact(final long id)
 	{
-		new AsyncImport()
+		new AsyncImport(this)
 		{
 			@Override
 			protected void onPostExecute(Uri contactUri)
@@ -2464,7 +2517,7 @@ public final class VolatileContactsListActivity extends AbsListActivity implemen
 
 	private void starMemoryContact(final long id)
 	{
-		new AsyncImport()
+		new AsyncImport(this)
 		{
 			@Override
 			protected void onPostExecute(Uri contactUri)

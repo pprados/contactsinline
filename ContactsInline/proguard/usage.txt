@@ -262,10 +262,7 @@ fr.prados.contacts.providers.TransportException:
     26:27:public void setException(fr.prados.contacts.providers.QueryException)
     30:31:public void getException()
 fr.prados.contacts.test.Dump:
-    40:40:public static void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[])
-    54:77:public static void dumpTable(java.lang.String,android.content.ContentResolver,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[])
     81:89:public static java.lang.CharSequence dumpCursor(android.database.Cursor)
-    119:119:public static varargs void dump(java.lang.String,boolean,android.content.ContentResolver,android.net.Uri[])
 fr.prados.contacts.test.TestActivity:
     private static final java.lang.String TAG
     private static final int NOTHING
@@ -373,9 +370,9 @@ fr.prados.contacts.ui.PhoneDisambigDialog:
 fr.prados.contacts.ui.ProvidersManager:
     static final java.lang.String TAG
     private static final int VERSION
-    257:260:private ProvidersManager(android.accounts.AccountManager)
-    1239:1247:private static java.lang.StringBuilder volatilAccountToIn()
-    1253:1255:public static void purgeVolatileContact(android.content.ContentResolver)
+    258:261:private ProvidersManager(android.accounts.AccountManager)
+    1240:1248:private static java.lang.StringBuilder volatilAccountToIn()
+    1254:1256:public static void purgeVolatileContact(android.content.ContentResolver)
 fr.prados.contacts.ui.VolatileContactsListActivity:
     private static final boolean PATCH_BUG_V14
     private static final java.lang.String FlurryError
