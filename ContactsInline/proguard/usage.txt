@@ -1,7 +1,3 @@
-android.annotation.SuppressLint:
-    public abstract java.lang.String[] value()
-android.annotation.TargetApi:
-    public abstract int value()
 com.flurry.android.AdImage:
     22:22:public final long getId()
     27:27:public final int getWidth()
@@ -370,9 +366,10 @@ fr.prados.contacts.ui.PhoneDisambigDialog:
 fr.prados.contacts.ui.ProvidersManager:
     static final java.lang.String TAG
     private static final int VERSION
-    258:261:private ProvidersManager(android.accounts.AccountManager)
-    1240:1248:private static java.lang.StringBuilder volatilAccountToIn()
-    1254:1256:public static void purgeVolatileContact(android.content.ContentResolver)
+    112:114:public static java.lang.String[] getDrivers()
+    263:266:private ProvidersManager(android.accounts.AccountManager)
+    1247:1255:private static java.lang.StringBuilder volatilAccountToIn()
+    1261:1263:public static void purgeVolatileContact(android.content.ContentResolver)
 fr.prados.contacts.ui.VolatileContactsListActivity:
     private static final boolean PATCH_BUG_V14
     private static final java.lang.String FlurryError
@@ -407,8 +404,8 @@ fr.prados.contacts.ui.VolatileContactsListActivity:
 fr.prados.contacts.ui.VolatileContactsListActivity$ContactsAdapter:
     static final int SUMMARY_NAME_COLUMN_INDEX
     private static final int FETCH_IMAGE_MSG
-    2001:2010:public void onScrollStateChanged(android.widget.AbsListView,int)
-    2014:2018:private void processMissingImageItems(android.widget.AbsListView)
+    2052:2063:public void onScrollStateChanged(android.widget.AbsListView,int)
+    2067:2071:private void processMissingImageItems(android.widget.AbsListView)
 fr.prados.contacts.ui.VolatileContactsListActivity$Retain:
     public boolean _onSearchRequest
 fr.prados.contacts.ui.VolatileContactsRecentSuggestionsProvider:

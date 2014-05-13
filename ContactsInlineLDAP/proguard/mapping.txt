@@ -2233,47 +2233,47 @@ fr.prados.contacts.lib.R$dimen -> fr.prados.contacts.a.b:
     int edit_photo_size -> edit_photo_size
     int photo_resize -> photo_resize
 fr.prados.contacts.lib.R$string -> fr.prados.contacts.a.c:
-    int update_title -> update_title
-    int err_authent -> err_authent
-    int err_truncated -> err_truncated
-    int eula_title -> eula_title
-    int market_rate_body -> market_rate_body
-    int import_summary -> import_summary
-    int password_label -> password_label
-    int err_admin_limit_exceeded -> err_admin_limit_exceeded
-    int err_invalide_version -> err_invalide_version
-    int market_ok -> market_ok
-    int market_rate_no_market -> market_rate_no_market
-    int err_beta_expired -> err_beta_expired
-    int copy_detail -> copy_detail
-    int noException -> noException
-    int market_rate -> market_rate
-    int copy_summary -> copy_summary
-    int err_connection_exception -> err_connection_exception
-    int market_rate_no -> market_rate_no
-    int import_detail -> import_detail
-    int err_invalide_token_type -> err_invalide_token_type
-    int chkcontact_msg -> chkcontact_msg
-    int market_rate_done -> market_rate_done
-    int eula_refuse -> eula_refuse
-    int market_rate_later -> market_rate_later
-    int err_access_right -> err_access_right
     int chkcontact_accept -> chkcontact_accept
-    int help_need_android_version_title -> help_need_android_version_title
-    int eula_accept -> eula_accept
-    int err_io_exception -> err_io_exception
-    int help_need_android_version -> help_need_android_version
+    int chkcontact_msg -> chkcontact_msg
     int chkcontact_title -> chkcontact_title
+    int copy_detail -> copy_detail
+    int copy_summary -> copy_summary
+    int err_access_right -> err_access_right
+    int err_admin_limit_exceeded -> err_admin_limit_exceeded
+    int err_authent -> err_authent
+    int err_beta_expired -> err_beta_expired
+    int err_connection_exception -> err_connection_exception
+    int err_invalide_token_type -> err_invalide_token_type
+    int err_invalide_version -> err_invalide_version
+    int err_io_exception -> err_io_exception
+    int err_maxitem_exceeded -> err_maxitem_exceeded
     int err_network_done -> err_network_done
     int err_server_down -> err_server_down
-    int importing_wait -> importing_wait
-    int err_time_limit_exceeded -> err_time_limit_exceeded
-    int err_maxitem_exceeded -> err_maxitem_exceeded
-    int err_unknown -> err_unknown
-    int market_body -> market_body
-    int market_title -> market_title
-    int importing_title -> importing_title
     int err_size_exceeded -> err_size_exceeded
+    int err_time_limit_exceeded -> err_time_limit_exceeded
+    int err_truncated -> err_truncated
+    int err_unknown -> err_unknown
+    int eula_accept -> eula_accept
+    int eula_refuse -> eula_refuse
+    int eula_title -> eula_title
+    int help_need_android_version -> help_need_android_version
+    int help_need_android_version_title -> help_need_android_version_title
+    int import_detail -> import_detail
+    int import_summary -> import_summary
+    int importing_title -> importing_title
+    int importing_wait -> importing_wait
+    int market_body -> market_body
+    int market_ok -> market_ok
+    int market_rate -> market_rate
+    int market_rate_body -> market_rate_body
+    int market_rate_done -> market_rate_done
+    int market_rate_later -> market_rate_later
+    int market_rate_no -> market_rate_no
+    int market_rate_no_market -> market_rate_no_market
+    int market_title -> market_title
+    int noException -> noException
+    int password_label -> password_label
+    int update_title -> update_title
 fr.prados.contacts.providers.AbstractSimpleAuthenticator -> fr.prados.contacts.providers.a:
     android.accounts.AccountManager _accountManager -> a
     android.content.Context _context -> b
@@ -2804,57 +2804,57 @@ fr.prados.contacts.tools.Update$1 -> fr.prados.contacts.b.q:
     void onClick(android.content.DialogInterface,int) -> onClick
 fr.prados.provider.contacts.ldap.R -> fr.prados.a.a.a.a:
 fr.prados.provider.contacts.ldap.R$string -> fr.prados.a.a.a.b:
-    int update_title -> update_title
-    int eula_title -> eula_title
-    int import_summary -> import_summary
-    int market_rate_body -> market_rate_body
-    int err_invalide_version -> err_invalide_version
-    int validate -> validate
-    int copy_detail -> copy_detail
-    int market_rate -> market_rate
-    int copy_summary -> copy_summary
-    int err_connection_exception -> err_connection_exception
-    int market_rate_no -> market_rate_no
-    int eula_refuse -> eula_refuse
-    int err_access_right -> err_access_right
     int chkcontact_accept -> chkcontact_accept
-    int err_io_exception -> err_io_exception
-    int help_need_android_version -> help_need_android_version
-    int ldap_account_setting_category -> ldap_account_setting_category
-    int err_time_limit_exceeded -> err_time_limit_exceeded
-    int err_maxitem_exceeded -> err_maxitem_exceeded
-    int importing_title -> importing_title
-    int ldap_err_unknown_exception -> ldap_err_unknown_exception
-    int err_truncated -> err_truncated
-    int err_authent -> err_authent
-    int password_label -> password_label
-    int next -> next
-    int err_admin_limit_exceeded -> err_admin_limit_exceeded
-    int market_ok -> market_ok
-    int market_rate_no_market -> market_rate_no_market
-    int err_beta_expired -> err_beta_expired
-    int err_mapping_file_not_found -> err_mapping_file_not_found
-    int noException -> noException
-    int ldap_authenticating -> ldap_authenticating
-    int import_detail -> import_detail
     int chkcontact_msg -> chkcontact_msg
-    int err_invalide_token_type -> err_invalide_token_type
-    int market_rate_done -> market_rate_done
-    int logo -> logo
-    int market_rate_later -> market_rate_later
-    int help_need_android_version_title -> help_need_android_version_title
-    int eula_accept -> eula_accept
-    int ldap_err_basedn_unknown -> ldap_err_basedn_unknown
     int chkcontact_title -> chkcontact_title
-    int err_server_down -> err_server_down
+    int copy_detail -> copy_detail
+    int copy_summary -> copy_summary
+    int err_access_right -> err_access_right
+    int err_admin_limit_exceeded -> err_admin_limit_exceeded
+    int err_authent -> err_authent
+    int err_beta_expired -> err_beta_expired
+    int err_connection_exception -> err_connection_exception
+    int err_invalide_token_type -> err_invalide_token_type
+    int err_invalide_version -> err_invalide_version
+    int err_io_exception -> err_io_exception
+    int err_mapping_file_not_found -> err_mapping_file_not_found
+    int err_maxitem_exceeded -> err_maxitem_exceeded
     int err_network_done -> err_network_done
-    int ldap_account_setting_title -> ldap_account_setting_title
-    int importing_wait -> importing_wait
-    int err_unknown -> err_unknown
-    int ldap_account_setting_summary -> ldap_account_setting_summary
-    int market_body -> market_body
-    int market_title -> market_title
+    int err_server_down -> err_server_down
     int err_size_exceeded -> err_size_exceeded
+    int err_time_limit_exceeded -> err_time_limit_exceeded
+    int err_truncated -> err_truncated
+    int err_unknown -> err_unknown
+    int eula_accept -> eula_accept
+    int eula_refuse -> eula_refuse
+    int eula_title -> eula_title
+    int help_need_android_version -> help_need_android_version
+    int help_need_android_version_title -> help_need_android_version_title
+    int import_detail -> import_detail
+    int import_summary -> import_summary
+    int importing_title -> importing_title
+    int importing_wait -> importing_wait
+    int ldap_account_setting_category -> ldap_account_setting_category
+    int ldap_account_setting_summary -> ldap_account_setting_summary
+    int ldap_account_setting_title -> ldap_account_setting_title
+    int ldap_authenticating -> ldap_authenticating
+    int ldap_err_basedn_unknown -> ldap_err_basedn_unknown
+    int ldap_err_unknown_exception -> ldap_err_unknown_exception
+    int logo -> logo
+    int market_body -> market_body
+    int market_ok -> market_ok
+    int market_rate -> market_rate
+    int market_rate_body -> market_rate_body
+    int market_rate_done -> market_rate_done
+    int market_rate_later -> market_rate_later
+    int market_rate_no -> market_rate_no
+    int market_rate_no_market -> market_rate_no_market
+    int market_title -> market_title
+    int next -> next
+    int noException -> noException
+    int password_label -> password_label
+    int update_title -> update_title
+    int validate -> validate
 org.acra.ACRA -> org.acra.ACRA:
     java.lang.String LOG_TAG -> a
     android.app.Application mApplication -> d

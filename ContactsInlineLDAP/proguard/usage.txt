@@ -1813,9 +1813,9 @@ fr.prados.contacts.lib.R:
     9:9:public R()
 fr.prados.contacts.lib.R$anim
 fr.prados.contacts.lib.R$dimen:
-    63:63:public R$dimen()
+    14:14:public R$dimen()
 fr.prados.contacts.lib.R$string:
-    17:17:public R$string()
+    18:18:public R$string()
 fr.prados.contacts.lib.R$style
 fr.prados.contacts.lib.R$xml
 fr.prados.contacts.providers.AbstractSimpleAuthenticator:
@@ -1998,7 +1998,7 @@ fr.prados.provider.contacts.ldap.R$id
 fr.prados.provider.contacts.ldap.R$layout
 fr.prados.provider.contacts.ldap.R$raw
 fr.prados.provider.contacts.ldap.R$string:
-    31:31:public R$string()
+    39:39:public R$string()
 fr.prados.provider.contacts.ldap.R$style
 fr.prados.provider.contacts.ldap.R$xml
 org.acra.ACRA:

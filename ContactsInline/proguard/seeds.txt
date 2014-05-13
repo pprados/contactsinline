@@ -1,5 +1,3 @@
-android.annotation.SuppressLint
-android.annotation.TargetApi
 com.flurry.android.AdImage
 com.flurry.android.AppCircle
 com.flurry.android.AppCircleCallback
@@ -286,47 +284,47 @@ fr.prados.contacts.lib.R$dimen
 fr.prados.contacts.lib.R$dimen: int edit_photo_size
 fr.prados.contacts.lib.R$dimen: int photo_resize
 fr.prados.contacts.lib.R$string
-fr.prados.contacts.lib.R$string: int update_title
-fr.prados.contacts.lib.R$string: int err_authent
-fr.prados.contacts.lib.R$string: int err_truncated
-fr.prados.contacts.lib.R$string: int eula_title
-fr.prados.contacts.lib.R$string: int market_rate_body
-fr.prados.contacts.lib.R$string: int import_summary
-fr.prados.contacts.lib.R$string: int password_label
-fr.prados.contacts.lib.R$string: int err_admin_limit_exceeded
-fr.prados.contacts.lib.R$string: int err_invalide_version
-fr.prados.contacts.lib.R$string: int market_ok
-fr.prados.contacts.lib.R$string: int market_rate_no_market
-fr.prados.contacts.lib.R$string: int err_beta_expired
-fr.prados.contacts.lib.R$string: int copy_detail
-fr.prados.contacts.lib.R$string: int noException
-fr.prados.contacts.lib.R$string: int market_rate
-fr.prados.contacts.lib.R$string: int copy_summary
-fr.prados.contacts.lib.R$string: int err_connection_exception
-fr.prados.contacts.lib.R$string: int market_rate_no
-fr.prados.contacts.lib.R$string: int import_detail
-fr.prados.contacts.lib.R$string: int err_invalide_token_type
-fr.prados.contacts.lib.R$string: int chkcontact_msg
-fr.prados.contacts.lib.R$string: int market_rate_done
-fr.prados.contacts.lib.R$string: int eula_refuse
-fr.prados.contacts.lib.R$string: int market_rate_later
-fr.prados.contacts.lib.R$string: int err_access_right
 fr.prados.contacts.lib.R$string: int chkcontact_accept
-fr.prados.contacts.lib.R$string: int help_need_android_version_title
-fr.prados.contacts.lib.R$string: int eula_accept
-fr.prados.contacts.lib.R$string: int err_io_exception
-fr.prados.contacts.lib.R$string: int help_need_android_version
+fr.prados.contacts.lib.R$string: int chkcontact_msg
 fr.prados.contacts.lib.R$string: int chkcontact_title
+fr.prados.contacts.lib.R$string: int copy_detail
+fr.prados.contacts.lib.R$string: int copy_summary
+fr.prados.contacts.lib.R$string: int err_access_right
+fr.prados.contacts.lib.R$string: int err_admin_limit_exceeded
+fr.prados.contacts.lib.R$string: int err_authent
+fr.prados.contacts.lib.R$string: int err_beta_expired
+fr.prados.contacts.lib.R$string: int err_connection_exception
+fr.prados.contacts.lib.R$string: int err_invalide_token_type
+fr.prados.contacts.lib.R$string: int err_invalide_version
+fr.prados.contacts.lib.R$string: int err_io_exception
+fr.prados.contacts.lib.R$string: int err_maxitem_exceeded
 fr.prados.contacts.lib.R$string: int err_network_done
 fr.prados.contacts.lib.R$string: int err_server_down
-fr.prados.contacts.lib.R$string: int importing_wait
-fr.prados.contacts.lib.R$string: int err_time_limit_exceeded
-fr.prados.contacts.lib.R$string: int err_maxitem_exceeded
-fr.prados.contacts.lib.R$string: int err_unknown
-fr.prados.contacts.lib.R$string: int market_body
-fr.prados.contacts.lib.R$string: int market_title
-fr.prados.contacts.lib.R$string: int importing_title
 fr.prados.contacts.lib.R$string: int err_size_exceeded
+fr.prados.contacts.lib.R$string: int err_time_limit_exceeded
+fr.prados.contacts.lib.R$string: int err_truncated
+fr.prados.contacts.lib.R$string: int err_unknown
+fr.prados.contacts.lib.R$string: int eula_accept
+fr.prados.contacts.lib.R$string: int eula_refuse
+fr.prados.contacts.lib.R$string: int eula_title
+fr.prados.contacts.lib.R$string: int help_need_android_version
+fr.prados.contacts.lib.R$string: int help_need_android_version_title
+fr.prados.contacts.lib.R$string: int import_detail
+fr.prados.contacts.lib.R$string: int import_summary
+fr.prados.contacts.lib.R$string: int importing_title
+fr.prados.contacts.lib.R$string: int importing_wait
+fr.prados.contacts.lib.R$string: int market_body
+fr.prados.contacts.lib.R$string: int market_ok
+fr.prados.contacts.lib.R$string: int market_rate
+fr.prados.contacts.lib.R$string: int market_rate_body
+fr.prados.contacts.lib.R$string: int market_rate_done
+fr.prados.contacts.lib.R$string: int market_rate_later
+fr.prados.contacts.lib.R$string: int market_rate_no
+fr.prados.contacts.lib.R$string: int market_rate_no_market
+fr.prados.contacts.lib.R$string: int market_title
+fr.prados.contacts.lib.R$string: int noException
+fr.prados.contacts.lib.R$string: int password_label
+fr.prados.contacts.lib.R$string: int update_title
 fr.prados.contacts.lib.R$style
 fr.prados.contacts.lib.R$style: int Theme_Transparent
 fr.prados.contacts.lib.R$xml

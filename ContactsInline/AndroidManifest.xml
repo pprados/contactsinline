@@ -2,17 +2,16 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.prados.contacts"
-    android:versionCode="23"
-    android:versionName="2.0.5"
+    android:versionCode="26"
+    android:versionName="2.0.7"
     android:sharedUserId="fr.prados.contacts"
     android:installLocation="auto"
 >
     <uses-sdk 
     	android:minSdkVersion="7" 
-    	android:targetSdkVersion="11" 
-    	android:maxSdkVersion="17"
+    	android:targetSdkVersion="19" 
     	/>
-
+    
 	<supports-screens 
 		android:smallScreens="true" 
 		android:normalScreens="true" 

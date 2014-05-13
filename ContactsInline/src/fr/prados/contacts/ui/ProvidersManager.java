@@ -883,9 +883,11 @@ public final class ProvidersManager
 	 * @param context
 	 * @return Contact uri
 	 */
-	public static Uri importVolatileContactToAndroid(final long id, final boolean temp, final Context context)
+	public static Uri importVolatileContactToAndroid(final long id, boolean temp, final Context context)
 	{
 		if (I) Log.i(TAG,"Import contact in android");
+		// FIXME
+		temp=false; // Always import
 		try
 		{
 			final VolatileContact contact = ProvidersManager.Cache.getVolatileContactsById(id);

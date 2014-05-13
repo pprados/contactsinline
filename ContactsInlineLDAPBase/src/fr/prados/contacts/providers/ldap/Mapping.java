@@ -688,7 +688,8 @@ public final class Mapping implements Cloneable
 		VolatileRawContact rawContact=contact.addNewRawContact();
 		rawContact.setAttr(RawContacts.ACCOUNT_NAME, accountName);
 		rawContact.setAttr(RawContacts.ACCOUNT_TYPE, LdapAuthenticationService.ACCOUNT_TYPE);
-		rawContact.setAttr(VolatileRawContact.MUST_DELETED, 1);
+//FIXME: N'efface plus les records
+//		rawContact.setAttr(VolatileRawContact.MUST_DELETED, 1);
 		rawContact.setLookupKey(entry.getDN());
 		rawContact.setAttr(RawContacts.AGGREGATION_MODE, RawContacts.AGGREGATION_MODE_DISABLED);
 
@@ -776,18 +777,18 @@ public final class Mapping implements Cloneable
 			}
 		}
 
-		// Add import button
-		{
-			VolatileData data=new VolatileData();
-			data.put(Data.MIMETYPE, Import.CONTENT_ITEM_TYPE); 
-			data.put(Import.SUMMARY_COLUMN, Application.context.getString(R.string.import_summary));
-			data.put(Import.DETAIL_COLUMN,
-				MessageFormat.format(
-						Application.context.getString(R.string.import_detail),
-						RawContacts.ACCOUNT_NAME));
-			data.put(Import.LOOKUP_COLUMN,entry.getDN());
-			rawContact.put(Import.CONTENT_ITEM_TYPE, data);
-		}
+//		// Add import button
+//		{
+//			VolatileData data=new VolatileData();
+//			data.put(Data.MIMETYPE, Import.CONTENT_ITEM_TYPE); 
+//			data.put(Import.SUMMARY_COLUMN, Application.context.getString(R.string.import_summary));
+//			data.put(Import.DETAIL_COLUMN,
+//				MessageFormat.format(
+//						Application.context.getString(R.string.import_detail),
+//						RawContacts.ACCOUNT_NAME));
+//			data.put(Import.LOOKUP_COLUMN,entry.getDN());
+//			rawContact.put(Import.CONTENT_ITEM_TYPE, data);
+//		}
 		
 		return (empty) ? null : contact;
 	}
